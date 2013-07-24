@@ -1,0 +1,8 @@
+name = Blog Test Content
+core = 7.x
+package = Blog Features
+php = 5.2.4
+version = 7.x-1.4
+project = blog_test_content
+dependencies[] = blog_features
+features[features_api][] = api:2
