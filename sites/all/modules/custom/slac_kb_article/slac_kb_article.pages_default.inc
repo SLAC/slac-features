@@ -45,7 +45,7 @@ function slac_kb_article_default_page_manager_handlers() {
     ),
   );
   $display = new panels_display();
-  $display->layout = 'two_col';
+  $display->layout = 'twocol';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -134,7 +134,7 @@ function slac_kb_article_default_page_manager_handlers() {
           'name' => 'term_vocabulary',
           'settings' => array(
             'vids' => array(
-              7 => '7',
+              2 => '2',
             ),
           ),
           'context' => 'argument_term_1',
@@ -145,7 +145,7 @@ function slac_kb_article_default_page_manager_handlers() {
     ),
   );
   $display = new panels_display();
-  $display->layout = 'two_col';
+  $display->layout = 'twocol';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -161,17 +161,11 @@ function slac_kb_article_default_page_manager_handlers() {
     $pane = new stdClass();
     $pane->pid = 'new-3';
     $pane->panel = 'left';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'kb_articles-panel_pane_1';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array(
-      'admin_title' => '',
-      'title' => '',
-      'body' => 'zzz',
-      'format' => 'filtered_html',
-      'substitute' => 1,
-    );
+    $pane->configuration = array();
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
@@ -184,24 +178,6 @@ function slac_kb_article_default_page_manager_handlers() {
     $display->panels['left'][0] = 'new-3';
     $pane = new stdClass();
     $pane->pid = 'new-4';
-    $pane->panel = 'left';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'kb_articles-panel_pane_1';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $display->content['new-4'] = $pane;
-    $display->panels['left'][1] = 'new-4';
-    $pane = new stdClass();
-    $pane->pid = 'new-5';
     $pane->panel = 'right';
     $pane->type = 'taxonomy_terms';
     $pane->subtype = 'taxonomy_terms';
@@ -216,8 +192,8 @@ function slac_kb_article_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-5'] = $pane;
-    $display->panels['right'][0] = 'new-5';
+    $display->content['new-4'] = $pane;
+    $display->panels['right'][0] = 'new-4';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
