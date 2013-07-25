@@ -14,6 +14,7 @@ dependencies[] = filter
 dependencies[] = link
 dependencies[] = node
 dependencies[] = node_export
+dependencies[] = slac_in_the_news
 dependencies[] = taxonomy
 dependencies[] = text
 dependencies[] = views
