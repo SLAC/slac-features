@@ -24,12 +24,12 @@ function slac_kb_article_content_type_render($subtype, $conf, $panel_args, $cont
   $block = new stdClass();
   $block->module = 'slac_kb_article';
 
-  $node = node_load($panel_args['0']);
-
-  //$tid = $node ? $node->field_kb_categories[LANGUAGE_NONE][0]['tid'] : arg(2);
+  if (arg(0) == 'node' && is_numeric(arg(1))) {
+    $node = node_load($panel_args['0']);
+  }
 
   $content = array();
-  if ($node) {
+  if (isset($node)) {
     $tid = $node->field_kb_categories[LANGUAGE_NONE][0]['tid'];
     $term = taxonomy_term_load($tid);
     $content = slac_kb_article_generate_taxonomy_menu($term, $tid, $tid);
