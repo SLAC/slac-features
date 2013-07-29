@@ -68,5 +68,6 @@ dependencies[] = pp_demo
 
 ; Features
 dependencies[] = blog_features
+dependencies[] = blog_test_content
 
 ; Demo modules
