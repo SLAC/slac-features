@@ -1,0 +1,41 @@
+diff --git a/includes/uuid_bean.features.inc b/includes/uuid_bean.features.inc
+index dc34342..a54e744 100644
+--- a/includes/uuid_bean.features.inc
++++ b/includes/uuid_bean.features.inc
+@@ -90,7 +90,8 @@ function uuid_bean_features_export_render($module, $data) {
+     if (!count($beans)) {
+       continue;
+     }
+-    $export = reset($beans);
++    $first_bean = reset($beans);
++    $export = clone $first_bean;
+ 
+     // Unset some things that dont need to be exported.
+     unset($export->bid);
+diff --git a/includes/uuid_node.features.inc b/includes/uuid_node.features.inc
+index 17f931b..ac59f9f 100755
+--- a/includes/uuid_node.features.inc
++++ b/includes/uuid_node.features.inc
+@@ -80,7 +80,7 @@ function uuid_node_features_export_render($module, $data) {
+     if (!empty($node->path)) {
+       $node->pathauto_perform_alias = FALSE;
+     }
+-    $export = $node;
++    $export = clone $node;
+ 
+     // Use date instead of created, in the same format used by node_object_prepare.
+     $export->date = format_date($export->created, 'custom', 'Y-m-d H:i:s O');
+diff --git a/includes/uuid_term.features.inc b/includes/uuid_term.features.inc
+index 40acb13..1f59713 100644
+--- a/includes/uuid_term.features.inc
++++ b/includes/uuid_term.features.inc
+@@ -104,7 +104,8 @@ function uuid_term_features_export_render($module = 'foo', $data) {
+       }
+     }
+ 
+-    $export = reset($terms);
++    $first_term = reset($terms);
++    $export = clone $first_term;
+ 
+     // Do not export ids.
+     unset($export->vid);

@@ -80,7 +80,7 @@ function uuid_node_features_export_render($module, $data) {
     if (!empty($node->path)) {
       $node->pathauto_perform_alias = FALSE;
     }
-    $export = $node;
+    $export = clone $node;
 
     // Use date instead of created, in the same format used by node_object_prepare.
     $export->date = format_date($export->created, 'custom', 'Y-m-d H:i:s O');
@@ -91,7 +91,7 @@ function uuid_node_features_export_render($module, $data) {
     unset($export->revision_timestamp);
     unset($export->changed);
     unset($export->last_comment_timestamp);
-
+    uuid_features_file_field_export($export, 'node');
     // The hook_alter signature is:
     // hook_uuid_node_features_export_render_alter(&$export, $node, $module);
     drupal_alter('uuid_node_features_export_render', $export, $node, $module);
@@ -102,7 +102,6 @@ function uuid_node_features_export_render($module, $data) {
   if (!empty($translatables)) {
     $code[] = features_translatables_export($translatables, '  ');
   }
-
   $code[] = '  return $nodes;';
   $code = implode("\n", $code);
   return array('uuid_features_default_content' => $code);
@@ -131,7 +130,7 @@ function uuid_node_features_rebuild($module) {
       // Find the matching UUID, with a fresh cache.
       $nids = entity_get_id_by_uuid('node', array($node->uuid));
       if (isset($nids[$node->uuid])) {
-          $nid = $nids[$node->uuid];
+          $nid = array_key_exists($node->uuid, $nids) ? $nids[$node->uuid] : FALSE;
           $existing = node_load($nid, NULL, TRUE);
           if (!empty($existing)) {
             $node->nid = $existing->nid;
@@ -144,6 +143,7 @@ function uuid_node_features_rebuild($module) {
       drupal_alter('uuid_node_features_rebuild', $node, $module);
 
       $node = node_submit($node);
+      uuid_features_file_field_import($node, 'node');
       node_save($node);
     }
   }
