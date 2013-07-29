@@ -45,8 +45,8 @@ function blog_features_image_default_styles() {
         'module' => 'image',
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => 870,
-          'height' => 330,
+          'width' => 470,
+          'height' => 150,
         ),
         'weight' => 1,
       ),

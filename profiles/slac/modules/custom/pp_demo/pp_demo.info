@@ -1,0 +1,5 @@
+name = ProPeople demo content
+description = Helpers to keep the data consistent.
+core = 7.x
+package = Features
+dependencies[] = uuid_features

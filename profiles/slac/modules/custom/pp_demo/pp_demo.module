@@ -1,0 +1,143 @@
+<?php
+
+/**
+ * Implements hook_uuid_node_features_export().
+ *
+ * Add dependency of the feature module.
+ */
+function pp_demo_uuid_node_features_export_alter(&$pipe, &$node) {
+  $pipe['dependencies']['pp_demo'] = 'pp_demo';
+}
+
+/**
+ * Implements hook_uuid_node_features_export_render_alter();
+ *
+ * Set the author of the node to be uuid.
+ */
+function pp_demo_uuid_node_features_export_render_alter(&$export, $node, $module) {
+  drupal_alter('pp_demo_setup_node_relationships', $export, $node);
+}
+
+/**
+ * Implements hook_uuid_node_features_rebuild_alter().
+ *
+ * Set uid on node import by uuid of the user.
+ */
+function pp_demo_uuid_node_features_rebuild_alter(&$node, $module) {
+  try {
+    drupal_alter('pp_demo_restore_node_relationships', $node);
+  }
+  catch (Exception $exception) {
+    watchdog_exception('pp_demo', $exception);
+  }
+}
+
+/**
+ * Implements hook_modules_disabled().
+ */
+function pp_demo_modules_disabled($modules) {
+  foreach ($modules as $module) {
+    $system_info = features_get_info('module', $module);
+    if (!isset($system_info->info['features'])) {
+      continue;
+    }
+    foreach ($system_info->info['features'] as $feature_name => $feature_details) {
+      switch ($feature_name) {
+        case 'uuid_node':
+          _pp_demo_remove_demo_nodes($feature_details);
+          break;
+        case 'uuid_user':
+          _pp_demo_remove_demo_users($feature_details);
+          break;
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_modules_enabled().
+ */
+function pp_demo_modules_enabled($modules) {
+  $revert_items = array();
+  foreach ($modules as $module) {
+    $system_info = features_get_info('module', $module);
+    if (!isset($system_info->info['features'])) {
+      continue;
+    }
+
+    foreach ($system_info->info['features'] as $feature_name => $feature_details) {
+      // Assume that all content related feature components named uuid_*.
+      if (strpos($feature_name, 'uuid_') === 0) {
+        if (!isset($revert_items[$module])) {
+          $revert_items[$module] = array();
+        }
+        $revert_items[$module][] = $feature_name;
+      }
+    }
+  }
+
+  if (!empty($revert_items)) {
+    // Revert features three times (two times for some reason doesn't work) so if
+    // the order of components is not right in terms of dependencies they still
+    // got in properly. For example node has reference to user (author) but node
+    // got imported first. Then uid field will be 0 value as user was not in place
+    // at that moment. So we run revert second time so on second run user is in
+    // place and link between user and node is saved properly.
+    features_revert($revert_items);
+    features_revert($revert_items);
+    features_revert($revert_items);
+  }
+}
+
+/**
+ * Implements hook_pp_demo_setup_node_relationships_alter().
+ *
+ * @param $export
+ *   Object that is going to be exported in the feature.
+ * @param $node
+ *   Original node object.
+ */
+function pp_demo_pp_demo_setup_node_relationships_alter($export, $node) {
+  if ($user = user_load($node->uid)) {
+    $export->author_uuid = $user->uuid;
+  }
+}
+
+/**
+ * Implements hook_pp_demo_restore_node_relationships_alter().
+ */
+function pp_demo_pp_demo_restore_node_relationships_alter($node) {
+  if (!isset($node->author_uuid)) {
+    return;
+  }
+  $users = entity_uuid_load('user', array($node->author_uuid));
+  $user = reset($users);
+  // User might be imported after the node.
+  if (isset($user->uid)) {
+    $node->uid = $user->uid;
+  }
+}
+
+/**
+ * Remove demo nodes.
+ */
+function _pp_demo_remove_demo_nodes($uuids) {
+  $nids = array();
+  $nodes = entity_uuid_load('node', $uuids, array(), TRUE);
+  foreach ($nodes as $node) {
+    $nids[] = $node->nid;
+  }
+  node_delete_multiple($nids);
+}
+
+/**
+ * Remove demo users.
+ */
+function _pp_demo_remove_demo_users($uuids) {
+  $uids = array();
+  $users = entity_uuid_load('user', $uuids);
+  foreach ($users as $user) {
+    $uids[] = $user->uid;
+  }
+  user_delete_multiple($uids);
+}
