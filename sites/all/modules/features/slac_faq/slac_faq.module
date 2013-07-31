@@ -1,0 +1,25 @@
+<?php
+/**
+ * @file
+ * Code for the Slac FAQ feature.
+ */
+
+include_once 'slac_faq.features.inc';
+
+/**
+ * Implements hook_form_alter();
+ */
+function slac_faq_form_faq_node_form_alter(&$form, &$form_state, $form_id) {
+  if (!user_is_logged_in()) {
+    unset($form['field_status']);
+    unset($form['field_answer']);
+    $form['actions']['submit']['#value'] = t('Send');
+    $form['actions']['submit']['#submit'][] = 'slac_faq_node_form_submit';
+  }
+}
+
+function slac_faq_node_form_submit(&$form, &$form_state) {
+  drupal_get_messages('status');
+  drupal_set_message(t('Your question has been submitted'));
+  $form_state['redirect'] = 'faq';
+}
