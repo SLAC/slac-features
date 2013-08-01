@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * events_features.features.user_permission.inc
+ * slac_events_features.features.user_permission.inc
  */
 
 /**
  * Implements hook_user_default_permissions().
  */
-function events_features_user_default_permissions() {
+function slac_events_features_user_default_permissions() {
   $permissions = array();
 
   // Exported permission: create event content.
@@ -38,13 +38,6 @@ function events_features_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
-  // Exported permission: delete terms in 8.
-  $permissions['delete terms in 8'] = array(
-    'name' => 'delete terms in 8',
-    'roles' => array(),
-    'module' => 'taxonomy',
-  );
-
   // Exported permission: edit any event content.
   $permissions['edit any event content'] = array(
     'name' => 'edit any event content',
@@ -62,13 +55,6 @@ function events_features_user_default_permissions() {
   // Exported permission: edit terms in 7.
   $permissions['edit terms in 7'] = array(
     'name' => 'edit terms in 7',
-    'roles' => array(),
-    'module' => 'taxonomy',
-  );
-
-  // Exported permission: edit terms in 8.
-  $permissions['edit terms in 8'] = array(
-    'name' => 'edit terms in 8',
     'roles' => array(),
     'module' => 'taxonomy',
   );

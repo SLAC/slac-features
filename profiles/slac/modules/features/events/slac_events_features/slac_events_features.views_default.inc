@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * events_features.views_default.inc
+ * slac_events_features.views_default.inc
  */
 
 /**
  * Implements hook_views_default_views().
  */
-function events_features_views_default_views() {
+function slac_events_features_views_default_views() {
   $export = array();
 
   $view = new view();
@@ -28,7 +28,28 @@ function events_features_views_default_views() {
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['query']['options']['query_comment'] = FALSE;
-  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['type'] = 'better_exposed_filters';
+  $handler->display->display_options['exposed_form']['options']['autosubmit'] = TRUE;
+  $handler->display->display_options['exposed_form']['options']['bef'] = array(
+    'general' => array(
+      'allow_secondary' => 0,
+      'secondary_label' => 'Advanced options',
+    ),
+    'tid' => array(
+      'bef_format' => 'bef_links',
+      'more_options' => array(
+        'bef_select_all_none' => FALSE,
+        'bef_collapsible' => 0,
+        'is_secondary' => 0,
+        'bef_filter_description' => '',
+        'tokens' => array(
+          'available' => array(
+            0 => 'global_types',
+          ),
+        ),
+      ),
+    ),
+  );
   $handler->display->display_options['pager']['type'] = 'date_views_pager';
   $handler->display->display_options['pager']['options']['date_id'] = 'month';
   $handler->display->display_options['style_plugin'] = 'calendar_style';
@@ -38,7 +59,7 @@ function events_features_views_default_views() {
   $handler->display->display_options['style_options']['theme_style'] = '1';
   $handler->display->display_options['style_options']['max_items'] = '0';
   $handler->display->display_options['row_plugin'] = 'calendar_entity';
-  /* Relationship: Content: Event Category (field_event_category) */
+  /* Relationship: Content: Event Series (field_event_category) */
   $handler->display->display_options['relationships']['field_event_category_tid']['id'] = 'field_event_category_tid';
   $handler->display->display_options['relationships']['field_event_category_tid']['table'] = 'field_data_field_event_category';
   $handler->display->display_options['relationships']['field_event_category_tid']['field'] = 'field_event_category_tid';
@@ -47,7 +68,7 @@ function events_features_views_default_views() {
   $handler->display->display_options['relationships']['field_color_reference_tid']['table'] = 'field_data_field_color_reference';
   $handler->display->display_options['relationships']['field_color_reference_tid']['field'] = 'field_color_reference_tid';
   $handler->display->display_options['relationships']['field_color_reference_tid']['relationship'] = 'field_event_category_tid';
-  /* Field: Content: Event Category */
+  /* Field: Content: Event Series */
   $handler->display->display_options['fields']['field_event_category']['id'] = 'field_event_category';
   $handler->display->display_options['fields']['field_event_category']['table'] = 'field_data_field_event_category';
   $handler->display->display_options['fields']['field_event_category']['field'] = 'field_event_category';
@@ -112,6 +133,23 @@ function events_features_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 0;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Taxonomy term: Term */
+  $handler->display->display_options['filters']['tid']['id'] = 'tid';
+  $handler->display->display_options['filters']['tid']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['filters']['tid']['field'] = 'tid';
+  $handler->display->display_options['filters']['tid']['relationship'] = 'field_event_category_tid';
+  $handler->display->display_options['filters']['tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['tid']['expose']['operator_id'] = 'tid_op';
+  $handler->display->display_options['filters']['tid']['expose']['label'] = 'Term';
+  $handler->display->display_options['filters']['tid']['expose']['operator'] = 'tid_op';
+  $handler->display->display_options['filters']['tid']['expose']['identifier'] = 'tid';
+  $handler->display->display_options['filters']['tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+  );
+  $handler->display->display_options['filters']['tid']['type'] = 'select';
+  $handler->display->display_options['filters']['tid']['vocabulary'] = 'event_categories';
 
   /* Display: Month */
   $handler = $view->new_display('page', 'Month', 'page_1');
