@@ -1,0 +1,126 @@
+<?php
+/**
+ * @file
+ * slac_event_demo_content.features.uuid_term.inc
+ */
+
+/**
+ * Implements hook_uuid_features_default_terms().
+ */
+function slac_event_demo_content_uuid_features_default_terms() {
+  $terms = array();
+
+  $terms[] = array(
+    'name' => 'Accelerator and Instrumentation Seminars',
+    'description' => '',
+    'format' => 'filtered_html',
+    'weight' => 0,
+    'uuid' => '89e0ecf3-9e9f-476b-a920-392077f1e1eb',
+    'vocabulary_machine_name' => 'event_categories',
+    'field_color_reference' => array(
+      'und' => array(
+        0 => array(
+          'tid' => 'faab5f7d-ef22-4b05-a4f8-f590ecbedbb9',
+        ),
+      ),
+    ),
+  );
+  $terms[] = array(
+    'name' => 'Cosmology Seminars',
+    'description' => 'test',
+    'format' => 'filtered_html',
+    'weight' => 0,
+    'uuid' => 'a7aa9fdf-cada-4543-a91a-b3c8e4fe8681',
+    'vocabulary_machine_name' => 'event_categories',
+    'field_color_reference' => array(
+      'und' => array(
+        0 => array(
+          'tid' => 'e9de47f4-620d-4bd4-853f-cee296f6e5aa',
+        ),
+      ),
+    ),
+  );
+  $terms[] = array(
+    'name' => 'Particle Physics',
+    'description' => NULL,
+    'format' => NULL,
+    'weight' => 0,
+    'uuid' => 'c18474db-9be0-4739-b29b-b3e18377db21',
+    'vocabulary_machine_name' => 'tags',
+  );
+  $terms[] = array(
+    'name' => 'Red',
+    'description' => '',
+    'format' => 'filtered_html',
+    'weight' => 0,
+    'uuid' => 'd01d5031-6a61-4e11-9be5-478d34f59e2a',
+    'vocabulary_machine_name' => 'category_colors',
+    'field_color' => array(
+      'und' => array(
+        0 => array(
+          'value' => '#ab1500',
+          'format' => NULL,
+          'safe_value' => '#ab1500',
+        ),
+      ),
+    ),
+  );
+  $terms[] = array(
+    'name' => 'Photon Science Seminars',
+    'description' => NULL,
+    'format' => NULL,
+    'weight' => 0,
+    'uuid' => 'e5dd57e1-7987-4d06-9f9a-269c3ef79ba7',
+    'vocabulary_machine_name' => 'tags',
+  );
+  $terms[] = array(
+    'name' => 'Blue',
+    'description' => '',
+    'format' => 'filtered_html',
+    'weight' => 0,
+    'uuid' => 'e9de47f4-620d-4bd4-853f-cee296f6e5aa',
+    'vocabulary_machine_name' => 'category_colors',
+    'field_color' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'blue',
+          'format' => NULL,
+          'safe_value' => 'blue',
+        ),
+      ),
+    ),
+  );
+  $terms[] = array(
+    'name' => 'SLAC Public Lectures',
+    'description' => '',
+    'format' => 'filtered_html',
+    'weight' => 0,
+    'uuid' => 'f0644a12-d7ad-4bce-b9fd-84ec84a94f7e',
+    'vocabulary_machine_name' => 'event_categories',
+    'field_color_reference' => array(
+      'und' => array(
+        0 => array(
+          'tid' => 'd01d5031-6a61-4e11-9be5-478d34f59e2a',
+        ),
+      ),
+    ),
+  );
+  $terms[] = array(
+    'name' => 'Green',
+    'description' => '',
+    'format' => 'filtered_html',
+    'weight' => 0,
+    'uuid' => 'faab5f7d-ef22-4b05-a4f8-f590ecbedbb9',
+    'vocabulary_machine_name' => 'category_colors',
+    'field_color' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'green',
+          'format' => NULL,
+          'safe_value' => 'green',
+        ),
+      ),
+    ),
+  );
+  return $terms;
+}
