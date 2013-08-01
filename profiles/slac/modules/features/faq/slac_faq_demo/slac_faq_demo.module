@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Slac FAQ demo feature.
+ */
+
+include_once 'slac_faq_demo.features.inc';
