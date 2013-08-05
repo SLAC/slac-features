@@ -67,7 +67,7 @@ dependencies[] = views_ui
 dependencies[] = pp_demo
 
 ; Features
-dependencies[] = blog_features
-dependencies[] = blog_test_content
+dependencies[] = slac_blog_features
+dependencies[] = slac_blog_test_content
 
 ; Demo modules

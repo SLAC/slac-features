@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * blog_test_content.features.uuid_term.inc
+ * slac_blog_test_content.features.uuid_term.inc
  */
 
 /**
