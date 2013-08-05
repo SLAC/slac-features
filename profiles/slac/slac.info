@@ -70,4 +70,7 @@ dependencies[] = pp_demo
 dependencies[] = slac_blog_features
 dependencies[] = slac_blog_test_content
 
+dependencies[] = slac_events_features
+dependencies[] = slac_event_demo_content
+
 ; Demo modules

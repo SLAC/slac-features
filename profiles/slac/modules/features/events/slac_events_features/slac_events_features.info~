@@ -5,6 +5,7 @@ php = 5.2.4
 version = 7.x-1.4
 project = slac_events_features
 dependencies[] = better_exposed_filters
+dependencies[] = blog_features
 dependencies[] = calendar
 dependencies[] = date_ical
 dependencies[] = field_redirection
