@@ -1,0 +1,10 @@
+name = "Ajax markup"
+description = "API for generating filtered markup using ajax."
+core = "7.x"
+package = "Content authoring"
+; Information added by drupal.org packaging script on 2011-10-20
+version = "7.x-1.0"
+core = "7.x"
+project = "ajax_markup"
+datestamp = "1319103929"
+
