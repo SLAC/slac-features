@@ -13,6 +13,42 @@ function slac_wiki_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'bueditor_roles';
+  $strongarm->value = array(
+    3 => array(
+      'editor' => '0',
+      'alt' => '0',
+    ),
+    2 => array(
+      'editor' => '5',
+      'alt' => '1',
+      'weight' => 11,
+    ),
+    1 => array(
+      'editor' => '0',
+      'alt' => '0',
+      'weight' => 12,
+    ),
+  );
+  $export['bueditor_roles'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'bueditor_user1';
+  $strongarm->value = '5';
+  $export['bueditor_user1'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'bueditor_user1_alt';
+  $strongarm->value = '1';
+  $export['bueditor_user1_alt'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_anonymous_slac_wiki_page';
   $strongarm->value = 0;
   $export['comment_anonymous_slac_wiki_page'] = $strongarm;
