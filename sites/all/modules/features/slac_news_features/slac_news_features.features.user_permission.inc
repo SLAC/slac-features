@@ -44,13 +44,6 @@ function slac_news_features_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: delete terms in 7.
-  $permissions['delete terms in 7'] = array(
-    'name' => 'delete terms in 7',
-    'roles' => array(),
-    'module' => 'taxonomy',
-  );
-
   // Exported permission: delete terms in 8.
   $permissions['delete terms in 8'] = array(
     'name' => 'delete terms in 8',
@@ -79,13 +72,6 @@ function slac_news_features_user_default_permissions() {
       'manager' => 'manager',
     ),
     'module' => 'node',
-  );
-
-  // Exported permission: edit terms in 7.
-  $permissions['edit terms in 7'] = array(
-    'name' => 'edit terms in 7',
-    'roles' => array(),
-    'module' => 'taxonomy',
   );
 
   // Exported permission: edit terms in 8.
