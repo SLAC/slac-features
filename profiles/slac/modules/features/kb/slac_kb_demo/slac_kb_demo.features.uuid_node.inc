@@ -12,7 +12,7 @@ function slac_kb_demo_uuid_features_default_content() {
 
   $nodes[] = array(
   'uid' => 1,
-  'title' => 'Test kb article 2',
+  'title' => 'Man-made Material Shows Surprisingly Magnetic Personality',
   'log' => '',
   'status' => 1,
   'comment' => 2,
@@ -43,6 +43,7 @@ function slac_kb_demo_uuid_features_default_content() {
     'und' => array(
       0 => array(
         'tid' => 57,
+        'uuid' => '2e456207-aeca-43f3-b29c-0da0834feeac',
       ),
     ),
   ),
@@ -112,7 +113,7 @@ function slac_kb_demo_uuid_features_default_content() {
 );
   $nodes[] = array(
   'uid' => 1,
-  'title' => 'Test kb article 6',
+  'title' => 'Bienenstock, Michelson Elected to American Academy of Arts and Sciences ',
   'log' => '',
   'status' => 1,
   'comment' => 2,
@@ -143,6 +144,7 @@ function slac_kb_demo_uuid_features_default_content() {
     'und' => array(
       0 => array(
         'tid' => 64,
+        'uuid' => '5441f982-c41e-47f9-a076-ba312679f181',
       ),
     ),
   ),
@@ -212,7 +214,7 @@ function slac_kb_demo_uuid_features_default_content() {
 );
   $nodes[] = array(
   'uid' => 1,
-  'title' => 'Test kb article 5',
+  'title' => 'SLAC Physicists Help Design, Build Cargo X-ray Scanners',
   'log' => '',
   'status' => 1,
   'comment' => 2,
@@ -243,6 +245,7 @@ function slac_kb_demo_uuid_features_default_content() {
     'und' => array(
       0 => array(
         'tid' => 65,
+        'uuid' => '35cbc66a-e794-4cac-bb15-e55d40106cfb',
       ),
     ),
   ),
@@ -312,7 +315,7 @@ function slac_kb_demo_uuid_features_default_content() {
 );
   $nodes[] = array(
   'uid' => 1,
-  'title' => 'Test kb article 4',
+  'title' => 'SLAC Study Reveals Active Site of Enzyme Linked to Stuttering',
   'log' => '',
   'status' => 1,
   'comment' => 2,
@@ -343,6 +346,7 @@ function slac_kb_demo_uuid_features_default_content() {
     'und' => array(
       0 => array(
         'tid' => 64,
+        'uuid' => '5441f982-c41e-47f9-a076-ba312679f181',
       ),
     ),
   ),
@@ -449,6 +453,7 @@ SLAC in May 2013 opened a new test facility at the Accelerator Structure Test Ar
     'und' => array(
       0 => array(
         'tid' => 56,
+        'uuid' => 'af009c65-8760-454b-a942-c2424ed3c1c8',
       ),
     ),
   ),
@@ -558,6 +563,7 @@ Twenty-eight crystal screening slots are already scheduled for October 2013 thro
     'und' => array(
       0 => array(
         'tid' => 58,
+        'uuid' => '0d53e215-e34f-4097-a835-0870eaa81a0c',
       ),
     ),
   ),
@@ -676,6 +682,7 @@ A visiting scholar at Stanford from Germany heard about how SLAC scientists unco
     'und' => array(
       0 => array(
         'tid' => 54,
+        'uuid' => '8efc6df4-8289-4403-a87e-540e0d355e31',
       ),
     ),
   ),
@@ -745,7 +752,7 @@ A visiting scholar at Stanford from Germany heard about how SLAC scientists unco
 );
   $nodes[] = array(
   'uid' => 1,
-  'title' => 'Test kb article 3',
+  'title' => 'X-ray Laser Brings Gold Exploration to the Nanoscale',
   'log' => '',
   'status' => 1,
   'comment' => 2,
@@ -776,6 +783,7 @@ A visiting scholar at Stanford from Germany heard about how SLAC scientists unco
     'und' => array(
       0 => array(
         'tid' => 59,
+        'uuid' => '8007cf90-674c-4ff0-a0f2-25a0466cabec',
       ),
     ),
   ),
@@ -845,7 +853,7 @@ A visiting scholar at Stanford from Germany heard about how SLAC scientists unco
 );
   $nodes[] = array(
   'uid' => 1,
-  'title' => 'Test kb article 8',
+  'title' => 'X-ray Laser Pulses in Two Colors',
   'log' => '',
   'status' => 1,
   'comment' => 2,
@@ -880,6 +888,7 @@ Vestibulum tincidunt malesuada tellus. Ut ultrices ultrices enim. Curabitur sit 
     'und' => array(
       0 => array(
         'tid' => 62,
+        'uuid' => '8d607e80-fa1f-4fba-b812-35b84cf02f42',
       ),
     ),
   ),
@@ -980,6 +989,7 @@ Vestibulum tincidunt malesuada tellus. Ut ultrices ultrices enim. Curabitur sit 
     'und' => array(
       0 => array(
         'tid' => 61,
+        'uuid' => '0c8a1df9-c687-4ded-b8eb-dcea6e4b0c9f',
       ),
     ),
   ),
@@ -1083,6 +1093,7 @@ Organic electronics have great promise for a variety of applications, but even t
     'und' => array(
       0 => array(
         'tid' => 60,
+        'uuid' => 'e4f02dd2-5fea-4f78-9932-78de63198263',
       ),
     ),
   ),
@@ -1152,7 +1163,7 @@ Organic electronics have great promise for a variety of applications, but even t
 );
   $nodes[] = array(
   'uid' => 1,
-  'title' => 'Test kb article 7',
+  'title' => 'Harold Hwang Wins Top Korean Award',
   'log' => '',
   'status' => 1,
   'comment' => 2,
@@ -1186,6 +1197,7 @@ Nulla ut felis in purus aliquam imperdiet. Maecenas aliquet mollis lectus. Vivam
     'und' => array(
       0 => array(
         'tid' => 63,
+        'uuid' => '9090165b-26d9-4584-8960-0556e596c3dc',
       ),
     ),
   ),
