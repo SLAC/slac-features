@@ -1,0 +1,80 @@
+From bd8192b72504c5137fd6fa72ee992e6b5ba14334 Mon Sep 17 00:00:00 2001
+From: Wong Hoi Sing Edison <hswong3i@gmail.com>
+Date: Sat, 27 Jul 2013 19:56:16 +0800
+Subject: [PATCH] Issue #1812876 by zhangx1a0, hswong3i: Exported nodes are
+ referred to term [tid] instead of [uuid]?
+
+---
+ includes/uuid_node.features.inc |   42 +++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 42 insertions(+)
+
+diff --git a/includes/uuid_node.features.inc b/includes/uuid_node.features.inc
+index 17f931b..5f6ead6 100755
+--- a/includes/uuid_node.features.inc
++++ b/includes/uuid_node.features.inc
+@@ -92,6 +92,26 @@ function uuid_node_features_export_render($module, $data) {
+     unset($export->changed);
+     unset($export->last_comment_timestamp);
+     uuid_features_file_field_export($export, 'node');
++
++    // Export taxonomy_term_reference with its UUID.
++    $fields_info = field_info_instances('node', $node->type);
++    foreach ($fields_info as $field_name => $value) {
++      $field_info = field_info_field($field_name);
++      $type = $field_info['type'];
++      if ($type == 'taxonomy_term_reference') {
++        if (!empty($node->$field_name)) {
++          foreach ($node->{$field_name} as $lang => $terms) {
++            foreach ($terms as $k => $v) {
++              $tid = $node->{$field_name}[$lang][$k]['tid'];
++              $term_uuids = entity_get_uuid_by_id('taxonomy_term', array($tid));
++              $export->{$field_name}[$lang][$k]['uuid'] = $term_uuids[$tid];
++              unset($node->{$field_name}[$lang][$k]['tid']);
++            }
++          }
++        }
++      }
++    }
++
+     // The hook_alter signature is:
+     // hook_uuid_node_features_export_render_alter(&$export, $node, $module);
+     drupal_alter('uuid_node_features_export_render', $export, $node, $module);
+@@ -119,6 +139,9 @@ function uuid_node_features_revert($module) {
+  * Rebuilds nodes based on UUID from code defaults.
+  */
+ function uuid_node_features_rebuild($module) {
++  // Import the terms first.
++  uuid_term_features_rebuild($module);
++
+   $nodes = module_invoke($module, 'uuid_features_default_content');
+   if (!empty($nodes)) {
+     module_load_include('inc', 'node', 'node.pages');
+@@ -138,6 +161,25 @@ function uuid_node_features_rebuild($module) {
+           }
+       }
+ 
++      // Rebuild taxonomy_term_reference with its UUID.
++      $fields_info = field_info_instances('node', $node->type);
++      foreach ($fields_info as $field_name => $value) {
++        $field_info = field_info_field($field_name);
++        $type = $field_info['type'];
++        if ($type == 'taxonomy_term_reference') {
++          if (!empty($node->$field_name)) {
++            foreach ($node->{$field_name} as $lang => $terms) {
++              foreach ($terms as $k => $v) {
++                $term_uuid = $node->{$field_name}[$lang][$k]['uuid'];
++                $tids = entity_get_id_by_uuid('taxonomy_term', array($term_uuid));
++                $node->{$field_name}[$lang][$k]['tid'] = $tids[$term_uuid];
++                unset($node->{$field_name}[$lang][$k]['uuid']);
++              }
++            }
++          }
++        }
++      }
++
+       // The hook_alter signature is:
+       // hook_uuid_node_features_rebuild_alter(&node, $module);
+       drupal_alter('uuid_node_features_rebuild', $node, $module);
+-- 
+1.7.9.5
+
