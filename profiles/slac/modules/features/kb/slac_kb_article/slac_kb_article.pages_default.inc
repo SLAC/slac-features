@@ -134,7 +134,7 @@ function slac_kb_article_default_page_manager_handlers() {
           'name' => 'term_vocabulary',
           'settings' => array(
             'vids' => array(
-              2 => '2',
+              7 => '7',
             ),
           ),
           'context' => 'argument_term_1',
