@@ -10,12 +10,12 @@
 function slac_faq_menu_default_menu_links() {
   $menu_links = array();
 
-  // Exported menu link: menu-faq:admin/content/faq
-  $menu_links['menu-faq:admin/content/faq'] = array(
-    'menu_name' => 'menu-faq',
-    'link_path' => 'admin/content/faq',
-    'router_path' => 'admin/content/faq',
-    'link_title' => 'Manage FAQs',
+  // Exported menu link: main-menu:faq/all
+  $menu_links['main-menu:faq/all'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => 'faq/all',
+    'router_path' => 'faq/%',
+    'link_title' => 'FAQ',
     'options' => array(
       'attributes' => array(
         'title' => '',
@@ -28,12 +28,12 @@ function slac_faq_menu_default_menu_links() {
     'expanded' => 0,
     'weight' => 0,
   );
-  // Exported menu link: menu-faq:faq
-  $menu_links['menu-faq:faq'] = array(
+  // Exported menu link: menu-faq:admin/content/faq
+  $menu_links['menu-faq:admin/content/faq'] = array(
     'menu_name' => 'menu-faq',
-    'link_path' => 'faq',
-    'router_path' => 'faq',
-    'link_title' => 'FAQ list',
+    'link_path' => 'admin/content/faq',
+    'router_path' => 'admin/content/faq',
+    'link_title' => 'Manage FAQs',
     'options' => array(
       'attributes' => array(
         'title' => '',
@@ -67,7 +67,7 @@ function slac_faq_menu_default_menu_links() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Ask a new question');
-  t('FAQ list');
+  t('FAQ');
   t('Manage FAQs');
 
 

@@ -18,7 +18,7 @@ function slac_faq_default_page_manager_pages() {
   $page->path = 'faq/%term_name';
   $page->access = array();
   $page->menu = array(
-    'type' => 'normal',
+    'type' => 'none',
     'title' => 'FAQ',
     'name' => 'main-menu',
     'weight' => '0',
