@@ -13,6 +13,10 @@ function slac_faq_ctools_plugin_api() {
     return array("version" => "1");
   }
   list($module, $api) = func_get_args();
+  if ($module == "panels" && $api == "layouts") {
+    return array("version" => "1");
+  }
+  list($module, $api) = func_get_args();
   if ($module == "strongarm" && $api == "strongarm") {
     return array("version" => "1");
   }
@@ -30,12 +34,12 @@ function slac_faq_views_api() {
  */
 function slac_faq_node_info() {
   $items = array(
-    'faq' => array(
-      'name' => t('FAQ'),
+    'salc_faq' => array(
+      'name' => t('SALC FAQ'),
       'base' => 'node_content',
-      'description' => '',
+      'description' => t('A set of question and answer commonly asked.'),
       'has_title' => '1',
-      'title_label' => t('Author name'),
+      'title_label' => t('Title'),
       'help' => '',
     ),
   );
