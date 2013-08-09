@@ -5,3 +5,20 @@
  */
 
 include_once 'slac_faq.features.inc';
+
+/**
+ * Preprocess function
+ */
+function slac_faq_preprocess_views_view(&$vars) {
+  if ($vars['view']->name == 'faq') {
+    drupal_add_js(drupal_get_path('module', 'slac_faq') . '/slac_faq.js');
+  } 
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter
+ */
+function slac_faq_form_salc_faq_node_form_alter(&$form, &$form_state, $form_id) {
+  $form['title']['#title'] = t('Question');
+  $form['title']['#description'] = t('Please enter your question in the short format here');
+}
