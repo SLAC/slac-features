@@ -1,0 +1,14 @@
+name = SLAC Form building
+core = 7.x
+package = SLAC
+version = 7.x-1.0
+project = slac_form_building
+dependencies[] = botcha
+dependencies[] = slac_webform_botcha
+dependencies[] = webform
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:2
+features[node][] = webform
+features_exclude[dependencies][features] = features
+features_exclude[dependencies][strongarm] = strongarm
+features_exclude[variable][comment_webform] = comment_webform

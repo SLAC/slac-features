@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the SLAC Form building feature.
+ */
+
+include_once 'slac_form_building.features.inc';
