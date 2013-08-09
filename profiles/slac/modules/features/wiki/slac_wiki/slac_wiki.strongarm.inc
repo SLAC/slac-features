@@ -21,7 +21,7 @@ function slac_wiki_strongarm() {
     ),
     2 => array(
       'editor' => '5',
-      'alt' => '1',
+      'alt' => '0',
       'weight' => 11,
     ),
     1 => array(
@@ -43,7 +43,7 @@ function slac_wiki_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'bueditor_user1_alt';
-  $strongarm->value = '1';
+  $strongarm->value = '0';
   $export['bueditor_user1_alt'] = $strongarm;
 
   $strongarm = new stdClass();

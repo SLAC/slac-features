@@ -96,7 +96,7 @@ function slac_wiki_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'description_field' => 1,
-      'file_directory' => '',
+      'file_directory' => 'wiki',
       'file_extensions' => 'txt doc docx xls xlsx ppt pptx rtf jpg png jpeg gif csv pdf',
       'max_filesize' => '32 MB',
       'user_register_form' => FALSE,
