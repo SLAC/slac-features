@@ -1,0 +1,8 @@
+name = Webform Botcha
+description = Add Botcha to Webforms
+core = 7.x
+package = Propeople
+
+dependencies[] = webform
+dependencies[] = botcha
+

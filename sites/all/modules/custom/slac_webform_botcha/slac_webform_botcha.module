@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * Implements hook_node_insert()
+ * @param type $node 
+ */
+function slac_webform_botcha_node_insert($node) {
+  if ($node->type == "webform") {
+    variable_set("botcha_enabled_webform_client_form_{$node->nid}", 1);
+    db_insert('botcha_form')->fields(array('id' => 'webform_client_form_' . $node->nid))->execute();
+    db_insert('botcha_recipebook_form')->fields(array('rbid' => 'default', 'form_id' => 'webform_client_form_' . $node->nid))->execute();
+  }
+}
