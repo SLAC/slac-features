@@ -17,7 +17,6 @@ dependencies[] = markdowneditor
 dependencies[] = menu
 dependencies[] = node
 dependencies[] = panels
-dependencies[] = slac_kb_article
 dependencies[] = strongarm
 dependencies[] = taxonomy
 dependencies[] = text

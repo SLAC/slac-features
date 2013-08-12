@@ -1,0 +1,62 @@
+name = SLAC Intranet
+description = A distribution for SLAC Intranet sites. 
+version = VERSION
+core = 7.x
+
+;Standard profile
+dependencies[] = block
+dependencies[] = comment
+dependencies[] = contextual
+dependencies[] = dashboard
+dependencies[] = help
+dependencies[] = image
+dependencies[] = list
+dependencies[] = menu
+dependencies[] = number
+dependencies[] = options
+dependencies[] = path
+dependencies[] = taxonomy
+dependencies[] = dblog
+dependencies[] = search
+dependencies[] = field_ui
+dependencies[] = file
+
+;Contrib depdencies
+dependencies[] = admin_menu
+dependencies[] = ctools
+dependencies[] = page_manager
+dependencies[] = views
+dependencies[] = views_ui
+dependencies[] = date
+dependencies[] = date_api
+dependencies[] = date_ical
+dependencies[] = date_views
+dependencies[] = features
+dependencies[] = strongarm
+dependencies[] = link
+dependencies[] = entity
+dependencies[] = libraries
+dependencies[] = panels_mini
+dependencies[] = panels_node
+dependencies[] = panels
+
+;Development modules
+dependencies[] = devel
+dependencies[] = devel_generate
+
+;Features dependencies
+
+;FAQ
+dependencies[] = entity_token
+dependencies[] = rules
+dependencies[] = views_content
+
+;Wiki 
+dependencies[] = diff
+dependencies[] = markdown
+dependencies[] = bueditor
+dependencies[] = ajax_markup
+
+;Features
+dependencies[] = slac_faq
+;dependencies[] = slac_wiki

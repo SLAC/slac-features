@@ -37,6 +37,7 @@ function slac_faq_default_page_manager_pages() {
       'settings' => array(
         'use_tail' => 0,
       ),
+      'keyword' => 'term_name',
     ),
   );
   $page->conf = array(
