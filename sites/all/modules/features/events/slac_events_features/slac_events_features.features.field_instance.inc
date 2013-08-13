@@ -93,7 +93,7 @@ function slac_events_features_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 7,
+      'weight' => 6,
     ),
   );
 
@@ -156,10 +156,10 @@ function slac_events_features_field_default_field_instances() {
   $field_instances['node-event-field_slac_event_date'] = array(
     'bundle' => 'event',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Please enter the date for the event, please specify an end date. Event can span across multiple days.',
     'display' => array(
       'default' => array(
-        'label' => 'inline',
+        'label' => 'above',
         'module' => 'date',
         'settings' => array(
           'format_type' => 'long',
@@ -170,55 +170,31 @@ function slac_events_features_field_default_field_instances() {
           'show_repeat_rule' => 'show',
         ),
         'type' => 'date_default',
-        'weight' => 3,
+        'weight' => 7,
       ),
       'ical' => array(
         'label' => 'above',
-        'module' => 'date',
-        'settings' => array(
-          'format_type' => 'long',
-          'fromto' => 'both',
-          'multiple_from' => '',
-          'multiple_number' => '',
-          'multiple_to' => '',
-          'show_repeat_rule' => 'show',
-        ),
-        'type' => 'date_default',
-        'weight' => 1,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'rss' => array(
         'label' => 'above',
-        'module' => 'date',
-        'settings' => array(
-          'format_type' => 'long',
-          'fromto' => 'both',
-          'multiple_from' => '',
-          'multiple_number' => '',
-          'multiple_to' => '',
-          'show_repeat_rule' => 'show',
-        ),
-        'type' => 'date_default',
-        'weight' => 1,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
-        'module' => 'date',
-        'settings' => array(
-          'format_type' => 'long',
-          'fromto' => 'both',
-          'multiple_from' => '',
-          'multiple_number' => '',
-          'multiple_to' => '',
-          'show_repeat_rule' => 'show',
-        ),
-        'type' => 'date_default',
-        'weight' => 1,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
     ),
     'entity_type' => 'node',
     'field_name' => 'field_slac_event_date',
     'label' => 'Event date',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'default_value' => 'now',
       'default_value2' => 'same',
@@ -230,10 +206,12 @@ function slac_events_features_field_default_field_instances() {
       'active' => 1,
       'module' => 'date',
       'settings' => array(
+        'display_all_day' => 0,
         'increment' => 15,
         'input_format' => 'm/d/Y - g:i:sa',
         'input_format_custom' => '',
         'label_position' => 'above',
+        'repeat_collapsed' => 0,
         'text_parts' => array(),
         'year_range' => '-3:+3',
       ),
@@ -247,7 +225,7 @@ function slac_events_features_field_default_field_instances() {
     'bundle' => 'event',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Please enter the link of the event, i.e. https://conf-slac.stanford.edu/ixs-2013/Welcome',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -368,7 +346,7 @@ function slac_events_features_field_default_field_instances() {
     'bundle' => 'event',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Please enter an area of expertise for this event such as "Photon, X-ray" (If applicable)',
     'display' => array(
       'default' => array(
         'label' => 'inline',
@@ -420,7 +398,7 @@ function slac_events_features_field_default_field_instances() {
     'bundle' => 'event',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Enter comma separated tags (i.e. Photon, X-Ray, Accelerator)',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -463,7 +441,7 @@ function slac_events_features_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 9,
+      'weight' => 7,
     ),
   );
 
@@ -537,11 +515,15 @@ function slac_events_features_field_default_field_instances() {
   t('Color');
   t('Comment');
   t('Description');
+  t('Enter comma separated tags (i.e. Photon, X-Ray, Accelerator)');
   t('Event Organization');
   t('Event Scientific Area');
   t('Event Series');
   t('Event date');
   t('Event link');
+  t('Please enter an area of expertise for this event such as "Photon, X-ray" (If applicable)');
+  t('Please enter the date for the event, please specify an end date. Event can span across multiple days.');
+  t('Please enter the link of the event, i.e. https://conf-slac.stanford.edu/ixs-2013/Welcome');
   t('Tags');
 
   return $field_instances;

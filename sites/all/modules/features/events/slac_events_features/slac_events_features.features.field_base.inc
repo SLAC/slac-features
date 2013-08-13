@@ -110,7 +110,7 @@ function slac_events_features_field_default_field_bases() {
   // Exported field_base: 'field_slac_event_date'
   $field_bases['field_slac_event_date'] = array(
     'active' => 1,
-    'cardinality' => 1,
+    'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_slac_event_date',
@@ -129,9 +129,9 @@ function slac_events_features_field_default_field_bases() {
         'second' => 0,
         'year' => 'year',
       ),
-      'repeat' => 0,
+      'repeat' => 1,
       'timezone_db' => 'UTC',
-      'todate' => 'optional',
+      'todate' => 'required',
       'tz_handling' => 'site',
     ),
     'translatable' => 0,

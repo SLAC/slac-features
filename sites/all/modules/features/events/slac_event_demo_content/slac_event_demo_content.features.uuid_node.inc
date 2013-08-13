@@ -35,17 +35,6 @@ function slac_event_demo_content_uuid_features_default_content() {
       ),
     ),
   ),
-  'field_slac_event_date' => array(
-    'und' => array(
-      0 => array(
-        'value' => '2013-08-23T00:30:00',
-        'value2' => '2013-08-23T14:30:00',
-        'timezone' => 'Europe/Helsinki',
-        'timezone_db' => 'UTC',
-        'date_type' => 'date',
-      ),
-    ),
-  ),
   'field_slac_event_link' => array(
     'und' => array(
       0 => array(
@@ -58,6 +47,50 @@ function slac_event_demo_content_uuid_features_default_content() {
   'field_slac_event_organization' => array(),
   'field_slac_event_scientific_area' => array(),
   'field_slac_event_tags' => array(),
+  'field_slac_event_date' => array(
+    'und' => array(
+      0 => array(
+        'value' => '2013-08-04T05:00:00',
+        'value2' => '2013-08-04T09:00:00',
+        'rrule' => 'RRULE:FREQ=DAILY;INTERVAL=1;COUNT=5;WKST=SU',
+        'timezone' => 'Europe/Helsinki',
+        'timezone_db' => 'UTC',
+        'date_type' => 'date',
+      ),
+      1 => array(
+        'value' => '2013-08-05T05:00:00',
+        'value2' => '2013-08-05T09:00:00',
+        'rrule' => 'RRULE:FREQ=DAILY;INTERVAL=1;COUNT=5;WKST=SU',
+        'timezone' => 'Europe/Helsinki',
+        'timezone_db' => 'UTC',
+        'date_type' => 'date',
+      ),
+      2 => array(
+        'value' => '2013-08-06T05:00:00',
+        'value2' => '2013-08-06T09:00:00',
+        'rrule' => 'RRULE:FREQ=DAILY;INTERVAL=1;COUNT=5;WKST=SU',
+        'timezone' => 'Europe/Helsinki',
+        'timezone_db' => 'UTC',
+        'date_type' => 'date',
+      ),
+      3 => array(
+        'value' => '2013-08-07T05:00:00',
+        'value2' => '2013-08-07T09:00:00',
+        'rrule' => 'RRULE:FREQ=DAILY;INTERVAL=1;COUNT=5;WKST=SU',
+        'timezone' => 'Europe/Helsinki',
+        'timezone_db' => 'UTC',
+        'date_type' => 'date',
+      ),
+      4 => array(
+        'value' => '2013-08-08T05:00:00',
+        'value2' => '2013-08-08T09:00:00',
+        'rrule' => 'RRULE:FREQ=DAILY;INTERVAL=1;COUNT=5;WKST=SU',
+        'timezone' => 'Europe/Helsinki',
+        'timezone_db' => 'UTC',
+        'date_type' => 'date',
+      ),
+    ),
+  ),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:Item',
@@ -121,7 +154,7 @@ function slac_event_demo_content_uuid_features_default_content() {
   'picture' => 0,
   'data' => 'b:0;',
   'date' => '2013-08-10 17:35:56 +0300',
-  'author_uuid' => '1379ed6e-ff66-4604-b05d-3d1a47051c25',
+  'author_uuid' => '306f8481-4295-413f-a765-f4d5acee30d3',
 );
   $nodes[] = array(
   'uid' => 1,
@@ -148,17 +181,6 @@ function slac_event_demo_content_uuid_features_default_content() {
       ),
     ),
   ),
-  'field_slac_event_date' => array(
-    'und' => array(
-      0 => array(
-        'value' => '2013-08-28T09:30:00',
-        'value2' => '2013-08-28T19:30:00',
-        'timezone' => 'Europe/Helsinki',
-        'timezone_db' => 'UTC',
-        'date_type' => 'date',
-      ),
-    ),
-  ),
   'field_slac_event_link' => array(
     'und' => array(
       0 => array(
@@ -171,6 +193,58 @@ function slac_event_demo_content_uuid_features_default_content() {
   'field_slac_event_organization' => array(),
   'field_slac_event_scientific_area' => array(),
   'field_slac_event_tags' => array(),
+  'field_slac_event_date' => array(
+    'und' => array(
+      0 => array(
+        'value' => '2013-08-15T09:30:00',
+        'value2' => '2013-08-15T19:30:00',
+        'rrule' => 'RRULE:FREQ=DAILY;INTERVAL=3;UNTIL=20130830T205959Z;WKST=SU',
+        'timezone' => 'Europe/Helsinki',
+        'timezone_db' => 'UTC',
+        'date_type' => 'date',
+      ),
+      1 => array(
+        'value' => '2013-08-18T09:30:00',
+        'value2' => '2013-08-18T19:30:00',
+        'rrule' => 'RRULE:FREQ=DAILY;INTERVAL=3;UNTIL=20130830T205959Z;WKST=SU',
+        'timezone' => 'Europe/Helsinki',
+        'timezone_db' => 'UTC',
+        'date_type' => 'date',
+      ),
+      2 => array(
+        'value' => '2013-08-21T09:30:00',
+        'value2' => '2013-08-21T19:30:00',
+        'rrule' => 'RRULE:FREQ=DAILY;INTERVAL=3;UNTIL=20130830T205959Z;WKST=SU',
+        'timezone' => 'Europe/Helsinki',
+        'timezone_db' => 'UTC',
+        'date_type' => 'date',
+      ),
+      3 => array(
+        'value' => '2013-08-24T09:30:00',
+        'value2' => '2013-08-24T19:30:00',
+        'rrule' => 'RRULE:FREQ=DAILY;INTERVAL=3;UNTIL=20130830T205959Z;WKST=SU',
+        'timezone' => 'Europe/Helsinki',
+        'timezone_db' => 'UTC',
+        'date_type' => 'date',
+      ),
+      4 => array(
+        'value' => '2013-08-27T09:30:00',
+        'value2' => '2013-08-27T19:30:00',
+        'rrule' => 'RRULE:FREQ=DAILY;INTERVAL=3;UNTIL=20130830T205959Z;WKST=SU',
+        'timezone' => 'Europe/Helsinki',
+        'timezone_db' => 'UTC',
+        'date_type' => 'date',
+      ),
+      5 => array(
+        'value' => '2013-08-30T09:30:00',
+        'value2' => '2013-08-30T19:30:00',
+        'rrule' => 'RRULE:FREQ=DAILY;INTERVAL=3;UNTIL=20130830T205959Z;WKST=SU',
+        'timezone' => 'Europe/Helsinki',
+        'timezone_db' => 'UTC',
+        'date_type' => 'date',
+      ),
+    ),
+  ),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:Item',
@@ -234,7 +308,7 @@ function slac_event_demo_content_uuid_features_default_content() {
   'picture' => 0,
   'data' => 'b:0;',
   'date' => '2013-08-10 17:35:05 +0300',
-  'author_uuid' => '1379ed6e-ff66-4604-b05d-3d1a47051c25',
+  'author_uuid' => '306f8481-4295-413f-a765-f4d5acee30d3',
 );
   $nodes[] = array(
   'uid' => 1,
@@ -261,17 +335,6 @@ function slac_event_demo_content_uuid_features_default_content() {
       ),
     ),
   ),
-  'field_slac_event_date' => array(
-    'und' => array(
-      0 => array(
-        'value' => '2013-08-02T14:30:00',
-        'value2' => '2013-08-02T19:30:00',
-        'timezone' => 'Europe/Helsinki',
-        'timezone_db' => 'UTC',
-        'date_type' => 'date',
-      ),
-    ),
-  ),
   'field_slac_event_link' => array(
     'und' => array(
       0 => array(
@@ -284,6 +347,18 @@ function slac_event_demo_content_uuid_features_default_content() {
   'field_slac_event_organization' => array(),
   'field_slac_event_scientific_area' => array(),
   'field_slac_event_tags' => array(),
+  'field_slac_event_date' => array(
+    'und' => array(
+      0 => array(
+        'value' => '2013-08-20T06:45:00',
+        'value2' => '2013-08-20T13:30:00',
+        'rrule' => NULL,
+        'timezone' => 'Europe/Helsinki',
+        'timezone_db' => 'UTC',
+        'date_type' => 'date',
+      ),
+    ),
+  ),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:Item',
@@ -347,7 +422,7 @@ function slac_event_demo_content_uuid_features_default_content() {
   'picture' => 0,
   'data' => 'b:0;',
   'date' => '2013-08-10 17:34:29 +0300',
-  'author_uuid' => '1379ed6e-ff66-4604-b05d-3d1a47051c25',
+  'author_uuid' => '306f8481-4295-413f-a765-f4d5acee30d3',
 );
   $nodes[] = array(
   'uid' => 1,
@@ -374,17 +449,6 @@ function slac_event_demo_content_uuid_features_default_content() {
       ),
     ),
   ),
-  'field_slac_event_date' => array(
-    'und' => array(
-      0 => array(
-        'value' => '2013-08-01T04:15:00',
-        'value2' => '2013-08-01T14:15:00',
-        'timezone' => 'Europe/Helsinki',
-        'timezone_db' => 'UTC',
-        'date_type' => 'date',
-      ),
-    ),
-  ),
   'field_slac_event_link' => array(
     'und' => array(
       0 => array(
@@ -397,6 +461,18 @@ function slac_event_demo_content_uuid_features_default_content() {
   'field_slac_event_organization' => array(),
   'field_slac_event_scientific_area' => array(),
   'field_slac_event_tags' => array(),
+  'field_slac_event_date' => array(
+    'und' => array(
+      0 => array(
+        'value' => '2013-08-31T12:30:00',
+        'value2' => '2013-08-31T18:45:00',
+        'rrule' => NULL,
+        'timezone' => 'Europe/Helsinki',
+        'timezone_db' => 'UTC',
+        'date_type' => 'date',
+      ),
+    ),
+  ),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:Item',
@@ -460,7 +536,7 @@ function slac_event_demo_content_uuid_features_default_content() {
   'picture' => 0,
   'data' => 'b:0;',
   'date' => '2013-08-10 17:16:00 +0300',
-  'author_uuid' => '1379ed6e-ff66-4604-b05d-3d1a47051c25',
+  'author_uuid' => '306f8481-4295-413f-a765-f4d5acee30d3',
 );
   $nodes[] = array(
   'uid' => 1,
@@ -487,17 +563,6 @@ function slac_event_demo_content_uuid_features_default_content() {
       ),
     ),
   ),
-  'field_slac_event_date' => array(
-    'und' => array(
-      0 => array(
-        'value' => '2013-08-05T09:45:00',
-        'value2' => '2013-08-05T14:45:00',
-        'timezone' => 'Europe/Helsinki',
-        'timezone_db' => 'UTC',
-        'date_type' => 'date',
-      ),
-    ),
-  ),
   'field_slac_event_link' => array(
     'und' => array(
       0 => array(
@@ -510,6 +575,18 @@ function slac_event_demo_content_uuid_features_default_content() {
   'field_slac_event_organization' => array(),
   'field_slac_event_scientific_area' => array(),
   'field_slac_event_tags' => array(),
+  'field_slac_event_date' => array(
+    'und' => array(
+      0 => array(
+        'value' => '2013-08-04T15:30:00',
+        'value2' => '2013-08-04T20:45:00',
+        'rrule' => NULL,
+        'timezone' => 'Europe/Helsinki',
+        'timezone_db' => 'UTC',
+        'date_type' => 'date',
+      ),
+    ),
+  ),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:Item',
@@ -573,7 +650,7 @@ function slac_event_demo_content_uuid_features_default_content() {
   'picture' => 0,
   'data' => 'b:0;',
   'date' => '2013-08-10 17:38:37 +0300',
-  'author_uuid' => '1379ed6e-ff66-4604-b05d-3d1a47051c25',
+  'author_uuid' => '306f8481-4295-413f-a765-f4d5acee30d3',
 );
   $nodes[] = array(
   'uid' => 1,
@@ -611,17 +688,6 @@ function slac_event_demo_content_uuid_features_default_content() {
       ),
     ),
   ),
-  'field_slac_event_date' => array(
-    'und' => array(
-      0 => array(
-        'value' => '2013-08-08T06:30:00',
-        'value2' => '2013-08-08T13:30:00',
-        'timezone' => 'Europe/Helsinki',
-        'timezone_db' => 'UTC',
-        'date_type' => 'date',
-      ),
-    ),
-  ),
   'field_slac_event_link' => array(),
   'field_slac_event_organization' => array(
     'und' => array(
@@ -646,6 +712,18 @@ function slac_event_demo_content_uuid_features_default_content() {
       0 => array(
         'tid' => 29,
         'uuid' => '9914b3dc-1371-45c4-970d-93a26ca5fba9',
+      ),
+    ),
+  ),
+  'field_slac_event_date' => array(
+    'und' => array(
+      0 => array(
+        'value' => '2013-08-08T07:45:00',
+        'value2' => '2013-08-08T19:45:00',
+        'rrule' => NULL,
+        'timezone' => 'Europe/Helsinki',
+        'timezone_db' => 'UTC',
+        'date_type' => 'date',
       ),
     ),
   ),
@@ -712,7 +790,7 @@ function slac_event_demo_content_uuid_features_default_content() {
   'picture' => 0,
   'data' => 'b:0;',
   'date' => '2013-08-10 17:37:03 +0300',
-  'author_uuid' => '1379ed6e-ff66-4604-b05d-3d1a47051c25',
+  'author_uuid' => '306f8481-4295-413f-a765-f4d5acee30d3',
 );
   $nodes[] = array(
   'uid' => 1,
@@ -739,17 +817,6 @@ function slac_event_demo_content_uuid_features_default_content() {
       ),
     ),
   ),
-  'field_slac_event_date' => array(
-    'und' => array(
-      0 => array(
-        'value' => '2013-08-05T03:30:00',
-        'value2' => '2013-08-05T14:30:00',
-        'timezone' => 'Europe/Helsinki',
-        'timezone_db' => 'UTC',
-        'date_type' => 'date',
-      ),
-    ),
-  ),
   'field_slac_event_link' => array(
     'und' => array(
       0 => array(
@@ -762,6 +829,18 @@ function slac_event_demo_content_uuid_features_default_content() {
   'field_slac_event_organization' => array(),
   'field_slac_event_scientific_area' => array(),
   'field_slac_event_tags' => array(),
+  'field_slac_event_date' => array(
+    'und' => array(
+      0 => array(
+        'value' => '2013-08-22T21:45:00',
+        'value2' => '2013-08-23T14:45:00',
+        'rrule' => NULL,
+        'timezone' => 'Europe/Helsinki',
+        'timezone_db' => 'UTC',
+        'date_type' => 'date',
+      ),
+    ),
+  ),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:Item',
@@ -825,7 +904,7 @@ function slac_event_demo_content_uuid_features_default_content() {
   'picture' => 0,
   'data' => 'b:0;',
   'date' => '2013-08-10 17:33:43 +0300',
-  'author_uuid' => '1379ed6e-ff66-4604-b05d-3d1a47051c25',
+  'author_uuid' => '306f8481-4295-413f-a765-f4d5acee30d3',
 );
   $nodes[] = array(
   'uid' => 1,
@@ -889,17 +968,6 @@ function slac_event_demo_content_uuid_features_default_content() {
       ),
     ),
   ),
-  'field_slac_event_date' => array(
-    'und' => array(
-      0 => array(
-        'value' => '2013-08-24T14:30:00',
-        'value2' => '2013-08-24T17:30:00',
-        'timezone' => 'Europe/Helsinki',
-        'timezone_db' => 'UTC',
-        'date_type' => 'date',
-      ),
-    ),
-  ),
   'field_slac_event_link' => array(),
   'field_slac_event_organization' => array(),
   'field_slac_event_scientific_area' => array(),
@@ -908,6 +976,18 @@ function slac_event_demo_content_uuid_features_default_content() {
       0 => array(
         'tid' => 27,
         'uuid' => '887e35db-2734-405e-a001-daad4a60daa7',
+      ),
+    ),
+  ),
+  'field_slac_event_date' => array(
+    'und' => array(
+      0 => array(
+        'value' => '2013-08-25T06:45:00',
+        'value2' => '2013-08-25T15:45:00',
+        'rrule' => NULL,
+        'timezone' => 'Europe/Helsinki',
+        'timezone_db' => 'UTC',
+        'date_type' => 'date',
       ),
     ),
   ),
@@ -974,7 +1054,7 @@ function slac_event_demo_content_uuid_features_default_content() {
   'picture' => 0,
   'data' => 'b:0;',
   'date' => '2013-08-10 17:37:55 +0300',
-  'author_uuid' => '1379ed6e-ff66-4604-b05d-3d1a47051c25',
+  'author_uuid' => '306f8481-4295-413f-a765-f4d5acee30d3',
 );
   $nodes[] = array(
   'uid' => 1,
@@ -1001,17 +1081,6 @@ function slac_event_demo_content_uuid_features_default_content() {
       ),
     ),
   ),
-  'field_slac_event_date' => array(
-    'und' => array(
-      0 => array(
-        'value' => '2013-08-12T14:30:00',
-        'value2' => '2013-08-12T19:30:00',
-        'timezone' => 'Europe/Helsinki',
-        'timezone_db' => 'UTC',
-        'date_type' => 'date',
-      ),
-    ),
-  ),
   'field_slac_event_link' => array(
     'und' => array(
       0 => array(
@@ -1024,6 +1093,18 @@ function slac_event_demo_content_uuid_features_default_content() {
   'field_slac_event_organization' => array(),
   'field_slac_event_scientific_area' => array(),
   'field_slac_event_tags' => array(),
+  'field_slac_event_date' => array(
+    'und' => array(
+      0 => array(
+        'value' => '2013-08-20T10:45:00',
+        'value2' => '2013-08-20T13:30:00',
+        'rrule' => NULL,
+        'timezone' => 'Europe/Helsinki',
+        'timezone_db' => 'UTC',
+        'date_type' => 'date',
+      ),
+    ),
+  ),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:Item',
@@ -1087,7 +1168,7 @@ function slac_event_demo_content_uuid_features_default_content() {
   'picture' => 0,
   'data' => 'b:0;',
   'date' => '2013-08-10 17:32:29 +0300',
-  'author_uuid' => '1379ed6e-ff66-4604-b05d-3d1a47051c25',
+  'author_uuid' => '306f8481-4295-413f-a765-f4d5acee30d3',
 );
   $nodes[] = array(
   'uid' => 1,
@@ -1114,17 +1195,6 @@ function slac_event_demo_content_uuid_features_default_content() {
       ),
     ),
   ),
-  'field_slac_event_date' => array(
-    'und' => array(
-      0 => array(
-        'value' => '2013-08-02T00:30:00',
-        'value2' => '2013-08-02T14:30:00',
-        'timezone' => 'Europe/Helsinki',
-        'timezone_db' => 'UTC',
-        'date_type' => 'date',
-      ),
-    ),
-  ),
   'field_slac_event_link' => array(
     'und' => array(
       0 => array(
@@ -1137,6 +1207,18 @@ function slac_event_demo_content_uuid_features_default_content() {
   'field_slac_event_organization' => array(),
   'field_slac_event_scientific_area' => array(),
   'field_slac_event_tags' => array(),
+  'field_slac_event_date' => array(
+    'und' => array(
+      0 => array(
+        'value' => '2013-08-02T05:45:00',
+        'value2' => '2013-08-02T13:45:00',
+        'rrule' => NULL,
+        'timezone' => 'Europe/Helsinki',
+        'timezone_db' => 'UTC',
+        'date_type' => 'date',
+      ),
+    ),
+  ),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:Item',
@@ -1200,7 +1282,7 @@ function slac_event_demo_content_uuid_features_default_content() {
   'picture' => 0,
   'data' => 'b:0;',
   'date' => '2013-08-10 17:33:04 +0300',
-  'author_uuid' => '1379ed6e-ff66-4604-b05d-3d1a47051c25',
+  'author_uuid' => '306f8481-4295-413f-a765-f4d5acee30d3',
 );
   $nodes[] = array(
   'uid' => 1,
@@ -1227,17 +1309,6 @@ function slac_event_demo_content_uuid_features_default_content() {
       ),
     ),
   ),
-  'field_slac_event_date' => array(
-    'und' => array(
-      0 => array(
-        'value' => '2013-08-10T09:30:00',
-        'value2' => '2013-08-10T14:30:00',
-        'timezone' => 'Europe/Helsinki',
-        'timezone_db' => 'UTC',
-        'date_type' => 'date',
-      ),
-    ),
-  ),
   'field_slac_event_link' => array(
     'und' => array(
       0 => array(
@@ -1250,6 +1321,18 @@ function slac_event_demo_content_uuid_features_default_content() {
   'field_slac_event_organization' => array(),
   'field_slac_event_scientific_area' => array(),
   'field_slac_event_tags' => array(),
+  'field_slac_event_date' => array(
+    'und' => array(
+      0 => array(
+        'value' => '2013-08-13T10:45:00',
+        'value2' => '2013-08-13T13:45:00',
+        'rrule' => NULL,
+        'timezone' => 'Europe/Helsinki',
+        'timezone_db' => 'UTC',
+        'date_type' => 'date',
+      ),
+    ),
+  ),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:Item',
@@ -1313,7 +1396,7 @@ function slac_event_demo_content_uuid_features_default_content() {
   'picture' => 0,
   'data' => 'b:0;',
   'date' => '2013-08-10 17:31:44 +0300',
-  'author_uuid' => '1379ed6e-ff66-4604-b05d-3d1a47051c25',
+  'author_uuid' => '306f8481-4295-413f-a765-f4d5acee30d3',
 );
   return $nodes;
 }
