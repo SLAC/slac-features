@@ -59,34 +59,34 @@ function slac_events_features_views_default_views() {
   $handler->display->display_options['style_options']['theme_style'] = '1';
   $handler->display->display_options['style_options']['max_items'] = '0';
   $handler->display->display_options['row_plugin'] = 'calendar_entity';
-  /* Relationship: Content: Event Series (field_event_category) */
-  $handler->display->display_options['relationships']['field_event_category_tid']['id'] = 'field_event_category_tid';
-  $handler->display->display_options['relationships']['field_event_category_tid']['table'] = 'field_data_field_event_category';
-  $handler->display->display_options['relationships']['field_event_category_tid']['field'] = 'field_event_category_tid';
-  /* Relationship: Taxonomy term: Color (field_color_reference) */
-  $handler->display->display_options['relationships']['field_color_reference_tid']['id'] = 'field_color_reference_tid';
-  $handler->display->display_options['relationships']['field_color_reference_tid']['table'] = 'field_data_field_color_reference';
-  $handler->display->display_options['relationships']['field_color_reference_tid']['field'] = 'field_color_reference_tid';
-  $handler->display->display_options['relationships']['field_color_reference_tid']['relationship'] = 'field_event_category_tid';
+  /* Relationship: Content: Event Series (field_slac_event_category) */
+  $handler->display->display_options['relationships']['field_slac_event_category_tid']['id'] = 'field_slac_event_category_tid';
+  $handler->display->display_options['relationships']['field_slac_event_category_tid']['table'] = 'field_data_field_slac_event_category';
+  $handler->display->display_options['relationships']['field_slac_event_category_tid']['field'] = 'field_slac_event_category_tid';
+  /* Relationship: Taxonomy term: Color (field_slac_event_color_reference) */
+  $handler->display->display_options['relationships']['field_slac_event_color_reference_tid']['id'] = 'field_slac_event_color_reference_tid';
+  $handler->display->display_options['relationships']['field_slac_event_color_reference_tid']['table'] = 'field_data_field_slac_event_color_reference';
+  $handler->display->display_options['relationships']['field_slac_event_color_reference_tid']['field'] = 'field_slac_event_color_reference_tid';
+  $handler->display->display_options['relationships']['field_slac_event_color_reference_tid']['relationship'] = 'field_slac_event_category_tid';
   /* Field: Content: Event Series */
-  $handler->display->display_options['fields']['field_event_category']['id'] = 'field_event_category';
-  $handler->display->display_options['fields']['field_event_category']['table'] = 'field_data_field_event_category';
-  $handler->display->display_options['fields']['field_event_category']['field'] = 'field_event_category';
-  $handler->display->display_options['fields']['field_event_category']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_event_category']['type'] = 'taxonomy_term_reference_plain';
+  $handler->display->display_options['fields']['field_slac_event_category']['id'] = 'field_slac_event_category';
+  $handler->display->display_options['fields']['field_slac_event_category']['table'] = 'field_data_field_slac_event_category';
+  $handler->display->display_options['fields']['field_slac_event_category']['field'] = 'field_slac_event_category';
+  $handler->display->display_options['fields']['field_slac_event_category']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_slac_event_category']['type'] = 'taxonomy_term_reference_plain';
   /* Field: Taxonomy term: Color */
-  $handler->display->display_options['fields']['field_color']['id'] = 'field_color';
-  $handler->display->display_options['fields']['field_color']['table'] = 'field_data_field_color';
-  $handler->display->display_options['fields']['field_color']['field'] = 'field_color';
-  $handler->display->display_options['fields']['field_color']['relationship'] = 'field_color_reference_tid';
-  $handler->display->display_options['fields']['field_color']['label'] = '';
-  $handler->display->display_options['fields']['field_color']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_color']['element_type'] = '0';
-  $handler->display->display_options['fields']['field_color']['element_label_type'] = '0';
-  $handler->display->display_options['fields']['field_color']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_color']['element_wrapper_type'] = '0';
-  $handler->display->display_options['fields']['field_color']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_color']['type'] = 'text_plain';
+  $handler->display->display_options['fields']['field_slac_event_color']['id'] = 'field_slac_event_color';
+  $handler->display->display_options['fields']['field_slac_event_color']['table'] = 'field_data_field_slac_event_color';
+  $handler->display->display_options['fields']['field_slac_event_color']['field'] = 'field_slac_event_color';
+  $handler->display->display_options['fields']['field_slac_event_color']['relationship'] = 'field_slac_event_color_reference_tid';
+  $handler->display->display_options['fields']['field_slac_event_color']['label'] = '';
+  $handler->display->display_options['fields']['field_slac_event_color']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_slac_event_color']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_slac_event_color']['element_label_type'] = '0';
+  $handler->display->display_options['fields']['field_slac_event_color']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_slac_event_color']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_slac_event_color']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_slac_event_color']['type'] = 'text_plain';
   /* Field: Global: PHP */
   $handler->display->display_options['fields']['php']['id'] = 'php';
   $handler->display->display_options['fields']['php']['table'] = 'views';
@@ -94,25 +94,25 @@ function slac_events_features_views_default_views() {
   $handler->display->display_options['fields']['php']['label'] = '';
   $handler->display->display_options['fields']['php']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['php']['use_php_setup'] = 0;
-  $handler->display->display_options['fields']['php']['php_output'] = '<div style="background-color:<?php print $data->field_field_color[0][\'raw\'][\'value\'] ?>; color:<?php print $data->field_field_color[0][\'raw\'][\'value\'] ?>;" class="term-color" >sss&nbsp;</div>';
+  $handler->display->display_options['fields']['php']['php_output'] = '<div style="background-color:<?php print $data->field_field_slac_event_color[0][\'raw\'][\'value\'] ?>; color:<?php print $data->field_field_slac_event_color[0][\'raw\'][\'value\'] ?>;" class="term-color" >sss&nbsp;</div>';
   $handler->display->display_options['fields']['php']['use_php_click_sortable'] = '0';
   $handler->display->display_options['fields']['php']['php_click_sortable'] = '';
   /* Field: Content: Event date */
-  $handler->display->display_options['fields']['field_event_date']['id'] = 'field_event_date';
-  $handler->display->display_options['fields']['field_event_date']['table'] = 'field_data_field_event_date';
-  $handler->display->display_options['fields']['field_event_date']['field'] = 'field_event_date';
-  $handler->display->display_options['fields']['field_event_date']['label'] = '';
-  $handler->display->display_options['fields']['field_event_date']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_event_date']['hide_alter_empty'] = FALSE;
-  $handler->display->display_options['fields']['field_event_date']['settings'] = array(
+  $handler->display->display_options['fields']['field_slac_event_date']['id'] = 'field_slac_event_date';
+  $handler->display->display_options['fields']['field_slac_event_date']['table'] = 'field_data_field_slac_event_date';
+  $handler->display->display_options['fields']['field_slac_event_date']['field'] = 'field_slac_event_date';
+  $handler->display->display_options['fields']['field_slac_event_date']['label'] = '';
+  $handler->display->display_options['fields']['field_slac_event_date']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_slac_event_date']['hide_alter_empty'] = FALSE;
+  $handler->display->display_options['fields']['field_slac_event_date']['settings'] = array(
     'format_type' => 'hour',
     'fromto' => 'both',
     'multiple_number' => '',
     'multiple_from' => '',
     'multiple_to' => '',
   );
-  $handler->display->display_options['fields']['field_event_date']['group_rows'] = FALSE;
-  $handler->display->display_options['fields']['field_event_date']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_slac_event_date']['group_rows'] = FALSE;
+  $handler->display->display_options['fields']['field_slac_event_date']['delta_offset'] = '0';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -122,10 +122,10 @@ function slac_events_features_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['hide_alter_empty'] = FALSE;
-  /* Sort criterion: Content: Event date -  start date (field_event_date) */
-  $handler->display->display_options['sorts']['field_event_date_value']['id'] = 'field_event_date_value';
-  $handler->display->display_options['sorts']['field_event_date_value']['table'] = 'field_data_field_event_date';
-  $handler->display->display_options['sorts']['field_event_date_value']['field'] = 'field_event_date_value';
+  /* Sort criterion: Content: Event date -  start date (field_slac_event_date) */
+  $handler->display->display_options['sorts']['field_slac_event_date_value']['id'] = 'field_slac_event_date_value';
+  $handler->display->display_options['sorts']['field_slac_event_date_value']['table'] = 'field_data_field_slac_event_date';
+  $handler->display->display_options['sorts']['field_slac_event_date_value']['field'] = 'field_slac_event_date_value';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -137,7 +137,7 @@ function slac_events_features_views_default_views() {
   $handler->display->display_options['filters']['tid']['id'] = 'tid';
   $handler->display->display_options['filters']['tid']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['filters']['tid']['field'] = 'tid';
-  $handler->display->display_options['filters']['tid']['relationship'] = 'field_event_category_tid';
+  $handler->display->display_options['filters']['tid']['relationship'] = 'field_slac_event_category_tid';
   $handler->display->display_options['filters']['tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['tid']['expose']['operator_id'] = 'tid_op';
   $handler->display->display_options['filters']['tid']['expose']['label'] = 'Term';
@@ -179,7 +179,7 @@ function slac_events_features_views_default_views() {
   $handler->display->display_options['arguments']['date_argument']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['date_argument']['add_delta'] = 'yes';
   $handler->display->display_options['arguments']['date_argument']['date_fields'] = array(
-    'field_data_field_event_date.field_event_date_value' => 'field_data_field_event_date.field_event_date_value',
+    'field_data_field_slac_event_date.field_slac_event_date_value' => 'field_data_field_slac_event_date.field_slac_event_date_value',
   );
   $handler->display->display_options['path'] = 'calendar/month';
   $handler->display->display_options['menu']['type'] = 'default tab';
@@ -219,7 +219,7 @@ function slac_events_features_views_default_views() {
   $handler->display->display_options['arguments']['date_argument']['granularity'] = 'week';
   $handler->display->display_options['arguments']['date_argument']['add_delta'] = 'yes';
   $handler->display->display_options['arguments']['date_argument']['date_fields'] = array(
-    'field_data_field_event_date.field_event_date_value' => 'field_data_field_event_date.field_event_date_value',
+    'field_data_field_slac_event_date.field_slac_event_date_value' => 'field_data_field_slac_event_date.field_slac_event_date_value',
   );
   $handler->display->display_options['path'] = 'calendar/week';
   $handler->display->display_options['menu']['type'] = 'tab';
@@ -255,7 +255,7 @@ function slac_events_features_views_default_views() {
   $handler->display->display_options['arguments']['date_argument']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['date_argument']['granularity'] = 'day';
   $handler->display->display_options['arguments']['date_argument']['date_fields'] = array(
-    'field_data_field_event_date.field_event_date_value' => 'field_data_field_event_date.field_event_date_value',
+    'field_data_field_slac_event_date.field_slac_event_date_value' => 'field_data_field_slac_event_date.field_slac_event_date_value',
   );
   $handler->display->display_options['path'] = 'calendar/day';
   $handler->display->display_options['menu']['type'] = 'tab';
@@ -293,13 +293,13 @@ function slac_events_features_views_default_views() {
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['hide_alter_empty'] = FALSE;
   /* Field: Content: Event date */
-  $handler->display->display_options['fields']['field_event_date']['id'] = 'field_event_date';
-  $handler->display->display_options['fields']['field_event_date']['table'] = 'field_data_field_event_date';
-  $handler->display->display_options['fields']['field_event_date']['field'] = 'field_event_date';
-  $handler->display->display_options['fields']['field_event_date']['label'] = '';
-  $handler->display->display_options['fields']['field_event_date']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_event_date']['hide_alter_empty'] = FALSE;
-  $handler->display->display_options['fields']['field_event_date']['settings'] = array(
+  $handler->display->display_options['fields']['field_slac_event_date']['id'] = 'field_slac_event_date';
+  $handler->display->display_options['fields']['field_slac_event_date']['table'] = 'field_data_field_slac_event_date';
+  $handler->display->display_options['fields']['field_slac_event_date']['field'] = 'field_slac_event_date';
+  $handler->display->display_options['fields']['field_slac_event_date']['label'] = '';
+  $handler->display->display_options['fields']['field_slac_event_date']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_slac_event_date']['hide_alter_empty'] = FALSE;
+  $handler->display->display_options['fields']['field_slac_event_date']['settings'] = array(
     'format_type' => 'short',
     'fromto' => 'both',
     'multiple_number' => '',
@@ -307,8 +307,8 @@ function slac_events_features_views_default_views() {
     'multiple_to' => '',
     'show_repeat_rule' => '',
   );
-  $handler->display->display_options['fields']['field_event_date']['group_rows'] = FALSE;
-  $handler->display->display_options['fields']['field_event_date']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_slac_event_date']['group_rows'] = FALSE;
+  $handler->display->display_options['fields']['field_slac_event_date']['delta_offset'] = '0';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Date: Date (node) */
   $handler->display->display_options['arguments']['date_argument']['id'] = 'date_argument';
@@ -319,7 +319,7 @@ function slac_events_features_views_default_views() {
   $handler->display->display_options['arguments']['date_argument']['granularity'] = 'year';
   $handler->display->display_options['arguments']['date_argument']['add_delta'] = 'yes';
   $handler->display->display_options['arguments']['date_argument']['date_fields'] = array(
-    'field_data_field_event_date.field_event_date_value' => 'field_data_field_event_date.field_event_date_value',
+    'field_data_field_slac_event_date.field_slac_event_date_value' => 'field_data_field_slac_event_date.field_slac_event_date_value',
   );
   $handler->display->display_options['path'] = 'calendar/year';
   $handler->display->display_options['menu']['type'] = 'tab';
@@ -355,7 +355,7 @@ function slac_events_features_views_default_views() {
   $handler->display->display_options['arguments']['date_argument']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['date_argument']['add_delta'] = 'yes';
   $handler->display->display_options['arguments']['date_argument']['date_fields'] = array(
-    'field_data_field_event_date.field_event_date_value' => 'field_data_field_event_date.field_event_date_value',
+    'field_data_field_slac_event_date.field_slac_event_date_value' => 'field_data_field_slac_event_date.field_slac_event_date_value',
   );
 
   /* Display: iCal */
@@ -363,7 +363,7 @@ function slac_events_features_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['style_plugin'] = 'date_ical';
   $handler->display->display_options['row_plugin'] = 'date_ical';
-  $handler->display->display_options['row_options']['date_field'] = 'field_data_field_event_date.field_event_date_value';
+  $handler->display->display_options['row_options']['date_field'] = 'field_data_field_slac_event_date.field_slac_event_date_value';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -381,7 +381,7 @@ function slac_events_features_views_default_views() {
   $handler->display->display_options['filters']['date_filter']['default_date'] = 'now';
   $handler->display->display_options['filters']['date_filter']['add_delta'] = 'yes';
   $handler->display->display_options['filters']['date_filter']['date_fields'] = array(
-    'field_data_field_event_date.field_event_date_value' => 'field_data_field_event_date.field_event_date_value',
+    'field_data_field_slac_event_date.field_slac_event_date_value' => 'field_data_field_slac_event_date.field_slac_event_date_value',
   );
   $handler->display->display_options['path'] = 'calendar/ical/%/calendar.ics';
   $handler->display->display_options['displays'] = array(
@@ -426,7 +426,7 @@ function slac_events_features_views_default_views() {
   $handler->display->display_options['filters']['date_filter']['default_date'] = 'now';
   $handler->display->display_options['filters']['date_filter']['add_delta'] = 'yes';
   $handler->display->display_options['filters']['date_filter']['date_fields'] = array(
-    'field_data_field_event_date.field_event_date_value' => 'field_data_field_event_date.field_event_date_value',
+    'field_data_field_slac_event_date.field_slac_event_date_value' => 'field_data_field_slac_event_date.field_slac_event_date_value',
   );
 
   /* Display: Feed */

@@ -25,10 +25,10 @@ function slac_event_demo_content_taxonomy_default_vocabularies() {
       'module' => 'taxonomy',
       'weight' => 0,
     ),
-    'tags' => array(
-      'name' => 'Tags',
-      'machine_name' => 'tags',
-      'description' => 'Use tags to group articles on similar topics into categories.',
+    'events_tags' => array(
+      'name' => 'Events Tags',
+      'machine_name' => 'events_tags',
+      'description' => '',
       'hierarchy' => 0,
       'module' => 'taxonomy',
       'weight' => 0,

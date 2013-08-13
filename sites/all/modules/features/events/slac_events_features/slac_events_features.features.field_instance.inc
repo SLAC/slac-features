@@ -97,8 +97,8 @@ function slac_events_features_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_event_category'
-  $field_instances['node-event-field_event_category'] = array(
+  // Exported field_instance: 'node-event-field_slac_event_category'
+  $field_instances['node-event-field_slac_event_category'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
     'deleted' => 0,
@@ -137,7 +137,7 @@ function slac_events_features_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_event_category',
+    'field_name' => 'field_slac_event_category',
     'label' => 'Event Series',
     'required' => 1,
     'settings' => array(
@@ -152,8 +152,8 @@ function slac_events_features_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_event_date'
-  $field_instances['node-event-field_event_date'] = array(
+  // Exported field_instance: 'node-event-field_slac_event_date'
+  $field_instances['node-event-field_slac_event_date'] = array(
     'bundle' => 'event',
     'deleted' => 0,
     'description' => '',
@@ -167,6 +167,7 @@ function slac_events_features_field_default_field_instances() {
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_repeat_rule' => 'show',
         ),
         'type' => 'date_default',
         'weight' => 3,
@@ -180,6 +181,7 @@ function slac_events_features_field_default_field_instances() {
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_repeat_rule' => 'show',
         ),
         'type' => 'date_default',
         'weight' => 1,
@@ -193,6 +195,7 @@ function slac_events_features_field_default_field_instances() {
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_repeat_rule' => 'show',
         ),
         'type' => 'date_default',
         'weight' => 1,
@@ -206,13 +209,14 @@ function slac_events_features_field_default_field_instances() {
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_repeat_rule' => 'show',
         ),
         'type' => 'date_default',
         'weight' => 1,
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_event_date',
+    'field_name' => 'field_slac_event_date',
     'label' => 'Event date',
     'required' => 1,
     'settings' => array(
@@ -227,123 +231,19 @@ function slac_events_features_field_default_field_instances() {
       'module' => 'date',
       'settings' => array(
         'increment' => 15,
-        'input_format' => 'Y-m-d H:i:s',
+        'input_format' => 'm/d/Y - g:i:sa',
         'input_format_custom' => '',
         'label_position' => 'above',
         'text_parts' => array(),
         'year_range' => '-3:+3',
       ),
-      'type' => 'date_text',
+      'type' => 'date_popup',
       'weight' => 3,
     ),
   );
 
-  // Exported field_instance: 'node-event-field_event_organization'
-  $field_instances['node-event-field_event_organization'] = array(
-    'bundle' => 'event',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'inline',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_plain',
-        'weight' => 2,
-      ),
-      'ical' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'rss' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_event_organization',
-    'label' => 'Event Organization',
-    'required' => 0,
-    'settings' => array(
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
-      'weight' => 5,
-    ),
-  );
-
-  // Exported field_instance: 'node-event-field_event_scientific_area'
-  $field_instances['node-event-field_event_scientific_area'] = array(
-    'bundle' => 'event',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'inline',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_plain',
-        'weight' => 1,
-      ),
-      'ical' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'rss' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_event_scientific_area',
-    'label' => 'Event Scientific Area',
-    'required' => 0,
-    'settings' => array(
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
-      'weight' => 2,
-    ),
-  );
-
-  // Exported field_instance: 'node-event-field_link'
-  $field_instances['node-event-field_link'] = array(
+  // Exported field_instance: 'node-event-field_slac_event_link'
+  $field_instances['node-event-field_slac_event_link'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
     'deleted' => 0,
@@ -379,7 +279,7 @@ function slac_events_features_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_link',
+    'field_name' => 'field_slac_event_link',
     'label' => 'Event link',
     'required' => 0,
     'settings' => array(
@@ -411,8 +311,112 @@ function slac_events_features_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_tags'
-  $field_instances['node-event-field_tags'] = array(
+  // Exported field_instance: 'node-event-field_slac_event_organization'
+  $field_instances['node-event-field_slac_event_organization'] = array(
+    'bundle' => 'event',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_plain',
+        'weight' => 2,
+      ),
+      'ical' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'rss' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_slac_event_organization',
+    'label' => 'Event Organization',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 5,
+    ),
+  );
+
+  // Exported field_instance: 'node-event-field_slac_event_scientific_area'
+  $field_instances['node-event-field_slac_event_scientific_area'] = array(
+    'bundle' => 'event',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_plain',
+        'weight' => 1,
+      ),
+      'ical' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'rss' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_slac_event_scientific_area',
+    'label' => 'Event Scientific Area',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'node-event-field_slac_event_tags'
+  $field_instances['node-event-field_slac_event_tags'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
     'deleted' => 0,
@@ -445,7 +449,7 @@ function slac_events_features_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_tags',
+    'field_name' => 'field_slac_event_tags',
     'label' => 'Tags',
     'required' => 0,
     'settings' => array(
@@ -463,8 +467,8 @@ function slac_events_features_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-category_colors-field_color'
-  $field_instances['taxonomy_term-category_colors-field_color'] = array(
+  // Exported field_instance: 'taxonomy_term-category_colors-field_slac_event_color'
+  $field_instances['taxonomy_term-category_colors-field_slac_event_color'] = array(
     'bundle' => 'category_colors',
     'default_value' => NULL,
     'deleted' => 0,
@@ -479,7 +483,7 @@ function slac_events_features_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'taxonomy_term',
-    'field_name' => 'field_color',
+    'field_name' => 'field_slac_event_color',
     'label' => 'Color',
     'required' => 1,
     'settings' => array(
@@ -497,8 +501,8 @@ function slac_events_features_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-event_categories-field_color_reference'
-  $field_instances['taxonomy_term-event_categories-field_color_reference'] = array(
+  // Exported field_instance: 'taxonomy_term-event_categories-field_slac_event_color_reference'
+  $field_instances['taxonomy_term-event_categories-field_slac_event_color_reference'] = array(
     'bundle' => 'event_categories',
     'default_value' => NULL,
     'deleted' => 0,
@@ -513,7 +517,7 @@ function slac_events_features_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'taxonomy_term',
-    'field_name' => 'field_color_reference',
+    'field_name' => 'field_slac_event_color_reference',
     'label' => 'Color',
     'required' => 1,
     'settings' => array(

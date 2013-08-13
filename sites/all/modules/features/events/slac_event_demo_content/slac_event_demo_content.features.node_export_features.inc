@@ -30,14 +30,14 @@ function slac_event_demo_content_node_export_features_default() {
       \'uuid\' => \'2b32f5d3-f65b-474d-a737-88dda4c100f7\',
       \'revision_timestamp\' => \'1375273624\',
       \'revision_uid\' => \'1\',
-      \'field_event_category\' => array(
+      \'field_slac_event_category\' => array(
         \'und\' => array(
           array(
             \'tid\' => \'14\',
           ),
         ),
       ),
-      \'field_event_date\' => array(
+      \'field_slac_event_date\' => array(
         \'und\' => array(
           array(
             \'value\' => \'2013-07-31T12:30:00\',
@@ -48,7 +48,7 @@ function slac_event_demo_content_node_export_features_default() {
           ),
         ),
       ),
-      \'field_link\' => array(
+      \'field_slac_event_link\' => array(
         \'und\' => array(
           array(
             \'url\' => \'https://news.slac.stanford.edu/announcement/photon-science-seminar-commissioning-new-lcls-xtcav\',
@@ -57,10 +57,10 @@ function slac_event_demo_content_node_export_features_default() {
           ),
         ),
       ),
-      \'field_event_scientific_area\' => array(),
-      \'field_event_organization\' => array(),
+      \'field_slac_event_scientific_area\' => array(),
+      \'field_slac_event_organization\' => array(),
       \'body\' => array(),
-      \'field_tags\' => array(),
+      \'field_slac_event_tags\' => array(),
       \'rdf_mapping\' => array(
         \'rdftype\' => array(
           \'sioc:Item\',
@@ -148,14 +148,14 @@ function slac_event_demo_content_node_export_features_default() {
       \'uuid\' => \'3ad46f52-dee1-484d-aad5-1d6cf988987e\',
       \'revision_timestamp\' => \'1375285961\',
       \'revision_uid\' => \'1\',
-      \'field_event_category\' => array(
+      \'field_slac_event_category\' => array(
         \'und\' => array(
           array(
             \'tid\' => \'10\',
           ),
         ),
       ),
-      \'field_event_date\' => array(
+      \'field_slac_event_date\' => array(
         \'und\' => array(
           array(
             \'value\' => \'2013-08-03T06:45:00\',
@@ -166,7 +166,7 @@ function slac_event_demo_content_node_export_features_default() {
           ),
         ),
       ),
-      \'field_link\' => array(
+      \'field_slac_event_link\' => array(
         \'und\' => array(
           array(
             \'url\' => \'https://news.slac.stanford.edu/announcement/facet-test-facilities-user-meeting-and-sarec-review-0\',
@@ -175,10 +175,10 @@ function slac_event_demo_content_node_export_features_default() {
           ),
         ),
       ),
-      \'field_event_scientific_area\' => array(),
-      \'field_event_organization\' => array(),
+      \'field_slac_event_scientific_area\' => array(),
+      \'field_slac_event_organization\' => array(),
       \'body\' => array(),
-      \'field_tags\' => array(),
+      \'field_slac_event_tags\' => array(),
       \'rdf_mapping\' => array(
         \'rdftype\' => array(
           \'sioc:Item\',
@@ -266,14 +266,14 @@ function slac_event_demo_content_node_export_features_default() {
       \'uuid\' => \'69d6e367-a3ec-498b-b5e5-e92b38ded8f8\',
       \'revision_timestamp\' => \'1375285836\',
       \'revision_uid\' => \'1\',
-      \'field_event_category\' => array(
+      \'field_slac_event_category\' => array(
         \'und\' => array(
           array(
             \'tid\' => \'14\',
           ),
         ),
       ),
-      \'field_event_date\' => array(
+      \'field_slac_event_date\' => array(
         \'und\' => array(
           array(
             \'value\' => \'2013-08-02T15:45:00\',
@@ -284,7 +284,7 @@ function slac_event_demo_content_node_export_features_default() {
           ),
         ),
       ),
-      \'field_link\' => array(
+      \'field_slac_event_link\' => array(
         \'und\' => array(
           array(
             \'url\' => \'https://news.slac.stanford.edu/announcement/organic-and-carbon-nanostructures-energy-conversion-and-energy-storage-devices\',
@@ -293,10 +293,10 @@ function slac_event_demo_content_node_export_features_default() {
           ),
         ),
       ),
-      \'field_event_scientific_area\' => array(),
-      \'field_event_organization\' => array(),
+      \'field_slac_event_scientific_area\' => array(),
+      \'field_slac_event_organization\' => array(),
       \'body\' => array(),
-      \'field_tags\' => array(),
+      \'field_slac_event_tags\' => array(),
       \'rdf_mapping\' => array(
         \'rdftype\' => array(
           \'sioc:Item\',
@@ -384,14 +384,14 @@ function slac_event_demo_content_node_export_features_default() {
       \'uuid\' => \'8c61df9b-86da-4634-b537-0b74003e7d7a\',
       \'revision_timestamp\' => \'1375273799\',
       \'revision_uid\' => \'1\',
-      \'field_event_category\' => array(
+      \'field_slac_event_category\' => array(
         \'und\' => array(
           array(
             \'tid\' => \'14\',
           ),
         ),
       ),
-      \'field_event_date\' => array(
+      \'field_slac_event_date\' => array(
         \'und\' => array(
           array(
             \'value\' => \'2013-08-05T12:30:00\',
@@ -402,7 +402,7 @@ function slac_event_demo_content_node_export_features_default() {
           ),
         ),
       ),
-      \'field_link\' => array(
+      \'field_slac_event_link\' => array(
         \'und\' => array(
           array(
             \'url\' => \'https://news.slac.stanford.edu/announcement/8th-international-conference-inelastic-x-ray-scattering\',
@@ -411,10 +411,10 @@ function slac_event_demo_content_node_export_features_default() {
           ),
         ),
       ),
-      \'field_event_scientific_area\' => array(),
-      \'field_event_organization\' => array(),
+      \'field_slac_event_scientific_area\' => array(),
+      \'field_slac_event_organization\' => array(),
       \'body\' => array(),
-      \'field_tags\' => array(),
+      \'field_slac_event_tags\' => array(),
       \'rdf_mapping\' => array(
         \'rdftype\' => array(
           \'sioc:Item\',
@@ -502,14 +502,14 @@ function slac_event_demo_content_node_export_features_default() {
       \'uuid\' => \'93f76c9c-d27b-4310-9dae-8204851e86a3\',
       \'revision_timestamp\' => \'1375286038\',
       \'revision_uid\' => \'1\',
-      \'field_event_category\' => array(
+      \'field_slac_event_category\' => array(
         \'und\' => array(
           array(
             \'tid\' => \'12\',
           ),
         ),
       ),
-      \'field_event_date\' => array(
+      \'field_slac_event_date\' => array(
         \'und\' => array(
           array(
             \'value\' => \'2013-08-04T06:00:00\',
@@ -520,7 +520,7 @@ function slac_event_demo_content_node_export_features_default() {
           ),
         ),
       ),
-      \'field_link\' => array(
+      \'field_slac_event_link\' => array(
         \'und\' => array(
           array(
             \'url\' => \'https://news.slac.stanford.edu/announcement/science-and-engineering-solid-state-thermoelectric-energy-conversion\',
@@ -529,10 +529,10 @@ function slac_event_demo_content_node_export_features_default() {
           ),
         ),
       ),
-      \'field_event_scientific_area\' => array(),
-      \'field_event_organization\' => array(),
+      \'field_slac_event_scientific_area\' => array(),
+      \'field_slac_event_organization\' => array(),
       \'body\' => array(),
-      \'field_tags\' => array(),
+      \'field_slac_event_tags\' => array(),
       \'rdf_mapping\' => array(
         \'rdftype\' => array(
           \'sioc:Item\',
@@ -620,14 +620,14 @@ function slac_event_demo_content_node_export_features_default() {
       \'uuid\' => \'a84a4454-aa42-41ca-84c6-2279395211c0\',
       \'revision_timestamp\' => \'1375273433\',
       \'revision_uid\' => \'1\',
-      \'field_event_category\' => array(
+      \'field_slac_event_category\' => array(
         \'und\' => array(
           array(
             \'tid\' => \'10\',
           ),
         ),
       ),
-      \'field_event_date\' => array(
+      \'field_slac_event_date\' => array(
         \'und\' => array(
           array(
             \'value\' => \'2013-08-01T12:30:00\',
@@ -638,7 +638,7 @@ function slac_event_demo_content_node_export_features_default() {
           ),
         ),
       ),
-      \'field_link\' => array(
+      \'field_slac_event_link\' => array(
         \'und\' => array(
           array(
             \'url\' => \'https://news.slac.stanford.edu/announcement/slac-colloquium-walk-dark-side\',
@@ -647,10 +647,10 @@ function slac_event_demo_content_node_export_features_default() {
           ),
         ),
       ),
-      \'field_event_scientific_area\' => array(),
-      \'field_event_organization\' => array(),
+      \'field_slac_event_scientific_area\' => array(),
+      \'field_slac_event_organization\' => array(),
       \'body\' => array(),
-      \'field_tags\' => array(),
+      \'field_slac_event_tags\' => array(),
       \'rdf_mapping\' => array(
         \'rdftype\' => array(
           \'sioc:Item\',
@@ -738,14 +738,14 @@ function slac_event_demo_content_node_export_features_default() {
       \'uuid\' => \'ac7d4c2e-548f-49fe-97fd-357848cab389\',
       \'revision_timestamp\' => \'1375273739\',
       \'revision_uid\' => \'1\',
-      \'field_event_category\' => array(
+      \'field_slac_event_category\' => array(
         \'und\' => array(
           array(
             \'tid\' => \'10\',
           ),
         ),
       ),
-      \'field_event_date\' => array(
+      \'field_slac_event_date\' => array(
         \'und\' => array(
           array(
             \'value\' => \'2013-07-29T07:30:00\',
@@ -756,7 +756,7 @@ function slac_event_demo_content_node_export_features_default() {
           ),
         ),
       ),
-      \'field_link\' => array(
+      \'field_slac_event_link\' => array(
         \'und\' => array(
           array(
             \'url\' => \'https://news.slac.stanford.edu/announcement/slac-colloquium-do-wimps-rule-lux-experiment-and-search-cosmic-dark-matter\',
@@ -765,10 +765,10 @@ function slac_event_demo_content_node_export_features_default() {
           ),
         ),
       ),
-      \'field_event_scientific_area\' => array(),
-      \'field_event_organization\' => array(),
+      \'field_slac_event_scientific_area\' => array(),
+      \'field_slac_event_organization\' => array(),
       \'body\' => array(),
-      \'field_tags\' => array(),
+      \'field_slac_event_tags\' => array(),
       \'rdf_mapping\' => array(
         \'rdftype\' => array(
           \'sioc:Item\',
@@ -856,14 +856,14 @@ function slac_event_demo_content_node_export_features_default() {
       \'uuid\' => \'be271241-c04a-441d-9964-f3ad2fd22f68\',
       \'revision_timestamp\' => \'1375273675\',
       \'revision_uid\' => \'1\',
-      \'field_event_category\' => array(
+      \'field_slac_event_category\' => array(
         \'und\' => array(
           array(
             \'tid\' => \'12\',
           ),
         ),
       ),
-      \'field_event_date\' => array(
+      \'field_slac_event_date\' => array(
         \'und\' => array(
           array(
             \'value\' => \'2013-07-25T09:30:00\',
@@ -874,7 +874,7 @@ function slac_event_demo_content_node_export_features_default() {
           ),
         ),
       ),
-      \'field_link\' => array(
+      \'field_slac_event_link\' => array(
         \'und\' => array(
           array(
             \'url\' => \'https://news.slac.stanford.edu/announcement/slac-colloquium-lz-and-future-wimps\',
@@ -883,10 +883,10 @@ function slac_event_demo_content_node_export_features_default() {
           ),
         ),
       ),
-      \'field_event_scientific_area\' => array(),
-      \'field_event_organization\' => array(),
+      \'field_slac_event_scientific_area\' => array(),
+      \'field_slac_event_organization\' => array(),
       \'body\' => array(),
-      \'field_tags\' => array(),
+      \'field_slac_event_tags\' => array(),
       \'rdf_mapping\' => array(
         \'rdftype\' => array(
           \'sioc:Item\',
@@ -974,14 +974,14 @@ function slac_event_demo_content_node_export_features_default() {
       \'uuid\' => \'c19c0e28-8b0e-4b73-8d2b-e1df8654368e\',
       \'revision_timestamp\' => \'1375364520\',
       \'revision_uid\' => \'1\',
-      \'field_event_category\' => array(
+      \'field_slac_event_category\' => array(
         \'und\' => array(
           array(
             \'tid\' => \'10\',
           ),
         ),
       ),
-      \'field_event_date\' => array(
+      \'field_slac_event_date\' => array(
         \'und\' => array(
           array(
             \'value\' => \'2013-08-08T12:45:00\',
@@ -992,8 +992,8 @@ function slac_event_demo_content_node_export_features_default() {
           ),
         ),
       ),
-      \'field_link\' => array(),
-      \'field_event_scientific_area\' => array(
+      \'field_slac_event_link\' => array(),
+      \'field_slac_event_scientific_area\' => array(
         \'und\' => array(
           array(
             \'value\' => \'Particle Physics\',
@@ -1002,7 +1002,7 @@ function slac_event_demo_content_node_export_features_default() {
           ),
         ),
       ),
-      \'field_event_organization\' => array(
+      \'field_slac_event_organization\' => array(
         \'und\' => array(
           array(
             \'value\' => \'SLAC events\',
@@ -1022,7 +1022,7 @@ function slac_event_demo_content_node_export_features_default() {
           ),
         ),
       ),
-      \'field_tags\' => array(
+      \'field_slac_event_tags\' => array(
         \'und\' => array(
           array(
             \'tid\' => \'66\',
@@ -1116,14 +1116,14 @@ function slac_event_demo_content_node_export_features_default() {
       \'uuid\' => \'d7856b6a-d54d-4a05-b84e-b1d5c6875229\',
       \'revision_timestamp\' => \'1375364867\',
       \'revision_uid\' => \'1\',
-      \'field_event_category\' => array(
+      \'field_slac_event_category\' => array(
         \'und\' => array(
           array(
             \'tid\' => \'12\',
           ),
         ),
       ),
-      \'field_event_date\' => array(
+      \'field_slac_event_date\' => array(
         \'und\' => array(
           array(
             \'value\' => \'2013-08-24T12:30:00\',
@@ -1134,9 +1134,9 @@ function slac_event_demo_content_node_export_features_default() {
           ),
         ),
       ),
-      \'field_link\' => array(),
-      \'field_event_scientific_area\' => array(),
-      \'field_event_organization\' => array(),
+      \'field_slac_event_link\' => array(),
+      \'field_slac_event_scientific_area\' => array(),
+      \'field_slac_event_organization\' => array(),
       \'body\' => array(
         \'und\' => array(
           array(
@@ -1148,7 +1148,7 @@ function slac_event_demo_content_node_export_features_default() {
           ),
         ),
       ),
-      \'field_tags\' => array(
+      \'field_slac_event_tags\' => array(
         \'und\' => array(
           array(
             \'tid\' => \'67\',
@@ -1242,14 +1242,14 @@ function slac_event_demo_content_node_export_features_default() {
       \'uuid\' => \'e6038d00-56d8-4977-8a6d-9b8faeac38b7\',
       \'revision_timestamp\' => \'1375285329\',
       \'revision_uid\' => \'1\',
-      \'field_event_category\' => array(
+      \'field_slac_event_category\' => array(
         \'und\' => array(
           array(
             \'tid\' => \'14\',
           ),
         ),
       ),
-      \'field_event_date\' => array(
+      \'field_slac_event_date\' => array(
         \'und\' => array(
           array(
             \'value\' => \'2013-08-08T14:45:00\',
@@ -1260,7 +1260,7 @@ function slac_event_demo_content_node_export_features_default() {
           ),
         ),
       ),
-      \'field_link\' => array(
+      \'field_slac_event_link\' => array(
         \'und\' => array(
           array(
             \'url\' => \'https://news.slac.stanford.edu/announcement/electroweak-production-path-susy\',
@@ -1269,10 +1269,10 @@ function slac_event_demo_content_node_export_features_default() {
           ),
         ),
       ),
-      \'field_event_scientific_area\' => array(),
-      \'field_event_organization\' => array(),
+      \'field_slac_event_scientific_area\' => array(),
+      \'field_slac_event_organization\' => array(),
       \'body\' => array(),
-      \'field_tags\' => array(),
+      \'field_slac_event_tags\' => array(),
       \'rdf_mapping\' => array(
         \'rdftype\' => array(
           \'sioc:Item\',
