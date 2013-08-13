@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the News Features feature.
- */
-
-include_once 'slac_news_features.features.inc';
