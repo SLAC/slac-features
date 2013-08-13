@@ -30,7 +30,7 @@ function slac_event_demo_content_uuid_features_default_content() {
   'field_slac_event_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 27,
+        'tid' => 28,
         'uuid' => '89e0ecf3-9e9f-476b-a920-392077f1e1eb',
       ),
     ),
@@ -46,8 +46,6 @@ function slac_event_demo_content_uuid_features_default_content() {
       ),
     ),
   ),
-  'field_slac_event_organization' => array(),
-  'field_slac_event_scientific_area' => array(),
   'field_slac_event_link' => array(
     'und' => array(
       0 => array(
@@ -57,16 +55,73 @@ function slac_event_demo_content_uuid_features_default_content() {
       ),
     ),
   ),
+  'field_slac_event_organization' => array(),
+  'field_slac_event_scientific_area' => array(),
   'field_slac_event_tags' => array(),
+  'rdf_mapping' => array(
+    'rdftype' => array(
+      0 => 'sioc:Item',
+      1 => 'foaf:Document',
+    ),
+    'title' => array(
+      'predicates' => array(
+        0 => 'dc:title',
+      ),
+    ),
+    'created' => array(
+      'predicates' => array(
+        0 => 'dc:date',
+        1 => 'dc:created',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'changed' => array(
+      'predicates' => array(
+        0 => 'dc:modified',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'body' => array(
+      'predicates' => array(
+        0 => 'content:encoded',
+      ),
+    ),
+    'uid' => array(
+      'predicates' => array(
+        0 => 'sioc:has_creator',
+      ),
+      'type' => 'rel',
+    ),
+    'name' => array(
+      'predicates' => array(
+        0 => 'foaf:name',
+      ),
+    ),
+    'comment_count' => array(
+      'predicates' => array(
+        0 => 'sioc:num_replies',
+      ),
+      'datatype' => 'xsd:integer',
+    ),
+    'last_activity' => array(
+      'predicates' => array(
+        0 => 'sioc:last_activity_date',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+  ),
   'cid' => 0,
   'last_comment_name' => NULL,
-  'last_comment_uid' => 1,
+  'last_comment_uid' => 0,
   'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
   'data' => 'b:0;',
   'date' => '2013-08-10 17:35:56 +0300',
-  'author_uuid' => '85da97a0-6fd3-47fd-a5b7-cf818743e8c1',
+  'author_uuid' => '1379ed6e-ff66-4604-b05d-3d1a47051c25',
 );
   $nodes[] = array(
   'uid' => 1,
@@ -104,8 +159,6 @@ function slac_event_demo_content_uuid_features_default_content() {
       ),
     ),
   ),
-  'field_slac_event_organization' => array(),
-  'field_slac_event_scientific_area' => array(),
   'field_slac_event_link' => array(
     'und' => array(
       0 => array(
@@ -115,16 +168,73 @@ function slac_event_demo_content_uuid_features_default_content() {
       ),
     ),
   ),
+  'field_slac_event_organization' => array(),
+  'field_slac_event_scientific_area' => array(),
   'field_slac_event_tags' => array(),
+  'rdf_mapping' => array(
+    'rdftype' => array(
+      0 => 'sioc:Item',
+      1 => 'foaf:Document',
+    ),
+    'title' => array(
+      'predicates' => array(
+        0 => 'dc:title',
+      ),
+    ),
+    'created' => array(
+      'predicates' => array(
+        0 => 'dc:date',
+        1 => 'dc:created',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'changed' => array(
+      'predicates' => array(
+        0 => 'dc:modified',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'body' => array(
+      'predicates' => array(
+        0 => 'content:encoded',
+      ),
+    ),
+    'uid' => array(
+      'predicates' => array(
+        0 => 'sioc:has_creator',
+      ),
+      'type' => 'rel',
+    ),
+    'name' => array(
+      'predicates' => array(
+        0 => 'foaf:name',
+      ),
+    ),
+    'comment_count' => array(
+      'predicates' => array(
+        0 => 'sioc:num_replies',
+      ),
+      'datatype' => 'xsd:integer',
+    ),
+    'last_activity' => array(
+      'predicates' => array(
+        0 => 'sioc:last_activity_date',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+  ),
   'cid' => 0,
   'last_comment_name' => NULL,
-  'last_comment_uid' => 1,
+  'last_comment_uid' => 0,
   'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
   'data' => 'b:0;',
   'date' => '2013-08-10 17:35:05 +0300',
-  'author_uuid' => '85da97a0-6fd3-47fd-a5b7-cf818743e8c1',
+  'author_uuid' => '1379ed6e-ff66-4604-b05d-3d1a47051c25',
 );
   $nodes[] = array(
   'uid' => 1,
@@ -146,7 +256,7 @@ function slac_event_demo_content_uuid_features_default_content() {
   'field_slac_event_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 27,
+        'tid' => 28,
         'uuid' => '89e0ecf3-9e9f-476b-a920-392077f1e1eb',
       ),
     ),
@@ -162,8 +272,6 @@ function slac_event_demo_content_uuid_features_default_content() {
       ),
     ),
   ),
-  'field_slac_event_organization' => array(),
-  'field_slac_event_scientific_area' => array(),
   'field_slac_event_link' => array(
     'und' => array(
       0 => array(
@@ -173,16 +281,73 @@ function slac_event_demo_content_uuid_features_default_content() {
       ),
     ),
   ),
+  'field_slac_event_organization' => array(),
+  'field_slac_event_scientific_area' => array(),
   'field_slac_event_tags' => array(),
+  'rdf_mapping' => array(
+    'rdftype' => array(
+      0 => 'sioc:Item',
+      1 => 'foaf:Document',
+    ),
+    'title' => array(
+      'predicates' => array(
+        0 => 'dc:title',
+      ),
+    ),
+    'created' => array(
+      'predicates' => array(
+        0 => 'dc:date',
+        1 => 'dc:created',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'changed' => array(
+      'predicates' => array(
+        0 => 'dc:modified',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'body' => array(
+      'predicates' => array(
+        0 => 'content:encoded',
+      ),
+    ),
+    'uid' => array(
+      'predicates' => array(
+        0 => 'sioc:has_creator',
+      ),
+      'type' => 'rel',
+    ),
+    'name' => array(
+      'predicates' => array(
+        0 => 'foaf:name',
+      ),
+    ),
+    'comment_count' => array(
+      'predicates' => array(
+        0 => 'sioc:num_replies',
+      ),
+      'datatype' => 'xsd:integer',
+    ),
+    'last_activity' => array(
+      'predicates' => array(
+        0 => 'sioc:last_activity_date',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+  ),
   'cid' => 0,
   'last_comment_name' => NULL,
-  'last_comment_uid' => 1,
+  'last_comment_uid' => 0,
   'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
   'data' => 'b:0;',
   'date' => '2013-08-10 17:34:29 +0300',
-  'author_uuid' => '85da97a0-6fd3-47fd-a5b7-cf818743e8c1',
+  'author_uuid' => '1379ed6e-ff66-4604-b05d-3d1a47051c25',
 );
   $nodes[] = array(
   'uid' => 1,
@@ -220,8 +385,6 @@ function slac_event_demo_content_uuid_features_default_content() {
       ),
     ),
   ),
-  'field_slac_event_organization' => array(),
-  'field_slac_event_scientific_area' => array(),
   'field_slac_event_link' => array(
     'und' => array(
       0 => array(
@@ -231,16 +394,73 @@ function slac_event_demo_content_uuid_features_default_content() {
       ),
     ),
   ),
+  'field_slac_event_organization' => array(),
+  'field_slac_event_scientific_area' => array(),
   'field_slac_event_tags' => array(),
+  'rdf_mapping' => array(
+    'rdftype' => array(
+      0 => 'sioc:Item',
+      1 => 'foaf:Document',
+    ),
+    'title' => array(
+      'predicates' => array(
+        0 => 'dc:title',
+      ),
+    ),
+    'created' => array(
+      'predicates' => array(
+        0 => 'dc:date',
+        1 => 'dc:created',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'changed' => array(
+      'predicates' => array(
+        0 => 'dc:modified',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'body' => array(
+      'predicates' => array(
+        0 => 'content:encoded',
+      ),
+    ),
+    'uid' => array(
+      'predicates' => array(
+        0 => 'sioc:has_creator',
+      ),
+      'type' => 'rel',
+    ),
+    'name' => array(
+      'predicates' => array(
+        0 => 'foaf:name',
+      ),
+    ),
+    'comment_count' => array(
+      'predicates' => array(
+        0 => 'sioc:num_replies',
+      ),
+      'datatype' => 'xsd:integer',
+    ),
+    'last_activity' => array(
+      'predicates' => array(
+        0 => 'sioc:last_activity_date',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+  ),
   'cid' => 0,
   'last_comment_name' => NULL,
-  'last_comment_uid' => 1,
+  'last_comment_uid' => 0,
   'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
   'data' => 'b:0;',
   'date' => '2013-08-10 17:16:00 +0300',
-  'author_uuid' => '85da97a0-6fd3-47fd-a5b7-cf818743e8c1',
+  'author_uuid' => '1379ed6e-ff66-4604-b05d-3d1a47051c25',
 );
   $nodes[] = array(
   'uid' => 1,
@@ -262,7 +482,7 @@ function slac_event_demo_content_uuid_features_default_content() {
   'field_slac_event_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 28,
+        'tid' => 30,
         'uuid' => 'a7aa9fdf-cada-4543-a91a-b3c8e4fe8681',
       ),
     ),
@@ -278,8 +498,6 @@ function slac_event_demo_content_uuid_features_default_content() {
       ),
     ),
   ),
-  'field_slac_event_organization' => array(),
-  'field_slac_event_scientific_area' => array(),
   'field_slac_event_link' => array(
     'und' => array(
       0 => array(
@@ -289,16 +507,73 @@ function slac_event_demo_content_uuid_features_default_content() {
       ),
     ),
   ),
+  'field_slac_event_organization' => array(),
+  'field_slac_event_scientific_area' => array(),
   'field_slac_event_tags' => array(),
+  'rdf_mapping' => array(
+    'rdftype' => array(
+      0 => 'sioc:Item',
+      1 => 'foaf:Document',
+    ),
+    'title' => array(
+      'predicates' => array(
+        0 => 'dc:title',
+      ),
+    ),
+    'created' => array(
+      'predicates' => array(
+        0 => 'dc:date',
+        1 => 'dc:created',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'changed' => array(
+      'predicates' => array(
+        0 => 'dc:modified',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'body' => array(
+      'predicates' => array(
+        0 => 'content:encoded',
+      ),
+    ),
+    'uid' => array(
+      'predicates' => array(
+        0 => 'sioc:has_creator',
+      ),
+      'type' => 'rel',
+    ),
+    'name' => array(
+      'predicates' => array(
+        0 => 'foaf:name',
+      ),
+    ),
+    'comment_count' => array(
+      'predicates' => array(
+        0 => 'sioc:num_replies',
+      ),
+      'datatype' => 'xsd:integer',
+    ),
+    'last_activity' => array(
+      'predicates' => array(
+        0 => 'sioc:last_activity_date',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+  ),
   'cid' => 0,
   'last_comment_name' => NULL,
-  'last_comment_uid' => 1,
+  'last_comment_uid' => 0,
   'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
   'data' => 'b:0;',
   'date' => '2013-08-10 17:38:37 +0300',
-  'author_uuid' => '85da97a0-6fd3-47fd-a5b7-cf818743e8c1',
+  'author_uuid' => '1379ed6e-ff66-4604-b05d-3d1a47051c25',
 );
   $nodes[] = array(
   'uid' => 1,
@@ -331,7 +606,7 @@ function slac_event_demo_content_uuid_features_default_content() {
   'field_slac_event_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 28,
+        'tid' => 30,
         'uuid' => 'a7aa9fdf-cada-4543-a91a-b3c8e4fe8681',
       ),
     ),
@@ -347,6 +622,7 @@ function slac_event_demo_content_uuid_features_default_content() {
       ),
     ),
   ),
+  'field_slac_event_link' => array(),
   'field_slac_event_organization' => array(
     'und' => array(
       0 => array(
@@ -365,24 +641,78 @@ function slac_event_demo_content_uuid_features_default_content() {
       ),
     ),
   ),
-  'field_slac_event_link' => array(),
   'field_slac_event_tags' => array(
     'und' => array(
       0 => array(
-        'tid' => 35,
+        'tid' => 29,
         'uuid' => '9914b3dc-1371-45c4-970d-93a26ca5fba9',
       ),
     ),
   ),
+  'rdf_mapping' => array(
+    'rdftype' => array(
+      0 => 'sioc:Item',
+      1 => 'foaf:Document',
+    ),
+    'title' => array(
+      'predicates' => array(
+        0 => 'dc:title',
+      ),
+    ),
+    'created' => array(
+      'predicates' => array(
+        0 => 'dc:date',
+        1 => 'dc:created',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'changed' => array(
+      'predicates' => array(
+        0 => 'dc:modified',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'body' => array(
+      'predicates' => array(
+        0 => 'content:encoded',
+      ),
+    ),
+    'uid' => array(
+      'predicates' => array(
+        0 => 'sioc:has_creator',
+      ),
+      'type' => 'rel',
+    ),
+    'name' => array(
+      'predicates' => array(
+        0 => 'foaf:name',
+      ),
+    ),
+    'comment_count' => array(
+      'predicates' => array(
+        0 => 'sioc:num_replies',
+      ),
+      'datatype' => 'xsd:integer',
+    ),
+    'last_activity' => array(
+      'predicates' => array(
+        0 => 'sioc:last_activity_date',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+  ),
   'cid' => 0,
   'last_comment_name' => NULL,
-  'last_comment_uid' => 1,
+  'last_comment_uid' => 0,
   'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
   'data' => 'b:0;',
   'date' => '2013-08-10 17:37:03 +0300',
-  'author_uuid' => '85da97a0-6fd3-47fd-a5b7-cf818743e8c1',
+  'author_uuid' => '1379ed6e-ff66-4604-b05d-3d1a47051c25',
 );
   $nodes[] = array(
   'uid' => 1,
@@ -404,7 +734,7 @@ function slac_event_demo_content_uuid_features_default_content() {
   'field_slac_event_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 28,
+        'tid' => 30,
         'uuid' => 'a7aa9fdf-cada-4543-a91a-b3c8e4fe8681',
       ),
     ),
@@ -420,8 +750,6 @@ function slac_event_demo_content_uuid_features_default_content() {
       ),
     ),
   ),
-  'field_slac_event_organization' => array(),
-  'field_slac_event_scientific_area' => array(),
   'field_slac_event_link' => array(
     'und' => array(
       0 => array(
@@ -431,16 +759,73 @@ function slac_event_demo_content_uuid_features_default_content() {
       ),
     ),
   ),
+  'field_slac_event_organization' => array(),
+  'field_slac_event_scientific_area' => array(),
   'field_slac_event_tags' => array(),
+  'rdf_mapping' => array(
+    'rdftype' => array(
+      0 => 'sioc:Item',
+      1 => 'foaf:Document',
+    ),
+    'title' => array(
+      'predicates' => array(
+        0 => 'dc:title',
+      ),
+    ),
+    'created' => array(
+      'predicates' => array(
+        0 => 'dc:date',
+        1 => 'dc:created',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'changed' => array(
+      'predicates' => array(
+        0 => 'dc:modified',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'body' => array(
+      'predicates' => array(
+        0 => 'content:encoded',
+      ),
+    ),
+    'uid' => array(
+      'predicates' => array(
+        0 => 'sioc:has_creator',
+      ),
+      'type' => 'rel',
+    ),
+    'name' => array(
+      'predicates' => array(
+        0 => 'foaf:name',
+      ),
+    ),
+    'comment_count' => array(
+      'predicates' => array(
+        0 => 'sioc:num_replies',
+      ),
+      'datatype' => 'xsd:integer',
+    ),
+    'last_activity' => array(
+      'predicates' => array(
+        0 => 'sioc:last_activity_date',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+  ),
   'cid' => 0,
   'last_comment_name' => NULL,
-  'last_comment_uid' => 1,
+  'last_comment_uid' => 0,
   'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
   'data' => 'b:0;',
   'date' => '2013-08-10 17:33:43 +0300',
-  'author_uuid' => '85da97a0-6fd3-47fd-a5b7-cf818743e8c1',
+  'author_uuid' => '1379ed6e-ff66-4604-b05d-3d1a47051c25',
 );
   $nodes[] = array(
   'uid' => 1,
@@ -499,7 +884,7 @@ function slac_event_demo_content_uuid_features_default_content() {
   'field_slac_event_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 27,
+        'tid' => 28,
         'uuid' => '89e0ecf3-9e9f-476b-a920-392077f1e1eb',
       ),
     ),
@@ -515,26 +900,81 @@ function slac_event_demo_content_uuid_features_default_content() {
       ),
     ),
   ),
+  'field_slac_event_link' => array(),
   'field_slac_event_organization' => array(),
   'field_slac_event_scientific_area' => array(),
-  'field_slac_event_link' => array(),
   'field_slac_event_tags' => array(
     'und' => array(
       0 => array(
-        'tid' => 36,
+        'tid' => 27,
         'uuid' => '887e35db-2734-405e-a001-daad4a60daa7',
       ),
     ),
   ),
+  'rdf_mapping' => array(
+    'rdftype' => array(
+      0 => 'sioc:Item',
+      1 => 'foaf:Document',
+    ),
+    'title' => array(
+      'predicates' => array(
+        0 => 'dc:title',
+      ),
+    ),
+    'created' => array(
+      'predicates' => array(
+        0 => 'dc:date',
+        1 => 'dc:created',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'changed' => array(
+      'predicates' => array(
+        0 => 'dc:modified',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'body' => array(
+      'predicates' => array(
+        0 => 'content:encoded',
+      ),
+    ),
+    'uid' => array(
+      'predicates' => array(
+        0 => 'sioc:has_creator',
+      ),
+      'type' => 'rel',
+    ),
+    'name' => array(
+      'predicates' => array(
+        0 => 'foaf:name',
+      ),
+    ),
+    'comment_count' => array(
+      'predicates' => array(
+        0 => 'sioc:num_replies',
+      ),
+      'datatype' => 'xsd:integer',
+    ),
+    'last_activity' => array(
+      'predicates' => array(
+        0 => 'sioc:last_activity_date',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+  ),
   'cid' => 0,
   'last_comment_name' => NULL,
-  'last_comment_uid' => 1,
+  'last_comment_uid' => 0,
   'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
   'data' => 'b:0;',
   'date' => '2013-08-10 17:37:55 +0300',
-  'author_uuid' => '85da97a0-6fd3-47fd-a5b7-cf818743e8c1',
+  'author_uuid' => '1379ed6e-ff66-4604-b05d-3d1a47051c25',
 );
   $nodes[] = array(
   'uid' => 1,
@@ -556,7 +996,7 @@ function slac_event_demo_content_uuid_features_default_content() {
   'field_slac_event_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 27,
+        'tid' => 28,
         'uuid' => '89e0ecf3-9e9f-476b-a920-392077f1e1eb',
       ),
     ),
@@ -572,8 +1012,6 @@ function slac_event_demo_content_uuid_features_default_content() {
       ),
     ),
   ),
-  'field_slac_event_organization' => array(),
-  'field_slac_event_scientific_area' => array(),
   'field_slac_event_link' => array(
     'und' => array(
       0 => array(
@@ -583,16 +1021,73 @@ function slac_event_demo_content_uuid_features_default_content() {
       ),
     ),
   ),
+  'field_slac_event_organization' => array(),
+  'field_slac_event_scientific_area' => array(),
   'field_slac_event_tags' => array(),
+  'rdf_mapping' => array(
+    'rdftype' => array(
+      0 => 'sioc:Item',
+      1 => 'foaf:Document',
+    ),
+    'title' => array(
+      'predicates' => array(
+        0 => 'dc:title',
+      ),
+    ),
+    'created' => array(
+      'predicates' => array(
+        0 => 'dc:date',
+        1 => 'dc:created',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'changed' => array(
+      'predicates' => array(
+        0 => 'dc:modified',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'body' => array(
+      'predicates' => array(
+        0 => 'content:encoded',
+      ),
+    ),
+    'uid' => array(
+      'predicates' => array(
+        0 => 'sioc:has_creator',
+      ),
+      'type' => 'rel',
+    ),
+    'name' => array(
+      'predicates' => array(
+        0 => 'foaf:name',
+      ),
+    ),
+    'comment_count' => array(
+      'predicates' => array(
+        0 => 'sioc:num_replies',
+      ),
+      'datatype' => 'xsd:integer',
+    ),
+    'last_activity' => array(
+      'predicates' => array(
+        0 => 'sioc:last_activity_date',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+  ),
   'cid' => 0,
   'last_comment_name' => NULL,
-  'last_comment_uid' => 1,
+  'last_comment_uid' => 0,
   'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
   'data' => 'b:0;',
   'date' => '2013-08-10 17:32:29 +0300',
-  'author_uuid' => '85da97a0-6fd3-47fd-a5b7-cf818743e8c1',
+  'author_uuid' => '1379ed6e-ff66-4604-b05d-3d1a47051c25',
 );
   $nodes[] = array(
   'uid' => 1,
@@ -614,7 +1109,7 @@ function slac_event_demo_content_uuid_features_default_content() {
   'field_slac_event_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 27,
+        'tid' => 28,
         'uuid' => '89e0ecf3-9e9f-476b-a920-392077f1e1eb',
       ),
     ),
@@ -630,8 +1125,6 @@ function slac_event_demo_content_uuid_features_default_content() {
       ),
     ),
   ),
-  'field_slac_event_organization' => array(),
-  'field_slac_event_scientific_area' => array(),
   'field_slac_event_link' => array(
     'und' => array(
       0 => array(
@@ -641,16 +1134,73 @@ function slac_event_demo_content_uuid_features_default_content() {
       ),
     ),
   ),
+  'field_slac_event_organization' => array(),
+  'field_slac_event_scientific_area' => array(),
   'field_slac_event_tags' => array(),
+  'rdf_mapping' => array(
+    'rdftype' => array(
+      0 => 'sioc:Item',
+      1 => 'foaf:Document',
+    ),
+    'title' => array(
+      'predicates' => array(
+        0 => 'dc:title',
+      ),
+    ),
+    'created' => array(
+      'predicates' => array(
+        0 => 'dc:date',
+        1 => 'dc:created',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'changed' => array(
+      'predicates' => array(
+        0 => 'dc:modified',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'body' => array(
+      'predicates' => array(
+        0 => 'content:encoded',
+      ),
+    ),
+    'uid' => array(
+      'predicates' => array(
+        0 => 'sioc:has_creator',
+      ),
+      'type' => 'rel',
+    ),
+    'name' => array(
+      'predicates' => array(
+        0 => 'foaf:name',
+      ),
+    ),
+    'comment_count' => array(
+      'predicates' => array(
+        0 => 'sioc:num_replies',
+      ),
+      'datatype' => 'xsd:integer',
+    ),
+    'last_activity' => array(
+      'predicates' => array(
+        0 => 'sioc:last_activity_date',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+  ),
   'cid' => 0,
   'last_comment_name' => NULL,
-  'last_comment_uid' => 1,
+  'last_comment_uid' => 0,
   'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
   'data' => 'b:0;',
   'date' => '2013-08-10 17:33:04 +0300',
-  'author_uuid' => '85da97a0-6fd3-47fd-a5b7-cf818743e8c1',
+  'author_uuid' => '1379ed6e-ff66-4604-b05d-3d1a47051c25',
 );
   $nodes[] = array(
   'uid' => 1,
@@ -672,7 +1222,7 @@ function slac_event_demo_content_uuid_features_default_content() {
   'field_slac_event_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 28,
+        'tid' => 30,
         'uuid' => 'a7aa9fdf-cada-4543-a91a-b3c8e4fe8681',
       ),
     ),
@@ -688,8 +1238,6 @@ function slac_event_demo_content_uuid_features_default_content() {
       ),
     ),
   ),
-  'field_slac_event_organization' => array(),
-  'field_slac_event_scientific_area' => array(),
   'field_slac_event_link' => array(
     'und' => array(
       0 => array(
@@ -699,16 +1247,73 @@ function slac_event_demo_content_uuid_features_default_content() {
       ),
     ),
   ),
+  'field_slac_event_organization' => array(),
+  'field_slac_event_scientific_area' => array(),
   'field_slac_event_tags' => array(),
+  'rdf_mapping' => array(
+    'rdftype' => array(
+      0 => 'sioc:Item',
+      1 => 'foaf:Document',
+    ),
+    'title' => array(
+      'predicates' => array(
+        0 => 'dc:title',
+      ),
+    ),
+    'created' => array(
+      'predicates' => array(
+        0 => 'dc:date',
+        1 => 'dc:created',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'changed' => array(
+      'predicates' => array(
+        0 => 'dc:modified',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'body' => array(
+      'predicates' => array(
+        0 => 'content:encoded',
+      ),
+    ),
+    'uid' => array(
+      'predicates' => array(
+        0 => 'sioc:has_creator',
+      ),
+      'type' => 'rel',
+    ),
+    'name' => array(
+      'predicates' => array(
+        0 => 'foaf:name',
+      ),
+    ),
+    'comment_count' => array(
+      'predicates' => array(
+        0 => 'sioc:num_replies',
+      ),
+      'datatype' => 'xsd:integer',
+    ),
+    'last_activity' => array(
+      'predicates' => array(
+        0 => 'sioc:last_activity_date',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+  ),
   'cid' => 0,
   'last_comment_name' => NULL,
-  'last_comment_uid' => 1,
+  'last_comment_uid' => 0,
   'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
   'data' => 'b:0;',
   'date' => '2013-08-10 17:31:44 +0300',
-  'author_uuid' => '85da97a0-6fd3-47fd-a5b7-cf818743e8c1',
+  'author_uuid' => '1379ed6e-ff66-4604-b05d-3d1a47051c25',
 );
   return $nodes;
 }

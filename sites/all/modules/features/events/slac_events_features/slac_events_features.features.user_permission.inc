@@ -31,10 +31,30 @@ function slac_events_features_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: delete terms in 7.
-  $permissions['delete terms in 7'] = array(
-    'name' => 'delete terms in 7',
-    'roles' => array(),
+  // Exported permission: delete terms in 3.
+  $permissions['delete terms in 3'] = array(
+    'name' => 'delete terms in 3',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: delete terms in 4.
+  $permissions['delete terms in 4'] = array(
+    'name' => 'delete terms in 4',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: delete terms in 5.
+  $permissions['delete terms in 5'] = array(
+    'name' => 'delete terms in 5',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'taxonomy',
   );
 
@@ -52,10 +72,21 @@ function slac_events_features_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: edit terms in 7.
-  $permissions['edit terms in 7'] = array(
-    'name' => 'edit terms in 7',
-    'roles' => array(),
+  // Exported permission: edit terms in 3.
+  $permissions['edit terms in 3'] = array(
+    'name' => 'edit terms in 3',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: edit terms in 4.
+  $permissions['edit terms in 4'] = array(
+    'name' => 'edit terms in 4',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'taxonomy',
   );
 
