@@ -59,6 +59,20 @@ function slac_events_features_views_default_views() {
   $handler->display->display_options['style_options']['theme_style'] = '1';
   $handler->display->display_options['style_options']['max_items'] = '0';
   $handler->display->display_options['row_plugin'] = 'calendar_entity';
+  /* Footer: Global: Text area */
+  $handler->display->display_options['footer']['area']['id'] = 'area';
+  $handler->display->display_options['footer']['area']['table'] = 'views';
+  $handler->display->display_options['footer']['area']['field'] = 'area';
+  $handler->display->display_options['footer']['area']['label'] = 'Legend';
+  $handler->display->display_options['footer']['area']['content'] = 'Colors indicate event series. 
+';
+  $handler->display->display_options['footer']['area']['format'] = 'filtered_html';
+  /* Footer: Global: View area */
+  $handler->display->display_options['footer']['view']['id'] = 'view';
+  $handler->display->display_options['footer']['view']['table'] = 'views';
+  $handler->display->display_options['footer']['view']['field'] = 'view';
+  $handler->display->display_options['footer']['view']['label'] = 'Legend';
+  $handler->display->display_options['footer']['view']['view_to_insert'] = 'event_calendar_legend:block';
   /* Relationship: Content: Event Series (field_slac_event_category) */
   $handler->display->display_options['relationships']['field_slac_event_category_tid']['id'] = 'field_slac_event_category_tid';
   $handler->display->display_options['relationships']['field_slac_event_category_tid']['table'] = 'field_data_field_slac_event_category';
@@ -438,6 +452,75 @@ function slac_events_features_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'node_rss';
   $handler->display->display_options['path'] = 'calendar/feeds';
   $export['calendar'] = $view;
+
+  $view = new view();
+  $view->name = 'event_calendar_legend';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'taxonomy_term_data';
+  $view->human_name = 'Event Calendar legend';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Legend';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['style_plugin'] = 'list';
+  $handler->display->display_options['style_options']['grouping'] = array(
+    0 => array(
+      'field' => 'field_slac_event_color_reference',
+      'rendered' => 1,
+      'rendered_strip' => 0,
+    ),
+  );
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['inline'] = array(
+    'name' => 'name',
+  );
+  $handler->display->display_options['row_options']['separator'] = ',';
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['content'] = 'Legend';
+  $handler->display->display_options['header']['area']['format'] = 'filtered_html';
+  /* Field: Taxonomy term: Name */
+  $handler->display->display_options['fields']['name']['id'] = 'name';
+  $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['name']['field'] = 'name';
+  $handler->display->display_options['fields']['name']['relationship'] = 'reverse_field_slac_event_color_reference_taxonomy_term';
+  $handler->display->display_options['fields']['name']['label'] = '';
+  $handler->display->display_options['fields']['name']['element_type'] = '0';
+  $handler->display->display_options['fields']['name']['element_label_type'] = '0';
+  $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['name']['element_wrapper_type'] = '0';
+  /* Field: Taxonomy term: Color */
+  $handler->display->display_options['fields']['field_slac_event_color_reference']['id'] = 'field_slac_event_color_reference';
+  $handler->display->display_options['fields']['field_slac_event_color_reference']['table'] = 'field_data_field_slac_event_color_reference';
+  $handler->display->display_options['fields']['field_slac_event_color_reference']['field'] = 'field_slac_event_color_reference';
+  $handler->display->display_options['fields']['field_slac_event_color_reference']['relationship'] = 'reverse_field_slac_event_color_reference_taxonomy_term';
+  $handler->display->display_options['fields']['field_slac_event_color_reference']['label'] = '';
+  $handler->display->display_options['fields']['field_slac_event_color_reference']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_slac_event_color_reference']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_slac_event_color_reference']['type'] = 'taxonomy_term_reference_plain';
+  /* Filter criterion: Taxonomy vocabulary: Machine name */
+  $handler->display->display_options['filters']['machine_name']['id'] = 'machine_name';
+  $handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';
+  $handler->display->display_options['filters']['machine_name']['field'] = 'machine_name';
+  $handler->display->display_options['filters']['machine_name']['value'] = array(
+    'event_categories' => 'event_categories',
+  );
+
+  /* Display: Block */
+  $handler = $view->new_display('block', 'Block', 'block');
+  $export['event_calendar_legend'] = $view;
 
   return $export;
 }

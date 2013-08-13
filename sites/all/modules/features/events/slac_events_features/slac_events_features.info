@@ -74,6 +74,7 @@ features[variable][] = node_preview_event
 features[variable][] = node_submitted_event
 features[variable][] = save_continue_event
 features[views_view][] = calendar
+features[views_view][] = event_calendar_legend
 features_exclude[dependencies][ctools] = ctools
 features_exclude[dependencies][features] = features
 features_exclude[dependencies][options] = options
