@@ -18,7 +18,6 @@ dependencies[] = menu
 dependencies[] = node
 dependencies[] = page_manager
 dependencies[] = panels
-dependencies[] = slac_faq
 dependencies[] = strongarm
 dependencies[] = taxonomy
 dependencies[] = text

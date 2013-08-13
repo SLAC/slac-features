@@ -20,6 +20,7 @@ dependencies[] = dblog
 dependencies[] = search
 dependencies[] = field_ui
 dependencies[] = file
+dependencies[] = rdf
 
 ;Contrib depdencies
 dependencies[] = admin_menu
@@ -29,6 +30,7 @@ dependencies[] = views
 dependencies[] = views_ui
 dependencies[] = date
 dependencies[] = date_api
+dependencies[] = date_popup
 dependencies[] = date_ical
 dependencies[] = date_views
 dependencies[] = features
@@ -57,6 +59,26 @@ dependencies[] = markdown
 dependencies[] = bueditor
 dependencies[] = ajax_markup
 
+;Blog/News
+dependencies[] = media
+dependencies[] = file_entity
+
+;Blog
+dependencies[] = blog
+
+;News
+dependencies[] = mediafield
+
+;Events
+dependencies[] = better_exposed_filters
+dependencies[] = views_php
+dependencies[] = field_redirection
+dependencies[] = node_export
+
+
 ;Features
 dependencies[] = slac_faq
-;dependencies[] = slac_wiki
+dependencies[] = slac_wiki
+dependencies[] = slac_news
+; dependencies[] = slac_blog_features
+; dependencies[] = slac_events_features
