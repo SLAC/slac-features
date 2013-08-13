@@ -31,13 +31,6 @@ function slac_blog_features_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: delete terms in 6.
-  $permissions['delete terms in 6'] = array(
-    'name' => 'delete terms in 6',
-    'roles' => array(),
-    'module' => 'taxonomy',
-  );
-
   // Exported permission: edit any blog content.
   $permissions['edit any blog content'] = array(
     'name' => 'edit any blog content',
