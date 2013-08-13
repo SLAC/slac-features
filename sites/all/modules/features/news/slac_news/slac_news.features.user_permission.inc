@@ -15,8 +15,6 @@ function slac_news_user_default_permissions() {
     'name' => 'create slac_news content',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
-      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -33,10 +31,7 @@ function slac_news_user_default_permissions() {
   // Exported permission: delete own slac_news content.
   $permissions['delete own slac_news content'] = array(
     'name' => 'delete own slac_news content',
-    'roles' => array(
-      'editor' => 'editor',
-      'manager' => 'manager',
-    ),
+    'roles' => array(),
     'module' => 'node',
   );
 
@@ -45,8 +40,6 @@ function slac_news_user_default_permissions() {
     'name' => 'edit any slac_news content',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
-      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -56,8 +49,6 @@ function slac_news_user_default_permissions() {
     'name' => 'edit own slac_news content',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
-      'manager' => 'manager',
     ),
     'module' => 'node',
   );
