@@ -1312,7 +1312,7 @@ function slac_blog_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'Blog Archive';
   $page->admin_description = '';
-  $page->path = 'blog-archive';
+  $page->path = 'blog/archive';
   $page->access = array();
   $page->menu = array();
   $page->arguments = array();

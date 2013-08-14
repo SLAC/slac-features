@@ -47,7 +47,7 @@ function slac_blog_views_default_views() {
   $handler->display->display_options['arguments']['created_year_month']['summary']['sort_order'] = 'desc';
   $handler->display->display_options['arguments']['created_year_month']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['created_year_month']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['created_year_month']['summary_options']['base_path'] = 'blog-archive';
+  $handler->display->display_options['arguments']['created_year_month']['summary_options']['base_path'] = 'blog/archive';
   $handler->display->display_options['arguments']['created_year_month']['summary_options']['items_per_page'] = '25';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
@@ -102,7 +102,7 @@ function slac_blog_views_default_views() {
   $handler->display->display_options['arguments']['created_year']['summary']['sort_order'] = 'desc';
   $handler->display->display_options['arguments']['created_year']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['created_year']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['created_year']['summary_options']['base_path'] = 'blog-archive';
+  $handler->display->display_options['arguments']['created_year']['summary_options']['base_path'] = 'blog/archive';
   $handler->display->display_options['arguments']['created_year']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
@@ -349,7 +349,7 @@ function slac_blog_views_default_views() {
   );
   $handler->display->display_options['arguments']['term_node_tid_depth']['validate_options']['transform'] = TRUE;
   $handler->display->display_options['arguments']['term_node_tid_depth']['depth'] = '0';
-  $handler->display->display_options['path'] = 'blog-tags/%';
+  $handler->display->display_options['path'] = 'blog/tags/%';
 
   /* Display: Blogs by category */
   $handler = $view->new_display('page', 'Blogs by category', 'page_3');
@@ -578,7 +578,7 @@ function slac_blog_views_default_views() {
   $handler->display->display_options['arguments']['created_year_month']['summary']['sort_order'] = 'desc';
   $handler->display->display_options['arguments']['created_year_month']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['created_year_month']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['created_year_month']['summary_options']['base_path'] = 'blog-archive';
+  $handler->display->display_options['arguments']['created_year_month']['summary_options']['base_path'] = 'blog/archive';
   $handler->display->display_options['arguments']['created_year_month']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['arguments']['created_year_month']['validate']['type'] = 'numeric';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
@@ -626,7 +626,7 @@ function slac_blog_views_default_views() {
   $handler->display->display_options['arguments']['created_year']['summary']['sort_order'] = 'desc';
   $handler->display->display_options['arguments']['created_year']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['created_year']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['created_year']['summary_options']['base_path'] = 'blog-archive';
+  $handler->display->display_options['arguments']['created_year']['summary_options']['base_path'] = 'blog/archive';
   $handler->display->display_options['arguments']['created_year']['summary_options']['items_per_page'] = '25';
 
   /* Display: Blog Term Feed */
@@ -734,7 +734,7 @@ function slac_blog_views_default_views() {
   $handler->display->display_options['fields']['name']['field'] = 'name';
   $handler->display->display_options['fields']['name']['label'] = '';
   $handler->display->display_options['fields']['name']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['name']['alter']['path'] = 'blog-tags/[name_1]';
+  $handler->display->display_options['fields']['name']['alter']['path'] = 'blog/tags/[name_1]';
   $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;

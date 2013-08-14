@@ -78,21 +78,86 @@ function slac_blog_demo_uuid_features_default_content() {
       ),
     ),
   ),
-  'field_slac_blog_tags' => array(
-    'und' => array(
-      0 => array(
-        'tid' => 21,
-      ),
-    ),
-  ),
   'field_slac_blog_category' => array(
     'und' => array(
       0 => array(
         'tid' => 13,
+        'uuid' => '7ab07cf6-bd48-45e3-a174-035b8bb14409',
       ),
     ),
   ),
   'field_slac_blog_image' => array(),
+  'field_slac_blog_tags' => array(
+    'und' => array(
+      0 => array(
+        'tid' => 20,
+        'uuid' => 'c2935c8d-9f69-4392-9136-2deadbc90b6c',
+      ),
+      1 => array(
+        'tid' => 21,
+        'uuid' => 'ce8fd534-a7f1-4293-b40e-e8ffc23f82de',
+      ),
+      2 => array(
+        'tid' => 5,
+        'uuid' => '2779b052-a751-45e1-80a5-efa4dadb3867',
+      ),
+    ),
+  ),
+  'rdf_mapping' => array(
+    'rdftype' => array(
+      0 => 'sioc:Post',
+      1 => 'sioct:BlogPost',
+    ),
+    'title' => array(
+      'predicates' => array(
+        0 => 'dc:title',
+      ),
+    ),
+    'created' => array(
+      'predicates' => array(
+        0 => 'dc:date',
+        1 => 'dc:created',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'changed' => array(
+      'predicates' => array(
+        0 => 'dc:modified',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'body' => array(
+      'predicates' => array(
+        0 => 'content:encoded',
+      ),
+    ),
+    'uid' => array(
+      'predicates' => array(
+        0 => 'sioc:has_creator',
+      ),
+      'type' => 'rel',
+    ),
+    'name' => array(
+      'predicates' => array(
+        0 => 'foaf:name',
+      ),
+    ),
+    'comment_count' => array(
+      'predicates' => array(
+        0 => 'sioc:num_replies',
+      ),
+      'datatype' => 'xsd:integer',
+    ),
+    'last_activity' => array(
+      'predicates' => array(
+        0 => 'sioc:last_activity_date',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+  ),
   'cid' => 0,
   'last_comment_name' => NULL,
   'last_comment_uid' => 0,
@@ -101,7 +166,7 @@ function slac_blog_demo_uuid_features_default_content() {
   'picture' => 0,
   'data' => 'b:0;',
   'date' => '2013-07-31 14:35:51 +0300',
-  'author_uuid' => 'f0dd442b-e708-4678-8cec-90cec6dee377',
+  'author_uuid' => 'b11a66c3-c6a3-49bc-9d56-a883481d87b2',
 );
   $nodes[] = array(
   'uid' => 1,
@@ -143,21 +208,82 @@ function slac_blog_demo_uuid_features_default_content() {
       ),
     ),
   ),
-  'field_slac_blog_tags' => array(
-    'und' => array(
-      0 => array(
-        'tid' => 5,
-      ),
-    ),
-  ),
   'field_slac_blog_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 12,
+        'tid' => 9,
+        'uuid' => '67c4bd29-1662-4f71-98fa-cddcec26462b',
       ),
     ),
   ),
   'field_slac_blog_image' => array(),
+  'field_slac_blog_tags' => array(
+    'und' => array(
+      0 => array(
+        'tid' => 4,
+        'uuid' => '25f89c1a-ad28-49ce-ac5d-0da000be0ff3',
+      ),
+      1 => array(
+        'tid' => 6,
+        'uuid' => '2d557d82-23f6-4ab1-881e-93a0ca55c724',
+      ),
+    ),
+  ),
+  'rdf_mapping' => array(
+    'rdftype' => array(
+      0 => 'sioc:Post',
+      1 => 'sioct:BlogPost',
+    ),
+    'title' => array(
+      'predicates' => array(
+        0 => 'dc:title',
+      ),
+    ),
+    'created' => array(
+      'predicates' => array(
+        0 => 'dc:date',
+        1 => 'dc:created',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'changed' => array(
+      'predicates' => array(
+        0 => 'dc:modified',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'body' => array(
+      'predicates' => array(
+        0 => 'content:encoded',
+      ),
+    ),
+    'uid' => array(
+      'predicates' => array(
+        0 => 'sioc:has_creator',
+      ),
+      'type' => 'rel',
+    ),
+    'name' => array(
+      'predicates' => array(
+        0 => 'foaf:name',
+      ),
+    ),
+    'comment_count' => array(
+      'predicates' => array(
+        0 => 'sioc:num_replies',
+      ),
+      'datatype' => 'xsd:integer',
+    ),
+    'last_activity' => array(
+      'predicates' => array(
+        0 => 'sioc:last_activity_date',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+  ),
   'cid' => 0,
   'last_comment_name' => NULL,
   'last_comment_uid' => 0,
@@ -166,7 +292,7 @@ function slac_blog_demo_uuid_features_default_content() {
   'picture' => 0,
   'data' => 'b:0;',
   'date' => '2013-07-31 14:35:51 +0300',
-  'author_uuid' => 'f0dd442b-e708-4678-8cec-90cec6dee377',
+  'author_uuid' => 'b11a66c3-c6a3-49bc-9d56-a883481d87b2',
 );
   $nodes[] = array(
   'uid' => 1,
@@ -206,21 +332,82 @@ As I consider this man who sat next to me with his white cane folded up under hi
       ),
     ),
   ),
-  'field_slac_blog_tags' => array(
-    'und' => array(
-      0 => array(
-        'tid' => 19,
-      ),
-    ),
-  ),
   'field_slac_blog_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 3,
+        'tid' => 12,
+        'uuid' => '79e84627-4ccb-4811-a469-1da6267a6f3a',
       ),
     ),
   ),
   'field_slac_blog_image' => array(),
+  'field_slac_blog_tags' => array(
+    'und' => array(
+      0 => array(
+        'tid' => 25,
+        'uuid' => 'ee1b6371-da63-44d0-849f-116ee0803cf8',
+      ),
+      1 => array(
+        'tid' => 6,
+        'uuid' => '2d557d82-23f6-4ab1-881e-93a0ca55c724',
+      ),
+    ),
+  ),
+  'rdf_mapping' => array(
+    'rdftype' => array(
+      0 => 'sioc:Post',
+      1 => 'sioct:BlogPost',
+    ),
+    'title' => array(
+      'predicates' => array(
+        0 => 'dc:title',
+      ),
+    ),
+    'created' => array(
+      'predicates' => array(
+        0 => 'dc:date',
+        1 => 'dc:created',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'changed' => array(
+      'predicates' => array(
+        0 => 'dc:modified',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'body' => array(
+      'predicates' => array(
+        0 => 'content:encoded',
+      ),
+    ),
+    'uid' => array(
+      'predicates' => array(
+        0 => 'sioc:has_creator',
+      ),
+      'type' => 'rel',
+    ),
+    'name' => array(
+      'predicates' => array(
+        0 => 'foaf:name',
+      ),
+    ),
+    'comment_count' => array(
+      'predicates' => array(
+        0 => 'sioc:num_replies',
+      ),
+      'datatype' => 'xsd:integer',
+    ),
+    'last_activity' => array(
+      'predicates' => array(
+        0 => 'sioc:last_activity_date',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+  ),
   'cid' => 0,
   'last_comment_name' => NULL,
   'last_comment_uid' => 0,
@@ -229,7 +416,7 @@ As I consider this man who sat next to me with his white cane folded up under hi
   'picture' => 0,
   'data' => 'b:0;',
   'date' => '2013-07-31 14:35:51 +0300',
-  'author_uuid' => 'f0dd442b-e708-4678-8cec-90cec6dee377',
+  'author_uuid' => 'b11a66c3-c6a3-49bc-9d56-a883481d87b2',
 );
   $nodes[] = array(
   'uid' => 1,
@@ -325,21 +512,82 @@ Additional Resources</p>
       ),
     ),
   ),
-  'field_slac_blog_tags' => array(
-    'und' => array(
-      0 => array(
-        'tid' => 16,
-      ),
-    ),
-  ),
   'field_slac_blog_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 9,
+        'tid' => 3,
+        'uuid' => '18891cc1-ada5-4a06-80a3-f88a7d62c2ac',
       ),
     ),
   ),
   'field_slac_blog_image' => array(),
+  'field_slac_blog_tags' => array(
+    'und' => array(
+      0 => array(
+        'tid' => 24,
+        'uuid' => 'e0e71063-f177-468a-b7b3-f2f7785bb689',
+      ),
+      1 => array(
+        'tid' => 5,
+        'uuid' => '2779b052-a751-45e1-80a5-efa4dadb3867',
+      ),
+    ),
+  ),
+  'rdf_mapping' => array(
+    'rdftype' => array(
+      0 => 'sioc:Post',
+      1 => 'sioct:BlogPost',
+    ),
+    'title' => array(
+      'predicates' => array(
+        0 => 'dc:title',
+      ),
+    ),
+    'created' => array(
+      'predicates' => array(
+        0 => 'dc:date',
+        1 => 'dc:created',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'changed' => array(
+      'predicates' => array(
+        0 => 'dc:modified',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'body' => array(
+      'predicates' => array(
+        0 => 'content:encoded',
+      ),
+    ),
+    'uid' => array(
+      'predicates' => array(
+        0 => 'sioc:has_creator',
+      ),
+      'type' => 'rel',
+    ),
+    'name' => array(
+      'predicates' => array(
+        0 => 'foaf:name',
+      ),
+    ),
+    'comment_count' => array(
+      'predicates' => array(
+        0 => 'sioc:num_replies',
+      ),
+      'datatype' => 'xsd:integer',
+    ),
+    'last_activity' => array(
+      'predicates' => array(
+        0 => 'sioc:last_activity_date',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+  ),
   'cid' => 0,
   'last_comment_name' => NULL,
   'last_comment_uid' => 0,
@@ -348,7 +596,7 @@ Additional Resources</p>
   'picture' => 0,
   'data' => 'b:0;',
   'date' => '2013-07-31 14:35:51 +0300',
-  'author_uuid' => 'f0dd442b-e708-4678-8cec-90cec6dee377',
+  'author_uuid' => 'b11a66c3-c6a3-49bc-9d56-a883481d87b2',
 );
   $nodes[] = array(
   'uid' => 1,
@@ -407,21 +655,78 @@ Menu Position is on the short list of modules to be added to the Stanford Sites 
       ),
     ),
   ),
-  'field_slac_blog_tags' => array(
-    'und' => array(
-      0 => array(
-        'tid' => 21,
-      ),
-    ),
-  ),
   'field_slac_blog_category' => array(
     'und' => array(
       0 => array(
         'tid' => 13,
+        'uuid' => '7ab07cf6-bd48-45e3-a174-035b8bb14409',
       ),
     ),
   ),
   'field_slac_blog_image' => array(),
+  'field_slac_blog_tags' => array(
+    'und' => array(
+      0 => array(
+        'tid' => 10,
+        'uuid' => '6e1c034d-d332-4fd7-8771-e3c6a62ec739',
+      ),
+    ),
+  ),
+  'rdf_mapping' => array(
+    'rdftype' => array(
+      0 => 'sioc:Post',
+      1 => 'sioct:BlogPost',
+    ),
+    'title' => array(
+      'predicates' => array(
+        0 => 'dc:title',
+      ),
+    ),
+    'created' => array(
+      'predicates' => array(
+        0 => 'dc:date',
+        1 => 'dc:created',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'changed' => array(
+      'predicates' => array(
+        0 => 'dc:modified',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'body' => array(
+      'predicates' => array(
+        0 => 'content:encoded',
+      ),
+    ),
+    'uid' => array(
+      'predicates' => array(
+        0 => 'sioc:has_creator',
+      ),
+      'type' => 'rel',
+    ),
+    'name' => array(
+      'predicates' => array(
+        0 => 'foaf:name',
+      ),
+    ),
+    'comment_count' => array(
+      'predicates' => array(
+        0 => 'sioc:num_replies',
+      ),
+      'datatype' => 'xsd:integer',
+    ),
+    'last_activity' => array(
+      'predicates' => array(
+        0 => 'sioc:last_activity_date',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+  ),
   'cid' => 0,
   'last_comment_name' => NULL,
   'last_comment_uid' => 0,
@@ -430,7 +735,7 @@ Menu Position is on the short list of modules to be added to the Stanford Sites 
   'picture' => 0,
   'data' => 'b:0;',
   'date' => '2013-07-31 14:35:51 +0300',
-  'author_uuid' => 'f0dd442b-e708-4678-8cec-90cec6dee377',
+  'author_uuid' => 'b11a66c3-c6a3-49bc-9d56-a883481d87b2',
 );
   $nodes[] = array(
   'uid' => 1,
@@ -541,21 +846,82 @@ Here is another post that I found helpful, if you want to know even more about s
       ),
     ),
   ),
-  'field_slac_blog_tags' => array(
-    'und' => array(
-      0 => array(
-        'tid' => 15,
-      ),
-    ),
-  ),
   'field_slac_blog_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 13,
+        'tid' => 9,
+        'uuid' => '67c4bd29-1662-4f71-98fa-cddcec26462b',
       ),
     ),
   ),
   'field_slac_blog_image' => array(),
+  'field_slac_blog_tags' => array(
+    'und' => array(
+      0 => array(
+        'tid' => 11,
+        'uuid' => '77f52d96-2914-40c4-866d-bf4622d91a13',
+      ),
+      1 => array(
+        'tid' => 19,
+        'uuid' => 'b2959bf4-b73c-4c1c-b8bb-a8d6c55e4dd0',
+      ),
+    ),
+  ),
+  'rdf_mapping' => array(
+    'rdftype' => array(
+      0 => 'sioc:Post',
+      1 => 'sioct:BlogPost',
+    ),
+    'title' => array(
+      'predicates' => array(
+        0 => 'dc:title',
+      ),
+    ),
+    'created' => array(
+      'predicates' => array(
+        0 => 'dc:date',
+        1 => 'dc:created',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'changed' => array(
+      'predicates' => array(
+        0 => 'dc:modified',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'body' => array(
+      'predicates' => array(
+        0 => 'content:encoded',
+      ),
+    ),
+    'uid' => array(
+      'predicates' => array(
+        0 => 'sioc:has_creator',
+      ),
+      'type' => 'rel',
+    ),
+    'name' => array(
+      'predicates' => array(
+        0 => 'foaf:name',
+      ),
+    ),
+    'comment_count' => array(
+      'predicates' => array(
+        0 => 'sioc:num_replies',
+      ),
+      'datatype' => 'xsd:integer',
+    ),
+    'last_activity' => array(
+      'predicates' => array(
+        0 => 'sioc:last_activity_date',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+  ),
   'cid' => 0,
   'last_comment_name' => NULL,
   'last_comment_uid' => 0,
@@ -564,7 +930,7 @@ Here is another post that I found helpful, if you want to know even more about s
   'picture' => 0,
   'data' => 'b:0;',
   'date' => '2013-07-31 14:35:51 +0300',
-  'author_uuid' => 'f0dd442b-e708-4678-8cec-90cec6dee377',
+  'author_uuid' => 'b11a66c3-c6a3-49bc-9d56-a883481d87b2',
 );
   $nodes[] = array(
   'uid' => 1,
@@ -620,24 +986,82 @@ Here is another post that I found helpful, if you want to know even more about s
       ),
     ),
   ),
-  'field_slac_blog_tags' => array(
-    'und' => array(
-      0 => array(
-        'tid' => 6,
-      ),
-      1 => array(
-        'tid' => 4,
-      ),
-    ),
-  ),
   'field_slac_blog_category' => array(
     'und' => array(
       0 => array(
         'tid' => 9,
+        'uuid' => '67c4bd29-1662-4f71-98fa-cddcec26462b',
       ),
     ),
   ),
   'field_slac_blog_image' => array(),
+  'field_slac_blog_tags' => array(
+    'und' => array(
+      0 => array(
+        'tid' => 5,
+        'uuid' => '2779b052-a751-45e1-80a5-efa4dadb3867',
+      ),
+      1 => array(
+        'tid' => 14,
+        'uuid' => '86014be0-6ad6-4522-acd6-faa5fb09c1fe',
+      ),
+    ),
+  ),
+  'rdf_mapping' => array(
+    'rdftype' => array(
+      0 => 'sioc:Post',
+      1 => 'sioct:BlogPost',
+    ),
+    'title' => array(
+      'predicates' => array(
+        0 => 'dc:title',
+      ),
+    ),
+    'created' => array(
+      'predicates' => array(
+        0 => 'dc:date',
+        1 => 'dc:created',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'changed' => array(
+      'predicates' => array(
+        0 => 'dc:modified',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'body' => array(
+      'predicates' => array(
+        0 => 'content:encoded',
+      ),
+    ),
+    'uid' => array(
+      'predicates' => array(
+        0 => 'sioc:has_creator',
+      ),
+      'type' => 'rel',
+    ),
+    'name' => array(
+      'predicates' => array(
+        0 => 'foaf:name',
+      ),
+    ),
+    'comment_count' => array(
+      'predicates' => array(
+        0 => 'sioc:num_replies',
+      ),
+      'datatype' => 'xsd:integer',
+    ),
+    'last_activity' => array(
+      'predicates' => array(
+        0 => 'sioc:last_activity_date',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+  ),
   'cid' => 0,
   'last_comment_name' => NULL,
   'last_comment_uid' => 0,
@@ -646,7 +1070,7 @@ Here is another post that I found helpful, if you want to know even more about s
   'picture' => 0,
   'data' => 'b:0;',
   'date' => '2013-07-31 14:35:51 +0300',
-  'author_uuid' => 'f0dd442b-e708-4678-8cec-90cec6dee377',
+  'author_uuid' => 'b11a66c3-c6a3-49bc-9d56-a883481d87b2',
 );
   $nodes[] = array(
   'uid' => 1,
@@ -893,21 +1317,78 @@ Here is another post that I found helpful, if you want to know even more about s
       ),
     ),
   ),
-  'field_slac_blog_tags' => array(
-    'und' => array(
-      0 => array(
-        'tid' => 10,
-      ),
-    ),
-  ),
   'field_slac_blog_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 12,
+        'tid' => 13,
+        'uuid' => '7ab07cf6-bd48-45e3-a174-035b8bb14409',
       ),
     ),
   ),
   'field_slac_blog_image' => array(),
+  'field_slac_blog_tags' => array(
+    'und' => array(
+      0 => array(
+        'tid' => 19,
+        'uuid' => 'b2959bf4-b73c-4c1c-b8bb-a8d6c55e4dd0',
+      ),
+    ),
+  ),
+  'rdf_mapping' => array(
+    'rdftype' => array(
+      0 => 'sioc:Post',
+      1 => 'sioct:BlogPost',
+    ),
+    'title' => array(
+      'predicates' => array(
+        0 => 'dc:title',
+      ),
+    ),
+    'created' => array(
+      'predicates' => array(
+        0 => 'dc:date',
+        1 => 'dc:created',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'changed' => array(
+      'predicates' => array(
+        0 => 'dc:modified',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'body' => array(
+      'predicates' => array(
+        0 => 'content:encoded',
+      ),
+    ),
+    'uid' => array(
+      'predicates' => array(
+        0 => 'sioc:has_creator',
+      ),
+      'type' => 'rel',
+    ),
+    'name' => array(
+      'predicates' => array(
+        0 => 'foaf:name',
+      ),
+    ),
+    'comment_count' => array(
+      'predicates' => array(
+        0 => 'sioc:num_replies',
+      ),
+      'datatype' => 'xsd:integer',
+    ),
+    'last_activity' => array(
+      'predicates' => array(
+        0 => 'sioc:last_activity_date',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+  ),
   'cid' => 0,
   'last_comment_name' => NULL,
   'last_comment_uid' => 0,
@@ -916,7 +1397,7 @@ Here is another post that I found helpful, if you want to know even more about s
   'picture' => 0,
   'data' => 'b:0;',
   'date' => '2013-07-31 14:35:51 +0300',
-  'author_uuid' => 'f0dd442b-e708-4678-8cec-90cec6dee377',
+  'author_uuid' => 'b11a66c3-c6a3-49bc-9d56-a883481d87b2',
 );
   $nodes[] = array(
   'uid' => 1,
@@ -1060,21 +1541,86 @@ Here is another post that I found helpful, if you want to know even more about s
       ),
     ),
   ),
-  'field_slac_blog_tags' => array(
-    'und' => array(
-      0 => array(
-        'tid' => 20,
-      ),
-    ),
-  ),
   'field_slac_blog_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 13,
+        'tid' => 3,
+        'uuid' => '18891cc1-ada5-4a06-80a3-f88a7d62c2ac',
       ),
     ),
   ),
   'field_slac_blog_image' => array(),
+  'field_slac_blog_tags' => array(
+    'und' => array(
+      0 => array(
+        'tid' => 5,
+        'uuid' => '2779b052-a751-45e1-80a5-efa4dadb3867',
+      ),
+      1 => array(
+        'tid' => 10,
+        'uuid' => '6e1c034d-d332-4fd7-8771-e3c6a62ec739',
+      ),
+      2 => array(
+        'tid' => 18,
+        'uuid' => 'aaeef82f-6290-44e7-9e21-11965982c65c',
+      ),
+    ),
+  ),
+  'rdf_mapping' => array(
+    'rdftype' => array(
+      0 => 'sioc:Post',
+      1 => 'sioct:BlogPost',
+    ),
+    'title' => array(
+      'predicates' => array(
+        0 => 'dc:title',
+      ),
+    ),
+    'created' => array(
+      'predicates' => array(
+        0 => 'dc:date',
+        1 => 'dc:created',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'changed' => array(
+      'predicates' => array(
+        0 => 'dc:modified',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'body' => array(
+      'predicates' => array(
+        0 => 'content:encoded',
+      ),
+    ),
+    'uid' => array(
+      'predicates' => array(
+        0 => 'sioc:has_creator',
+      ),
+      'type' => 'rel',
+    ),
+    'name' => array(
+      'predicates' => array(
+        0 => 'foaf:name',
+      ),
+    ),
+    'comment_count' => array(
+      'predicates' => array(
+        0 => 'sioc:num_replies',
+      ),
+      'datatype' => 'xsd:integer',
+    ),
+    'last_activity' => array(
+      'predicates' => array(
+        0 => 'sioc:last_activity_date',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+  ),
   'cid' => 0,
   'last_comment_name' => NULL,
   'last_comment_uid' => 0,
@@ -1083,7 +1629,7 @@ Here is another post that I found helpful, if you want to know even more about s
   'picture' => 0,
   'data' => 'b:0;',
   'date' => '2013-07-31 14:35:51 +0300',
-  'author_uuid' => 'f0dd442b-e708-4678-8cec-90cec6dee377',
+  'author_uuid' => 'b11a66c3-c6a3-49bc-9d56-a883481d87b2',
 );
   return $nodes;
 }
