@@ -7,7 +7,7 @@
 /**
  * Implements hook_ctools_plugin_api().
  */
-function slac_blog_features_ctools_plugin_api() {
+function slac_blog_ctools_plugin_api() {
   list($module, $api) = func_get_args();
   if ($module == "page_manager" && $api == "pages_default") {
     return array("version" => "1");
@@ -21,14 +21,14 @@ function slac_blog_features_ctools_plugin_api() {
 /**
  * Implements hook_views_api().
  */
-function slac_blog_features_views_api() {
+function slac_blog_views_api() {
   return array("api" => "3.0");
 }
 
 /**
  * Implements hook_image_default_styles().
  */
-function slac_blog_features_image_default_styles() {
+function slac_blog_image_default_styles() {
   $styles = array();
 
   // Exported image style: front-blog-image.

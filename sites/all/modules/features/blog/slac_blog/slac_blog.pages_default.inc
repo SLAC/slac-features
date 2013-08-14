@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * slac_blog_features.pages_default.inc
+ * slac_blog.pages_default.inc
  */
 
 /**
  * Implements hook_default_page_manager_handlers().
  */
-function slac_blog_features_default_page_manager_handlers() {
+function slac_blog_default_page_manager_handlers() {
   $export = array();
 
   $handler = new stdClass();
@@ -771,7 +771,7 @@ function slac_blog_features_default_page_manager_handlers() {
   $handler->handler = 'panel_context';
   $handler->weight = 2;
   $handler->conf = array(
-    'title' => 'Blog Categories',
+    'title' => 'Blog Category',
     'no_blocks' => 0,
     'pipeline' => 'standard',
     'body_classes_to_remove' => '',
@@ -1304,7 +1304,7 @@ function slac_blog_features_default_page_manager_handlers() {
 /**
  * Implements hook_default_page_manager_pages().
  */
-function slac_blog_features_default_page_manager_pages() {
+function slac_blog_default_page_manager_pages() {
   $page = new stdClass();
   $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
   $page->api_version = 1;

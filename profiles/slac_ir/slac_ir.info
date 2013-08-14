@@ -80,5 +80,5 @@ dependencies[] = node_export
 dependencies[] = slac_faq
 dependencies[] = slac_wiki
 dependencies[] = slac_news
-dependencies[] = slac_blog_features
+dependencies[] = slac_blog
 dependencies[] = slac_events_features

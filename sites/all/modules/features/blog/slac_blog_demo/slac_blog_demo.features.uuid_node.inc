@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * slac_blog_test_content.features.uuid_node.inc
+ * slac_blog_demo.features.uuid_node.inc
  */
 
 /**
  * Implements hook_uuid_features_default_content().
  */
-function slac_blog_test_content_uuid_features_default_content() {
+function slac_blog_demo_uuid_features_default_content() {
   $nodes = array();
 
   $nodes[] = array(
@@ -78,21 +78,21 @@ function slac_blog_test_content_uuid_features_default_content() {
       ),
     ),
   ),
-  'field_blog_tags' => array(
+  'field_slac_blog_tags' => array(
     'und' => array(
       0 => array(
         'tid' => 21,
       ),
     ),
   ),
-  'field_categories' => array(
+  'field_slac_blog_category' => array(
     'und' => array(
       0 => array(
         'tid' => 13,
       ),
     ),
   ),
-  'field_image' => array(),
+  'field_slac_blog_image' => array(),
   'cid' => 0,
   'last_comment_name' => NULL,
   'last_comment_uid' => 0,
@@ -143,21 +143,21 @@ function slac_blog_test_content_uuid_features_default_content() {
       ),
     ),
   ),
-  'field_blog_tags' => array(
+  'field_slac_blog_tags' => array(
     'und' => array(
       0 => array(
         'tid' => 5,
       ),
     ),
   ),
-  'field_categories' => array(
+  'field_slac_blog_category' => array(
     'und' => array(
       0 => array(
         'tid' => 12,
       ),
     ),
   ),
-  'field_image' => array(),
+  'field_slac_blog_image' => array(),
   'cid' => 0,
   'last_comment_name' => NULL,
   'last_comment_uid' => 0,
@@ -206,21 +206,21 @@ As I consider this man who sat next to me with his white cane folded up under hi
       ),
     ),
   ),
-  'field_blog_tags' => array(
+  'field_slac_blog_tags' => array(
     'und' => array(
       0 => array(
         'tid' => 19,
       ),
     ),
   ),
-  'field_categories' => array(
+  'field_slac_blog_category' => array(
     'und' => array(
       0 => array(
         'tid' => 3,
       ),
     ),
   ),
-  'field_image' => array(),
+  'field_slac_blog_image' => array(),
   'cid' => 0,
   'last_comment_name' => NULL,
   'last_comment_uid' => 0,
@@ -325,21 +325,21 @@ Additional Resources</p>
       ),
     ),
   ),
-  'field_blog_tags' => array(
+  'field_slac_blog_tags' => array(
     'und' => array(
       0 => array(
         'tid' => 16,
       ),
     ),
   ),
-  'field_categories' => array(
+  'field_slac_blog_category' => array(
     'und' => array(
       0 => array(
         'tid' => 9,
       ),
     ),
   ),
-  'field_image' => array(),
+  'field_slac_blog_image' => array(),
   'cid' => 0,
   'last_comment_name' => NULL,
   'last_comment_uid' => 0,
@@ -407,21 +407,21 @@ Menu Position is on the short list of modules to be added to the Stanford Sites 
       ),
     ),
   ),
-  'field_blog_tags' => array(
+  'field_slac_blog_tags' => array(
     'und' => array(
       0 => array(
         'tid' => 21,
       ),
     ),
   ),
-  'field_categories' => array(
+  'field_slac_blog_category' => array(
     'und' => array(
       0 => array(
         'tid' => 13,
       ),
     ),
   ),
-  'field_image' => array(),
+  'field_slac_blog_image' => array(),
   'cid' => 0,
   'last_comment_name' => NULL,
   'last_comment_uid' => 0,
@@ -541,21 +541,21 @@ Here is another post that I found helpful, if you want to know even more about s
       ),
     ),
   ),
-  'field_blog_tags' => array(
+  'field_slac_blog_tags' => array(
     'und' => array(
       0 => array(
         'tid' => 15,
       ),
     ),
   ),
-  'field_categories' => array(
+  'field_slac_blog_category' => array(
     'und' => array(
       0 => array(
         'tid' => 13,
       ),
     ),
   ),
-  'field_image' => array(),
+  'field_slac_blog_image' => array(),
   'cid' => 0,
   'last_comment_name' => NULL,
   'last_comment_uid' => 0,
@@ -620,7 +620,7 @@ Here is another post that I found helpful, if you want to know even more about s
       ),
     ),
   ),
-  'field_blog_tags' => array(
+  'field_slac_blog_tags' => array(
     'und' => array(
       0 => array(
         'tid' => 6,
@@ -630,14 +630,14 @@ Here is another post that I found helpful, if you want to know even more about s
       ),
     ),
   ),
-  'field_categories' => array(
+  'field_slac_blog_category' => array(
     'und' => array(
       0 => array(
         'tid' => 9,
       ),
     ),
   ),
-  'field_image' => array(),
+  'field_slac_blog_image' => array(),
   'cid' => 0,
   'last_comment_name' => NULL,
   'last_comment_uid' => 0,
@@ -893,21 +893,21 @@ Here is another post that I found helpful, if you want to know even more about s
       ),
     ),
   ),
-  'field_blog_tags' => array(
+  'field_slac_blog_tags' => array(
     'und' => array(
       0 => array(
         'tid' => 10,
       ),
     ),
   ),
-  'field_categories' => array(
+  'field_slac_blog_category' => array(
     'und' => array(
       0 => array(
         'tid' => 12,
       ),
     ),
   ),
-  'field_image' => array(),
+  'field_slac_blog_image' => array(),
   'cid' => 0,
   'last_comment_name' => NULL,
   'last_comment_uid' => 0,
@@ -1060,21 +1060,21 @@ Here is another post that I found helpful, if you want to know even more about s
       ),
     ),
   ),
-  'field_blog_tags' => array(
+  'field_slac_blog_tags' => array(
     'und' => array(
       0 => array(
         'tid' => 20,
       ),
     ),
   ),
-  'field_categories' => array(
+  'field_slac_blog_category' => array(
     'und' => array(
       0 => array(
         'tid' => 13,
       ),
     ),
   ),
-  'field_image' => array(),
+  'field_slac_blog_image' => array(),
   'cid' => 0,
   'last_comment_name' => NULL,
   'last_comment_uid' => 0,

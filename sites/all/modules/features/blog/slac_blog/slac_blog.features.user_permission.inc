@@ -7,7 +7,7 @@
 /**
  * Implements hook_user_default_permissions().
  */
-function slac_blog_features_user_default_permissions() {
+function slac_blog_user_default_permissions() {
   $permissions = array();
 
   // Exported permission: create blog content.

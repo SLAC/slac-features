@@ -7,7 +7,7 @@
 /**
  * Implements hook_field_default_field_bases().
  */
-function slac_blog_features_field_default_field_bases() {
+function slac_blog_field_default_field_bases() {
   $field_bases = array();
 
   // Exported field_base: 'comment_body'
@@ -39,13 +39,13 @@ function slac_blog_features_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_blog_tags'
-  $field_bases['field_blog_tags'] = array(
+  // Exported field_base: 'field_slac_blog_tags'
+  $field_bases['field_slac_blog_tags'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_blog_tags',
+    'field_name' => 'field_slac_blog_tags',
     'foreign keys' => array(
       'tid' => array(
         'columns' => array(
@@ -64,7 +64,7 @@ function slac_blog_features_field_default_field_bases() {
     'settings' => array(
       'allowed_values' => array(
         0 => array(
-          'vocabulary' => 'blog_tags',
+          'vocabulary' => 'slac_blog_tags',
           'parent' => 0,
         ),
       ),
@@ -73,13 +73,13 @@ function slac_blog_features_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_categories'
-  $field_bases['field_categories'] = array(
+  // Exported field_base: 'field_slac_blog_category'
+  $field_bases['field_slac_blog_category'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_categories',
+    'field_name' => 'field_slac_blog_category',
     'foreign keys' => array(
       'tid' => array(
         'columns' => array(
@@ -98,7 +98,7 @@ function slac_blog_features_field_default_field_bases() {
     'settings' => array(
       'allowed_values' => array(
         0 => array(
-          'vocabulary' => 'categories',
+          'vocabulary' => 'slac_blog_category',
           'parent' => 0,
         ),
       ),

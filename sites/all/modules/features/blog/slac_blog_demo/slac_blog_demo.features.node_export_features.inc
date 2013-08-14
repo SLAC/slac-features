@@ -7,7 +7,7 @@
 /**
  * Implements hook_node_export_features_default().
  */
-function slac_blog_test_content_node_export_features_default() {
+function slac_blog_demo_node_export_features_default() {
   $node_export = array(
   'code_string' => 'array(
   (object) array(
@@ -41,7 +41,7 @@ function slac_blog_test_content_node_export_features_default() {
           ),
         ),
       ),
-      \'field_image\' => array(
+      \'field_slac_blog_image\' => array(
         \'und\' => array(
           array(
             \'fid\' => NULL,
@@ -69,14 +69,14 @@ function slac_blog_test_content_node_export_features_default() {
           ),
         ),
       ),
-      \'field_categories\' => array(
+      \'field_slac_blog_category\' => array(
         \'und\' => array(
           array(
             \'tid\' => \'542\',
           ),
         ),
       ),
-      \'field_blog_tags\' => array(
+      \'field_slac_blog_tags\' => array(
         \'und\' => array(
           array(
             \'tid\' => \'568\',
@@ -189,7 +189,7 @@ function slac_blog_test_content_node_export_features_default() {
           ),
         ),
       ),
-      \'field_image\' => array(
+      \'field_slac_blog_image\' => array(
         \'und\' => array(
           array(
             \'fid\' => NULL,
@@ -217,14 +217,14 @@ function slac_blog_test_content_node_export_features_default() {
           ),
         ),
       ),
-      \'field_categories\' => array(
+      \'field_slac_blog_category\' => array(
         \'und\' => array(
           array(
             \'tid\' => \'539\',
           ),
         ),
       ),
-      \'field_blog_tags\' => array(
+      \'field_slac_blog_tags\' => array(
         \'und\' => array(
           array(
             \'tid\' => \'572\',
@@ -334,7 +334,7 @@ function slac_blog_test_content_node_export_features_default() {
           ),
         ),
       ),
-      \'field_image\' => array(
+      \'field_slac_blog_image\' => array(
         \'und\' => array(
           array(
             \'fid\' => NULL,
@@ -362,14 +362,14 @@ function slac_blog_test_content_node_export_features_default() {
           ),
         ),
       ),
-      \'field_categories\' => array(
+      \'field_slac_blog_category\' => array(
         \'und\' => array(
           array(
             \'tid\' => \'541\',
           ),
         ),
       ),
-      \'field_blog_tags\' => array(
+      \'field_slac_blog_tags\' => array(
         \'und\' => array(
           array(
             \'tid\' => \'574\',
@@ -482,7 +482,7 @@ function slac_blog_test_content_node_export_features_default() {
           ),
         ),
       ),
-      \'field_image\' => array(
+      \'field_slac_blog_image\' => array(
         \'und\' => array(
           array(
             \'fid\' => NULL,
@@ -510,14 +510,14 @@ function slac_blog_test_content_node_export_features_default() {
           ),
         ),
       ),
-      \'field_categories\' => array(
+      \'field_slac_blog_category\' => array(
         \'und\' => array(
           array(
             \'tid\' => \'540\',
           ),
         ),
       ),
-      \'field_blog_tags\' => array(
+      \'field_slac_blog_tags\' => array(
         \'und\' => array(
           array(
             \'tid\' => \'572\',
@@ -636,7 +636,7 @@ function slac_blog_test_content_node_export_features_default() {
           ),
         ),
       ),
-      \'field_image\' => array(
+      \'field_slac_blog_image\' => array(
         \'und\' => array(
           array(
             \'fid\' => NULL,
@@ -664,14 +664,14 @@ function slac_blog_test_content_node_export_features_default() {
           ),
         ),
       ),
-      \'field_categories\' => array(
+      \'field_slac_blog_category\' => array(
         \'und\' => array(
           array(
             \'tid\' => \'542\',
           ),
         ),
       ),
-      \'field_blog_tags\' => array(
+      \'field_slac_blog_tags\' => array(
         \'und\' => array(
           array(
             \'tid\' => \'700\',
@@ -787,7 +787,7 @@ function slac_blog_test_content_node_export_features_default() {
           ),
         ),
       ),
-      \'field_image\' => array(
+      \'field_slac_blog_image\' => array(
         \'und\' => array(
           array(
             \'fid\' => NULL,
@@ -815,14 +815,14 @@ function slac_blog_test_content_node_export_features_default() {
           ),
         ),
       ),
-      \'field_categories\' => array(
+      \'field_slac_blog_category\' => array(
         \'und\' => array(
           array(
             \'tid\' => \'542\',
           ),
         ),
       ),
-      \'field_blog_tags\' => array(
+      \'field_slac_blog_tags\' => array(
         \'und\' => array(
           array(
             \'tid\' => \'573\',
@@ -938,7 +938,7 @@ function slac_blog_test_content_node_export_features_default() {
           ),
         ),
       ),
-      \'field_image\' => array(
+      \'field_slac_blog_image\' => array(
         \'und\' => array(
           array(
             \'fid\' => NULL,
@@ -966,14 +966,14 @@ function slac_blog_test_content_node_export_features_default() {
           ),
         ),
       ),
-      \'field_categories\' => array(
+      \'field_slac_blog_category\' => array(
         \'und\' => array(
           array(
             \'tid\' => \'539\',
           ),
         ),
       ),
-      \'field_blog_tags\' => array(
+      \'field_slac_blog_tags\' => array(
         \'und\' => array(
           array(
             \'tid\' => \'567\',
@@ -1083,7 +1083,7 @@ function slac_blog_test_content_node_export_features_default() {
           ),
         ),
       ),
-      \'field_image\' => array(
+      \'field_slac_blog_image\' => array(
         \'und\' => array(
           array(
             \'fid\' => NULL,
@@ -1111,14 +1111,14 @@ function slac_blog_test_content_node_export_features_default() {
           ),
         ),
       ),
-      \'field_categories\' => array(
+      \'field_slac_blog_category\' => array(
         \'und\' => array(
           array(
             \'tid\' => \'542\',
           ),
         ),
       ),
-      \'field_blog_tags\' => array(
+      \'field_slac_blog_tags\' => array(
         \'und\' => array(
           array(
             \'tid\' => \'570\',
@@ -1234,7 +1234,7 @@ function slac_blog_test_content_node_export_features_default() {
           ),
         ),
       ),
-      \'field_image\' => array(
+      \'field_slac_blog_image\' => array(
         \'und\' => array(
           array(
             \'fid\' => NULL,
@@ -1262,14 +1262,14 @@ function slac_blog_test_content_node_export_features_default() {
           ),
         ),
       ),
-      \'field_categories\' => array(
+      \'field_slac_blog_category\' => array(
         \'und\' => array(
           array(
             \'tid\' => \'540\',
           ),
         ),
       ),
-      \'field_blog_tags\' => array(
+      \'field_slac_blog_tags\' => array(
         \'und\' => array(
           array(
             \'tid\' => \'701\',

@@ -4,4 +4,4 @@
  * Code for the Blog Test Content feature.
  */
 
-include_once 'slac_blog_test_content.features.inc';
+include_once 'slac_blog_demo.features.inc';

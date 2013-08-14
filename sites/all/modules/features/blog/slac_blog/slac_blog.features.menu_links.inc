@@ -7,7 +7,7 @@
 /**
  * Implements hook_menu_default_menu_links().
  */
-function slac_blog_features_menu_default_menu_links() {
+function slac_blog_menu_default_menu_links() {
   $menu_links = array();
 
   // Exported menu link: navigation:blog

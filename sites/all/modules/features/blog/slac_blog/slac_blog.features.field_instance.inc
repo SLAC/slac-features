@@ -7,7 +7,7 @@
 /**
  * Implements hook_field_default_field_instances().
  */
-function slac_blog_features_field_default_field_instances() {
+function slac_blog_field_default_field_instances() {
   $field_instances = array();
 
   // Exported field_instance: 'comment-comment_node_blog-comment_body'
@@ -87,8 +87,8 @@ function slac_blog_features_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-blog-field_blog_tags'
-  $field_instances['node-blog-field_blog_tags'] = array(
+  // Exported field_instance: 'node-blog-field_slac_blog_tags'
+  $field_instances['node-blog-field_slac_blog_tags'] = array(
     'bundle' => 'blog',
     'default_value' => NULL,
     'deleted' => 0,
@@ -109,7 +109,7 @@ function slac_blog_features_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_blog_tags',
+    'field_name' => 'field_slac_blog_tags',
     'label' => 'Tags',
     'required' => 0,
     'settings' => array(
@@ -127,8 +127,8 @@ function slac_blog_features_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-blog-field_categories'
-  $field_instances['node-blog-field_categories'] = array(
+  // Exported field_instance: 'node-blog-field_slac_blog_category'
+  $field_instances['node-blog-field_slac_blog_category'] = array(
     'bundle' => 'blog',
     'default_value' => NULL,
     'deleted' => 0,
@@ -149,8 +149,8 @@ function slac_blog_features_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_categories',
-    'label' => 'Categories',
+    'field_name' => 'field_slac_blog_category',
+    'label' => 'Blog Category',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -164,8 +164,8 @@ function slac_blog_features_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-blog-field_image'
-  $field_instances['node-blog-field_image'] = array(
+  // Exported field_instance: 'node-blog-field_slac_blog_image'
+  $field_instances['node-blog-field_slac_blog_image'] = array(
     'bundle' => 'blog',
     'deleted' => 0,
     'description' => '',
@@ -192,7 +192,7 @@ function slac_blog_features_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_image',
+    'field_name' => 'field_slac_blog_image',
     'label' => 'Image',
     'required' => 0,
     'settings' => array(
@@ -305,7 +305,7 @@ function slac_blog_features_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Body');
-  t('Categories');
+  t('Blog Category');
   t('Comment');
   t('First Name');
   t('Image');

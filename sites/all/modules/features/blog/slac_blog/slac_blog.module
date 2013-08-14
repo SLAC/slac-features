@@ -4,4 +4,4 @@
  * Code for the Blog Features feature.
  */
 
-include_once 'slac_blog_features.features.inc';
+include_once 'slac_blog.features.inc';
