@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * blog_features.features.user_permission.inc
+ * slac_blog.features.user_permission.inc
  */
 
 /**
@@ -43,20 +43,6 @@ function slac_blog_user_default_permissions() {
     'name' => 'edit own blog content',
     'roles' => array(),
     'module' => 'node',
-  );
-
-  // Exported permission: edit terms in 5.
-  $permissions['edit terms in 5'] = array(
-    'name' => 'edit terms in 5',
-    'roles' => array(),
-    'module' => 'taxonomy',
-  );
-
-  // Exported permission: edit terms in 6.
-  $permissions['edit terms in 6'] = array(
-    'name' => 'edit terms in 6',
-    'roles' => array(),
-    'module' => 'taxonomy',
   );
 
   return $permissions;

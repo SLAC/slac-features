@@ -402,7 +402,7 @@ function slac_blog_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_type'] = 'h2';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Field: Image */
+  /* Field: Content: Image */
   $handler->display->display_options['fields']['field_slac_blog_image']['id'] = 'field_slac_blog_image';
   $handler->display->display_options['fields']['field_slac_blog_image']['table'] = 'field_data_field_slac_blog_image';
   $handler->display->display_options['fields']['field_slac_blog_image']['field'] = 'field_slac_blog_image';
@@ -494,7 +494,7 @@ function slac_blog_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_type'] = 'h2';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Field: Image */
+  /* Field: Content: Image */
   $handler->display->display_options['fields']['field_slac_blog_image']['id'] = 'field_slac_blog_image';
   $handler->display->display_options['fields']['field_slac_blog_image']['table'] = 'field_data_field_slac_blog_image';
   $handler->display->display_options['fields']['field_slac_blog_image']['field'] = 'field_slac_blog_image';

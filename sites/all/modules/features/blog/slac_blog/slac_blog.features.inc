@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * blog_features.features.inc
+ * slac_blog.features.inc
  */
 
 /**
