@@ -41,6 +41,8 @@ dependencies[] = libraries
 dependencies[] = panels_mini
 dependencies[] = panels_node
 dependencies[] = panels
+dependencies[] = token
+dependencies[] = pathauto
 
 ;Development modules
 dependencies[] = devel
@@ -58,6 +60,7 @@ dependencies[] = diff
 dependencies[] = markdown
 dependencies[] = bueditor
 dependencies[] = ajax_markup
+dependencies[] = imce
 
 ;Blog/News
 dependencies[] = media
@@ -77,6 +80,7 @@ dependencies[] = node_export
 
 
 ;Features
+dependencies[] = slac_profile_base
 dependencies[] = slac_faq
 dependencies[] = slac_wiki
 dependencies[] = slac_news
