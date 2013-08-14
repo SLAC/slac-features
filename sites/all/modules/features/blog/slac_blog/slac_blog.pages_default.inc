@@ -786,7 +786,7 @@ function slac_blog_default_page_manager_handlers() {
           'name' => 'term_vocabulary',
           'settings' => array(
             'vids' => array(
-              5 => '5',
+              2 => '2',
             ),
           ),
           'context' => 'argument_term_1',
@@ -1054,7 +1054,7 @@ function slac_blog_default_page_manager_handlers() {
           'name' => 'term_vocabulary',
           'settings' => array(
             'vids' => array(
-              6 => '6',
+              1 => '1',
             ),
           ),
           'context' => 'argument_term_1',
