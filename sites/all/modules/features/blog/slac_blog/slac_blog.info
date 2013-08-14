@@ -71,6 +71,7 @@ features[variable][] = node_preview_blog
 features[variable][] = node_submitted_blog
 features[variable][] = page_manager_blog_disabled
 features[variable][] = page_manager_blog_user_disabled
+features[variable][] = page_manager_node_view_disabled
 features[variable][] = page_manager_term_view_disabled
 features[variable][] = pathauto_blog_pattern
 features[variable][] = pathauto_node_blog_pattern
