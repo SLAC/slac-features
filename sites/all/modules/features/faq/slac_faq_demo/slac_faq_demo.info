@@ -1,0 +1,13 @@
+name = SLAC FAQ Demo
+description = Provide demo content and data for the FAQ feature
+core = 7.x
+package = SLAC Demo
+php = 5.2.4
+version = 7.x-1.0
+project = slac_faq_demo
+dependencies[] = taxonomy
+dependencies[] = uuid
+dependencies[] = uuid_features
+features[features_api][] = api:2
+features[uuid_term][] = fbf57dca-3b7d-4dba-8987-96e4f276b91f
+no autodetect = 1

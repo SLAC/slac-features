@@ -4,6 +4,23 @@
  * Install, update and uninstall functions for the minimal installation profile.
  */
 
+
+/**
+ * Implements hook_install_tasks().
+ *
+ * Perform some taks after features have been extracted.
+ */
+function slac_ir_install_tasks() {
+  $tasks = array(
+    'slac_ir_post_install' => array(
+      'type' => 'normal',
+      'display' => FALSE,
+      'display_name' => t('Post Install Configuration'),
+    ),
+  );
+  return $tasks;
+}
+
 /**
  * Implements hook_install().
  *
@@ -348,6 +365,20 @@ function slac_ir_install() {
     ->fields(array('uid' => 1, 'rid' => $admin_role->rid))
     ->execute();
 
+  // Create a Test authenticated user
+  $account = new stdClass();
+  $account->is_new = TRUE;
+  $edit = array(
+    'name' => 'auth_user',
+    'mail' => 'test_user@slac.stanford.edu',
+    'pass' => 'sl@ckers',
+    'status' => 1,
+    'roles' => array(
+      2 => TRUE,
+    ),
+  );
+  user_save($account, $edit);
+
   // Create a Home link in the main menu.
   $item = array(
     'link_title' => st('Home'),
@@ -367,4 +398,19 @@ function slac_ir_install() {
     ->execute();
   variable_set('admin_theme', 'seven');
   variable_set('node_admin_theme', '1');
+}
+
+/**
+ * Post install callback
+ */
+function slac_ir_post_install() {
+  // markdown editor configurations
+  if (module_exists('slac_wiki')) {
+    db_update('bueditor_editors')
+      ->fields(array(
+        'pages' => 'node/add/slac-wiki-page',
+      ))
+    ->condition('name', 'Markdowneditor')
+    ->execute();
+  }
 }

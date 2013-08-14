@@ -54,6 +54,7 @@ dependencies[] = devel_generate
 dependencies[] = entity_token
 dependencies[] = rules
 dependencies[] = views_content
+dependencies[] = field_permissions
 
 ;Wiki 
 dependencies[] = diff
@@ -82,6 +83,7 @@ dependencies[] = node_export
 ;Features
 dependencies[] = slac_profile_base
 dependencies[] = slac_faq
+dependencies[] = slac_faq_demo
 dependencies[] = slac_wiki
 dependencies[] = slac_news
 dependencies[] = slac_blog
