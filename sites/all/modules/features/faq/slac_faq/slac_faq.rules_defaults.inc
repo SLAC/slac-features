@@ -34,5 +34,27 @@ function slac_faq_default_rules_configuration() {
       ]
     }
   }');
+  $items['rules_slac_faq_new'] = entity_import('rules_config', '{ "rules_slac_faq_new" : {
+      "LABEL" : "FAQ New",
+      "PLUGIN" : "reaction rule",
+      "TAGS" : [ "FAQ", "SLAC", "SLAC FAQ" ],
+      "REQUIRES" : [ "rules" ],
+      "ON" : [ "node_insert" ],
+      "IF" : [
+        { "node_is_of_type" : {
+            "node" : [ "node" ],
+            "type" : { "value" : { "salc_faq" : "salc_faq" } }
+          }
+        }
+      ],
+      "DO" : [
+        { "drupal_message" : {
+            "message" : "Thank you for submitting your question, you will receive an email notification once it has been answered.",
+            "repeat" : 0
+          }
+        }
+      ]
+    }
+  }');
   return $items;
 }

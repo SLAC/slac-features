@@ -124,7 +124,12 @@ function slac_faq_views_default_views() {
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = '0';
   $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  $handler->display->display_options['filters']['status']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['status']['expose']['operator_id'] = '';
+  $handler->display->display_options['filters']['status']['expose']['label'] = 'Published';
+  $handler->display->display_options['filters']['status']['expose']['operator'] = 'status_op';
+  $handler->display->display_options['filters']['status']['expose']['identifier'] = 'status';
+  $handler->display->display_options['filters']['status']['expose']['required'] = TRUE;
   /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
@@ -228,6 +233,87 @@ function slac_faq_views_default_views() {
   $handler->display->display_options['fields']['edit_node']['label'] = 'Action';
   $handler->display->display_options['fields']['edit_node']['text'] = 'Answer';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'salc_faq' => 'salc_faq',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Filter criterion: Content: Status (field_slac_faq_status) */
+  $handler->display->display_options['filters']['field_slac_faq_status_value']['id'] = 'field_slac_faq_status_value';
+  $handler->display->display_options['filters']['field_slac_faq_status_value']['table'] = 'field_data_field_slac_faq_status';
+  $handler->display->display_options['filters']['field_slac_faq_status_value']['field'] = 'field_slac_faq_status_value';
+  $handler->display->display_options['filters']['field_slac_faq_status_value']['value'] = array(
+    'open' => 'open',
+  );
+  $handler->display->display_options['filters']['field_slac_faq_status_value']['group'] = 1;
+  $handler->display->display_options['filters']['field_slac_faq_status_value']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_slac_faq_status_value']['expose']['operator_id'] = 'field_slac_faq_status_value_op';
+  $handler->display->display_options['filters']['field_slac_faq_status_value']['expose']['label'] = 'Status';
+  $handler->display->display_options['filters']['field_slac_faq_status_value']['expose']['operator'] = 'field_slac_faq_status_value_op';
+  $handler->display->display_options['filters']['field_slac_faq_status_value']['expose']['identifier'] = 'field_slac_faq_status_value';
+  $handler->display->display_options['filters']['field_slac_faq_status_value']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+  );
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 'All';
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['status']['expose']['operator_id'] = '';
+  $handler->display->display_options['filters']['status']['expose']['label'] = 'Published';
+  $handler->display->display_options['filters']['status']['expose']['operator'] = 'status_op';
+  $handler->display->display_options['filters']['status']['expose']['identifier'] = 'status';
+  $handler->display->display_options['filters']['status']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    5 => 0,
+    4 => 0,
+  );
+  /* Filter criterion: User: Name */
+  $handler->display->display_options['filters']['uid']['id'] = 'uid';
+  $handler->display->display_options['filters']['uid']['table'] = 'users';
+  $handler->display->display_options['filters']['uid']['field'] = 'uid';
+  $handler->display->display_options['filters']['uid']['relationship'] = 'uid';
+  $handler->display->display_options['filters']['uid']['value'] = '';
+  $handler->display->display_options['filters']['uid']['group'] = 1;
+  $handler->display->display_options['filters']['uid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['uid']['expose']['operator_id'] = 'uid_op';
+  $handler->display->display_options['filters']['uid']['expose']['label'] = 'Asker';
+  $handler->display->display_options['filters']['uid']['expose']['operator'] = 'uid_op';
+  $handler->display->display_options['filters']['uid']['expose']['identifier'] = 'uid';
+  $handler->display->display_options['filters']['uid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+  );
+  /* Filter criterion: Content: Category (field_slac_faq_category) */
+  $handler->display->display_options['filters']['field_slac_faq_category_tid']['id'] = 'field_slac_faq_category_tid';
+  $handler->display->display_options['filters']['field_slac_faq_category_tid']['table'] = 'field_data_field_slac_faq_category';
+  $handler->display->display_options['filters']['field_slac_faq_category_tid']['field'] = 'field_slac_faq_category_tid';
+  $handler->display->display_options['filters']['field_slac_faq_category_tid']['group'] = 1;
+  $handler->display->display_options['filters']['field_slac_faq_category_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_slac_faq_category_tid']['expose']['operator_id'] = 'field_slac_faq_category_tid_op';
+  $handler->display->display_options['filters']['field_slac_faq_category_tid']['expose']['label'] = 'Category';
+  $handler->display->display_options['filters']['field_slac_faq_category_tid']['expose']['operator'] = 'field_slac_faq_category_tid_op';
+  $handler->display->display_options['filters']['field_slac_faq_category_tid']['expose']['identifier'] = 'field_slac_faq_category_tid';
+  $handler->display->display_options['filters']['field_slac_faq_category_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+  );
+  $handler->display->display_options['filters']['field_slac_faq_category_tid']['reduce_duplicates'] = TRUE;
+  $handler->display->display_options['filters']['field_slac_faq_category_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_slac_faq_category_tid']['vocabulary'] = 'slac_faq_category';
   $handler->display->display_options['path'] = 'admin/content/faq';
   $handler->display->display_options['menu']['type'] = 'normal';
   $handler->display->display_options['menu']['title'] = 'FAQs';
@@ -296,13 +382,6 @@ function slac_faq_views_default_views() {
   $handler->display->display_options['arguments']['name']['limit'] = '0';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = '1';
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
   /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
@@ -311,11 +390,11 @@ function slac_faq_views_default_views() {
     'salc_faq' => 'salc_faq',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Content: Promoted to front page */
-  $handler->display->display_options['filters']['promote']['id'] = 'promote';
-  $handler->display->display_options['filters']['promote']['table'] = 'node';
-  $handler->display->display_options['filters']['promote']['field'] = 'promote';
-  $handler->display->display_options['filters']['promote']['value'] = '1';
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = '1';
   $handler->display->display_options['argument_input'] = array(
     'name' => array(
       'type' => 'panel',
@@ -374,13 +453,6 @@ function slac_faq_views_default_views() {
   $handler->display->display_options['arguments']['name']['limit'] = '0';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = '1';
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
   /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
@@ -389,11 +461,11 @@ function slac_faq_views_default_views() {
     'salc_faq' => 'salc_faq',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Content: Promoted to front page */
-  $handler->display->display_options['filters']['promote']['id'] = 'promote';
-  $handler->display->display_options['filters']['promote']['table'] = 'node';
-  $handler->display->display_options['filters']['promote']['field'] = 'promote';
-  $handler->display->display_options['filters']['promote']['value'] = '1';
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = '1';
   $handler->display->display_options['argument_input'] = array(
     'name' => array(
       'type' => 'panel',
@@ -428,11 +500,6 @@ function slac_faq_views_default_views() {
     'salc_faq' => 'salc_faq',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Content: Promoted to front page */
-  $handler->display->display_options['filters']['promote']['id'] = 'promote';
-  $handler->display->display_options['filters']['promote']['table'] = 'node';
-  $handler->display->display_options['filters']['promote']['field'] = 'promote';
-  $handler->display->display_options['filters']['promote']['value'] = '1';
   $export['faq'] = $view;
 
   return $export;

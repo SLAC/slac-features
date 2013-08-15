@@ -56,6 +56,9 @@ function slac_faq_menu_default_menu_links() {
       'attributes' => array(
         'title' => '',
       ),
+      'query' => array(
+        'destination' => 'faq/all',
+      ),
     ),
     'module' => 'menu',
     'hidden' => 0,
