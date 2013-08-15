@@ -49,6 +49,8 @@ dependencies[] = devel
 dependencies[] = devel_generate
 
 ;Features dependencies
+dependencies[] = uuid
+dependencies[] = uuid_features
 
 ;FAQ
 dependencies[] = entity_token
@@ -87,5 +89,6 @@ dependencies[] = slac_faq_demo
 dependencies[] = slac_wiki
 dependencies[] = slac_wiki_demo
 dependencies[] = slac_news
+dependencies[] = slac_news_demo
 dependencies[] = slac_blog
 dependencies[] = slac_events_features
