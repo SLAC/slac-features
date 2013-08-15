@@ -85,6 +85,7 @@ dependencies[] = slac_profile_base
 dependencies[] = slac_faq
 dependencies[] = slac_faq_demo
 dependencies[] = slac_wiki
+dependencies[] = slac_wiki_demo
 dependencies[] = slac_news
 dependencies[] = slac_blog
 dependencies[] = slac_events_features

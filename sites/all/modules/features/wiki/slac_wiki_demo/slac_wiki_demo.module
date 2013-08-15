@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the SLAC Wiki Demo feature.
+ */
+
+include_once 'slac_wiki_demo.features.inc';

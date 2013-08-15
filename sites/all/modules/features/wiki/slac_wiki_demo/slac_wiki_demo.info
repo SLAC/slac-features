@@ -1,0 +1,14 @@
+name = SLAC Wiki Demo
+description = Provide a sample wiki page for the feature
+core = 7.x
+package = SLAC Demo
+version = 7.x-1.0
+project = slac_wiki_demo
+dependencies[] = slac_wiki
+__drupal_alter_by_ref[][node][slac_wiki_page] = slac_wiki_page
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:2
+features[uuid_node][] = 53499690-9b87-4199-ac6b-ad2782f60b9b
+features[uuid_term][] = 79b2e381-eb13-4e93-9ff8-77a7568ff802
+features[uuid_term][] = a4f4d562-1da3-4d8e-8ed7-b621b919ea9e
+no autodetect = 1
