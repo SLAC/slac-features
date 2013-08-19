@@ -65,12 +65,13 @@ dependencies[] = views_ui
 
 ; Custom modules
 dependencies[] = pp_demo
+dependencies[] = pp_rebuild
+
 
 ; Features
 dependencies[] = slac_blog
 dependencies[] = slac_blog_demo
 
 dependencies[] = slac_events_features
-dependencies[] = slac_event_demo_content
 
 ; Demo modules
