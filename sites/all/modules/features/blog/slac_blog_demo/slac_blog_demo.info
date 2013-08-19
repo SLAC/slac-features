@@ -1,6 +1,6 @@
 name = SLAC Blog Demo
 core = 7.x
-package = SLAC
+package = SLAC Demo
 php = 5.2.4
 version = 7.x-1.0
 project = slac_blog_demo
