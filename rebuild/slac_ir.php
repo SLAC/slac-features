@@ -9,10 +9,12 @@ $commands = array(
   ),
   array(
     'description' => 'Install selected profile: ',
-    'command' => 'drush si slac_ir --db-url=mysql://slac_features:SwHbNJEZ6QRxrlU@localhost/slac_features --account-name=admin --account-pass=618hWVCDmY1n3uf --account-mail=admin@example.com --site-name=Site-Install -y'
+    'command' => 'drush si slac_ir --db-url=mysql://slac_features:SwHbNJEZ6QRxrlU@localhost/slac_features --account-name=admin --account-pass=618hWVCDmY1n3uf --account-mail=admin@example.com --site-name=SLAC-IR-' . date(DATE_ATOM) . ' -y'
   ),
 );
 
 foreach ($commands as $command) {
   exec($command['command'], $command_output);
 }
+
+print 'Site has been rebuilt';
