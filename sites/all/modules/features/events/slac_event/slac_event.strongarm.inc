@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * slac_events_features.strongarm.inc
+ * slac_event.strongarm.inc
  */
 
 /**
  * Implements hook_strongarm().
  */
-function slac_events_features_strongarm() {
+function slac_event_strongarm() {
   $export = array();
 
   $strongarm = new stdClass();

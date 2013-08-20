@@ -4,4 +4,4 @@
  * Code for the Events Features feature.
  */
 
-include_once 'slac_events_features.features.inc';
+include_once 'slac_event.features.inc';

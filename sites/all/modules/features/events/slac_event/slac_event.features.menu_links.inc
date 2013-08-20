@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * slac_events_features.features.menu_links.inc
+ * slac_event.features.menu_links.inc
  */
 
 /**
  * Implements hook_menu_default_menu_links().
  */
-function slac_events_features_menu_default_menu_links() {
+function slac_event_menu_default_menu_links() {
   $menu_links = array();
 
   // Exported menu link: main-menu:calendar
@@ -15,7 +15,7 @@ function slac_events_features_menu_default_menu_links() {
     'menu_name' => 'main-menu',
     'link_path' => 'calendar',
     'router_path' => 'calendar',
-    'link_title' => 'Calendar',
+    'link_title' => 'Event calendar',
     'options' => array(
       'attributes' => array(
         'title' => '',
@@ -26,11 +26,11 @@ function slac_events_features_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -50,
+    'weight' => -47,
   );
   // Translatables
   // Included for use with string extractors like potx.
-  t('Calendar');
+  t('Event calendar');
 
 
   return $menu_links;

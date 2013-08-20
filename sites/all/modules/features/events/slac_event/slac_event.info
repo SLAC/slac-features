@@ -1,10 +1,10 @@
-name = SLAC Events Features
+name = SLAC Event
 description = Provide the ability to creating and managing events and displaying events on calendars.
 core = 7.x
 package = SLAC
 php = 5.2.4
 version = 7.x-1.0
-project = slac_events_features
+project = slac_event
 dependencies[] = better_exposed_filters
 dependencies[] = calendar
 dependencies[] = date

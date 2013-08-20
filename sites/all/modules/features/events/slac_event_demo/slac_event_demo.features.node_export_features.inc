@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * slac_event_demo_content.features.node_export_features.inc
+ * slac_event_demo.features.node_export_features.inc
  */
 
 /**
  * Implements hook_node_export_features_default().
  */
-function slac_event_demo_content_node_export_features_default() {
+function slac_event_demo_node_export_features_default() {
   $node_export = array(
   'code_string' => 'array(
   (object) array(

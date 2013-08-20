@@ -1,11 +1,12 @@
-name = Event Demo Content
+name = SLAC Event Demo
+description = Provides sample event categories, events, etc.
 core = 7.x
 package = SLAC
 php = 5.2.4
 version = 7.x-1.0
-project = slac_event_demo_content
+project = slac_event_demo
 dependencies[] = pp_demo
-dependencies[] = slac_events_features
+dependencies[] = slac_event
 dependencies[] = strongarm
 dependencies[] = taxonomy
 dependencies[] = uuid

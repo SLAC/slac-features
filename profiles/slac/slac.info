@@ -72,6 +72,6 @@ dependencies[] = pp_rebuild
 dependencies[] = slac_blog
 dependencies[] = slac_blog_demo
 
-dependencies[] = slac_events_features
+dependencies[] = slac_event
 
 ; Demo modules

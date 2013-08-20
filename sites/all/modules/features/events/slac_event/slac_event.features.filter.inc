@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * slac_events_features.features.filter.inc
+ * slac_event.features.filter.inc
  */
 
 /**
  * Implements hook_filter_default_formats().
  */
-function slac_events_features_filter_default_formats() {
+function slac_event_filter_default_formats() {
   $formats = array();
 
   // Exported format: PHP code.

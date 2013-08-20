@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * slac_event_demo_content.features.uuid_term.inc
+ * slac_event_demo.features.uuid_term.inc
  */
 
 /**
  * Implements hook_uuid_features_default_terms().
  */
-function slac_event_demo_content_uuid_features_default_terms() {
+function slac_event_demo_uuid_features_default_terms() {
   $terms = array();
 
   $terms[] = array(

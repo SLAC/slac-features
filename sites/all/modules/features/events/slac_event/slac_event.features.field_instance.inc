@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * slac_events_features.features.field_instance.inc
+ * slac_event.features.field_instance.inc
  */
 
 /**
  * Implements hook_field_default_field_instances().
  */
-function slac_events_features_field_default_field_instances() {
+function slac_event_field_default_field_instances() {
   $field_instances = array();
 
   // Exported field_instance: 'comment-comment_node_event-comment_body'

@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * slac_events_features.views_default.inc
+ * slac_event.views_default.inc
  */
 
 /**
  * Implements hook_views_default_views().
  */
-function slac_events_features_views_default_views() {
+function slac_event_views_default_views() {
   $export = array();
 
   $view = new view();

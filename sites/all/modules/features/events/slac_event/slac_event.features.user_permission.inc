@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * slac_events_features.features.user_permission.inc
+ * slac_event.features.user_permission.inc
  */
 
 /**
  * Implements hook_user_default_permissions().
  */
-function slac_events_features_user_default_permissions() {
+function slac_event_user_default_permissions() {
   $permissions = array();
 
   // Exported permission: create event content.

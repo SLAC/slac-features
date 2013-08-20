@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * slac_event_demo_content.features.uuid_node.inc
+ * slac_event_demo.features.uuid_node.inc
  */
 
 /**
  * Implements hook_uuid_features_default_content().
  */
-function slac_event_demo_content_uuid_features_default_content() {
+function _content_uuid_features_default_content() {
   $nodes = array();
 
   $nodes[] = array(

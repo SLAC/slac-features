@@ -4,4 +4,4 @@
  * Code for the Event Demo Content feature.
  */
 
-include_once 'slac_event_demo_content.features.inc';
+include_once 'slac_event_demo.features.inc';

@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * slac_event_demo_content.features.taxonomy.inc
+ * slac_event_demo.features.taxonomy.inc
  */
 
 /**
  * Implements hook_taxonomy_default_vocabularies().
  */
-function slac_event_demo_content_taxonomy_default_vocabularies() {
+function slac_event_demo_taxonomy_default_vocabularies() {
   return array(
     'category_colors' => array(
       'name' => 'Category colors',
