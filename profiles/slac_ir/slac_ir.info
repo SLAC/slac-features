@@ -95,5 +95,3 @@ dependencies[] = slac_blog_demo
 dependencies[] = slac_event
 dependencies[] = slac_event_demo
 
-;Rebuild
-dependencies[] = pp_rebuild
