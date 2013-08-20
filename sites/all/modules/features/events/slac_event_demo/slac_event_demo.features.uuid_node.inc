@@ -7,7 +7,7 @@
 /**
  * Implements hook_uuid_features_default_content().
  */
-function _content_uuid_features_default_content() {
+function slac_event_demo_uuid_features_default_content() {
   $nodes = array();
 
   $nodes[] = array(

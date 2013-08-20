@@ -1,7 +1,7 @@
 name = SLAC Event Demo
 description = Provides sample event categories, events, etc.
 core = 7.x
-package = SLAC
+package = SLAC Demo
 php = 5.2.4
 version = 7.x-1.0
 project = slac_event_demo
@@ -74,6 +74,7 @@ features_exclude[variable][node_preview_event] = node_preview_event
 features_exclude[variable][node_submitted_event] = node_submitted_event
 features_exclude[taxonomy][category_colors] = category_colors
 features_exclude[taxonomy][event_categories] = event_categories
+features_exclude[dependencies][taxonomy] = taxonomy
 features_exclude[taxonomy][tags] = tags
 features_exclude[taxonomy][events_tags] = events_tags
 no autodetect = 1
