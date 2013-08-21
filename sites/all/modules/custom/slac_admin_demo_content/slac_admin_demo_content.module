@@ -1,0 +1,79 @@
+<?php
+
+/**
+ * Implements hook_menu
+ * @return array 
+ */
+function slac_admin_demo_content_menu() {
+  $items['demo-content'] = array(
+    'title' => 'Dashboard demo content',
+    'page callback' => 'slac_admin_demo_content_dashboard',
+    'access arguments' => array('manage slac demo content'),
+  );
+
+  return $items;
+}
+
+/**
+ * Content of page
+ * @return string 
+ */
+function slac_admin_demo_content_dashboard() {
+  return drupal_render(drupal_get_form('slac_admin_demo_content_form'));
+}
+
+/**
+ * All demo module can be anabled/disabled
+ * @param type $form
+ * @param type $form_state
+ * @return type 
+ */
+function slac_admin_demo_content_form($form, &$form_state) {
+  $form['module_list'] = array(
+    '#type' => 'checkboxes',
+    '#title' => t('Enable/disable demo content:'),
+    '#options' => array(
+      features_get_modules('slac_blog_demo')->name => features_get_modules('slac_blog_demo')->info['name'],
+      features_get_modules('slac_event_demo')->name => features_get_modules('slac_event_demo')->info['name'],
+      features_get_modules('slac_faq_demo')->name => features_get_modules('slac_faq_demo')->info['name'],
+      features_get_modules('slac_news_demo')->name => features_get_modules('slac_news_demo')->info['name'],
+      features_get_modules('slac_wiki_demo')->name => features_get_modules('slac_wiki_demo')->info['name'],
+    ),
+    '#default_value' => array(
+      (module_exists('slac_blog_demo')) ? features_get_modules('slac_blog_demo')->name : 0,
+      (module_exists('slac_event_demo')) ? features_get_modules('slac_event_demo')->name : 0,
+      (module_exists('slac_faq_demo')) ? features_get_modules('slac_faq_demo')->name : 0,
+      (module_exists('slac_news_demo')) ? features_get_modules('slac_news_demo')->name : 0,
+      (module_exists('slac_wiki_demo')) ? features_get_modules('slac_wiki_demo')->name : 0,
+    ),
+  );
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Submit'),
+  );
+  return $form;
+}
+
+/**
+ * Form submit
+ * @param type $form
+ * @param type $form_state 
+ */
+function slac_admin_demo_content_form_submit($form, &$form_state) {
+  $module_enabled = array();
+  $module_disabled = array();
+  foreach ($form_state['values']['module_list'] as $key => $value) {
+    if($value && !in_array($key, $form['module_list']['#default_value'], TRUE)){
+      $module_enabled[$key] = $key;
+    }
+    if(!$value && in_array($key, $form['module_list']['#default_value'], TRUE)){
+      $module_disabled[$key] = $key;
+    }
+  }
+  if(!empty($module_disabled)){
+    module_disable($module_disabled);
+  }
+  if(!empty($module_enabled)){
+    module_enable($module_enabled);
+  }
+}
