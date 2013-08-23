@@ -32,8 +32,10 @@ function rss_block_content_type_render($subtype, $conf, $panel_args, $context) {
     $view->set_arguments(array($feed->fid));
     $view->set_items_per_page($conf['limit']);
     $content = $view->preview('rss_block');
+    if (empty($view->result)) {
+      $content = t('There is no content for selected RSS feed.');
+    }
   }
-
   $block->content = $content;
 
   return $block;
