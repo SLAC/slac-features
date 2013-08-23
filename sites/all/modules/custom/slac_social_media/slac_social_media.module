@@ -1,0 +1,49 @@
+<?php
+
+/**
+ * Implements hook_entity_info_alter().
+ */
+function slac_social_media_entity_info_alter(&$entity_info) {
+  $entity_info['fieldable_panels_pane']['bundles']['social_media'] = array(
+    'label' => t('Social Media'),
+    'pane category' => t('SLAC panes'),
+    'pane top level' => TRUE, // set to true to make this show as a top level icon
+    'admin' => array(
+      'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
+      'bundle argument' => 4,
+      // Note that this has all _ replaced with - from the bundle name.
+      'real path' => 'admin/structure/fieldable-panels-panes/manage/social_media',
+      'access arguments' => array('administer fieldable panels panes'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_block_info()
+ * @return type 
+ */
+function slac_social_media_block_info() {
+  $blocks['social_media'] = array(
+    'info' => t('Social media'),
+    'region' => 'footer',
+    'status' => 1,
+  );
+  
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view()
+ * @param type $delta
+ * @return type 
+ */
+function slac_social_media_block_view($delta = ''){
+  $block = array();
+  if($delta == 'social_media') {
+    $query = db_select('fieldable_panels_panes', 'fpp')->condition('bundle', 'social_media')->fields('fpp',array('fpid'))->execute()->fetchAll();
+    $block['subject'] = t('Social media');
+    $block['content'] = ($query) ? drupal_render(fieldable_panels_panes_view(fieldable_panels_panes_load($query[0]->fpid))) : '';
+  }
+  
+  return $block;
+}
