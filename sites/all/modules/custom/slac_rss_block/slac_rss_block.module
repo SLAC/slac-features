@@ -1,0 +1,17 @@
+<?php
+/**
+ * @file
+ * Code for the SLAC RSS Block feature.
+ */
+
+include_once 'slac_rss_block.features.inc';
+
+
+/**
+ * Implements hook_ctools_plugin_directory().
+ */
+function slac_rss_block_ctools_plugin_directory($module, $plugin) {
+  if ($module === 'ctools') {
+    return 'plugins/' . $plugin;
+  }
+}
