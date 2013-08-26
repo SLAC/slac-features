@@ -1,0 +1,38 @@
+<?php
+/**
+ * @file
+ * Code for the SLAC Service Help feature.
+ */
+
+/**
+ * Implements hook_install
+ */
+function slac_service_install() {
+  // adding the internal client into the support
+  
+  $record = array(
+    // 'clid' => '',
+    'name' => 'Internal',
+    'path' => 'internal',
+    'status' => 1,
+    'parent' => 0,
+    'integrate_email' => 0,
+    'server_name' => '',
+    'server_username' => '',
+    'server_password' => '',
+    'mailfrom' => '',
+    'mailbox' => 'INBOX',
+    'protocol' => 0,
+    'extra' => '/novalidate-cert',
+    'port' => 0,
+    'autoassign' => '',
+    'autosubscribe' => '',
+    'domains' => '*',
+    'notes' => '',
+    'thread_subject' => 0,
+    'user_creation' => 0,
+  );
+  
+  // support_client
+  drupal_write_record('support_client', $record);
+}

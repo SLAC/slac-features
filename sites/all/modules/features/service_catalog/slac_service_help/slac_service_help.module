@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the SLAC Service Help feature.
+ */
+
+include_once 'slac_service_help.features.inc';
