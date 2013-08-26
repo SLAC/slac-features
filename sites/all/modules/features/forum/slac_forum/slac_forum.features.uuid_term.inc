@@ -51,13 +51,5 @@ function slac_forum_uuid_features_default_terms() {
       0 => 'a64188a5-2a0a-4af7-88db-d3b675833e76',
     ),
   );
-  $terms[] = array(
-    'name' => 'General discussion',
-    'description' => '',
-    'format' => NULL,
-    'weight' => 4,
-    'uuid' => 'c7c817b0-fb5b-4266-bc0e-4609674f8519',
-    'vocabulary_machine_name' => 'forums',
-  );
   return $terms;
 }
