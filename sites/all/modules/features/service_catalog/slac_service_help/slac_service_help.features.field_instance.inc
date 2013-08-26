@@ -15,14 +15,14 @@ function slac_service_help_field_default_field_instances() {
     'bundle' => 'support_ticket',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Please enter the category to create the support issue',
+    'description' => 'Please select one of the support category',
     'display' => array(
       'default' => array(
         'label' => 'above',
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -49,7 +49,7 @@ function slac_service_help_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Please enter the category to create the support issue');
+  t('Please select one of the support category');
   t('Support category');
 
   return $field_instances;

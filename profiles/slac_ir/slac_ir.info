@@ -34,6 +34,7 @@ dependencies[] = date_popup
 dependencies[] = date_ical
 dependencies[] = date_views
 dependencies[] = features
+dependencies[] = features_override
 dependencies[] = strongarm
 dependencies[] = link
 dependencies[] = entity
@@ -81,6 +82,8 @@ dependencies[] = views_php
 dependencies[] = field_redirection
 dependencies[] = node_export
 
+; Service catalog
+dependencies[] = support
 
 ;Features
 dependencies[] = slac_profile_base
@@ -94,4 +97,6 @@ dependencies[] = slac_blog
 dependencies[] = slac_blog_demo
 dependencies[] = slac_event
 dependencies[] = slac_event_demo
-
+dependencies[] = slac_service_catalog
+dependencies[] = slac_service_catalog_demo
+dependencies[] = slac_service_help

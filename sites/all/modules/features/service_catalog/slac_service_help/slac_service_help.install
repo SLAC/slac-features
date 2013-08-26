@@ -7,7 +7,7 @@
 /**
  * Implements hook_install
  */
-function slac_service_install() {
+function slac_service_help_install() {
   // adding the internal client into the support
   
   $record = array(

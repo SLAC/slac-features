@@ -72,7 +72,7 @@ function slac_service_catalog_views_default_views() {
   $handler->display->display_options['filters']['vid']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['filters']['vid']['field'] = 'vid';
   $handler->display->display_options['filters']['vid']['value'] = array(
-    11 => '11',
+    10 => '10',
   );
 
   /* Display: Category listing */
@@ -168,7 +168,7 @@ function slac_service_catalog_views_default_views() {
   $handler->display->display_options['filters']['vid']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['filters']['vid']['field'] = 'vid';
   $handler->display->display_options['filters']['vid']['value'] = array(
-    13 => '13',
+    12 => '12',
   );
   $export['service_catalog_category'] = $view;
 
