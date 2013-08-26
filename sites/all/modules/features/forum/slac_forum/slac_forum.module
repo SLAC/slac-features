@@ -1,0 +1,22 @@
+<?php
+/**
+ * @file
+ * Code for the SLAC Forum feature.
+ */
+
+include_once 'slac_forum.features.inc';
+
+/**
+ * Implements hook_form_FORM_ID_alter
+ */
+function slac_forum_form_forum_node_form_alter(&$form, &$form_state, $form_id) {
+  $form['body'][LANGUAGE_NONE][0]['#format'] = 'markdown';
+  $form['#attached']['js'] = array(
+    drupal_get_path('module', 'slac_forum') . '/slac_forum.js',
+  );
+}
+
+function slac_forum_entry_validate($form, &$form_state) {
+  dpm($form_state['values']);
+  form_set_error('aaa', 'bbb');
+}
