@@ -116,5 +116,12 @@ function slac_service_catalog_strongarm() {
   $strongarm->value = 0;
   $export['node_submitted_slac_sc_catalog_item'] = $strongarm;
 
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_slac_sc_catalog_item_pattern';
+  $strongarm->value = 'service/[node:title]';
+  $export['pathauto_node_slac_sc_catalog_item_pattern'] = $strongarm;
+
   return $export;
 }
