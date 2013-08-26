@@ -56,6 +56,9 @@ function slac_service_catalog_menu_default_menu_links() {
       'attributes' => array(
         'title' => '',
       ),
+      'query' => array(
+        'destination' => 'service-catalog',
+      ),
     ),
     'module' => 'menu',
     'hidden' => 0,

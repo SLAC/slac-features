@@ -55,7 +55,7 @@ function slac_service_help_features_override_default_overrides() {
       'pid' => 'new-10',
       'panel' => 'right',
       'type' => 'views_panes',
-      'subtype' => 'service_catalog_item-panel_pane_3',
+      'subtype' => 'service_catalog_category-panel_pane_4',
       'shown' => TRUE,
       'access' => array(),
       'configuration' => array(),
@@ -65,7 +65,7 @@ function slac_service_help_features_override_default_overrides() {
       ),
       'css' => array(),
       'extras' => array(),
-      'position' => 2,
+      'position' => 1,
       'locks' => array(),
     );
   $overrides["page_manager_pages.slac_sc_catalog_landing.default_handlers|page_slac_sc_catalog_landing_panel_context|conf|display|content|new-5"]["DELETED"] = TRUE;
@@ -83,7 +83,7 @@ function slac_service_help_features_override_default_overrides() {
       'pid' => 'new-9',
       'panel' => 'right',
       'type' => 'views_panes',
-      'subtype' => 'service_catalog_category-panel_pane_4',
+      'subtype' => 'service_catalog_item-panel_pane_3',
       'shown' => TRUE,
       'access' => array(),
       'configuration' => array(),
@@ -93,7 +93,7 @@ function slac_service_help_features_override_default_overrides() {
       ),
       'css' => array(),
       'extras' => array(),
-      'position' => 1,
+      'position' => 2,
       'locks' => array(),
     );
   $overrides["page_manager_pages.slac_sc_catalog_landing.default_handlers|page_slac_sc_catalog_landing_panel_context|conf|display|panels|center|0"] = 'new-6';
