@@ -15,8 +15,3 @@ function slac_forum_form_forum_node_form_alter(&$form, &$form_state, $form_id) {
     drupal_get_path('module', 'slac_forum') . '/slac_forum.js',
   );
 }
-
-function slac_forum_entry_validate($form, &$form_state) {
-  dpm($form_state['values']);
-  form_set_error('aaa', 'bbb');
-}
