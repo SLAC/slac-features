@@ -124,5 +124,171 @@ function slac_forum_strongarm() {
   $strongarm->value = 1;
   $export['advanced_forum_views_as_tabs'] = $strongarm;
 
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'subscriptions_avoid_empty_subscribe_links';
+  $strongarm->value = 1;
+  $export['subscriptions_avoid_empty_subscribe_links'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'subscriptions_blocked_content_types';
+  $strongarm->value = array(
+    'blog' => 'blog',
+    'event' => 'event',
+    'salc_faq' => 'salc_faq',
+    'slac_news' => 'slac_news',
+    'slac_wiki_page' => 'slac_wiki_page',
+    'panel' => 'panel',
+    'article' => 'article',
+    'page' => 'page',
+  );
+  $export['subscriptions_blocked_content_types'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'subscriptions_blocked_nodes';
+  $strongarm->value = '';
+  $export['subscriptions_blocked_nodes'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'subscriptions_cron_percent';
+  $strongarm->value = '50';
+  $export['subscriptions_cron_percent'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'subscriptions_form_expanded';
+  $strongarm->value = 0;
+  $export['subscriptions_form_expanded'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'subscriptions_form_in_block';
+  $strongarm->value = '0';
+  $export['subscriptions_form_in_block'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'subscriptions_form_link_only';
+  $strongarm->value = '0';
+  $export['subscriptions_form_link_only'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'subscriptions_number_of_mails';
+  $strongarm->value = '0';
+  $export['subscriptions_number_of_mails'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'subscriptions_omitted_taxa';
+  $strongarm->value = array(
+    3 => '3',
+    2 => '2',
+    4 => '4',
+    5 => '5',
+    6 => '6',
+    8 => '8',
+    7 => '7',
+    10 => '10',
+    9 => '9',
+  );
+  $export['subscriptions_omitted_taxa'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'subscriptions_restricted_taxa';
+  $strongarm->value = array(
+    3 => '3',
+    2 => '2',
+    4 => '4',
+    5 => '5',
+    6 => '6',
+    8 => '8',
+    7 => '7',
+    10 => '10',
+    9 => '9',
+  );
+  $export['subscriptions_restricted_taxa'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'subscriptions_showmailkeys';
+  $strongarm->value = 0;
+  $export['subscriptions_showmailkeys'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'subscriptions_show_by_author_options';
+  $strongarm->value = 0;
+  $export['subscriptions_show_by_author_options'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'subscriptions_site_mail';
+  $strongarm->value = 'admin@example.com';
+  $export['subscriptions_site_mail'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'subscriptions_site_mail_name';
+  $strongarm->value = '';
+  $export['subscriptions_site_mail_name'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'subscriptions_static_content_types';
+  $strongarm->value = array(
+    0 => '0',
+  );
+  $export['subscriptions_static_content_types'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'subscriptions_unlisted_content_types';
+  $strongarm->value = array(
+    'blog' => 'blog',
+    'event' => 'event',
+    'salc_faq' => 'salc_faq',
+    'slac_news' => 'slac_news',
+    'slac_wiki_page' => 'slac_wiki_page',
+    'panel' => 'panel',
+    'article' => 'article',
+    'page' => 'page',
+  );
+  $export['subscriptions_unlisted_content_types'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'subscriptions_watchgood';
+  $strongarm->value = 1;
+  $export['subscriptions_watchgood'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'subscriptions_watchstats';
+  $strongarm->value = 1;
+  $export['subscriptions_watchstats'] = $strongarm;
+
   return $export;
 }

@@ -16,7 +16,18 @@ function slac_forum_form_forum_node_form_alter(&$form, &$form_state, $form_id) {
   );
 }
 
-function slac_forum_entry_validate($form, &$form_state) {
-  dpm($form_state['values']);
-  form_set_error('aaa', 'bbb');
+/**
+ * Implements hook_views_default_views_alter().
+ */
+function slac_forum_views_default_views_alter(&$views) {
+  if (isset($views['advanced_forum_unanswered_topics'])) {
+    $handler =& $views['advanced_forum_unanswered_topics']->display['default']->handler;
+    $handler->display->display_options['access']['type'] = 'role';
+    $handler->display->display_options['access']['role']['3'] = '3';
+  }
+  if (isset($views['advanced_forum_new_topics'])) {
+    $handler =& $views['advanced_forum_new_topics']->display['default']->handler;
+    $handler->display->display_options['access']['type'] = 'none';
+    $views['advanced_forum_new_topics']->display['page_1']->handler->display->display_options['menu']['title'] = 'Recent posts';
+  }
 }
