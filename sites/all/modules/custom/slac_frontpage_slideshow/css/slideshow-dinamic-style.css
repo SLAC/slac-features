@@ -1,0 +1,213 @@
+/* Front page layout */
+/* line 46, ../sass/_mixins.scss */
+.slider {
+    float: left;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: -100%;
+    padding-left: 1%;
+    padding-right: 1%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word; }
+
+@media (max-width: 900px) {
+    /* Front page layout */
+    /* line 104, ../sass/_mixins.scss */
+    .slider {
+        float: left;
+        width: 100%;
+        margin-left: 0%;
+        margin-right: -100%;
+        padding-left: 1.5%;
+        padding-right: 1.5%;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box;
+        word-wrap: break-word; }
+}
+
+@media (max-width: 600px) {
+    /* Slider */
+    /* line 5, ../sass/blocks.scss */
+    .pane-views-slideshow-panes {
+        width: 100%;
+        height: auto;
+        padding-bottom: 15px;
+        overflow: hidden; 
+    }
+    /* line 10, ../sass/blocks.scss */
+    .pane-views-slideshow-panes {
+        width: 100%;
+        height: auto; }
+    /* line 14, ../sass/blocks.scss */
+    .pane-views-slideshow-panes {
+        position: relative; }
+    /* line 17, ../sass/blocks.scss */
+    .pane-views-slideshow-panes .views_slideshow_slide {
+        width: 100% !important; }
+    /* line 20, ../sass/blocks.scss */
+    .pane-views-slideshow-panes .views-field-nothing {
+        height: auto;
+        width: auto; }
+    /* line 24, ../sass/blocks.scss */
+    .pane-views-slideshow-panes .slide-text-side {
+        font-size: 17px;
+        color: #fff;
+        padding: 20px 3%;
+        line-height: 23px;
+        width: 29%;
+        height: 100%;
+        letter-spacing: .03em; }
+    /* line 32, ../sass/blocks.scss */
+    .pane-views-slideshow-panes .slide-text-side a {
+        font-size: 30px;
+        color: #fff;
+        text-decoration: none;
+        line-height: normal;
+        padding-bottom: 20px;
+        display: block;
+        letter-spacing: .04em; }
+    /* line 42, ../sass/blocks.scss */
+    .pane-views-slideshow-panes .views-field-field-image {
+        float: left;
+        width: 65%;
+        height: 100%;
+        overflow: hidden; }
+    /* line 47, ../sass/blocks.scss */
+    .pane-views-slideshow-panes .views-field-field-image div {
+        width: auto; }
+    /* line 50, ../sass/blocks.scss */
+    .pane-views-slideshow-panes .views-field-field-image img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border: none; }
+    /* line 56, ../sass/blocks.scss */
+    .pane-views-slideshow-panes .views-field-field-image .image-field-caption {
+        display: none; }
+    /* line 60, ../sass/blocks.scss */
+    .pane-views-slideshow-panes .views-slideshow-controls-text {
+        width: auto; }
+    /* line 63, ../sass/blocks.scss */
+    .pane-views-slideshow-panes .views-slideshow-controls-text span {
+        position: absolute;
+        top: 40%;
+        width: 30px;
+        height: 70px;
+        display: block;
+        overflow: hidden;
+        background: url("../images/slider-arrow-bg.png") repeat;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -o-border-radius: 10px;
+        -ms-border-radius: 10px;
+        border-radius: 10px;
+        z-index: 99; }
+    /* line 74, ../sass/blocks.scss */
+    .pane-views-slideshow-panes .views-slideshow-controls-text span.views-slideshow-controls-text-previous {
+        left: 8px; }
+    /* line 76, ../sass/blocks.scss */
+    .pane-views-slideshow-panes .views-slideshow-controls-text span.views-slideshow-controls-text-previous a {
+        background: url("../images/slider-back.png") no-repeat center; }
+    /* line 80, ../sass/blocks.scss */
+    .pane-views-slideshow-panes .views-slideshow-controls-text span.views-slideshow-controls-text-next {
+        right: 8px; }
+    /* line 82, ../sass/blocks.scss */
+    .pane-views-slideshow-panes .views-slideshow-controls-text span.views-slideshow-controls-text-next a {
+        background: url("../images/slider-next.png") no-repeat center; }
+    /* line 86, ../sass/blocks.scss */
+    .pane-views-slideshow-panes .views-slideshow-controls-text span.views-slideshow-controls-text-pause {
+        display: none; }
+    /* line 90, ../sass/blocks.scss */
+    .pane-views-slideshow-panes .views-slideshow-controls-text span a {
+        display: block;
+        height: 100%;
+        text-indent: -9000px;
+        text-transform: capitalize; }
+    /* line 97, ../sass/blocks.scss */
+    .pane-views-slideshow-panes .views-slideshow-pager-fields {
+        position: absolute;
+        left: 45%;
+        bottom: 0;
+        width: auto;
+        padding: 5px;
+        margin: 0;
+        background: #D5D8DA;
+        z-index: 99; }
+    /* line 107, ../sass/blocks.scss */
+    .pane-views-slideshow-panes .views-slideshow-pager-field-item {
+        float: left;
+        width: 9px;
+        height: 9px;
+        overflow: hidden;
+        text-indent: -9000px;
+        text-transform: capitalize;
+        background: #b8b9bb;
+        border: 1px solid #666666;
+        margin: 1px 7px 0; }
+    /* line 117, ../sass/blocks.scss */
+    .pane-views-slideshow-panes .views-slideshow-pager-field-item.active {
+        background: white; }
+}
+@media (max-width: 1023px) {
+    /* line 125, ../sass/blocks.scss */
+    .pane-views-slideshow-panes .views-slideshow-controls-bottom {
+        display: none; } }
+@media (max-width: 768px) {
+    /* line 134, ../sass/blocks.scss */
+    .pane-views-slideshow-panes .views-slideshow-controls-top,
+    .pane-views-slideshow-panes .views-slideshow-controls-bottom {
+        display: none; } }
+@media (max-width: 600px) {
+    /* line 141, ../sass/blocks.scss */
+    .slider {
+        margin: 1.5%; }
+
+    /* line 144, ../sass/blocks.scss */
+    .pane-views-slideshow-panes {
+        width: 97%;
+        padding: 1.5%;
+        height: 97%;
+        margin: 0 0 15px 0;
+        background-color: #fff; }
+    /* line 150, ../sass/blocks.scss */
+    .pane-views-slideshow-panes div {
+        height: 100%; }
+    /* line 153, ../sass/blocks.scss */
+    .pane-views-slideshow-panes .views_slideshow_slide {
+        height: 100% !important; }
+    /* line 156, ../sass/blocks.scss */
+    .pane-views-slideshow-panes .views-field-nothing {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 82px; }
+    /* line 164, ../sass/blocks.scss */
+    .pane-views-slideshow-panes .slide-text-side {
+        width: 100%;
+        height: 70px !important;
+        padding: 5px 0;
+        border-bottom: 2px solid #ccc;
+        background-color: #fff !important;
+        color: #881728;
+        float: none !important; }
+    /* line 173, ../sass/blocks.scss */
+    .pane-views-slideshow-panes .views-field-field-image {
+        width: 100%;
+        height: auto;
+        padding-bottom: 82px;
+        float: none; }
+    /* line 178, ../sass/blocks.scss */
+    .pane-views-slideshow-panes .views-field-field-image div {
+        width: 100%; }
+    /* line 183, ../sass/blocks.scss */
+    .pane-views-slideshow-panes .views-slideshow-controls-top,
+    .pane-views-slideshow-panes .views-slideshow-controls-bottom {
+        display: none; } 
+}

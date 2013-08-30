@@ -1,0 +1,5 @@
+name = Homepage Slideshow
+description = Views display to create panel pane for slideshow
+package = SLAC
+dependencies[] = views_content
+core = 7.x

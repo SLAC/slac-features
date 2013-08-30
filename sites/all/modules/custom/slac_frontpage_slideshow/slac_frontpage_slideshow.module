@@ -1,0 +1,76 @@
+<?php
+
+/**
+ * Implements hook_ctools_plugin_dierctory()
+ */
+function slac_frontpage_slideshow_ctools_plugin_directory($owner, $plugin_type) {
+  if ($owner == 'ctools') {
+    return 'plugins/' . $plugin_type;
+  }
+}
+
+/**
+ * Implements hook_views_api().
+ */
+function slac_frontpage_slideshow_views_api() {
+  return array(
+    'api' => 2,
+    'path' => drupal_get_path('module', 'slac_frontpage_slideshow') . '/plugins/views',
+  );
+}
+
+function slac_frontpage_slideshow_preprocess_views_view(&$vars) {
+  if ($vars['name'] == 'SLAC_Slideshow') {
+    if ($vars['view']->display['panel_slideshow_pane_1']->display_options['pane_conf']['slideshow_style_default'] == 1) {
+      drupal_add_css(drupal_get_path('module', 'slac_frontpage_slideshow') . '/css/slideshow-dinamic-style.css');
+    }
+    else {
+      drupal_add_css(drupal_get_path('module', 'slac_frontpage_slideshow') . '/css/slideshow-classic-style.css');
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_views_view_field
+ * Added inline css
+ * @param string $vars
+ * @param type $hook
+ */
+function slac_frontpage_slideshow_preprocess_views_view_field(&$vars, $hook) {
+  if ($vars['field']->view->name == 'SLAC_Slideshow' && $vars['field']->real_field == 'nothing') {
+    $conf = $vars['view']->display['panel_slideshow_pane_1']->display_options['pane_conf'];
+    if ($conf['slideshow_style_default'] == 1) {
+      $style = explode(PHP_EOL, $conf['slideshow_configuration']);
+      $slide_count = &drupal_static(__FUNCTION__ . ':slide_count', 0);
+
+      $style_pair = isset($conf['slideshow_configuration_default']) ? $conf['slideshow_configuration_default'] : '';
+      if (array_key_exists($slide_count, $style) && $style[$slide_count] != '') {
+        $style_pair = $style[$slide_count];
+      }
+
+      list($position, $color) = explode(',', $style_pair);
+      $current_style = 'style="' . (($color) ? 'background-color:' . $color . ';' : '') . ' ' . (($position) ? 'float: ' . $position : '') . '"';
+
+      $vars['output'] = '<div class="slide-text-side" ' . $current_style . ' >' . $vars['output'] . '</div>';
+      $slide_count++;
+    }
+  }
+}
+
+/**
+ * Implements hook_entity_info_alter().
+ */
+function slac_frontpage_slideshow_entity_info_alter(&$entity_info) {
+  $entity_info['fieldable_panels_pane']['bundles']['slideshow'] = array(
+    'label' => t('Slideshow'),
+    'pane category' => t('SLAC panes'),
+    'pane top level' => TRUE, // set to true to make this show as a top level icon
+    'admin' => array(
+      'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
+      'bundle argument' => 4,
+      // Note that this has all _ replaced with - from the bundle name.
+      'real path' => 'admin/structure/fieldable-panels-panes/manage/slideshow',
+      'access arguments' => array('administer fieldable panels panes'),
+    ),
+  );
+}
