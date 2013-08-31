@@ -1,0 +1,27 @@
+name = PP Admin
+description = WYSIWYG, inline images
+core = 7.x
+package = PP
+dependencies[] = ctools
+dependencies[] = features
+dependencies[] = filter
+dependencies[] = image
+dependencies[] = media
+dependencies[] = pp_crop
+dependencies[] = strongarm
+dependencies[] = wysiwyg
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:2
+features[filter][] = full_html
+features[image][] = crop_landscape
+features[image][] = crop_portrait
+features[image][] = crop_square
+features[variable][] = pp_crop_wysiwyg_settings
+features[wysiwyg][] = full_html
+
+
+; Information added by drush on 2013-08-30
+version = "unknown"
+project = "pp_admin"
+datestamp = "1377870473"
+

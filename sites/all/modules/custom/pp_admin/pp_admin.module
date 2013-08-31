@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the pp_admin feature.
+ */
+
+include_once 'pp_admin.features.inc';
