@@ -35,7 +35,28 @@ function slac_blog_image_default_styles() {
   $styles['front-blog-image'] = array(
     'name' => 'front-blog-image',
     'effects' => array(
-      5 => array(
+      2 => array(
+        'label' => 'EPSA Image Crop',
+        'help' => '',
+        'dimensions callback' => 'epsacrop_crop_dimensions',
+        'effect callback' => 'epsacrop_crop_image',
+        'form callback' => 'epsacrop_crop_image_form',
+        'module' => 'epsacrop',
+        'name' => 'epsacrop_crop',
+        'data' => array(
+          'width' => 870,
+          'height' => 330,
+          'anchor' => 'center-center',
+          'jcrop_settings' => array(
+            'aspect_ratio' => '',
+            'bgcolor' => 'black',
+            'bgopacity' => 0.6,
+            'fallback' => 1,
+          ),
+        ),
+        'weight' => -10,
+      ),
+      1 => array(
         'label' => 'Scale and crop',
         'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
         'effect callback' => 'image_scale_and_crop_effect',
@@ -48,7 +69,7 @@ function slac_blog_image_default_styles() {
           'width' => 870,
           'height' => 330,
         ),
-        'weight' => 1,
+        'weight' => -9,
       ),
     ),
   );

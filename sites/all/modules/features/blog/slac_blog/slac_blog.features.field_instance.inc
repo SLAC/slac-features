@@ -159,6 +159,14 @@ function slac_blog_field_default_field_instances() {
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
+      'epsacrop' => array(
+        'styles' => array(
+          'crop_landscape' => 0,
+          'crop_portrait' => 0,
+          'crop_square' => 0,
+          'front-blog-image' => 'front-blog-image',
+        ),
+      ),
       'file_directory' => 'slac-blog',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
@@ -173,9 +181,9 @@ function slac_blog_field_default_field_instances() {
       'settings' => array(
         'allowed_schemes' => array(
           'public' => 'public',
-          'youtube' => 0,
         ),
         'allowed_types' => array(
+          0 => 0,
           'audio' => 0,
           'document' => 0,
           'image' => 'image',
@@ -186,7 +194,6 @@ function slac_blog_field_default_field_instances() {
           'media_default--media_browser_my_files' => 'media_default--media_browser_my_files',
           'media_internet' => 'media_internet',
           'upload' => 'upload',
-          'youtube' => 0,
         ),
         'progress_indicator' => 'throbber',
       ),
