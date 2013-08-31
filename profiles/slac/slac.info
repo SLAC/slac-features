@@ -52,6 +52,8 @@ dependencies[] = media
 dependencies[] = mediafield
 dependencies[] = media_internet
 
+dependencies[] = epsacrop
+
 dependencies[] = entity
 dependencies[] = libraries
 
@@ -65,6 +67,8 @@ dependencies[] = views_ui
 
 ; Custom modules
 dependencies[] = pp_demo
+dependencies[] = pp_crop
+dependencies[] = pp_admin
 
 
 ; Features
@@ -73,5 +77,3 @@ dependencies[] = slac_blog_demo
 
 dependencies[] = slac_event
 dependencies[] = slac_event_demo
-
-; Demo modules
