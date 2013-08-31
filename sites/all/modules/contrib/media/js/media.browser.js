@@ -7,6 +7,7 @@
 namespace('Drupal.media.browser');
 
 Drupal.media.browser.selectedMedia = [];
+Drupal.media.browser.activeTab = 0;
 Drupal.media.browser.mediaAdded = function () {};
 Drupal.media.browser.selectionFinalized = function (selectedMedia) {
   // This is intended to be overridden if a callee wants to be triggered
@@ -14,19 +15,27 @@ Drupal.media.browser.selectionFinalized = function (selectedMedia) {
   // This is used for the file upload form for instance.
 };
 
-Drupal.behaviors.experimentalMediaBrowser = {
+Drupal.behaviors.MediaBrowser = {
   attach: function (context) {
-    if (Drupal.settings.media.selectedMedia) {
+    if (Drupal.settings.media && Drupal.settings.media.selectedMedia) {
       Drupal.media.browser.selectMedia(Drupal.settings.media.selectedMedia);
       // Fire a confirmation of some sort.
       Drupal.media.browser.finalizeSelection();
     }
+
+    // Instantiate the tabs.
     $('#media-browser-tabset').tabs({
+      // Ensure that the modal resizes to the content on each tab switch.
       show: Drupal.media.browser.resizeIframe
+    });
+
+    $('.ui-tabs-nav li').mouseup(function() {
+      Drupal.media.browser.activeTab = $(this).index();
     });
 
     $('.media-browser-tab').each( Drupal.media.browser.validateButtons );
 
+    Drupal.media.browser.selectActiveTab();
     Drupal.media.browser.selectErrorTab();
 
   }
@@ -95,26 +104,37 @@ Drupal.media.browser.finalizeSelection = function () {
   }
 };
 
+/**
+ * Resize the Media Browser to the content height.
+ */
 Drupal.media.browser.resizeIframe = function (event) {
   var h = $('body').height();
   $(parent.window.document).find('#mediaBrowser').height(h);
 };
 
 Drupal.media.browser.selectErrorTab = function() {
-  //Find the ID of a tab with an error in it
+  // Find the ID of a tab with an error in it
   var errorTabID = $('#media-browser-tabset')
     .find('.error')
     .parents('.media-browser-tab')
     .attr('id');
 
   if (errorTabID !== undefined) {
-    //Find the Tab Link with errorTabID
+    // Find the Tab Link with errorTabID
     var tab = $('a[href="#' + errorTabID + '"]');
-    //Find the index of the tab
+    // Find the index of the tab
     var index = $('#media-browser-tabset a').index(tab);
-    //Select the tab
+    // Select the tab
     $('#media-browser-tabset').tabs('select', index)
   }
 }
+
+Drupal.media.browser.selectActiveTab = function() {
+  // Find the index of the last active tab.
+  setTimeout(function() {
+    $('#media-browser-tabset').tabs('select', Drupal.media.browser.activeTab);
+    Drupal.media.browser.resizeIframe();
+  }, 10);
+};
 
 }(jQuery));
