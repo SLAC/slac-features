@@ -100,3 +100,5 @@ dependencies[] = slac_event_demo
 dependencies[] = slac_service_catalog
 dependencies[] = slac_service_catalog_demo
 dependencies[] = slac_service_help
+dependencies[] = slac_forum
+dependencies[] = slac_forum_demo
