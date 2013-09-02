@@ -26,7 +26,7 @@ function slac_forum_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -46,
+    'weight' => 50,
   );
   // Translatables
   // Included for use with string extractors like potx.

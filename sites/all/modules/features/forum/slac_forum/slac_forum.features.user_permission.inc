@@ -51,6 +51,7 @@ function slac_forum_user_default_permissions() {
     'name' => 'create forum content',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'node',
   );
@@ -90,7 +91,7 @@ function slac_forum_user_default_permissions() {
     'name' => 'edit own forum content',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'node',
   );
