@@ -53,6 +53,11 @@ dependencies[] = devel_generate
 dependencies[] = uuid
 dependencies[] = uuid_features
 
+; Media
+dependencies[] = epsacrop
+dependencies[] = pp_crop
+dependencies[] = pp_admin
+
 ;FAQ
 dependencies[] = entity_token
 dependencies[] = rules
