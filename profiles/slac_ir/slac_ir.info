@@ -20,10 +20,10 @@ dependencies[] = dblog
 dependencies[] = search
 dependencies[] = field_ui
 dependencies[] = file
-dependencies[] = rdf
 
 ;Contrib depdencies
 dependencies[] = admin_menu
+dependencies[] = module_filter
 dependencies[] = ctools
 dependencies[] = page_manager
 dependencies[] = views

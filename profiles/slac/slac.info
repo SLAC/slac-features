@@ -19,15 +19,17 @@ dependencies[] = path
 dependencies[] = taxonomy
 dependencies[] = dblog
 dependencies[] = search
-dependencies[] = shortcut
-dependencies[] = toolbar
 dependencies[] = overlay
 dependencies[] = field_ui
 dependencies[] = file
-;dependencies[] = rdf
 
 ; SLAC specific modules
 ; Contrib
+
+; Admin
+dependencies[] = admin_menu
+dependencies[] = module_filter
+
 dependencies[] = ctools
 dependencies[] = page_manager
 dependencies[] = ctools_custom_content
