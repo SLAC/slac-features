@@ -206,8 +206,8 @@ function slac_forum_features_override_default_overrides() {
   $overrides["page_manager_handlers.forum_panel_context_top.conf|display|content|new-11"] = (object) array(
       'pid' => 'new-11',
       'panel' => 'center',
-      'type' => 'forum_list',
-      'subtype' => 'forum_list',
+      'type' => 'forum_mark_read',
+      'subtype' => 'forum_mark_read',
       'shown' => TRUE,
       'access' => array(),
       'configuration' => array(
@@ -222,13 +222,13 @@ function slac_forum_features_override_default_overrides() {
       'css' => array(),
       'extras' => array(),
       'position' => 0,
-      'locks' => '',
+      'locks' => array(),
     );
   $overrides["page_manager_handlers.forum_panel_context_top.conf|display|content|new-12"] = (object) array(
       'pid' => 'new-12',
       'panel' => 'center',
-      'type' => 'forum_legend',
-      'subtype' => 'forum_legend',
+      'type' => 'forum_list',
+      'subtype' => 'forum_list',
       'shown' => TRUE,
       'access' => array(),
       'configuration' => array(
@@ -247,6 +247,27 @@ function slac_forum_features_override_default_overrides() {
     );
   $overrides["page_manager_handlers.forum_panel_context_top.conf|display|content|new-13"] = (object) array(
       'pid' => 'new-13',
+      'panel' => 'center',
+      'type' => 'forum_legend',
+      'subtype' => 'forum_legend',
+      'shown' => TRUE,
+      'access' => array(),
+      'configuration' => array(
+        'context' => 'argument_forum_id_1',
+        'override_title' => 0,
+        'override_title_text' => '',
+      ),
+      'cache' => array(),
+      'style' => array(
+        'settings' => NULL,
+      ),
+      'css' => array(),
+      'extras' => array(),
+      'position' => 2,
+      'locks' => '',
+    );
+  $overrides["page_manager_handlers.forum_panel_context_top.conf|display|content|new-14"] = (object) array(
+      'pid' => 'new-14',
       'panel' => 'center',
       'type' => 'forum_statistics',
       'subtype' => 'forum_statistics',
@@ -276,29 +297,8 @@ function slac_forum_features_override_default_overrides() {
       ),
       'css' => array(),
       'extras' => array(),
-      'position' => 2,
-      'locks' => '',
-    );
-  $overrides["page_manager_handlers.forum_panel_context_top.conf|display|content|new-14"] = (object) array(
-      'pid' => 'new-14',
-      'panel' => 'center',
-      'type' => 'forum_mark_read',
-      'subtype' => 'forum_mark_read',
-      'shown' => TRUE,
-      'access' => array(),
-      'configuration' => array(
-        'context' => 'argument_forum_id_1',
-        'override_title' => 0,
-        'override_title_text' => '',
-      ),
-      'cache' => array(),
-      'style' => array(
-        'settings' => NULL,
-      ),
-      'css' => array(),
-      'extras' => array(),
       'position' => 3,
-      'locks' => array(),
+      'locks' => '',
     );
   $overrides["page_manager_handlers.forum_panel_context_top.conf|display|content|new-15"] = (object) array(
       'pid' => 'new-15',
