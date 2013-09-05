@@ -1,0 +1,88 @@
+/* Slider */
+.field-name-field-slideshow-txtlr-slide {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.field-name-field-slideshow-txtlr-slide .field-slideshow-text-left-right-wrapper {
+    height: 222px;
+}
+.field-name-field-slideshow-txtlr-slide .field-slideshow-body {
+    font-size: 17px;
+    color: #fff;
+    padding: 20px 3%;
+    line-height: 23px;
+    width: 29%;
+    height: 100%;
+    letter-spacing: .03em;
+}
+.field-name-field-slideshow-txtlr-slide .field-slideshow-caption-text a {
+    font-size: 17px;
+    color: #fff;
+    text-decoration: none;
+    line-height: normal;
+    padding-bottom: 20px;
+    display: block;
+    letter-spacing: .04em;
+}
+.field-name-field-slideshow-txtlr-slide .field-slideshow-image-caption {
+    float: left;
+    width: 65%;
+    height: 100%;
+    overflow: hidden;
+}
+.field-name-field-slideshow-txtlr-slide .field-slideshow-image-caption a,
+.field-name-field-slideshow-txtlr-slide .field-slideshow-image-caption img {
+    display: block;
+    width: 100% !important;
+}
+.field-name-field-slideshow-txtlr-slide .field-slideshow-controls a {
+    position: absolute;
+    top: 40%;
+    width: 30px;
+    height: 70px;
+    display: block;
+    overflow: hidden;
+    background-color: rgba(200, 200, 200, 0.5);
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -o-border-radius: 10px;
+    -ms-border-radius: 10px;
+    border-radius: 10px;
+    z-index: 99;
+    text-indent: -9000px;
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.field-name-field-slideshow-txtlr-slide .field-slideshow-controls .prev {
+    left: 8px; 
+    background-image: url("../images/slideshow_text_left_right/slider-back.png");
+}
+.field-name-field-slideshow-txtlr-slide .field-slideshow-controls .next {
+    right: 8px;
+    background-image: url("../images/slideshow_text_left_right/slider-next.png");
+}
+.field-name-field-slideshow-txtlr-slide .field-slideshow-pager {
+    position: absolute;
+    left: 45%;
+    bottom: 0;
+    width: auto;
+    padding: 5px;
+    margin: 0;
+    background: #D5D8DA;
+    z-index: 99; 
+}
+.field-name-field-slideshow-txtlr-slide .field-slideshow-pager a {
+    float: left;
+    width: 9px;
+    height: 9px;
+    overflow: hidden;
+    text-indent: -9000px;
+    text-transform: capitalize;
+    background: #b8b9bb;
+    border: 1px solid #666666;
+    margin: 1px 7px 0; }
+.field-name-field-slideshow-txtlr-slide .field-slideshow-pager a.activeSlide {
+    background: white; 
+}

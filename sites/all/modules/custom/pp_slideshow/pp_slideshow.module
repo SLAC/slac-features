@@ -1,0 +1,83 @@
+<?php
+/**
+ * @file
+ * Code for the PP Slideshow feature.
+ */
+
+include_once 'pp_slideshow.features.inc';
+
+/**
+ * Implements hook_entity_info_alter().
+ *
+ * Add fieldable panels panes bundles.
+ */
+function pp_slideshow_entity_info_alter(&$entity_info) {
+  $entity_info['fieldable_panels_pane']['bundles']['slideshow_text_bottom'] = array(
+    'label' => t('Slideshow (text bottom)'),
+    'pane category' => t('Slideshow'),
+    'pane top level' => FALSE, // set to true to make this show as a top level icon
+//    'pane icon' => '/path/to/custom/icon/for/this/pane.png',
+    'admin' => array(
+      'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
+      'bundle argument' => 4,
+      // Note that this has all _ replaced with - from the bundle name.
+      'real path' => 'admin/structure/fieldable-panels-panes/manage/slideshow-text-bottom',
+      'access arguments' => array('administer fieldable panels panes'),
+    ),
+  );
+  $entity_info['fieldable_panels_pane']['bundles']['slideshow_text_left_right'] = array(
+    'label' => t('Slideshow (text left/right)'),
+    'pane category' => t('Slideshow'),
+    'pane top level' => FALSE, // set to true to make this show as a top level icon
+//    'pane icon' => '/path/to/custom/icon/for/this/pane.png',
+    'admin' => array(
+      'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
+      'bundle argument' => 4,
+      // Note that this has all _ replaced with - from the bundle name.
+      'real path' => 'admin/structure/fieldable-panels-panes/manage/slideshow-text-left-right',
+      'access arguments' => array('administer fieldable panels panes'),
+    ),
+  );
+}
+
+/**
+ * Preprocess function for field-slideshow.tpl.php.
+ */
+function pp_slideshow_preprocess_field_slideshow(&$vars) {
+  $vars['theme_hook_suggestions'][] = 'field_slideshow__' . $vars['entity']->bundle;
+  drupal_add_css(drupal_get_path('module', 'pp_slideshow') . '/css/' . $vars['entity']->bundle . '.css');
+  drupal_add_js(drupal_get_path('module', 'pp_slideshow') . '/js/' . $vars['entity']->bundle . '.js');
+}
+
+/**
+ * Implements hook_theme().
+ *
+ * Let theme system know that module is responsible for 'field_slideshow__slideshow_text_bottom' template.
+ */
+function pp_slideshow_theme() {
+  $theme_array = array(
+    'variables'     => array(
+      'items'                 => NULL,
+      'image_style'           => NULL,
+      'order'                 => NULL,
+      'controls'              => NULL,
+      'controls_pause'        => NULL,
+      'controls_position'     => NULL,
+      'pager'                 => NULL,
+      'pager_position'        => NULL,
+      'pager_image_style'     => NULL,
+      'carousel_image_style'  => NULL,
+      'entity'                => NULL,
+      'breakpoints'           => NULL,
+      'slideshow_id'          => NULL,
+      'js_variables'          => array(),
+    ),
+    'template'     => 'field_slideshow',
+    'path' => drupal_get_path('module', 'pp_slideshow') . '/templates',
+  );
+  return array(
+    'field_slideshow' => $theme_array,
+    'field_slideshow__slideshow_text_bottom' => array_merge($theme_array, array('template' => 'field_slideshow__slideshow_text_bottom')),
+    'field_slideshow__slideshow_text_left_right' => array_merge($theme_array, array('template' => 'field_slideshow__slideshow_text_left_right')),
+  );
+}
