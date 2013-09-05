@@ -1,0 +1,126 @@
+<?php
+/**
+ * @file
+ * Code for the PP Lightbox feature.
+ */
+
+include_once 'pp_lightbox.features.inc';
+
+/**
+ * Implements hook_media_token_to_markup_alter().
+ *
+ * Needed to display thumbnails properly in WYSIWYG on inserting.
+ */
+function pp_lightbox_media_token_to_markup_alter(&$element, $tag_info, &$settings) {
+  if (strpos($tag_info['view_mode'], 'crop_') === FALSE) {
+    return;
+  }
+  $image_style = substr($tag_info['view_mode'], strlen('crop_'));
+  if (isset($element['content']['file'])) {
+    $element['content']['file']['#theme'] = 'image_style_lightbox';
+    $element['content']['file']['#style_name'] = $image_style;
+  }
+}
+
+/**
+ * Alter the PP Crop form to add lightbox image style.
+ */
+function pp_lightbox_form_pp_crop_wysiwyg_settings_form_alter(&$form, $form_state) {
+  $styles = image_styles();
+  $options = array();
+  foreach ($styles as $style) {
+    $options[$style['name']] = $style['label'];
+  }
+  $form['pp_lightbox_style_name'] = array(
+    '#title' => t('Lightbox image style'),
+    '#type' => 'select',
+    '#required' => TRUE,
+    '#options' => $options,
+    '#default_value' => variable_get('pp_lightbox_style_name', ''),
+  );
+}
+
+/**
+ * Implements hook_theme().
+ */
+function pp_lightbox_theme() {
+  return array(
+    'image_style_lightbox' => array(
+      'variables' => array('style_name' => '', 'file' => NULL),
+    ),
+  );
+}
+
+
+function theme_image_style_lightbox($variables) {
+  $image_style = $variables['style_name'];
+  $file = $variables['file'];
+
+  $alt = isset($file->field_file_image_alt_text[LANGUAGE_NONE][0]['value']) ? $file->field_file_image_alt_text[LANGUAGE_NONE][0]['value'] : '';
+  $title = isset($file->field_file_image_title_text[LANGUAGE_NONE][0]['value']) ? $file->field_file_image_title_text[LANGUAGE_NONE][0]['value'] : '';
+  $description = isset($file->field_file_image_description[LANGUAGE_NONE][0]['value']) ? $file->field_file_image_description[LANGUAGE_NONE][0]['value'] : '';
+
+  $rendered_image = theme('image_style', array(
+    'path' => $file->uri,
+    'style_name' => $image_style,
+    'width' => '',
+    'height' => '',
+    'alt' => $alt,
+    'title' => $title,
+  ));
+
+  $style = variable_get('pp_lightbox_style_name', '');
+  $new_image_url = '';
+  $derivative_url = image_style_url($style, $file->uri);
+  $success = file_exists($derivative_url) || image_style_create_derivative($style, $file->uri, $derivative_url);
+
+  if (!$success) {
+    $new_image_url = file_create_url($derivative_url);
+  }
+
+  // Download path is provided by Download File module.
+  // See Download File module permission to set restrictions for download.
+  $image_download_href = 'download/file/fid/' . $file->fid;
+  $image_download_link = array(
+    '#type' => 'link',
+    '#title' => t('Download original image'),
+    '#href' => $image_download_href,
+    '#options' => array(
+      'html' => TRUE,
+      'attributes' => array(
+        'class' => array('lightbox-download-link'),
+      ),
+    ),
+  );
+
+  $image_effect_width = 0;
+  $image_effect_height = 0;
+  $image_style = image_style_load('lightbox_large_image');
+  $isid = $image_style['isid'];
+  if (image_effect_load($isid, 'lightbox_large_image')) {
+    $image_effect = image_effect_load($isid, 'lightbox_large_image');
+    $image_effect_width = $image_effect['data']['width'];
+    $image_effect_height = $image_effect['data']['height'];
+  }
+
+  $rendered_link = '';
+  $file_info = image_get_info($file->uri);
+  $lightbox_image_width = $file_info['width'];
+  $lightbox_image_height = $file_info['height'];
+
+  // Check if original image dimension is larger that image style dimensions
+  // to set the url to the image that will be displayed in lightbox.
+  if ($lightbox_image_width > $image_effect_width || $lightbox_image_height > $image_effect_height) {
+    $rendered_link = render($image_download_link);
+    $image_url = $new_image_url;
+  }
+  else {
+    $image_url = str_replace('public:/', variable_get('file_public_path', 'sites/default/files'), $file->uri);
+  }
+
+  // Create image caption.
+  $caption = '<p>' . implode('</p><p>', array_filter(array($title, $description))) . '</p>';
+
+  $rendered_image_as_link = l($rendered_image, $image_url, array('attributes' => array('rel' => 'lightbox[inline_image][' . $caption . $rendered_link . ']'), 'html' => TRUE));
+  return $rendered_image_as_link;
+}

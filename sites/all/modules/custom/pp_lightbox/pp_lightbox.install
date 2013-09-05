@@ -1,0 +1,8 @@
+<?php
+
+/**
+ * Implements hook_install().
+ */
+function pp_lightbox_install() {
+  db_query('UPDATE {system} SET weight=:weight WHERE name=:module', array(':weight' => 15, ':module' => 'pp_lightbox'));
+}
