@@ -1,0 +1,128 @@
+name = SLAC Intranet Org
+description = A distribution for SLAC Intranet sites. 
+version = VERSION
+core = 7.x
+
+;Standard profile
+dependencies[] = block
+dependencies[] = comment
+dependencies[] = contextual
+dependencies[] = dashboard
+dependencies[] = help
+dependencies[] = image
+dependencies[] = list
+dependencies[] = menu
+dependencies[] = number
+dependencies[] = options
+dependencies[] = path
+dependencies[] = taxonomy
+dependencies[] = dblog
+dependencies[] = search
+dependencies[] = field_ui
+dependencies[] = file
+
+;Contrib depdencies
+dependencies[] = admin_menu
+dependencies[] = module_filter
+dependencies[] = ctools
+dependencies[] = page_manager
+dependencies[] = views
+dependencies[] = views_ui
+dependencies[] = date
+dependencies[] = date_api
+dependencies[] = date_popup
+dependencies[] = date_ical
+dependencies[] = date_views
+dependencies[] = features
+dependencies[] = features_override
+dependencies[] = strongarm
+dependencies[] = link
+dependencies[] = entity
+dependencies[] = libraries
+dependencies[] = panels_mini
+dependencies[] = panels_node
+dependencies[] = panels
+dependencies[] = token
+dependencies[] = pathauto
+
+;Development modules
+dependencies[] = devel
+dependencies[] = devel_generate
+
+;Features dependencies
+dependencies[] = uuid
+dependencies[] = uuid_features
+
+; Media
+dependencies[] = epsacrop
+dependencies[] = pp_crop
+dependencies[] = pp_admin
+
+;FAQ
+dependencies[] = entity_token
+dependencies[] = rules
+dependencies[] = views_content
+dependencies[] = field_permissions
+
+;Wiki 
+dependencies[] = diff
+dependencies[] = markdown
+dependencies[] = bueditor
+dependencies[] = ajax_markup
+dependencies[] = imce
+
+;Blog/News
+dependencies[] = media
+dependencies[] = file_entity
+
+;Blog
+dependencies[] = blog
+
+;News
+dependencies[] = mediafield
+
+;Events
+dependencies[] = better_exposed_filters
+dependencies[] = views_php
+dependencies[] = field_redirection
+dependencies[] = node_export
+
+; Service catalog
+dependencies[] = support
+
+; Lightbox
+dependencies[] = pp_lightbox
+
+; Carousel / Slideshow
+dependencies[] = pp_slideshow
+
+; Forms
+dependencies[] = slac_webform_botcha
+
+; RSS
+dependencies[] = slac_rss_block
+
+;Features
+dependencies[] = slac_profile_base
+
+dependencies[] = slac_faq
+dependencies[] = slac_faq_demo
+
+dependencies[] = slac_wiki
+dependencies[] = slac_wiki_demo
+
+dependencies[] = slac_news
+dependencies[] = slac_news_demo
+
+dependencies[] = slac_blog
+dependencies[] = slac_blog_demo
+
+dependencies[] = slac_event
+dependencies[] = slac_event_demo
+
+dependencies[] = slac_service_catalog
+dependencies[] = slac_service_catalog_demo
+dependencies[] = slac_service_help
+
+dependencies[] = slac_forum
+dependencies[] = slac_forum_demo

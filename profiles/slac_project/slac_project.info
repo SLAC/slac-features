@@ -1,0 +1,86 @@
+name = SLAC Projects
+description = Install with commonly used features pre-configured.
+version = VERSION
+core = 7.x
+
+; Standard profile
+dependencies[] = block
+;dependencies[] = color
+dependencies[] = comment
+dependencies[] = contextual
+dependencies[] = dashboard
+dependencies[] = help
+dependencies[] = image
+dependencies[] = list
+dependencies[] = menu
+dependencies[] = number
+dependencies[] = options
+dependencies[] = path
+dependencies[] = taxonomy
+dependencies[] = dblog
+dependencies[] = search
+dependencies[] = overlay
+dependencies[] = field_ui
+dependencies[] = file
+
+; SLAC specific modules
+; Contrib
+
+; Admin
+dependencies[] = admin_menu
+dependencies[] = module_filter
+
+dependencies[] = ctools
+dependencies[] = page_manager
+dependencies[] = ctools_custom_content
+dependencies[] = views_content
+
+dependencies[] = field_redirection
+
+dependencies[] = date
+dependencies[] = date_api
+dependencies[] = date_ical
+dependencies[] = date_views
+
+dependencies[] = features
+dependencies[] = uuid
+dependencies[] = uuid_features
+dependencies[] = strongarm
+
+dependencies[] = link
+
+dependencies[] = file_entity
+dependencies[] = media
+dependencies[] = mediafield
+dependencies[] = media_internet
+
+dependencies[] = epsacrop
+
+dependencies[] = entity
+dependencies[] = libraries
+
+dependencies[] = panels_mini
+dependencies[] = panels_node
+dependencies[] = panels
+
+dependencies[] = views
+dependencies[] = views_php
+dependencies[] = views_ui
+
+; Custom modules
+dependencies[] = pp_admin
+dependencies[] = pp_lightbox
+dependencies[] = pp_slideshow
+dependencies[] = slac_webform_botcha
+dependencies[] = slac_rss_block
+dependencies[] = slac_social_media
+
+
+; Features
+dependencies[] = slac_blog
+dependencies[] = slac_blog_demo
+
+dependencies[] = slac_faq
+dependencies[] = slac_faq_demo
+
+dependencies[] = slac_social_media_block

@@ -1,5 +1,5 @@
-name = SLAC Intranet
-description = A distribution for SLAC Intranet sites. 
+name = SLAC Extranet Org
+description = A distribution for SLAC Extranet sites. 
 version = VERSION
 core = 7.x
 
@@ -90,20 +90,33 @@ dependencies[] = node_export
 ; Service catalog
 dependencies[] = support
 
+; Lightbox
+dependencies[] = pp_lightbox
+
+; Carousel / Slideshow
+dependencies[] = pp_slideshow
+
+; Forms
+dependencies[] = slac_webform_botcha
+
+; RSS
+dependencies[] = slac_rss_block
+
 ;Features
 dependencies[] = slac_profile_base
+
 dependencies[] = slac_faq
 dependencies[] = slac_faq_demo
-dependencies[] = slac_wiki
-dependencies[] = slac_wiki_demo
+
 dependencies[] = slac_news
 dependencies[] = slac_news_demo
+
 dependencies[] = slac_blog
 dependencies[] = slac_blog_demo
+
 dependencies[] = slac_event
 dependencies[] = slac_event_demo
+
 dependencies[] = slac_service_catalog
 dependencies[] = slac_service_catalog_demo
 dependencies[] = slac_service_help
-dependencies[] = slac_forum
-dependencies[] = slac_forum_demo

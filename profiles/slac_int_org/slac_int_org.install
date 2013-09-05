@@ -1,17 +1,34 @@
 <?php
 /**
  * @file
- * Install, update and uninstall functions for the standard installation profile.
+ * Install, update and uninstall functions for the minimal installation profile.
  */
+
+
+/**
+ * Implements hook_install_tasks().
+ *
+ * Perform some taks after features have been extracted.
+ */
+function slac_int_org_install_tasks() {
+  $tasks = array(
+    'slac_int_org_post_install' => array(
+      'type' => 'normal',
+      'display' => FALSE,
+      'display_name' => t('Post Install Configuration'),
+    ),
+  );
+  return $tasks;
+}
 
 /**
  * Implements hook_install().
  *
- * Perform actions to set up the site for this profile.
+ * Performs actions to set up the site for this profile.
  *
  * @see system_install()
  */
-function slac_install() {
+function slac_int_org_install() {
   // Add text formats.
   $filtered_html_format = array(
     'format' => 'filtered_html',
@@ -43,7 +60,30 @@ function slac_install() {
   $filtered_html_format = (object) $filtered_html_format;
   filter_format_save($filtered_html_format);
 
-  // Full HTML provided by pp_admin module.
+  $full_html_format = array(
+    'format' => 'full_html',
+    'name' => 'Full HTML',
+    'weight' => 1,
+    'filters' => array(
+      // URL filter.
+      'filter_url' => array(
+        'weight' => 0,
+        'status' => 1,
+      ),
+      // Line break filter.
+      'filter_autop' => array(
+        'weight' => 1,
+        'status' => 1,
+      ),
+      // HTML corrector filter.
+      'filter_htmlcorrector' => array(
+        'weight' => 10,
+        'status' => 1,
+      ),
+    ),
+  );
+  $full_html_format = (object) $full_html_format;
+  filter_format_save($full_html_format);
 
   // Enable some standard blocks.
   $default_theme = variable_get('theme_default', 'bartik');
@@ -60,42 +100,12 @@ function slac_install() {
       'cache' => -1,
     ),
     array(
-      'module' => 'search',
-      'delta' => 'form',
-      'theme' => $default_theme,
-      'status' => 1,
-      'weight' => -1,
-      'region' => 'sidebar_first',
-      'pages' => '',
-      'cache' => -1,
-    ),
-    array(
       'module' => 'node',
       'delta' => 'recent',
       'theme' => $admin_theme,
       'status' => 1,
       'weight' => 10,
       'region' => 'dashboard_main',
-      'pages' => '',
-      'cache' => -1,
-    ),
-    array(
-      'module' => 'user',
-      'delta' => 'login',
-      'theme' => $default_theme,
-      'status' => 1,
-      'weight' => 0,
-      'region' => 'sidebar_first',
-      'pages' => '',
-      'cache' => -1,
-    ),
-    array(
-      'module' => 'system',
-      'delta' => 'navigation',
-      'theme' => $default_theme,
-      'status' => 1,
-      'weight' => 0,
-      'region' => 'sidebar_first',
       'pages' => '',
       'cache' => -1,
     ),
@@ -212,12 +222,6 @@ function slac_install() {
 
   // Don't display date and author information for "Basic page" nodes by default.
   variable_set('node_submitted_page', FALSE);
-
-  // Enable user picture support and set the default to a square thumbnail option.
-  variable_set('user_pictures', '1');
-  variable_set('user_picture_dimensions', '1024x1024');
-  variable_set('user_picture_file_size', '800');
-  variable_set('user_picture_style', 'thumbnail');
 
   // Allow visitor account creation with administrative approval.
   variable_set('user_register', USER_REGISTER_VISITORS_ADMINISTRATIVE_APPROVAL);
@@ -361,6 +365,20 @@ function slac_install() {
     ->fields(array('uid' => 1, 'rid' => $admin_role->rid))
     ->execute();
 
+  // Create a Test authenticated user
+  $account = new stdClass();
+  $account->is_new = TRUE;
+  $edit = array(
+    'name' => 'auth_user',
+    'mail' => 'test_user@slac.stanford.edu',
+    'pass' => 'sl@ckers',
+    'status' => 1,
+    'roles' => array(
+      2 => TRUE,
+    ),
+  );
+  user_save($account, $edit);
+
   // Create a Home link in the main menu.
   $item = array(
     'link_title' => st('Home'),
@@ -380,4 +398,19 @@ function slac_install() {
     ->execute();
   variable_set('admin_theme', 'seven');
   variable_set('node_admin_theme', '1');
+}
+
+/**
+ * Post install callback
+ */
+function slac_int_org_post_install() {
+  // markdown editor configurations
+  if (module_exists('slac_wiki')) {
+    db_update('bueditor_editors')
+      ->fields(array(
+        'pages' => 'node/add/slac-wiki-page',
+      ))
+    ->condition('name', 'Markdowneditor')
+    ->execute();
+  }
 }
