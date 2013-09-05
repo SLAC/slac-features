@@ -105,6 +105,8 @@ dependencies[] = slac_rss_block
 ;Features
 dependencies[] = slac_profile_base
 
+dependencies[] = slac_form_building
+
 dependencies[] = slac_faq
 dependencies[] = slac_faq_demo
 

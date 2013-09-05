@@ -97,6 +97,7 @@ dependencies[] = pp_lightbox
 dependencies[] = pp_slideshow
 
 ; Forms
+dependencies[] = slac_form_building
 dependencies[] = slac_webform_botcha
 
 ; RSS

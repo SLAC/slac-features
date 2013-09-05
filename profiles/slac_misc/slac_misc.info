@@ -72,3 +72,7 @@ dependencies[] = pp_admin
 dependencies[] = pp_lightbox
 dependencies[] = pp_slideshow
 dependencies[] = slac_webform_botcha
+
+; Features
+dependencies[] = slac_form_building
+

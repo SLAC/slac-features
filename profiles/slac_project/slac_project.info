@@ -77,6 +77,8 @@ dependencies[] = slac_social_media
 
 
 ; Features
+dependencies[] = slac_form_building
+
 dependencies[] = slac_blog
 dependencies[] = slac_blog_demo
 
