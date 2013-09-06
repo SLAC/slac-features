@@ -69,7 +69,6 @@ features[features_overrides][] = page_manager_handlers.forum_panel_context_top.c
 features[features_overrides][] = page_manager_handlers.forum_panel_context_top.conf|display|panels|center|3
 features[features_overrides][] = page_manager_handlers.forum_panel_context_top.conf|display|panels|center|4
 features[features_overrides][] = page_manager_handlers.forum_panel_context_top.export_module
-features[field_base][] = body
 features[field_base][] = taxonomy_forums
 features[field_instance][] = node-forum-body
 features[field_instance][] = node-forum-taxonomy_forums
