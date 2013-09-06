@@ -87,6 +87,8 @@ dependencies[] = views_php
 dependencies[] = field_redirection
 dependencies[] = node_export
 
+dependencies[] = pp_demo
+
 ; Service catalog
 dependencies[] = support
 
