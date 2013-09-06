@@ -109,6 +109,9 @@ dependencies[] = slac_profile_base
 dependencies[] = slac_faq
 dependencies[] = slac_faq_demo
 
+dependencies[] = slac_kb_article
+dependencies[] = slac_kb_demo
+
 dependencies[] = slac_wiki
 dependencies[] = slac_wiki_demo
 
