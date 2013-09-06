@@ -1,6 +1,6 @@
 <?php
 
-// Rebuild slac profile.
+// Rebuild slac_people_profile profile.
 
 $commands = array(
   array(
@@ -9,7 +9,7 @@ $commands = array(
   ),
   array(
     'description' => 'Install selected profile: ',
-    'command' => 'drush si slac --db-url=mysql://slac_features:SwHbNJEZ6QRxrlU@localhost/slac_features --account-name=admin --account-pass=618hWVCDmY1n3uf --account-mail=admin@example.com --site-name=SLAC-' . date(DATE_ATOM) . ' -y'
+    'command' => 'drush si slac_people_profile --db-url=mysql://slac_features:SwHbNJEZ6QRxrlU@localhost/slac_features --account-name=admin --account-pass=618hWVCDmY1n3uf --account-mail=admin@example.com --site-name=SLAC-' . date(DATE_ATOM) . ' -y'
   ),
 );
 
