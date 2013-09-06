@@ -21,7 +21,7 @@ dependencies[] = search
 dependencies[] = field_ui
 dependencies[] = file
 
-;Contrib depdencies
+;Contrib depedencies
 dependencies[] = admin_menu
 dependencies[] = module_filter
 dependencies[] = ctools
@@ -44,6 +44,7 @@ dependencies[] = panels_node
 dependencies[] = panels
 dependencies[] = token
 dependencies[] = pathauto
+dependencies[] = jreject
 
 ;Development modules
 dependencies[] = devel

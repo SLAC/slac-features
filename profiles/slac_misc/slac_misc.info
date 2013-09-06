@@ -25,6 +25,7 @@ dependencies[] = file
 
 ; SLAC specific modules
 ; Contrib
+dependencies[] = jreject
 
 ; Admin
 dependencies[] = admin_menu
