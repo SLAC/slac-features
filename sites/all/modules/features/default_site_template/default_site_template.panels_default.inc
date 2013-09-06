@@ -187,7 +187,7 @@ function default_site_template_default_panels_mini() {
     $display->content['new-3'] = $pane;
     $display->panels['footer_menu'][0] = 'new-3';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-1';
+  $display->title_pane = '0';
   $mini->display = $display;
   $export['footer'] = $mini;
 
