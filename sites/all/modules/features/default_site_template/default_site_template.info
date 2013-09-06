@@ -1,10 +1,12 @@
 name = Default Site Template
 core = 7.x
 package = SLAC
+php = 5.2.4
 dependencies[] = ctools
 dependencies[] = features
 dependencies[] = menu
 dependencies[] = page_manager
+dependencies[] = panels_everywhere
 dependencies[] = panels_mini
 dependencies[] = strongarm
 features[ctools][] = page_manager:pages_default:1
