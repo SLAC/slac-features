@@ -45,6 +45,7 @@ dependencies[] = panels
 dependencies[] = token
 dependencies[] = pathauto
 dependencies[] = jreject
+dependencies[] = google_analytics
 
 ;Development modules
 dependencies[] = devel
