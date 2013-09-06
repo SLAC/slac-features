@@ -1,0 +1,16 @@
+name        = SLAC Features Theme
+description = Theme description.
+screenshot  = screenshot.png
+core        = 7.x
+
+stylesheets[all][] = css/header.css
+stylesheets[all][] = css/content.css
+stylesheets[all][] = css/footer.css
+
+scripts[] = js/modernizr.js
+scripts[] = js/script.js
+
+regions[header]         = Header
+regions[navigation]     = Navigation bar
+regions[content]        = Content
+regions[footer]         = Footer
