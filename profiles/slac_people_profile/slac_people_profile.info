@@ -26,7 +26,7 @@ dependencies[] = file
 ; SLAC specific modules
 ; Contrib
 dependencies[] = jreject
-dependencies[] = google_analytics
+dependencies[] = googleanalytics
 
 ; Admin
 dependencies[] = admin_menu
