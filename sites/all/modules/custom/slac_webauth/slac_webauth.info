@@ -1,0 +1,7 @@
+name = SLAC WebAuth
+description = Authenticates users through SLAC WebAuth.
+version = 7.x-1.0
+core = 7.x
+project = "slac_webauth"
+package = "SLAC"
+configure = admin/config/slac_webauth
