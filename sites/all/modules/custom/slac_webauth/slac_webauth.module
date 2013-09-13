@@ -6,6 +6,7 @@
  */
 
 // define('WEBAUTH_DOMAIN', 'stanford.edu');
+define('EMAIL_DOMAIN', 'slac.stanford.edu');
 
 /**
  * Currently we can't test SSL with cookies but will re-implement
@@ -467,6 +468,10 @@ function slac_webauth_user_insert(&$edit, &$account, $category) {
 
 
 
+
+
+
+
   // global $webauth_authenticated;
 
   // We only want to run these if the user is self-creating via webauth.
@@ -623,4 +628,39 @@ function slac_webauth_write_htaccess() {
   fwrite($fp, $htaccess_file);
   fclose($fp);
 */
+}
+
+/**
+ *  Helper function that creates or syncs a user
+ *  At this stage we assume they have a valid session and the user has authenticated via webauth
+ */
+function _slac_webauth_user_sync($wa_username) {
+  // 1. look for any existing users by username
+  // 1a. if user not found, let's create a normal user
+  // 1b. if user found, just return the user
+  // 2. We will also sync the user roles in this function
+  $loaded_user = user_load_by_name($wa_username);
+  if (!empty($loaded_user)) {
+    // @todo:sync the user roles
+    return $loaded_user->uid;
+  }
+
+  // saving a new user
+  $mail = $wa_username . '@' . EMAIL_DOMAIN;
+  $edit = array(
+    'name' => check_plain($wa_username),
+    'pass' => user_password(),
+    'mail' => $mail,
+    'init' => $mail,
+    'status' => 1,
+    'access' => REQUEST_TIME,
+  );
+
+  // @todo:sync the user roles
+  $account = user_save(null, $edit);
+
+  // Set the authmap
+  user_set_authmaps($account, array('authname_slac_webauth' => $edit['name']));
+
+  return $account->uid;
 }
