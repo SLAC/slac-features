@@ -6,7 +6,11 @@
  */
 
 // define('WEBAUTH_DOMAIN', 'stanford.edu');
+/**
+ *
+ */
 define('EMAIL_DOMAIN', 'slac.stanford.edu');
+// define('SLAC_USER_ROLES', array('author', 'editor', 'administrator'));
 
 /**
  * Currently we can't test SSL with cookies but will re-implement
@@ -63,7 +67,7 @@ function slac_webauth_init() {
  * Implements hook_menu().
  */
 
-function webauth_menu() {
+function slac_webauth_menu() {
   $items = array();
 
   // Setup our authentication URL
@@ -83,7 +87,7 @@ function webauth_menu() {
     'type' => MENU_CALLBACK,
   );
 
-  $items['admin/config/webauth'] = array(
+  $items['admin/config/slac_webauth'] = array(
     'title' => 'WebAuth',
     'type' => MENU_NORMAL_ITEM,
     'description' => 'Authenticate through SLAC WebAuth',
@@ -97,6 +101,30 @@ function webauth_menu() {
     'title' => 'SLAC WebAuth Settings',
     'type' => MENU_DEFAULT_LOCAL_TASK,
     'weight' => -10,
+  );
+
+  $items['admin/config/slac_webauth/tests'] = array(
+    'title' => 'SLAC WebAuth Tests',
+    'type' => MENU_LOCAL_TASK,
+    'page callback' => array('slac_webauth_test'),
+    'access arguments' => array('administer site configuration'),
+    'weight' => -20,
+  );
+
+  $items['admin/config/slac_webauth/tests/%'] = array(
+    'title' => 'SLAC Webauth Test',
+    'type' => MENU_CALLBACK,
+    'page callback' => array('slac_webauth_test_case'),
+    'page arguments' => array(4),
+    'access arguments' => array('administer site configuration'),
+    // 'access callback' => TRUE,
+  );
+
+  $items['slac_webauth_test_output'] = array(
+    'title' => 'SLAC Webauth Test output',
+    'type' => MENU_CALLBACK,
+    'page callback' => array('slac_webauth_test_output'),
+    'access callback' => TRUE,
   );
 
   return $items;
@@ -333,58 +361,58 @@ function slac_webauth_theme($existing, $type, $theme, $path) {
  *
  */
 function slac_webauth_form_alter(&$form, &$form_state, $form_id) {
-  // global $user, $base_url, $_webauth_session;
-  global $user, $base_url;
-  switch ($form_id) {
-    case 'user_profile_form':
-      $account = $form['#user'];
-      if (!empty($account->roles)) {
-        // administrators can potentially be local users
-        $account_roles = array_flip($account->roles);
-        if (array_key_exists('administrator', $account_roles)) {
-          return;
-        }
-        $form['account']['pass']['#type'] = 'hidden';
-        $form['account']['current_pass']['#type'] = 'hidden';
-        unset($form['account']['current_pass_required_values']['#value']['mail']);
-      }
-      break;
-    case 'user_login_block':
-    case 'user_login':
-      $form['name']['#title'] = t('Local Drupal Username');
-      $form['pass']['#title'] = t('Local Drupal Password');
-      if ($form_id === 'user_login') {
-	    // create a WebAuth login link
-/*
-        if (!$_webauth_session) {
-          $_webauth_session = new WebAuthSession();
-        }
-        $webauth_login = $_webauth_session->getLoginUrl();
-*/
-
-    $webauth_login = 'http://www.yahoo.com';
-
-		// create a wrapper for the webauth link so we can de-emphasize the local user login form
-	    $form['webauth_login_wrapper']['#title']       = t('WebAuth Login');
-	    $form['webauth_login_wrapper']['#type']        = 'fieldset';
-	    $form['webauth_login_wrapper']['#collapsible'] = TRUE;
-	    $form['webauth_login_wrapper']['#collapsed']   = FALSE;
-		$form['webauth_login_wrapper']['webauth_login_link']['#markup'] = theme('webauth_login_block',array('login_url' => $webauth_login, 'login_text' => variable_get('webauth_link_text', 'Log in with WebAuth')));
-
-		// create a wrapper for the form, so we can de-emphasize the local user login form
-	    $form['local_login_wrapper']['#title']       = 'Local User Login';
-	    $form['local_login_wrapper']['#type']        = 'fieldset';
-	    $form['local_login_wrapper']['#collapsible'] = TRUE;
-	    $form['local_login_wrapper']['#collapsed']   = TRUE;
-
-		// copy and move the form fields into the wrapper
-	    $form['local_login_wrapper']['name'] = $form['name'];
-	    $form['local_login_wrapper']['pass'] = $form['pass'];
-	    $form['local_login_wrapper']['actions'] = $form['actions'];
-	    unset($form['name']);
-	    unset($form['pass']);
-	    unset($form['actions']);
-      }
+//  // global $user, $base_url, $_webauth_session;
+//  global $user, $base_url;
+//  switch ($form_id) {
+//    case 'user_profile_form':
+//      $account = $form['#user'];
+//      if (!empty($account->roles)) {
+//        // administrators can potentially be local users
+//        $account_roles = array_flip($account->roles);
+//        if (array_key_exists('administrator', $account_roles)) {
+//          return;
+//        }
+//        $form['account']['pass']['#type'] = 'hidden';
+//        $form['account']['current_pass']['#type'] = 'hidden';
+//        unset($form['account']['current_pass_required_values']['#value']['mail']);
+//      }
+//      break;
+//    case 'user_login_block':
+//    case 'user_login':
+//      $form['name']['#title'] = t('Local Drupal Username');
+//      $form['pass']['#title'] = t('Local Drupal Password');
+//      if ($form_id === 'user_login') {
+//	    // create a WebAuth login link
+///*
+//        if (!$_webauth_session) {
+//          $_webauth_session = new WebAuthSession();
+//        }
+//        $webauth_login = $_webauth_session->getLoginUrl();
+//*/
+//
+//    $webauth_login = 'http://www.yahoo.com';
+//
+//		// create a wrapper for the webauth link so we can de-emphasize the local user login form
+//	    $form['webauth_login_wrapper']['#title']       = t('WebAuth Login');
+//	    $form['webauth_login_wrapper']['#type']        = 'fieldset';
+//	    $form['webauth_login_wrapper']['#collapsible'] = TRUE;
+//	    $form['webauth_login_wrapper']['#collapsed']   = FALSE;
+//		$form['webauth_login_wrapper']['webauth_login_link']['#markup'] = theme('webauth_login_block',array('login_url' => $webauth_login, 'login_text' => variable_get('webauth_link_text', 'Log in with WebAuth')));
+//
+//		// create a wrapper for the form, so we can de-emphasize the local user login form
+//	    $form['local_login_wrapper']['#title']       = 'Local User Login';
+//	    $form['local_login_wrapper']['#type']        = 'fieldset';
+//	    $form['local_login_wrapper']['#collapsible'] = TRUE;
+//	    $form['local_login_wrapper']['#collapsed']   = TRUE;
+//
+//		// copy and move the form fields into the wrapper
+//	    $form['local_login_wrapper']['name'] = $form['name'];
+//	    $form['local_login_wrapper']['pass'] = $form['pass'];
+//	    $form['local_login_wrapper']['actions'] = $form['actions'];
+//	    unset($form['name']);
+//	    unset($form['pass']);
+//	    unset($form['actions']);
+//      }
 
       // Create a webauth session if needed and not already created.
 /*
@@ -412,8 +440,8 @@ function slac_webauth_form_alter(&$form, &$form_state, $form_id) {
         return;
       }
 */
-      break;
-  }
+//      break;
+// }
 }
 
 /**
@@ -630,6 +658,171 @@ function slac_webauth_write_htaccess() {
 */
 }
 
+
+/**
+ *  Test callback to illustrate each of the scenarios
+ */
+function slac_webauth_test() {
+
+  $items = array(
+    l('Authenticated as (auth_user), sign in as "auth_user" locally', 'admin/config/slac_webauth/tests/1'),
+    l('Authenticated as (auth_user), sync user role to author', 'admin/config/slac_webauth/tests/2'),
+    l('Authenticated as (auth_user), sync user role to editor', 'admin/config/slac_webauth/tests/3'),
+    l('Currently authenticated as (auth_user), set webauth_token to expire in the past, user should be logged out', 'admin/config/slac_webauth/tests/4'),
+  );
+
+  return theme('item_list', array('items' => $items, 'title' => t('Test cases'), 'type' => 'ol'));
+
+}
+
+/**
+ * Simulate each test case for the webauth authentication
+ * @param $test_case
+ */
+function slac_webauth_test_case($test_case) {
+  global $user;
+  $username = 'auth_user';
+  _slac_webauth_test_case($username, $test_case);
+  drupal_goto('slac_webauth_test_output');
+}
+
+function _slac_webauth_test_case($username, $test_case) {
+  global $user;
+  module_invoke_all('user_logout', $user);
+  $account = _slac_webauth_user_sync($username);
+
+  if (!empty($account)) {
+    // sync the roles
+    switch ($test_case) {
+      case 2:
+        _slac_webauth_user_role_sync($account, array('author'));
+      break;
+      case 3:
+        _slac_webauth_user_role_sync($account, array('editor'));
+      break;
+    }
+    $old_uid = $user->uid;
+    $user = $account;
+    $user->timestamp = time() - 9999;
+    if (!$old_uid) {
+      // Switch from anonymous to authorized.
+      drupal_session_regenerate();
+    }
+    // test: set the session variables
+    if ($test_case == 4) {
+      _slac_webauth_test_set_env($username, REQUEST_TIME - 3600);
+    } else {
+      _slac_webauth_test_set_env($username);
+    }
+    // if this checkout, let's redirect
+    $auth_info = _slac_webauth_auth();
+    if (!empty($auth_info)) {
+      $edit = array();
+      user_module_invoke('login', $edit, $user);
+    } else {
+      session_destroy();
+    }
+  }
+}
+
+
+/*
+ * Outputting results of the test
+ */
+function slac_webauth_test_output() {
+  global $user;
+  $output = '';
+  if ($user->uid > 0) {
+    $output = '$SESSION[WEB_AUTH][WEBAUTH_USER] = ' . $_SESSION['WEB_AUTH']['WEBAUTH_USER'] . "<br />";
+    $output .= '$SESSION[WEB_AUTH][REMOTE_USER] = ' . $_SESSION['WEB_AUTH']['REMOTE_USER'] . "<br />";
+    $output .= '$SESSION[WEB_AUTH][WEBAUTH_TOKEN_EXPIRATION] = ' . $_SESSION['WEB_AUTH']['WEBAUTH_TOKEN_EXPIRATION'] . " (" . date('Y-m-d H:i:s', $_SESSION['WEB_AUTH']['WEBAUTH_TOKEN_EXPIRATION']) . ")<br />";
+    $output .= '$user->mail = ' . $user->mail . "<br />";
+    $output .= '$user->name = ' . $user->name . "<br />";
+  }
+  $output .= '$user->roles = ' . print_r($user->roles, TRUE);
+  return $output;
+}
+
+/*
+ * Attempt to determine if user has been authenticated with web_auth
+ */
+function _slac_webauth_auth() {
+  // our attempt to authenticate with web auth
+  $env = $_SESSION['WEB_AUTH'];
+  if (!array_key_exists('WEBAUTH_USER', $env) ||
+  !array_key_exists('WEBAUTH_TOKEN_CREATION', $env) ||
+  !array_key_exists('WEBAUTH_TOKEN_EXPIRATION', $env)) {
+    return FALSE;
+  }
+
+  if ($env['REMOTE_USER'] != $env['WEBAUTH_USER']) {
+    return FALSE;
+  }
+
+  if ($env['WEBAUTH_TOKEN_EXPIRATION'] <= REQUEST_TIME) {
+    return FALSE;
+  }
+
+  return array(
+    'user' => $env['WEBAUTH_USER'],
+    'token_expiration' => $env['WEBAUTH_TOKEN_EXPIRATION'],
+  );
+}
+
+/**
+ * Set various SERVER environmental variables to satisfy webauth login
+ * @param $user                 web auth username
+ * @param int $expiration       web auth authenticate token expiration
+ */
+function _slac_webauth_test_set_env($user, $expiration = null) {
+
+  if (!isset($expiration)) {
+    $expiration = REQUEST_TIME + 3600;
+  }
+  $_SESSION['WEB_AUTH']['WEBAUTH_USER'] = $user;
+  $_SESSION['WEB_AUTH']['REMOTE_USER'] = $user;
+  $_SESSION['WEB_AUTH']['WEBAUTH_TOKEN_CREATION'] = REQUEST_TIME - 3600;
+  $_SESSION['WEB_AUTH']['WEBAUTH_TOKEN_EXPIRATION'] = $expiration;
+}
+
+/**
+ * Synchronize any roles to the user account in accordance to their web_auth groups
+ *
+ * @param $account      An drupal user account object
+ * @param $roles        An array of role (names) to sync with
+ */
+function _slac_webauth_user_role_sync($account, $roles = array()) {
+
+  // default role for user is always auth user
+  $user_roles = array(
+    2 => 'authenticated user',
+  );
+
+  $site_roles = _slac_webauth_user_role_load_all();
+  foreach ($roles as $role) {
+    if (array_key_exists($role, $site_roles)) {
+      // $roles[$rid] = $name
+      $user_roles[$site_roles[$role]] = $role;
+    }
+  }
+
+  $edit['roles'] = $user_roles;
+  user_save($account, $edit);
+
+}
+
+function _slac_webauth_user_role_load_all() {
+  $data = array();
+  $results = db_select('role', 'r')
+    ->fields('r')
+    ->execute();
+
+  foreach ($results as $result) {
+    $data[$result->name] = $result->rid;
+  }
+  return $data;
+}
+
 /**
  *  Helper function that creates or syncs a user
  *  At this stage we assume they have a valid session and the user has authenticated via webauth
@@ -642,7 +835,7 @@ function _slac_webauth_user_sync($wa_username) {
   $loaded_user = user_load_by_name($wa_username);
   if (!empty($loaded_user)) {
     // @todo:sync the user roles
-    return $loaded_user->uid;
+    return $loaded_user;
   }
 
   // saving a new user
@@ -662,5 +855,5 @@ function _slac_webauth_user_sync($wa_username) {
   // Set the authmap
   user_set_authmaps($account, array('authname_slac_webauth' => $edit['name']));
 
-  return $account->uid;
+  return $account;
 }
