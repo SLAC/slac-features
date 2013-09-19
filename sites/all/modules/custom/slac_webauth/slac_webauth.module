@@ -27,8 +27,9 @@ function slac_webauth_boot() {
  * Implement hook_init
  */
 function slac_webauth_init() {
-  global $_webauth_session, $user;
-
+  // global $_webauth_session, $user;
+  global $user;
+  
   // Displaying a custom message for 403
   $access_denied_page = variable_get('site_403', '');
   if ($access_denied_page != 'slac_webauth/403') {
@@ -40,26 +41,32 @@ function slac_webauth_init() {
     header("Cache-Control: no-store, no-cache, must-revalidate");
   }
 
+  // setting test webauth_at cookies
+  if ($_GET['q'] == 'admin/config/slac_webauth/cookie/set') {
+    _slac_webauth_test_set_cookie(REQUEST_TIME + 3600 * 24 * 30);
+  } 
+  if ($_GET['q'] == 'admin/config/slac_webauth/cookie/kill') {
+    _slac_webauth_test_set_cookie(REQUEST_TIME + -3600);
+  }
+  
   // End the session and log user out if:
   // the user is logged in as a WebAuth user and:
   // either the user no longer has a webauth_at cookie
   // or the user's token has expired, or is not there
   if ($user->uid > 0) {
     $authmap = db_query("SELECT * FROM {authmap} WHERE uid = :uid and module = :module", array(':uid' => $user->uid, ':module' => 'slac_webauth'))->fetchField();
-    if (empty($authmap)) {
-      return;
+    if (!empty($authmap)) {
+      // user no longer has a webauth_at cookie
+      if (!isset($_COOKIE['webauth_at'])) {
+        session_destroy();
+        session_start();
+        // Only variables can be passed by reference workaround.
+        $null = NULL;
+        user_module_invoke('user/logout', $null, $user);
+        // Load the anonymous user
+        $user = drupal_anonymous_user();
+      }
     }
-    // @todo: investigate, stanford WMD uses a check php script to go through php env vars
-    $server_vars = $_SERVER;
-    if (!isset($_COOKIE['webauth_at']) || 
-    !isset($server_vars['WEBAUTH_TOKEN_EXPIRATION']) ||
-    $server_vars['WEBAUTH_TOKEN_EXPIRATION'] <= REQUEST_TIME) {
-      session_destroy();
-      session_start();
-      $null = NULL;
-      user_module_invoke('user/logout', $null, $user);
-      $user = drupal_anonymous_user();
-    } 
   }
 }
 
@@ -118,6 +125,14 @@ function slac_webauth_menu() {
     'page arguments' => array(4),
     'access arguments' => array('administer site configuration'),
     // 'access callback' => TRUE,
+  );
+  
+  $items['admin/config/slac_webauth/cookie/%'] = array(
+    'title' => 'SLAC Webauth Test (set cookie)',
+    'type' => MENU_CALLBACK,
+    'page callback' => array('slac_webauth_test_cookie'),
+    'page arguments' => array(4),
+    'access arguments' => array('administer site configuration'),
   );
 
   $items['slac_webauth_test_output'] = array(
@@ -664,6 +679,16 @@ function slac_webauth_write_htaccess() {
  */
 function slac_webauth_test() {
 
+  $output = '<div class="messages warning">';
+  if (isset($_COOKIE['webauth_at'])) {
+    $c = $_COOKIE['webauth_at'];
+    $output .= "webauth_at cookie is set, info is below: <br /><br />";
+    $output .= $c;
+    $output .= "<p>Please " . l('click here', 'admin/config/slac_webauth/cookie/kill') . " to destroy this cookie</p>";
+  } else {
+    $output .= "webauth_at cookie is not set, " . l('click here', 'admin/config/slac_webauth/cookie/set') . " to set the cookie";
+  }
+  $output .= '</div>';
   $items = array(
     l('Authenticated as (auth_user), sign in as "auth_user" locally', 'admin/config/slac_webauth/tests/1'),
     l('Authenticated as (auth_user), sync user role to author', 'admin/config/slac_webauth/tests/2'),
@@ -671,8 +696,16 @@ function slac_webauth_test() {
     l('Currently authenticated as (auth_user), set webauth_token to expire in the past, user should be logged out', 'admin/config/slac_webauth/tests/4'),
   );
 
-  return theme('item_list', array('items' => $items, 'title' => t('Test cases'), 'type' => 'ol'));
+  $output .= theme('item_list', array('items' => $items, 'title' => t('Test cases'), 'type' => 'ol'));
+  return $output;
+}
 
+/**
+ * Callback for setting the test cookie
+ */
+function slac_webauth_test_cookie() {
+  // cookie is set in hook_init, we just go back to the test overview page
+  drupal_goto('admin/config/slac_webauth/tests');
 }
 
 /**
@@ -689,7 +722,7 @@ function slac_webauth_test_case($test_case) {
 function _slac_webauth_test_case($username, $test_case) {
   global $user;
   module_invoke_all('user_logout', $user);
-  $account = _slac_webauth_user_sync($username);
+  $account = _slac_webauth_user_sync($username, array());
 
   if (!empty($account)) {
     // sync the roles
@@ -769,6 +802,18 @@ function _slac_webauth_auth() {
   );
 }
 
+/**
+ * Testing webauth by setting the webauth_at cookie, this cookie should be set at slac.stanford.edu
+ * Curerntly it is set at webauth1.slac.stanford.edu
+ */
+function _slac_webauth_test_set_cookie($expiration = null) {
+  // set default expiration to 1 hour from now
+  if ($expiration = null) {
+    $expiration = REQUEST_TIME + 3600;
+  }
+  setcookie('webauth_at', md5(rand()), $expiration, '/');
+}
+ 
 /**
  * Set various SERVER environmental variables to satisfy webauth login
  * @param $user                 web auth username
