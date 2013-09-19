@@ -1,0 +1,7 @@
+name = Custom site variables
+description = Provide fields to administrate the site variables
+core = 7.x
+package = SLAC
+
+dependencies[] = panels
+files[] = plugins/content_types/site_address.inc
