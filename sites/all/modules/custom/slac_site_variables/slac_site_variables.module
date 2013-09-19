@@ -57,7 +57,6 @@ function slac_site_variables_form_system_theme_settings_alter(&$form, &$form_sta
  * Implements hook_ctools_plugin_directory().
  */
 function slac_site_variables_ctools_plugin_directory($module, $plugin) {
-    dsm($module,'module');
 //  if ($module === 'panels') {
     return 'plugins/' . $plugin;
   //}
