@@ -8,6 +8,7 @@ dependencies[] = menu
 dependencies[] = page_manager
 dependencies[] = panels_everywhere
 dependencies[] = panels_mini
+dependencies[] = slac_site_variables
 dependencies[] = strongarm
 features[ctools][] = page_manager:pages_default:1
 features[ctools][] = panels_mini:panels_default:1

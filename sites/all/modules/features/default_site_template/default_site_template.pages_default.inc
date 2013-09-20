@@ -20,7 +20,7 @@ function default_site_template_default_page_manager_handlers() {
   $handler->weight = 0;
   $handler->conf = array(
     'title' => 'Default site template',
-    'no_blocks' => 0,
+    'no_blocks' => 1,
     'pipeline' => 'standard',
     'body_classes_to_remove' => '',
     'body_classes_to_add' => '',
@@ -46,28 +46,21 @@ function default_site_template_default_page_manager_handlers() {
         'width' => 100,
         'width_type' => '%',
         'children' => array(
-          0 => 1,
-          1 => 2,
-          2 => 3,
+          0 => 4,
+          1 => 1,
+          2 => 2,
+          3 => 3,
         ),
         'parent' => 'canvas',
       ),
       1 => array(
         'type' => 'row',
-        'contains' => 'region',
+        'contains' => 'column',
         'children' => array(
-          0 => 'header',
+          0 => 5,
         ),
         'parent' => 'main',
         'class' => '',
-      ),
-      'header' => array(
-        'type' => 'region',
-        'title' => 'Header',
-        'width' => 100,
-        'width_type' => '%',
-        'parent' => '1',
-        'class' => 'header',
       ),
       2 => array(
         'type' => 'row',
@@ -88,20 +81,239 @@ function default_site_template_default_page_manager_handlers() {
       ),
       3 => array(
         'type' => 'row',
-        'contains' => 'region',
+        'contains' => 'column',
         'children' => array(
-          0 => 'footer',
+          0 => 9,
+          1 => 10,
         ),
         'parent' => 'main',
         'class' => '',
       ),
-      'footer' => array(
+      4 => array(
+        'type' => 'row',
+        'contains' => 'region',
+        'children' => array(
+          0 => 'left_side',
+          1 => 'search_side',
+          2 => 'secondary_menu_side',
+        ),
+        'parent' => 'main',
+        'class' => '',
+      ),
+      'left_side' => array(
         'type' => 'region',
-        'title' => 'Footer',
+        'title' => 'Logo side',
+        'width' => 50,
+        'width_type' => '%',
+        'parent' => '4',
+        'class' => '',
+      ),
+      'search_side' => array(
+        'type' => 'region',
+        'title' => 'Search side',
+        'width' => 25,
+        'width_type' => '%',
+        'parent' => '4',
+        'class' => '',
+      ),
+      'secondary_menu_side' => array(
+        'type' => 'region',
+        'title' => 'Secondary menu side',
+        'width' => 25,
+        'width_type' => '%',
+        'parent' => '4',
+        'class' => '',
+      ),
+      5 => array(
+        'type' => 'column',
         'width' => 100,
         'width_type' => '%',
+        'parent' => '1',
+        'children' => array(
+          0 => 6,
+          1 => 7,
+          2 => 8,
+        ),
+        'class' => '',
+      ),
+      6 => array(
+        'type' => 'row',
+        'contains' => 'region',
+        'children' => array(
+          0 => 'header_menu',
+        ),
+        'parent' => '5',
+        'class' => '',
+      ),
+      'header_menu' => array(
+        'type' => 'region',
+        'title' => 'header menu',
+        'width' => 100,
+        'width_type' => '%',
+        'parent' => '6',
+        'class' => '',
+      ),
+      7 => array(
+        'type' => 'row',
+        'contains' => 'region',
+        'children' => array(
+          0 => 'site_abbreviation',
+          1 => 'site_name',
+        ),
+        'parent' => '5',
+        'class' => '',
+      ),
+      'site_abbreviation' => array(
+        'type' => 'region',
+        'title' => 'site abbreviation',
+        'width' => 50,
+        'width_type' => '%',
+        'parent' => '7',
+        'class' => '',
+      ),
+      'site_name' => array(
+        'type' => 'region',
+        'title' => 'site name',
+        'width' => 50,
+        'width_type' => '%',
+        'parent' => '7',
+        'class' => '',
+      ),
+      8 => array(
+        'type' => 'row',
+        'contains' => 'region',
+        'children' => array(
+          0 => 'primary_menu',
+        ),
+        'parent' => '5',
+        'class' => '',
+      ),
+      'primary_menu' => array(
+        'type' => 'region',
+        'title' => 'primary menu',
+        'width' => 100,
+        'width_type' => '%',
+        'parent' => '8',
+        'class' => '',
+      ),
+      9 => array(
+        'type' => 'column',
+        'width' => 50,
+        'width_type' => '%',
         'parent' => '3',
-        'class' => 'footer',
+        'children' => array(
+          0 => 11,
+        ),
+        'class' => '',
+      ),
+      10 => array(
+        'type' => 'column',
+        'width' => 50,
+        'width_type' => '%',
+        'parent' => '3',
+        'children' => array(
+          0 => 17,
+        ),
+        'class' => '',
+      ),
+      11 => array(
+        'type' => 'row',
+        'contains' => 'column',
+        'children' => array(
+          0 => 12,
+          1 => 13,
+        ),
+        'parent' => '9',
+        'class' => '',
+      ),
+      12 => array(
+        'type' => 'column',
+        'width' => 50,
+        'width_type' => '%',
+        'parent' => '11',
+        'children' => array(
+          0 => 16,
+          1 => 18,
+        ),
+        'class' => '',
+      ),
+      13 => array(
+        'type' => 'column',
+        'width' => 50,
+        'width_type' => '%',
+        'parent' => '11',
+        'children' => array(
+          0 => 15,
+        ),
+        'class' => '',
+      ),
+      15 => array(
+        'type' => 'row',
+        'contains' => 'region',
+        'children' => array(
+          0 => 'footer_menu',
+        ),
+        'parent' => '13',
+        'class' => '',
+      ),
+      'footer_menu' => array(
+        'type' => 'region',
+        'title' => 'footer menu',
+        'width' => 100,
+        'width_type' => '%',
+        'parent' => '15',
+        'class' => '',
+      ),
+      16 => array(
+        'type' => 'row',
+        'contains' => 'region',
+        'children' => array(
+          0 => 'site_name_',
+        ),
+        'parent' => '12',
+        'class' => '',
+      ),
+      'site_name_' => array(
+        'type' => 'region',
+        'title' => 'site name',
+        'width' => 100,
+        'width_type' => '%',
+        'parent' => '16',
+        'class' => '',
+      ),
+      17 => array(
+        'type' => 'row',
+        'contains' => 'region',
+        'children' => array(
+          0 => 'social_links',
+        ),
+        'parent' => '10',
+        'class' => '',
+      ),
+      'social_links' => array(
+        'type' => 'region',
+        'title' => 'social links',
+        'width' => 100,
+        'width_type' => '%',
+        'parent' => '17',
+        'class' => '',
+      ),
+      18 => array(
+        'type' => 'row',
+        'contains' => 'region',
+        'children' => array(
+          0 => 'site_address_',
+        ),
+        'parent' => '12',
+        'class' => '',
+      ),
+      'site_address_' => array(
+        'type' => 'region',
+        'title' => 'site address',
+        'width' => 100,
+        'width_type' => '%',
+        'parent' => '18',
+        'class' => '',
       ),
     ),
   );
@@ -111,6 +323,18 @@ function default_site_template_default_page_manager_handlers() {
       'header' => NULL,
       'content' => NULL,
       'footer' => NULL,
+      'left_side' => NULL,
+      'search_side' => NULL,
+      'secondary_menu_side' => NULL,
+      'header_menu' => NULL,
+      'site_abbreviation' => NULL,
+      'site_name' => NULL,
+      'primary_menu' => NULL,
+      'site_address' => NULL,
+      'footer_menu' => NULL,
+      'site_name_' => NULL,
+      'social_links' => NULL,
+      'site_address_' => NULL,
     ),
   );
   $display->cache = array();
@@ -159,9 +383,9 @@ function default_site_template_default_page_manager_handlers() {
     $display->panels['content'][1] = 'new-2';
     $pane = new stdClass();
     $pane->pid = 'new-3';
-    $pane->panel = 'footer';
-    $pane->type = 'panels_mini';
-    $pane->subtype = 'footer';
+    $pane->panel = 'footer_menu';
+    $pane->type = 'block';
+    $pane->subtype = 'menu-menu-footer-menu';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -177,28 +401,10 @@ function default_site_template_default_page_manager_handlers() {
     $pane->position = 0;
     $pane->locks = array();
     $display->content['new-3'] = $pane;
-    $display->panels['footer'][0] = 'new-3';
+    $display->panels['footer_menu'][0] = 'new-3';
     $pane = new stdClass();
     $pane->pid = 'new-4';
-    $pane->panel = 'header';
-    $pane->type = 'pane_header';
-    $pane->subtype = 'pane_header';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-4'] = $pane;
-    $display->panels['header'][0] = 'new-4';
-    $pane = new stdClass();
-    $pane->pid = 'new-5';
-    $pane->panel = 'header';
+    $pane->panel = 'header_menu';
     $pane->type = 'block';
     $pane->subtype = 'menu-menu-header-menu';
     $pane->shown = TRUE;
@@ -213,12 +419,186 @@ function default_site_template_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-4'] = $pane;
+    $display->panels['header_menu'][0] = 'new-4';
+    $pane = new stdClass();
+    $pane->pid = 'new-5';
+    $pane->panel = 'left_side';
+    $pane->type = 'page_logo';
+    $pane->subtype = 'page_logo';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
     $pane->locks = array();
     $display->content['new-5'] = $pane;
-    $display->panels['header'][1] = 'new-5';
+    $display->panels['left_side'][0] = 'new-5';
+    $pane = new stdClass();
+    $pane->pid = 'new-6';
+    $pane->panel = 'primary_menu';
+    $pane->type = 'block';
+    $pane->subtype = 'system-main-menu';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-6'] = $pane;
+    $display->panels['primary_menu'][0] = 'new-6';
+    $pane = new stdClass();
+    $pane->pid = 'new-7';
+    $pane->panel = 'search_side';
+    $pane->type = 'block';
+    $pane->subtype = 'search-form';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-7'] = $pane;
+    $display->panels['search_side'][0] = 'new-7';
+    $pane = new stdClass();
+    $pane->pid = 'new-8';
+    $pane->panel = 'secondary_menu_side';
+    $pane->type = 'block';
+    $pane->subtype = 'system-user-menu';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-8'] = $pane;
+    $display->panels['secondary_menu_side'][0] = 'new-8';
+    $pane = new stdClass();
+    $pane->pid = 'new-9';
+    $pane->panel = 'site_abbreviation';
+    $pane->type = 'site_name_abbreviation';
+    $pane->subtype = 'site_name_abbreviation';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-9'] = $pane;
+    $display->panels['site_abbreviation'][0] = 'new-9';
+    $pane = new stdClass();
+    $pane->pid = 'new-10';
+    $pane->panel = 'site_address_';
+    $pane->type = 'site_address';
+    $pane->subtype = 'site_address';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-10'] = $pane;
+    $display->panels['site_address_'][0] = 'new-10';
+    $pane = new stdClass();
+    $pane->pid = 'new-11';
+    $pane->panel = 'site_name';
+    $pane->type = 'page_site_name';
+    $pane->subtype = 'page_site_name';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-11'] = $pane;
+    $display->panels['site_name'][0] = 'new-11';
+    $pane = new stdClass();
+    $pane->pid = 'new-12';
+    $pane->panel = 'site_name_';
+    $pane->type = 'page_site_name';
+    $pane->subtype = 'page_site_name';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-12'] = $pane;
+    $display->panels['site_name_'][0] = 'new-12';
+    $pane = new stdClass();
+    $pane->pid = 'new-13';
+    $pane->panel = 'social_links';
+    $pane->type = 'block';
+    $pane->subtype = 'slac_social_media-social_media';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-13'] = $pane;
+    $display->panels['social_links'][0] = 'new-13';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-4';
+  $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $export['site_template_panel_context'] = $handler;
 

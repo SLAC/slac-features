@@ -78,5 +78,6 @@ dependencies[] = pp_slideshow
 dependencies[] = slac_webform_botcha
 
 ; Features
+dependencies[] = default_site_template
 dependencies[] = slac_form_building
 
