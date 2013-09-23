@@ -4,6 +4,28 @@
  * Install, update and uninstall functions for the standard installation profile.
  */
 
+
+/**
+ * Implements hook_install_tasks().
+ */
+function slac_people_install_tasks($install_state) {
+  $tasks = array();
+  $tasks['demo_content'] = array(
+    'display_name' => st('Demo content'),
+    'display' => TRUE,
+    'type' => 'normal',
+    'run' => INSTALL_TASK_RUN_IF_NOT_COMPLETED,
+    'function' => 'slac_people_install_task_demo_content',
+  );
+
+  return $tasks;
+}
+
+function slac_people_install_task_demo_content() {
+  module_enable(array('slac_demo_content'));
+}
+
+
 /**
  * Implements hook_install().
  *
@@ -11,7 +33,7 @@
  *
  * @see system_install()
  */
-function slac_people_profile_install() {
+function slac_people_install() {
   // Add text formats.
   $filtered_html_format = array(
     'format' => 'filtered_html',

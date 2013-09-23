@@ -78,6 +78,7 @@ dependencies[] = pp_slideshow
 dependencies[] = slac_webform_botcha
 dependencies[] = slac_rss_block
 dependencies[] = slac_social_media
+dependencies[] = pp_demo
 
 
 ; Features
@@ -86,6 +87,6 @@ dependencies[] = default_site_template
 dependencies[] = slac_form_building
 
 dependencies[] = slac_blog
-dependencies[] = slac_blog_demo
+;dependencies[] = slac_blog_demo
 
 dependencies[] = slac_social_media_block
