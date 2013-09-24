@@ -7,7 +7,7 @@
 /**
  * Implements hook_taxonomy_default_vocabularies().
  */
-function slac_blog_taxonomy_default_vocabularies() {
+/*function slac_blog_taxonomy_default_vocabularies() {
   return array(
     'slac_blog_category' => array(
       'name' => 'Blog Category',
@@ -56,4 +56,4 @@ function slac_blog_taxonomy_default_vocabularies() {
       ),
     ),
   );
-}
+}*/

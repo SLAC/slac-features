@@ -92,7 +92,6 @@ function pp_demo_modules_enabled($modules) {
     // at that moment. So we run revert second time so on second run user is in
     // place and link between user and node is saved properly.
     features_revert($revert_items);
-    module_enable();
     features_revert($revert_items);
     features_revert($revert_items);
   }
