@@ -53,7 +53,7 @@ function slac_rss_block_views_default_views() {
   $handler = $view->new_display('panel_pane', 'Content pane', 'rss_block');
   $handler->display->display_options['pane_category']['name'] = 'SLAC';
   $handler->display->display_options['pane_category']['weight'] = '0';
-  $export['rss_block'] = $view;
+  $export['slac_rss_block'] = $view;
 
   return $export;
 }
