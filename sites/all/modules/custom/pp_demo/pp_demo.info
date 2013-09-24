@@ -1,4 +1,4 @@
-name = ProPeople demo content
+name = PP demo content
 description = Helpers to keep the data consistent.
 core = 7.x
 package = Features

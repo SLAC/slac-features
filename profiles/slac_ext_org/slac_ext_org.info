@@ -107,6 +107,8 @@ dependencies[] = slac_webform_botcha
 dependencies[] = slac_rss_block
 
 ;Features
+dependencies[] = default_site_template
+
 dependencies[] = slac_profile_base
 
 dependencies[] = slac_form_building

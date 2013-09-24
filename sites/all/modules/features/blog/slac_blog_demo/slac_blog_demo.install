@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * Implements hook_install().
+ *
+ * We alter file export variable here (instead of exporting whole variable) so
+ * other modules like other demo content features can also set up their individual
+ * content type file export settings.
+ */
+function slac_blog_demo_install() {
+  $blog_file_export_settings = variable_get('uuid_features_file_node_types', array());
+  $blog_file_export_settings['blog'] = 'blog';
+  variable_set('uuid_features_file_node_types', $blog_file_export_settings);
+}
