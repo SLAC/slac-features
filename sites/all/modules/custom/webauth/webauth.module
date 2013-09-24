@@ -1,0 +1,325 @@
+<?php
+
+define('EMAIL_DOMAIN', 'slac.stanford.edu');
+
+function webauth_menu() {
+  $items['admin/config/system/webauth'] = array(
+    'title' => 'Webauth',
+    'description' => 'Configure Weabauth',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('webauth_admin_settings_form'),
+    'access arguments' => array('administer webauth'),
+    'file' => 'webauth.admin.inc',
+  );
+  $items['webauth/authenticate'] = array(
+      'title' => 'Webauth Login',
+      'page callback' => 'webauth_authentication_page',
+      'access callback' => 'user_is_anonymous',
+      'type' => MENU_CALLBACK,
+      'file' => 'webauth.pages.inc',
+  );
+  $items['webauth/403'] = array(
+    'page callback' => 'webauth_error_page',
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+  );
+  return $items;
+}
+
+/**
+ * Implements hook_help().
+ */
+function webauth_help($path, $arg) {
+  $output = '';
+  switch ($path) {
+    case 'admin/modules#description':
+      $output .= t('Webauth authentication module.');
+      break;
+    case 'admin/config/system/webauth':
+      $output .= t('<p>Information about Drupal webauth can be found at !link</p>', array('!link' => l('admin/structure/block', 'admin/structure/block')));
+      break;
+  }
+  return $output;
+}
+
+/**
+ *  Implements hook_boot().
+ */
+function webauth_boot() {
+  // pass through authentication, user have cookie, just go through and populate the session with webauth info
+  global $user, $base_url;
+  if ($user->uid == 0) {
+    if (isset($_COOKIE['webauth_at'])) {
+      header("Location: " . $base_url . '/sites/default/files/webauth/login.php');
+    }
+  }
+}
+
+/**
+ * Implements hook_init().
+ */
+function webauth_init() {
+  global $user;
+
+  // Displaying a custom message for 403
+  $access_denied_page = variable_get('site_403', '');
+  if ($access_denied_page != 'webauth/403') {
+    variable_set('site_403', 'webauth/403');
+  }
+  // Pages for logged in users should not be cached
+  if ($user->uid > 0) {
+    header("Cache-Control: no-store, no-cache, must-revalidate");
+  }
+  // End the session and log user out if:
+  // the user is logged in as a WebAuth user and:
+  // either the user no longer has a webauth_at cookie
+  // @todo: or the user's token has expired, or is not there
+  if ($user->uid > 0) {
+    $authmap = db_query("SELECT * FROM {authmap} WHERE uid = :uid and module = :module", array(':uid' => $user->uid, ':module' => 'webauth'))->fetchField();
+    if (!empty($authmap)) {
+      // user no longer has a webauth_at cookie
+      if (!isset($_COOKIE['webauth_at']) ||
+        !isset($_SESSION['wa_data']['wa_token_expiration']) ||
+        $_SESSION['wa_data']['wa_token_expiration'] < REQUEST_TIME) {
+        session_destroy();
+        session_start();
+        // Only variables can be passed by reference workaround.
+        $null = NULL;
+        user_module_invoke('user/logout', $null, $user);
+        // Load the anonymous user
+        $user = drupal_anonymous_user();
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_permission().
+ */
+function webauth_permission() {
+  return array(
+      'administer webauth' => array(
+          'title' => t('Admin webauth authentication'),
+          'description' => t('Admin the webauth authentication module settings page.'),
+      ),
+  );
+}
+
+/**
+ * Implements hook_theme
+ */
+function webauth_theme() {
+  return array(
+      // Theme function for the 'sortable' example
+      'webauth_login_link' => array(
+          'render element' => 'form',
+      ),
+  );
+}
+
+/**
+ * Override the login form
+ * @param unknown_type $form
+ * @param unknown_type $form_state
+ * @param unknown_type $form_id
+ */
+function webauth_form_alter(&$form, $form_state, $form_id) {
+  
+  global $user, $conf;
+
+  if ($form_id == 'user_login_block' || $form_id == 'user_login') {
+
+    if (isset($form_state['weblogin']['server'])) {
+      $form['#validate'] = array('webauth_auth');
+    }
+    drupal_session_start();
+    $form['webauth_link'] = array(
+        '#prefix' => '<div id="webauth-link">',  // make it themable
+        '#markup' => _webauth_get_login_link(),
+        '#suffix' => '</div>',
+        '#weight' => -10
+    );
+    $allow_local = variable_get('webauth_allow_drupal_login', TRUE);
+    if (!$allow_local) {
+      unset($form['name']);
+      unset($form['pass']);
+      unset($form['links']);
+      unset($form['actions']);
+    }
+  }
+  $form['webauth.return_to'] = array('#type' => 'hidden', '#value' => url('user', array('absolute' => TRUE, 'query' => user_login_destination())));
+}
+
+/**
+ * Login form _validate hook
+ */
+function webauth_login_validate($form, &$form_state) {
+  $return_to = $form_state['values']['webauth.return_to'];
+  if (empty($return_to)) {
+    $return_to = url('', array('absolute' => TRUE));
+  }
+
+  webauth_begin($return_to, $form_state['values']);
+}
+
+function webauth_begin($return_to, $form_state) {
+  drupal_goto('files/webauth/login.php');
+  //TODO Get the destinations sorted
+}
+
+
+/**
+ * Check if user is authenticated through webauth
+ * @return array $result    A result status on whether the user is authenticated through webauth
+ */
+function webauth_complete() {
+  $result = array();
+  // @todo: How to account for token expiration
+  if ($_SESSION['wa_data'] && $_SESSION['wa_data']['wa_user']) {
+    $result['status'] = 'success';
+  } else {
+    $result['status'] = 'failed';
+  }
+
+  return $result;
+}
+
+/**
+ * Authenticate and sign in the user
+ */
+function webauth_authentication() {
+  global $user;
+  if ($user->uid != 0) {
+    return;
+  }
+
+  if (isset($_SESSION['wa_data']['wa_user'])) {
+    $username = $_SESSION['wa_data']['wa_user'];
+    $account = _webauth_user_sync($username);
+    $form_state['uid'] = $account->uid;
+    user_login_submit(array(), $form_state);
+  }
+  drupal_goto();
+}
+
+/**
+ * Handle 403 errors by redirecting users to webauth for login.
+ *
+ * If, however, they are already logged in and don't have access
+ * (for instance, a normal user requesting /admin), then display
+ * a normal error message.
+ */
+
+function webauth_error_page() {
+  global $user;
+
+  // Get restrict message
+  $webauth_restrict_message = filter_xss_admin(t(variable_get('webauth_restrict_message',
+    'This content has been restricted by the author or by the site administrator.')));
+
+  if ($webauth_restrict_message) {
+    if ($user->uid == 0) {
+     $login = _webauth_get_login_link();
+     $webauth_restrict_message .= '<p>' . $login . '</p>';
+    }
+    drupal_add_http_header('Status', '403 Forbidden');
+    drupal_set_title(t('Access denied'));
+    return $webauth_restrict_message;
+  } else {
+    return MENU_ACCESS_DENIED;
+  }
+}
+
+
+/**
+ *  Helper function that creates or syncs a user
+ *  At this stage we assume they have a valid session and the user has authenticated via webauth
+ */
+function _webauth_user_sync($wa_username) {
+  // 1. look for any existing users by username
+  // 1a. if user not found, let's create a normal user
+  // 1b. if user found, just return the user
+  // 2. We will also sync the user roles in this function
+  $loaded_user = user_load_by_name($wa_username);
+  if (!empty($loaded_user)) {
+    // @todo:sync the user roles
+    return $loaded_user;
+  }
+
+  // saving a new user
+  $mail = $wa_username . '@' . EMAIL_DOMAIN;
+  $edit = array(
+    'name' => check_plain($wa_username),
+    'pass' => user_password(),
+    'mail' => $mail,
+    'init' => $mail,
+    'status' => 1,
+    'access' => REQUEST_TIME,
+  );
+
+  // @todo:sync the user roles
+  $account = user_save(null, $edit);
+
+  // Set the authmap
+  user_set_authmaps($account, array('authname_webauth' => $edit['name']));
+
+  return $account;
+}
+
+/*
+ * Build and optionally redirect user to webauth login link
+ */
+function _webauth_get_login_link($redirect = FALSE) {
+  // build a link to wa_login.
+  $link_text = variable_get('webauth_link_text','Webauth Login');
+
+  $path = 'sites/default/files/webauth/login.php';
+  if ($redirect) {
+    drupal_goto($path);
+  } else {
+    return l($link_text, $path);
+  }
+}
+
+/**
+ * Synchronize any roles to the user account in accordance to their web_auth groups
+ *
+ * @param $account      An drupal user account object
+ * @param $roles        An array of role (names) to sync with
+ */
+function _webauth_user_role_sync($account, $roles = array()) {
+
+  // default role for user is always auth user
+  $user_roles = array(
+    2 => 'authenticated user',
+  );
+
+  $site_roles = _slac_webauth_user_role_load_all();
+  foreach ($roles as $role) {
+    if (array_key_exists($role, $site_roles)) {
+      // $roles[$rid] = $name
+      $user_roles[$site_roles[$role]] = $role;
+    }
+  }
+
+  $edit['roles'] = $user_roles;
+  user_save($account, $edit);
+
+}
+
+/**
+ * Fetch all user roles
+ * @return array $data
+ */
+
+function _webauth_user_role_load_all() {
+  $data = array();
+  $results = db_select('role', 'r')
+    ->fields('r')
+    ->execute();
+
+  foreach ($results as $result) {
+    $data[$result->name] = $result->rid;
+  }
+  return $data;
+}

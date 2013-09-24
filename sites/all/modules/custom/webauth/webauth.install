@@ -1,0 +1,71 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the webauth module
+ */
+
+/**
+ * Implements hook_requirements().
+ */
+function webauth_requirements($phase) {
+  $requirements = array();
+  
+//   $directory = file_directory_path() .'/webauth';
+//   if ($phase == 'install' && !file_check_directory($directory, TRUE)) {
+//     $requirements['webauth']['severity'] = REQUIREMENT_ERROR;
+//     $requirements['webauth']['description'] = t('The Webauth protected directory does not exist in your site Drupal directory and it could not be created.  Please check !file_system settings.', array('!file_system' => l('file system', 'admin/config/media/file-system')));
+//   }
+  return $requirements;
+}
+
+/**
+ * Implements hook_field_schema()
+ */
+function webauth_field_schema() {
+
+}
+/**
+ * Implements hook_schema().
+ */
+function webauth_schema() {
+
+}
+
+/**
+ * Implements hook_install().
+ */
+function webauth_install() {
+  //We will store the webauth directory in 'files' - we could do it in private - but will
+  //that mess up our htaccess.  It shouldn't but I haven't tried to find out.
+  $directory = drupal_realpath(file_default_scheme() . '://webauth');
+  drupal_set_message('Creating directory ' . $directory);
+  if (!is_dir($directory) && !drupal_mkdir($directory, NULL, TRUE)) {
+    drupal_set_message('The webauth directory could not be created.  You must create a webauth folder in your sites directory.');
+  }
+  //The .htaccess is used to tell Apache Webauth is protecting a given
+  //asset.  We collect the bits of this in an array
+  $htaccess = array(
+      'AuthType WebAuth',
+      'require valid-user',
+  );
+  
+  //And now copy over our protected page to that directory
+  copy(drupal_get_path('module', 'webauth') . '/assets/login.php', $directory . '/login.php');
+  //TODO we should check read/write access of that file
+  //Write the .htaccess file to the directory
+  $htaccess_lines = implode("\r\n", $htaccess);
+
+  if (file_put_contents($directory . "/.htaccess", $htaccess_lines)) {
+    drupal_chmod($directory . "/.htaccess", 0444);
+  } else  {
+    drupal_set_message('The .htaccess file could not be written.  You must copy an .htaccess file over to the webauth directory.');
+  }
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function webauth_uninstall() {
+  //We should clean up after ourselves
+}

@@ -1,0 +1,4 @@
+name = Webauth
+description = Provides access to webauth login functionality
+package = Webauth
+core = 7.x
