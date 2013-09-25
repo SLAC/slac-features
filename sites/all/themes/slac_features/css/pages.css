@@ -36,24 +36,28 @@
  * Body
  */
 /* Main styles */
-/* line 20, ../sass/pages.scss */
+/* line 19, ../sass/pages.scss */
+.page-basic {
+  overflow: hidden;
+}
+/* line 21, ../sass/pages.scss */
 .page-basic > .panel-panel {
   width: 100%;
 }
-/* line 22, ../sass/pages.scss */
+/* line 23, ../sass/pages.scss */
 .page-basic > .panel-panel > .inside {
   width: 1000px;
   margin: auto;
 }
-/* line 27, ../sass/pages.scss */
+/* line 28, ../sass/pages.scss */
 .page-basic > .header {
   background: #720c20;
 }
-/* line 30, ../sass/pages.scss */
+/* line 31, ../sass/pages.scss */
 .page-basic > .footer-first {
   background: #dcdac7;
 }
-/* line 33, ../sass/pages.scss */
+/* line 34, ../sass/pages.scss */
 .page-basic > .footer-seccond {
   background: #878787;
 }
