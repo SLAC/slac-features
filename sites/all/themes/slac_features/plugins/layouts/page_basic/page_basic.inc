@@ -17,7 +17,8 @@ $plugin = array(
     'site-title' => t('Site title'),
     'main-menu' => t('Main menu'),
     'content' => t('Content'),
-    'footer' => t('Footer')
+    'footer-seccond' => t('Footer First'),
+    'footer-first' => t('Footer Seccond')
 
   ),
 );

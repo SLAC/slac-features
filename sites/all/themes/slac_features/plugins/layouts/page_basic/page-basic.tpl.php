@@ -42,7 +42,12 @@
       <?php endif ?>
   </div>
 
-  <div class="panel-panel footer">
+  <div class="panel-panel footer-first">
+     <?php if ($content['footer']): ?>
+        <div class="inside"><?php print $content['footer']; ?></div>
+      <?php endif ?>
+  </div>
+  <div class="panel-panel footer-seccond">
      <?php if ($content['footer']): ?>
         <div class="inside"><?php print $content['footer']; ?></div>
       <?php endif ?>
