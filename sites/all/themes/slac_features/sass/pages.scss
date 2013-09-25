@@ -128,3 +128,25 @@
 	  color: #881728;
 	}
 }
+
+/* Footer */
+
+.pane-bundle-social-media{
+  float: right;
+  .field{
+    width: 33px;
+    height: 1px;
+    padding: 32px 0 0 0;
+    overflow: hidden;
+    float:left;
+    margin-left: 18px;
+    background: url('../images/socials-desktop.png') no-repeat;
+    a{
+      display:block;
+    }
+  }
+  .field-name-field-slac-sm-twitter-page{background-position: -49px 0;}
+  .field-name-field-slac-sm-youtube-page{background-position: -196px 0;}
+  .field-name-field-slac-sm-google-page{background-position: -147px 0;}
+  .field-name-field-slac-sm-flickr-page{background-position: -98px 0;}
+}

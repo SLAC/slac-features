@@ -168,3 +168,39 @@
   border-bottom: 2px solid #881728;
   color: #881728;
 }
+
+/* Footer */
+/* line 134, ../sass/pages.scss */
+.pane-bundle-social-media {
+  float: right;
+}
+/* line 136, ../sass/pages.scss */
+.pane-bundle-social-media .field {
+  width: 33px;
+  height: 1px;
+  padding: 32px 0 0 0;
+  overflow: hidden;
+  float: left;
+  margin-left: 18px;
+  background: url("../images/socials-desktop.png") no-repeat;
+}
+/* line 144, ../sass/pages.scss */
+.pane-bundle-social-media .field a {
+  display: block;
+}
+/* line 148, ../sass/pages.scss */
+.pane-bundle-social-media .field-name-field-slac-sm-twitter-page {
+  background-position: -49px 0;
+}
+/* line 149, ../sass/pages.scss */
+.pane-bundle-social-media .field-name-field-slac-sm-youtube-page {
+  background-position: -196px 0;
+}
+/* line 150, ../sass/pages.scss */
+.pane-bundle-social-media .field-name-field-slac-sm-google-page {
+  background-position: -147px 0;
+}
+/* line 151, ../sass/pages.scss */
+.pane-bundle-social-media .field-name-field-slac-sm-flickr-page {
+  background-position: -98px 0;
+}
