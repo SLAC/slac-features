@@ -46,14 +46,14 @@
   margin: auto;
 }
 /* line 27, ../sass/pages.scss */
-.page-basic > .panel-panel > .header {
+.page-basic > .header {
   background: #720c20;
 }
-/* line 31, ../sass/pages.scss */
-.page-basic > .panel-panel > .footer-first {
+/* line 30, ../sass/pages.scss */
+.page-basic > .footer-first {
   background: #dcdac7;
 }
-/* line 35, ../sass/pages.scss */
-.page-basic > .panel-panel > .footer-seccond {
+/* line 33, ../sass/pages.scss */
+.page-basic > .footer-seccond {
   background: #878787;
 }
