@@ -127,7 +127,7 @@ function default_site_template_default_panels_mini() {
     $pane->configuration = array(
       'admin_title' => 'Footer text',
       'title' => '',
-      'body' => '<div class="footer-text-line"><span class="laboratory-title">Slac National Accelerator Laboratory</span> 2575 Sand Hill Road, Menlo Park, CA 94025</div><div class="footer-text-line">Operated by Stanford University for the U.S. Department of Energy Office of Science</div>',
+      'body' => '<div class="footer-text-line">&nbsp;</div><div class="footer-text-line"><span><a href="http://www.slac.stanford.edu">Slac National Accelerator Laboratory</a></span></div>',
       'format' => 'full_html',
       'substitute' => TRUE,
     );
@@ -143,6 +143,48 @@ function default_site_template_default_panels_mini() {
     $display->panels['center'][0] = 'new-1';
     $pane = new stdClass();
     $pane->pid = 'new-2';
+    $pane->panel = 'center';
+    $pane->type = 'site_address';
+    $pane->subtype = 'site_address';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $display->content['new-2'] = $pane;
+    $display->panels['center'][1] = 'new-2';
+    $pane = new stdClass();
+    $pane->pid = 'new-3';
+    $pane->panel = 'center';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => 'Footer text 2',
+      'title' => '',
+      'body' => '<p><span>Operated by <a href="http://www.stanford.edu" target="_blank">Stanford University</a> for the <a href="http://science.energy.gov" target="_blank">U.S. Department of Energy Office of Science</a></span></p>',
+      'format' => 'full_html',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $display->content['new-3'] = $pane;
+    $display->panels['center'][2] = 'new-3';
+    $pane = new stdClass();
+    $pane->pid = 'new-4';
     $pane->panel = 'footer_logo';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
@@ -151,7 +193,7 @@ function default_site_template_default_panels_mini() {
     $pane->configuration = array(
       'admin_title' => 'Footer logo',
       'title' => '',
-      'body' => '<p><img alt="" src="/sites/default/files/footer-logos.png" title="" /></p>',
+      'body' => '<p><a href="http://www.stanford.edu" target="_blank"><img alt="stanford-logo" src="/sites/default/files/stanford-logo.png" /></a><a href="http://science.energy.gov" target="_blank"><img alt="doe-logo" src="/sites/default/files/doe-logo.png" /></a></p>',
       'format' => 'full_html',
       'substitute' => TRUE,
     );
@@ -163,10 +205,10 @@ function default_site_template_default_panels_mini() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['footer_logo'][0] = 'new-2';
+    $display->content['new-4'] = $pane;
+    $display->panels['footer_logo'][0] = 'new-4';
     $pane = new stdClass();
-    $pane->pid = 'new-3';
+    $pane->pid = 'new-5';
     $pane->panel = 'footer_menu';
     $pane->type = 'block';
     $pane->subtype = 'menu-menu-footer-menu';
@@ -184,8 +226,8 @@ function default_site_template_default_panels_mini() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['footer_menu'][0] = 'new-3';
+    $display->content['new-5'] = $pane;
+    $display->panels['footer_menu'][0] = 'new-5';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $mini->display = $display;
