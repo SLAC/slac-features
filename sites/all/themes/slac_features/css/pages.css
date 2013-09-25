@@ -103,4 +103,37 @@
 /* line 72, ../sass/pages.scss */
 .header-menu ul li a {
   color: #757575;
+  padding: 0 13px;
+  border-left: 1px solid #757575;
+  display: block;
+}
+/* line 78, ../sass/pages.scss */
+.header-menu ul li.first a {
+  border-left: none;
+  padding-left: 0;
+}
+/* line 83, ../sass/pages.scss */
+.header-menu ul li.last a {
+  padding-right: 0;
+}
+
+/* line 89, ../sass/pages.scss */
+.site-title {
+  padding: 30px 0 10px;
+}
+/* line 91, ../sass/pages.scss */
+.site-title .panel-pane {
+  float: left;
+  color: #353535;
+}
+/* line 95, ../sass/pages.scss */
+.site-title .pane-site-name-abbreviation {
+  font-size: 50px;
+  font-weight: bold;
+  margin-right: 50px;
+}
+/* line 100, ../sass/pages.scss */
+.site-title .pane-page-site-name {
+  font-size: 32px;
+  padding-top: 15px;
 }
