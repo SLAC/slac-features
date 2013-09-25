@@ -12,10 +12,13 @@ $plugin = array(
   'theme arguments' => array('id', 'content'),
   'css' => 'page_basic.css',
   'regions' => array(
-    'menu' => t('Responsive menu'),
     'header' => t('Header'),
+    'header-menu' => t('Header menu'),
+    'site-title' => t('Site title'),
+    'main-menu' => t('Main menu'),
     'content' => t('Content'),
     'footer' => t('Footer')
+
   ),
 );
 

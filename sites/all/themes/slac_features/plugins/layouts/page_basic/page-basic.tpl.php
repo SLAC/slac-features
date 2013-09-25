@@ -16,17 +16,26 @@
 ?>
 <div class="panel-display page-basic clearfix" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
 
-  <div class="sidebar-menu">
-    <?php if ($content['menu']): ?>
-      <?php print $content['menu']; ?>
-    <?php endif ?>
-  </div>
   <div class="panel-panel header">
      <?php if ($content['header']): ?>
         <div class="inside"><?php print $content['header']; ?></div>
       <?php endif ?>
   </div>
-
+  <div class="panel-panel header-menu">
+     <?php if ($content['header-menu']): ?>
+        <div class="inside"><?php print $content['header-menu']; ?></div>
+      <?php endif ?>
+  </div>
+  <div class="panel-panel site-title">
+     <?php if ($content['site-title']): ?>
+        <div class="inside"><?php print $content['site-title']; ?></div>
+      <?php endif ?>
+  </div>
+  <div class="panel-panel main-menu">
+     <?php if ($content['main-menu']): ?>
+        <div class="inside"><?php print $content['main-menu']; ?></div>
+      <?php endif ?>
+  </div>
   <div class="panel-panel content">
      <?php if ($content['content']): ?>
         <div class="inside"><?php print $content['content']; ?></div>
