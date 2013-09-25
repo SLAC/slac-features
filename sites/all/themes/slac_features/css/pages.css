@@ -79,7 +79,7 @@
 /* line 53, ../sass/pages.scss */
 .header .pane-system-user-menu {
   margin-left: 15px;
-  padding-top: 10px;
+  padding-top: 13px;
   float: right;
 }
 /* line 57, ../sass/pages.scss */
@@ -100,58 +100,104 @@
 }
 
 /* line 74, ../sass/pages.scss */
+.pane-search-form {
+  padding-top: 6px;
+}
+/* line 77, ../sass/pages.scss */
+.pane-search-form .form-item,
+.pane-search-form .form-actions {
+  border: 1px solid #945c65;
+  border-top-color: #772330;
+  border-bottom-color: #772330;
+  margin: 0;
+  float: left;
+  padding: 0;
+  height: 21px;
+  line-height: 21px;
+  background: #fff;
+}
+/* line 88, ../sass/pages.scss */
+.pane-search-form .form-item {
+  padding: 0 9px;
+}
+/* line 91, ../sass/pages.scss */
+.pane-search-form .form-actions {
+  margin-left: 6px;
+}
+/* line 94, ../sass/pages.scss */
+.pane-search-form input {
+  float: left;
+  margin: 0;
+  padding: 0;
+  border: none;
+  height: 21px;
+  outline: none;
+  font-size: 12px;
+  color: #989899;
+}
+/* line 103, ../sass/pages.scss */
+.pane-search-form input.form-submit {
+  width: 30px;
+  overflow: hidden;
+  text-align: center;
+  color: #881728;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+/* line 114, ../sass/pages.scss */
 .header-menu ul {
   float: right;
   padding-top: 12px;
 }
-/* line 77, ../sass/pages.scss */
+/* line 117, ../sass/pages.scss */
 .header-menu ul li {
   float: left;
   font-size: 11px;
 }
-/* line 80, ../sass/pages.scss */
+/* line 120, ../sass/pages.scss */
 .header-menu ul li a {
   color: #757575;
   padding: 0 13px;
   border-left: 1px solid #757575;
   display: block;
 }
-/* line 86, ../sass/pages.scss */
+/* line 126, ../sass/pages.scss */
 .header-menu ul li.first a {
   border-left: none;
   padding-left: 0;
 }
-/* line 91, ../sass/pages.scss */
+/* line 131, ../sass/pages.scss */
 .header-menu ul li.last a {
   padding-right: 0;
 }
 
-/* line 97, ../sass/pages.scss */
+/* line 137, ../sass/pages.scss */
 .site-title {
   padding: 25px 0 10px;
 }
-/* line 99, ../sass/pages.scss */
+/* line 139, ../sass/pages.scss */
 .site-title .panel-pane {
   float: left;
   color: #353535;
 }
-/* line 103, ../sass/pages.scss */
+/* line 143, ../sass/pages.scss */
 .site-title .pane-site-name-abbreviation {
   font-size: 50px;
   font-weight: bold;
   margin-right: 50px;
 }
-/* line 108, ../sass/pages.scss */
+/* line 148, ../sass/pages.scss */
 .site-title .pane-page-site-name {
   font-size: 32px;
   padding-top: 15px;
 }
 
-/* line 114, ../sass/pages.scss */
+/* line 154, ../sass/pages.scss */
 .main-menu li {
   float: left;
 }
-/* line 116, ../sass/pages.scss */
+/* line 156, ../sass/pages.scss */
 .main-menu li a {
   line-height: 32px;
   display: block;
@@ -160,11 +206,11 @@
   font-size: 14px;
   text-transform: uppercase;
 }
-/* line 124, ../sass/pages.scss */
+/* line 164, ../sass/pages.scss */
 .main-menu li.first a {
   margin-left: 12px;
 }
-/* line 129, ../sass/pages.scss */
+/* line 169, ../sass/pages.scss */
 .main-menu li a:hover,
 .main-menu li .active-trail,
 .main-menu li .active {
@@ -173,17 +219,17 @@
 }
 
 /* Footer */
-/* line 137, ../sass/pages.scss */
+/* line 177, ../sass/pages.scss */
 .pane-bundle-social-media {
   float: right;
 }
-/* line 139, ../sass/pages.scss */
+/* line 179, ../sass/pages.scss */
 .pane-bundle-social-media .field {
   overflow: hidden;
   float: left;
   margin-left: 18px;
 }
-/* line 143, ../sass/pages.scss */
+/* line 183, ../sass/pages.scss */
 .pane-bundle-social-media .field a {
   display: block;
   width: 33px;
@@ -191,19 +237,19 @@
   padding: 32px 0 0 0;
   background: url("../images/socials-desktop.png") no-repeat;
 }
-/* line 151, ../sass/pages.scss */
+/* line 191, ../sass/pages.scss */
 .pane-bundle-social-media .field-name-field-slac-sm-twitter-page a {
   background-position: -49px 0;
 }
-/* line 152, ../sass/pages.scss */
+/* line 192, ../sass/pages.scss */
 .pane-bundle-social-media .field-name-field-slac-sm-youtube-page a {
   background-position: -196px 0;
 }
-/* line 153, ../sass/pages.scss */
+/* line 193, ../sass/pages.scss */
 .pane-bundle-social-media .field-name-field-slac-sm-google-page a {
   background-position: -147px 0;
 }
-/* line 154, ../sass/pages.scss */
+/* line 194, ../sass/pages.scss */
 .pane-bundle-social-media .field-name-field-slac-sm-flickr-page a {
   background-position: -98px 0;
 }
