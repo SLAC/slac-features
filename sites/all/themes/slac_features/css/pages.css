@@ -176,31 +176,31 @@
 }
 /* line 136, ../sass/pages.scss */
 .pane-bundle-social-media .field {
-  width: 33px;
-  height: 1px;
-  padding: 32px 0 0 0;
   overflow: hidden;
   float: left;
   margin-left: 18px;
-  background: url("../images/socials-desktop.png") no-repeat;
 }
-/* line 144, ../sass/pages.scss */
+/* line 140, ../sass/pages.scss */
 .pane-bundle-social-media .field a {
   display: block;
+  width: 33px;
+  height: 1px;
+  padding: 32px 0 0 0;
+  background: url("../images/socials-desktop.png") no-repeat;
 }
 /* line 148, ../sass/pages.scss */
-.pane-bundle-social-media .field-name-field-slac-sm-twitter-page {
+.pane-bundle-social-media .field-name-field-slac-sm-twitter-page a {
   background-position: -49px 0;
 }
 /* line 149, ../sass/pages.scss */
-.pane-bundle-social-media .field-name-field-slac-sm-youtube-page {
+.pane-bundle-social-media .field-name-field-slac-sm-youtube-page a {
   background-position: -196px 0;
 }
 /* line 150, ../sass/pages.scss */
-.pane-bundle-social-media .field-name-field-slac-sm-google-page {
+.pane-bundle-social-media .field-name-field-slac-sm-google-page a {
   background-position: -147px 0;
 }
 /* line 151, ../sass/pages.scss */
-.pane-bundle-social-media .field-name-field-slac-sm-flickr-page {
+.pane-bundle-social-media .field-name-field-slac-sm-flickr-page a {
   background-position: -98px 0;
 }
