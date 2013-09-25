@@ -56,84 +56,115 @@
   min-height: 55px;
 }
 /* line 32, ../sass/pages.scss */
+.page-basic .basic.main-menu {
+  background: #ECEBE0;
+  height: 34px;
+  overflow: visible;
+}
+/* line 37, ../sass/pages.scss */
 .page-basic .basic.footer-first {
   background: #dcdac7;
 }
-/* line 35, ../sass/pages.scss */
+/* line 40, ../sass/pages.scss */
 .page-basic .basic.footer-seccond {
   background: #878787;
 }
 
 /* Header */
-/* line 43, ../sass/pages.scss */
+/* line 48, ../sass/pages.scss */
 .header .pane-page-logo {
   float: left;
   margin-top: 11px;
 }
-/* line 48, ../sass/pages.scss */
+/* line 53, ../sass/pages.scss */
 .header .pane-system-user-menu {
   margin-left: 20px;
   float: right;
 }
-/* line 51, ../sass/pages.scss */
+/* line 56, ../sass/pages.scss */
 .header .pane-system-user-menu li {
   float: left;
 }
-/* line 53, ../sass/pages.scss */
+/* line 58, ../sass/pages.scss */
 .header .pane-system-user-menu li a {
   text-decoration: none;
   color: #fff;
   font-size: 11px;
 }
-/* line 61, ../sass/pages.scss */
+/* line 66, ../sass/pages.scss */
 .header .pane-search-form {
   float: right;
 }
 
-/* line 66, ../sass/pages.scss */
+/* line 71, ../sass/pages.scss */
 .header-menu ul {
   float: right;
   padding-top: 12px;
 }
-/* line 69, ../sass/pages.scss */
+/* line 74, ../sass/pages.scss */
 .header-menu ul li {
   float: left;
   font-size: 11px;
 }
-/* line 72, ../sass/pages.scss */
+/* line 77, ../sass/pages.scss */
 .header-menu ul li a {
   color: #757575;
   padding: 0 13px;
   border-left: 1px solid #757575;
   display: block;
 }
-/* line 78, ../sass/pages.scss */
+/* line 83, ../sass/pages.scss */
 .header-menu ul li.first a {
   border-left: none;
   padding-left: 0;
 }
-/* line 83, ../sass/pages.scss */
+/* line 88, ../sass/pages.scss */
 .header-menu ul li.last a {
   padding-right: 0;
 }
 
-/* line 89, ../sass/pages.scss */
+/* line 94, ../sass/pages.scss */
 .site-title {
-  padding: 30px 0 10px;
+  padding: 25px 0 10px;
 }
-/* line 91, ../sass/pages.scss */
+/* line 96, ../sass/pages.scss */
 .site-title .panel-pane {
   float: left;
   color: #353535;
 }
-/* line 95, ../sass/pages.scss */
+/* line 100, ../sass/pages.scss */
 .site-title .pane-site-name-abbreviation {
   font-size: 50px;
   font-weight: bold;
   margin-right: 50px;
 }
-/* line 100, ../sass/pages.scss */
+/* line 105, ../sass/pages.scss */
 .site-title .pane-page-site-name {
   font-size: 32px;
   padding-top: 15px;
+}
+
+/* line 111, ../sass/pages.scss */
+.main-menu li {
+  float: left;
+}
+/* line 113, ../sass/pages.scss */
+.main-menu li a {
+  line-height: 32px;
+  display: block;
+  margin-left: 60px;
+  color: #4C4C4C;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+/* line 121, ../sass/pages.scss */
+.main-menu li.first a {
+  margin-left: 12px;
+}
+/* line 126, ../sass/pages.scss */
+.main-menu li a:hover,
+.main-menu li .active-trail,
+.main-menu li .active {
+  border-bottom: 2px solid #881728;
+  color: #881728;
 }
