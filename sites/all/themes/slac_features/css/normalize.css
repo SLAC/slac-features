@@ -81,3 +81,8 @@ a {
   margin: 0;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
+
+/* line 57, ../sass/normalize.scss */
+a {
+  text-decoration: none;
+}

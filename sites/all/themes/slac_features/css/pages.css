@@ -83,8 +83,24 @@
 .header .pane-system-user-menu li a {
   text-decoration: none;
   color: #fff;
+  font-size: 11px;
 }
-/* line 60, ../sass/pages.scss */
+/* line 61, ../sass/pages.scss */
 .header .pane-search-form {
   float: right;
+}
+
+/* line 66, ../sass/pages.scss */
+.header-menu ul {
+  float: right;
+  padding-top: 12px;
+}
+/* line 69, ../sass/pages.scss */
+.header-menu ul li {
+  float: left;
+  font-size: 11px;
+}
+/* line 72, ../sass/pages.scss */
+.header-menu ul li a {
+  color: #757575;
 }

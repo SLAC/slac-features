@@ -53,6 +53,7 @@
 		  a{
 			  text-decoration: none;
 			  color: #fff;
+			  font-size: 11px;
 			}
 		}
 	}
@@ -60,5 +61,16 @@
 	.pane-search-form{
 	  float:right;
 	}
+}
 
+.header-menu ul{
+  float: right;
+  padding-top: 12px;
+  li{
+    float: left;
+    font-size: 11px;
+    a{
+    color: #757575;
+    }
+  }
 }
