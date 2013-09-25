@@ -41,15 +41,14 @@
         <div class="inside"><?php print $content['content']; ?></div>
       <?php endif ?>
   </div>
-
   <div class="panel-panel footer-first">
-     <?php if ($content['footer']): ?>
-        <div class="inside"><?php print $content['footer']; ?></div>
+     <?php if ($content['footer-first']): ?>
+        <div class="inside"><?php print $content['footer-first']; ?></div>
       <?php endif ?>
   </div>
   <div class="panel-panel footer-seccond">
-     <?php if ($content['footer']): ?>
-        <div class="inside"><?php print $content['footer']; ?></div>
+     <?php if ($content['footer-seccond']): ?>
+        <div class="inside"><?php print $content['footer-seccond']; ?></div>
       <?php endif ?>
   </div>
 </div>
