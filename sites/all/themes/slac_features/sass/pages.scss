@@ -51,7 +51,8 @@
 	}
 
 	.pane-system-user-menu{
-	  margin-left: 20px;
+	  margin-left: 15px;
+	  padding-top:  10px;
 	  float:right;
 	  li{
 		  float:left;
@@ -59,6 +60,8 @@
 			  text-decoration: none;
 			  color: #fff;
 			  font-size: 11px;
+			  margin-left: 5px;
+			  display: block;
 			}
 		}
 	}
