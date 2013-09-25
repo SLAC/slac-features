@@ -79,5 +79,6 @@ dependencies[] = slac_webform_botcha
 
 ; Features
 dependencies[] = default_site_template
+dependencies[] = slac_site_variables
 dependencies[] = slac_form_building
 
