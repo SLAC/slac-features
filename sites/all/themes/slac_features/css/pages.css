@@ -9,7 +9,7 @@
   clear: both;
 }
 
-/* line 44, D:/Sites/slac-features/sites/all/themes/slac_features/sass/_mixins.scss */
+/* line 44, ../sass/_mixins.scss */
 .two-col-basic .pane-page-content > .pane-title {
   float: left;
   width: 100%;
@@ -35,3 +35,25 @@
 /*
  * Body
  */
+/* Main styles */
+/* line 20, ../sass/pages.scss */
+.page-basic > .panel-panel {
+  width: 100%;
+}
+/* line 22, ../sass/pages.scss */
+.page-basic > .panel-panel > .inside {
+  width: 1000px;
+  margin: auto;
+}
+/* line 27, ../sass/pages.scss */
+.page-basic > .panel-panel > .header {
+  background: #720c20;
+}
+/* line 31, ../sass/pages.scss */
+.page-basic > .panel-panel > .footer-first {
+  background: #dcdac7;
+}
+/* line 35, ../sass/pages.scss */
+.page-basic > .panel-panel > .footer-seccond {
+  background: #878787;
+}

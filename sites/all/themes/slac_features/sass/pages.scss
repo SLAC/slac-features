@@ -13,3 +13,27 @@
 /*
  * Body
  */
+
+ /* Main styles */
+
+ .page-basic{
+  > .panel-panel{
+    width: 100%;
+    > .inside{
+      width: 1000px;
+      margin: auto;
+    }
+
+    > .header{
+      background: #720c20;
+    }
+
+    > .footer-first{
+      background: #dcdac7;
+    }
+
+    > .footer-seccond{
+      background: #878787;
+    }
+  }
+}
