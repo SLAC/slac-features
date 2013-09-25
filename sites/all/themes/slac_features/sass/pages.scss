@@ -18,20 +18,47 @@
 
  .page-basic{
  	overflow: hidden;
-  > .panel-panel{
+  .basic{
     width: 100%;
+    overflow: hidden;
     > .inside{
       width: 1000px;
       margin: auto;
     }
+	  &.header{
+	    background: #720c20;
+	    min-height: 55px;
+	  }
+	  &.footer-first{
+	    background: #dcdac7;
+	  }
+	  &.footer-seccond{
+	    background: #878787;
+	  }
   }
-  > .header{
-    background: #720c20;
-  }
-  > .footer-first{
-    background: #dcdac7;
-  }
-  > .footer-seccond{
-    background: #878787;
-  }
+}
+
+/* Header */
+.header{
+	.pane-page-logo{
+	  float:left;
+	  margin-top: 11px;
+	}
+
+	.pane-system-user-menu{
+	  margin-left: 20px;
+	  float:right;
+	  li{
+		  float:left;
+		  a{
+			  text-decoration: none;
+			  color: #fff;
+			}
+		}
+	}
+
+	.pane-search-form{
+	  float:right;
+	}
+
 }

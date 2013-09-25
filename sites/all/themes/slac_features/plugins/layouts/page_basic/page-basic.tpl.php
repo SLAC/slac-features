@@ -16,37 +16,37 @@
 ?>
 <div class="panel-display page-basic clearfix" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
 
-  <div class="panel-panel header">
+  <div class="panel-panel basic header">
      <?php if ($content['header']): ?>
         <div class="inside"><?php print $content['header']; ?></div>
       <?php endif ?>
   </div>
-  <div class="panel-panel header-menu">
+  <div class="panel-panel basic header-menu">
      <?php if ($content['header-menu']): ?>
         <div class="inside"><?php print $content['header-menu']; ?></div>
       <?php endif ?>
   </div>
-  <div class="panel-panel site-title">
+  <div class="panel-panel basic site-title">
      <?php if ($content['site-title']): ?>
         <div class="inside"><?php print $content['site-title']; ?></div>
       <?php endif ?>
   </div>
-  <div class="panel-panel main-menu">
+  <div class="panel-panel basic main-menu">
      <?php if ($content['main-menu']): ?>
         <div class="inside"><?php print $content['main-menu']; ?></div>
       <?php endif ?>
   </div>
-  <div class="panel-panel content">
+  <div class="panel-panel basic content">
      <?php if ($content['content']): ?>
         <div class="inside"><?php print $content['content']; ?></div>
       <?php endif ?>
   </div>
-  <div class="panel-panel footer-first">
+  <div class="panel-panel basic footer-first">
      <?php if ($content['footer-first']): ?>
         <div class="inside"><?php print $content['footer-first']; ?></div>
       <?php endif ?>
   </div>
-  <div class="panel-panel footer-seccond">
+  <div class="panel-panel basic footer-seccond">
      <?php if ($content['footer-seccond']): ?>
         <div class="inside"><?php print $content['footer-seccond']; ?></div>
       <?php endif ?>

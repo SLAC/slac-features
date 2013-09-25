@@ -41,23 +41,50 @@
   overflow: hidden;
 }
 /* line 21, ../sass/pages.scss */
-.page-basic > .panel-panel {
+.page-basic .basic {
   width: 100%;
+  overflow: hidden;
 }
-/* line 23, ../sass/pages.scss */
-.page-basic > .panel-panel > .inside {
+/* line 24, ../sass/pages.scss */
+.page-basic .basic > .inside {
   width: 1000px;
   margin: auto;
 }
 /* line 28, ../sass/pages.scss */
-.page-basic > .header {
+.page-basic .basic.header {
   background: #720c20;
+  min-height: 55px;
 }
-/* line 31, ../sass/pages.scss */
-.page-basic > .footer-first {
+/* line 32, ../sass/pages.scss */
+.page-basic .basic.footer-first {
   background: #dcdac7;
 }
-/* line 34, ../sass/pages.scss */
-.page-basic > .footer-seccond {
+/* line 35, ../sass/pages.scss */
+.page-basic .basic.footer-seccond {
   background: #878787;
+}
+
+/* Header */
+/* line 43, ../sass/pages.scss */
+.header .pane-page-logo {
+  float: left;
+  margin-top: 11px;
+}
+/* line 48, ../sass/pages.scss */
+.header .pane-system-user-menu {
+  margin-left: 20px;
+  float: right;
+}
+/* line 51, ../sass/pages.scss */
+.header .pane-system-user-menu li {
+  float: left;
+}
+/* line 53, ../sass/pages.scss */
+.header .pane-system-user-menu li a {
+  text-decoration: none;
+  color: #fff;
+}
+/* line 60, ../sass/pages.scss */
+.header .pane-search-form {
+  float: right;
 }
