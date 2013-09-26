@@ -447,7 +447,7 @@ function default_site_template_default_page_manager_handlers() {
     $pane->pid = 'new-6';
     $pane->panel = 'footer-first';
     $pane->type = 'fieldable_panels_pane';
-    $pane->subtype = 'uuid:51ede388-6123-4a7e-b216-201952e25c15';
+    $pane->subtype = 'uuid:b019d4c0-fb19-4182-9e51-588c60a49b40';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
