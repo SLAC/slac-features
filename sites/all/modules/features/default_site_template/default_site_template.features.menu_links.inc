@@ -80,7 +80,7 @@ function default_site_template_menu_default_menu_links() {
     'external' => 1,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => 0,
+    'weight' => -47,
   );
   // Exported menu link: menu-footer-menu:http://slac-www.wearepropeople.md/general/careers.aspx
   $menu_links['menu-footer-menu:http://slac-www.wearepropeople.md/general/careers.aspx'] = array(
@@ -98,7 +98,7 @@ function default_site_template_menu_default_menu_links() {
     'external' => 1,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => 0,
+    'weight' => -50,
   );
   // Exported menu link: menu-footer-menu:http://slac-www.wearepropeople.md/general/feedback.aspx
   $menu_links['menu-footer-menu:http://slac-www.wearepropeople.md/general/feedback.aspx'] = array(
@@ -116,7 +116,7 @@ function default_site_template_menu_default_menu_links() {
     'external' => 1,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => 0,
+    'weight' => -48,
   );
   // Exported menu link: menu-footer-menu:http://slac-www.wearepropeople.md/general/privacy.aspx
   $menu_links['menu-footer-menu:http://slac-www.wearepropeople.md/general/privacy.aspx'] = array(
@@ -134,7 +134,7 @@ function default_site_template_menu_default_menu_links() {
     'external' => 1,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => 0,
+    'weight' => -46,
   );
   // Exported menu link: menu-footer-menu:http://slac-www.wearepropeople.md/general/site-index.aspx
   $menu_links['menu-footer-menu:http://slac-www.wearepropeople.md/general/site-index.aspx'] = array(
@@ -152,7 +152,7 @@ function default_site_template_menu_default_menu_links() {
     'external' => 1,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => 0,
+    'weight' => -49,
   );
   // Translatables
   // Included for use with string extractors like potx.
