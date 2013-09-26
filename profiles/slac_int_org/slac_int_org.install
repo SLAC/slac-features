@@ -4,13 +4,43 @@
  * Install, update and uninstall functions for the minimal installation profile.
  */
 
+/**
+ * Implements hook_install_tasks().
+ */
+function slac_int_org_install_tasks($install_state) {
+  $tasks = array();
+  $tasks['demo_content'] = array(
+    'display_name' => st('Demo content'),
+    'display' => TRUE,
+    'type' => 'normal',
+    'run' => INSTALL_TASK_RUN_IF_NOT_COMPLETED,
+    'function' => 'slac_int_org_install_task_demo_content',
+  );
+
+  return $tasks;
+}
+
+function slac_int_org_install_task_demo_content() {
+  module_enable(
+    array(
+      'slac_faq_demo',
+      'slac_blog_demo',
+      'slac_event_demo',
+      'slac_news_demo',
+      'slac_service_catalog_demo',
+      'slac_kb_demo',
+      'slac_wiki_demo',
+      'slac_forum_demo',
+    )
+  );
+}
 
 /**
  * Implements hook_install_tasks().
  *
  * Perform some taks after features have been extracted.
  */
-function slac_int_org_install_tasks() {
+/*function slac_int_org_install_tasks() {
   $tasks = array(
     'slac_int_org_post_install' => array(
       'type' => 'normal',
@@ -19,7 +49,7 @@ function slac_int_org_install_tasks() {
     ),
   );
   return $tasks;
-}
+}*/
 
 /**
  * Implements hook_install().
