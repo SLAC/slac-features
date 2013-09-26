@@ -1,11 +1,12 @@
 name = SLAC KB Article demo
 core = 7.x
-package = SLAC
+package = SLAC Demo
 version = 7.x-1.1
 project = slac_kb_demo
 dependencies[] = features
 dependencies[] = slac_kb_article
 dependencies[] = uuid_features
+dependencies[] = pp_demo
 __drupal_alter_by_ref[][node][kb_article] = kb_article
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:2
