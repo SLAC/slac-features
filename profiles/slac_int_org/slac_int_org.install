@@ -36,22 +36,6 @@ function slac_int_org_install_task_demo_content() {
 }
 
 /**
- * Implements hook_install_tasks().
- *
- * Perform some taks after features have been extracted.
- */
-/*function slac_int_org_install_tasks() {
-  $tasks = array(
-    'slac_int_org_post_install' => array(
-      'type' => 'normal',
-      'display' => FALSE,
-      'display_name' => t('Post Install Configuration'),
-    ),
-  );
-  return $tasks;
-}*/
-
-/**
  * Implements hook_install().
  *
  * Performs actions to set up the site for this profile.
