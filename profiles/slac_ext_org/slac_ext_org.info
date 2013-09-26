@@ -108,7 +108,11 @@ dependencies[] = slac_rss_block
 
 ;Features
 dependencies[] = default_site_template
+dependencies[] = slac_social_media_block
+
+;Custom modules
 dependencies[] = slac_site_variables
+dependencies[] = slac_social_media
 
 dependencies[] = slac_profile_base
 
