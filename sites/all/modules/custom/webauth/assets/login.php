@@ -22,13 +22,9 @@ if ($postition = strpos($currdir, 'sites')) {
   define('DRUPAL_ROOT', $_SERVER['DOCUMENT_ROOT']);
 }
 
-if ($postition = strpos($currdir, 'sites')) {
-  $path = explode('/', DRUPAL_ROOT);
-  $base_path = array_pop($path);
-  $base_url = 'http://'.$_SERVER['HTTP_HOST'] . '/' . $base_path;
-} else {
-  $base_url = 'http://'.$_SERVER['HTTP_HOST']; // THIS IS IMPORTANT
-}
+// @todo: how to handle subdirectory support?
+// assume provisioned sites will be
+$base_url = 'http://'.$_SERVER['HTTP_HOST']; // THIS IS IMPORTANT
 
 // in case cookie is not there
 if (!isset($_COOKIE['webauth_at'])) {
