@@ -1,4 +1,4 @@
-name = SLAC Social Media
+name = SLAC Social Media block
 core = 7.x
 package = SLAC
 php = 5.2.4
