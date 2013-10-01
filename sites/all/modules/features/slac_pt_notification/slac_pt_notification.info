@@ -1,0 +1,5 @@
+name = SLAC Provision Tool Notification
+description = Delivers notification on individual sites from the provisioning tool
+core = 7.x
+package = SLAC
+version = 7.x-1.0

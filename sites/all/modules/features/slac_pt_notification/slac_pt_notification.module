@@ -1,0 +1,19 @@
+<?php
+/**
+ * @file
+ * Code for the SLAC PT Notification module
+ */
+
+/**
+ * Implements hook_init
+ */
+function slac_pt_notification_init() {
+  // check to see if the library is installed
+  $message = variable_get('slac_pt_notification', '');
+  if ($message == '') {
+    return;
+  }
+  if (user_access('administer site configuration')) {
+    drupal_set_message(check_plain($message), 'warning', FALSE);
+  }
+}
