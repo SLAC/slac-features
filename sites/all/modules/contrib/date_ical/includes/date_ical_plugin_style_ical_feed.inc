@@ -59,9 +59,8 @@ class date_ical_plugin_style_ical_feed extends views_plugin_style {
       '#type' => 'textfield',
       '#title' => t('iCal Calendar Name'),
       '#default_value' => $this->_get_option('cal_name'),
-      '#description' => t('This will appear as the title of the iCal feed. If ' .
-        'left blank, the View Title will be used. If that is also blank, the site ' .
-        'name will be inserted as the iCal feed title.'),
+      '#description' => t('This will appear as the title of the iCal feed. If left blank, the View Title will be used.
+        If that is also blank, the site name will be inserted as the iCal feed title.'),
     );
     $form['no_calname'] = array(
       '#type' => 'checkbox',
@@ -86,12 +85,10 @@ class date_ical_plugin_style_ical_feed extends views_plugin_style {
       debug('views_plugin_style_ical_feed: This style plugin supports only iCal Entity row and iCal Fields plugins.', NULL, TRUE);
       return t('To enable iCal output, this view\'s Format must be configured to Show: iCal Entity or iCal Fields.');
     }
-    if ($this->row_plugin->plugin_name == 'date_ical_fields' && (empty($this->row_plugin->options['date_field'])
-        || empty($this->row_plugin->options['title_field']) || empty($this->row_plugin->options['description_field']))) {
-      // Because these settings are marked as required in the form, this error state will rarely occur. But I ran across it during
+    if ($this->row_plugin->plugin_name == 'date_ical_fields' && empty($this->row_plugin->options['date_field'])) {
+      // Because the Date field is required by the form, this error state will rarely occur. But I ran across it during
       // testing, and the error that resulted was totally non-sensical, so I'm adding this in case it does ever happen.
-      return t("When using the iCal Fields row plugin, the Date, Title, and Description fields are all required.
-        Please set them up using the Settings link under 'Format -> Show: iCal Fields'.");
+      return t("When using the iCal Fields row plugin, the Date field is required. Please set it up using the Settings link under 'Format -> Show: iCal Fields'.");
     }
     $events = array();
     foreach ($this->view->result as $row_index => $row) {
@@ -194,10 +191,13 @@ class date_ical_plugin_style_ical_feed extends views_plugin_style {
         
         // Handle repeating dates from the date_repeat module.
         if (!empty($event['rrule']) && module_exists('date_repeat')) {
-          // Split the rrule into the actual rule, exceptions and additions.
+          // Split the rrule into the actual rule, exceptions, and additions.
+          module_load_include('inc', 'date_api', 'date_api_ical');
+          module_load_include('inc', 'date_repeat', 'date_repeat_calc');
           list($rrule, $exceptions, $additions) = date_repeat_split_rrule($event['rrule']);
-          // Add the rrule itself. We need to massage the data a bit, since iCalcreator expects RRULEs to be
-          // in a different format than the Date API gives them to us.
+          // Add the rrule itself. We need to massage the data a bit, since
+          // iCalcreator expects RRULEs to be in a different format than how
+          // Date API gives them to us.
           $rrule = self::convert_rrule_for_icalcreator($rrule);
           $vevent->setRrule($rrule);
           // Process exceptions if there are any.
@@ -295,10 +295,16 @@ class date_ical_plugin_style_ical_feed extends views_plugin_style {
       drupal_alter('date_ical_feed_ical_vcalendar_render', $vcalendar, $this->view);
       
       $output = $vcalendar->createCalendar();
+      // For some unknown reason (overzealous spec comnpliance?), iCalcreator
+      // escapes all commas and semicolons in the strings that it outputs.
+      // This unescapes them, though it does it with a pretty big hammer. This
+      // might be going too far.
+      $output = str_replace('\,', ',', $output);
+      $output = str_replace('\;', ';', $output);
     }
     else {
       // The iCalcreator library isn't available, so we can't output anything.
-      $output = 'Please install the iCalcreator library to enable iCal output.';
+      $output = t('Please install the iCalcreator library to enable iCal output.');
     }
     
     // These steps shouldn't be run when doing a Preview on the View config page.

@@ -17,6 +17,9 @@ define('BOTCHA_LOGLEVEL', variable_get('botcha_loglevel', 2));
  *  4 - also log when preparing forms
  *  5 - log extra submission details
  *  6 - misc development items
+ * Please note!: Level 5 and 6 could cause putting vulnerable data into logs.
+ *   We have some basic escaping (e.g., for password field) - but any other data
+ *   could be found in raw format. Please be careful with logging level setting!
  */
 
 // Error message.
@@ -28,44 +31,44 @@ define('BOTCHA_WRONG_RESPONSE_ERROR_MESSAGE',
  * Recursive.
  */
 function _botcha_filter_form_log($form, $level = 0) {
+  $filtered_form = $form;
   if (is_array($form) && !is_string($form)) {
     foreach ($form as $key => $value) {
-      if ($key == '#post') {
-        $form[$key] = ($level == 0)
-          ? _botcha_filter_form_values_log($value)
-          : t('...[redundand entry - removed]');
-      }
-      elseif ($key == '#parameters') {
-        foreach ($value as $n => $arg) {
-          $value[$n] = _botcha_filter_form_log($arg, -1);
-        }
-        $form[$key] = $value;
-      }
-      elseif (!element_property($key)) {
-        // Handle recursion for $key == '#parameters'
-        if ($level == -1) {
-          $form[$key] = ($key == 'pass') ? '********' : _botcha_filter_form_log($value, -1);
-        }
-        else {
-          $form[$key] = _botcha_filter_form_log($value, $level + 1);
-          if ($key == 'pass' && isset($form[$key]['#value'])) {
-            $form[$key]['#value'] = '********';
-          }
-        }
+      switch ($key) {
+        case '#post':
+          $filtered_form[$key] = ($level == 0)
+            ? _botcha_filter_form_log($value, -1)
+            : t('...[redundant entry - removed]');
+          break;
+        default:
+          // Filter out sensitive data.
+          $filtered_form[$key] = ($key === 'pass')
+            ? _botcha_filter_value($value)
+            : _botcha_filter_form_log($value, -1);
+          break;
       }
     }
   }
-  return $form;
+  return $filtered_form;
 }
 
 /**
- * Filter out sensitive form data from values for logging
+ * Filter out sensitive form data from values for logging.
  */
-function _botcha_filter_form_values_log($values) {
-  if (is_array($values) && isset($values['pass']) && is_string($values['pass'])) {
-    $values['pass'] = '********';
+function _botcha_filter_value($value) {
+  $filtered_value = $value;
+  if (is_string($value)) {
+    $filtered_value = '********';
   }
-  return $values;
+  elseif (is_array($value)) {
+    foreach ($value as $key => $key_value) {
+      // Filter out sensitive data.
+      if (in_array($key, array('pass', 'pass1', 'pass2', '#value'))) {
+        $filtered_value[$key] = _botcha_filter_value($key_value);
+      }
+    }
+  }
+  return $filtered_value;
 }
 
 /**
@@ -361,7 +364,7 @@ function botcha_form_access($botcha_form) {
  * Load an object of form.
  */
 function botcha_form_load($form_id) {
-  $app = ComponentFactory::get('botcha', Component::TYPE_CONTROLLER, Component::ID_APPLICATION);
+  $app = ComponentFactory::get('Botcha', Component::TYPE_CONTROLLER, Component::ID_APPLICATION);
   //return $this->getController(Botcha::CONTROLLER_TYPE_FORM)->getForm($form_id, FALSE);
   $botcha_form = $app->getController(Botcha::CONTROLLER_TYPE_FORM)->getForm($form_id, FALSE);
   return $botcha_form;
@@ -386,7 +389,7 @@ function botcha_recipebook_access($recipebook) {
  * Load an object of recipe book.
  */
 function botcha_recipebook_load($rbid) {
-  $app = ComponentFactory::get('botcha', Component::TYPE_CONTROLLER, Component::ID_APPLICATION);
+  $app = ComponentFactory::get('Botcha', Component::TYPE_CONTROLLER, Component::ID_APPLICATION);
   //return $this->getController(Botcha::CONTROLLER_TYPE_RECIPEBOOK)->getRecipebook($rbid, FALSE);
   return $app->getController(Botcha::CONTROLLER_TYPE_RECIPEBOOK)->getRecipebook($rbid, FALSE);
 }

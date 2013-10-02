@@ -771,6 +771,7 @@ class BotchaTestAdminLog extends BotchaAdminTestCase {
     $recipebook = $recipebook_controller->getRecipebook();
     // Fill in results array randomly to emulate spam check.
     $is_spam = array();
+    $recipes_spam = array();
     foreach ($recipebook->getRecipes() as $recipe_id) {
       $value = (boolean) rand(0, 1);
       $is_spam[$recipe_id] = $value;
@@ -805,6 +806,44 @@ class BotchaTestAdminLog extends BotchaAdminTestCase {
       'Failed %count_spam of %count_recipes recipes [%recipes_list] from "%rbid" recipe book.'
     );
     $this->assertText($message, 'Expected spam message \'' . $message . '\' is in log', 'BOTCHA');
+    // Assert filtering vulnerable data: password. Use case is as follows:
+    // 1) Enable BOTCHA protection for user registration form.
+    $form_controller = $this->application->getController(Botcha::CONTROLLER_TYPE_FORM);
+    $form_id = 'user_register_form';
+    $botcha_form = $form_controller->getForm($form_id);
+    $botcha_form->setEnabled(TRUE);
+    // Set log level to one of the highest.
+    variable_set('botcha_loglevel', 6);
+    // Disable email verification to allow setting password during registration.
+    variable_set('user_email_verification', 0);
+    // 2) Register new user via that form.
+    $this->drupalLogout();
+    $edit = array(
+      'name' => $username = $this->randomName(),
+      'mail' => $mail = $username . '@example.com',
+      'pass[pass1]' => $password = user_password(),
+      'pass[pass2]' => $password,
+    );
+    $this->drupalPost('user/register', $edit, t('Create new account'));
+    // 3) Check that password is encrypted.
+    $this->drupalLogin($this->admin_user);
+    $this->drupalGet('admin/reports/dblog');
+    // Always blocked, because Simpletest can't run JavaScript.
+    $this->clickLink("$form_id post blocked by BOTCHA: submission...");
+    $pass_fields = array(
+      // Assert password is hidden in POST.
+      'pass1',
+      'pass2',
+      // Assert password is hidden in values.
+      'pass',
+      // Assert password is hidden in form.
+      '#value',
+    );
+    foreach ($pass_fields as $pass_field) {
+      // Filtering is needed because matching is handled on filtered text.
+      $this->assertText(filter_xss("[$pass_field] => ******", array()), t("Password $pass_field is hidden"));
+      $this->assertNoText(filter_xss("[$pass_field] => $password", array()), t("There is no raw $pass_field password"));
+    }
   }
 }
 
@@ -823,6 +862,11 @@ class BotchaTestAdminLinks extends BotchaAdminTestCase {
    */
   public function testAdminLinks() {
     $form_controller = $this->application->getController(Botcha::CONTROLLER_TYPE_FORM);
+
+    // Test for [#1861016]
+    $this->drupalGet('user/' . $this->admin_user->uid . '/edit');
+    $this->assertText($this->admin_user->name, t('User name found.'), 'BOTCHA');
+
     // Enable BOTCHA administration links.
     $edit = array(
       'botcha_administration_mode' => TRUE,
@@ -1118,8 +1162,8 @@ class BotchaHoneypotTestCase extends BotchaUsingJsTestCase {
     return array(FALSE);
   }
 
-  protected function setFormValues($form, $should_pass) {
-    $edit = parent::setFormValues($form, $should_pass);
+  protected function setFormValues($form, $should_pass, &$parameters = array()) {
+    $edit = parent::setFormValues($form, $should_pass, $parameters);
     // Since we can't test javascript (is there a way to do it?) and Simpletest
     // can't evaluate javascript we should do nothing to break the submission.
     return $edit;
@@ -1150,8 +1194,8 @@ class BotchaHoneypot2TestCase extends BotchaUsingJsTestCase {
     return array(FALSE);
   }
 
-  protected function setFormValues($form, $should_pass) {
-    $edit = parent::setFormValues($form, $should_pass);
+  protected function setFormValues($form, $should_pass, &$parameters = array()) {
+    $edit = parent::setFormValues($form, $should_pass, $parameters);
     // Since we can't test javascript (is there a way to do it?) and Simpletest
     // can't evaluate javascript we should do nothing to break the submission.
     return $edit;
@@ -1181,8 +1225,8 @@ class BotchaObscureUrlTestCase extends BotchaUsingJsTestCase {
     return array(FALSE);
   }
 
-  protected function setFormValues($form, $should_pass) {
-    $edit = parent::setFormValues($form, $should_pass);
+  protected function setFormValues($form, $should_pass, &$parameters = array()) {
+    $edit = parent::setFormValues($form, $should_pass, $parameters);
     // Since we can't test javascript (is there a way to do it?) and Simpletest
     // can't evaluate javascript we should do nothing to break the submission.
     return $edit;
@@ -1218,8 +1262,8 @@ class BotchaNoResubmitTestCase extends BotchaTestCase {
     return TRUE;
   }
 
-  protected function setFormValues($form, $should_pass) {
-    $edit = parent::setFormValues($form, $should_pass);
+  protected function setFormValues($form, $should_pass, &$parameters = array()) {
+    $edit = parent::setFormValues($form, $should_pass, $parameters);
     switch ($should_pass) {
       case FALSE:
         // Get form_build_id of the form (to simulate resubmit).
@@ -1230,7 +1274,7 @@ class BotchaNoResubmitTestCase extends BotchaTestCase {
         parent::assertFormSubmission($form, $edit, TRUE);
         // Get new form.
         $this->getForm($form);
-        //$edit = parent::setFormValues($form, $should_pass);
+        //$edit = parent::setFormValues($form, $should_pass, $parameters);
         // Set form_build_id of the current form to stored value (to simulate resubmit).
         $edit['form_build_id'] = $form_build_id;
         break;
@@ -1242,7 +1286,7 @@ class BotchaNoResubmitTestCase extends BotchaTestCase {
     return $edit;
   }
 
-  public function assertFormSubmission($form, $edit, $should_pass = TRUE, $button = NULL) {
+  public function assertFormSubmission($form, $edit, $should_pass = TRUE, $button = NULL, &$parameters = array()) {
     switch ($form) {
       case 'user_login':
       case 'comment':
@@ -1258,7 +1302,7 @@ class BotchaNoResubmitTestCase extends BotchaTestCase {
     }
     // We are placing it to the end since we have a redirection there which
     // makes impossible to assert submission by these conditions.
-    parent::assertFormSubmission($form, $edit, $should_pass, $button);
+    parent::assertFormSubmission($form, $edit, $should_pass, $button, $parameters);
   }
 /* @todo ?Where to place and how to test MultipleBotchaProtectedFormsOnOnePage test case?
   public function testMultipleBotchaProtectedFormsOnOnePage() {
@@ -1310,8 +1354,8 @@ class BotchaTimegateTestCase extends BotchaTestCase {
    * @param type $should_pass
    * @return type
    */
-  protected function setFormValues($form, $should_pass) {
-    $edit = parent::setFormValues($form, $should_pass);
+  protected function setFormValues($form, $should_pass, &$parameters = array()) {
+    $edit = parent::setFormValues($form, $should_pass, $parameters);
     switch ($should_pass) {
       case FALSE:
         unset($edit['timegate']);
@@ -1335,7 +1379,7 @@ class BotchaTimegateTestCase extends BotchaTestCase {
     }
   }
 
-  public function assertFormSubmission($form, $edit, $should_pass = TRUE, $button = NULL) {
+  public function assertFormSubmission($form, $edit, $should_pass = TRUE, $button = NULL, &$parameters = array()) {
     switch ($form) {
       case 'user_login':
       case 'comment':
@@ -1351,7 +1395,7 @@ class BotchaTimegateTestCase extends BotchaTestCase {
     }
     // We are placing it to the end since we have a redirection there which
     // makes impossible to assert submission by these conditions.
-    parent::assertFormSubmission($form, $edit, $should_pass, $button);
+    parent::assertFormSubmission($form, $edit, $should_pass, $button, $parameters);
   }
 }
 // Some tricks to debug:

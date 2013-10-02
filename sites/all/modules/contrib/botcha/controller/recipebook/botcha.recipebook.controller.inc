@@ -231,11 +231,11 @@ class BotchaRecipebook {
               '!form_id' => $form['form_id']['#value'],
               '!more' => ''
                 . ((BOTCHA_LOGLEVEL >= 3) ? ' Checked ' . count($this->getRecipes()) . ' botchas (' . join(', ', $this->getRecipes()) . ').' : '')
-                . ((BOTCHA_LOGLEVEL >= 5) ? '<br /><br />' . 'POST=<pre>' . print_r(_botcha_filter_form_values_log($_POST), 1) . '</pre>' : '')
-                . ((BOTCHA_LOGLEVEL >= 5) ? '<br /><br />' . 'GET=<pre>' . print_r(_botcha_filter_form_values_log($_GET), 1) . '</pre>' : '')
+                . ((BOTCHA_LOGLEVEL >= 5) ? '<br /><br />' . 'POST=<pre>' . print_r(_botcha_filter_value($_POST), 1) . '</pre>' : '')
+                . ((BOTCHA_LOGLEVEL >= 5) ? '<br /><br />' . 'GET=<pre>' . print_r(_botcha_filter_value($_GET), 1) . '</pre>' : '')
                 . ((BOTCHA_LOGLEVEL >= 5) ? '<br /><br />' . 'SERVER=<pre>' . print_r($_SERVER, 1) . '</pre>' : '')
                 . ((BOTCHA_LOGLEVEL >= 5) ? '<br /><br />' . ' form=<pre>' . print_r(_botcha_filter_form_log($form), 1) . '</pre>' : '')
-                . ((BOTCHA_LOGLEVEL >= 5) ? '<br /><br />' . ' values=<pre>' . print_r(_botcha_filter_form_values_log($form_state['values']), 1) . '</pre>' : ''),
+                . ((BOTCHA_LOGLEVEL >= 5) ? '<br /><br />' . ' values=<pre>' . print_r(_botcha_filter_value($form_state['values']), 1) . '</pre>' : ''),
             ),
             WATCHDOG_INFO
           );
@@ -254,10 +254,11 @@ class BotchaRecipebook {
             '!form_id' => $form['form_id']['#value'],
             '!more' => ''
               . ((BOTCHA_LOGLEVEL >= 2) ? '<br /><br />' . 'Failed ' . $recipes_spam_count . ' of ' . count($this->getRecipes()) . ' recipes [' . implode(', ', array_keys($recipes_spam)) . '] from "' . $this->id . '" recipe book.' : '')
-              . ((BOTCHA_LOGLEVEL >= 5) ? '<br /><br />' . 'POST=<pre>' . print_r(_botcha_filter_form_values_log($_POST), 1) . '</pre>' : '')
-              . ((BOTCHA_LOGLEVEL >= 5) ? '<br /><br />' . 'GET=<pre>' . print_r(_botcha_filter_form_values_log($_GET), 1) . '</pre>' : '')
+              . ((BOTCHA_LOGLEVEL >= 5) ? '<br /><br />' . 'POST=<pre>' . print_r(_botcha_filter_value($_POST), 1) . '</pre>' : '')
+              . ((BOTCHA_LOGLEVEL >= 5) ? '<br /><br />' . 'GET=<pre>' . print_r(_botcha_filter_value($_GET), 1) . '</pre>' : '')
               . ((BOTCHA_LOGLEVEL >= 5) ? '<br /><br />' . 'SERVER=<pre>' . print_r($_SERVER, 1) . '</pre>' : '')
-              . ((BOTCHA_LOGLEVEL >= 5) ? '<br /><br />' . ' values=<pre>' . print_r(_botcha_filter_form_values_log($form_state['values']), 1) . '</pre>' : ''),
+              . ((BOTCHA_LOGLEVEL >= 5) ? '<br /><br />' . ' form=<pre>' . print_r(_botcha_filter_form_log($form), 1) . '</pre>' : '')
+              . ((BOTCHA_LOGLEVEL >= 5) ? '<br /><br />' . ' values=<pre>' . print_r(_botcha_filter_value($form_state['values']), 1) . '</pre>' : ''),
           ),
           WATCHDOG_WARNING
           );
@@ -284,7 +285,7 @@ class BotchaRecipebook {
         //'failed_error' => $recipe->error_text,
       );
       // !!? Do we need per recipe rules event invoking?
-      rules_invoke_event($rules_event_name, $arguments);
+      rules_invoke_event_by_args($rules_event_name, $arguments);
     }
   }
 
@@ -301,7 +302,7 @@ class BotchaRecipebook {
   public function isSpam($form, $form_state, $is_spam) {
     // Consider form submission as a spam if at least one recipe considered it
     // as a spam.
-    return (boolean)(array_diff($is_spam, array_fill(0, count($is_spam), FALSE)));
+    return count($is_spam) ? (boolean)(array_diff($is_spam, array_fill(0, count($is_spam), FALSE))) : FALSE;
   }
 
   public function apply(&$form, &$form_state) {

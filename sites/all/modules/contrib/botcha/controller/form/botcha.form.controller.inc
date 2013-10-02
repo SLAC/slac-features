@@ -93,6 +93,7 @@ class BotchaForm {
 
   public function __construct($form_id) {
     $this->id = $form_id;
+    $this->form_id = $form_id;
   }
 
   public function setRecipebook($rbid) {

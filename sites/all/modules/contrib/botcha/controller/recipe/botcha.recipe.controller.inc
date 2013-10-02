@@ -865,11 +865,7 @@ class BotchaRecipeObscureUrl extends BotchaRecipeUsingJsAbstract {
     // @todo Replace this workaround, find a better solution.
     // @see?
     // @todo Abstract it.
-    $form_id = $this->getSetting('form_id');
-    if (substr($form_id, 0, 7) == 'comment') {
-      $form_id = 'comment_form';
-    }
-    $form_id = str_replace('_', '-', $form_id);
+    $form_id = str_replace('_', '-', $this->getSetting('form_id'));
     $submit = _botcha_url(
       $this->getSetting('form_action'),
       array('query' => array($field2_name => '__replace__'))
@@ -880,6 +876,15 @@ class BotchaRecipeObscureUrl extends BotchaRecipeUsingJsAbstract {
       $js['chops'][$chops_positions[0]] . '\'+v+\'' . $js['chops'][$chops_positions[1]],
       $submit
     );
+    if (strpos($form_id, '-node-form') !== false) {
+      $js_form_id = 'node-form';
+    }
+    elseif (substr($form_id, 0, 7) == 'comment') {
+      $js_form_id = 'comment-form';
+    }
+    else {
+      $js_form_id = $form_id;
+    }
     // @todo Abstract it.
     return <<<END
 (function ($) {
@@ -889,7 +894,7 @@ class BotchaRecipeObscureUrl extends BotchaRecipeUsingJsAbstract {
         f=$(this)[0];
         if (f.value.indexOf("{$js['match']}")==0){
           v=f.value.substring({$js['pos']});
-          $("#{$form_id}").get(0).setAttribute('action', '{$submit}');
+          $("#{$js_form_id}").get(0).setAttribute('action', '{$submit}');
         }
       });
     }

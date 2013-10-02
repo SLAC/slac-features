@@ -80,6 +80,8 @@ There are some default forms that BOTCHA protects out-of-the-box, including user
 
 BOTCHA configuration page allows selecting which forms to protect. There is also an admin mode checkbox which adds links to forms for simple BOTCHA configuration.
 
+Please note!: Using BOTCHA logging setting could cause at high levels putting vulnerable data into logs. We have some basic escaping (e.g., for password field) - but any other data could be found in raw format. Please be careful with logging level setting!
+
 Hidden settings
 ---------------
 

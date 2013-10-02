@@ -1,3 +1,11 @@
+botcha 7.x-3.x-dev
+------------------
+[#1861016] by ckng: PHP Fatal error:  Call to a member function addAdminLinks() on a non-object
+[#1867180] by retorque: ObscureUrl Recipe breaks in IE7 on node add form
+[#1974430] by monnerat: Botcha class name
+[#1991984] PHP warnings, simpletest exception
+
+
 botcha 7.x-1.x-dev
 ------------------
 [#1637548] Fixed "Undefined variable: path in _botcha_url()"

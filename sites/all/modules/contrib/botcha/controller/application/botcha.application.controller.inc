@@ -69,7 +69,7 @@ class Botcha extends Application implements IBotcha {
   public function form_alter(&$form, &$form_state, $form_id) {
     // Get an instance of BOTCHA form controller.
     $form_controller = $this->getController(Botcha::CONTROLLER_TYPE_FORM);
-    $botcha_form = $form_controller->getForm($form['form_id']['#value'], FALSE);
+    $botcha_form = $form_controller->getForm($form_id, FALSE);
     // Check if it is allowed to protect.
     if ($botcha_form->isEnabled()) {
       // Add admin links functionality.
@@ -102,10 +102,10 @@ class Botcha extends Application implements IBotcha {
             '%form_id form prepared by BOTCHA: added recipes - !botchas!more',
             array(
               '%form_id' => $form['form_id']['#value'],
-              '!botchas' => $recipebook->getRecipes(),
+              '!botchas' => implode(', ', $recipebook->getRecipes()),
               '!more' => ''
-                . ((BOTCHA_LOGLEVEL >= 5) ? '<br /><br />' . 'POST=<pre>' . print_r(_botcha_filter_form_values_log($_POST), 1) . '</pre>' : '')
-                . ((BOTCHA_LOGLEVEL >= 5) ? '<br /><br />' . 'GET=<pre>' . print_r(_botcha_filter_form_values_log($_GET), 1) . '</pre>' : '')
+                . ((BOTCHA_LOGLEVEL >= 5) ? '<br /><br />' . 'POST=<pre>' . print_r(_botcha_filter_value($_POST), 1) . '</pre>' : '')
+                . ((BOTCHA_LOGLEVEL >= 5) ? '<br /><br />' . 'GET=<pre>' . print_r(_botcha_filter_value($_GET), 1) . '</pre>' : '')
                 . ((BOTCHA_LOGLEVEL >= 5) ? '<br /><br />' . 'SERVER=<pre>' . print_r($_SERVER, 1) . '</pre>' : '')
                 . ((BOTCHA_LOGLEVEL >= 5) ? '<br /><br />' . 'form=<pre>' . print_r(_botcha_filter_form_log($form), 1) . '</pre>' : '')
                 . ((BOTCHA_LOGLEVEL >= 5 && count($jss)) ? '<br /><br />' . 'JS=<pre>' . join("\n", $jss) . '</pre>' : '')
@@ -432,7 +432,12 @@ class Botcha extends Application implements IBotcha {
             5 => t('5: ... and extra submission details'),
             6 => t('6: ... and misc development items'),
           ),
-          '#description' => t('Select what information to report into the !log.', array('!log' => $dblog_link)),
+          '#description' => t('Select what information to report into the !log.'
+            . ' Please note!: Using BOTCHA logging setting could cause at high'
+            . ' levels putting vulnerable data into logs. We have some basic'
+            . ' escaping (e.g., for password field) - but any other data could'
+            . ' be found in raw format. Please be careful with logging level'
+            . ' setting!', array('!log' => $dblog_link)),
         );
         // Button for resetting the BOTCHA statistics.
         $form['botcha_statistics']['botcha_statistics_group'] = array(
