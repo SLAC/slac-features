@@ -1,0 +1,56 @@
+<?php
+
+/**
+ * Implements hook_menu_alter().
+ */
+function pp_profile_menu_alter(&$items) {
+  foreach (profile2_get_types() as $type_name => $type) {
+    if (!empty($type->data['use_page'])) {
+      $path = profile2_page_get_base_path($type);
+
+      unset($items[$path]);
+
+      $items['user/%profile2_by_uid/' . $path] = array_merge($items[$path . '/%profile2_by_uid'],
+        array(
+          'title arguments' => array($type_name, 1),
+          'page arguments' => array(1),
+          'type' => MENU_LOCAL_TASK,
+          'weight' => 10 + $type->weight,
+        ));
+      unset($items[$path . '/%profile2_by_uid']);
+
+      unset($items[$path . '/%profile2_by_uid/view']);
+
+      $items['user/%profile2_by_uid/' . $path . '/edit'] = array_merge($items[$path . '/%profile2_by_uid/edit'], array(
+        'page arguments' => array('profile2', 1),
+        'access arguments' => array('edit', 1),
+        'type' => MENU_LOCAL_ACTION,
+      ));
+      unset($items[$path . '/%profile2_by_uid/edit']);
+
+      $items['user/%profile2_by_uid/' . $path . '/delete'] = array_merge($items[$path . '/%profile2_by_uid/delete'], array(
+        'page arguments' => array('profile2_page_delete_confirm_form', 1),
+        'access arguments' => array('delete', 1),
+        'type' => MENU_LOCAL_ACTION,
+      ));
+      unset($items[$path . '/%profile2_by_uid/delete']);
+    }
+  }
+}
+
+/**
+ * Implements hook_entity_info_alter().
+ */
+function pp_profile_entity_info_alter(&$entity_info) {
+  $entity_info['profile2']['uri callback'] = 'pp_profile_uri_callback';
+
+}
+
+function pp_profile_uri_callback($profile) {
+  $type = $profile->type();
+  if (!empty($type->data['use_page'])) {
+    return array('path' => 'user/' . $profile->uid . '/' . profile2_page_get_base_path($type));
+  }
+  // Fall back to the default callback.
+  return $profile->defaultUri();
+}

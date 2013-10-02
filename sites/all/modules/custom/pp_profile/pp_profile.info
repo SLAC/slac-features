@@ -1,0 +1,5 @@
+name = PP profile
+description = Display profiles as tabs on user
+core = 7.x
+package = SLAC
+dependencies[] = profile2_page

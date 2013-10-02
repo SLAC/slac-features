@@ -1,0 +1,5 @@
+<?php
+
+function pp_profile_install() {
+  db_query('UPDATE {system} SET weight=:weight WHERE name=:name', array(':weight' => 10, ':name' => 'pp_profile'));
+}
