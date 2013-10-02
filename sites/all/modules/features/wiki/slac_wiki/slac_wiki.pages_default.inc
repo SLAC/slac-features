@@ -138,7 +138,7 @@ function slac_wiki_default_page_manager_pages() {
     'type' => 'normal',
     'title' => 'Wiki',
     'name' => 'main-menu',
-    'weight' => '0',
+    'weight' => '3',
     'parent' => array(
       'type' => 'none',
       'title' => '',

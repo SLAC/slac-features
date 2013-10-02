@@ -320,7 +320,7 @@ function slac_service_catalog_default_page_manager_pages() {
     'type' => 'normal',
     'title' => 'Service',
     'name' => 'main-menu',
-    'weight' => '0',
+    'weight' => '4',
     'parent' => array(
       'type' => 'none',
       'title' => '',

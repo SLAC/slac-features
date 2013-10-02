@@ -26,7 +26,7 @@ function slac_blog_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => 2,
+    'weight' => 1,
   );
   // Exported menu link: navigation:blog
   $menu_links['navigation:blog'] = array(
