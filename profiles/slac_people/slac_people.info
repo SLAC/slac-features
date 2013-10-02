@@ -92,5 +92,10 @@ dependencies[] = slac_social_media
 
 dependencies[] = slac_form_building
 
+; Blog. Demo content enabled in separate step of installation.
 dependencies[] = slac_blog
-;dependencies[] = slac_blog_demo
+
+; Profile.
+dependencies[] = pp_profile
+dependencies[] = slac_profile
+
