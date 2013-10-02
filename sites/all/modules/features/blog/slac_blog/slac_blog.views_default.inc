@@ -410,7 +410,7 @@ function slac_blog_views_default_views() {
   $handler->display->display_options['fields']['field_slac_blog_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_slac_blog_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_slac_blog_image']['settings'] = array(
-    'image_style' => 'front-blog-image',
+    'image_style' => 'blog_thumbnail',
     'image_link' => 'content',
   );
   /* Field: User: Uid */
