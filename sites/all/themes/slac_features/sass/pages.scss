@@ -22,8 +22,10 @@
     width: 100%;
     overflow: hidden;
     > .inside{
-      width: 1000px;
-      margin: auto;
+      max-width: 1000px;
+			margin: auto;
+			width: 96%;
+			padding: 0 2%;
     }
 	  &.header{
 	    background: #720c20;
@@ -72,7 +74,7 @@
 }
 
 .pane-search-form{
-  padding-top: 6px;
+  padding-top: 7px;
   .form-item,
   .form-actions{
     border: 1px solid #945c65;
