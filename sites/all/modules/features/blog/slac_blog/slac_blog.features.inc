@@ -53,9 +53,9 @@ function slac_blog_image_default_styles() {
     ),
   );
 
-  // Exported image style: front-blog-image.
-  $styles['front-blog-image'] = array(
-    'name' => 'front-blog-image',
+  // Exported image style: slac_blog_image.
+  $styles['slac_blog_image'] = array(
+    'name' => 'slac_blog_image',
     'effects' => array(
       2 => array(
         'label' => 'EPSA Image Crop',

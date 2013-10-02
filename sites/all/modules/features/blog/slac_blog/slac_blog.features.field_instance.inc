@@ -136,7 +136,7 @@ function slac_blog_field_default_field_instances() {
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
-          'image_style' => 'front-blog-image',
+          'image_style' => 'slac_blog_image',
         ),
         'type' => 'image',
         'weight' => 0,
@@ -146,7 +146,7 @@ function slac_blog_field_default_field_instances() {
         'module' => 'image',
         'settings' => array(
           'image_link' => 'content',
-          'image_style' => 'front-blog-image',
+          'image_style' => 'slac_blog_image',
         ),
         'type' => 'image',
         'weight' => 0,
@@ -164,7 +164,7 @@ function slac_blog_field_default_field_instances() {
           'crop_landscape' => 0,
           'crop_portrait' => 0,
           'crop_square' => 0,
-          'front-blog-image' => 'front-blog-image',
+          'slac_blog_image' => 'slac_blog_image',
         ),
       ),
       'file_directory' => 'slac-blog',

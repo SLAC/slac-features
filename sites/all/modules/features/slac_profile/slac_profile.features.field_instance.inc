@@ -377,7 +377,7 @@ function slac_profile_field_default_field_instances() {
           'crop_landscape' => 0,
           'crop_portrait' => 0,
           'crop_square' => 0,
-          'front-blog-image' => 0,
+          'slac_blog_image' => 0,
           'lightbox_text_bottom' => 0,
           'lightbox_text_left_right' => 0,
         ),
