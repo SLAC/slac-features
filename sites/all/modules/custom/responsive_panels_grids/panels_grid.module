@@ -1,0 +1,334 @@
+<?php
+
+/**
+ * Implements hook_menu().
+ */
+function panels_grid_menu() {
+  $items = array();
+
+  $items['admin/config/media/panels_grid'] = array(
+    'title' => 'Panels Grid',
+    'description' => 'Settings for module Panels Grid.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('panels_grid_settings'),
+    'access arguments' => array('administer site configuration'),
+    'file' => 'panels_grid.admin.inc',
+  );
+
+  return $items;
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function panels_grid_form_alter(&$form, $form_state, $form_id) {
+  if (strpos($form_id, 'panels_panel_') === 0) {
+    $form['#submit'][] = 'panels_grid_panels_panel_form_submit';
+  }
+}
+
+/**
+ * Remove css file for the panel so it will be recompiled on next run.
+ */
+function panels_grid_panels_panel_form_submit($form, $form_state) {
+  $unique_key = _panels_grid_unique_key($form['#display']->cache_key);
+  $compiled_css_filename = 'grid-' . $unique_key . '.css';
+  panels_grid_remove_css_files($compiled_css_filename);
+}
+
+/**
+ * Implements hook_ctools_plugin_directory().
+ */
+function panels_grid_ctools_plugin_directory($module, $plugin) {
+  return 'plugins/' . $plugin;
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * Alter panels_edit_configure_pane_css_form form.
+ */
+function panels_grid_form_panels_edit_configure_pane_css_form_alter(&$form, $form_state) {
+  $responsive_breakpoints = breakpoints_breakpoint_load_all_active();
+  $form['sass'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('SASS rules'),
+    '#tree' => TRUE,
+  );
+
+  $result = ctools_export_load_object('page_manager_handlers', 'conditions', array('did' => $form_state['display']->did));
+  $handler = reset($result);
+  $handler_conf_sass = $handler->conf['sass'];
+
+  foreach ($responsive_breakpoints as $breakpoint) {
+    $breakpoint_mn = $breakpoint->machine_name;
+    $form['sass'][$breakpoint_mn] = array(
+      '#type' => 'fieldset',
+      '#title' => check_plain($breakpoint->name . ' (grid: '  . $handler_conf_sass[$breakpoint_mn]['columns'] . ' columns. "' . $breakpoint->breakpoint . '")'),
+      '#tree' => TRUE,
+    );
+    $form['sass'][$breakpoint_mn]['width'] = array(
+      '#title' => t('Width'),
+      '#description' => t('Width of the pane in columns (i.e. 3)'),
+      '#type' => 'textfield',
+      '#required' => TRUE,
+      '#size' => 4,
+      '#default_value' => isset($form_state['pane']->css['sass'][$breakpoint_mn]['width']) ? $form_state['pane']->css['sass'][$breakpoint_mn]['width'] : '',
+      '#element_validate' => array('element_validate_integer_positive'),
+    );
+
+    $form['sass'][$breakpoint_mn]['offset'] = array(
+      '#title' => t('Offset'),
+      '#description' => t('Offset of the pane in columns, starts from 1 (i.e. 2)'),
+      '#type' => 'textfield',
+      '#required' => TRUE,
+      '#size' => 4,
+      '#default_value' => isset($form_state['pane']->css['sass'][$breakpoint_mn]['offset']) ? $form_state['pane']->css['sass'][$breakpoint_mn]['offset'] : '',
+      '#element_validate' => array('element_validate_integer_positive'),
+    );
+
+    $form['sass'][$breakpoint_mn]['float'] = array(
+      '#title' => t('Float'),
+      '#description' => t('Float of the element (either left or right)'),
+      '#type' => 'select',
+      '#options' => array('' => t('None'), 'left' => t('Left'), 'right' => t('Right')),
+      '#default_value' => isset($form_state['pane']->css['sass'][$breakpoint_mn]['float']) ? $form_state['pane']->css['sass'][$breakpoint_mn]['float'] : '',
+    );
+
+    $form['sass'][$breakpoint_mn]['clear'] = array(
+      '#title' => t('Clear'),
+      '#description' => t('Add "clear: both" rule for the pane'),
+      '#type' => 'checkbox',
+      '#default_value' => isset($form_state['pane']->css['sass'][$breakpoint_mn]['clear']) ? $form_state['pane']->css['sass'][$breakpoint_mn]['clear'] : '',
+    );
+
+    $form['sass'][$breakpoint_mn]['clear_float'] = array(
+      '#title' => t('Clear float'),
+      '#description' => t('Clear Float of the element. Argument of zen-clear() mixin'),
+      '#type' => 'select',
+      '#options' => array('' => t('None'), 'left' => t('Left'), 'right' => t('Right')),
+      '#default_value' => isset($form_state['pane']->css['sass'][$breakpoint_mn]['clear_float']) ? $form_state['pane']->css['sass'][$breakpoint_mn]['clear_float'] : '',
+      '#states' => array(
+        'visible' => array(
+          ':input[name="sass[' . $breakpoint_mn . '][clear]"]' => array('checked' => TRUE),
+        ),
+      ),
+    );
+  }
+
+  array_unshift($form['#submit'], 'panels_grid_form_panels_edit_configure_pane_css_form_submit');
+}
+
+function panels_grid_form_panels_edit_configure_pane_css_form_submit(&$form, &$form_state) {
+  if (isset($form_state['values']['sass'])) {
+    $form_state['pane']->css['sass'] = $form_state['values']['sass'];
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * Alter panels_panel_context_edit_settings form.
+ */
+function panels_grid_form_panels_panel_context_edit_settings_alter(&$form, $form_state) {
+  $responsive_breakpoints = breakpoints_breakpoint_load_all_active();
+  $form['conf']['sass'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('SASS grid definitions'),
+    '#tree' => TRUE,
+  );
+
+  $conf = $form_state['handler']->conf;
+  foreach ($responsive_breakpoints as $breakpoint) {
+    $breakpoint_mn = $breakpoint->machine_name;
+
+    $form['conf']['sass'][$breakpoint_mn] = array(
+      '#type' => 'fieldset',
+      '#tree' => TRUE,
+      '#title' => check_plain($breakpoint->name . ' (' . $breakpoint->breakpoint . ')'),
+    );
+
+    $form['conf']['sass'][$breakpoint_mn]['columns'] = array(
+      '#title' => t('Number of columns'),
+      '#type' => 'textfield',
+      '#required' => TRUE,
+      '#size' => 4,
+      '#element_validate' => array('element_validate_integer_positive'),
+      '#default_value' => isset($conf['sass'][$breakpoint_mn]['columns']) ? $conf['sass'][$breakpoint_mn]['columns'] : '',
+    );
+
+    $form['conf']['sass'][$breakpoint_mn]['gutter'] = array(
+      '#title' => t('Gutter width'),
+      '#description' => t('Value in pixels'),
+      '#type' => 'textfield',
+      '#required' => TRUE,
+      '#size' => 4,
+      '#element_validate' => array('element_validate_integer'),
+      '#default_value' => isset($conf['sass'][$breakpoint_mn]['gutter']) ? $conf['sass'][$breakpoint_mn]['gutter'] : '',
+    );
+
+    $form['conf']['sass'][$breakpoint_mn]['debug'] = array(
+      '#title' => t('Debug'),
+      '#type' => 'checkbox',
+      '#description' => t('Grid will have background showing columns'),
+      '#default_value' => isset($conf['sass'][$breakpoint_mn]['debug']) ? $conf['sass'][$breakpoint_mn]['debug'] : FALSE,
+    );
+  }
+
+  $form['#submit'][] = 'panels_grid_form_panels_panel_context_edit_settings_submit';
+}
+
+function panels_grid_form_panels_panel_context_edit_settings_submit($form, &$form_state) {
+  $form_state['handler']->conf['sass'] = $form_state['values']['sass'];
+}
+
+/**
+ * Implements hook_panels_pre_render().
+ *
+ * Compile css file and add it.
+ */
+function panels_grid_panels_pre_render($panels_display, $renderer) {
+  if ($panels_display->layout != 'sass') {
+    return;
+  }
+
+  // cache_key is not available in panels preview tab.
+  // @TODO make it working in preview mode.
+  if (!isset($panels_display->cache_key)) {
+    return;
+  }
+
+  $unique_key = _panels_grid_unique_key($panels_display->cache_key);
+
+  foreach ($panels_display->content as &$pane_edit) {
+    if (!isset($pane_edit->css['css_class'])) {
+      $pane_edit->css['css_class'] = '';
+    }
+    $pane_edit->css['css_class'] .= ' block-' . $pane_edit->pid . '-' . $unique_key;
+  }
+
+  // Check if compiled css file already exists.
+  $compiled_css_filename = 'grid-' . $unique_key;
+
+  $compiled_css_realpath = _panels_grid_get_files_directory() . '/panels_grid/css/' . $compiled_css_filename . '.css';
+  $compiled_css_uri = str_replace(DRUPAL_ROOT  . '/', '', $compiled_css_realpath);
+dpm($compiled_css_uri);
+
+  if (file_exists($compiled_css_realpath)) {
+    drupal_add_css($compiled_css_uri);
+    return;
+  }
+
+  // Load handler to get panel sass configuration (with grid settings).
+  $result = ctools_export_load_object('page_manager_handlers', 'conditions', array('did' => $panels_display->did));
+  $handler = reset($result);
+  $handler_conf_sass = $handler->conf['sass'];
+  $sass_file_content = '';
+
+  foreach (breakpoints_breakpoint_load_all_active() as $breakpoint) {
+    $sass_file_content .= '@media (' . $breakpoint->breakpoint . ") {\n\n";
+    // Header.
+    $sass_file_content .= '@import "zen";' . "\n";
+    $sass_file_content .= '$zen-column-count: ' . $handler_conf_sass[$breakpoint->machine_name]['columns'] . ";\n";
+    $sass_file_content .= '$zen-gutter-width: ' . $handler_conf_sass[$breakpoint->machine_name]['gutter'] . "px;\n\n";
+
+    // Container.
+    $container_class = 'container-' . $unique_key;
+    $sass_file_content .= '.' . $container_class . " {\n";
+    if ($handler_conf_sass[$breakpoint->machine_name]['debug']) {
+      $sass_file_content .= '@import "zen/background";' . "\n"
+                          . '@include zen-grid-background;' . "\n";
+    }
+    $sass_file_content .= '@include zen-grid-container;' . "\n";
+    $sass_file_content .= "}\n\n";
+
+    // Individual panes.
+    foreach ($panels_display->content as $pane) {
+      $pane_class = 'block-' . $pane->pid . '-' . $unique_key;
+      $pane_sass = $pane->css['sass'][$breakpoint->machine_name];
+      $sass_file_content .= '.' . $pane_class . "{\n";
+      $sass_file_content .= '@include zen-grid-item(' . $pane_sass['width'] . ', ' . $pane_sass['offset'];
+      if (!empty($pane_sass['float'])) {
+        $sass_file_content .= ', ' . $pane_sass['float'];
+      }
+      $sass_file_content .=  ');' . "\n";
+      if (isset($pane_sass['clear']) && $pane_sass['clear']) {
+        $sass_file_content .= '@include zen-clear(';
+        if (isset($pane_sass['clear_float']) && !empty($pane_sass['clear_float'])) {
+          $sass_file_content .= $pane_sass['clear_float'];
+        }
+        $sass_file_content .= ');' . "\n";
+      }
+      $sass_file_content .= "}\n\n";
+    }
+
+    $sass_file_content .= "}\n\n";
+  }
+
+  _panels_grid_prepare_compass_project();
+
+  $sass_realpath = _panels_grid_get_files_directory() . '/panels_grid/sass/' . $compiled_css_filename . '.scss';
+  file_put_contents($sass_realpath, $sass_file_content);
+
+  panels_grid_compass_compile();
+
+  drupal_add_css($compiled_css_uri);
+}
+
+/**
+ * Build folders structure for compass project.
+ */
+function _panels_grid_prepare_compass_project() {
+  $directories = array('panels_grid', 'panels_grid/css', 'panels_grid/sass');
+  $base_path = _panels_grid_get_files_directory();
+
+  foreach ($directories as $directory) {
+    $directory = $base_path  . '/' . $directory;
+    file_prepare_directory($directory, FILE_CREATE_DIRECTORY);
+  }
+
+  $module_directory = DRUPAL_ROOT . '/' . drupal_get_path('module', 'panels_grid');
+
+  shell_exec('cp ' . $module_directory . '/config.rb ' . $base_path . '/panels_grid');
+  shell_exec('cp -R ' . $module_directory . '/sass-extensions ' . $base_path . '/panels_grid');
+}
+
+/**
+ * Compile all css files.
+ */
+function panels_grid_compass_compile() {
+  $output = shell_exec('cd ' . _panels_grid_get_files_directory() . '/panels_grid && compass compile');
+  if (function_exists('dpm')) {
+    dpm('"compass compile" output: ' . $output);
+  }
+}
+
+/**
+ * Remove compiled css files.
+ *
+ * @param string $filename
+ *   Name of the filename to remove or all files if this argument is omitted.
+ */
+function panels_grid_remove_css_files($filename = '') {
+  $public_files_directory = _panels_grid_get_files_directory();
+
+  if (empty($filename)) {
+    $filename = '*';
+  }
+  shell_exec('rm ' . $public_files_directory . '/panels_grid/css/' . $filename);
+}
+
+/**
+ * Get the full path files directory where css and sass files to be stored.
+ */
+function _panels_grid_get_files_directory() {
+  $public_files_directory = variable_get('panels_grid_files_directory', '');
+  if (empty($public_files_directory)) {
+    $public_files_directory = variable_get('file_public_path', conf_path() . '/files');
+  }
+  return DRUPAL_ROOT . '/' . $public_files_directory;
+}
+
+function _panels_grid_unique_key($cache_key) {
+  return preg_replace('/[^\da-z]/i', '-', $cache_key);
+}
