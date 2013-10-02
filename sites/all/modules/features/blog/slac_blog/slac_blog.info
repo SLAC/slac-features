@@ -82,6 +82,6 @@ features[variable][] = pathauto_taxonomy_term_slac_blog_tags_pattern
 features[views_view][] = blog_archive
 features[views_view][] = blog_page
 features[views_view][] = blog_tags
-features_exclude[field_base][body] = body
 features_exclude[dependencies][slac_blog_demo] = slac_blog_demo
+features_exclude[field_base][body] = body
 features_exclude[menu_custom][main-menu] = main-menu

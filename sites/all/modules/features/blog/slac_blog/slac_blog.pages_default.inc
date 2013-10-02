@@ -28,9 +28,21 @@ function slac_blog_default_page_manager_handlers() {
     'css' => '',
     'contexts' => array(),
     'relationships' => array(),
+    'sass' => array(
+      'custom.user.mobile' => array(
+        'columns' => '1',
+        'gutter' => '0',
+        'debug' => 0,
+      ),
+      'custom.user.desktop' => array(
+        'columns' => '12',
+        'gutter' => '10',
+        'debug' => 1,
+      ),
+    ),
   );
   $display = new panels_display();
-  $display->layout = 'flexible';
+  $display->layout = 'sass';
   $display->layout_settings = array(
     'items' => array(
       'canvas' => array(
@@ -81,6 +93,10 @@ function slac_blog_default_page_manager_handlers() {
       'default' => NULL,
       'center' => NULL,
       'right_side' => NULL,
+      'middle' => NULL,
+    ),
+    'middle' => array(
+      'style' => 'sass',
     ),
   );
   $display->cache = array();
@@ -89,7 +105,7 @@ function slac_blog_default_page_manager_handlers() {
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-1';
-    $pane->panel = 'center';
+    $pane->panel = 'middle';
     $pane->type = 'views';
     $pane->subtype = 'blog_page';
     $pane->shown = TRUE;
@@ -114,15 +130,34 @@ function slac_blog_default_page_manager_handlers() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'sass' => array(
+        'custom.user.mobile' => array(
+          'width' => '1',
+          'offset' => '1',
+          'float' => '',
+          'clear' => 0,
+          'clear_float' => '',
+        ),
+        'custom.user.desktop' => array(
+          'width' => '9',
+          'offset' => '1',
+          'float' => '',
+          'clear' => 0,
+          'clear_float' => '',
+        ),
+      ),
+      'css_id' => '',
+      'css_class' => '',
+    );
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
     $display->content['new-1'] = $pane;
-    $display->panels['center'][0] = 'new-1';
+    $display->panels['middle'][0] = 'new-1';
     $pane = new stdClass();
     $pane->pid = 'new-2';
-    $pane->panel = 'right_side';
+    $pane->panel = 'middle';
     $pane->type = 'views';
     $pane->subtype = 'blog_tags';
     $pane->shown = TRUE;
@@ -147,15 +182,34 @@ function slac_blog_default_page_manager_handlers() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'sass' => array(
+        'custom.user.mobile' => array(
+          'width' => '1',
+          'offset' => '1',
+          'float' => '',
+          'clear' => 0,
+          'clear_float' => '',
+        ),
+        'custom.user.desktop' => array(
+          'width' => '3',
+          'offset' => '1',
+          'float' => 'right',
+          'clear' => 1,
+          'clear_float' => 'right',
+        ),
+      ),
+      'css_id' => '',
+      'css_class' => '',
+    );
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
     $display->content['new-2'] = $pane;
-    $display->panels['right_side'][0] = 'new-2';
+    $display->panels['middle'][1] = 'new-2';
     $pane = new stdClass();
     $pane->pid = 'new-3';
-    $pane->panel = 'right_side';
+    $pane->panel = 'middle';
     $pane->type = 'views';
     $pane->subtype = 'blog_archive';
     $pane->shown = TRUE;
@@ -180,15 +234,34 @@ function slac_blog_default_page_manager_handlers() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'sass' => array(
+        'custom.user.mobile' => array(
+          'width' => '1',
+          'offset' => '1',
+          'float' => '',
+          'clear' => 1,
+          'clear_float' => '',
+        ),
+        'custom.user.desktop' => array(
+          'width' => '3',
+          'offset' => '1',
+          'float' => 'right',
+          'clear' => 1,
+          'clear_float' => 'right',
+        ),
+      ),
+      'css_id' => '',
+      'css_class' => '',
+    );
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 2;
     $pane->locks = array();
     $display->content['new-3'] = $pane;
-    $display->panels['right_side'][1] = 'new-3';
+    $display->panels['middle'][2] = 'new-3';
     $pane = new stdClass();
     $pane->pid = 'new-4';
-    $pane->panel = 'right_side';
+    $pane->panel = 'middle';
     $pane->type = 'views';
     $pane->subtype = 'blog_archive';
     $pane->shown = TRUE;
@@ -213,15 +286,34 @@ function slac_blog_default_page_manager_handlers() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'sass' => array(
+        'custom.user.mobile' => array(
+          'width' => '1',
+          'offset' => '1',
+          'float' => '',
+          'clear' => 1,
+          'clear_float' => '',
+        ),
+        'custom.user.desktop' => array(
+          'width' => '3',
+          'offset' => '1',
+          'float' => 'right',
+          'clear' => 1,
+          'clear_float' => 'right',
+        ),
+      ),
+      'css_id' => '',
+      'css_class' => '',
+    );
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 3;
     $pane->locks = array();
     $display->content['new-4'] = $pane;
-    $display->panels['right_side'][2] = 'new-4';
+    $display->panels['middle'][3] = 'new-4';
     $pane = new stdClass();
     $pane->pid = 'new-5';
-    $pane->panel = 'right_side';
+    $pane->panel = 'middle';
     $pane->type = 'views';
     $pane->subtype = 'blog_tags';
     $pane->shown = TRUE;
@@ -246,12 +338,31 @@ function slac_blog_default_page_manager_handlers() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'sass' => array(
+        'custom.user.mobile' => array(
+          'width' => '1',
+          'offset' => '1',
+          'float' => '',
+          'clear' => 1,
+          'clear_float' => '',
+        ),
+        'custom.user.desktop' => array(
+          'width' => '3',
+          'offset' => '1',
+          'float' => 'right',
+          'clear' => 1,
+          'clear_float' => 'right',
+        ),
+      ),
+      'css_id' => '',
+      'css_class' => '',
+    );
     $pane->extras = array();
-    $pane->position = 3;
+    $pane->position = 4;
     $pane->locks = array();
     $display->content['new-5'] = $pane;
-    $display->panels['right_side'][3] = 'new-5';
+    $display->panels['middle'][4] = 'new-5';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -1313,7 +1424,10 @@ function slac_blog_default_page_manager_pages() {
   $page->admin_title = 'Blog Archive';
   $page->admin_description = '';
   $page->path = 'blog/archive';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array();
   $page->arguments = array();
   $page->conf = array(
