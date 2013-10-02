@@ -229,3 +229,45 @@
   .field-name-field-slac-sm-google-page a{background-position: -147px 0;}
   .field-name-field-slac-sm-flickr-page a{background-position: -98px 0;}
 }
+
+/* Footer seccond */
+
+.footer-seccond{
+  padding:  10px 0;
+  color: #fff;
+  font-size:  10px;
+  line-height: normal;
+  a{
+    color: #fff;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+  .panels-flexible-row-first{
+    width: 100%;
+    border-bottom: 1px solid #aaa;
+    padding-bottom: 6px;
+    width: 75%;
+    max-width: 570px;
+  }
+   .menu{
+    padding: 6px 0 0;
+    overflow: hidden;
+    width: 75%;
+    max-width: 570px;
+    li{
+      float: left;
+      margin: 0;
+      text-align: center;
+      text-transform: uppercase;
+      margin-right:  10px;
+      a{
+        color: #fff;
+        text-decoration: none;
+        padding-left: 9px;
+        background: url("../images/footer-menu-arrow.png") no-repeat left center;
+        font-size: 9px;
+      }
+    }
+  }
+}
