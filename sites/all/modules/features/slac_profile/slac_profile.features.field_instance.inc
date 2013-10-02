@@ -10,6 +10,108 @@
 function slac_profile_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'profile2-bio-field_prf_bio_bio'
+  $field_instances['profile2-bio-field_prf_bio_bio'] = array(
+    'bundle' => 'bio',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'profile2',
+    'field_name' => 'field_prf_bio_bio',
+    'label' => 'Bio',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'profile2-bio-field_prf_bio_prof_activities'
+  $field_instances['profile2-bio-field_prf_bio_prof_activities'] = array(
+    'bundle' => 'bio',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+    ),
+    'entity_type' => 'profile2',
+    'field_name' => 'field_prf_bio_prof_activities',
+    'label' => 'Professional activities',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'profile2-bio-field_prf_bio_research_interests'
+  $field_instances['profile2-bio-field_prf_bio_research_interests'] = array(
+    'bundle' => 'bio',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'profile2',
+    'field_name' => 'field_prf_bio_research_interests',
+    'label' => 'Research interests',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 2,
+    ),
+  );
+
   // Exported field_instance: 'profile2-contact-field_prf_contact_affiliation'
   $field_instances['profile2-contact-field_prf_contact_affiliation'] = array(
     'bundle' => 'contact',
@@ -591,6 +693,7 @@ function slac_profile_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Affiliation');
+  t('Bio');
   t('Education');
   t('Email');
   t('Facebook');
@@ -601,6 +704,8 @@ function slac_profile_field_default_field_instances() {
   t('Name');
   t('Phone');
   t('Photo');
+  t('Professional activities');
+  t('Research interests');
   t('Title');
   t('Twitter');
   t('Website');
