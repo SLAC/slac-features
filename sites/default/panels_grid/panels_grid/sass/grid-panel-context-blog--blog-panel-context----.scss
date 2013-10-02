@@ -1,0 +1,73 @@
+@media (max-width: 320px) {
+
+@import "zen";
+$zen-column-count: 1;
+$zen-gutter-width: 0px;
+
+.container-panel-context-blog--blog-panel-context---- {
+@include zen-grid-container;
+}
+
+.block-1-panel-context-blog--blog-panel-context----{
+@include zen-grid-item(1, 1);
+}
+
+.block-2-panel-context-blog--blog-panel-context----{
+@include zen-grid-item(1, 1);
+}
+
+.block-3-panel-context-blog--blog-panel-context----{
+@include zen-grid-item(1, 1);
+@include zen-clear();
+}
+
+.block-4-panel-context-blog--blog-panel-context----{
+@include zen-grid-item(1, 1);
+@include zen-clear();
+}
+
+.block-5-panel-context-blog--blog-panel-context----{
+@include zen-grid-item(1, 1);
+@include zen-clear();
+}
+
+}
+
+@media (min-width: 321px) {
+
+@import "zen";
+$zen-column-count: 12;
+$zen-gutter-width: 10px;
+
+.container-panel-context-blog--blog-panel-context---- {
+@import "zen/background";
+@include zen-grid-background;
+@include zen-grid-container;
+}
+
+.block-1-panel-context-blog--blog-panel-context----{
+@include zen-grid-item(9, 1);
+}
+
+.block-2-panel-context-blog--blog-panel-context----{
+@include zen-grid-item(3, 1, right);
+@include zen-clear(right);
+}
+
+.block-3-panel-context-blog--blog-panel-context----{
+@include zen-grid-item(3, 1, right);
+@include zen-clear(right);
+}
+
+.block-4-panel-context-blog--blog-panel-context----{
+@include zen-grid-item(3, 1, right);
+@include zen-clear(right);
+}
+
+.block-5-panel-context-blog--blog-panel-context----{
+@include zen-grid-item(3, 1, right);
+@include zen-clear(right);
+}
+
+}
+
