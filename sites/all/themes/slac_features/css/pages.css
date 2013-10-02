@@ -220,18 +220,58 @@
   color: #881728;
 }
 
-/* Footer */
+/* Footer fisrt */
 /* line 179, ../sass/pages.scss */
+.footer-first {
+  padding: 16px 0;
+}
+/* line 181, ../sass/pages.scss */
+.footer-first .pane-page-site-name {
+  color: #88655a;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: normal;
+  float: left;
+  padding-right: 25px;
+  margin-right: 7px;
+  border-right: 1px solid #cdc2b4;
+}
+/* line 191, ../sass/pages.scss */
+.footer-first .menu {
+  float: left;
+}
+/* line 193, ../sass/pages.scss */
+.footer-first .menu li {
+  float: left;
+  font-size: 12px;
+  line-height: 16px;
+}
+/* line 197, ../sass/pages.scss */
+.footer-first .menu li a {
+  color: #88655a;
+  margin: 17px;
+}
+/* line 201, ../sass/pages.scss */
+.footer-first .menu li:after {
+  content: ":";
+}
+/* line 204, ../sass/pages.scss */
+.footer-first .menu li.last:after {
+  content: "";
+}
+
+/* Socials */
+/* line 213, ../sass/pages.scss */
 .pane-bundle-social-media {
   float: right;
 }
-/* line 181, ../sass/pages.scss */
+/* line 215, ../sass/pages.scss */
 .pane-bundle-social-media .field {
   overflow: hidden;
   float: left;
   margin-left: 18px;
 }
-/* line 185, ../sass/pages.scss */
+/* line 219, ../sass/pages.scss */
 .pane-bundle-social-media .field a {
   display: block;
   width: 33px;
@@ -239,19 +279,19 @@
   padding: 32px 0 0 0;
   background: url("../images/socials-desktop.png") no-repeat;
 }
-/* line 193, ../sass/pages.scss */
+/* line 227, ../sass/pages.scss */
 .pane-bundle-social-media .field-name-field-slac-sm-twitter-page a {
   background-position: -49px 0;
 }
-/* line 194, ../sass/pages.scss */
+/* line 228, ../sass/pages.scss */
 .pane-bundle-social-media .field-name-field-slac-sm-youtube-page a {
   background-position: -196px 0;
 }
-/* line 195, ../sass/pages.scss */
+/* line 229, ../sass/pages.scss */
 .pane-bundle-social-media .field-name-field-slac-sm-google-page a {
   background-position: -147px 0;
 }
-/* line 196, ../sass/pages.scss */
+/* line 230, ../sass/pages.scss */
 .pane-bundle-social-media .field-name-field-slac-sm-flickr-page a {
   background-position: -98px 0;
 }

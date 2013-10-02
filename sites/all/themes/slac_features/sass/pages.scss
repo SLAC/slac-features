@@ -174,7 +174,41 @@
 	}
 }
 
-/* Footer */
+/* Footer fisrt */
+
+.footer-first{
+  padding:  16px 0;
+  .pane-page-site-name{
+    color: #88655a;
+    font-size:  14px;
+    font-weight: bold;
+    line-height: normal;
+    float: left;
+    padding-right: 25px;
+    margin-right: 7px;
+    border-right: 1px solid #cdc2b4;
+  }
+  .menu{
+    float: left;
+    li{
+      float: left;
+      font-size:  12px;
+      line-height:  16px;
+      a{
+        color: #88655a;
+        margin:  17px;
+      }
+      &:after{
+        content: ":";
+      }
+      &.last:after{
+        content: "";
+      }
+    }
+  }
+}
+
+/* Socials */
 
 .pane-bundle-social-media{
   float: right;
