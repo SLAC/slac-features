@@ -46,6 +46,10 @@
   padding: 14px 0 0;
   overflow: hidden;
 }
+/* line 20, ../sass/blocks.scss */
+.right-brown-block ul li {
+  margin: 0;
+}
 
 /*
 .horizontal-list li {
