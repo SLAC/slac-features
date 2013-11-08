@@ -152,6 +152,7 @@ function slac_blog_views_default_views() {
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Blog page';
   $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['link_display'] = 'feed_1';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
@@ -286,18 +287,18 @@ function slac_blog_views_default_views() {
   $handler->display->display_options['arguments']['uid']['validate_options']['type'] = 'either';
   $handler->display->display_options['arguments']['uid']['validate']['fail'] = 'ignore';
   $handler->display->display_options['path'] = 'blog-feed';
+  $handler->display->display_options['displays'] = array(
+    'page_1' => 'page_1',
+    'block_1' => 'block_1',
+    'default' => 0,
+    'page_2' => 0,
+    'page_3' => 0,
+    'block_2' => 0,
+    'block_3' => 0,
+  );
 
   /* Display: User Blog Page */
   $handler = $view->new_display('page', 'User Blog Page', 'page_1');
-  $handler->display->display_options['defaults']['footer'] = FALSE;
-  /* Footer: Global: Text area */
-  $handler->display->display_options['footer']['area']['id'] = 'area';
-  $handler->display->display_options['footer']['area']['table'] = 'views';
-  $handler->display->display_options['footer']['area']['field'] = 'area';
-  $handler->display->display_options['footer']['area']['empty'] = TRUE;
-  $handler->display->display_options['footer']['area']['content'] = '<a href="/blog-feed/!1" class="blog-feed-icon">Feeds</a>';
-  $handler->display->display_options['footer']['area']['format'] = 'filtered_html';
-  $handler->display->display_options['footer']['area']['tokenize'] = TRUE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relationship: Content: Author */
   $handler->display->display_options['relationships']['uid']['id'] = 'uid';
@@ -323,15 +324,6 @@ function slac_blog_views_default_views() {
 
   /* Display: Blogs by tag */
   $handler = $view->new_display('page', 'Blogs by tag', 'page_2');
-  $handler->display->display_options['defaults']['footer'] = FALSE;
-  /* Footer: Global: Text area */
-  $handler->display->display_options['footer']['area']['id'] = 'area';
-  $handler->display->display_options['footer']['area']['table'] = 'views';
-  $handler->display->display_options['footer']['area']['field'] = 'area';
-  $handler->display->display_options['footer']['area']['empty'] = TRUE;
-  $handler->display->display_options['footer']['area']['content'] = '<a href="/blog-term-feed/!1" class="blog-feed-icon">Feeds</a>';
-  $handler->display->display_options['footer']['area']['format'] = 'filtered_html';
-  $handler->display->display_options['footer']['area']['tokenize'] = TRUE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Has taxonomy term ID (with depth) */
   $handler->display->display_options['arguments']['term_node_tid_depth']['id'] = 'term_node_tid_depth';
@@ -353,15 +345,6 @@ function slac_blog_views_default_views() {
 
   /* Display: Blogs by category */
   $handler = $view->new_display('page', 'Blogs by category', 'page_3');
-  $handler->display->display_options['defaults']['footer'] = FALSE;
-  /* Footer: Global: Text area */
-  $handler->display->display_options['footer']['area']['id'] = 'area';
-  $handler->display->display_options['footer']['area']['table'] = 'views';
-  $handler->display->display_options['footer']['area']['field'] = 'area';
-  $handler->display->display_options['footer']['area']['empty'] = TRUE;
-  $handler->display->display_options['footer']['area']['content'] = '<a href="/blog-term-feed/!1" class="blog-feed-icon">Feeds</a>';
-  $handler->display->display_options['footer']['area']['format'] = 'filtered_html';
-  $handler->display->display_options['footer']['area']['tokenize'] = TRUE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Has taxonomy term ID (with depth) */
   $handler->display->display_options['arguments']['term_node_tid_depth']['id'] = 'term_node_tid_depth';
@@ -383,15 +366,6 @@ function slac_blog_views_default_views() {
 
   /* Display: Blog */
   $handler = $view->new_display('block', 'Blog', 'block_1');
-  $handler->display->display_options['defaults']['footer'] = FALSE;
-  /* Footer: Global: Text area */
-  $handler->display->display_options['footer']['area']['id'] = 'area';
-  $handler->display->display_options['footer']['area']['table'] = 'views';
-  $handler->display->display_options['footer']['area']['field'] = 'area';
-  $handler->display->display_options['footer']['area']['empty'] = TRUE;
-  $handler->display->display_options['footer']['area']['content'] = '<a href="/blog-feed/" class="blog-feed-icon">Feeds</a>';
-  $handler->display->display_options['footer']['area']['format'] = 'filtered_html';
-  $handler->display->display_options['footer']['area']['tokenize'] = TRUE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -410,7 +384,7 @@ function slac_blog_views_default_views() {
   $handler->display->display_options['fields']['field_slac_blog_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_slac_blog_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_slac_blog_image']['settings'] = array(
-    'image_style' => 'blog_thumbnail',
+    'image_style' => 'slac_blog_image',
     'image_link' => 'content',
   );
   /* Field: User: Uid */
@@ -653,7 +627,16 @@ function slac_blog_views_default_views() {
     'slac_blog_category' => 'slac_blog_category',
   );
   $handler->display->display_options['arguments']['term_node_tid_depth']['depth'] = '0';
-  $handler->display->display_options['path'] = 'blog-term-feed';
+  $handler->display->display_options['path'] = 'blog/rss/category';
+  $handler->display->display_options['displays'] = array(
+    'page_2' => 'page_2',
+    'page_3' => 'page_3',
+    'default' => 0,
+    'page_1' => 0,
+    'block_1' => 0,
+    'block_2' => 0,
+    'block_3' => 0,
+  );
   $handler->display->display_options['sitename_title'] = 0;
   $export['blog_page'] = $view;
 
