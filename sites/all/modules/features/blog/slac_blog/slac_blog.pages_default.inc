@@ -1272,7 +1272,7 @@ function slac_blog_default_page_manager_handlers() {
         0 => 'argument_term_1.tid',
       ),
       'override_title' => 1,
-      'override_title_text' => 'log: %term:name',
+      'override_title_text' => 'Posts tagged with "%term:name"',
     );
     $pane->cache = array();
     $pane->style = array(
