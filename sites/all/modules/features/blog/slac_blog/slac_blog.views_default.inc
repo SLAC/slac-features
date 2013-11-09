@@ -455,9 +455,6 @@ function slac_blog_views_default_views() {
   $handler = $view->new_display('block', 'Blog Archive', 'block_2');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Blog Archive';
-  $handler->display->display_options['defaults']['pager'] = FALSE;
-  $handler->display->display_options['pager']['type'] = 'none';
-  $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -547,14 +544,12 @@ function slac_blog_views_default_views() {
   $handler->display->display_options['arguments']['created_year_month']['id'] = 'created_year_month';
   $handler->display->display_options['arguments']['created_year_month']['table'] = 'node';
   $handler->display->display_options['arguments']['created_year_month']['field'] = 'created_year_month';
-  $handler->display->display_options['arguments']['created_year_month']['default_action'] = 'empty';
+  $handler->display->display_options['arguments']['created_year_month']['title_enable'] = TRUE;
+  $handler->display->display_options['arguments']['created_year_month']['title'] = 'Blog Archive: %1';
   $handler->display->display_options['arguments']['created_year_month']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['created_year_month']['summary']['sort_order'] = 'desc';
   $handler->display->display_options['arguments']['created_year_month']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['created_year_month']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['created_year_month']['summary_options']['base_path'] = 'blog/archive';
   $handler->display->display_options['arguments']['created_year_month']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['created_year_month']['validate']['type'] = 'numeric';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -596,6 +591,8 @@ function slac_blog_views_default_views() {
   $handler->display->display_options['arguments']['created_year']['table'] = 'node';
   $handler->display->display_options['arguments']['created_year']['field'] = 'created_year';
   $handler->display->display_options['arguments']['created_year']['default_action'] = 'empty';
+  $handler->display->display_options['arguments']['created_year']['title_enable'] = TRUE;
+  $handler->display->display_options['arguments']['created_year']['title'] = 'Blog Archive %1';
   $handler->display->display_options['arguments']['created_year']['default_argument_type'] = 'fixed';
   $handler->display->display_options['arguments']['created_year']['summary']['sort_order'] = 'desc';
   $handler->display->display_options['arguments']['created_year']['summary']['number_of_records'] = '0';
