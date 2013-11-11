@@ -20,10 +20,10 @@
         <div class="inside"><?php print $content['left']; ?></div>
       <?php endif ?>
   </div>
-
   <div class="panel-panel general-right">
      <?php if ($content['right']): ?>
         <div class="inside"><?php print $content['right']; ?></div>
       <?php endif ?>
   </div>
+  <div class="vertical-line"></div>
 </div>
