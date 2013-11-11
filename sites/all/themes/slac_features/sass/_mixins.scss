@@ -41,10 +41,27 @@
     @include zen-grid-container();
   }
 
-/*  .general-two-col .left{
+
+  .general-two-col .general-left{
     @include zen-grid-item(8, 1);
   }
 
-  .general-two-col .right{
+  .general-two-col .general-right{
     @include zen-grid-item(4, 9);
-  }*/
+  }
+
+@media (max-width: 900px) {
+  .general-two-col .general-left{
+    @include zen-grid-item(8, 1);
+  }
+  .general-two-col .general-right{
+    @include zen-grid-item(4, 1);
+  }
+}
+
+@media (max-width: 600px) {
+  .general-two-col .general-left,
+  .general-two-col .general-right{
+    @include zen-grid-item(4, 9);
+  }
+}
