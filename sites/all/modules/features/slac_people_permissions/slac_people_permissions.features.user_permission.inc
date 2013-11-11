@@ -108,6 +108,51 @@ function slac_people_permissions_user_default_permissions() {
     'module' => 'panelizer',
   );
 
+  // Exported permission: create landing_page content.
+  $permissions['create landing_page content'] = array(
+    'name' => 'create landing_page content',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: delete any landing_page content.
+  $permissions['delete any landing_page content'] = array(
+    'name' => 'delete any landing_page content',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: delete own landing_page content.
+  $permissions['delete own landing_page content'] = array(
+    'name' => 'delete own landing_page content',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: edit any landing_page content.
+  $permissions['edit any landing_page content'] = array(
+    'name' => 'edit any landing_page content',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: edit own landing_page content.
+  $permissions['edit own landing_page content'] = array(
+    'name' => 'edit own landing_page content',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: view own unpublished content.
   $permissions['view own unpublished content'] = array(
     'name' => 'view own unpublished content',
