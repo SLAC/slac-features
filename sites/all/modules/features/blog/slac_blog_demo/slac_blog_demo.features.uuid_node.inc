@@ -57,14 +57,6 @@ function slac_blog_demo_uuid_features_default_content() {
       ),
     ),
   ),
-  'field_slac_blog_category' => array(
-    'und' => array(
-      0 => array(
-        'tid' => 73,
-        'uuid' => '7ab07cf6-bd48-45e3-a174-035b8bb14409',
-      ),
-    ),
-  ),
   'field_slac_blog_image' => array(
     'und' => array(
       0 => array(
@@ -208,14 +200,6 @@ function slac_blog_demo_uuid_features_default_content() {
       ),
     ),
   ),
-  'field_slac_blog_category' => array(
-    'und' => array(
-      0 => array(
-        'tid' => 69,
-        'uuid' => '67c4bd29-1662-4f71-98fa-cddcec26462b',
-      ),
-    ),
-  ),
   'field_slac_blog_image' => array(
     'und' => array(
       0 => array(
@@ -351,14 +335,6 @@ function slac_blog_demo_uuid_features_default_content() {
 <p>As I consider this man who sat next to me with his white cane folded up under his arm, navigating his iPhone by listening to the screen reader through his headphones, I realize that for me, the big take-away from this conference was that accessibility must become one of our priorities as we develop for the web.</p>
 ',
         'safe_summary' => '',
-      ),
-    ),
-  ),
-  'field_slac_blog_category' => array(
-    'und' => array(
-      0 => array(
-        'tid' => 72,
-        'uuid' => '79e84627-4ccb-4811-a469-1da6267a6f3a',
       ),
     ),
   ),
@@ -529,14 +505,6 @@ function slac_blog_demo_uuid_features_default_content() {
       ),
     ),
   ),
-  'field_slac_blog_category' => array(
-    'und' => array(
-      0 => array(
-        'tid' => 63,
-        'uuid' => '18891cc1-ada5-4a06-80a3-f88a7d62c2ac',
-      ),
-    ),
-  ),
   'field_slac_blog_image' => array(
     'und' => array(
       0 => array(
@@ -683,14 +651,6 @@ function slac_blog_demo_uuid_features_default_content() {
 <p><em>Do you have any menu pet peeves like me? What do you think makes for great navigation?</em></p>
 ',
         'safe_summary' => '',
-      ),
-    ),
-  ),
-  'field_slac_blog_category' => array(
-    'und' => array(
-      0 => array(
-        'tid' => 73,
-        'uuid' => '7ab07cf6-bd48-45e3-a174-035b8bb14409',
       ),
     ),
   ),
@@ -865,14 +825,6 @@ function slac_blog_demo_uuid_features_default_content() {
       ),
     ),
   ),
-  'field_slac_blog_category' => array(
-    'und' => array(
-      0 => array(
-        'tid' => 69,
-        'uuid' => '67c4bd29-1662-4f71-98fa-cddcec26462b',
-      ),
-    ),
-  ),
   'field_slac_blog_image' => array(
     'und' => array(
       0 => array(
@@ -1016,14 +968,6 @@ function slac_blog_demo_uuid_features_default_content() {
 <p><a href="https://itsupcoming.stanford.edu">Visit the IT Services Technology Training current courses schedule</a> to learn more and sign up for regular courses and the special Techie Festival sessions. Use those STAP funds before they expire!</p>
 ',
         'safe_summary' => '',
-      ),
-    ),
-  ),
-  'field_slac_blog_category' => array(
-    'und' => array(
-      0 => array(
-        'tid' => 69,
-        'uuid' => '67c4bd29-1662-4f71-98fa-cddcec26462b',
       ),
     ),
   ),
@@ -1265,14 +1209,6 @@ function slac_blog_demo_uuid_features_default_content() {
       ),
     ),
   ),
-  'field_slac_blog_category' => array(
-    'und' => array(
-      0 => array(
-        'tid' => 73,
-        'uuid' => '7ab07cf6-bd48-45e3-a174-035b8bb14409',
-      ),
-    ),
-  ),
   'field_slac_blog_image' => array(
     'und' => array(
       0 => array(
@@ -1456,14 +1392,6 @@ function slac_blog_demo_uuid_features_default_content() {
 <p>Good luck with your project!</p>
 ',
         'safe_summary' => '',
-      ),
-    ),
-  ),
-  'field_slac_blog_category' => array(
-    'und' => array(
-      0 => array(
-        'tid' => 63,
-        'uuid' => '18891cc1-ada5-4a06-80a3-f88a7d62c2ac',
       ),
     ),
   ),

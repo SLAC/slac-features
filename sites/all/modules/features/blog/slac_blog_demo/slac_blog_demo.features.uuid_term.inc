@@ -27,14 +27,6 @@ function slac_blog_demo_uuid_features_default_terms() {
     'vocabulary_machine_name' => 'slac_blog_tags',
   );
   $terms[] = array(
-    'name' => 'News and Updates',
-    'description' => '',
-    'format' => 'filtered_html',
-    'weight' => 3,
-    'uuid' => '18891cc1-ada5-4a06-80a3-f88a7d62c2ac',
-    'vocabulary_machine_name' => 'slac_blog_category',
-  );
-  $terms[] = array(
     'name' => 'Site building',
     'description' => NULL,
     'format' => NULL,
@@ -75,14 +67,6 @@ function slac_blog_demo_uuid_features_default_terms() {
     'vocabulary_machine_name' => 'slac_blog_tags',
   );
   $terms[] = array(
-    'name' => 'Sites Superstars',
-    'description' => '',
-    'format' => 'filtered_html',
-    'weight' => 1,
-    'uuid' => '67c4bd29-1662-4f71-98fa-cddcec26462b',
-    'vocabulary_machine_name' => 'slac_blog_category',
-  );
-  $terms[] = array(
     'name' => 'Context',
     'description' => '',
     'format' => 'filtered_html',
@@ -97,22 +81,6 @@ function slac_blog_demo_uuid_features_default_terms() {
     'weight' => 0,
     'uuid' => '77f52d96-2914-40c4-866d-bf4622d91a13',
     'vocabulary_machine_name' => 'slac_blog_tags',
-  );
-  $terms[] = array(
-    'name' => 'Tips and Tricks',
-    'description' => '',
-    'format' => 'filtered_html',
-    'weight' => 2,
-    'uuid' => '79e84627-4ccb-4811-a469-1da6267a6f3a',
-    'vocabulary_machine_name' => 'slac_blog_category',
-  );
-  $terms[] = array(
-    'name' => 'Process and Practice',
-    'description' => '',
-    'format' => 'filtered_html',
-    'weight' => 0,
-    'uuid' => '7ab07cf6-bd48-45e3-a174-035b8bb14409',
-    'vocabulary_machine_name' => 'slac_blog_category',
   );
   $terms[] = array(
     'name' => 'theming',
