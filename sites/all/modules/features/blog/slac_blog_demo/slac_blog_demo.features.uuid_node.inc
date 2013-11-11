@@ -89,15 +89,15 @@ function slac_blog_demo_uuid_features_default_content() {
   'field_slac_blog_tags' => array(
     'und' => array(
       0 => array(
-        'tid' => 80,
+        'tid' => 25,
         'uuid' => 'c2935c8d-9f69-4392-9136-2deadbc90b6c',
       ),
       1 => array(
-        'tid' => 81,
+        'tid' => 26,
         'uuid' => 'ce8fd534-a7f1-4293-b40e-e8ffc23f82de',
       ),
       2 => array(
-        'tid' => 65,
+        'tid' => 13,
         'uuid' => '2779b052-a751-45e1-80a5-efa4dadb3867',
       ),
     ),
@@ -164,7 +164,7 @@ function slac_blog_demo_uuid_features_default_content() {
   'name' => 'usertest1',
   'picture' => 0,
   'subscriptions_notify' => TRUE,
-  'date' => '2013-04-20 14:35:51 +0300',
+  'date' => '2013-04-20 04:35:51 -0700',
   'author_uuid' => '3b92ccfc-e7f7-4599-84d5-71e3e35c6981',
 );
   $nodes[] = array(
@@ -232,11 +232,11 @@ function slac_blog_demo_uuid_features_default_content() {
   'field_slac_blog_tags' => array(
     'und' => array(
       0 => array(
-        'tid' => 64,
+        'tid' => 12,
         'uuid' => '25f89c1a-ad28-49ce-ac5d-0da000be0ff3',
       ),
       1 => array(
-        'tid' => 66,
+        'tid' => 14,
         'uuid' => '2d557d82-23f6-4ab1-881e-93a0ca55c724',
       ),
     ),
@@ -303,7 +303,7 @@ function slac_blog_demo_uuid_features_default_content() {
   'name' => 'usertest2',
   'picture' => 0,
   'subscriptions_notify' => TRUE,
-  'date' => '2013-05-03 14:35:51 +0300',
+  'date' => '2013-05-03 04:35:51 -0700',
   'author_uuid' => '4edce278-5dc3-4e83-b62e-9f3b5556007e',
 );
   $nodes[] = array(
@@ -370,11 +370,11 @@ function slac_blog_demo_uuid_features_default_content() {
   'field_slac_blog_tags' => array(
     'und' => array(
       0 => array(
-        'tid' => 85,
+        'tid' => 30,
         'uuid' => 'ee1b6371-da63-44d0-849f-116ee0803cf8',
       ),
       1 => array(
-        'tid' => 66,
+        'tid' => 14,
         'uuid' => '2d557d82-23f6-4ab1-881e-93a0ca55c724',
       ),
     ),
@@ -441,7 +441,7 @@ function slac_blog_demo_uuid_features_default_content() {
   'name' => 'usertest3',
   'picture' => 0,
   'subscriptions_notify' => TRUE,
-  'date' => '2013-06-20 14:35:51 +0300',
+  'date' => '2013-06-20 04:35:51 -0700',
   'author_uuid' => 'af70240a-9f15-49fa-a854-27c6f484ebc9',
 );
   $nodes[] = array(
@@ -537,11 +537,11 @@ function slac_blog_demo_uuid_features_default_content() {
   'field_slac_blog_tags' => array(
     'und' => array(
       0 => array(
-        'tid' => 84,
+        'tid' => 29,
         'uuid' => 'e0e71063-f177-468a-b7b3-f2f7785bb689',
       ),
       1 => array(
-        'tid' => 65,
+        'tid' => 13,
         'uuid' => '2779b052-a751-45e1-80a5-efa4dadb3867',
       ),
     ),
@@ -608,7 +608,7 @@ function slac_blog_demo_uuid_features_default_content() {
   'name' => 'usertest1',
   'picture' => 0,
   'subscriptions_notify' => TRUE,
-  'date' => '2013-03-03 13:35:51 +0200',
+  'date' => '2013-03-03 03:35:51 -0800',
   'author_uuid' => '3b92ccfc-e7f7-4599-84d5-71e3e35c6981',
 );
   $nodes[] = array(
@@ -686,7 +686,7 @@ function slac_blog_demo_uuid_features_default_content() {
   'field_slac_blog_tags' => array(
     'und' => array(
       0 => array(
-        'tid' => 70,
+        'tid' => 17,
         'uuid' => '6e1c034d-d332-4fd7-8771-e3c6a62ec739',
       ),
     ),
@@ -753,7 +753,7 @@ function slac_blog_demo_uuid_features_default_content() {
   'name' => 'usertest2',
   'picture' => 0,
   'subscriptions_notify' => TRUE,
-  'date' => '2013-05-22 14:35:51 +0300',
+  'date' => '2013-05-22 04:35:51 -0700',
   'author_uuid' => '4edce278-5dc3-4e83-b62e-9f3b5556007e',
 );
   $nodes[] = array(
@@ -857,11 +857,11 @@ function slac_blog_demo_uuid_features_default_content() {
   'field_slac_blog_tags' => array(
     'und' => array(
       0 => array(
-        'tid' => 71,
+        'tid' => 18,
         'uuid' => '77f52d96-2914-40c4-866d-bf4622d91a13',
       ),
       1 => array(
-        'tid' => 79,
+        'tid' => 24,
         'uuid' => 'b2959bf4-b73c-4c1c-b8bb-a8d6c55e4dd0',
       ),
     ),
@@ -928,7 +928,7 @@ function slac_blog_demo_uuid_features_default_content() {
   'name' => 'usertest2',
   'picture' => 0,
   'subscriptions_notify' => TRUE,
-  'date' => '2013-07-12 14:35:51 +0300',
+  'date' => '2013-07-12 04:35:51 -0700',
   'author_uuid' => '4edce278-5dc3-4e83-b62e-9f3b5556007e',
 );
   $nodes[] = array(
@@ -1003,11 +1003,11 @@ function slac_blog_demo_uuid_features_default_content() {
   'field_slac_blog_tags' => array(
     'und' => array(
       0 => array(
-        'tid' => 65,
+        'tid' => 13,
         'uuid' => '2779b052-a751-45e1-80a5-efa4dadb3867',
       ),
       1 => array(
-        'tid' => 74,
+        'tid' => 19,
         'uuid' => '86014be0-6ad6-4522-acd6-faa5fb09c1fe',
       ),
     ),
@@ -1074,7 +1074,7 @@ function slac_blog_demo_uuid_features_default_content() {
   'name' => 'usertest3',
   'picture' => 0,
   'subscriptions_notify' => TRUE,
-  'date' => '2013-06-16 14:35:51 +0300',
+  'date' => '2013-06-16 04:35:51 -0700',
   'author_uuid' => 'af70240a-9f15-49fa-a854-27c6f484ebc9',
 );
   $nodes[] = array(
@@ -1241,7 +1241,7 @@ function slac_blog_demo_uuid_features_default_content() {
   'field_slac_blog_tags' => array(
     'und' => array(
       0 => array(
-        'tid' => 79,
+        'tid' => 24,
         'uuid' => 'b2959bf4-b73c-4c1c-b8bb-a8d6c55e4dd0',
       ),
     ),
@@ -1308,7 +1308,7 @@ function slac_blog_demo_uuid_features_default_content() {
   'name' => 'usertest3',
   'picture' => 0,
   'subscriptions_notify' => TRUE,
-  'date' => '2013-05-28 14:35:51 +0300',
+  'date' => '2013-05-28 04:35:51 -0700',
   'author_uuid' => 'af70240a-9f15-49fa-a854-27c6f484ebc9',
 );
   $nodes[] = array(
@@ -1427,15 +1427,15 @@ function slac_blog_demo_uuid_features_default_content() {
   'field_slac_blog_tags' => array(
     'und' => array(
       0 => array(
-        'tid' => 65,
+        'tid' => 13,
         'uuid' => '2779b052-a751-45e1-80a5-efa4dadb3867',
       ),
       1 => array(
-        'tid' => 70,
+        'tid' => 17,
         'uuid' => '6e1c034d-d332-4fd7-8771-e3c6a62ec739',
       ),
       2 => array(
-        'tid' => 78,
+        'tid' => 23,
         'uuid' => 'aaeef82f-6290-44e7-9e21-11965982c65c',
       ),
     ),
@@ -1502,7 +1502,7 @@ function slac_blog_demo_uuid_features_default_content() {
   'name' => 'usertest2',
   'picture' => 0,
   'subscriptions_notify' => TRUE,
-  'date' => '2013-04-21 14:35:51 +0300',
+  'date' => '2013-04-21 04:35:51 -0700',
   'author_uuid' => '4edce278-5dc3-4e83-b62e-9f3b5556007e',
 );
   return $nodes;
