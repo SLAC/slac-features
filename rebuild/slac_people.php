@@ -9,7 +9,7 @@ $commands = array(
   ),
   array(
     'description' => 'Install selected profile: ',
-    'command' => 'drush si slac_people --db-url=mysql://root:andrei@localhost/features --account-name=admin --account-pass=123 --account-mail=admin@example.com --site-name=SLAC-PEOPLE-PROFILE-' . date(DATE_ATOM) . ' -y'
+    'command' => 'drush si slac_people --db-url=mysql://slac_features:SwHbNJEZ6QRxrlU@localhost/slac_features --account-name=admin --account-pass=618hWVCDmY1n3uf --account-mail=admin@example.com --site-name=SLAC-PEOPLE-PROFILE-' . date(DATE_ATOM) . ' -y'
   ),
 );
 
