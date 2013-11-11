@@ -75,8 +75,8 @@
   .general-two-col .general-left,
   .general-two-col .general-right {
     float: left;
-    width: 33.33333%;
-    margin-left: 66.66667%;
+    width: 100%;
+    margin-left: 0%;
     margin-right: -100%;
     padding-left: 2%;
     padding-right: 2%;

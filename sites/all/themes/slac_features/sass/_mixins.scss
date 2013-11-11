@@ -55,12 +55,13 @@
   }
   .general-two-col .general-right{
     @include zen-grid-item(4, 1);
+    clear: both;
   }
 }
 
 @media (max-width: 600px) {
   .general-two-col .general-left,
   .general-two-col .general-right{
-    @include zen-grid-item(4, 9);
+    @include zen-grid-item(12, 1);
   }
 }

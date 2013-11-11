@@ -9,7 +9,7 @@
   clear: both;
 }
 
-/* line 44, D:/Sites/slac-features/sites/all/themes/slac_features/sass/_mixins.scss */
+/* line 44, ../sass/_mixins.scss */
 .general-two-col .general-left {
   float: left;
   width: 66.66667%;
@@ -24,7 +24,7 @@
   word-wrap: break-word;
 }
 
-/* line 48, D:/Sites/slac-features/sites/all/themes/slac_features/sass/_mixins.scss */
+/* line 48, ../sass/_mixins.scss */
 .general-two-col .general-right {
   float: left;
   width: 33.33333%;
@@ -40,7 +40,7 @@
 }
 
 @media (max-width: 900px) {
-  /* line 53, D:/Sites/slac-features/sites/all/themes/slac_features/sass/_mixins.scss */
+  /* line 53, ../sass/_mixins.scss */
   .general-two-col .general-left {
     float: left;
     width: 66.66667%;
@@ -55,7 +55,7 @@
     word-wrap: break-word;
   }
 
-  /* line 56, D:/Sites/slac-features/sites/all/themes/slac_features/sass/_mixins.scss */
+  /* line 56, ../sass/_mixins.scss */
   .general-two-col .general-right {
     float: left;
     width: 33.33333%;
@@ -68,15 +68,16 @@
     -ms-box-sizing: border-box;
     box-sizing: border-box;
     word-wrap: break-word;
+    clear: both;
   }
 }
 @media (max-width: 600px) {
-  /* line 63, D:/Sites/slac-features/sites/all/themes/slac_features/sass/_mixins.scss */
+  /* line 64, ../sass/_mixins.scss */
   .general-two-col .general-left,
   .general-two-col .general-right {
     float: left;
-    width: 33.33333%;
-    margin-left: 66.66667%;
+    width: 100%;
+    margin-left: 0%;
     margin-right: -100%;
     padding-left: 2%;
     padding-right: 2%;
