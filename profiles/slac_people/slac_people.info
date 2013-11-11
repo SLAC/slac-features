@@ -64,6 +64,7 @@ dependencies[] = libraries
 dependencies[] = panels_mini
 dependencies[] = panels_node
 dependencies[] = panels
+dependencies[] = panelizer
 
 dependencies[] = views
 dependencies[] = views_php
@@ -98,4 +99,6 @@ dependencies[] = slac_blog
 ; Profile.
 dependencies[] = pp_profile
 dependencies[] = slac_profile
+
+dependencies[] = landing_page
 
