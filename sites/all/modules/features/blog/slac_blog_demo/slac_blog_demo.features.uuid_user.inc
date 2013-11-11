@@ -28,8 +28,6 @@ function slac_blog_demo_uuid_features_default_users() {
   'uuid' => '3b92ccfc-e7f7-4599-84d5-71e3e35c6981',
   'roles' => array(
     2 => 'authenticated user',
-    4 => 'author',
-    5 => 'editor',
   ),
   'field_first_name' => array(
     'und' => array(
@@ -65,7 +63,7 @@ function slac_blog_demo_uuid_features_default_users() {
       'type' => 'rel',
     ),
   ),
-  'date' => '2013-11-09 12:16:44 +0200',
+  'date' => '2013-11-09 02:16:44 -0800',
 );
   $users[] = array(
   'name' => 'usertest2',
@@ -85,8 +83,6 @@ function slac_blog_demo_uuid_features_default_users() {
   'uuid' => '4edce278-5dc3-4e83-b62e-9f3b5556007e',
   'roles' => array(
     2 => 'authenticated user',
-    4 => 'author',
-    5 => 'editor',
   ),
   'field_first_name' => array(
     'und' => array(
@@ -122,7 +118,7 @@ function slac_blog_demo_uuid_features_default_users() {
       'type' => 'rel',
     ),
   ),
-  'date' => '2013-11-09 12:18:58 +0200',
+  'date' => '2013-11-09 02:18:58 -0800',
 );
   $users[] = array(
   'name' => 'usertest3',
@@ -142,8 +138,6 @@ function slac_blog_demo_uuid_features_default_users() {
   'uuid' => 'af70240a-9f15-49fa-a854-27c6f484ebc9',
   'roles' => array(
     2 => 'authenticated user',
-    4 => 'author',
-    5 => 'editor',
   ),
   'field_first_name' => array(
     'und' => array(
@@ -179,7 +173,7 @@ function slac_blog_demo_uuid_features_default_users() {
       'type' => 'rel',
     ),
   ),
-  'date' => '2013-11-09 12:19:30 +0200',
+  'date' => '2013-11-09 02:19:30 -0800',
 );
   return $users;
 }
