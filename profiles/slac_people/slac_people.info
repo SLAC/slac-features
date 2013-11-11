@@ -101,7 +101,7 @@ dependencies[] = pp_profile
 dependencies[] = slac_profile
 
 ;Permissions
-dependencies[] = slac_people_permissions
+;dependencies[] = slac_people_permissions
 
 dependencies[] = landing_page
 
