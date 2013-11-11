@@ -1,0 +1,6 @@
+name = SLAC Panelizer Roles
+description =  Provide a vertical tab with the list of Roles
+package = Propeople
+core = 7.x
+
+dependencies[] = panelizer
