@@ -20,6 +20,16 @@ function slac_people_permissions_user_default_permissions() {
     'module' => 'admin_menu',
   );
 
+  // Exported permission: access administration pages.
+  $permissions['access administration pages'] = array(
+    'name' => 'access administration pages',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'site owner' => 'site owner',
+    ),
+    'module' => 'system',
+  );
+
   // Exported permission: access content.
   $permissions['access content'] = array(
     'name' => 'access content',
