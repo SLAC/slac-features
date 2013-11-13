@@ -42,7 +42,7 @@ function slac_blog_default_page_manager_handlers() {
     ),
   );
   $display = new panels_display();
-  $display->layout = 'two_col_leftsidebar';
+  $display->layout = 'two_col';
   $display->layout_settings = array(
     'items' => array(
       'canvas' => array(
@@ -262,7 +262,7 @@ function slac_blog_default_page_manager_handlers() {
     'relationships' => array(),
   );
   $display = new panels_display();
-  $display->layout = 'two_col_leftsidebar';
+  $display->layout = 'two_col';
   $display->layout_settings = array(
     'items' => array(
       'canvas' => array(
@@ -496,7 +496,7 @@ function slac_blog_default_page_manager_handlers() {
     ),
   );
   $display = new panels_display();
-  $display->layout = 'two_col_leftsidebar';
+  $display->layout = 'two_col';
   $display->layout_settings = array(
     'items' => array(
       'canvas' => array(
@@ -718,7 +718,7 @@ function slac_blog_default_page_manager_handlers() {
     ),
   );
   $display = new panels_display();
-  $display->layout = 'two_col_leftsidebar';
+  $display->layout = 'two_col';
   $display->layout_settings = array(
     'items' => array(
       'canvas' => array(
@@ -980,7 +980,7 @@ function slac_blog_default_page_manager_pages() {
     ),
   );
   $display = new panels_display();
-  $display->layout = 'two_col_leftsidebar';
+  $display->layout = 'two_col';
   $display->layout_settings = array(
     'items' => array(
       'canvas' => array(
@@ -1199,7 +1199,7 @@ function slac_blog_default_page_manager_pages() {
     ),
   );
   $display = new panels_display();
-  $display->layout = 'two_col_leftsidebar';
+  $display->layout = 'two_col';
   $display->layout_settings = array(
     'items' => array(
       'canvas' => array(
