@@ -99,6 +99,11 @@ dependencies[] = slac_blog
 dependencies[] = pp_profile
 dependencies[] = slac_profile
 
+;Landing page content type
 dependencies[] = landing_page
 
 ;Permissions (slac_people_permissions) are enabled in separate step of installation.
+
+;Profile frontpage elements
+dependencies[] = slac_contact_info
+dependencies[] = slac_connect
