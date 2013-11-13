@@ -1,0 +1,65 @@
+<?php
+
+/**
+ * Implements hook_entity_info_alter().
+ */
+function slac_connect_entity_info_alter(&$entity_info) {
+  $entity_info['fieldable_panels_pane']['bundles']['connect'] = array(
+    'label' => t('Connect'),
+    'pane category' => t('SLAC panes'),
+    'pane top level' => TRUE, // set to true to make this show as a top level icon
+    'admin' => array(
+      'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
+      'bundle argument' => 4,
+      // Note that this has all _ replaced with - from the bundle name.
+      'real path' => 'admin/structure/fieldable-panels-panes/manage/connect',
+      'access arguments' => array('administer fieldable panels panes'),
+    ),
+  );
+}
+
+
+/**
+ * Implements hook_entity_view_alter().
+ */
+function slac_connect_entity_view_alter(&$build, $type) {
+  if ($type != 'fieldable_panels_pane') {
+    return;
+  }
+  if ($build['#bundle'] == 'connect') {
+    $build['#theme'] = 'slac_connect_block';
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function slac_connect_theme() {
+  return array(
+    'slac_connect_block' => array(
+      'render element' => 'entity',
+      'template' => 'slac_connect_block',
+    ),
+  );
+}
+
+/**
+ * Preprocess function for slac_connect_block.tpl.php template.
+ */
+function slac_connect_preprocess_slac_connect_block(&$vars) {
+  $item_values = array();
+  $fields = array(
+    'field_twitter',
+    'field_facebook',
+    'field_linkedin',
+    'field_flickr',
+    'field_google_plus',
+  );
+
+  foreach ($fields as $field) {
+    if (isset($vars['entity'][$field][0])) {
+      $item_values[$field] = drupal_render($vars['entity'][$field][0]);
+    }
+  }
+  $vars['connect_list'] = $item_values;
+}
