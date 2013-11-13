@@ -74,7 +74,6 @@ function slac_people_permissions_user_default_permissions() {
     'name' => 'administer panelizer node landing_page context',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
     ),
     'module' => 'panelizer',
   );
@@ -113,7 +112,6 @@ function slac_people_permissions_user_default_permissions() {
     'name' => 'administer panelizer node landing_page settings',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
     ),
     'module' => 'panelizer',
   );
