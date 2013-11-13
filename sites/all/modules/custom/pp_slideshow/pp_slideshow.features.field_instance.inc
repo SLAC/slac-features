@@ -28,7 +28,7 @@ function pp_slideshow_field_default_field_instances() {
     'entity_type' => 'field_collection_item',
     'field_name' => 'field_fcollection_description',
     'label' => 'Description',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'text_processing' => 0,
       'user_register_form' => FALSE,
@@ -40,7 +40,7 @@ function pp_slideshow_field_default_field_instances() {
         'rows' => 3,
       ),
       'type' => 'text_textarea',
-      'weight' => 8,
+      'weight' => 2,
     ),
   );
 
@@ -110,7 +110,7 @@ function pp_slideshow_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 4,
+      'weight' => 0,
     ),
   );
 
@@ -158,7 +158,7 @@ function pp_slideshow_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 6,
+      'weight' => 1,
     ),
   );
 
@@ -600,6 +600,7 @@ function pp_slideshow_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'field_slideshow',
         'settings' => array(
+          'slideshow_caption' => '',
           'slideshow_caption_link' => 'field_fcollection_link',
           'slideshow_carousel_circular' => 0,
           'slideshow_carousel_follow' => 0,
