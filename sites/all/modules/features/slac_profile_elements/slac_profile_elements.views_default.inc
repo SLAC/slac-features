@@ -50,8 +50,8 @@ function slac_profile_elements_views_default_views() {
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
 
-  /* Display: Content pane */
-  $handler = $view->new_display('panel_pane', 'Blog pane', 'panel_pane_1');
+  /* Display: Blog */
+  $handler = $view->new_display('panel_pane', 'Blog', 'panel_pane_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Blog';
   $handler->display->display_options['display_description'] = 'Profile blog block';
@@ -209,6 +209,7 @@ function slac_profile_elements_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['hide_empty'] = TRUE;
   /* Field: Profile: Profile ID */
   $handler->display->display_options['fields']['pid']['id'] = 'pid';
   $handler->display->display_options['fields']['pid']['table'] = 'profile';
@@ -230,7 +231,7 @@ function slac_profile_elements_views_default_views() {
   );
 
   /* Display: Contact Information */
-  $handler = $view->new_display('panel_pane', 'Contact Information pane', 'panel_pane_1');
+  $handler = $view->new_display('panel_pane', 'Contact Information', 'panel_pane_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Contact Information';
   $handler->display->display_options['defaults']['exposed_form'] = FALSE;
@@ -303,7 +304,7 @@ function slac_profile_elements_views_default_views() {
   $handler->display->display_options['filters']['uid']['value'] = '';
   $handler->display->display_options['filters']['uid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['uid']['expose']['operator_id'] = 'uid_op';
-  $handler->display->display_options['filters']['uid']['expose']['label'] = 'User Name';
+  $handler->display->display_options['filters']['uid']['expose']['label'] = 'Name';
   $handler->display->display_options['filters']['uid']['expose']['operator'] = 'uid_op';
   $handler->display->display_options['filters']['uid']['expose']['identifier'] = 'uid';
   $handler->display->display_options['filters']['uid']['expose']['required'] = TRUE;
@@ -313,6 +314,19 @@ function slac_profile_elements_views_default_views() {
     3 => 0,
     4 => 0,
   );
+  $handler->display->display_options['filters']['uid']['expose']['reduce'] = TRUE;
+  /* Filter criterion: User: Roles */
+  $handler->display->display_options['filters']['rid']['id'] = 'rid';
+  $handler->display->display_options['filters']['rid']['table'] = 'users_roles';
+  $handler->display->display_options['filters']['rid']['field'] = 'rid';
+  $handler->display->display_options['filters']['rid']['relationship'] = 'user';
+  $handler->display->display_options['filters']['rid']['value'] = array(
+    4 => '4',
+  );
+  $handler->display->display_options['filters']['rid']['expose']['operator_id'] = 'rid_op';
+  $handler->display->display_options['filters']['rid']['expose']['label'] = 'Roles';
+  $handler->display->display_options['filters']['rid']['expose']['operator'] = 'rid_op';
+  $handler->display->display_options['filters']['rid']['expose']['identifier'] = 'rid';
   $handler->display->display_options['pane_category']['name'] = 'Profile';
   $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['allow']['use_pager'] = 0;
@@ -326,7 +340,7 @@ function slac_profile_elements_views_default_views() {
   $handler->display->display_options['allow']['fields_override'] = 0;
 
   /* Display: Connect With Me */
-  $handler = $view->new_display('panel_pane', 'Connect With Me pane', 'panel_pane_2');
+  $handler = $view->new_display('panel_pane', 'Connect With Me', 'panel_pane_2');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Connect With Me';
   $handler->display->display_options['defaults']['pager'] = FALSE;
@@ -399,6 +413,15 @@ function slac_profile_elements_views_default_views() {
   </div>';
   $handler->display->display_options['fields']['field_prf_social_googleplus']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_prf_social_googleplus']['click_sort_column'] = 'url';
+  /* Field: User: Uid */
+  $handler->display->display_options['fields']['uid']['id'] = 'uid';
+  $handler->display->display_options['fields']['uid']['table'] = 'users';
+  $handler->display->display_options['fields']['uid']['field'] = 'uid';
+  $handler->display->display_options['fields']['uid']['relationship'] = 'user';
+  $handler->display->display_options['fields']['uid']['label'] = '';
+  $handler->display->display_options['fields']['uid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['uid']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['uid']['link_to_user'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
@@ -420,6 +443,14 @@ function slac_profile_elements_views_default_views() {
     3 => 0,
     4 => 0,
   );
+  /* Filter criterion: User: Roles */
+  $handler->display->display_options['filters']['rid']['id'] = 'rid';
+  $handler->display->display_options['filters']['rid']['table'] = 'users_roles';
+  $handler->display->display_options['filters']['rid']['field'] = 'rid';
+  $handler->display->display_options['filters']['rid']['relationship'] = 'user';
+  $handler->display->display_options['filters']['rid']['value'] = array(
+    4 => '4',
+  );
   $handler->display->display_options['pane_category']['name'] = 'Profile';
   $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['allow']['use_pager'] = 0;
@@ -433,7 +464,7 @@ function slac_profile_elements_views_default_views() {
   $handler->display->display_options['allow']['fields_override'] = 0;
 
   /* Display: Profile */
-  $handler = $view->new_display('panel_pane', 'Profile pane', 'panel_pane_3');
+  $handler = $view->new_display('panel_pane', 'Profile', 'panel_pane_3');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Profile';
   $handler->display->display_options['defaults']['pager'] = FALSE;
@@ -531,6 +562,152 @@ function slac_profile_elements_views_default_views() {
     1 => 0,
     3 => 0,
     4 => 0,
+  );
+  /* Filter criterion: User: Roles */
+  $handler->display->display_options['filters']['rid']['id'] = 'rid';
+  $handler->display->display_options['filters']['rid']['table'] = 'users_roles';
+  $handler->display->display_options['filters']['rid']['field'] = 'rid';
+  $handler->display->display_options['filters']['rid']['relationship'] = 'user';
+  $handler->display->display_options['filters']['rid']['value'] = array(
+    4 => '4',
+  );
+  $handler->display->display_options['pane_category']['name'] = 'Profile';
+  $handler->display->display_options['pane_category']['weight'] = '0';
+  $handler->display->display_options['allow']['use_pager'] = 0;
+  $handler->display->display_options['allow']['items_per_page'] = 0;
+  $handler->display->display_options['allow']['offset'] = 0;
+  $handler->display->display_options['allow']['link_to_view'] = 0;
+  $handler->display->display_options['allow']['more_link'] = 0;
+  $handler->display->display_options['allow']['path_override'] = 0;
+  $handler->display->display_options['allow']['title_override'] = 'title_override';
+  $handler->display->display_options['allow']['exposed_form'] = 'exposed_form';
+  $handler->display->display_options['allow']['fields_override'] = 0;
+
+  /* Display: Full Profile */
+  $handler = $view->new_display('panel_pane', 'Full Profile', 'panel_pane_4');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Profile Overview';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['footer'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Profile: User uid */
+  $handler->display->display_options['relationships']['user']['id'] = 'user';
+  $handler->display->display_options['relationships']['user']['table'] = 'profile';
+  $handler->display->display_options['relationships']['user']['field'] = 'user';
+  $handler->display->display_options['relationships']['user']['required'] = TRUE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Profile: User uid */
+  $handler->display->display_options['fields']['user']['id'] = 'user';
+  $handler->display->display_options['fields']['user']['table'] = 'profile';
+  $handler->display->display_options['fields']['user']['field'] = 'user';
+  $handler->display->display_options['fields']['user']['label'] = '';
+  $handler->display->display_options['fields']['user']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['user']['element_label_colon'] = FALSE;
+  /* Field: Profile: Photo */
+  $handler->display->display_options['fields']['field_prf_contact_photo']['id'] = 'field_prf_contact_photo';
+  $handler->display->display_options['fields']['field_prf_contact_photo']['table'] = 'field_data_field_prf_contact_photo';
+  $handler->display->display_options['fields']['field_prf_contact_photo']['field'] = 'field_prf_contact_photo';
+  $handler->display->display_options['fields']['field_prf_contact_photo']['label'] = '';
+  $handler->display->display_options['fields']['field_prf_contact_photo']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_prf_contact_photo']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_prf_contact_photo']['settings'] = array(
+    'image_style' => 'profile_home_user_image',
+    'image_link' => '',
+  );
+  /* Field: Profile: Name */
+  $handler->display->display_options['fields']['field_prf_contact_name']['id'] = 'field_prf_contact_name';
+  $handler->display->display_options['fields']['field_prf_contact_name']['table'] = 'field_data_field_prf_contact_name';
+  $handler->display->display_options['fields']['field_prf_contact_name']['field'] = 'field_prf_contact_name';
+  $handler->display->display_options['fields']['field_prf_contact_name']['label'] = '';
+  $handler->display->display_options['fields']['field_prf_contact_name']['element_label_colon'] = FALSE;
+  /* Field: Profile: Title */
+  $handler->display->display_options['fields']['field_prf_contact_title']['id'] = 'field_prf_contact_title';
+  $handler->display->display_options['fields']['field_prf_contact_title']['table'] = 'field_data_field_prf_contact_title';
+  $handler->display->display_options['fields']['field_prf_contact_title']['field'] = 'field_prf_contact_title';
+  $handler->display->display_options['fields']['field_prf_contact_title']['label'] = '';
+  $handler->display->display_options['fields']['field_prf_contact_title']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_prf_contact_title']['element_label_colon'] = FALSE;
+  /* Field: Profile: Affiliation */
+  $handler->display->display_options['fields']['field_prf_contact_affiliation']['id'] = 'field_prf_contact_affiliation';
+  $handler->display->display_options['fields']['field_prf_contact_affiliation']['table'] = 'field_data_field_prf_contact_affiliation';
+  $handler->display->display_options['fields']['field_prf_contact_affiliation']['field'] = 'field_prf_contact_affiliation';
+  $handler->display->display_options['fields']['field_prf_contact_affiliation']['label'] = '';
+  $handler->display->display_options['fields']['field_prf_contact_affiliation']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_prf_contact_affiliation']['alter']['text'] = '[field_prf_contact_title], [field_prf_contact_affiliation]';
+  $handler->display->display_options['fields']['field_prf_contact_affiliation']['element_label_colon'] = FALSE;
+  /* Field: Profile: Bio */
+  $handler->display->display_options['fields']['field_prf_bio_bio']['id'] = 'field_prf_bio_bio';
+  $handler->display->display_options['fields']['field_prf_bio_bio']['table'] = 'field_data_field_prf_bio_bio';
+  $handler->display->display_options['fields']['field_prf_bio_bio']['field'] = 'field_prf_bio_bio';
+  $handler->display->display_options['fields']['field_prf_bio_bio']['label'] = '';
+  $handler->display->display_options['fields']['field_prf_bio_bio']['alter']['max_length'] = '600';
+  $handler->display->display_options['fields']['field_prf_bio_bio']['alter']['more_link_text'] = 'View entire profile';
+  $handler->display->display_options['fields']['field_prf_bio_bio']['element_label_colon'] = FALSE;
+  /* Field: Profile: Education */
+  $handler->display->display_options['fields']['field_prf_bio_education']['id'] = 'field_prf_bio_education';
+  $handler->display->display_options['fields']['field_prf_bio_education']['table'] = 'field_data_field_prf_bio_education';
+  $handler->display->display_options['fields']['field_prf_bio_education']['field'] = 'field_prf_bio_education';
+  $handler->display->display_options['fields']['field_prf_bio_education']['element_label_colon'] = FALSE;
+  /* Field: Profile: Professional Experience */
+  $handler->display->display_options['fields']['field_prf_bio_pexp']['id'] = 'field_prf_bio_pexp';
+  $handler->display->display_options['fields']['field_prf_bio_pexp']['table'] = 'field_data_field_prf_bio_pexp';
+  $handler->display->display_options['fields']['field_prf_bio_pexp']['field'] = 'field_prf_bio_pexp';
+  $handler->display->display_options['fields']['field_prf_bio_pexp']['element_label_colon'] = FALSE;
+  /* Field: Profile: Areas of Research */
+  $handler->display->display_options['fields']['field_prf_bio_ar']['id'] = 'field_prf_bio_ar';
+  $handler->display->display_options['fields']['field_prf_bio_ar']['table'] = 'field_data_field_prf_bio_ar';
+  $handler->display->display_options['fields']['field_prf_bio_ar']['field'] = 'field_prf_bio_ar';
+  $handler->display->display_options['fields']['field_prf_bio_ar']['element_label_colon'] = FALSE;
+  /* Field: Profile: Honors and Awards */
+  $handler->display->display_options['fields']['field_prf_bio_ha']['id'] = 'field_prf_bio_ha';
+  $handler->display->display_options['fields']['field_prf_bio_ha']['table'] = 'field_data_field_prf_bio_ha';
+  $handler->display->display_options['fields']['field_prf_bio_ha']['field'] = 'field_prf_bio_ha';
+  $handler->display->display_options['fields']['field_prf_bio_ha']['element_label_colon'] = FALSE;
+  /* Field: Profile: Professional Activities */
+  $handler->display->display_options['fields']['field_prf_bio_pa']['id'] = 'field_prf_bio_pa';
+  $handler->display->display_options['fields']['field_prf_bio_pa']['table'] = 'field_data_field_prf_bio_pa';
+  $handler->display->display_options['fields']['field_prf_bio_pa']['field'] = 'field_prf_bio_pa';
+  $handler->display->display_options['fields']['field_prf_bio_pa']['element_label_colon'] = FALSE;
+  /* Field: Profile: Publications */
+  $handler->display->display_options['fields']['field_prf_bio_pub']['id'] = 'field_prf_bio_pub';
+  $handler->display->display_options['fields']['field_prf_bio_pub']['table'] = 'field_data_field_prf_bio_pub';
+  $handler->display->display_options['fields']['field_prf_bio_pub']['field'] = 'field_prf_bio_pub';
+  $handler->display->display_options['fields']['field_prf_bio_pub']['element_label_colon'] = FALSE;
+  /* Field: Profile: Talks and Presentations */
+  $handler->display->display_options['fields']['field_prf_bio_tp']['id'] = 'field_prf_bio_tp';
+  $handler->display->display_options['fields']['field_prf_bio_tp']['table'] = 'field_data_field_prf_bio_tp';
+  $handler->display->display_options['fields']['field_prf_bio_tp']['field'] = 'field_prf_bio_tp';
+  $handler->display->display_options['fields']['field_prf_bio_tp']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: User: Name */
+  $handler->display->display_options['filters']['uid']['id'] = 'uid';
+  $handler->display->display_options['filters']['uid']['table'] = 'users';
+  $handler->display->display_options['filters']['uid']['field'] = 'uid';
+  $handler->display->display_options['filters']['uid']['relationship'] = 'user';
+  $handler->display->display_options['filters']['uid']['value'] = '';
+  $handler->display->display_options['filters']['uid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['uid']['expose']['operator_id'] = 'uid_op';
+  $handler->display->display_options['filters']['uid']['expose']['label'] = 'User Name';
+  $handler->display->display_options['filters']['uid']['expose']['operator'] = 'uid_op';
+  $handler->display->display_options['filters']['uid']['expose']['identifier'] = 'uid';
+  $handler->display->display_options['filters']['uid']['expose']['required'] = TRUE;
+  $handler->display->display_options['filters']['uid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+  );
+  /* Filter criterion: User: Roles */
+  $handler->display->display_options['filters']['rid']['id'] = 'rid';
+  $handler->display->display_options['filters']['rid']['table'] = 'users_roles';
+  $handler->display->display_options['filters']['rid']['field'] = 'rid';
+  $handler->display->display_options['filters']['rid']['relationship'] = 'user';
+  $handler->display->display_options['filters']['rid']['value'] = array(
+    4 => '4',
   );
   $handler->display->display_options['pane_category']['name'] = 'Profile';
   $handler->display->display_options['pane_category']['weight'] = '0';
