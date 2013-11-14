@@ -51,7 +51,7 @@ function slac_profile_elements_views_default_views() {
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
 
   /* Display: Content pane */
-  $handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_1');
+  $handler = $view->new_display('panel_pane', 'Blog pane', 'panel_pane_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Blog';
   $handler->display->display_options['display_description'] = 'Profile blog block';
@@ -230,7 +230,7 @@ function slac_profile_elements_views_default_views() {
   );
 
   /* Display: Contact Information */
-  $handler = $view->new_display('panel_pane', 'Contact Information', 'panel_pane_1');
+  $handler = $view->new_display('panel_pane', 'Contact Information pane', 'panel_pane_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Contact Information';
   $handler->display->display_options['defaults']['exposed_form'] = FALSE;
@@ -326,7 +326,7 @@ function slac_profile_elements_views_default_views() {
   $handler->display->display_options['allow']['fields_override'] = 0;
 
   /* Display: Connect With Me */
-  $handler = $view->new_display('panel_pane', 'Connect With Me', 'panel_pane_2');
+  $handler = $view->new_display('panel_pane', 'Connect With Me pane', 'panel_pane_2');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Connect With Me';
   $handler->display->display_options['defaults']['pager'] = FALSE;
@@ -433,7 +433,7 @@ function slac_profile_elements_views_default_views() {
   $handler->display->display_options['allow']['fields_override'] = 0;
 
   /* Display: Profile */
-  $handler = $view->new_display('panel_pane', 'Profile', 'panel_pane_3');
+  $handler = $view->new_display('panel_pane', 'Profile pane', 'panel_pane_3');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Profile';
   $handler->display->display_options['defaults']['pager'] = FALSE;
