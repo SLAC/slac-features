@@ -3,6 +3,9 @@
     width: 100%;
     overflow: hidden;
 }
+.field-name-field-slideshow-btmdesc-slide .field-slideshow-wrapper {
+    /*width: auto;*/
+}
 .field-name-field-slideshow-btmdesc-slide .field-slideshow-image a,
 .field-name-field-slideshow-btmdesc-slide .field-slideshow-image img {
     display:block;
@@ -13,6 +16,7 @@
     position: absolute;
     bottom: 0;
     height: auto;
+    width: 100%;
     background: url("../images/slideshow_text_bottom/transparent-blue-bg.png") repeat;
     color: #fff;
     font-size: 13px;
