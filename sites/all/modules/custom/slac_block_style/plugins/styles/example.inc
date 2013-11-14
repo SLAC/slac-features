@@ -6,9 +6,9 @@
  */
 // Plugin definition
 $plugin = array(
-  'title' => t('Example style'),
+  'title' => t('Example style 2'),
   'description' => t('Display example of style'),
-  'render pane' => 'slac_block_style_style_render_pane',
+  'render pane' => 'slac_block_style_example_style_render_pane',
 );
 
 /**
@@ -16,7 +16,7 @@ $plugin = array(
  *
  * @ingroup themeable
  */
-function theme_slac_block_style_style_render_pane($vars) {
+function theme_slac_block_style_example_style_render_pane($vars) {
   $output = '';
   $output .= '<div class="region region-example-style">';
   $output .= '<h2 class="panel-title panel-title-example-style">' . $vars['content']->title . '</h2>';
