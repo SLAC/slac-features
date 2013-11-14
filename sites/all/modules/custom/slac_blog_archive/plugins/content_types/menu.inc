@@ -130,7 +130,7 @@ function _slac_blog_archive_months($year = NULL) {
       ->condition('n.type', 'blog', '=')
       ->fields('n', array('created'))
       ->groupBy('months')
-      ->orderBy('months', 'DESC');
+      ->orderBy('months_numeric', 'DESC');
   $query->where('FROM_UNIXTIME(created,\'%Y\') = :year', array(':year' => $year));
   $query->addExpression('COUNT(nid)', 'nid_count');
   $query->addExpression('FROM_UNIXTIME(created,\'%M\')', 'months');
