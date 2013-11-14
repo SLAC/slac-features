@@ -1,0 +1,6 @@
+name = SLAC Blog Archive
+description = Provide list of years and months by Post date of Blog nodes
+package = Propeople
+core = 7.x
+
+dependencies[] = panels

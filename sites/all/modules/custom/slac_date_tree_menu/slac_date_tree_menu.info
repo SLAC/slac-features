@@ -1,6 +1,0 @@
-name = SLAC Date Tree Menu
-description = Provide tree menu by years and months
-package = Propeople
-core = 7.x
-
-dependencies[] = panels

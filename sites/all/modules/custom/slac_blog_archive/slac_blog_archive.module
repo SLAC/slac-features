@@ -3,7 +3,7 @@
 /**
 * Implementation of hook_ctools_plugin_directory().
 */
-function slac_date_tree_menu_ctools_plugin_directory($module, $plugin) {
+function slac_blog_archive_ctools_plugin_directory($module, $plugin) {
   if ($module === 'ctools') {
     return 'plugins/' . $plugin;
   }
