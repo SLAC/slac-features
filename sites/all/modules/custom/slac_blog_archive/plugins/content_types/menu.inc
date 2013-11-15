@@ -38,10 +38,6 @@ function slac_blog_archive_menu_render($subtype, $conf, $panel_args, $context) {
  */
 function slac_blog_archive_create_list() {
 
-  /* if (!$data = cache_get('slac-archive-plugin')) {
-    cache_set('slac-archive-plugin');
-    } */
-
   $menu = array();
   $menu_item = menu_get_item();
 
@@ -57,6 +53,10 @@ function slac_blog_archive_create_list() {
   elseif ($menu_item['original_map'][0] == 'blog') {
     $years = isset($menu_item['page_arguments'][1]) ? $menu_item['page_arguments'][1] : $years;
     $months = isset($menu_item['page_arguments'][2]) ? $menu_item['page_arguments'][2] : $months;
+  }
+  // get cached list if already cached
+  if ($data = cache_get('slac_blog_archive_plugin' . $years,'cache_menu')) {
+    return $data->data;
   }
 
   if (_slac_blog_archive_years()) {
@@ -101,7 +101,11 @@ function slac_blog_archive_create_list() {
     'id' => 'blog-archive',
     'class' => 'blog-archive-class',
   );
-  return theme('item_list', array('items' => $menu, 'type' => $type, 'attributes' => $attributes));
+  $data = theme('item_list', array('items' => $menu, 'type' => $type, 'attributes' => $attributes));
+  
+  // set cache
+  cache_set('slac_blog_archive_plugin' . $years, $data, 'cache_menu');
+  return $data;
 }
 
 /**

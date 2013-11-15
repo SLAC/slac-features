@@ -8,3 +8,19 @@ function slac_blog_archive_ctools_plugin_directory($module, $plugin) {
     return 'plugins/' . $plugin;
   }
 }
+
+/**
+ * Implements hook_node_delete()
+ * @param type $node 
+ */
+function slac_blog_archive_node_delete($node) {
+  cache_clear_all('slac_blog_archive_plugin', 'cache_menu', TRUE);
+}
+
+/**
+ * Implements hook_node_insert()
+ * @param type $node 
+ */
+function slac_blog_archive_node_insert($node) {
+  cache_clear_all('slac_blog_archive_plugin', 'cache_menu', TRUE);
+}
