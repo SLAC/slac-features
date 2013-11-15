@@ -61,9 +61,9 @@ dependencies[] = epsacrop
 dependencies[] = entity
 dependencies[] = libraries
 
-dependencies[] = panels_mini
-dependencies[] = panels_node
 dependencies[] = panels
+dependencies[] = panels_mini
+dependencies[] = panels_ipe
 dependencies[] = panelizer
 
 dependencies[] = views
