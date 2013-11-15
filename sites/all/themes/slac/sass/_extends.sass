@@ -1,0 +1,55 @@
+@function em($target, $context: $base-font-size) 
+  @if $target == 0
+    @return 0 
+  @return $target / $context + 0em
+  
+
+@mixin no-select 
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  -khtml-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+  
+@mixin opacity($trans) 
+  filter: alpha(opactiy=($trans * 100))
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$trans * 100})"
+  -moz-opacity: $trans
+  -khtml-opacity: $trans
+  opacity: $trans
+
+
+=placeholder($color)
+  &:focus
+    outline: 0 none
+  &::-webkit-input-placeholder
+    color: $color
+  &:-moz-placeholder
+    color: $color
+  &::-moz-placeholder
+    color: $color
+  &:-ms-input-placeholder
+    color: $color
+  &.placeholder
+    color: $color  
+    
+.clearfix
+  *zoom: 1
+  &:before, 
+  &:after
+    content: ""
+    display: table
+  &:after 
+    clear: both 
+
+$base-font-size: 16px
+
+@function calculateRem($size)
+  $remSize: $size / $base-font-size
+  @return #{$remSize}rem
+
+@mixin fontsize-rem($size)  
+  font-size: $size 
+  font-size: calculateRem($size)  
+ 

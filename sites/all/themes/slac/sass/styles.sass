@@ -1,0 +1,252 @@
+@import "compass"
+@import "compass/css3"
+@import "compass/utilities"
+@import "susy"
+@import "compass/css3/box-sizing"
+
+// HTML5 BOILERPLATE INCLUDE
+@import "compass/css3/transition"
+@import reset
+
+@import colors
+@import extends
+
+
+
+
+$column-width     : 52px
+$gutter-width     : 50px
+$grid-padding     : 13px
+
+
+
+$total-columns    : 4
+$tablet           : 7
+$small-desktop    : 9
+$large-desktop    : 12
+
+$container-style  : magic
+$container-width  : container-outer-width($large-desktop)
+
++border-box-sizing
+
+
+$legacy-support-for-ie: false
+$breakpoint-ie-output: false
+
+
+a
+  color: #222
+  text-decoration: none
+  &:hover
+    color: $red
+
+
+html
+  font-family: Arial, Helvetica, sans-serif
+  line-height: 1.25
+  -webkit-font-smoothing: antialiased
+  font-smoothing: antialiased    
+  color: $grey-2
+  background-color: #fff   
+
+.page-basic
+  > .content, 
+  > .header, 
+  > .header-menu, 
+  > .main-menu, 
+  > .site-title,
+  > .footer-first,
+  > .footer-seccond
+    > .inside 
+      +container    
+      +box-sizing(content-box)
+    /*+susy-grid-background
+      +at-breakpoint($tablet)
+        +susy-grid-background
+      +at-breakpoint($small-desktop)
+        +susy-grid-background    
+      +at-breakpoint($large-desktop)
+        +susy-grid-background  */  
+
+  > .header
+    background-color: $red
+    padding: 15px 0 10px
+
+//User menu
+//-----------------------------------
+.pane-system-user-menu
+  text-align: right
+  color: #fff
+  ul
+    list-style-type: none
+    @extend .clearfix
+    display: inline-block
+    position: relative
+    top: -7px
+  li
+    float: left
+    margin-left: 11px
+    a
+      font-size: em(11px)
+      color: inherit
+      text-decoration: none
+      display: block
+
+.pane-search-form
+  display: none
+
+
+//Site name
+//-----------------------------------
+.pane-page-site-name
+  font-size: em(32px)
+  .footer-first &
+    font-size: em(14px)
+
+
+//Site logo header
+//-----------------------------------
+.pane-page-logo
+  img
+    width: 158px
+
+
+//Main menu
+//-----------------------------------
+.main-menu
+  background-color: $menu_bg
+  padding: 8px 0 6px
+  margin-bottom: 35px
+  text-transform: uppercase
+  ul
+    @extend .clearfix
+    li
+      float: left
+      margin: 0 25px
+      font-size: em(14px)
+      &:first-child
+        margin-left: 9px
+      a
+        display: block
+        padding: 0 10px
+   
+
+
+//Header menu
+//-----------------------------------
+.header-menu
+  text-align: right
+  font-size: em(11px)
+  padding: 9px 0
+  ul
+    display: inline-block
+    li
+      float: left
+      a
+        color: $grey-6
+        padding: 0 13px
+        border-right: 1px solid $grey-6
+        display: block
+        text-decoration: none
+      &:last-child
+        a
+          
+          border-right: 0
+          padding-right: 0
+
+
+.site-title
+  margin-bottom: 9px
+
+
+
+//First footer
+//-----------------------------------
+.footer-first
+  background-color: $menu_bg
+
+
+//Last footer
+//-----------------------------------
+.footer-seccond
+  background-color: $grey-87
+  color: #fff
+  +fontsize-rem(10px) 
+  padding: 16px 0 7px
+  
+  ul
+    text-transform: uppercase
+    @extend .clearfix
+    border-top: 1px solid $grey-9
+    display: inline-block
+    padding-top: 8px
+    margin-top: 9px
+    li
+      float: left
+      margin-right: 10px
+      a
+        display: block
+        position: relative
+        padding-left: 10px
+        margin-right: 47px
+        &:before
+          content: '»'
+          position: absolute
+          +fontsize-rem(8px)
+          left: 0
+          top: 1px
+  a
+    color: inherit
+  .pane-1
+    p
+      display: inline
+    a
+      text-transform: uppercase
+      font-weight: bold
+
+  .panel-col-first,
+  .panel-col-last
+    //padding-left: 62px    
+
+  .panel-col-first 
+    +span-columns(8,12)
+  .panel-col-last
+    +span-columns(4 omega,12)
+  
+
+
+//RESPONSIVE--------------------------------------------------------------------------------------------------
++at-breakpoint($tablet)
+  .pane-page-logo
+    +span-columns(6,12)
+  .pane-system-user-menu
+    +span-columns(6 omega,12)
+
+
+  //Last footer
+  //-----------------------------------
+  .footer-seccond
+    margin-bottom: 60px
+
+
+
+
++at-breakpoint($large-desktop)
+  $legacy-support-for-ie: true
+  $breakpoint-ie-output: true
+
+  .page-basic
+    > .content, 
+    > .header, 
+    > .header-menu, 
+    > .main-menu, 
+    > .site-title,
+    > .footer-first,
+    > .footer-seccond
+      > .inside 
+        +container    
+  
+ 
+
+

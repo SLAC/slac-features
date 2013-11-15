@@ -1,0 +1,82 @@
+@charset "IBM437";
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font: inherit; font-size: 100%; vertical-align: baseline; outline: 0 none; }
+
+audio, canvas, video { display: inline-block; }
+
+ol, ul { list-style: none; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+caption, th, td { text-align: left; font-weight: normal; vertical-align: middle; }
+
+q, blockquote { quotes: none; }
+
+q:before, q:after, blockquote:before, blockquote:after { content: ""; content: none; }
+
+a img { border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary { display: block; }
+
+img { height: auto; }
+
+img, object, embed { max-width: 100%; }
+
+.clearfix, .pane-system-user-menu ul, .main-menu ul, .footer-seccond ul { *zoom: 1; }
+.clearfix:before, .pane-system-user-menu ul:before, .main-menu ul:before, .footer-seccond ul:before, .clearfix:after, .pane-system-user-menu ul:after, .main-menu ul:after, .footer-seccond ul:after { content: ""; display: table; }
+.clearfix:after, .pane-system-user-menu ul:after, .main-menu ul:after, .footer-seccond ul:after { clear: both; }
+
+* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+a { color: #222222; text-decoration: none; }
+a:hover { color: #720c20; }
+
+html { font-family: Arial, Helvetica, sans-serif; line-height: 1.25; -webkit-font-smoothing: antialiased; font-smoothing: antialiased; color: #222222; background-color: white; }
+
+.page-basic > .content, .page-basic > .header, .page-basic > .header-menu, .page-basic > .main-menu, .page-basic > .site-title, .page-basic > .footer-first, .page-basic > .footer-seccond { /*+susy-grid-background +at-breakpoint($tablet) +susy-grid-background +at-breakpoint($small-desktop) +susy-grid-background     +at-breakpoint($large-desktop) +susy-grid-background  */ }
+.page-basic > .content > .inside, .page-basic > .header > .inside, .page-basic > .header-menu > .inside, .page-basic > .main-menu > .inside, .page-basic > .site-title > .inside, .page-basic > .footer-first > .inside, .page-basic > .footer-seccond > .inside { max-width: 1174px; _width: 1174px; padding-left: 13px; padding-right: 13px; margin-left: auto; margin-right: auto; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; }
+.page-basic > .content > .inside:after, .page-basic > .header > .inside:after, .page-basic > .header-menu > .inside:after, .page-basic > .main-menu > .inside:after, .page-basic > .site-title > .inside:after, .page-basic > .footer-first > .inside:after, .page-basic > .footer-seccond > .inside:after { content: ""; display: table; clear: both; }
+.page-basic > .header { background-color: #720c20; padding: 15px 0 10px; }
+
+.pane-system-user-menu { text-align: right; color: white; }
+.pane-system-user-menu ul { list-style-type: none; display: inline-block; position: relative; top: -7px; }
+.pane-system-user-menu li { float: left; margin-left: 11px; }
+.pane-system-user-menu li a { font-size: 0.6875em; color: inherit; text-decoration: none; display: block; }
+
+.pane-search-form { display: none; }
+
+.pane-page-site-name { font-size: 2em; }
+.footer-first .pane-page-site-name { font-size: 0.875em; }
+
+.pane-page-logo img { width: 158px; }
+
+.main-menu { background-color: #e7e6d9; padding: 8px 0 6px; margin-bottom: 35px; text-transform: uppercase; }
+.main-menu ul li { float: left; margin: 0 25px; font-size: 0.875em; }
+.main-menu ul li:first-child { margin-left: 9px; }
+.main-menu ul li a { display: block; padding: 0 10px; }
+
+.header-menu { text-align: right; font-size: 0.6875em; padding: 9px 0; }
+.header-menu ul { display: inline-block; }
+.header-menu ul li { float: left; }
+.header-menu ul li a { color: #666666; padding: 0 13px; border-right: 1px solid #666666; display: block; text-decoration: none; }
+.header-menu ul li:last-child a { border-right: 0; padding-right: 0; }
+
+.site-title { margin-bottom: 9px; }
+
+.footer-first { background-color: #e7e6d9; }
+
+.footer-seccond { background-color: #878787; color: white; font-size: 10px; font-size: 0.625rem; padding: 16px 0 7px; }
+.footer-seccond ul { text-transform: uppercase; border-top: 1px solid #999999; display: inline-block; padding-top: 8px; margin-top: 9px; }
+.footer-seccond ul li { float: left; margin-right: 10px; }
+.footer-seccond ul li a { display: block; position: relative; padding-left: 10px; margin-right: 47px; }
+.footer-seccond ul li a:before { content: "»"; position: absolute; font-size: 8px; font-size: 0.5rem; left: 0; top: 1px; }
+.footer-seccond a { color: inherit; }
+.footer-seccond .pane-1 p { display: inline; }
+.footer-seccond .pane-1 a { text-transform: uppercase; font-weight: bold; }
+.footer-seccond .panel-col-first { width: 65.24702%; float: left; margin-right: 4.25894%; display: inline; }
+.footer-seccond .panel-col-last { width: 30.49404%; float: right; margin-right: 0; *margin-left: -50px; display: inline; }
+
+@media (min-width: 690px) { .pane-page-logo { width: 47.87053%; float: left; margin-right: 4.25894%; }
+  .pane-system-user-menu { width: 47.87053%; float: right; margin-right: 0; }
+  .footer-seccond { margin-bottom: 60px; } }
+@media (min-width: 1200px) { .page-basic > .content > .inside, .page-basic > .header > .inside, .page-basic > .header-menu > .inside, .page-basic > .main-menu > .inside, .page-basic > .site-title > .inside, .page-basic > .footer-first > .inside, .page-basic > .footer-seccond > .inside { max-width: 1174px; padding-left: 13px; padding-right: 13px; margin-left: auto; margin-right: auto; }
+  .page-basic > .content > .inside:after, .page-basic > .header > .inside:after, .page-basic > .header-menu > .inside:after, .page-basic > .main-menu > .inside:after, .page-basic > .site-title > .inside:after, .page-basic > .footer-first > .inside:after, .page-basic > .footer-seccond > .inside:after { content: ""; display: table; clear: both; } }
