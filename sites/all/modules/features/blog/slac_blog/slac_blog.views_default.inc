@@ -11,134 +11,6 @@ function slac_blog_views_default_views() {
   $export = array();
 
   $view = new view();
-  $view->name = 'blog_archive';
-  $view->description = '';
-  $view->tag = 'default';
-  $view->base_table = 'node';
-  $view->human_name = 'Blog archive';
-  $view->core = 7;
-  $view->api_version = '3.0';
-  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
-
-  /* Display: Master */
-  $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Blog archive';
-  $handler->display->display_options['use_more_always'] = FALSE;
-  $handler->display->display_options['access']['type'] = 'perm';
-  $handler->display->display_options['cache']['type'] = 'none';
-  $handler->display->display_options['query']['type'] = 'views_query';
-  $handler->display->display_options['exposed_form']['type'] = 'basic';
-  $handler->display->display_options['pager']['type'] = 'none';
-  $handler->display->display_options['style_plugin'] = 'list';
-  $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Content: Title */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Contextual filter: Content: Created year + month */
-  $handler->display->display_options['arguments']['created_year_month']['id'] = 'created_year_month';
-  $handler->display->display_options['arguments']['created_year_month']['table'] = 'node';
-  $handler->display->display_options['arguments']['created_year_month']['field'] = 'created_year_month';
-  $handler->display->display_options['arguments']['created_year_month']['default_action'] = 'summary';
-  $handler->display->display_options['arguments']['created_year_month']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['created_year_month']['summary']['sort_order'] = 'desc';
-  $handler->display->display_options['arguments']['created_year_month']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['created_year_month']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['created_year_month']['summary_options']['base_path'] = 'blog/archive';
-  $handler->display->display_options['arguments']['created_year_month']['summary_options']['items_per_page'] = '25';
-  /* Filter criterion: Content: Published */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Post date */
-  $handler->display->display_options['filters']['created']['id'] = 'created';
-  $handler->display->display_options['filters']['created']['table'] = 'node';
-  $handler->display->display_options['filters']['created']['field'] = 'created';
-  $handler->display->display_options['filters']['created']['operator'] = '>=';
-  $handler->display->display_options['filters']['created']['value']['value'] = '-11months';
-  $handler->display->display_options['filters']['created']['value']['type'] = 'offset';
-  /* Filter criterion: Content: Post date */
-  $handler->display->display_options['filters']['created_1']['id'] = 'created_1';
-  $handler->display->display_options['filters']['created_1']['table'] = 'node';
-  $handler->display->display_options['filters']['created_1']['field'] = 'created';
-  $handler->display->display_options['filters']['created_1']['operator'] = '<=';
-  $handler->display->display_options['filters']['created_1']['value']['value'] = 'now';
-  $handler->display->display_options['filters']['created_1']['value']['type'] = 'offset';
-  $handler->display->display_options['filters']['created_1']['expose']['operator_id'] = 'created_1_op';
-  $handler->display->display_options['filters']['created_1']['expose']['label'] = 'Post date';
-  $handler->display->display_options['filters']['created_1']['expose']['operator'] = 'created_1_op';
-  $handler->display->display_options['filters']['created_1']['expose']['identifier'] = 'created_1';
-  $handler->display->display_options['filters']['created_1']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    3 => 0,
-  );
-  /* Filter criterion: Content: Type */
-  $handler->display->display_options['filters']['type']['id'] = 'type';
-  $handler->display->display_options['filters']['type']['table'] = 'node';
-  $handler->display->display_options['filters']['type']['field'] = 'type';
-  $handler->display->display_options['filters']['type']['value'] = array(
-    'blog' => 'blog',
-  );
-
-  /* Display: Blog Year+month */
-  $handler = $view->new_display('block', 'Blog Year+month', 'block');
-
-  /* Display: Blog Year */
-  $handler = $view->new_display('block', 'Blog Year', 'block_1');
-  $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Created year */
-  $handler->display->display_options['arguments']['created_year']['id'] = 'created_year';
-  $handler->display->display_options['arguments']['created_year']['table'] = 'node';
-  $handler->display->display_options['arguments']['created_year']['field'] = 'created_year';
-  $handler->display->display_options['arguments']['created_year']['default_action'] = 'summary';
-  $handler->display->display_options['arguments']['created_year']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['created_year']['summary']['sort_order'] = 'desc';
-  $handler->display->display_options['arguments']['created_year']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['created_year']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['created_year']['summary_options']['base_path'] = 'blog/archive';
-  $handler->display->display_options['arguments']['created_year']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
-  $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Post date */
-  $handler->display->display_options['filters']['created_1']['id'] = 'created_1';
-  $handler->display->display_options['filters']['created_1']['table'] = 'node';
-  $handler->display->display_options['filters']['created_1']['field'] = 'created';
-  $handler->display->display_options['filters']['created_1']['operator'] = '<=';
-  $handler->display->display_options['filters']['created_1']['value']['value'] = 'now';
-  $handler->display->display_options['filters']['created_1']['value']['type'] = 'offset';
-  $handler->display->display_options['filters']['created_1']['expose']['operator_id'] = 'created_1_op';
-  $handler->display->display_options['filters']['created_1']['expose']['label'] = 'Post date';
-  $handler->display->display_options['filters']['created_1']['expose']['operator'] = 'created_1_op';
-  $handler->display->display_options['filters']['created_1']['expose']['identifier'] = 'created_1';
-  $handler->display->display_options['filters']['created_1']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    3 => 0,
-  );
-  /* Filter criterion: Content: Type */
-  $handler->display->display_options['filters']['type']['id'] = 'type';
-  $handler->display->display_options['filters']['type']['table'] = 'node';
-  $handler->display->display_options['filters']['type']['field'] = 'type';
-  $handler->display->display_options['filters']['type']['value'] = array(
-    'blog' => 'blog',
-  );
-  $export['blog_archive'] = $view;
-
-  $view = new view();
   $view->name = 'blog_page';
   $view->description = '';
   $view->tag = 'default';
@@ -217,11 +89,10 @@ function slac_blog_views_default_views() {
   $handler->display->display_options['fields']['field_last_name']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['field_last_name']['alter']['path'] = 'blog/[uid]';
   $handler->display->display_options['fields']['field_last_name']['element_label_colon'] = FALSE;
-  /* Field: User: Created date */
+  /* Field: Content: Post date */
   $handler->display->display_options['fields']['created']['id'] = 'created';
-  $handler->display->display_options['fields']['created']['table'] = 'users';
+  $handler->display->display_options['fields']['created']['table'] = 'node';
   $handler->display->display_options['fields']['created']['field'] = 'created';
-  $handler->display->display_options['fields']['created']['relationship'] = 'uid';
   $handler->display->display_options['fields']['created']['label'] = '';
   $handler->display->display_options['fields']['created']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['created']['alter']['text'] = '[picture] Posted by [field_last_name] on [created]';
@@ -422,11 +293,10 @@ function slac_blog_views_default_views() {
   $handler->display->display_options['fields']['field_last_name']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['field_last_name']['alter']['path'] = 'blog/[uid]';
   $handler->display->display_options['fields']['field_last_name']['element_label_colon'] = FALSE;
-  /* Field: User: Created date */
+  /* Field: Content: Post date */
   $handler->display->display_options['fields']['created']['id'] = 'created';
-  $handler->display->display_options['fields']['created']['table'] = 'users';
+  $handler->display->display_options['fields']['created']['table'] = 'node';
   $handler->display->display_options['fields']['created']['field'] = 'created';
-  $handler->display->display_options['fields']['created']['relationship'] = 'uid';
   $handler->display->display_options['fields']['created']['label'] = '';
   $handler->display->display_options['fields']['created']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['created']['alter']['text'] = '[picture] Posted by [field_last_name] on [created]';
@@ -450,136 +320,6 @@ function slac_blog_views_default_views() {
   $handler->display->display_options['fields']['view_node']['label'] = '';
   $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['view_node']['text'] = 'Continue Reading';
-
-  /* Display: Blog Archive */
-  $handler = $view->new_display('block', 'Blog Archive', 'block_2');
-  $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Blog Archive';
-  $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Title */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_type'] = 'h2';
-  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Content: Image */
-  $handler->display->display_options['fields']['field_slac_blog_image']['id'] = 'field_slac_blog_image';
-  $handler->display->display_options['fields']['field_slac_blog_image']['table'] = 'field_data_field_slac_blog_image';
-  $handler->display->display_options['fields']['field_slac_blog_image']['field'] = 'field_slac_blog_image';
-  $handler->display->display_options['fields']['field_slac_blog_image']['label'] = '';
-  $handler->display->display_options['fields']['field_slac_blog_image']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_slac_blog_image']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_slac_blog_image']['settings'] = array(
-    'image_style' => 'slac_blog_image',
-    'image_link' => 'content',
-  );
-  /* Field: User: Uid */
-  $handler->display->display_options['fields']['uid']['id'] = 'uid';
-  $handler->display->display_options['fields']['uid']['table'] = 'users';
-  $handler->display->display_options['fields']['uid']['field'] = 'uid';
-  $handler->display->display_options['fields']['uid']['relationship'] = 'uid';
-  $handler->display->display_options['fields']['uid']['label'] = '';
-  $handler->display->display_options['fields']['uid']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['uid']['element_label_colon'] = FALSE;
-  /* Field: User: Picture */
-  $handler->display->display_options['fields']['picture']['id'] = 'picture';
-  $handler->display->display_options['fields']['picture']['table'] = 'users';
-  $handler->display->display_options['fields']['picture']['field'] = 'picture';
-  $handler->display->display_options['fields']['picture']['relationship'] = 'uid';
-  $handler->display->display_options['fields']['picture']['label'] = '';
-  $handler->display->display_options['fields']['picture']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['picture']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['picture']['image_style'] = 'profile-image-blog-icon';
-  /* Field: User: First Name */
-  $handler->display->display_options['fields']['field_first_name']['id'] = 'field_first_name';
-  $handler->display->display_options['fields']['field_first_name']['table'] = 'field_data_field_first_name';
-  $handler->display->display_options['fields']['field_first_name']['field'] = 'field_first_name';
-  $handler->display->display_options['fields']['field_first_name']['relationship'] = 'uid';
-  $handler->display->display_options['fields']['field_first_name']['exclude'] = TRUE;
-  /* Field: User: Last Name */
-  $handler->display->display_options['fields']['field_last_name']['id'] = 'field_last_name';
-  $handler->display->display_options['fields']['field_last_name']['table'] = 'field_data_field_last_name';
-  $handler->display->display_options['fields']['field_last_name']['field'] = 'field_last_name';
-  $handler->display->display_options['fields']['field_last_name']['relationship'] = 'uid';
-  $handler->display->display_options['fields']['field_last_name']['label'] = '';
-  $handler->display->display_options['fields']['field_last_name']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_last_name']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_last_name']['alter']['text'] = '[field_first_name] [field_last_name]';
-  $handler->display->display_options['fields']['field_last_name']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['field_last_name']['alter']['path'] = 'blog/[uid]';
-  $handler->display->display_options['fields']['field_last_name']['element_label_colon'] = FALSE;
-  /* Field: User: Created date */
-  $handler->display->display_options['fields']['created']['id'] = 'created';
-  $handler->display->display_options['fields']['created']['table'] = 'users';
-  $handler->display->display_options['fields']['created']['field'] = 'created';
-  $handler->display->display_options['fields']['created']['relationship'] = 'uid';
-  $handler->display->display_options['fields']['created']['label'] = '';
-  $handler->display->display_options['fields']['created']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['created']['alter']['text'] = '[picture] Posted by [field_last_name] on [created]';
-  $handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['created']['date_format'] = 'custom';
-  $handler->display->display_options['fields']['created']['custom_date_format'] = 'l, F d, Y \\a\\t m:i a';
-  /* Field: Content: Body */
-  $handler->display->display_options['fields']['body']['id'] = 'body';
-  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
-  $handler->display->display_options['fields']['body']['field'] = 'body';
-  $handler->display->display_options['fields']['body']['label'] = '';
-  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
-  $handler->display->display_options['fields']['body']['settings'] = array(
-    'trim_length' => '600',
-  );
-  /* Field: Content: Link */
-  $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
-  $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
-  $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
-  $handler->display->display_options['fields']['view_node']['label'] = '';
-  $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['view_node']['text'] = 'Continue Reading';
-  $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Created year + month */
-  $handler->display->display_options['arguments']['created_year_month']['id'] = 'created_year_month';
-  $handler->display->display_options['arguments']['created_year_month']['table'] = 'node';
-  $handler->display->display_options['arguments']['created_year_month']['field'] = 'created_year_month';
-  $handler->display->display_options['arguments']['created_year_month']['title_enable'] = TRUE;
-  $handler->display->display_options['arguments']['created_year_month']['title'] = 'Blog Archive: %1';
-  $handler->display->display_options['arguments']['created_year_month']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['created_year_month']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['created_year_month']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['created_year_month']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
-  $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
-  $handler->display->display_options['filters']['type']['id'] = 'type';
-  $handler->display->display_options['filters']['type']['table'] = 'node';
-  $handler->display->display_options['filters']['type']['field'] = 'type';
-  $handler->display->display_options['filters']['type']['value'] = array(
-    'blog' => 'blog',
-  );
-  /* Filter criterion: Content: Post date */
-  $handler->display->display_options['filters']['created']['id'] = 'created';
-  $handler->display->display_options['filters']['created']['table'] = 'node';
-  $handler->display->display_options['filters']['created']['field'] = 'created';
-  $handler->display->display_options['filters']['created']['operator'] = '>=';
-  $handler->display->display_options['filters']['created']['value']['value'] = '-11months';
-  $handler->display->display_options['filters']['created']['value']['type'] = 'offset';
-  /* Filter criterion: Content: Post date */
-  $handler->display->display_options['filters']['created_1']['id'] = 'created_1';
-  $handler->display->display_options['filters']['created_1']['table'] = 'node';
-  $handler->display->display_options['filters']['created_1']['field'] = 'created';
-  $handler->display->display_options['filters']['created_1']['operator'] = '<=';
-  $handler->display->display_options['filters']['created_1']['value']['value'] = 'now';
-  $handler->display->display_options['filters']['created_1']['value']['type'] = 'offset';
 
   /* Display: Blog Archive Year */
   $handler = $view->new_display('block', 'Blog Archive Year', 'block_3');
@@ -590,7 +330,6 @@ function slac_blog_views_default_views() {
   $handler->display->display_options['arguments']['created_year']['id'] = 'created_year';
   $handler->display->display_options['arguments']['created_year']['table'] = 'node';
   $handler->display->display_options['arguments']['created_year']['field'] = 'created_year';
-  $handler->display->display_options['arguments']['created_year']['default_action'] = 'empty';
   $handler->display->display_options['arguments']['created_year']['title_enable'] = TRUE;
   $handler->display->display_options['arguments']['created_year']['title'] = 'Blog Archive %1';
   $handler->display->display_options['arguments']['created_year']['default_argument_type'] = 'fixed';
@@ -599,6 +338,16 @@ function slac_blog_views_default_views() {
   $handler->display->display_options['arguments']['created_year']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['created_year']['summary_options']['base_path'] = 'blog/archive';
   $handler->display->display_options['arguments']['created_year']['summary_options']['items_per_page'] = '25';
+  /* Contextual filter: Content: Created month */
+  $handler->display->display_options['arguments']['created_month']['id'] = 'created_month';
+  $handler->display->display_options['arguments']['created_month']['table'] = 'node';
+  $handler->display->display_options['arguments']['created_month']['field'] = 'created_month';
+  $handler->display->display_options['arguments']['created_month']['title_enable'] = TRUE;
+  $handler->display->display_options['arguments']['created_month']['title'] = 'Blog Archive: %1 %2';
+  $handler->display->display_options['arguments']['created_month']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['created_month']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['created_month']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['created_month']['summary_options']['items_per_page'] = '25';
 
   /* Display: Blog Term Feed */
   $handler = $view->new_display('feed', 'Blog Term Feed', 'feed_2');

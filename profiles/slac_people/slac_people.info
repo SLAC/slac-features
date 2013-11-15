@@ -61,9 +61,9 @@ dependencies[] = epsacrop
 dependencies[] = entity
 dependencies[] = libraries
 
-dependencies[] = panels_mini
-dependencies[] = panels_node
 dependencies[] = panels
+dependencies[] = panels_mini
+dependencies[] = panels_ipe
 dependencies[] = panelizer
 
 dependencies[] = views
@@ -99,6 +99,10 @@ dependencies[] = slac_blog
 dependencies[] = pp_profile
 dependencies[] = slac_profile
 
+;Landing page content type
 dependencies[] = landing_page
 
 ;Permissions (slac_people_permissions) are enabled in separate step of installation.
+
+;Profile frontpage elements
+dependencies[] = slac_profile_elements

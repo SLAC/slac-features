@@ -1,0 +1,16 @@
+name = SLAC Profile Elements
+description = Provides elements used for user profile page.
+core = 7.x
+package = SLAC
+php = 5.2.4
+dependencies[] = image
+dependencies[] = slac_blog
+dependencies[] = views
+dependencies[] = views_content
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features[image][] = profile_home_blog_image
+features[image][] = profile_home_user_image
+features[views_view][] = profile_elements
+features[views_view][] = profile_user_elements
+features_exclude[dependencies][ctools] = ctools

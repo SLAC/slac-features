@@ -10,6 +10,40 @@
 function slac_profile_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'profile2-bio-field_prf_bio_ar'
+  $field_instances['profile2-bio-field_prf_bio_ar'] = array(
+    'bundle' => 'bio',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 3,
+      ),
+    ),
+    'entity_type' => 'profile2',
+    'field_name' => 'field_prf_bio_ar',
+    'label' => 'Areas of Research',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 4,
+    ),
+  );
+
   // Exported field_instance: 'profile2-bio-field_prf_bio_bio'
   $field_instances['profile2-bio-field_prf_bio_bio'] = array(
     'bundle' => 'bio',
@@ -30,7 +64,7 @@ function slac_profile_field_default_field_instances() {
     'label' => 'Bio',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -44,42 +78,8 @@ function slac_profile_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'profile2-bio-field_prf_bio_prof_activities'
-  $field_instances['profile2-bio-field_prf_bio_prof_activities'] = array(
-    'bundle' => 'bio',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 2,
-      ),
-    ),
-    'entity_type' => 'profile2',
-    'field_name' => 'field_prf_bio_prof_activities',
-    'label' => 'Professional activities',
-    'required' => 0,
-    'settings' => array(
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 5,
-      ),
-      'type' => 'text_textarea',
-      'weight' => 3,
-    ),
-  );
-
-  // Exported field_instance: 'profile2-bio-field_prf_bio_research_interests'
-  $field_instances['profile2-bio-field_prf_bio_research_interests'] = array(
+  // Exported field_instance: 'profile2-bio-field_prf_bio_education'
+  $field_instances['profile2-bio-field_prf_bio_education'] = array(
     'bundle' => 'bio',
     'default_value' => NULL,
     'deleted' => 0,
@@ -94,11 +94,11 @@ function slac_profile_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'profile2',
-    'field_name' => 'field_prf_bio_research_interests',
-    'label' => 'Research interests',
+    'field_name' => 'field_prf_bio_education',
+    'label' => 'Education',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -109,6 +109,176 @@ function slac_profile_field_default_field_instances() {
       ),
       'type' => 'text_textarea',
       'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'profile2-bio-field_prf_bio_ha'
+  $field_instances['profile2-bio-field_prf_bio_ha'] = array(
+    'bundle' => 'bio',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 4,
+      ),
+    ),
+    'entity_type' => 'profile2',
+    'field_name' => 'field_prf_bio_ha',
+    'label' => 'Honors and Awards',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 5,
+    ),
+  );
+
+  // Exported field_instance: 'profile2-bio-field_prf_bio_pa'
+  $field_instances['profile2-bio-field_prf_bio_pa'] = array(
+    'bundle' => 'bio',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 5,
+      ),
+    ),
+    'entity_type' => 'profile2',
+    'field_name' => 'field_prf_bio_pa',
+    'label' => 'Professional Activities',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 6,
+    ),
+  );
+
+  // Exported field_instance: 'profile2-bio-field_prf_bio_pexp'
+  $field_instances['profile2-bio-field_prf_bio_pexp'] = array(
+    'bundle' => 'bio',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+    ),
+    'entity_type' => 'profile2',
+    'field_name' => 'field_prf_bio_pexp',
+    'label' => 'Professional Experience',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'profile2-bio-field_prf_bio_pub'
+  $field_instances['profile2-bio-field_prf_bio_pub'] = array(
+    'bundle' => 'bio',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 6,
+      ),
+    ),
+    'entity_type' => 'profile2',
+    'field_name' => 'field_prf_bio_pub',
+    'label' => 'Publications',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 7,
+    ),
+  );
+
+  // Exported field_instance: 'profile2-bio-field_prf_bio_tp'
+  $field_instances['profile2-bio-field_prf_bio_tp'] = array(
+    'bundle' => 'bio',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 7,
+      ),
+    ),
+    'entity_type' => 'profile2',
+    'field_name' => 'field_prf_bio_tp',
+    'label' => 'Talks and Presentations',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 8,
     ),
   );
 
@@ -142,41 +312,7 @@ function slac_profile_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 4,
-    ),
-  );
-
-  // Exported field_instance: 'profile2-contact-field_prf_contact_education'
-  $field_instances['profile2-contact-field_prf_contact_education'] = array(
-    'bundle' => 'contact',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 8,
-      ),
-    ),
-    'entity_type' => 'profile2',
-    'field_name' => 'field_prf_contact_education',
-    'label' => 'Education',
-    'required' => 0,
-    'settings' => array(
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 5,
-      ),
-      'type' => 'text_textarea',
-      'weight' => 9,
+      'weight' => 3,
     ),
   );
 
@@ -213,6 +349,42 @@ function slac_profile_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'profile2-contact-field_prf_contact_fax'
+  $field_instances['profile2-contact-field_prf_contact_fax'] = array(
+    'bundle' => 'contact',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'phone',
+        'settings' => array(),
+        'type' => 'phone',
+        'weight' => 11,
+      ),
+    ),
+    'entity_type' => 'profile2',
+    'field_name' => 'field_prf_contact_fax',
+    'label' => 'Fax',
+    'required' => 0,
+    'settings' => array(
+      'ca_phone_parentheses' => 1,
+      'ca_phone_separator' => '-',
+      'phone_country_code' => 0,
+      'phone_default_country_code' => 1,
+      'phone_int_max_length' => 15,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'phone',
+      'settings' => array(),
+      'type' => 'phone_textfield',
+      'weight' => 7,
+    ),
+  );
+
   // Exported field_instance: 'profile2-contact-field_prf_contact_location'
   $field_instances['profile2-contact-field_prf_contact_location'] = array(
     'bundle' => 'contact',
@@ -230,7 +402,7 @@ function slac_profile_field_default_field_instances() {
     ),
     'entity_type' => 'profile2',
     'field_name' => 'field_prf_contact_location',
-    'label' => 'Location',
+    'label' => 'Office Adderss',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -241,40 +413,6 @@ function slac_profile_field_default_field_instances() {
       'settings' => array(),
       'type' => 'location',
       'weight' => 8,
-    ),
-  );
-
-  // Exported field_instance: 'profile2-contact-field_prf_contact_mailcode'
-  $field_instances['profile2-contact-field_prf_contact_mailcode'] = array(
-    'bundle' => 'contact',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 6,
-      ),
-    ),
-    'entity_type' => 'profile2',
-    'field_name' => 'field_prf_contact_mailcode',
-    'label' => 'Mail code',
-    'required' => 0,
-    'settings' => array(
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
-      'weight' => 7,
     ),
   );
 
@@ -308,7 +446,7 @@ function slac_profile_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 2,
+      'weight' => 1,
     ),
   );
 
@@ -377,9 +515,9 @@ function slac_profile_field_default_field_instances() {
           'crop_landscape' => 0,
           'crop_portrait' => 0,
           'crop_square' => 0,
-          'slac_blog_image' => 0,
           'lightbox_text_bottom' => 0,
           'lightbox_text_left_right' => 0,
+          'slac_blog_image' => 0,
         ),
       ),
       'file_directory' => '',
@@ -412,7 +550,41 @@ function slac_profile_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 1,
+      'weight' => 0,
+    ),
+  );
+
+  // Exported field_instance: 'profile2-contact-field_prf_contact_rg'
+  $field_instances['profile2-contact-field_prf_contact_rg'] = array(
+    'bundle' => 'contact',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 10,
+      ),
+    ),
+    'entity_type' => 'profile2',
+    'field_name' => 'field_prf_contact_rg',
+    'label' => 'Research Group',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 4,
     ),
   );
 
@@ -446,7 +618,7 @@ function slac_profile_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 3,
+      'weight' => 2,
     ),
   );
 
@@ -482,10 +654,10 @@ function slac_profile_field_default_field_instances() {
       ),
       'enable_tokens' => 1,
       'rel_remove' => 'default',
-      'title' => 'none',
+      'title' => 'optional',
       'title_maxlength' => 128,
       'title_value' => '',
-      'url' => 0,
+      'url' => 'optional',
       'user_register_form' => FALSE,
       'validate_url' => 1,
     ),
@@ -494,7 +666,7 @@ function slac_profile_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 10,
+      'weight' => 9,
     ),
   );
 
@@ -510,7 +682,7 @@ function slac_profile_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 0,
+        'weight' => 1,
       ),
     ),
     'entity_type' => 'profile2',
@@ -546,6 +718,54 @@ function slac_profile_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'profile2-social_media-field_prf_social_flickr'
+  $field_instances['profile2-social_media-field_prf_social_flickr'] = array(
+    'bundle' => 'social_media',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 3,
+      ),
+    ),
+    'entity_type' => 'profile2',
+    'field_name' => 'field_prf_social_flickr',
+    'label' => 'Flickr',
+    'required' => 0,
+    'settings' => array(
+      'attributes' => array(
+        'class' => '',
+        'configurable_title' => 0,
+        'rel' => '',
+        'target' => 'default',
+        'title' => '',
+      ),
+      'display' => array(
+        'url_cutoff' => 80,
+      ),
+      'enable_tokens' => 1,
+      'rel_remove' => 'default',
+      'title' => 'none',
+      'title_maxlength' => 128,
+      'title_value' => '',
+      'url' => 0,
+      'user_register_form' => FALSE,
+      'validate_url' => 1,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'link',
+      'settings' => array(),
+      'type' => 'link_field',
+      'weight' => 3,
+    ),
+  );
+
   // Exported field_instance: 'profile2-social_media-field_prf_social_googleplus'
   $field_instances['profile2-social_media-field_prf_social_googleplus'] = array(
     'bundle' => 'social_media',
@@ -558,7 +778,7 @@ function slac_profile_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 3,
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'profile2',
@@ -638,7 +858,7 @@ function slac_profile_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 3,
+      'weight' => 2,
     ),
   );
 
@@ -654,7 +874,7 @@ function slac_profile_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 1,
+        'weight' => 0,
       ),
     ),
     'entity_type' => 'profile2',
@@ -674,10 +894,10 @@ function slac_profile_field_default_field_instances() {
       ),
       'enable_tokens' => 1,
       'rel_remove' => 'default',
-      'title' => 'none',
+      'title' => 'optional',
       'title_maxlength' => 128,
       'title_value' => '',
-      'url' => 0,
+      'url' => 'optional',
       'user_register_form' => FALSE,
       'validate_url' => 1,
     ),
@@ -686,26 +906,32 @@ function slac_profile_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 2,
+      'weight' => 0,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
   t('Affiliation');
+  t('Areas of Research');
   t('Bio');
   t('Education');
   t('Email');
   t('Facebook');
+  t('Fax');
+  t('Flickr');
   t('Google+');
+  t('Honors and Awards');
   t('LinkedIn');
-  t('Location');
-  t('Mail code');
   t('Name');
+  t('Office Adderss');
   t('Phone');
   t('Photo');
-  t('Professional activities');
-  t('Research interests');
+  t('Professional Activities');
+  t('Professional Experience');
+  t('Publications');
+  t('Research Group');
+  t('Talks and Presentations');
   t('Title');
   t('Twitter');
   t('Website');

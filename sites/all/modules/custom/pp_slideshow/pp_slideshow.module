@@ -38,6 +38,19 @@ function pp_slideshow_entity_info_alter(&$entity_info) {
       'access arguments' => array('administer fieldable panels panes'),
     ),
   );
+  $entity_info['fieldable_panels_pane']['bundles']['slideshow_description_bottom'] = array(
+    'label' => t('Slideshow (description bottom)'),
+    'pane category' => t('Slideshow'),
+    'pane top level' => FALSE, // set to true to make this show as a top level icon
+//    'pane icon' => '/path/to/custom/icon/for/this/pane.png',
+    'admin' => array(
+      'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
+      'bundle argument' => 4,
+      // Note that this has all _ replaced with - from the bundle name.
+      'real path' => 'admin/structure/fieldable-panels-panes/manage/slideshow-description-bottom',
+      'access arguments' => array('administer fieldable panels panes'),
+    ),
+  );
 }
 
 /**
@@ -78,6 +91,7 @@ function pp_slideshow_theme() {
   return array(
     'field_slideshow' => $theme_array,
     'field_slideshow__slideshow_text_bottom' => array_merge($theme_array, array('template' => 'field_slideshow__slideshow_text_bottom')),
+    'field_slideshow__slideshow_description_bottom' => array_merge($theme_array, array('template' => 'field_slideshow__slideshow_description_bottom')),
     'field_slideshow__slideshow_text_left_right' => array_merge($theme_array, array('template' => 'field_slideshow__slideshow_text_left_right')),
   );
 }

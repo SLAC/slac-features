@@ -1,0 +1,6 @@
+name = SLAC Block Panel Styles
+description = Provide the list of styles for block from Panels
+package = Propeople
+core = 7.x
+
+dependencies[] = panels

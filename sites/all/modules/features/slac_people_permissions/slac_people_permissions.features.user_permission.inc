@@ -59,6 +59,16 @@ function slac_people_permissions_user_default_permissions() {
     'module' => 'panelizer',
   );
 
+  // Exported permission: administer panelizer node landing_page choice.
+  $permissions['administer panelizer node landing_page choice'] = array(
+    'name' => 'administer panelizer node landing_page choice',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'site owner' => 'site owner',
+    ),
+    'module' => 'panelizer',
+  );
+
   // Exported permission: administer panelizer node landing_page content.
   $permissions['administer panelizer node landing_page content'] = array(
     'name' => 'administer panelizer node landing_page content',
@@ -74,7 +84,6 @@ function slac_people_permissions_user_default_permissions() {
     'name' => 'administer panelizer node landing_page context',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
     ),
     'module' => 'panelizer',
   );
@@ -103,7 +112,6 @@ function slac_people_permissions_user_default_permissions() {
     'name' => 'administer panelizer node landing_page overview',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
     ),
     'module' => 'panelizer',
   );
@@ -113,9 +121,38 @@ function slac_people_permissions_user_default_permissions() {
     'name' => 'administer panelizer node landing_page settings',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
     ),
     'module' => 'panelizer',
+  );
+
+  // Exported permission: change layouts in place editing.
+  $permissions['change layouts in place editing'] = array(
+    'name' => 'change layouts in place editing',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'site owner' => 'site owner',
+    ),
+    'module' => 'panels',
+  );
+
+  // Exported permission: create fieldable slideshow_description_bottom.
+  $permissions['create fieldable slideshow_description_bottom'] = array(
+    'name' => 'create fieldable slideshow_description_bottom',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'site owner' => 'site owner',
+    ),
+    'module' => 'fieldable_panels_panes',
+  );
+
+  // Exported permission: create files.
+  $permissions['create files'] = array(
+    'name' => 'create files',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'site owner' => 'site owner',
+    ),
+    'module' => 'file_entity',
   );
 
   // Exported permission: create landing_page content.
@@ -137,6 +174,16 @@ function slac_people_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: delete fieldable slideshow_description_bottom.
+  $permissions['delete fieldable slideshow_description_bottom'] = array(
+    'name' => 'delete fieldable slideshow_description_bottom',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'site owner' => 'site owner',
+    ),
+    'module' => 'fieldable_panels_panes',
+  );
+
   // Exported permission: delete own landing_page content.
   $permissions['delete own landing_page content'] = array(
     'name' => 'delete own landing_page content',
@@ -156,6 +203,16 @@ function slac_people_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: edit fieldable slideshow_description_bottom.
+  $permissions['edit fieldable slideshow_description_bottom'] = array(
+    'name' => 'edit fieldable slideshow_description_bottom',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'site owner' => 'site owner',
+    ),
+    'module' => 'fieldable_panels_panes',
+  );
+
   // Exported permission: edit own landing_page content.
   $permissions['edit own landing_page content'] = array(
     'name' => 'edit own landing_page content',
@@ -164,6 +221,36 @@ function slac_people_permissions_user_default_permissions() {
       'site owner' => 'site owner',
     ),
     'module' => 'node',
+  );
+
+  // Exported permission: use panels in place editing.
+  $permissions['use panels in place editing'] = array(
+    'name' => 'use panels in place editing',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'site owner' => 'site owner',
+    ),
+    'module' => 'panels',
+  );
+
+  // Exported permission: view own files.
+  $permissions['view own files'] = array(
+    'name' => 'view own files',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'site owner' => 'site owner',
+    ),
+    'module' => 'file_entity',
+  );
+
+  // Exported permission: view own private files.
+  $permissions['view own private files'] = array(
+    'name' => 'view own private files',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'site owner' => 'site owner',
+    ),
+    'module' => 'file_entity',
   );
 
   // Exported permission: view own unpublished content.
