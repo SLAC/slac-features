@@ -112,7 +112,6 @@ function slac_people_permissions_user_default_permissions() {
     'name' => 'administer panelizer node landing_page overview',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
     ),
     'module' => 'panelizer',
   );
