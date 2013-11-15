@@ -59,6 +59,16 @@ function slac_people_permissions_user_default_permissions() {
     'module' => 'panelizer',
   );
 
+  // Exported permission: administer panelizer node landing_page choice.
+  $permissions['administer panelizer node landing_page choice'] = array(
+    'name' => 'administer panelizer node landing_page choice',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'site owner' => 'site owner',
+    ),
+    'module' => 'panelizer',
+  );
+
   // Exported permission: administer panelizer node landing_page content.
   $permissions['administer panelizer node landing_page content'] = array(
     'name' => 'administer panelizer node landing_page content',
