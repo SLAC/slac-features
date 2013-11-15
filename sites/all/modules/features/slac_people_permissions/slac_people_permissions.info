@@ -25,7 +25,6 @@ features[user_permission][] = administer panelizer node landing_page defaults
 features[user_permission][] = administer panelizer node landing_page layout
 features[user_permission][] = administer panelizer node landing_page overview
 features[user_permission][] = administer panelizer node landing_page settings
-features[user_permission][] = change layouts in place editing
 features[user_permission][] = create fieldable slideshow_description_bottom
 features[user_permission][] = create files
 features[user_permission][] = create landing_page content
