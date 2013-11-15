@@ -59,16 +59,6 @@ function slac_people_permissions_user_default_permissions() {
     'module' => 'panelizer',
   );
 
-  // Exported permission: administer panelizer node landing_page choice.
-  $permissions['administer panelizer node landing_page choice'] = array(
-    'name' => 'administer panelizer node landing_page choice',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'site owner' => 'site owner',
-    ),
-    'module' => 'panelizer',
-  );
-
   // Exported permission: administer panelizer node landing_page content.
   $permissions['administer panelizer node landing_page content'] = array(
     'name' => 'administer panelizer node landing_page content',
@@ -124,6 +114,16 @@ function slac_people_permissions_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'panelizer',
+  );
+
+  // Exported permission: change layouts in place editing.
+  $permissions['change layouts in place editing'] = array(
+    'name' => 'change layouts in place editing',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'site owner' => 'site owner',
+    ),
+    'module' => 'panels',
   );
 
   // Exported permission: create fieldable slideshow_description_bottom.
