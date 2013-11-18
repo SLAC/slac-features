@@ -1,0 +1,97 @@
+<?php
+
+/**
+ * Implements hook_field_attach_form().
+ *
+ * Attach our form to this hook instead of hook_form_alter node because
+ * we might extend this to other entities in the future.
+ */
+function pp_panelizer_form_alter(&$form, &$form_state, $form_id) {
+  dpm($form_id);
+  if (strpos($form_id, '_node_form') === FALSE) {
+    return;
+  }
+  if (isset($form['#node']->nid)) {
+    return;
+  }
+
+  $entity_type = 'node';
+  $entity = $form['#node'];
+  $bundle = $form['#node']->type;
+
+  $panelizer_handler = panelizer_entity_plugin_get_handler($entity_type);
+  $panelizer_objects = $panelizer_handler->get_default_panelizer_objects($bundle);
+  if (empty($panelizer_objects)) {
+    return;
+  }
+
+  $panelizer = reset($panelizer_objects);
+
+  // From PanlizerEntityDefault::page_layout.
+  $display = &$panelizer->display;
+  $display->context = $panelizer_handler->get_contexts($panelizer, $entity);
+
+  $form_state += array(
+    'entity' => $entity,
+    'revision info' => $panelizer_handler->entity_allows_revisions($entity),
+    'display' => $display,
+    'panelizer' => $panelizer,
+    'allowed_layouts' => 'panelizer_' . $entity_type . ':' . $bundle,
+  );
+
+  ctools_include('common', 'panelizer');
+  ctools_include('display-layout', 'panels');
+  $form_layout = panelizer_choose_layout_form($form, $form_state);
+
+  $form['layout'] = array(
+      '#type' => 'fieldset',
+      '#group' => 'additional_settings',
+      '#title' => t('Layout'),
+      '#collapsible' => TRUE,
+      '#collapsed' => TRUE,
+      'layout' => $form_layout['layout'],
+  );
+
+//    ctools_include('common', 'panelizer');
+//    $output = panelizer_change_layout_wizard($form_state, $step, $layout);
+//    if (!empty($form_state['complete'])) {
+//      $entity->panelizer[$view_mode]->display = $form_state['display'];
+//      $entity->panelizer[$view_mode]->display_is_modified = TRUE;
+//      $this->entity_save($entity);
+//      drupal_set_message(t('The layout has been changed.'));
+//      drupal_goto($path . '/content');
+//    }
+  dpm($form, 'f');
+  dpm($form_state['node'], 'fs');
+}
+
+function pp_panelizer_node_submit($node, $form, &$form_state) {
+
+  if (!isset($form_state['values']['layout'])) {
+    return;
+  }
+
+  $node->panelizer['page_manager']->display->layout = $form_state['values']['layout'];
+  node_save($node);
+  
+//  $node = &$form_state['node'];
+//  $panelizer = $form_state['panelizer'];
+//  dpm($panelizer);
+//  $panelizer->display->layout = $form_state['values']['layout'];
+//  $node->panelizer = $panelizer;
+
+//  $fs = array();
+//  $fs['layout'] = $form_state['values']['layout'];
+//  $fs['display'] = $form_state['display'];
+//  $fs['values'] = $form_state['values'];
+//  $fs['finish'] = t('Save');
+//  $fs['values']['op'] = t('Save');
+//
+////  array(
+////    'layout' => $form_state['values']['layout'],
+////    'display' => $form_state['display'],
+////    'finish' => t('Save'),
+////    'no_redirect' => TRUE,
+////  );
+//  drupal_form_submit('panels_change_layout', $fs);
+}

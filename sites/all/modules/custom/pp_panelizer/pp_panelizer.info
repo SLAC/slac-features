@@ -1,0 +1,5 @@
+name = PP Panelizer
+description = UX improvements for panelizer
+core = 7.x
+package = PP
+dependencies[] = panelizer
