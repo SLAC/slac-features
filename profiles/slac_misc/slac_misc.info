@@ -66,6 +66,8 @@ dependencies[] = panels_mini
 dependencies[] = panels_node
 dependencies[] = panels
 
+dependencies[] = paranoia
+
 dependencies[] = views
 dependencies[] = views_php
 dependencies[] = views_ui
