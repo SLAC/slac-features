@@ -129,7 +129,7 @@ function default_site_template_default_panels_mini() {
     $pane->configuration = array(
       'admin_title' => 'Footer text',
       'title' => '',
-      'body' => '<div class="footer-text-line">&nbsp;</div><div class="footer-text-line"><span><a href="http://www.slac.stanford.edu">Slac National Accelerator Laboratory</a></span></div>',
+      'body' => '<a href="http://www.slac.stanford.edu">Slac National Accelerator Laboratory</a>',
       'format' => 'full_html',
       'substitute' => TRUE,
     );
