@@ -70,7 +70,6 @@ dependencies[] = panels
 dependencies[] = paranoia
 
 dependencies[] = views
-dependencies[] = views_php
 dependencies[] = views_ui
 
 ; Custom modules
