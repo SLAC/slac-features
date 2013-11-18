@@ -134,12 +134,12 @@ function slac_profile_pages_uuid_features_default_content() {
     ),
     'cid' => 0,
     'last_comment_name' => NULL,
-    'last_comment_uid' => 0,
+    'last_comment_uid' => 1,
     'comment_count' => 0,
-    'name' => '',
+    'name' => 'admin',
     'picture' => 0,
-    'date' => '2013-11-18 10:58:29 +0200',
-    'author_uuid' => '05e77554-718a-42a8-98c6-c34cfc5bb96f',
+    'date' => '2013-11-18 15:50:54 +0200',
+    'author_uuid' => 'b4ee2dc8-8223-44fa-b342-fae35debec0d',
   );
   $nodes[] = array(
     'title' => 'Profile',
@@ -265,12 +265,12 @@ function slac_profile_pages_uuid_features_default_content() {
     ),
     'cid' => 0,
     'last_comment_name' => NULL,
-    'last_comment_uid' => 0,
+    'last_comment_uid' => 1,
     'comment_count' => 0,
-    'name' => '',
+    'name' => 'admin',
     'picture' => 0,
-    'date' => '2013-11-18 11:11:44 +0200',
-    'author_uuid' => '05e77554-718a-42a8-98c6-c34cfc5bb96f',
+    'date' => '2013-11-18 15:50:54 +0200',
+    'author_uuid' => 'b4ee2dc8-8223-44fa-b342-fae35debec0d',
   );
   return $nodes;
 }
