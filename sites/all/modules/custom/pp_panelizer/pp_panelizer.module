@@ -7,7 +7,6 @@
  * we might extend this to other entities in the future.
  */
 function pp_panelizer_form_alter(&$form, &$form_state, $form_id) {
-  dpm($form_id);
   if (strpos($form_id, '_node_form') === FALSE) {
     return;
   }
@@ -51,47 +50,18 @@ function pp_panelizer_form_alter(&$form, &$form_state, $form_id) {
       '#collapsed' => TRUE,
       'layout' => $form_layout['layout'],
   );
-
-//    ctools_include('common', 'panelizer');
-//    $output = panelizer_change_layout_wizard($form_state, $step, $layout);
-//    if (!empty($form_state['complete'])) {
-//      $entity->panelizer[$view_mode]->display = $form_state['display'];
-//      $entity->panelizer[$view_mode]->display_is_modified = TRUE;
-//      $this->entity_save($entity);
-//      drupal_set_message(t('The layout has been changed.'));
-//      drupal_goto($path . '/content');
-//    }
-  dpm($form, 'f');
-  dpm($form_state['node'], 'fs');
 }
 
+/**
+ * Implements hook_node_submit().
+ */
 function pp_panelizer_node_submit($node, $form, &$form_state) {
-
   if (!isset($form_state['values']['layout'])) {
     return;
   }
 
+  // Set layout for the newly created node. This tiggers PanelizerEntityDefault::hook_entity_update().
   $node->panelizer['page_manager']->display->layout = $form_state['values']['layout'];
+  $node->panelizer['page_manager']->display_is_modified = TRUE;
   node_save($node);
-  
-//  $node = &$form_state['node'];
-//  $panelizer = $form_state['panelizer'];
-//  dpm($panelizer);
-//  $panelizer->display->layout = $form_state['values']['layout'];
-//  $node->panelizer = $panelizer;
-
-//  $fs = array();
-//  $fs['layout'] = $form_state['values']['layout'];
-//  $fs['display'] = $form_state['display'];
-//  $fs['values'] = $form_state['values'];
-//  $fs['finish'] = t('Save');
-//  $fs['values']['op'] = t('Save');
-//
-////  array(
-////    'layout' => $form_state['values']['layout'],
-////    'display' => $form_state['display'],
-////    'finish' => t('Save'),
-////    'no_redirect' => TRUE,
-////  );
-//  drupal_form_submit('panels_change_layout', $fs);
 }
