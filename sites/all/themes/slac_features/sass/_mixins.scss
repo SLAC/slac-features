@@ -1,0 +1,67 @@
+@mixin box-shadow($top, $left, $blur, $spread, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $spread $color;
+    -moz-box-shadow:inset $top $left $blur $spread $color;
+    -ms-box-shadow:inset $top $left $blur $spread $color;
+    -o-box-shadow:inset $top $left $blur $spread $color;
+    box-shadow:inset $top $left $blur $spread $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $spread $color;
+    -moz-box-shadow: $top $left $blur $spread $color;
+    -ms-box-shadow: $top $left $blur $spread $color;
+    -o-box-shadow: $top $left $blur $spread $color;
+    box-shadow: $top $left $blur $spread $color;
+  }
+}
+
+@mixin rounded_corners ($radius) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -o-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin links ($fz:12px, $font-color:#881728, $text-decoration:none) {
+  font-size: $fz;
+  color: $font-color;
+  text-decoration: $text-decoration;
+  line-height: normal;
+}
+
+/* Grids */
+
+@import "zen";
+
+
+  $zen-gutter-width: 4%;
+  $zen-column-count: 12;
+  .container {
+    @include zen-grid-container();
+  }
+
+
+  .general-two-col .general-left{
+    @include zen-grid-item(8, 1);
+  }
+
+  .general-two-col .general-right{
+    @include zen-grid-item(4, 9);
+  }
+
+@media (max-width: 900px) {
+  .general-two-col .general-left{
+    @include zen-grid-item(8, 1);
+  }
+  .general-two-col .general-right{
+    @include zen-grid-item(4, 1);
+    clear: both;
+  }
+}
+
+@media (max-width: 600px) {
+  .general-two-col .general-left,
+  .general-two-col .general-right{
+    @include zen-grid-item(12, 1);
+  }
+}
