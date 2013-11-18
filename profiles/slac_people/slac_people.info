@@ -27,6 +27,7 @@ dependencies[] = file
 ; Contrib
 dependencies[] = jreject
 dependencies[] = googleanalytics
+dependencies[] = link_css
 
 ; Admin
 dependencies[] = admin_menu
@@ -108,3 +109,4 @@ dependencies[] = landing_page
 
 ;Profile frontpage elements
 dependencies[] = slac_profile_elements
+

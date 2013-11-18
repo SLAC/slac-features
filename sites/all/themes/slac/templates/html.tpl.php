@@ -23,23 +23,16 @@
     <meta name="viewport" content="width=device-width">
   <?php endif; ?>
   <meta http-equiv="cleartype" content="on">
+	<script src="/sites/all/themes/slac/js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 	
   <?php print $styles; ?>
-  <!-- <link media="screen, projection" rel="stylesheet" type="text/css" src="<?php drupal_add_css(drupal_get_path('theme', 'slac') . '/styles.css'); ?>"/> -->
+
+
+
   <?php print $scripts; ?>
-  <?php if ($add_html5_shim and !$add_respond_js): ?>
-    <!--[if lt IE 9]>
-    <script src="<?php print $base_path . $path_to_zen; ?>/js/html5.js"></script>
-    <![endif]-->
-  <?php elseif ($add_html5_shim and $add_respond_js): ?>
-    <!--[if lt IE 9]>
-    <script src="<?php print $base_path . $path_to_zen; ?>/js/html5-respond.js"></script>
-    <![endif]-->
-  <?php elseif ($add_respond_js): ?>
-    <!--[if lt IE 9]>
-    <script src="<?php print $base_path . $path_to_zen; ?>/js/respond.js"></script>
-    <![endif]-->
-  <?php endif; ?>
+
+
+
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
   <?php if ($skip_link_text && $skip_link_anchor): ?>
@@ -50,5 +43,13 @@
   <?php print $page_top; ?>
   <?php print $page; ?>
   <?php print $page_bottom; ?>
+  <script src="/sites/all/themes/slac/js/respond.min.js"></script>
+    <!--[if lt IE 9]>
+    
+    <script src="/sites/all/themes/slac/js/selectivizr-min.js"></script>
+    
+    
+    <![endif]-->  
+  
 </body>
 </html>

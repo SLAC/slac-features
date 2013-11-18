@@ -16,9 +16,9 @@ stylesheets[all][] = search.css
 stylesheets[all][] = date.css
 stylesheets[all][] = twocol.css
 
-scripts[] = js/placeholder.js
+scripts[] = js/jquery.placeholder.js
 scripts[] = js/script.js
-scripts[] = js/modernizr.js
+
 
 
 plugins[panels][styles] = plugins/styles

@@ -1,0 +1,50 @@
+<?php
+/**
+ * @file
+ * Code for the SLAC Profile pages feature.
+ */
+
+include_once 'slac_profile_pages.features.inc';
+
+$node_path = _get_normal_path_for_uuid('0b1f7606-c367-49fc-b5ef-7fe79b26becf');
+if ($node_path) {
+  variable_set('site_frontpage', $node_path);
+}
+
+/**
+ * Implements hook_menu_alter().
+ */
+function slac_profile_pages_menu_alter(&$items) {
+  $profile_normal_path = _get_normal_path_for_uuid('107ad001-64ca-408c-baa0-72702e930598');
+  if ($profile_normal_path && !isset($items[$profile_normal_path])) {
+    $items[$profile_normal_path] = array(
+      'menu_name' => 'main-menu',
+      'link_path' => $profile_normal_path,
+      'router_path' => 'node/%',
+      'link_title' => t('Profile'),
+      'options' => array(
+        'attributes' => array(
+          'title' => '',
+        ),
+      ),
+      'module' => 'menu',
+      'hidden' => 0,
+      'external' => 0,
+      'has_children' => 0,
+      'expanded' => 0,
+      'weight' => 20,
+    );
+  }
+}
+
+function _get_normal_path_for_uuid($uuid) {
+  $nid = db_select('node', 'n')
+    ->fields('n', array('nid'))
+    ->condition('n.uuid', $uuid, '=')
+    ->execute()
+    ->fetchField();
+  if (!is_numeric($nid)) {
+    return;
+  }
+  return 'node/' . $nid;
+}

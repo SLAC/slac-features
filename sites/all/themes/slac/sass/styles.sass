@@ -101,7 +101,9 @@ html
 //Site name
 //-----------------------------------
 .pane-page-site-name
-  font-size: em(32px)
+  font-size: em(34px)
+  font-weight: bold
+  
   .footer-first &
     font-size: em(14px)
 
@@ -210,14 +212,9 @@ html
       text-transform: uppercase
       font-weight: bold
 
-  .panel-col-first,
-  .panel-col-last
-    //padding-left: 62px    
+   
 
-  .panel-col-first 
-    +span-columns(8,12)
-  .panel-col-last
-    +span-columns(4 omega,12)
+
   
 
 
@@ -244,22 +241,31 @@ html
     a
       display: block
 
-//Content
-//-----------------------------------
-.general-left
-  +span-columns(8,12)
-.general-right
-  +span-columns(4 omega,12)
-
-
 
 
 //RESPONSIVE--------------------------------------------------------------------------------------------------
 +at-breakpoint($tablet)
+  //$breakpoint-ie-output: true
+  //$breakpoint-raw-output: true
+
   .pane-page-logo
     +span-columns(6,12)
   .pane-system-user-menu
     +span-columns(6 omega,12)
+
+
+  //Content
+  //-----------------------------------
+  .general-left
+    +span-columns(8,12)
+  .general-right
+    +span-columns(4 omega,12)
+  
+  
+  .panel-col-first 
+    +span-columns(8,12)
+  .panel-col-last
+    +span-columns(4 omega,12)
 
 
   //Last footer
@@ -271,8 +277,7 @@ html
 
 
 +at-breakpoint($large-desktop)
-  $legacy-support-for-ie: true
-  $breakpoint-ie-output: true
+
 
   .page-basic
     > .content, 
