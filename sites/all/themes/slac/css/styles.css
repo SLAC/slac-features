@@ -74,20 +74,18 @@ html { font-family: Arial, Helvetica, sans-serif; line-height: 1.25; -webkit-fon
 .footer-seccond a { color: inherit; }
 .footer-seccond .pane-1 p { display: inline; }
 .footer-seccond .pane-1 a { text-transform: uppercase; font-weight: bold; }
-.footer-seccond .panel-col-first { width: 65.24702%; float: left; margin-right: 4.25894%; display: inline; }
-.footer-seccond .panel-col-last { width: 30.49404%; float: right; margin-right: 0; *margin-left: -50px; display: inline; }
 
 .pager li { float: left; border: 1px solid #666666; border-right: 0; font-size: 0.8125em; padding: 8px 14px; line-height: 14px; display: inline-block; vertical-align: middle; }
 .pager li:last-child { border-right: 1px solid #666666; }
 .pager li.pager-current { background-color: #dddddd; }
 .pager li a { display: block; }
 
-.general-left { width: 65.24702%; float: left; margin-right: 4.25894%; display: inline; }
-
-.general-right { width: 30.49404%; float: right; margin-right: 0; *margin-left: -50px; display: inline; }
-
 @media (min-width: 690px) { .pane-page-logo { width: 47.87053%; float: left; margin-right: 4.25894%; }
   .pane-system-user-menu { width: 47.87053%; float: right; margin-right: 0; }
+  .general-left { width: 65.24702%; float: left; margin-right: 4.25894%; }
+  .general-right { width: 30.49404%; float: right; margin-right: 0; }
+  .panel-col-first { width: 65.24702%; float: left; margin-right: 4.25894%; }
+  .panel-col-last { width: 30.49404%; float: right; margin-right: 0; }
   .footer-seccond { margin-bottom: 60px; } }
 @media (min-width: 1200px) { .page-basic > .content > .inside, .page-basic > .header > .inside, .page-basic > .header-menu > .inside, .page-basic > .main-menu > .inside, .page-basic > .site-title > .inside, .page-basic > .footer-first > .inside, .page-basic > .footer-seccond > .inside { max-width: 1174px; padding-left: 13px; padding-right: 13px; margin-left: auto; margin-right: auto; }
   .page-basic > .content > .inside:after, .page-basic > .header > .inside:after, .page-basic > .header-menu > .inside:after, .page-basic > .main-menu > .inside:after, .page-basic > .site-title > .inside:after, .page-basic > .footer-first > .inside:after, .page-basic > .footer-seccond > .inside:after { content: ""; display: table; clear: both; } }
