@@ -13,3 +13,10 @@ function slac_project_form_install_configure_form_alter(&$form, $form_state) {
   // Pre-populate the site name with the server name.
   $form['site_information']['site_name']['#default_value'] = $_SERVER['SERVER_NAME'];
 }
+
+/**
+* Implements hook_paranoia_hide_modules().
+*/
+function slac_project_paranoia_hide_modules() {
+  return array('update' => 'Core');
+}
