@@ -111,6 +111,8 @@ function default_site_template_default_panels_mini() {
       'center' => NULL,
       'footer_logo' => NULL,
       'footer_menu' => NULL,
+      'left' => NULL,
+      'right' => NULL,
     ),
   );
   $display->cache = array();
@@ -144,11 +146,17 @@ function default_site_template_default_panels_mini() {
     $pane = new stdClass();
     $pane->pid = 'new-2';
     $pane->panel = 'left';
-    $pane->type = 'site_address';
-    $pane->subtype = 'site_address';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array();
+    $pane->configuration = array(
+      'admin_title' => 'Site address',
+      'title' => '',
+      'body' => '2575 Sand Hill Road, Menlo Park, CA 94025',
+      'format' => 'full_html',
+      'substitute' => TRUE,
+    );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
