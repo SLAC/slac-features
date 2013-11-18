@@ -42,6 +42,7 @@ dependencies[] = libraries
 dependencies[] = panels_mini
 dependencies[] = panels_node
 dependencies[] = panels
+dependencies[] = paranoia
 dependencies[] = token
 dependencies[] = pathauto
 dependencies[] = jreject
