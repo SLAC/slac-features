@@ -73,6 +73,10 @@ html
   > .header
     background-color: $red
     padding: 15px 0 10px
+  
+  > .content
+    margin: 35px 0
+
 
 //User menu
 //-----------------------------------
@@ -120,7 +124,7 @@ html
 .main-menu
   background-color: $menu_bg
   padding: 8px 0 0px
-  margin-bottom: 35px
+  //margin-bottom: 35px
   text-transform: uppercase
   ul
     @extend .clearfix
@@ -205,7 +209,8 @@ html
           top: 2px
   a
     color: inherit
-  .pane-1
+  .pane-1, .pane-2
+    display: inline
     p
       display: inline
     a
@@ -241,6 +246,15 @@ html
     a
       display: block
 
+
+
+//Slider
+//-----------------------------------
+.pane-bundle-slideshow-description-bottom
+  h2.pane-title
+    display: none
+  .field-slideshow-pager 
+    display: none
 
 
 //RESPONSIVE--------------------------------------------------------------------------------------------------
