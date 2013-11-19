@@ -23,12 +23,12 @@ function slac_blog_demo_node_export_features_default() {
       \'nid\' => \'7411\',
       \'type\' => \'blog\',
       \'language\' => \'und\',
-      \'created\' => \'1374593768\',
-      \'changed\' => \'1374593768\',
+      \'created\' => \'1334921751\',
+      \'changed\' => \'1334921751\',
       \'tnid\' => \'0\',
       \'translate\' => \'0\',
       \'uuid\' => \'0490d0e1-4e5a-422b-98c9-a1265f04b258\',
-      \'revision_timestamp\' => \'1374593768\',
+      \'revision_timestamp\' => \'1334921751\',
       \'revision_uid\' => \'1\',
       \'body\' => array(
         \'und\' => array(
