@@ -1,15 +1,14 @@
 <?php
 
 /**
- * Implements hook_field_attach_form().
- *
- * Attach our form to this hook instead of hook_form_alter node because
- * we might extend this to other entities in the future.
+ * Implements hook_form_alter().
  */
 function pp_panelizer_form_alter(&$form, &$form_state, $form_id) {
   if (strpos($form_id, '_node_form') === FALSE) {
     return;
   }
+
+  // We add layout form only for new nodes.
   if (isset($form['#node']->nid)) {
     return;
   }
@@ -64,4 +63,18 @@ function pp_panelizer_node_submit($node, $form, &$form_state) {
   $node->panelizer['page_manager']->display->layout = $form_state['values']['layout'];
   $node->panelizer['page_manager']->display_is_modified = TRUE;
   node_save($node);
+
+  // Use $_GET['destination'] instead of $form_state['redirect'] because node_form_submit() sets
+  // $form_state['redirect'] to node/X.
+  $_GET['destination'] = 'node/' . $node->nid . '?pp_panelizer=edit';
+}
+
+/**
+ * Implements hook_init().
+ */
+function pp_panelizer_init() {
+  $i = 1;
+  if (isset($_GET['pp_panelizer'])) {
+    drupal_add_js(drupal_get_path('module', 'pp_panelizer') . '/pp_panelizer.js');
+  }
 }
