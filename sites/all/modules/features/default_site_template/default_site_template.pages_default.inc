@@ -391,7 +391,7 @@ function default_site_template_default_page_manager_handlers() {
     $pane->panel = 'footer-first';
     $pane->type = 'page_site_name';
     $pane->subtype = 'page_site_name';
-    $pane->shown = TRUE;
+    $pane->shown = FALSE;
     $pane->access = array();
     $pane->configuration = array();
     $pane->cache = array();
@@ -409,7 +409,7 @@ function default_site_template_default_page_manager_handlers() {
     $pane->panel = 'footer-first';
     $pane->type = 'block';
     $pane->subtype = 'menu-menu-footer-menu-1';
-    $pane->shown = TRUE;
+    $pane->shown = FALSE;
     $pane->access = array();
     $pane->configuration = array(
       'override_title' => 1,
