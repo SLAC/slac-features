@@ -78,6 +78,7 @@ dependencies[] = pp_demo
 dependencies[] = pp_crop
 dependencies[] = pp_lightbox
 dependencies[] = pp_slideshow
+dependencies[] = pp_panelizer
 dependencies[] = slac_webform_botcha
 dependencies[] = slac_rss_block
 dependencies[] = slac_social_media

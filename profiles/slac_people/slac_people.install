@@ -26,7 +26,7 @@ function slac_people_install_task_demo_content() {
     array(
       'slac_blog_demo',
       'slac_people_permissions',
-      'slac_profile_pages',
+//      'slac_profile_pages',
     )
   );
 }
