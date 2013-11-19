@@ -3,6 +3,8 @@
 @import "compass/utilities"
 @import "susy"
 @import "compass/css3/box-sizing"
+@import "compass/css3/border-radius"
+
 
 // HTML5 BOILERPLATE INCLUDE
 @import "compass/css3/transition"
@@ -255,6 +257,68 @@ html
     display: none
   .field-slideshow-pager 
     display: none
+
+//Right site blocks
+//-----------------------------------
+.general-right
+  +fontsize-rem(13px) 
+  .panel-pane
+    background-color: $bg-col-1
+    margin-bottom: 35px
+    padding: 13px 22px
+
+  h2.pane-title
+    color: $grey-4
+    +fontsize-rem(14px)
+    font-weight: bold
+    text-transform: uppercase
+    margin-bottom: 13px
+    padding-bottom: 7px
+    border-bottom: 3px solid #fff
+    
+  //Archive
+  //-----------------------------------    
+  .pane-menu
+    ul
+      padding-left: 5px
+      a
+        color: $text-color-1
+      > li
+        a
+          margin-bottom: 9px
+          display: block
+        ul
+          padding-left: 19px
+          list-style-type: disc
+          list-style-position: inside
+          li
+            margin-bottom: 9px
+            a
+
+//Tags
+//----------------------------------- 
+.pane-blog-tags
+  ul
+    @extend .clearfix
+    li
+      float: left
+      margin-right: 23px
+      margin-bottom: 7px
+      a
+        display: block
+        padding: 2px 8px 4px
+        +border-radius(3px)
+        background-color: #fff
+        //font-size: em(14px)
+        color: $text-color-1
+        &:hover
+          background-color: $red
+          color: #fff
+
+
+            
+
+
 
 
 //RESPONSIVE--------------------------------------------------------------------------------------------------
