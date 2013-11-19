@@ -73,8 +73,21 @@ function pp_panelizer_node_submit($node, $form, &$form_state) {
  * Implements hook_init().
  */
 function pp_panelizer_init() {
-  $i = 1;
-  if (isset($_GET['pp_panelizer'])) {
-    drupal_add_js(drupal_get_path('module', 'pp_panelizer') . '/pp_panelizer.js');
+  if (!isset($_GET['pp_panelizer'])) {
+    return;
+  }
+  drupal_add_js(drupal_get_path('module', 'pp_panelizer') . '/pp_panelizer.js');
+
+  if (!isset($_SESSION['messages']['status'])) {
+    return;
+  }
+  foreach ($_SESSION['messages']['status'] as $key => $message) {
+    // Remove message '@type %title has been updated.'
+    if (strpos($message, ' has been updated.') !== FALSE) {
+      unset($_SESSION['messages']['status'][$key]);
+    }
+  }
+  if (empty($_SESSION['messages']['status'])) {
+    unset($_SESSION['messages']['status']);
   }
 }
