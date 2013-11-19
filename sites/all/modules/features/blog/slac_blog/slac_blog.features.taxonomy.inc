@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @file
  * slac_blog.features.taxonomy.inc
@@ -10,9 +9,9 @@
  */
 function slac_blog_taxonomy_default_vocabularies() {
   return array(
-    'slac_blog_tags' => array(
-      'name' => 'Blog Tags',
-      'machine_name' => 'slac_blog_tags',
+    'blog_categories' => array(
+      'name' => 'Blog Categories',
+      'machine_name' => 'blog_categories',
       'description' => '',
       'hierarchy' => 0,
       'module' => 'taxonomy',
