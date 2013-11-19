@@ -1,6 +1,6 @@
 screenshot  = screenshot.png
 name        = SLAC Features THEME
-description = Subtheme (NEW).
+description = Subtheme (NEW by taracila).
 
 core        = 7.x
 base theme  = zen
