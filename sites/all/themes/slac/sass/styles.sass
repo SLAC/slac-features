@@ -257,6 +257,9 @@ html
       display: block
       color: $red
       padding: 14px 11px 10px
+      &:hover
+        background-color: $red
+        color: #fff 
 
 
 //RSS Feed
@@ -366,9 +369,10 @@ html
           +fontsize-rem(30px)
           color: $normal-arrow
         &:hover
-          background-color: $bg-col-1-hover
+          background-color: $menu_bg
           &:after
             color: $red
+            
         
     .views-field-created
       +fontsize-rem(12px) 

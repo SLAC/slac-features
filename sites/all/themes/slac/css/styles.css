@@ -85,6 +85,7 @@ html { font-family: Arial, Helvetica, sans-serif; line-height: 1.25; -webkit-fon
 .pager li.pager-last, .pager li.pager-first { display: none; }
 .pager li.pager-current { background-color: #e7e6d9; padding: 14px 11px 10px; }
 .pager li a { display: block; color: #720c20; padding: 14px 11px 10px; }
+.pager li a:hover { background-color: #720c20; color: white; }
 
 .feed-icon { display: none; }
 
@@ -111,7 +112,7 @@ html { font-family: Arial, Helvetica, sans-serif; line-height: 1.25; -webkit-fon
 .pane-blog-page .views-row > h2 { font-size: 1.25em; padding: 0; }
 .pane-blog-page .views-row > h2 a { color: #720c20; display: block; padding: 13px 45px 9px; position: relative; }
 .pane-blog-page .views-row > h2 a:after { content: "\e608"; position: absolute; right: 3px; top: 50%; margin-top: -17px; font-size: 30px; font-size: 1.875rem; color: #c8d3c7; }
-.pane-blog-page .views-row > h2 a:hover { background-color: #e7e5d9; }
+.pane-blog-page .views-row > h2 a:hover { background-color: #e7e6d9; }
 .pane-blog-page .views-row > h2 a:hover:after { color: #720c20; }
 .pane-blog-page .views-row .views-field-created { font-size: 12px; font-size: 0.75rem; padding: 3px 45px 7px; font-style: italic; color: #878787; }
 .pane-blog-page .views-row .views-field-created a { color: #b8737d; position: relative; }
