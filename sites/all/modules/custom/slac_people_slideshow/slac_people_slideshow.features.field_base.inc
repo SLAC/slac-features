@@ -1,40 +1,14 @@
 <?php
 /**
  * @file
- * pp_slideshow.features.field_base.inc
+ * slac_people_slideshow.features.field_base.inc
  */
 
 /**
  * Implements hook_field_default_field_bases().
  */
-function pp_slideshow_field_default_field_bases() {
+function slac_people_slideshow_field_default_field_bases() {
   $field_bases = array();
-
-  // Exported field_base: 'field_fcollection_bgcolor'
-  $field_bases['field_fcollection_bgcolor'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_fcollection_bgcolor',
-    'foreign keys' => array(),
-    'indexes' => array(
-      'rgb' => array(
-        0 => 'rgb',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'color_field',
-    'settings' => array(
-      'palette' => '',
-      'show_buttons' => 0,
-      'show_input' => 1,
-      'show_palette' => 0,
-      'show_palette_only' => 0,
-    ),
-    'translatable' => 0,
-    'type' => 'color_field_rgb',
-  );
 
   // Exported field_base: 'field_fcollection_description'
   $field_bases['field_fcollection_description'] = array(
@@ -43,6 +17,9 @@ function pp_slideshow_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_fcollection_description',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
     'foreign keys' => array(
       'format' => array(
         'columns' => array(
@@ -58,7 +35,9 @@ function pp_slideshow_field_default_field_bases() {
     ),
     'locked' => 0,
     'module' => 'text',
-    'settings' => array(),
+    'settings' => array(
+      'profile2_private' => FALSE,
+    ),
     'translatable' => 0,
     'type' => 'text_long',
   );
@@ -70,6 +49,9 @@ function pp_slideshow_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_fcollection_image',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
     'foreign keys' => array(
       'fid' => array(
         'columns' => array(
@@ -87,6 +69,7 @@ function pp_slideshow_field_default_field_bases() {
     'module' => 'image',
     'settings' => array(
       'default_image' => 0,
+      'profile2_private' => FALSE,
       'uri_scheme' => 'public',
     ),
     'translatable' => 0,
@@ -100,6 +83,9 @@ function pp_slideshow_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_fcollection_link',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
     'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
@@ -114,6 +100,7 @@ function pp_slideshow_field_default_field_bases() {
         'url_cutoff' => 80,
       ),
       'enable_tokens' => 1,
+      'profile2_private' => FALSE,
       'title' => 'optional',
       'title_maxlength' => 128,
       'title_value' => '',
@@ -130,6 +117,9 @@ function pp_slideshow_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_fcollection_title',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
     'foreign keys' => array(
       'format' => array(
         'columns' => array(
@@ -147,44 +137,22 @@ function pp_slideshow_field_default_field_bases() {
     'module' => 'text',
     'settings' => array(
       'max_length' => 255,
+      'profile2_private' => FALSE,
     ),
     'translatable' => 0,
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_fcollection_txtposition'
-  $field_bases['field_fcollection_txtposition'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_fcollection_txtposition',
-    'foreign keys' => array(),
-    'indexes' => array(
-      'value' => array(
-        0 => 'value',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'list',
-    'settings' => array(
-      'allowed_values' => array(
-        'left' => 'left',
-        'right' => 'right',
-      ),
-      'allowed_values_function' => '',
-    ),
-    'translatable' => 0,
-    'type' => 'list_text',
-  );
-
-  // Exported field_base: 'field_slideshow_btmtxt_slide'
-  $field_bases['field_slideshow_btmtxt_slide'] = array(
+  // Exported field_base: 'field_slideshow_btmdesc_slide'
+  $field_bases['field_slideshow_btmdesc_slide'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_slideshow_btmtxt_slide',
+    'field_name' => 'field_slideshow_btmdesc_slide',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
     'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
@@ -192,25 +160,7 @@ function pp_slideshow_field_default_field_bases() {
     'settings' => array(
       'hide_blank_items' => 1,
       'path' => '',
-    ),
-    'translatable' => 0,
-    'type' => 'field_collection',
-  );
-
-  // Exported field_base: 'field_slideshow_txtlr_slide'
-  $field_bases['field_slideshow_txtlr_slide'] = array(
-    'active' => 1,
-    'cardinality' => -1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_slideshow_txtlr_slide',
-    'foreign keys' => array(),
-    'indexes' => array(),
-    'locked' => 0,
-    'module' => 'field_collection',
-    'settings' => array(
-      'hide_blank_items' => 1,
-      'path' => '',
+      'profile2_private' => FALSE,
     ),
     'translatable' => 0,
     'type' => 'field_collection',

@@ -77,10 +77,10 @@ dependencies[] = pp_admin
 dependencies[] = pp_demo
 dependencies[] = pp_crop
 dependencies[] = pp_lightbox
-dependencies[] = pp_slideshow
 dependencies[] = slac_webform_botcha
 dependencies[] = slac_rss_block
 dependencies[] = slac_social_media
+dependencies[] = slac_people_slideshow
 dependencies[] = pp_demo
 dependencies[] = diff
 

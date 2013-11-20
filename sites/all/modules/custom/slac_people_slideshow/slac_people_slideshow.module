@@ -1,0 +1,69 @@
+<?php
+/**
+ * @file
+ * Code for the PP Slideshow feature.
+ */
+
+include_once 'slac_people_slideshow.features.inc';
+
+/**
+ * Implements hook_entity_info_alter().
+ *
+ * Add fieldable panels panes bundles.
+ */
+function slac_people_slideshow_entity_info_alter(&$entity_info) {
+  $entity_info['fieldable_panels_pane']['bundles']['slideshow_description_bottom'] = array(
+    'label' => t('Slideshow (description bottom)'),
+    'pane category' => t('Slideshow'),
+    'pane top level' => FALSE, // set to true to make this show as a top level icon
+//    'pane icon' => '/path/to/custom/icon/for/this/pane.png',
+    'admin' => array(
+      'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
+      'bundle argument' => 4,
+      // Note that this has all _ replaced with - from the bundle name.
+      'real path' => 'admin/structure/fieldable-panels-panes/manage/slideshow-description-bottom',
+      'access arguments' => array('administer fieldable panels panes'),
+    ),
+  );
+}
+
+/**
+ * Preprocess function for field-slideshow.tpl.php.
+ */
+function slac_people_slideshow_preprocess_field_slideshow(&$vars) {
+  $vars['theme_hook_suggestions'][] = 'field_slideshow__' . $vars['entity']->bundle;
+  drupal_add_css(drupal_get_path('module', 'slac_people_slideshow') . '/css/' . $vars['entity']->bundle . '.css');
+  drupal_add_js(drupal_get_path('module', 'slac_people_slideshow') . '/js/' . $vars['entity']->bundle . '.js');
+}
+
+/**
+ * Implements hook_theme().
+ *
+ * Let theme system know that module is responsible for 'field_slideshow__slideshow_text_bottom' template.
+ */
+function slac_people_slideshow_theme() {
+  $theme_array = array(
+    'variables'     => array(
+      'items'                 => NULL,
+      'image_style'           => NULL,
+      'order'                 => NULL,
+      'controls'              => NULL,
+      'controls_pause'        => NULL,
+      'controls_position'     => NULL,
+      'pager'                 => NULL,
+      'pager_position'        => NULL,
+      'pager_image_style'     => NULL,
+      'carousel_image_style'  => NULL,
+      'entity'                => NULL,
+      'breakpoints'           => NULL,
+      'slideshow_id'          => NULL,
+      'js_variables'          => array(),
+    ),
+    'template'     => 'field_slideshow',
+    'path' => drupal_get_path('module', 'slac_people_slideshow') . '/templates',
+  );
+  return array(
+    'field_slideshow' => $theme_array,
+    'field_slideshow__slideshow_description_bottom' => array_merge($theme_array, array('template' => 'field_slideshow__slideshow_description_bottom')),
+  );
+}
