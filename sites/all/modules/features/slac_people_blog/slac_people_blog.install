@@ -12,6 +12,7 @@ function slac_people_blog_install() {
     'uid' => 1,
     'path' => array(
       'alias' => 'blog',
+      'pathauto' => 0,
     ),
   );
   node_save($blog_node);
@@ -22,7 +23,7 @@ function slac_people_blog_install() {
 
   _slac_people_blog_install__panes($panels_display['did']);
 
-  _slac_people_blog_install__menu_item();
+  _slac_people_blog_install__menu_item($blog_node->nid);
 }
 
 /**
@@ -166,10 +167,13 @@ function _slac_people_blog_install__panes($did) {
 /**
  * Create menu item.
  */
-function _slac_people_blog_install__menu_item() {
+function _slac_people_blog_install__menu_item($nid) {
+  if (!is_numeric($nid)) {
+    return;
+  }
   $item = array(
     'menu_name' => 'main-menu',
-    'link_path' => 'blog',
+    'link_path' => 'node/' . $nid,
     'router_path' => 'node/%',
     'link_title' => t('Blog'),
     'module' => 'menu',
