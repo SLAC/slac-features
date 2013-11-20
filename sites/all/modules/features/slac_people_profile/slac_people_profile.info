@@ -1,0 +1,4 @@
+name = SLAC People Profile
+core = 7.x
+package = SLAC
+dependencies[] = panelizer
