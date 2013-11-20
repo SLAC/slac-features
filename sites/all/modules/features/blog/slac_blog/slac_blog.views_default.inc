@@ -243,21 +243,14 @@ function slac_blog_views_default_views() {
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['trim_whitespace'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_type'] = 'h2';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Content: Image */
-  $handler->display->display_options['fields']['field_slac_blog_image']['id'] = 'field_slac_blog_image';
-  $handler->display->display_options['fields']['field_slac_blog_image']['table'] = 'field_data_field_slac_blog_image';
-  $handler->display->display_options['fields']['field_slac_blog_image']['field'] = 'field_slac_blog_image';
-  $handler->display->display_options['fields']['field_slac_blog_image']['label'] = '';
-  $handler->display->display_options['fields']['field_slac_blog_image']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_slac_blog_image']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_slac_blog_image']['settings'] = array(
-    'image_style' => 'slac_blog_image',
-    'image_link' => 'content',
-  );
+  $handler->display->display_options['fields']['title']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['title']['hide_empty'] = TRUE;
   /* Field: User: Uid */
   $handler->display->display_options['fields']['uid']['id'] = 'uid';
   $handler->display->display_options['fields']['uid']['table'] = 'users';
@@ -303,11 +296,30 @@ function slac_blog_views_default_views() {
   $handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['created']['date_format'] = 'custom';
   $handler->display->display_options['fields']['created']['custom_date_format'] = 'l, F d, Y \\a\\t m:i a';
+  /* Field: Content: Image */
+  $handler->display->display_options['fields']['field_slac_blog_image']['id'] = 'field_slac_blog_image';
+  $handler->display->display_options['fields']['field_slac_blog_image']['table'] = 'field_data_field_slac_blog_image';
+  $handler->display->display_options['fields']['field_slac_blog_image']['field'] = 'field_slac_blog_image';
+  $handler->display->display_options['fields']['field_slac_blog_image']['label'] = '';
+  $handler->display->display_options['fields']['field_slac_blog_image']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_slac_blog_image']['element_label_type'] = 'div';
+  $handler->display->display_options['fields']['field_slac_blog_image']['element_label_class'] = 'figure';
+  $handler->display->display_options['fields']['field_slac_blog_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_slac_blog_image']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_slac_blog_image']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_slac_blog_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_slac_blog_image']['settings'] = array(
+    'image_style' => 'slac_blog_image',
+    'image_link' => 'content',
+  );
   /* Field: Content: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
   $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['body']['alter']['text'] = '<div class="figure">[field_slac_blog_image]</div>[body]';
+  $handler->display->display_options['fields']['body']['alter']['trim_whitespace'] = TRUE;
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
   $handler->display->display_options['fields']['body']['settings'] = array(
@@ -318,6 +330,7 @@ function slac_blog_views_default_views() {
   $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
   $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
   $handler->display->display_options['fields']['view_node']['label'] = '';
+  $handler->display->display_options['fields']['view_node']['exclude'] = TRUE;
   $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['view_node']['text'] = 'Continue Reading';
 
@@ -447,6 +460,8 @@ function slac_blog_views_default_views() {
 
   /* Display: Blog Tags */
   $handler = $view->new_display('block', 'Blog Tags', 'block');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Tags';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Taxonomy term: Name */
@@ -477,8 +492,8 @@ function slac_blog_views_default_views() {
     'slac_blog_tags' => 'slac_blog_tags',
   );
 
-  /* Display: Blog Caregories */
-  $handler = $view->new_display('block', 'Blog Caregories', 'block_1');
+  /* Display: Blog Categories */
+  $handler = $view->new_display('block', 'Blog Categories', 'block_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Blog Category';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
@@ -489,7 +504,7 @@ function slac_blog_views_default_views() {
   $handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';
   $handler->display->display_options['filters']['machine_name']['field'] = 'machine_name';
   $handler->display->display_options['filters']['machine_name']['value'] = array(
-    'slac_blog_category' => 'slac_blog_category',
+    'blog_categories' => 'blog_categories',
   );
   $export['blog_tags'] = $view;
 

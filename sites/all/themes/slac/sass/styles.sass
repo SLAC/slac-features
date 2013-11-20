@@ -3,6 +3,8 @@
 @import "compass/utilities"
 @import "susy"
 @import "compass/css3/box-sizing"
+@import "compass/css3/border-radius"
+
 
 // HTML5 BOILERPLATE INCLUDE
 @import "compass/css3/transition"
@@ -42,6 +44,11 @@ a
   &:hover
     color: $red
 
+h2
+  font-size: em(28px)
+  font-weight: bold
+
+
 
 html
   font-family: Arial, Helvetica, sans-serif
@@ -73,6 +80,10 @@ html
   > .header
     background-color: $red
     padding: 15px 0 10px
+  
+  > .content
+    margin: 35px 0
+
 
 //User menu
 //-----------------------------------
@@ -120,7 +131,7 @@ html
 .main-menu
   background-color: $menu_bg
   padding: 8px 0 0px
-  margin-bottom: 35px
+  //margin-bottom: 35px
   text-transform: uppercase
   ul
     @extend .clearfix
@@ -205,7 +216,8 @@ html
           top: 2px
   a
     color: inherit
-  .pane-1
+  .pane-1, .pane-2
+    display: inline
     p
       display: inline
     a
@@ -241,6 +253,122 @@ html
     a
       display: block
 
+
+
+//Slider
+//-----------------------------------
+.pane-bundle-slideshow-description-bottom
+  h2.pane-title
+    display: none
+  .field-slideshow-pager 
+    display: none
+
+//Right site blocks
+//-----------------------------------
+.general-right
+  +fontsize-rem(13px) 
+  
+  color: $text-color-1  
+  a
+    color: inherit    
+    
+  .panel-pane
+    background-color: $bg-col-1
+    margin-bottom: 35px
+    padding: 13px 22px
+
+  h2.pane-title
+    color: $grey-4
+    +fontsize-rem(14px)
+    text-transform: uppercase
+    margin-bottom: 13px
+    padding-bottom: 7px
+    border-bottom: 3px solid #fff
+    
+  //Archive
+  //-----------------------------------    
+  .pane-menu
+    ul
+      padding-left: 5px
+
+      > li
+        a
+          margin-bottom: 9px
+          display: block
+        ul
+          padding-left: 19px
+          list-style-type: disc
+          list-style-position: inside
+          li
+            margin-bottom: 9px
+            a
+
+//Tags
+//----------------------------------- 
+.pane-blog-tags
+  ul
+    @extend .clearfix
+    li
+      float: left
+      margin-right: 23px
+      margin-bottom: 7px
+      a
+        display: block
+        padding: 2px 8px 4px
+        +border-radius(3px)
+        background-color: #fff
+        //font-size: em(14px)
+        color: $text-color-1
+        &:hover
+          background-color: $red
+          color: #fff
+
+
+.pane-blog-page
+  .views-row
+    background-color: $grey-f1
+    margin-bottom: 35px
+    +fontsize-rem(14px) 
+    
+    > *
+      border-bottom: 3px solid #fff
+      padding: 0px 45px
+      &:last-child
+        border-bottom: 0
+    h2
+      font-size: inherit
+      margin-bottom: 5px
+    > h2
+      font-size: em(20px)
+      padding: 0
+      a
+        color: $red
+        display: block
+        padding: 13px 45px 9px
+        
+    .views-field-created
+      +fontsize-rem(12px) 
+      padding: 10px 45px 7px
+      font-style: italic
+      color: $grey-87
+      a
+        color: $rose
+      
+    .figure
+      width: 215px
+      display: table-cell
+      padding-right: 35px
+      box-sizing: content-box
+      vertical-align: top        
+
+    .views-field-body 
+      padding-top: 22px
+      padding-bottom: 22px
+      > div
+        display: table
+      p
+        line-height: 21px
+        margin-bottom: 5px
 
 
 //RESPONSIVE--------------------------------------------------------------------------------------------------
