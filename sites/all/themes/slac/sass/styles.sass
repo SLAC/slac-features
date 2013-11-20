@@ -338,6 +338,13 @@ html
 
 
 .pane-blog-page
+  > .pane-title
+    color: $grey-3
+    border-bottom: 3px solid $bg-col-1
+    margin-bottom: 49px
+    padding-bottom: 5px
+    margin-top: -39px
+
   .views-row
     background-color: $grey-f1
     margin-bottom: 44px
@@ -438,6 +445,10 @@ html
     +span-columns(8,12)
   .general-right
     +span-columns(4 omega,12)
+  
+  .general-right, .general-left
+    .page-blog &
+      padding-top: 47px
   
   
   .panel-col-first 
