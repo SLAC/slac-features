@@ -85,6 +85,25 @@ html
     margin: 35px 0
 
 
+//System user panel
+//-----------------------------------
+.pane-pane-messages
+  font-size: em(12px)
+  margin-bottom: 10px
+  ul.tabs
+    @extend .clearfix
+    li
+      float: left
+      margin-right: 10px
+      a
+        background-color: $grey-a
+        padding: 6px 12px
+        color: #fff
+        display: block
+        +border-radius(10px)
+        &:hover
+          background-color: $grey-2e
+
 //User menu
 //-----------------------------------
 .pane-system-user-menu
@@ -447,9 +466,9 @@ html
     +span-columns(4 omega,12)
   
   .general-right, .general-left
-    .page-blog &
-      padding-top: 47px
-  
+    padding-top: 47px
+    .front &
+      padding-top: 0
   
   .panel-col-first 
     +span-columns(8,12)
