@@ -1,0 +1,107 @@
+<?php
+
+/**
+ * Implements hook_install().
+ */
+function slac_people_simpleuser_install() {
+  $new_user = array(
+    'name' => 'simpleuser',
+    'pass' => user_password($length = 10),
+    'mail' => 'simpleuser@example.com',
+    'status' => 1,
+    'init' => 'simpleuser@example.com',
+  );
+  $user = user_save(null, $new_user);
+
+  _slac_people_simpleuser_install__create_profile($user->uid);
+}
+
+
+/**
+ * Create user profile.
+ */
+function _slac_people_simpleuser_install__create_profile($uid) {
+  $lang = LANGUAGE_NONE;
+  $profiles = array();
+
+  // Bio
+  $profile_bio = profile_create(array('type' => 'bio', 'uid' => $uid));
+
+  $profile_bio->field_prf_bio_bio[$lang][0]['value'] = 'Phasellus vel gravida quam. Sed non elementum erat. Nullam accumsan vestibulum orci, at rhoncus tortor accumsan eu? Nullam fermentum leo nibh, quis condimentum metus porta vitae! Vestibulum ultrices felis non urna laoreet, id rhoncus orci fringilla. Mauris venenatis dolor metus, in dignissim nullam.';
+  $profile_bio->field_prf_bio_education[$lang][0]['value'] = 'In ut ullamcorper ipsum. Suspendisse vulputate dolor libero, ut auctor dolor scelerisque at. Sed ultricies non erat eu posuere. Nam facilisis nisi a rhoncus laoreet. Proin vitae ipsum et libero ornare eleifend. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis sed.';
+  $profile_bio->field_prf_bio_pexp[$lang][0]['value'] = 'Nullam pellentesque tempus rutrum. Aenean a ultrices nulla? Fusce at mi dignissim, laoreet nulla eu, lacinia ligula. Praesent dapibus leo eros, vehicula egestas sapien ullamcorper eget. Maecenas congue ut enim a blandit. Quisque dapibus, urna eu fringilla dignissim, nisi justo cursus purus, ut amet.';
+  $profile_bio->field_prf_bio_ar[$lang][0]['value'] = 'Nulla molestie vitae lacus at blandit. Proin et enim in nisl blandit feugiat? Suspendisse mollis semper urna nec blandit. Cras augue nisi, rutrum sit amet faucibus et, gravida eleifend velit. Pellentesque eget eros accumsan, laoreet nulla vitae, aliquet lorem. Nunc in sem ut arcu dictum cursus amet.';
+  $profile_bio->field_prf_bio_ha[$lang][0]['value'] = 'Ut eget libero sit amet odio congue ultrices. Nullam auctor ligula eu auctor vehicula. Vivamus eu placerat diam. Nam a gravida odio. Integer vestibulum mattis neque. Vivamus metus neque, semper cursus justo sed, lacinia condimentum tortor. Nam nec sem pulvinar, volutpat nulla ut, ultricies volutpat.';
+  $profile_bio->field_prf_bio_pa[$lang][0]['value'] = 'Curabitur imperdiet volutpat sapien eu sagittis! Mauris ac dolor scelerisque, rhoncus nisl eu, suscipit lorem. Donec molestie lacus at sapien tincidunt aliquam. Curabitur viverra nunc non purus porttitor mattis. Nam non tortor nisl. Nam bibendum felis pharetra, varius massa vel, imperdiet cras amet.';
+  $profile_bio->field_prf_bio_pub[$lang][0]['value'] = 'Sed eleifend volutpat lacinia. Suspendisse potenti. Pellentesque magna justo, dictum non varius eu, molestie ut nulla! Sed eleifend augue id ornare luctus. Aliquam ac purus sit amet risus tincidunt placerat in a nunc! Etiam mi lorem, congue at viverra vitae, porttitor vel diam? Curabitur porta amet.';
+  $profile_bio->field_prf_bio_tp[$lang][0]['value'] = 'Donec congue, massa cursus consequat auctor, nunc lectus porta nulla, ut volutpat leo est eu sapien. Etiam tristique id tortor in viverra. Nullam dictum justo nec bibendum lacinia. Praesent odio eros, feugiat at laoreet non, facilisis sed nibh? Fusce rhoncus libero vel dictum rutrum. Sed sed nullam.';
+  $profile_bio->bundle = 'bio';
+
+  $profiles[] = array(
+    'type' => 'bio',
+    'profile' => $profile_bio,
+    'form_state' => array(
+      'values' => array(
+        'profile_bio' => array(),
+      ),
+    ),
+  );
+
+  // Contact
+  $profile_contact = profile_create(array('type' => 'contact', 'uid' => $uid));
+
+  //$profile_contact->field_prf_contact_photo[$lang][0]['value'] = '';
+  $profile_contact->field_prf_contact_name[$lang][0]['value'] = 'John Doe';
+  $profile_contact->field_prf_contact_title[$lang][0]['value'] = 'Senior Staff Scientist';
+  $profile_contact->field_prf_contact_affiliation[$lang][0]['value'] = 'FACET';
+  $profile_contact->field_prf_contact_rg[$lang][0]['value'] = 'Aliquam pulvinar magna in scelerisque tincidunt.';
+  $profile_contact->field_prf_contact_email[$lang][0]['value'] = '';
+  $profile_contact->field_prf_contact_phone[$lang][0]['value'] = '6509262939';
+  $profile_contact->field_prf_contact_fax[$lang][0]['value'] = '6509262939';
+  $profile_contact->field_prf_contact_location[$lang][0]['value'] = '';
+  $profile_contact->field_prf_contact_website[$lang][0]['value'] = '';
+  $profile_contact->bundle = 'contact';
+
+  $profiles[] = array(
+    'type' => 'contact',
+    'profile' => $profile_contact,
+    'form_state' => array(
+      'values' => array(
+        'profile_contact' => array(),
+      ),
+    ),
+  );
+
+  // Media
+  $profile_media = profile_create(array('type' => 'media', 'uid' => $uid));
+
+  $profile_media->field_prf_social_twitter[$lang][0]['value'] = '';
+  $profile_media->field_prf_social_facebook[$lang][0]['value'] = '';
+  $profile_media->field_prf_social_linkedin[$lang][0]['value'] = '';
+  $profile_media->field_prf_social_flickr[$lang][0]['value'] = '';
+  $profile_media->field_prf_social_googleplus[$lang][0]['value'] = '';
+  /*$profile_media->field_prf_social_facebook[$lang][0]['value'] = 'facebook.com/simpleuser123';
+  $profile_media->field_prf_social_linkedin[$lang][0]['value'] = 'linkedin.com/in/simpleuser123';
+  $profile_media->field_prf_social_flickr[$lang][0]['value'] = 'flickr.com/simpleuser123';
+  $profile_media->field_prf_social_googleplus[$lang][0]['value'] = 'plus.google.com/simpleuser123';*/
+  $profile_media->bundle = 'media';
+
+  $profiles[] = array(
+    'type' => 'media',
+    'profile' => profile_media,
+    'form_state' => array(
+      'values' => array(
+        'profile_media' => array(),
+      ),
+    ),
+  );
+
+  // Save profile.
+  foreach ($profiles as $profile) {
+    $form = array();
+    $form['#parents'] = array();
+    field_attach_submit('profile2', $profile['profile'], $form, $profile['form_state']);
+    $profile['profile']->bundle = $profile['type'];
+    profile2_save($profile['profile']);
+  }
+}

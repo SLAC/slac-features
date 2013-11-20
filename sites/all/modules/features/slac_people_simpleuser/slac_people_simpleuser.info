@@ -1,0 +1,4 @@
+name = SLAC People Simpleuser
+core = 7.x
+package = SLAC
+dependencies[] = profile2
