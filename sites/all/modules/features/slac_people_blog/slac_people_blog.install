@@ -22,7 +22,7 @@ function slac_people_blog_install() {
 
   _slac_people_blog_install__panes($panels_display['did']);
 
-  _slac_people_blog_install__menu_item($blog_node->nid);
+  _slac_people_blog_install__menu_item();
 }
 
 /**
@@ -164,30 +164,28 @@ function _slac_people_blog_install__panes($did) {
 }
 
 /**
- * Implements hook_menu_alter().
+ * Create menu item.
  */
-function _slac_people_blog_install__menu_item($nid) {
-  if ($nid) {
-    $item = array(
-      'menu_name' => 'main-menu',
-      'link_path' => 'node/' . $nid,
-      'router_path' => 'node/%',
-      'link_title' => t('Blog'),
-      'module' => 'menu',
-      'weight' => 1,
-      'expanded' => 0,
-    );
-    $exists = db_query(
-      "SELECT mlid from {menu_links} WHERE link_title=:link_title AND link_path=:link_path",
-      array(
-        ':link_title' => $item['link_title'],
-        ':link_path' => $item['link_path']
-      )
-    )->fetchField();
+function _slac_people_blog_install__menu_item() {
+  $item = array(
+    'menu_name' => 'main-menu',
+    'link_path' => 'blog',
+    'router_path' => 'node/%',
+    'link_title' => t('Blog'),
+    'module' => 'menu',
+    'weight' => 1,
+    'expanded' => 0,
+  );
+  $exists = db_query(
+    "SELECT mlid from {menu_links} WHERE link_title=:link_title AND link_path=:link_path",
+    array(
+      ':link_title' => $item['link_title'],
+      ':link_path' => $item['link_path']
+    )
+  )->fetchField();
 
-    // Save the record if the data does not exist
-    if(!$exists) {
-      menu_link_save($item);
-    }
+  // Save the record if the data does not exist
+  if(!$exists) {
+    menu_link_save($item);
   }
 }
