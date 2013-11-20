@@ -31,6 +31,8 @@ img, object, embed { max-width: 100%; }
 a { color: #222222; text-decoration: none; }
 a:hover { color: #720c20; }
 
+h2 { font-size: 1.75em; font-weight: bold; }
+
 html { font-family: Arial, Helvetica, sans-serif; line-height: 1.25; -webkit-font-smoothing: antialiased; font-smoothing: antialiased; color: #222222; background-color: white; }
 
 .page-basic > .content, .page-basic > .header, .page-basic > .header-menu, .page-basic > .main-menu, .page-basic > .site-title, .page-basic > .footer-first, .page-basic > .footer-seccond { /*+susy-grid-background +at-breakpoint($tablet) +susy-grid-background +at-breakpoint($small-desktop) +susy-grid-background     +at-breakpoint($large-desktop) +susy-grid-background  */ }
@@ -85,11 +87,11 @@ html { font-family: Arial, Helvetica, sans-serif; line-height: 1.25; -webkit-fon
 .pane-bundle-slideshow-description-bottom h2.pane-title { display: none; }
 .pane-bundle-slideshow-description-bottom .field-slideshow-pager { display: none; }
 
-.general-right { font-size: 13px; font-size: 0.8125rem; }
+.general-right { font-size: 13px; font-size: 0.8125rem; color: #706161; }
+.general-right a { color: inherit; }
 .general-right .panel-pane { background-color: #f3f1eb; margin-bottom: 35px; padding: 13px 22px; }
-.general-right h2.pane-title { color: #444444; font-size: 14px; font-size: 0.875rem; font-weight: bold; text-transform: uppercase; margin-bottom: 13px; padding-bottom: 7px; border-bottom: 3px solid white; }
+.general-right h2.pane-title { color: #444444; font-size: 14px; font-size: 0.875rem; text-transform: uppercase; margin-bottom: 13px; padding-bottom: 7px; border-bottom: 3px solid white; }
 .general-right .pane-menu ul { padding-left: 5px; }
-.general-right .pane-menu ul a { color: #706161; }
 .general-right .pane-menu ul > li a { margin-bottom: 9px; display: block; }
 .general-right .pane-menu ul > li ul { padding-left: 19px; list-style-type: disc; list-style-position: inside; }
 .general-right .pane-menu ul > li ul li { margin-bottom: 9px; }
@@ -97,6 +99,19 @@ html { font-family: Arial, Helvetica, sans-serif; line-height: 1.25; -webkit-fon
 .pane-blog-tags ul li { float: left; margin-right: 23px; margin-bottom: 7px; }
 .pane-blog-tags ul li a { display: block; padding: 2px 8px 4px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; background-color: white; color: #706161; }
 .pane-blog-tags ul li a:hover { background-color: #720c20; color: white; }
+
+.pane-blog-page .views-row { background-color: #f1f1f1; margin-bottom: 35px; font-size: 14px; font-size: 0.875rem; }
+.pane-blog-page .views-row > * { border-bottom: 3px solid white; padding: 0px 45px; }
+.pane-blog-page .views-row > *:last-child { border-bottom: 0; }
+.pane-blog-page .views-row h2 { font-size: inherit; margin-bottom: 5px; }
+.pane-blog-page .views-row > h2 { font-size: 1.25em; padding: 0; }
+.pane-blog-page .views-row > h2 a { color: #720c20; display: block; padding: 13px 45px 9px; }
+.pane-blog-page .views-row .views-field-created { font-size: 12px; font-size: 0.75rem; padding: 10px 45px 7px; font-style: italic; color: #878787; }
+.pane-blog-page .views-row .views-field-created a { color: #b8737d; }
+.pane-blog-page .views-row .figure { width: 215px; display: table-cell; padding-right: 35px; box-sizing: content-box; vertical-align: top; }
+.pane-blog-page .views-row .views-field-body { padding-top: 22px; padding-bottom: 22px; }
+.pane-blog-page .views-row .views-field-body > div { display: table; }
+.pane-blog-page .views-row .views-field-body p { line-height: 21px; margin-bottom: 5px; }
 
 @media (min-width: 690px) { .pane-page-logo { width: 47.87053%; float: left; margin-right: 4.25894%; }
   .pane-system-user-menu { width: 47.87053%; float: right; margin-right: 0; }
