@@ -60,7 +60,6 @@ function slac_blog_menu_default_menu_links() {
   );
   // Translatables
   // Included for use with string extractors like potx.
-  t('Blog');
   t('Blog entry');
   t('Blogs');
   t('My blog');
