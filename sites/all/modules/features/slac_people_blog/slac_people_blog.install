@@ -21,6 +21,8 @@ function slac_people_blog_install() {
   _slac_people_blog_install__panelizer_entity($blog_node, $panels_display['did']);
 
   _slac_people_blog_install__panes($panels_display['did']);
+
+  _slac_people_blog_install__menu_item($blog_node->nid);
 }
 
 /**
@@ -158,5 +160,34 @@ function _slac_people_blog_install__panes($did) {
   );
   foreach ($blog_panels_panes as $blog_panels_pane) {
     drupal_write_record('panels_pane', $blog_panels_pane);
+  }
+}
+
+/**
+ * Implements hook_menu_alter().
+ */
+function _slac_people_blog_install__menu_item($nid) {
+  if ($nid) {
+    $item = array(
+      'menu_name' => 'main-menu',
+      'link_path' => 'node/' . $nid,
+      'router_path' => 'node/%',
+      'link_title' => t('Blog'),
+      'module' => 'menu',
+      'weight' => 1,
+      'expanded' => 0,
+    );
+    $exists = db_query(
+      "SELECT mlid from {menu_links} WHERE link_title=:link_title AND link_path=:link_path",
+      array(
+        ':link_title' => $item['link_title'],
+        ':link_path' => $item['link_path']
+      )
+    )->fetchField();
+
+    // Save the record if the data does not exist
+    if(!$exists) {
+      menu_link_save($item);
+    }
   }
 }

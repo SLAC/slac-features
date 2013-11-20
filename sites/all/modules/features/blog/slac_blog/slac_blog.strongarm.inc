@@ -149,7 +149,7 @@ function slac_blog_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'page_manager_blog_disabled';
-  $strongarm->value = FALSE;
+  $strongarm->value = TRUE;
   $export['page_manager_blog_disabled'] = $strongarm;
 
   $strongarm = new stdClass();
