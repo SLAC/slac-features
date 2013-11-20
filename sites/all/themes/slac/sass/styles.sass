@@ -201,12 +201,11 @@ html
     margin-top: 9px
     li
       float: left
-      margin-right: 10px
+      margin-right: 46px
       a
         display: block
         position: relative
         padding-left: 10px
-        margin-right: 47px
         &:before
           content: "\e605"
           font-family: "slac"
@@ -236,23 +235,34 @@ html
   @extend .clearfix
   li
     float: left
-    border: 1px solid $grey-6
-    border-right: 0
-    font-size: em(13px) 
-    padding: 8px 14px
+    //border: 1px solid $grey-6
+    //border-right: 0
+    font-size: em(17px) 
+    
     line-height: 14px
     display: inline-block
     vertical-align: middle
+    background-color: $grey-f1
+    margin-right: 13px 
+    &.pager-last, &.pager-first
+      display: none
+      
 
-    &:last-child
-      border-right: 1px solid $grey-6
       
       
     &.pager-current
-      background-color: $grey-d  
+      background-color: $menu_bg 
+      padding: 14px 11px 10px
     a
       display: block
+      color: $red
+      padding: 14px 11px 10px
 
+
+//RSS Feed
+//-----------------------------------
+.feed-icon
+  display: none
 
 
 //Slider
@@ -327,7 +337,7 @@ html
 .pane-blog-page
   .views-row
     background-color: $grey-f1
-    margin-bottom: 35px
+    margin-bottom: 44px
     +fontsize-rem(14px) 
     
     > *
@@ -345,14 +355,40 @@ html
         color: $red
         display: block
         padding: 13px 45px 9px
+        position: relative
+        &:after
+          content: '\e608'
+          @extend .slac-font
+          position: absolute
+          right: 3px
+          top: 50%
+          margin-top: -17px
+          +fontsize-rem(30px)
+          color: $normal-arrow
+        &:hover
+          background-color: $bg-col-1-hover
+          &:after
+            color: $red
         
     .views-field-created
       +fontsize-rem(12px) 
-      padding: 10px 45px 7px
+      padding: 3px 45px 7px
       font-style: italic
       color: $grey-87
       a
         color: $rose
+        position: relative
+        &:after
+          position: absolute
+          width: 100%
+          border-bottom: 1px dashed
+          bottom: 0
+          left: 0
+          display: none
+          content: ''
+        &:hover:after
+          display: inline-block
+        
       
     .figure
       width: 215px
@@ -360,6 +396,13 @@ html
       padding-right: 35px
       box-sizing: content-box
       vertical-align: top        
+      a
+        border: 3px solid #fff
+        display: block
+        +box-shadow(0px 0px 0px 3px #f3f2eb ) 
+      img
+        display: block
+
 
     .views-field-body 
       padding-top: 22px
