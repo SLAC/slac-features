@@ -50,7 +50,6 @@ features[page_manager_handlers][] = blog_user_panel_context
 features[page_manager_handlers][] = node_view_panel_context_3
 features[page_manager_handlers][] = term_view_panel_context_2
 features[page_manager_pages][] = blog_archive
-features[taxonomy][] = blog_categories
 features[user_permission][] = create blog content
 features[user_permission][] = delete any blog content
 features[user_permission][] = delete own blog content
