@@ -1,0 +1,142 @@
+<?php
+
+/**
+ * Implements hook_install().
+ */
+function slac_people_frontpage_install() {
+  $frontpage_node = (object) array(
+    'title' => t('Frontpage'),
+    'type' => 'landing_page',
+    'language' => 'und',
+    'name' => 'admin',
+  );
+  node_save($frontpage_node);
+
+  $panels_display = _slac_people_frontpage_install__panels_display();
+
+  _slac_people_frontpage_install__panelizer_entity($frontpage_node, $panels_display['did']);
+
+  _slac_people_frontpage_install__panes($panels_display['did']);
+
+  variable_set('site_frontpage', 'node/' . $frontpage_node->nid);
+}
+
+/**
+ * Create panels display.
+ */
+function _slac_people_frontpage_install__panels_display() {
+  $panels_display = array(
+    'layout' => 'two_col',
+    'layout_settings' => array(),
+    'panel_settings' => array(
+      'style_settings' => array (
+        'default' => NULL,
+        'center' => NULL,
+        'left' => NULL,
+        'right' => NULL,
+      ),
+    ),
+  );
+  drupal_write_record('panels_display', $panels_display);
+  return $panels_display;
+}
+
+/**
+ * Create panelized entity.
+ */
+function _slac_people_frontpage_install__panelizer_entity($node, $did) {
+  $panelizer_entity = array(
+    'entity_type' => 'node',
+    'entity_id' => $node->nid,
+    'revision_id' => $node->vid,
+    'name' => NULL,
+    'no_blocks' => 0,
+    'css_id' => '',
+    'css' => '',
+    'pipeline' => 'ipe',
+    'context' => array(),
+    'relationships' => array(),
+    'did' => $did,
+    'view_mode' => 'page_manager',
+    'css_class' => '',
+    'title_element' => 'H2',
+    'link_to_entity' => 1,
+    'extra' => array(),
+  );
+  drupal_write_record('panelizer_entity', $panelizer_entity);
+  return $panelizer_entity;
+}
+
+/**
+ * Create panel panes.
+ */
+function _slac_people_frontpage_install__panes($did) {
+  $files = _slac_people_frontpage_install__slideshow_images();
+
+  // First we need to create host entity for field collection.
+  $fieldable_panels_pane = (object) array(
+    'title' => t('Frontpage slideshow'),
+    'bundle' => 'slideshow_description_bottom',
+  );
+  entity_save('fieldable_panels_pane', $fieldable_panels_pane);
+
+  $field_collection_item = entity_create('field_collection_item', array('field_name' => 'field_slideshow_btmdesc_slide'));
+  $field_collection_item->field_fcollection_image = array(LANGUAGE_NONE => array(array('fid' => $files[0]->fid)));
+  $field_collection_item->field_fcollection_link = array(LANGUAGE_NONE => array(array('url' => 'http://slac.stanford.edu')));
+  $field_collection_item->field_fcollection_description = array(LANGUAGE_NONE => array(array('value' => t('Description of the first slide. Duis autem vel eum. Duis autem vel eum. Duis autem vel eum. Duis autem vel eum.'))));
+  $field_collection_item->setHostEntity('fieldable_panels_pane', $fieldable_panels_pane);
+  entity_save('field_collection_item', $field_collection_item);
+  $field_collections[] = $field_collection_item;
+
+  $field_collection_item = entity_create('field_collection_item', array('field_name' => 'field_slideshow_btmdesc_slide'));
+  $field_collection_item->field_fcollection_image = array(LANGUAGE_NONE => array(array('fid' => $files[1]->fid)));
+  $field_collection_item->field_fcollection_link = array(LANGUAGE_NONE => array(array('url' => 'http://slac.stanford.edu')));
+  $field_collection_item->field_fcollection_description = array(LANGUAGE_NONE => array(array('value' => t('Description of the second slide. Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit.'))));
+  $field_collection_item->setHostEntity('fieldable_panels_pane', $fieldable_panels_pane);
+  entity_save('field_collection_item', $field_collection_item);
+  $field_collections[] = $field_collection_item;
+
+  $slideshow_panels_pane = array(
+    'did' => $did,
+    'panel' => 'left',
+    'type' => 'fieldable_panels_pane',
+    'subtype' => 'uuid:' . $fieldable_panels_pane->uuid,
+    'shown' => 1,
+    'access' => array(),
+    'configuration' => array(),
+    'cache' => array(),
+    'style' => array(),
+    'css' => array(),
+    'extras' => array(),
+    'position' => 0,
+    'locks' => array(),
+  );
+  drupal_write_record('panels_pane', $slideshow_panels_pane);
+}
+
+/**
+ * Create images for slideshow.
+ */
+function _slac_people_frontpage_install__slideshow_images() {
+  global $user;
+  $files = array();
+  $destination_directory = 'public://frontpage_slideshow';
+  file_prepare_directory($destination_directory, FILE_CREATE_DIRECTORY);
+  foreach (array(1, 2) as $i) {
+    $filename =  'slideshow_slide' . $i . '.jpg';
+    $source = DRUPAL_ROOT . '/' . drupal_get_path('module', 'slac_people_frontpage') . '/' . $filename;
+    $destination = $destination_directory . '/' . $filename;
+    $uri = file_unmanaged_copy($source, $destination);
+
+    $file = new stdClass();
+    $file->fid = NULL;
+    $file->uri = $uri;
+    $file->filename = drupal_basename($uri);
+    $file->filemime = file_get_mimetype($file->uri);
+    $file->uid      = $user->uid;
+    $file->status   = FILE_STATUS_PERMANENT;
+    $files[] = file_save($file);
+  }
+
+  return $files;
+}
