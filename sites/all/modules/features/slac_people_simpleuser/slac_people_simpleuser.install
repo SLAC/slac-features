@@ -50,16 +50,34 @@ function _slac_people_simpleuser_install__create_profile($uid) {
   // Contact
   $profile_contact = profile_create(array('type' => 'contact', 'uid' => $uid));
 
-  //$profile_contact->field_prf_contact_photo[$lang][0]['value'] = '';
+  $file = _slac_people_simpleuser_install__slideshow_images();
+  $profile_contact->field_prf_contact_photo[$lang][0] = array(
+    'fid' => $file->fid
+  );
   $profile_contact->field_prf_contact_name[$lang][0]['value'] = 'John Doe';
   $profile_contact->field_prf_contact_title[$lang][0]['value'] = 'Senior Staff Scientist';
   $profile_contact->field_prf_contact_affiliation[$lang][0]['value'] = 'FACET';
   $profile_contact->field_prf_contact_rg[$lang][0]['value'] = 'Aliquam pulvinar magna in scelerisque tincidunt.';
-  $profile_contact->field_prf_contact_email[$lang][0]['value'] = '';
+  $profile_contact->field_prf_contact_email[$lang][0]['email'] = 'simpleuser@example.com';
   $profile_contact->field_prf_contact_phone[$lang][0]['value'] = '6509262939';
   $profile_contact->field_prf_contact_fax[$lang][0]['value'] = '6509262939';
-  $profile_contact->field_prf_contact_location[$lang][0]['value'] = '';
-  $profile_contact->field_prf_contact_website[$lang][0]['value'] = '';
+  $profile_contact->field_prf_contact_location[$lang][0] = array(
+    'street' => '2575 Sand Hill Road',
+    'city' => 'Menlo Park',
+    'province' => 'CA',
+    'postal_code' => '94025',
+    'country' => 'us',
+    'province_name' => 'California',
+    'country_name' => 'United States',
+  );
+  $profile_contact->field_prf_contact_website = array(
+    $lang => array(
+      array(
+        'url' => 'http://slac.stanford.edu',
+        'title' => 'slac.stanford.edu',
+      )
+    )
+  );
   $profile_contact->bundle = 'contact';
 
   $profiles[] = array(
@@ -73,25 +91,56 @@ function _slac_people_simpleuser_install__create_profile($uid) {
   );
 
   // Media
-  $profile_media = profile_create(array('type' => 'media', 'uid' => $uid));
+  $profile_media = profile_create(array('type' => 'social_media', 'uid' => $uid));
 
-  $profile_media->field_prf_social_twitter[$lang][0]['value'] = '';
-  $profile_media->field_prf_social_facebook[$lang][0]['value'] = '';
-  $profile_media->field_prf_social_linkedin[$lang][0]['value'] = '';
-  $profile_media->field_prf_social_flickr[$lang][0]['value'] = '';
-  $profile_media->field_prf_social_googleplus[$lang][0]['value'] = '';
-  /*$profile_media->field_prf_social_facebook[$lang][0]['value'] = 'facebook.com/simpleuser123';
-  $profile_media->field_prf_social_linkedin[$lang][0]['value'] = 'linkedin.com/in/simpleuser123';
-  $profile_media->field_prf_social_flickr[$lang][0]['value'] = 'flickr.com/simpleuser123';
-  $profile_media->field_prf_social_googleplus[$lang][0]['value'] = 'plus.google.com/simpleuser123';*/
-  $profile_media->bundle = 'media';
+  $profile_media->field_prf_social_twitter = array(
+    $lang => array(
+      array(
+        'url' => '',
+        'title' => '#simpleuser123',
+      )
+    )
+  );
+  $profile_media->field_prf_social_facebook = array(
+    $lang => array(
+      array(
+        'url' => 'http://facebook.com/simpleuser123',
+        'title' => '',
+      )
+    )
+  );
+  $profile_media->field_prf_social_linkedin = array(
+    $lang => array(
+      array(
+        'url' => 'http://linkedin.com/in/simpleuser123',
+        'title' => '',
+      )
+    )
+  );
+  $profile_media->field_prf_social_flickr = array(
+    $lang => array(
+      array(
+        'url' => 'http://flickr.com/simpleuser123',
+        'title' => '',
+      )
+    )
+  );
+  $profile_media->field_prf_social_googleplus = array(
+    $lang => array(
+      array(
+        'url' => 'http://plus.google.com/simpleuser123',
+        'title' => '',
+      )
+    )
+  );
+  $profile_media->bundle = 'social_media';
 
   $profiles[] = array(
-    'type' => 'media',
-    'profile' => profile_media,
+    'type' => 'social_media',
+    'profile' => $profile_media,
     'form_state' => array(
       'values' => array(
-        'profile_media' => array(),
+        'profile_social_media' => array(),
       ),
     ),
   );
@@ -104,4 +153,28 @@ function _slac_people_simpleuser_install__create_profile($uid) {
     $profile['profile']->bundle = $profile['type'];
     profile2_save($profile['profile']);
   }
+}
+
+/**
+ * Create images for user profile.
+ */
+function _slac_people_simpleuser_install__slideshow_images() {
+  global $user;
+  $destination_directory = 'public://';
+  file_prepare_directory($destination_directory, FILE_CREATE_DIRECTORY);
+  $filename =  'profile_photo1.jpg';
+  $source = DRUPAL_ROOT . '/' . drupal_get_path('module', 'slac_people_simpleuser') . '/' . $filename;
+  $destination = $destination_directory . '/' . $filename;
+  $uri = file_unmanaged_copy($source, $destination);
+
+  $file = new stdClass();
+  $file->fid = NULL;
+  $file->uri = $uri;
+  $file->filename = drupal_basename($uri);
+  $file->filemime = file_get_mimetype($file->uri);
+  $file->uid      = $user->uid;
+  $file->status   = FILE_STATUS_PERMANENT;
+  $file = file_save($file);
+
+  return $file;
 }
