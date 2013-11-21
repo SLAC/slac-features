@@ -469,8 +469,8 @@ function slac_blog_default_page_manager_handlers() {
     $pane->configuration = array(
       'view_mode' => 'full',
       'context' => 'argument_entity_id:node_1',
-      'override_title' => 0,
-      'override_title_text' => '',
+      'override_title' => 1,
+      'override_title_text' => '%node:title',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -522,8 +522,8 @@ function slac_blog_default_page_manager_handlers() {
     $pane->locks = array();
     $display->content['new-9'] = $pane;
     $display->panels['right'][1] = 'new-9';
-  $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = '0';
+  $display->hide_title = PANELS_TITLE_PANE;
+  $display->title_pane = 'new-7';
   $handler->conf['display'] = $display;
   $export['node_view_panel_context_3'] = $handler;
 
