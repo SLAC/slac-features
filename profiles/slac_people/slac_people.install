@@ -26,6 +26,7 @@ function slac_people_install_task_demo_content() {
     array(
       'slac_blog_demo',
       'slac_people_permissions',
+      'slac_people_simpleuser',
       'slac_people_frontpage',
       'slac_people_blog',
       'slac_people_profile',
