@@ -105,7 +105,7 @@ function _slac_people_simpleuser_install__create_profile($uid) {
     $lang => array(
       array(
         'url' => 'http://facebook.com/simpleuser123',
-        'title' => '',
+        'title' => 'facebook.com/simpleuser123',
       )
     )
   );
@@ -113,7 +113,7 @@ function _slac_people_simpleuser_install__create_profile($uid) {
     $lang => array(
       array(
         'url' => 'http://linkedin.com/in/simpleuser123',
-        'title' => '',
+        'title' => 'linkedin.com/in/simpleuser123',
       )
     )
   );
@@ -121,7 +121,7 @@ function _slac_people_simpleuser_install__create_profile($uid) {
     $lang => array(
       array(
         'url' => 'http://flickr.com/simpleuser123',
-        'title' => '',
+        'title' => 'flickr.com/simpleuser123',
       )
     )
   );
@@ -129,7 +129,7 @@ function _slac_people_simpleuser_install__create_profile($uid) {
     $lang => array(
       array(
         'url' => 'http://plus.google.com/simpleuser123',
-        'title' => '',
+        'title' => 'plus.google.com/simpleuser123',
       )
     )
   );
