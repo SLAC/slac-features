@@ -6,7 +6,7 @@ core        = 7.x
 base theme  = zen
 
 
-stylesheets[all][] = css/styles.css
+;stylesheets[all][] = css/styles.css
 
 ;exclude
 stylesheets[all][] = page_basic.css
@@ -17,7 +17,7 @@ stylesheets[all][] = date.css
 stylesheets[all][] = twocol.css
 stylesheets[all][] = slideshow_description_bottom.css
 
-scripts[] = js/jquery.placeholder.js
+;scripts[] = js/jquery.placeholder.js
 scripts[] = js/script.js
 
 
