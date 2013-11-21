@@ -134,6 +134,16 @@ function slac_people_permissions_user_default_permissions() {
     'module' => 'panels',
   );
 
+  // Exported permission: create blog content.
+  $permissions['create blog content'] = array(
+    'name' => 'create blog content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'site owner' => 'site owner',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: create fieldable slideshow_description_bottom.
   $permissions['create fieldable slideshow_description_bottom'] = array(
     'name' => 'create fieldable slideshow_description_bottom',
@@ -164,11 +174,22 @@ function slac_people_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: delete any blog content.
+  $permissions['delete any blog content'] = array(
+    'name' => 'delete any blog content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'site owner' => 'site owner',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: delete any landing_page content.
   $permissions['delete any landing_page content'] = array(
     'name' => 'delete any landing_page content',
     'roles' => array(
       'administrator' => 'administrator',
+      'site owner' => 'site owner',
     ),
     'module' => 'node',
   );
@@ -183,9 +204,29 @@ function slac_people_permissions_user_default_permissions() {
     'module' => 'fieldable_panels_panes',
   );
 
+  // Exported permission: delete own blog content.
+  $permissions['delete own blog content'] = array(
+    'name' => 'delete own blog content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'site owner' => 'site owner',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: delete own landing_page content.
   $permissions['delete own landing_page content'] = array(
     'name' => 'delete own landing_page content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'site owner' => 'site owner',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: edit any blog content.
+  $permissions['edit any blog content'] = array(
+    'name' => 'edit any blog content',
     'roles' => array(
       'administrator' => 'administrator',
       'site owner' => 'site owner',
@@ -198,6 +239,7 @@ function slac_people_permissions_user_default_permissions() {
     'name' => 'edit any landing_page content',
     'roles' => array(
       'administrator' => 'administrator',
+      'site owner' => 'site owner',
     ),
     'module' => 'node',
   );
@@ -210,6 +252,16 @@ function slac_people_permissions_user_default_permissions() {
       'site owner' => 'site owner',
     ),
     'module' => 'fieldable_panels_panes',
+  );
+
+  // Exported permission: edit own blog content.
+  $permissions['edit own blog content'] = array(
+    'name' => 'edit own blog content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'site owner' => 'site owner',
+    ),
+    'module' => 'node',
   );
 
   // Exported permission: edit own landing_page content.
