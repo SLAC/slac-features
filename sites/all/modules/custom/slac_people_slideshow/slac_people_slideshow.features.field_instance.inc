@@ -230,7 +230,6 @@ function slac_people_slideshow_field_default_field_instances() {
   t('Image');
   t('Link');
   t('Slide');
-  t('Title');
 
   return $field_instances;
 }
