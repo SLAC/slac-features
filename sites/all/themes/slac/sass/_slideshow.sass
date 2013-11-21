@@ -1,0 +1,121 @@
+.field-name-field-slideshow-btmdesc-slide
+  position: relative
+  width: 100%
+  overflow: hidden
+
+.field-name-field-slideshow-btmdesc-slide
+  /*width: auto;*/
+  .field-slideshow-image 
+    a, img
+      display: block
+      max-width: 100%
+      height: auto
+
+  .field-slideshow-body 
+    position: absolute
+    bottom: 0
+    height: auto
+    width: 100%
+    background-color: rgba(0,0,0,.3) 
+    color: #fff
+    
+    line-height: 20px
+    display: block
+    padding: 10px 16px 10px
+
+
+
+  .field-slideshow-caption 
+    a 
+      color: #fff
+      text-decoration: none
+      font-size: 17px
+      line-height: normal
+
+
+  .field-slideshow-controls a 
+    position: absolute
+    top: 35%
+    width: 30px
+    height: 70px
+    display: block
+    overflow: hidden
+    background-color: rgba(200, 200, 200, 0.5)
+    +border-radius(10px)
+    z-index: 99
+    &:hover
+      background-color: rgba(200, 200, 200, 0.7)
+    
+
+  .field-slideshow-controls
+    display: none
+    .prev, .next
+      &:after
+        @extend .slac-font
+        top: 50%
+        margin-top: -25px
+        left: 50%
+        
+        color: #fff
+        position: absolute
+        font-size: 45px
+     
+    .prev 
+      left: 20px
+      &:after
+        content: '\e609'
+        margin-left: -10px
+  
+    .next 
+      right: 20px
+      &:after
+        content: '\3e'
+        margin-left: -6px
+  
+  .field-slideshow-controls a 
+    display: block
+    text-indent: -9000px
+
+  
+  .field-slideshow-pager
+    position: absolute
+    right: 15px
+    top: 10px
+    width: auto
+    height: auto
+    z-index: 99
+
+  .field-slideshow-pager a 
+    float: left
+    width: 20px
+    height: 20px
+    margin: 0 2px
+    text-indent: -9000px
+    text-transform: capitalize
+    background: url("../images/slideshow_text_bottom/slider-pager.png") no-repeat 0 0
+    overflow: hidden
+
+  .field-slideshow-pager a.activeSlide 
+    background-image: url("../images/slideshow_text_bottom/slider-pager-active.png")
+
+
+//Bottom text slider
+//---------------------------------------
+.pane-bundle-slideshow-description-bottom
+  border: 5px solid $bg-col-1
+  &:hover
+    .field-slideshow-controls
+      display: block
+  
+  .field-name-field-slideshow-btmdesc-slide
+    border: 5px solid #fff
+
+
+  h2.pane-title
+    display: none
+  .field-slideshow-pager 
+    display: none
+
+
+
+

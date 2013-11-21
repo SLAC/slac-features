@@ -24,7 +24,7 @@ img, object, embed { max-width: 100%; }
 .clearfix:before, .pane-pane-messages ul.tabs:before, .pane-system-user-menu ul:before, .main-menu ul:before, .footer-seccond ul:before, .pager:before, .pane-blog-tags ul:before, .clearfix:after, .pane-pane-messages ul.tabs:after, .pane-system-user-menu ul:after, .main-menu ul:after, .footer-seccond ul:after, .pager:after, .pane-blog-tags ul:after { content: ""; display: table; }
 .clearfix:after, .pane-pane-messages ul.tabs:after, .pane-system-user-menu ul:after, .main-menu ul:after, .footer-seccond ul:after, .pager:after, .pane-blog-tags ul:after { clear: both; }
 
-.slac-font, .pane-blog-page .views-row > h2 a:after { font-family: "slac"; font-weight: normal; font-style: normal; text-indent: 0; }
+.slac-font, .pane-blog-page .views-row > h2 a:after, .field-name-field-slideshow-btmdesc-slide .field-slideshow-controls .prev:after, .field-name-field-slideshow-btmdesc-slide .field-slideshow-controls .next:after { font-family: "slac"; font-weight: normal; font-style: normal; text-indent: 0; }
 
 @font-face { font-family: "slac"; src: url('../fonts/slac.eot'); src: url('../fonts/slac.eot?#iefix') format('eot'), url('../fonts/slac.svg#slac') format('svg'), url('../fonts/slac.woff') format('woff'), url('../fonts/slac.ttf') format('truetype'); font-weight: normal; font-style: normal; }
 
@@ -94,9 +94,6 @@ html { font-family: Arial, Helvetica, sans-serif; line-height: 1.25; -webkit-fon
 
 .feed-icon { display: none; }
 
-.pane-bundle-slideshow-description-bottom h2.pane-title { display: none; }
-.pane-bundle-slideshow-description-bottom .field-slideshow-pager { display: none; }
-
 .general-right { font-size: 13px; font-size: 0.8125rem; color: #706161; }
 .general-right a { color: inherit; }
 .general-right .panel-pane { background-color: #f3f1eb; margin-bottom: 35px; padding: 13px 22px; }
@@ -142,3 +139,27 @@ html { font-family: Arial, Helvetica, sans-serif; line-height: 1.25; -webkit-fon
   .footer-seccond { margin-bottom: 60px; } }
 @media (min-width: 1200px) { .page-basic > .content > .inside, .page-basic > .header > .inside, .page-basic > .header-menu > .inside, .page-basic > .main-menu > .inside, .page-basic > .site-title > .inside, .page-basic > .footer-first > .inside, .page-basic > .footer-seccond > .inside { max-width: 1174px; padding-left: 13px; padding-right: 13px; margin-left: auto; margin-right: auto; }
   .page-basic > .content > .inside:after, .page-basic > .header > .inside:after, .page-basic > .header-menu > .inside:after, .page-basic > .main-menu > .inside:after, .page-basic > .site-title > .inside:after, .page-basic > .footer-first > .inside:after, .page-basic > .footer-seccond > .inside:after { content: ""; display: table; clear: both; } }
+.field-name-field-slideshow-btmdesc-slide { position: relative; width: 100%; overflow: hidden; }
+
+.field-name-field-slideshow-btmdesc-slide { /*width: auto; */ }
+.field-name-field-slideshow-btmdesc-slide .field-slideshow-image a, .field-name-field-slideshow-btmdesc-slide .field-slideshow-image img { display: block; max-width: 100%; height: auto; }
+.field-name-field-slideshow-btmdesc-slide .field-slideshow-body { position: absolute; bottom: 0; height: auto; width: 100%; background-color: rgba(0, 0, 0, 0.3); color: white; line-height: 20px; display: block; padding: 10px 16px 10px; }
+.field-name-field-slideshow-btmdesc-slide .field-slideshow-caption a { color: white; text-decoration: none; font-size: 17px; line-height: normal; }
+.field-name-field-slideshow-btmdesc-slide .field-slideshow-controls a { position: absolute; top: 35%; width: 30px; height: 70px; display: block; overflow: hidden; background-color: rgba(200, 200, 200, 0.5); -webkit-border-radius: 10px; -moz-border-radius: 10px; -ms-border-radius: 10px; -o-border-radius: 10px; border-radius: 10px; z-index: 99; }
+.field-name-field-slideshow-btmdesc-slide .field-slideshow-controls a:hover { background-color: rgba(200, 200, 200, 0.7); }
+.field-name-field-slideshow-btmdesc-slide .field-slideshow-controls { display: none; }
+.field-name-field-slideshow-btmdesc-slide .field-slideshow-controls .prev:after, .field-name-field-slideshow-btmdesc-slide .field-slideshow-controls .next:after { top: 50%; margin-top: -25px; left: 50%; color: white; position: absolute; font-size: 45px; }
+.field-name-field-slideshow-btmdesc-slide .field-slideshow-controls .prev { left: 20px; }
+.field-name-field-slideshow-btmdesc-slide .field-slideshow-controls .prev:after { content: "\e609"; margin-left: -10px; }
+.field-name-field-slideshow-btmdesc-slide .field-slideshow-controls .next { right: 20px; }
+.field-name-field-slideshow-btmdesc-slide .field-slideshow-controls .next:after { content: "\3e"; margin-left: -6px; }
+.field-name-field-slideshow-btmdesc-slide .field-slideshow-controls a { display: block; text-indent: -9000px; }
+.field-name-field-slideshow-btmdesc-slide .field-slideshow-pager { position: absolute; right: 15px; top: 10px; width: auto; height: auto; z-index: 99; }
+.field-name-field-slideshow-btmdesc-slide .field-slideshow-pager a { float: left; width: 20px; height: 20px; margin: 0 2px; text-indent: -9000px; text-transform: capitalize; background: url("../images/slideshow_text_bottom/slider-pager.png") no-repeat 0 0; overflow: hidden; }
+.field-name-field-slideshow-btmdesc-slide .field-slideshow-pager a.activeSlide { background-image: url("../images/slideshow_text_bottom/slider-pager-active.png"); }
+
+.pane-bundle-slideshow-description-bottom { border: 5px solid #f3f1eb; }
+.pane-bundle-slideshow-description-bottom:hover .field-slideshow-controls { display: block; }
+.pane-bundle-slideshow-description-bottom .field-name-field-slideshow-btmdesc-slide { border: 5px solid white; }
+.pane-bundle-slideshow-description-bottom h2.pane-title { display: none; }
+.pane-bundle-slideshow-description-bottom .field-slideshow-pager { display: none; }
