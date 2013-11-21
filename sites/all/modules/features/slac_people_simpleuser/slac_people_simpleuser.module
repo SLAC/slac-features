@@ -1,5 +1,2 @@
 <?php
 
-if (arg(0) == 'user' && arg(1) == 5) {
-  dpm(profile2_load_by_user(5));
-}
