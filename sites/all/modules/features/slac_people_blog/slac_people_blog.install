@@ -98,7 +98,7 @@ function _slac_people_blog_install__panes($did) {
         'url' => '',
         'display' => 'block_1',
         'override_title' => 1,
-        'override_title_text' => '',
+        'override_title_text' => 'Blog Posts',
       ),
       'cache' => array(),
       'style' => array(
