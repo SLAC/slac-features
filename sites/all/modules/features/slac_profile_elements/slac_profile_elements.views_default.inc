@@ -463,7 +463,7 @@ function slac_profile_elements_views_default_views() {
   $handler->display->display_options['footer']['area']['id'] = 'area';
   $handler->display->display_options['footer']['area']['table'] = 'views';
   $handler->display->display_options['footer']['area']['field'] = 'area';
-  $handler->display->display_options['footer']['area']['content'] = '<div class="view-entire-profile"><a href="/users/[name]">View entire profile ›</a></div>';
+  $handler->display->display_options['footer']['area']['content'] = '<div class="view-entire-profile"><a href="/profile">View entire profile ›</a></div>';
   $handler->display->display_options['footer']['area']['format'] = 'full_html';
   $handler->display->display_options['footer']['area']['tokenize'] = TRUE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
