@@ -105,9 +105,6 @@ function default_site_template_menu_default_menu_links() {
   t('Careers');
   t('Privacy Policy');
   t('Safety');
-  t('Sample link 1');
-  t('Sample link 2');
-  t('Sample link 3');
   t('Site Feedback');
   t('Site Index');
 
