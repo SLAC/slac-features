@@ -86,7 +86,7 @@ function _slac_people_profile_install__panes($did) {
       'access' => array(),
       'configuration' => array(
         'exposed' => array(
-          'uid' => 'admin',
+          'uid' => 'simpleuser',
         ),
         'override_title' => 1,
         'override_title_text' => '',
@@ -109,7 +109,7 @@ function _slac_people_profile_install__panes($did) {
       'access' => array(),
       'configuration' => array(
         'exposed' => array(
-          'uid' => 'admin',
+          'uid' => 'simpleuser',
         ),
         'override_title' => 1,
         'override_title_text' => '',
