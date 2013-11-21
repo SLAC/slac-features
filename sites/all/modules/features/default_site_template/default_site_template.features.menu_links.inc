@@ -10,60 +10,6 @@
 function default_site_template_menu_default_menu_links() {
   $menu_links = array();
 
-  // Exported menu link: menu-footer-menu-1:http://slac-www.wearepropeople.md/about
-  $menu_links['menu-footer-menu-1:http://slac-www.wearepropeople.md/about'] = array(
-    'menu_name' => 'menu-footer-menu-1',
-    'link_path' => 'http://slac-www.wearepropeople.md/about',
-    'router_path' => '',
-    'link_title' => 'Sample link 2',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 1,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
-  );
-  // Exported menu link: menu-footer-menu-1:http://slac-www.wearepropeople.md/research
-  $menu_links['menu-footer-menu-1:http://slac-www.wearepropeople.md/research'] = array(
-    'menu_name' => 'menu-footer-menu-1',
-    'link_path' => 'http://slac-www.wearepropeople.md/research',
-    'router_path' => '',
-    'link_title' => 'Sample link 1',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 1,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
-  );
-  // Exported menu link: menu-footer-menu-1:http://slac-www.wearepropeople.md/visiting-slac
-  $menu_links['menu-footer-menu-1:http://slac-www.wearepropeople.md/visiting-slac'] = array(
-    'menu_name' => 'menu-footer-menu-1',
-    'link_path' => 'http://slac-www.wearepropeople.md/visiting-slac',
-    'router_path' => '',
-    'link_title' => 'Sample link 3',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 1,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
-  );
   // Exported menu link: menu-footer-menu:http://slac-www.wearepropeople.md/content/safety-slac
   $menu_links['menu-footer-menu:http://slac-www.wearepropeople.md/content/safety-slac'] = array(
     'menu_name' => 'menu-footer-menu',
