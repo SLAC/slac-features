@@ -6,9 +6,9 @@
  */
 $plugin = array(
   'single' => TRUE,
-  'title' => t('Date Tree Menu'),
+  'title' => t('Blog archive'),
   'icon' => 'icon_node.png',
-  'description' => t('The date tree menu by posted date.'),
+  'description' => t('Show years / months of blog posts for easier navigation.'),
   'category' => t('Activity'),
   'render callback' => 'slac_blog_archive_menu_render',
 );
@@ -19,10 +19,9 @@ $plugin = array(
  * @param type $conf
  * @param type $panel_args
  * @param type $context
- * @return \stdClass 
+ * @return \stdClass
  */
 function slac_blog_archive_menu_render($subtype, $conf, $panel_args, $context) {
-  $node = isset($context->data) ? clone($context->data) : NULL;
   $block = new stdClass();
   $block->module = 'date_tree_menu';
 
@@ -55,7 +54,7 @@ function slac_blog_archive_create_list() {
     $months = isset($menu_item['page_arguments'][2]) ? $menu_item['page_arguments'][2] : $months;
   }
   // get cached list if already cached
-  if ($data = cache_get('slac_blog_archive_plugin' . $years,'cache_menu')) {
+  if ($data = cache_get('slac_blog_archive_plugin' . $years, 'cache_menu')) {
     return $data->data;
   }
 
@@ -66,7 +65,7 @@ function slac_blog_archive_create_list() {
       $year_attributes = array();
 
       // the inactive year items display the count of nodes
-      $year_count = '(' . $value->nid_count . ')';
+      $year_count = ' (' . $value->nid_count . ')';
 
       //check if the year item should has subitems
       if ($years == $value->years) {
@@ -86,7 +85,7 @@ function slac_blog_archive_create_list() {
 
           $children[] = array(
             'data' => l(
-                $value_months->months . '(' . $value_months->nid_count . ')', 'blog/archive/' . $value->years . '/' . $value_months->months_numeric, $month_attributes),
+                $value_months->months . ' (' . $value_months->nid_count . ')', 'blog/archive/' . $value->years . '/' . $value_months->months_numeric, $month_attributes),
           );
         }
       }
@@ -102,7 +101,7 @@ function slac_blog_archive_create_list() {
     'class' => 'blog-archive-class',
   );
   $data = theme('item_list', array('items' => $menu, 'type' => $type, 'attributes' => $attributes));
-  
+
   // set cache
   cache_set('slac_blog_archive_plugin' . $years, $data, 'cache_menu');
   return $data;
