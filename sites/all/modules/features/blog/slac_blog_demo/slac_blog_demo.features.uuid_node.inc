@@ -441,7 +441,7 @@ function slac_blog_demo_uuid_features_default_content() {
   'name' => 'usertest3',
   'picture' => 0,
   'subscriptions_notify' => TRUE,
-  'date' => '2013-06-20 04:35:51 -0700',
+  'date' => '2012-06-20 04:35:51 -0700',
   'author_uuid' => 'af70240a-9f15-49fa-a854-27c6f484ebc9',
 );
   $nodes[] = array(
