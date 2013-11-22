@@ -41,11 +41,41 @@ function slac_people_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: access content overview.
+  $permissions['access content overview'] = array(
+    'name' => 'access content overview',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'site owner' => 'site owner',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: administer content types.
   $permissions['administer content types'] = array(
     'name' => 'administer content types',
     'roles' => array(
       'administrator' => 'administrator',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: administer demo modules.
+  $permissions['administer demo modules'] = array(
+    'name' => 'administer demo modules',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'site owner' => 'site owner',
+    ),
+    'module' => 'slac_admin_modules',
+  );
+
+  // Exported permission: administer nodes.
+  $permissions['administer nodes'] = array(
+    'name' => 'administer nodes',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'site owner' => 'site owner',
     ),
     'module' => 'node',
   );
@@ -282,6 +312,29 @@ function slac_people_permissions_user_default_permissions() {
       'site owner' => 'site owner',
     ),
     'module' => 'panels',
+  );
+
+  // Exported permission: use text format filtered_html.
+  $permissions['use text format filtered_html'] = array(
+    'name' => 'use text format filtered_html',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+      'site owner' => 'site owner',
+    ),
+    'module' => 'filter',
+  );
+
+  // Exported permission: use text format full_html.
+  $permissions['use text format full_html'] = array(
+    'name' => 'use text format full_html',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
+      'site owner' => 'site owner',
+    ),
+    'module' => 'filter',
   );
 
   // Exported permission: view own files.

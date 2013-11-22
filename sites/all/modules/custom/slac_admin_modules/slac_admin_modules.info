@@ -1,0 +1,4 @@
+name = SLAC Admin Modules
+core = 7.x
+package = SLAC
+dependencies[] = slac_blog_demo

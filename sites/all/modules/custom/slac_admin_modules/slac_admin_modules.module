@@ -1,0 +1,47 @@
+<?php
+/**
+ * @file
+ */
+
+/**
+ * Implements hook_permission().
+ */
+function slac_admin_modules_permission() {
+  return array(
+    'administer demo modules' => array(
+      'title' => t('Administer demo modules'),
+      'description' => t('Enable/disable demo modules.'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_menu().
+ */
+function slac_admin_modules_menu() {
+  $items = array();
+
+  $items['demo-modules'] = array(
+    'title' => 'Modules',
+    'description' => 'Administer demo modules.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('slac_admin_modules_form'),
+    'access arguments' => array('administer demo modules'),
+    'file' => 'slac_admin_modules.admin.inc',
+  );
+
+  return $items;
+}
+
+/**
+ * Implements hook_admin_menu_output_alter().
+ */
+function slac_admin_modules_admin_menu_output_alter(&$content) {
+  if (user_access('administer demo modules')) {
+    $content["menu"]['10'] = array(
+      '#title' => t('Administer modules'),
+      '#href' => 'demo-modules',
+      '#weight' => 0,
+    );
+  }
+}
