@@ -89,15 +89,15 @@ function slac_blog_demo_uuid_features_default_content() {
   'field_slac_blog_tags' => array(
     'und' => array(
       0 => array(
-        'tid' => 16,
+        'tid' => 25,
         'uuid' => 'c2935c8d-9f69-4392-9136-2deadbc90b6c',
       ),
       1 => array(
-        'tid' => 17,
+        'tid' => 26,
         'uuid' => 'ce8fd534-a7f1-4293-b40e-e8ffc23f82de',
       ),
       2 => array(
-        'tid' => 4,
+        'tid' => 13,
         'uuid' => '2779b052-a751-45e1-80a5-efa4dadb3867',
       ),
     ),
@@ -161,10 +161,11 @@ function slac_blog_demo_uuid_features_default_content() {
   'last_comment_name' => NULL,
   'last_comment_uid' => 0,
   'comment_count' => 0,
-  'name' => '',
+  'name' => 'usertest1',
   'picture' => 0,
-  'date' => '2013-04-20 05:35:51 -0600',
-  'author_uuid' => '4adade0a-b2a4-4366-8253-57f2c6fb315f',
+  'subscriptions_notify' => TRUE,
+  'date' => '2013-04-20 04:35:51 -0700',
+  'author_uuid' => '3b92ccfc-e7f7-4599-84d5-71e3e35c6981',
 );
   $nodes[] = array(
   'title' => 'Stanford Sites Updates, July 11 and 13, 2013',
@@ -231,11 +232,11 @@ function slac_blog_demo_uuid_features_default_content() {
   'field_slac_blog_tags' => array(
     'und' => array(
       0 => array(
-        'tid' => 3,
+        'tid' => 12,
         'uuid' => '25f89c1a-ad28-49ce-ac5d-0da000be0ff3',
       ),
       1 => array(
-        'tid' => 5,
+        'tid' => 14,
         'uuid' => '2d557d82-23f6-4ab1-881e-93a0ca55c724',
       ),
     ),
@@ -299,10 +300,11 @@ function slac_blog_demo_uuid_features_default_content() {
   'last_comment_name' => NULL,
   'last_comment_uid' => 0,
   'comment_count' => 0,
-  'name' => '',
+  'name' => 'usertest2',
   'picture' => 0,
-  'date' => '2013-05-03 05:35:51 -0600',
-  'author_uuid' => '4adade0a-b2a4-4366-8253-57f2c6fb315f',
+  'subscriptions_notify' => TRUE,
+  'date' => '2013-05-03 04:35:51 -0700',
+  'author_uuid' => '4edce278-5dc3-4e83-b62e-9f3b5556007e',
 );
   $nodes[] = array(
   'title' => 'OpenWeb Conference 2013',
@@ -314,7 +316,7 @@ function slac_blog_demo_uuid_features_default_content() {
   'vuuid' => '095706af-35c3-4a6e-bd83-82bb50a379e6',
   'type' => 'blog',
   'language' => 'und',
-  'created' => 1340192151,
+  'created' => 1371728151,
   'tnid' => 0,
   'translate' => 0,
   'uuid' => '2dfbdcf1-e6bf-4400-950d-897675abce2f',
@@ -368,11 +370,11 @@ function slac_blog_demo_uuid_features_default_content() {
   'field_slac_blog_tags' => array(
     'und' => array(
       0 => array(
-        'tid' => 21,
+        'tid' => 30,
         'uuid' => 'ee1b6371-da63-44d0-849f-116ee0803cf8',
       ),
       1 => array(
-        'tid' => 5,
+        'tid' => 14,
         'uuid' => '2d557d82-23f6-4ab1-881e-93a0ca55c724',
       ),
     ),
@@ -436,10 +438,11 @@ function slac_blog_demo_uuid_features_default_content() {
   'last_comment_name' => NULL,
   'last_comment_uid' => 0,
   'comment_count' => 0,
-  'name' => '',
+  'name' => 'usertest3',
   'picture' => 0,
-  'date' => '2012-06-20 05:35:51 -0600',
-  'author_uuid' => '4adade0a-b2a4-4366-8253-57f2c6fb315f',
+  'subscriptions_notify' => TRUE,
+  'date' => '2013-06-20 04:35:51 -0700',
+  'author_uuid' => 'af70240a-9f15-49fa-a854-27c6f484ebc9',
 );
   $nodes[] = array(
   'title' => 'Why Not Panels?',
@@ -534,11 +537,11 @@ function slac_blog_demo_uuid_features_default_content() {
   'field_slac_blog_tags' => array(
     'und' => array(
       0 => array(
-        'tid' => 20,
+        'tid' => 29,
         'uuid' => 'e0e71063-f177-468a-b7b3-f2f7785bb689',
       ),
       1 => array(
-        'tid' => 4,
+        'tid' => 13,
         'uuid' => '2779b052-a751-45e1-80a5-efa4dadb3867',
       ),
     ),
@@ -602,10 +605,11 @@ function slac_blog_demo_uuid_features_default_content() {
   'last_comment_name' => NULL,
   'last_comment_uid' => 0,
   'comment_count' => 0,
-  'name' => '',
+  'name' => 'usertest1',
   'picture' => 0,
-  'date' => '2013-03-03 04:35:51 -0700',
-  'author_uuid' => '4adade0a-b2a4-4366-8253-57f2c6fb315f',
+  'subscriptions_notify' => TRUE,
+  'date' => '2013-03-03 03:35:51 -0800',
+  'author_uuid' => '3b92ccfc-e7f7-4599-84d5-71e3e35c6981',
 );
   $nodes[] = array(
   'title' => 'Menu Tricks #3: Automating Virtual Menu Position for Specific Content Types',
@@ -682,7 +686,7 @@ function slac_blog_demo_uuid_features_default_content() {
   'field_slac_blog_tags' => array(
     'und' => array(
       0 => array(
-        'tid' => 8,
+        'tid' => 17,
         'uuid' => '6e1c034d-d332-4fd7-8771-e3c6a62ec739',
       ),
     ),
@@ -746,10 +750,760 @@ function slac_blog_demo_uuid_features_default_content() {
   'last_comment_name' => NULL,
   'last_comment_uid' => 0,
   'comment_count' => 0,
-  'name' => '',
+  'name' => 'usertest2',
   'picture' => 0,
-  'date' => '2013-05-22 05:35:51 -0600',
-  'author_uuid' => '4adade0a-b2a4-4366-8253-57f2c6fb315f',
+  'subscriptions_notify' => TRUE,
+  'date' => '2013-05-22 04:35:51 -0700',
+  'author_uuid' => '4edce278-5dc3-4e83-b62e-9f3b5556007e',
+);
+  $nodes[] = array(
+  'title' => 'Writing for the Web #1: Calls to Action',
+  'log' => '',
+  'status' => 1,
+  'comment' => 2,
+  'promote' => 1,
+  'sticky' => 0,
+  'vuuid' => 'aef4e039-6a42-46b9-b42f-9c170b47efad',
+  'type' => 'blog',
+  'language' => 'und',
+  'created' => 1373628951,
+  'tnid' => 0,
+  'translate' => 0,
+  'uuid' => '802b7270-705b-4241-b860-57a644ffed45',
+  'revision_uid' => 1,
+  'body' => array(
+    'und' => array(
+      0 => array(
+        'value' => '<p class="summary">Get people more engaged in your content! With this post, I&#39;ll outline two basic guidelines for writing good Calls to Action to lead users through your site.</p><h2>What is a Call to Action?</h2><p>A Call to Action is a snippet of text with a link, sometimes styled as a button or with an arrow after it.&nbsp;Use&nbsp;Calls to Action when you want to get your readers to do something &mdash; whether it&#39;s&nbsp;to click through to another page, download a document, or even purchase something.&nbsp;<span>A few basic academic examples might be:&nbsp;</span></p><ul><li>&quot;Learn more about our programs&quot;</li><li>&quot;View the full calendar&quot;</li><li>&quot;Peruse our list of publications&quot;</li><li>&quot;Get adivising in writing&quot;</li><li>&quot;Read about Professor Smith&#39;s award</li></ul><p>In SWS, we create places for links on slideshows or at the bottoms of blocks, so that it will be easy for people to add Calls to Action where they might be needed. But how do you decide what those links should say?</p><h2>Writing a strong Call to Action</h2><h3>Start with a verb</h3><p>The most important part of a Call to Action is the leading verb. People are far less likely to click on a link that is a noun, they want to be led through your site. Rather than &quot;About Us,&quot; try &quot;Read about our team.&quot;</p><p>Now that you&#39;re starting off on the right foot, remember to elaborate a little.</p><h3>Give a little detail</h3><p>One of the common mistakes in writing Calls to Action is making them too short. &quot;Read more&quot; or just &quot;More&quot; is less compelling to readers, and also causes accessibility and Search Engine Optimization problems.</p><p>Blind or visually impaired readers aren&#39;t as able to scan the page visually and know the context of links and, in the same way, the bots (website scanners) that companies like Google use will not be able to form as complete data from links with non-specific text like &quot;More.&quot; For those reasons, it&#39;s important to say Read More about what.</p><h2>Examples of Calls to Action</h2><table><thead><tr><th>Weaker</th><th>Stronger</th></tr></thead><tbody><tr><td>Our Mission</td><td>Read more about our mission</td></tr><tr><td>Orientation Volunteer Application</td><td>Apply to be an Orientation Volunteer</td></tr><tr><td>Overseas Students meet the president</td><td><p>Learn how Overseas students responded to meeting the president</p></td></tr><tr><td>More</td><td>See More Events</td></tr><tr><td>Read More</td><td><span>Read more about the author</span></td></tr><tr><td>Apply Now</td><td><span>Download PhD Application</span></td></tr><tr><td>Full list of our programs</td><td>Find the program that is right for you (great Call to Action from <a href="http://bosp.stanford.edu">bosp.stanford.edu</a>)</td></tr><tr><td>Student Project Gallery</td><td><span>Check out our Student Project Gallery (great Call to Action from <a href="http://undergrad.stanford.edu">undergrad.stanford.edu</a>)</span></td></tr></tbody></table><p>The <a href="http://adminguide.stanford.edu">recently launched Administrative Guide</a> has a great example on their homepage slideshow, with the following Call to Action text:&nbsp;<span>&quot;Stay informed on financial policies and procedures&quot;</span></p><p><img alt="Example of Call to Action from the Stanford Administrative Guide" height="340" src="https://swsblog.stanford.edu/sites/default/files/images/blog/Screen%20Shot%202013-07-15%20at%202.22.34%20PM.png" title="" width="572" /></p><h2 class="clear-both">Interested in reading more?</h2><p>Here is another post that I found helpful, if you want to know even more about specific word choices and their ramifications.</p><ul><li><a href="http://contentverve.com/10-call-to-action-case-studies-examples-from-button-tests/" rel="nofollow">http://contentverve.com/10-call-to-action-case-studies-examples-from-but...</a></li></ul><p>And remember, these are guidelines, not rules. Sometimes you&#39;ll encounter constraints, like the size of the area provided, that will also play a part in the text you choose. A small button probably will be better served by &quot;More Events&quot; than &quot;See More Undergrad Events.&quot; So, always use your best judgement.</p>',
+        'summary' => '',
+        'format' => 'full_html',
+        'safe_value' => '<p class="summary">Get people more engaged in your content! With this post, I\'ll outline two basic guidelines for writing good Calls to Action to lead users through your site.</p>
+<h2>What is a Call to Action?</h2>
+<p>A Call to Action is a snippet of text with a link, sometimes styled as a button or with an arrow after it. Use Calls to Action when you want to get your readers to do something — whether it\'s to click through to another page, download a document, or even purchase something. <span>A few basic academic examples might be: </span></p>
+<ul><li>"Learn more about our programs"</li>
+<li>"View the full calendar"</li>
+<li>"Peruse our list of publications"</li>
+<li>"Get adivising in writing"</li>
+<li>"Read about Professor Smith\'s award</li>
+</ul><p>In SWS, we create places for links on slideshows or at the bottoms of blocks, so that it will be easy for people to add Calls to Action where they might be needed. But how do you decide what those links should say?</p>
+<h2>Writing a strong Call to Action</h2>
+<h3>Start with a verb</h3>
+<p>The most important part of a Call to Action is the leading verb. People are far less likely to click on a link that is a noun, they want to be led through your site. Rather than "About Us," try "Read about our team."</p>
+<p>Now that you\'re starting off on the right foot, remember to elaborate a little.</p>
+<h3>Give a little detail</h3>
+<p>One of the common mistakes in writing Calls to Action is making them too short. "Read more" or just "More" is less compelling to readers, and also causes accessibility and Search Engine Optimization problems.</p>
+<p>Blind or visually impaired readers aren\'t as able to scan the page visually and know the context of links and, in the same way, the bots (website scanners) that companies like Google use will not be able to form as complete data from links with non-specific text like "More." For those reasons, it\'s important to say Read More about what.</p>
+<h2>Examples of Calls to Action</h2>
+<table><thead><tr><th>Weaker</th>
+<th>Stronger</th>
+</tr></thead><tbody><tr><td>Our Mission</td>
+<td>Read more about our mission</td>
+</tr><tr><td>Orientation Volunteer Application</td>
+<td>Apply to be an Orientation Volunteer</td>
+</tr><tr><td>Overseas Students meet the president</td>
+<td>
+<p>Learn how Overseas students responded to meeting the president</p>
+</td>
+</tr><tr><td>More</td>
+<td>See More Events</td>
+</tr><tr><td>Read More</td>
+<td><span>Read more about the author</span></td>
+</tr><tr><td>Apply Now</td>
+<td><span>Download PhD Application</span></td>
+</tr><tr><td>Full list of our programs</td>
+<td>Find the program that is right for you (great Call to Action from <a href="http://bosp.stanford.edu">bosp.stanford.edu</a>)</td>
+</tr><tr><td>Student Project Gallery</td>
+<td><span>Check out our Student Project Gallery (great Call to Action from <a href="http://undergrad.stanford.edu">undergrad.stanford.edu</a>)</span></td>
+</tr></tbody></table><p>The <a href="http://adminguide.stanford.edu">recently launched Administrative Guide</a> has a great example on their homepage slideshow, with the following Call to Action text: <span>"Stay informed on financial policies and procedures"</span></p>
+<p><img alt="Example of Call to Action from the Stanford Administrative Guide" height="340" src="https://swsblog.stanford.edu/sites/default/files/images/blog/Screen%20Shot%202013-07-15%20at%202.22.34%20PM.png" title="" width="572" /></p>
+<h2 class="clear-both">Interested in reading more?</h2>
+<p>Here is another post that I found helpful, if you want to know even more about specific word choices and their ramifications.</p>
+<ul><li><a href="http://contentverve.com/10-call-to-action-case-studies-examples-from-button-tests/" rel="nofollow">http://contentverve.com/10-call-to-action-case-studies-examples-from-but...</a></li>
+</ul><p>And remember, these are guidelines, not rules. Sometimes you\'ll encounter constraints, like the size of the area provided, that will also play a part in the text you choose. A small button probably will be better served by "More Events" than "See More Undergrad Events." So, always use your best judgement.</p>
+',
+        'safe_summary' => '',
+      ),
+    ),
+  ),
+  'field_slac_blog_image' => array(
+    'und' => array(
+      0 => array(
+        'fid' => NULL,
+        'alt' => '',
+        'title' => '',
+        'width' => 870,
+        'height' => 330,
+        'uid' => 1,
+        'filename' => 'writing-for-the-web_0.png',
+        'uri' => 'public://writing-for-the-web_0.png',
+        'filemime' => 'image/png',
+        'filesize' => 14984,
+        'status' => 1,
+        'timestamp' => NULL,
+        'type' => 'image',
+        'uuid' => '19a801f4-bd57-4c4c-8acc-e65e36ce5b48',
+        'field_file_image_alt_text' => array(),
+        'field_file_image_title_text' => array(),
+        'field_file_image_description' => array(),
+        'rdf_mapping' => array(),
+        'metadata' => array(
+          'height' => 330,
+          'width' => 870,
+        ),
+        'uuid_features_file_data' => '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',
+      ),
+    ),
+  ),
+  'field_slac_blog_tags' => array(
+    'und' => array(
+      0 => array(
+        'tid' => 18,
+        'uuid' => '77f52d96-2914-40c4-866d-bf4622d91a13',
+      ),
+      1 => array(
+        'tid' => 24,
+        'uuid' => 'b2959bf4-b73c-4c1c-b8bb-a8d6c55e4dd0',
+      ),
+    ),
+  ),
+  'rdf_mapping' => array(
+    'rdftype' => array(
+      0 => 'sioc:Post',
+      1 => 'sioct:BlogPost',
+    ),
+    'title' => array(
+      'predicates' => array(
+        0 => 'dc:title',
+      ),
+    ),
+    'created' => array(
+      'predicates' => array(
+        0 => 'dc:date',
+        1 => 'dc:created',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'changed' => array(
+      'predicates' => array(
+        0 => 'dc:modified',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'body' => array(
+      'predicates' => array(
+        0 => 'content:encoded',
+      ),
+    ),
+    'uid' => array(
+      'predicates' => array(
+        0 => 'sioc:has_creator',
+      ),
+      'type' => 'rel',
+    ),
+    'name' => array(
+      'predicates' => array(
+        0 => 'foaf:name',
+      ),
+    ),
+    'comment_count' => array(
+      'predicates' => array(
+        0 => 'sioc:num_replies',
+      ),
+      'datatype' => 'xsd:integer',
+    ),
+    'last_activity' => array(
+      'predicates' => array(
+        0 => 'sioc:last_activity_date',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+  ),
+  'cid' => 0,
+  'last_comment_name' => NULL,
+  'last_comment_uid' => 0,
+  'comment_count' => 0,
+  'name' => 'usertest2',
+  'picture' => 0,
+  'subscriptions_notify' => TRUE,
+  'date' => '2013-07-12 04:35:51 -0700',
+  'author_uuid' => '4edce278-5dc3-4e83-b62e-9f3b5556007e',
+);
+  $nodes[] = array(
+  'title' => 'New Drupal training announced',
+  'log' => '',
+  'status' => 1,
+  'comment' => 2,
+  'promote' => 1,
+  'sticky' => 0,
+  'vuuid' => 'b9e32e93-7281-406c-9970-208d6471d892',
+  'type' => 'blog',
+  'language' => 'und',
+  'created' => 1371382551,
+  'tnid' => 0,
+  'translate' => 0,
+  'uuid' => 'ae474040-2ca7-47b8-b3af-a3c687710c2d',
+  'revision_uid' => 1,
+  'body' => array(
+    'und' => array(
+      0 => array(
+        'value' => '<p class="summary">IT Services just announced new training opportunities to learn Google Sites, Dreamweaver, and of course, <strong>Drupal and the <a href="https://sites.stanford.edu">Stanford Sites</a> environment</strong>! There are courses for everyone, from beginners just starting to explore web design, all the way up through experienced developers looking to level up their skills in web application development.</p><p><strong>Starting in July, the new courses include:</strong></p><ul><li>Drupal: Taxonomy, Blocks, and Views</li><li>Google Sites (in-person workshop or an on-demand webinar)</li><li>Google Sites - Advanced</li><li>Dreamweaver: Level 1</li><li>Javascript</li><li>jQuery for Web Application Development</li><li>MySQL/PHP/SQL: Developing Web Applications Workshop</li><li>Python Workshop: Introduction and Beyond</li><li>and more...</li></ul><p>Also, coming up in August is the <strong>fifth annual Techie Festival</strong>. For just $125 per course, learn from the experts on a wide range of topics, including several aimed at web professionals at every level. We have experts ready to teach on HTML5, Drupal, web design fundamentals, Stanford-specific styles, preparing web content for Drupal, and social media. <a href="https://itservices.stanford.edu/service/techtraining/techiefestival">Visit the Techie Festival website</a> to see a full schedule.</p><h3>How to sign up</h3><p><a href="https://itsupcoming.stanford.edu">Visit the IT Services Technology Training current courses schedule</a> to learn more and sign up for regular courses and the special Techie Festival sessions. Use those STAP funds before they expire!</p>',
+        'summary' => '',
+        'format' => 'full_html',
+        'safe_value' => '<p class="summary">IT Services just announced new training opportunities to learn Google Sites, Dreamweaver, and of course, <strong>Drupal and the <a href="https://sites.stanford.edu">Stanford Sites</a> environment</strong>! There are courses for everyone, from beginners just starting to explore web design, all the way up through experienced developers looking to level up their skills in web application development.</p>
+<p><strong>Starting in July, the new courses include:</strong></p>
+<ul><li>Drupal: Taxonomy, Blocks, and Views</li>
+<li>Google Sites (in-person workshop or an on-demand webinar)</li>
+<li>Google Sites - Advanced</li>
+<li>Dreamweaver: Level 1</li>
+<li>Javascript</li>
+<li>jQuery for Web Application Development</li>
+<li>MySQL/PHP/SQL: Developing Web Applications Workshop</li>
+<li>Python Workshop: Introduction and Beyond</li>
+<li>and more...</li>
+</ul><p>Also, coming up in August is the <strong>fifth annual Techie Festival</strong>. For just $125 per course, learn from the experts on a wide range of topics, including several aimed at web professionals at every level. We have experts ready to teach on HTML5, Drupal, web design fundamentals, Stanford-specific styles, preparing web content for Drupal, and social media. <a href="https://itservices.stanford.edu/service/techtraining/techiefestival">Visit the Techie Festival website</a> to see a full schedule.</p>
+<h3>How to sign up</h3>
+<p><a href="https://itsupcoming.stanford.edu">Visit the IT Services Technology Training current courses schedule</a> to learn more and sign up for regular courses and the special Techie Festival sessions. Use those STAP funds before they expire!</p>
+',
+        'safe_summary' => '',
+      ),
+    ),
+  ),
+  'field_slac_blog_image' => array(
+    'und' => array(
+      0 => array(
+        'fid' => NULL,
+        'alt' => '',
+        'title' => '',
+        'width' => 870,
+        'height' => 330,
+        'uid' => 1,
+        'filename' => 'training-opportunities.png',
+        'uri' => 'public://training-opportunities.png',
+        'filemime' => 'image/png',
+        'filesize' => 18735,
+        'status' => 1,
+        'timestamp' => NULL,
+        'type' => 'image',
+        'uuid' => 'd2ac4791-7188-4537-bb07-42a2f3b0ef84',
+        'field_file_image_alt_text' => array(),
+        'field_file_image_title_text' => array(),
+        'field_file_image_description' => array(),
+        'rdf_mapping' => array(),
+        'metadata' => array(
+          'height' => 330,
+          'width' => 870,
+        ),
+        'uuid_features_file_data' => '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',
+      ),
+    ),
+  ),
+  'field_slac_blog_tags' => array(
+    'und' => array(
+      0 => array(
+        'tid' => 13,
+        'uuid' => '2779b052-a751-45e1-80a5-efa4dadb3867',
+      ),
+      1 => array(
+        'tid' => 19,
+        'uuid' => '86014be0-6ad6-4522-acd6-faa5fb09c1fe',
+      ),
+    ),
+  ),
+  'rdf_mapping' => array(
+    'rdftype' => array(
+      0 => 'sioc:Post',
+      1 => 'sioct:BlogPost',
+    ),
+    'title' => array(
+      'predicates' => array(
+        0 => 'dc:title',
+      ),
+    ),
+    'created' => array(
+      'predicates' => array(
+        0 => 'dc:date',
+        1 => 'dc:created',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'changed' => array(
+      'predicates' => array(
+        0 => 'dc:modified',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'body' => array(
+      'predicates' => array(
+        0 => 'content:encoded',
+      ),
+    ),
+    'uid' => array(
+      'predicates' => array(
+        0 => 'sioc:has_creator',
+      ),
+      'type' => 'rel',
+    ),
+    'name' => array(
+      'predicates' => array(
+        0 => 'foaf:name',
+      ),
+    ),
+    'comment_count' => array(
+      'predicates' => array(
+        0 => 'sioc:num_replies',
+      ),
+      'datatype' => 'xsd:integer',
+    ),
+    'last_activity' => array(
+      'predicates' => array(
+        0 => 'sioc:last_activity_date',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+  ),
+  'cid' => 0,
+  'last_comment_name' => NULL,
+  'last_comment_uid' => 0,
+  'comment_count' => 0,
+  'name' => 'usertest3',
+  'picture' => 0,
+  'subscriptions_notify' => TRUE,
+  'date' => '2013-06-16 04:35:51 -0700',
+  'author_uuid' => 'af70240a-9f15-49fa-a854-27c6f484ebc9',
+);
+  $nodes[] = array(
+  'title' => 'Using Context to Add Blocks to a Region',
+  'log' => '',
+  'status' => 1,
+  'comment' => 2,
+  'promote' => 1,
+  'sticky' => 0,
+  'vuuid' => '951767fd-6dd0-4655-86d3-2a01aa7c799d',
+  'type' => 'blog',
+  'language' => 'und',
+  'created' => 1369740951,
+  'tnid' => 0,
+  'translate' => 0,
+  'uuid' => 'f30c1b6b-27a3-45d7-a5dc-e240c5089e5c',
+  'revision_uid' => 1,
+  'body' => array(
+    'und' => array(
+      0 => array(
+        'value' => '<p class="summary">You may be asking yourself, how do I add a block to a sidebar or other region, and how do I get it to display on the correct page? In this post I&#39;ll explain how to use the Context module to do just this.</p><p>Blocks are a great way to display content in a more structured way on your page. A block is a may be created with a view, as bean, or a simple block. By placing blocks in regions, you can get different layouts. If you want a sidebar or other region to display on your site, you simply need to add a block to the desired region (provided by your theme) and that region will appear once it has content inside of it. If your site is on <a href="http:// sites.stanford.edu">Stanford Sites</a> your site will have regions such as first (left) and second (right) sidebar.</p><p>Drupal almost always gives you several approaches for anything you do. Putting a block in a region is one of those cases. One approach is to use the Blocks module at Structure &gt; Blocks; a second approach is to use the Context module at Structure &gt; Context. At Stanford Web Services, we prefer to define contexts for placing blocks because they provide more flexibility and functionality than what we get on through the Blocks module.</p><h2>How Context Works</h2><p>Context uses an &ldquo;If ... then&rdquo; approach to placing blocks. &nbsp;The Conditions are the &ldquo;If,&rdquo; and the Reactions are the &ldquo;Then.&rdquo; So, for example, if a condition, such a URL path for a page, is met, then the context will display specific blocks in designated regions on that page. &nbsp;</p><p>Using Context, you can designate a whole set of blocks to display, for example, on any events related page. To do this you might define all events-related pages with a common base URL such as:</p><div><table><tbody><tr><th><p>URL</p></th><th><p>Page description</p></th></tr><tr><td><p><a href="https://mysite.edu/events" rel="nofollow">https://mysite.edu/events</a></p></td><td><p>Landing page for events</p></td></tr><tr><td><p><a href="https://mysite.edu/events/my-event" rel="nofollow">https://mysite.edu/events/my-event</a></p></td><td><p>Page for a specific event</p></td></tr></tbody></table></div><p>Then you&rsquo;ll create a context at <strong>Structure</strong> &gt; <strong>Context</strong> which will have as one of it&rsquo;s conditions a path. &nbsp;The path would be designated as:</p><div><table><tbody><tr><th><p>Path</p></th><th><p>Description</p></th></tr><tr><td><p>events</p></td><td><p>Landing page for events</p></td></tr><tr><td><p>events/*</p></td><td><p>All individual event pages</p></td></tr></tbody></table></div><p>The Reactions, for this example, would be to designate a block or set of blocks to display in one or more regions, such as the sidebar, on the events-related pages.</p><h2>Using Contexts to Add Blocks to Regions</h2><h3>Check Your Setup</h3><ol><li><p>To verify that both the Context and Context UI modules are enabled, navigate to the modules page. &nbsp;From the black admin menu, select <strong>Modules</strong>.</p></li><li><p>If not checked, check the boxes for both Context and Context UI modules.</p></li><li><p>To verify you have the permissions to administer contexts, from the black admin menu, navigate to the permissions page at:<br /><strong>People</strong> &gt; <strong>Permissions</strong></p></li><li><p>If not checked, check the box that gives your role the Administer contexts permission.</p></li></ol><h3>Create a Context</h3><ol><li><p>Navigate to the context page from the black admin menu:<br /><strong>Structure</strong> &gt; <strong>Context</strong></p></li><li><p>Click on <strong>+ Add.</strong><br />This will bring up the Add a new context page</p></li><li><p>Enter a name for your context. This must be computer readable so you&rsquo;ll use lowercase letters, dashes or underscores, and no spaces.</p></li><li><p>Enter a tag. This optional tag is used to group similar contexts on the Context UI page.</p></li><li><p>Enter a description. This optional field allows you to describe a context in human readable terms. &nbsp;&nbsp;</p></li><li><p>To add conditions for your context, click on the <strong>&lt;Add a condition&gt;</strong> drop down, and s<span>elect <strong>Path</strong>. &nbsp;</span></p></li><li><p>This will bring up a text edit field. Enter paths, one per line, that describe where you want the context to be effective. &nbsp;For this example enter:<br />events<br />events/*</p></li></ol><h3>Add Reactions (Blocks) to Your Context</h3><ol><li><p>To add reactions, click on the <strong>&lt;Add a reaction&gt;</strong> dropdown menu</p></li><li><p>Select <strong>Blocks</strong>.</p></li><li><p>This will bring up a long form listing all the regions available on your site. &nbsp;In the column to the right of this list, about halfway down the page, is a scrollable list of blocks. Use your mouse to scroll through this list and select the blocks you wish to place in a single region.</p></li><li><p>In the center column, click on the <strong>+Add</strong> for the region in which you want to place the blocks, and the blocks should appear in the list for that region.</p></li><li><p>Drag the blocks into correct order with the <strong>+</strong>. (Note: experience has shown that even if the blocks initially appear in the correct order, upon saving, they may not stay. To pre-empt this, simply move them around and back into the correct order before saving.)</p></li><li><p>Once you&rsquo;ve finished putting blocks into regions, click on <strong>Save</strong>.</p></li><li><p><span>Verify your work by navigating to a page described by the conditions in the context.</span></p></li></ol>',
+        'summary' => '',
+        'format' => 'full_html',
+        'safe_value' => '<p class="summary">You may be asking yourself, how do I add a block to a sidebar or other region, and how do I get it to display on the correct page? In this post I\'ll explain how to use the Context module to do just this.</p>
+<p>Blocks are a great way to display content in a more structured way on your page. A block is a may be created with a view, as bean, or a simple block. By placing blocks in regions, you can get different layouts. If you want a sidebar or other region to display on your site, you simply need to add a block to the desired region (provided by your theme) and that region will appear once it has content inside of it. If your site is on <a href="http:// sites.stanford.edu">Stanford Sites</a> your site will have regions such as first (left) and second (right) sidebar.</p>
+<p>Drupal almost always gives you several approaches for anything you do. Putting a block in a region is one of those cases. One approach is to use the Blocks module at Structure &gt; Blocks; a second approach is to use the Context module at Structure &gt; Context. At Stanford Web Services, we prefer to define contexts for placing blocks because they provide more flexibility and functionality than what we get on through the Blocks module.</p>
+<h2>How Context Works</h2>
+<p>Context uses an “If ... then” approach to placing blocks.  The Conditions are the “If,” and the Reactions are the “Then.” So, for example, if a condition, such a URL path for a page, is met, then the context will display specific blocks in designated regions on that page.  </p>
+<p>Using Context, you can designate a whole set of blocks to display, for example, on any events related page. To do this you might define all events-related pages with a common base URL such as:</p>
+<div>
+<table><tbody><tr><th>
+<p>URL</p>
+</th>
+<th>
+<p>Page description</p>
+</th>
+</tr><tr><td>
+<p><a href="https://mysite.edu/events" rel="nofollow">https://mysite.edu/events</a></p>
+</td>
+<td>
+<p>Landing page for events</p>
+</td>
+</tr><tr><td>
+<p><a href="https://mysite.edu/events/my-event" rel="nofollow">https://mysite.edu/events/my-event</a></p>
+</td>
+<td>
+<p>Page for a specific event</p>
+</td>
+</tr></tbody></table></div>
+<p>Then you’ll create a context at <strong>Structure</strong> &gt; <strong>Context</strong> which will have as one of it’s conditions a path.  The path would be designated as:</p>
+<div>
+<table><tbody><tr><th>
+<p>Path</p>
+</th>
+<th>
+<p>Description</p>
+</th>
+</tr><tr><td>
+<p>events</p>
+</td>
+<td>
+<p>Landing page for events</p>
+</td>
+</tr><tr><td>
+<p>events/*</p>
+</td>
+<td>
+<p>All individual event pages</p>
+</td>
+</tr></tbody></table></div>
+<p>The Reactions, for this example, would be to designate a block or set of blocks to display in one or more regions, such as the sidebar, on the events-related pages.</p>
+<h2>Using Contexts to Add Blocks to Regions</h2>
+<h3>Check Your Setup</h3>
+<ol><li>
+<p>To verify that both the Context and Context UI modules are enabled, navigate to the modules page.  From the black admin menu, select <strong>Modules</strong>.</p>
+</li>
+<li>
+<p>If not checked, check the boxes for both Context and Context UI modules.</p>
+</li>
+<li>
+<p>To verify you have the permissions to administer contexts, from the black admin menu, navigate to the permissions page at:<br /><strong>People</strong> &gt; <strong>Permissions</strong></p>
+</li>
+<li>
+<p>If not checked, check the box that gives your role the Administer contexts permission.</p>
+</li>
+</ol><h3>Create a Context</h3>
+<ol><li>
+<p>Navigate to the context page from the black admin menu:<br /><strong>Structure</strong> &gt; <strong>Context</strong></p>
+</li>
+<li>
+<p>Click on <strong>+ Add.</strong><br />This will bring up the Add a new context page</p>
+</li>
+<li>
+<p>Enter a name for your context. This must be computer readable so you’ll use lowercase letters, dashes or underscores, and no spaces.</p>
+</li>
+<li>
+<p>Enter a tag. This optional tag is used to group similar contexts on the Context UI page.</p>
+</li>
+<li>
+<p>Enter a description. This optional field allows you to describe a context in human readable terms.   </p>
+</li>
+<li>
+<p>To add conditions for your context, click on the <strong>&lt;Add a condition&gt;</strong> drop down, and s<span>elect <strong>Path</strong>.  </span></p>
+</li>
+<li>
+<p>This will bring up a text edit field. Enter paths, one per line, that describe where you want the context to be effective.  For this example enter:<br />events<br />events/*</p>
+</li>
+</ol><h3>Add Reactions (Blocks) to Your Context</h3>
+<ol><li>
+<p>To add reactions, click on the <strong>&lt;Add a reaction&gt;</strong> dropdown menu</p>
+</li>
+<li>
+<p>Select <strong>Blocks</strong>.</p>
+</li>
+<li>
+<p>This will bring up a long form listing all the regions available on your site.  In the column to the right of this list, about halfway down the page, is a scrollable list of blocks. Use your mouse to scroll through this list and select the blocks you wish to place in a single region.</p>
+</li>
+<li>
+<p>In the center column, click on the <strong>+Add</strong> for the region in which you want to place the blocks, and the blocks should appear in the list for that region.</p>
+</li>
+<li>
+<p>Drag the blocks into correct order with the <strong>+</strong>. (Note: experience has shown that even if the blocks initially appear in the correct order, upon saving, they may not stay. To pre-empt this, simply move them around and back into the correct order before saving.)</p>
+</li>
+<li>
+<p>Once you’ve finished putting blocks into regions, click on <strong>Save</strong>.</p>
+</li>
+<li>
+<p><span>Verify your work by navigating to a page described by the conditions in the context.</span></p>
+</li>
+</ol>',
+        'safe_summary' => '',
+      ),
+    ),
+  ),
+  'field_slac_blog_image' => array(
+    'und' => array(
+      0 => array(
+        'fid' => NULL,
+        'alt' => '',
+        'title' => '',
+        'width' => 870,
+        'height' => 330,
+        'uid' => 1,
+        'filename' => 'node-field-to-block_0.png',
+        'uri' => 'public://node-field-to-block_0.png',
+        'filemime' => 'image/png',
+        'filesize' => 3743,
+        'status' => 1,
+        'timestamp' => NULL,
+        'type' => 'image',
+        'uuid' => 'a61a5fe1-92db-48d8-9680-e06742bf93a2',
+        'field_file_image_alt_text' => array(),
+        'field_file_image_title_text' => array(),
+        'field_file_image_description' => array(),
+        'rdf_mapping' => array(),
+        'metadata' => array(
+          'height' => 330,
+          'width' => 870,
+        ),
+        'uuid_features_file_data' => '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',
+      ),
+    ),
+  ),
+  'field_slac_blog_tags' => array(
+    'und' => array(
+      0 => array(
+        'tid' => 24,
+        'uuid' => 'b2959bf4-b73c-4c1c-b8bb-a8d6c55e4dd0',
+      ),
+    ),
+  ),
+  'rdf_mapping' => array(
+    'rdftype' => array(
+      0 => 'sioc:Post',
+      1 => 'sioct:BlogPost',
+    ),
+    'title' => array(
+      'predicates' => array(
+        0 => 'dc:title',
+      ),
+    ),
+    'created' => array(
+      'predicates' => array(
+        0 => 'dc:date',
+        1 => 'dc:created',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'changed' => array(
+      'predicates' => array(
+        0 => 'dc:modified',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'body' => array(
+      'predicates' => array(
+        0 => 'content:encoded',
+      ),
+    ),
+    'uid' => array(
+      'predicates' => array(
+        0 => 'sioc:has_creator',
+      ),
+      'type' => 'rel',
+    ),
+    'name' => array(
+      'predicates' => array(
+        0 => 'foaf:name',
+      ),
+    ),
+    'comment_count' => array(
+      'predicates' => array(
+        0 => 'sioc:num_replies',
+      ),
+      'datatype' => 'xsd:integer',
+    ),
+    'last_activity' => array(
+      'predicates' => array(
+        0 => 'sioc:last_activity_date',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+  ),
+  'cid' => 0,
+  'last_comment_name' => NULL,
+  'last_comment_uid' => 0,
+  'comment_count' => 0,
+  'name' => 'usertest3',
+  'picture' => 0,
+  'subscriptions_notify' => TRUE,
+  'date' => '2013-05-28 04:35:51 -0700',
+  'author_uuid' => 'af70240a-9f15-49fa-a854-27c6f484ebc9',
+);
+  $nodes[] = array(
+  'title' => 'Tips for selecting a Drupal vendor',
+  'log' => '',
+  'status' => 1,
+  'comment' => 2,
+  'promote' => 1,
+  'sticky' => 0,
+  'vuuid' => '19682808-3d42-4c7a-a2cf-cdf7e140e92c',
+  'type' => 'blog',
+  'language' => 'und',
+  'created' => 1366544151,
+  'tnid' => 0,
+  'translate' => 0,
+  'uuid' => 'f6a9987e-4aca-439d-b525-97c493cad7cd',
+  'revision_uid' => 1,
+  'body' => array(
+    'und' => array(
+      0 => array(
+        'value' => '<p dir="ltr">I provide web project strategy and guidance for Stanford departments looking to hire a vendor for custom web development. My clients receive a full-service experience that includes business analysis, technical review, needs assessment, research and writing, agency recruitment, proposal evaluation, reference checks, forecasting, and is tailored to their specific needs. My clients are very happy.</p><p dir="ltr">However, this model does not scale. A comprehensive selection process can take 6 weeks, and I can&rsquo;t work with everyone who needs help. Therefore, I intend to use this blog to share information &nbsp;and experiences with the community about some of the basics of vendor selection that could help lots of people at once.</p><p dir="ltr">Because of the importance of Drupal in Stanford&rsquo;s web environment &mdash;and the inherent dangers of handing a tool with such flexibility (and thereby margin for error) to a non-specialist&mdash; I choose to focus specifically on Drupal for this article, but I should probably write another one for general considerations when sourcing web design and development talent. &nbsp;For today, I will keep it mainly on the Drupal channel, occasionally flipping over to the PM channel.</p><p dir="ltr">When selecting a vendor for Drupal work, these are among the things that I look for. Please read these tips <em>before</em> searching for a vendor or signing a contract.</p><div class="callout" style="width:80% !important;"><h2>tl;dr summary</h2><ul><li dir="ltr"><p dir="ltr">Make sure your developer knows the Drupal API</p></li><li dir="ltr"><p dir="ltr">Standing in the Drupal community matters</p></li><li dir="ltr"><p dir="ltr">Examine portfolio and filter on the specialty suited to your particular needs</p></li><li dir="ltr"><p dir="ltr">Require secure code</p></li><li dir="ltr"><p dir="ltr">Check references</p></li><li dir="ltr"><p dir="ltr">Seek competitive bids</p></li><li dir="ltr"><p dir="ltr">Project Management and communication matter</p></li></ul></div><h2 dir="ltr">Knowledge of the Drupal API</h2><p dir="ltr"><a href="https://drupal.org/">Drupal</a> has a <a href="http://api.drupal.org/api/drupal/includes!module.inc/group/hooks/7">hook system</a> that allows for any given component of <a href="http://api.drupal.org/api/drupal">how Drupal works</a> to be overridden. It is fundamental that your developer understand this system. Masters of this practice can do amazing things. Those who ignore it break stuff.</p><p dir="ltr">A common mistake is hiring an expert PHP developer to build something in Drupal. They will have a solid understanding of the underlying technologies, and will be naturally inclined to seek expediencies (a.k.a. &ldquo;hack core&rdquo;). <a href="http://drupal.org/best-practices/do-not-hack-core">That&rsquo;s bad</a>. An expert PHP programmer could easily become a Drupal developer, but they will need a guided tour before they dig in. The value of this approach may not be apparent or convincing to a developer at the outset.</p><h2 dir="ltr">Standing in the Drupal community</h2><p>Your preferred agency may seem skilled and professional, but who are their developers exactly? All Drupal developers have profiles on drupal.org. Ask who the lead developer on a project will be, and ask for his or her drupal.org username. You can then look him or her up and discover what contributions they have made to to the Drupal project.</p><p dir="ltr">Is your agency a member of the <a href="https://association.drupal.org/">Drupal Association</a>? Do they participate at <a href="http://portland2013.drupal.org/">DrupalCon</a> and Drupal <a href="http://2012.badcamp.net/">Camps</a>? Do they sponsor these events? Do they contribute code back to the open source community? These are all things that matter.</p><p>Experience shows that standing in the community can have a direct effect on project outcomes. Drupal is not one project, it is thousands of separate projects (called &ldquo;contrib&rdquo; for &ldquo;contributed modules&rdquo;), a constellation that orbits one central body that is Drupal Core. This is one of the big reasons that Drupal is so flexible and so powerful. If your custom project pushes the boundaries of what is possible in Drupal, and new functionality is needed to succeed, a dev that is well-established in the contrib space will be more successful in getting patches accepted by &nbsp;module maintainers.</p><p dir="ltr">I should acknowledge that not every agency broadcasts their contributions, and plenty of expert implementers don&rsquo;t have have numerous commits to the Drupal project. I know some stellar developers that have light-looking d.o profiles. It&rsquo;s not a litmus test, but if the lead dev for an agency doesn&rsquo;t even have an account, that&rsquo;s a red flag.</p><h2 dir="ltr">Portfolio and sub-specialty</h2><p>Not all web projects are the same, and often no two Drupal projects are exactly the same. Some projects require sub-specialties. How strong is your agency of choice at theming? <a href="http://en.wikipedia.org/wiki/DevOps">devops</a>? features? installation profiles? custom module development? evaluating available contrib options? commerce? CRM? SEO? An agency that is excellent overall might not be top-of-list if their skills don&rsquo;t align with your project requirements and priorities.</p><p dir="ltr"><em>Caveat Emptor:</em> do NOT hire a pure marketing/advertising agency without a qualified Drupal development team, and if you hire a print designer with no web experience whatsoever, I guarantee that you will be the owner of a hot mess in about six months..</p><h2>Secure Code</h2><p>Drupal is a very secure system that is used widely by such entities as the Department of Defense and the White House. The core project is very secure when kept up-to-date and implemented correctly. Drupal also has its own <a href="https://drupal.org/security-team">Security Team</a> that responds to exploits discovered by the community and keeps us busy applying code updates. However, as soon as we introduce a custom module&mdash;as large projects almost always do&mdash;we must be certain that the vendor we engage is well versed in best practices for <a href="https://drupal.org/writing-secure-code">writing secure code</a>. Simply asking your prospective vendor what they do to ensure that their developers are up to speed on web application security is a step in the right direction.</p><h2 dir="ltr">References</h2><p>Has your preferred agency worked at Stanford before? If so, which projects, and what was that experience like for the Stanford client? Some of the best agencies in the business (to my chagrin) still have not worked with Stanford, so this shouldn&rsquo;t really be a barrier to entry; however, you should check with colleagues in order to benefit from institutional memory.</p><h2 dir="ltr">Competitive Bids</h2><p>The Procurement Office requires competitive bids for development web development work. Stanford faculty and staff have a fiduciary responsibility to follow Procurement guidelines, and should not abuse the sole source justification. Sole source certainly has its place, but we should be rigorous. If you are tempted to select a vendor based mainly on a prior relationship, slow down, evaluate the project requirements, and take stock of whether you are asking them to operate outside their area of expertise</p><h2 dir="ltr">Client Communication and Project Management</h2><p>In the early days of my vendor relations career, I prized technical chops over pretty much everything else. That was a mistake. Projects can fail for a variety of reasons, technology being only the most obvious. Successful projects are built on three pillars:</p><ol><li dir="ltr">Technical proficiency of the designer, developer, or agency</li><li dir="ltr">Project Management (PM)</li><li dir="ltr">Client communication</li></ol><p dir="ltr">I used to put all of my eggs in basket #1, but have since learned that this stool needs all three legs. Project Management is a highly technical skillset, and the people who are very good at it are rockstars. Not everyone can do it well. A technical PM is an invaluable asset, especially if they can provide deft pushback when needed (and it will be needed at least once on every single project).</p><p>I have also learned that PM and client relations are separate proficiencies, and we need both. PMs can be extremely efficient communicators, but may not be best suited for the client relations role, and having an additional point of contact separate from the PM workflow is ideal. If it is an especially huge or complex project with a large stakeholder group on the Stanford side, it is recommended that you have a dedicated PM on the client side to work with the PM on the vendor side. I realize this sounds like overkill, but experience shows that staffing at this level can really pay off and take a great deal of stress off the Stanford project lead (a.k.a. &ldquo;you&rdquo;) and save money in the long run.</p><h3>Inconvenient Truth Time</h3><p dir="ltr">It is a stark fact that doesn&rsquo;t get talked about much, but for projects that experience difficulty, clients are in fact the problem at least half the time (this is an industry-wide phenomenon and is not unique to Stanford). Technical and creative projects tend naturally toward entropy and confusion, which has to be mitigated on purpose. An agency that possesses a distinct client communication proficiency will succeed more often. Clients are not obtuse luddites, they may be brilliant minds at the top of their chosen field; it&rsquo;s just that they don&rsquo;t do web-related work every day, and sometimes need a congenial expert guide to keep the ship on course. If your agency has one of those people &mdash;in addition to a skilled development/design and strong PM&mdash; then you are in good shape.</p><h2>Conclusion</h2><p>These days many units at Stanford are opting for Drupal at project outset because of the great amount of resources and expertise that we have accumulated as a University in this technology, and, I wager, the inherent power of the Drupal framework. Drupal is complex, and hard to do well especially if you don&#39;t want to forward that complexity to the user. Because Drupal is complex, it is important to engage a bona fide Drupal agency if your project calls for custom solutions.</p><p>Lastly, if any Stanford unit has a bad experience with an agency, please let me know. If your unit has a good experience with an agency, also let me know. We want to learn from mistakes and successes alike, and pass that information on to the community.</p><p>Good luck with your project!</p>',
+        'summary' => '',
+        'format' => 'full_html',
+        'safe_value' => '<p dir="ltr">I provide web project strategy and guidance for Stanford departments looking to hire a vendor for custom web development. My clients receive a full-service experience that includes business analysis, technical review, needs assessment, research and writing, agency recruitment, proposal evaluation, reference checks, forecasting, and is tailored to their specific needs. My clients are very happy.</p>
+<p dir="ltr">However, this model does not scale. A comprehensive selection process can take 6 weeks, and I can’t work with everyone who needs help. Therefore, I intend to use this blog to share information  and experiences with the community about some of the basics of vendor selection that could help lots of people at once.</p>
+<p dir="ltr">Because of the importance of Drupal in Stanford’s web environment —and the inherent dangers of handing a tool with such flexibility (and thereby margin for error) to a non-specialist— I choose to focus specifically on Drupal for this article, but I should probably write another one for general considerations when sourcing web design and development talent.  For today, I will keep it mainly on the Drupal channel, occasionally flipping over to the PM channel.</p>
+<p dir="ltr">When selecting a vendor for Drupal work, these are among the things that I look for. Please read these tips <em>before</em> searching for a vendor or signing a contract.</p>
+<div class="callout" style="width:80% !important;">
+<h2>tl;dr summary</h2>
+<ul><li dir="ltr">
+<p dir="ltr">Make sure your developer knows the Drupal API</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">Standing in the Drupal community matters</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">Examine portfolio and filter on the specialty suited to your particular needs</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">Require secure code</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">Check references</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">Seek competitive bids</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">Project Management and communication matter</p>
+</li>
+</ul></div>
+<h2 dir="ltr">Knowledge of the Drupal API</h2>
+<p dir="ltr"><a href="https://drupal.org/">Drupal</a> has a <a href="http://api.drupal.org/api/drupal/includes!module.inc/group/hooks/7">hook system</a> that allows for any given component of <a href="http://api.drupal.org/api/drupal">how Drupal works</a> to be overridden. It is fundamental that your developer understand this system. Masters of this practice can do amazing things. Those who ignore it break stuff.</p>
+<p dir="ltr">A common mistake is hiring an expert PHP developer to build something in Drupal. They will have a solid understanding of the underlying technologies, and will be naturally inclined to seek expediencies (a.k.a. “hack core”). <a href="http://drupal.org/best-practices/do-not-hack-core">That’s bad</a>. An expert PHP programmer could easily become a Drupal developer, but they will need a guided tour before they dig in. The value of this approach may not be apparent or convincing to a developer at the outset.</p>
+<h2 dir="ltr">Standing in the Drupal community</h2>
+<p>Your preferred agency may seem skilled and professional, but who are their developers exactly? All Drupal developers have profiles on drupal.org. Ask who the lead developer on a project will be, and ask for his or her drupal.org username. You can then look him or her up and discover what contributions they have made to to the Drupal project.</p>
+<p dir="ltr">Is your agency a member of the <a href="https://association.drupal.org/">Drupal Association</a>? Do they participate at <a href="http://portland2013.drupal.org/">DrupalCon</a> and Drupal <a href="http://2012.badcamp.net/">Camps</a>? Do they sponsor these events? Do they contribute code back to the open source community? These are all things that matter.</p>
+<p>Experience shows that standing in the community can have a direct effect on project outcomes. Drupal is not one project, it is thousands of separate projects (called “contrib” for “contributed modules”), a constellation that orbits one central body that is Drupal Core. This is one of the big reasons that Drupal is so flexible and so powerful. If your custom project pushes the boundaries of what is possible in Drupal, and new functionality is needed to succeed, a dev that is well-established in the contrib space will be more successful in getting patches accepted by  module maintainers.</p>
+<p dir="ltr">I should acknowledge that not every agency broadcasts their contributions, and plenty of expert implementers don’t have have numerous commits to the Drupal project. I know some stellar developers that have light-looking d.o profiles. It’s not a litmus test, but if the lead dev for an agency doesn’t even have an account, that’s a red flag.</p>
+<h2 dir="ltr">Portfolio and sub-specialty</h2>
+<p>Not all web projects are the same, and often no two Drupal projects are exactly the same. Some projects require sub-specialties. How strong is your agency of choice at theming? <a href="http://en.wikipedia.org/wiki/DevOps">devops</a>? features? installation profiles? custom module development? evaluating available contrib options? commerce? CRM? SEO? An agency that is excellent overall might not be top-of-list if their skills don’t align with your project requirements and priorities.</p>
+<p dir="ltr"><em>Caveat Emptor:</em> do NOT hire a pure marketing/advertising agency without a qualified Drupal development team, and if you hire a print designer with no web experience whatsoever, I guarantee that you will be the owner of a hot mess in about six months..</p>
+<h2>Secure Code</h2>
+<p>Drupal is a very secure system that is used widely by such entities as the Department of Defense and the White House. The core project is very secure when kept up-to-date and implemented correctly. Drupal also has its own <a href="https://drupal.org/security-team">Security Team</a> that responds to exploits discovered by the community and keeps us busy applying code updates. However, as soon as we introduce a custom module—as large projects almost always do—we must be certain that the vendor we engage is well versed in best practices for <a href="https://drupal.org/writing-secure-code">writing secure code</a>. Simply asking your prospective vendor what they do to ensure that their developers are up to speed on web application security is a step in the right direction.</p>
+<h2 dir="ltr">References</h2>
+<p>Has your preferred agency worked at Stanford before? If so, which projects, and what was that experience like for the Stanford client? Some of the best agencies in the business (to my chagrin) still have not worked with Stanford, so this shouldn’t really be a barrier to entry; however, you should check with colleagues in order to benefit from institutional memory.</p>
+<h2 dir="ltr">Competitive Bids</h2>
+<p>The Procurement Office requires competitive bids for development web development work. Stanford faculty and staff have a fiduciary responsibility to follow Procurement guidelines, and should not abuse the sole source justification. Sole source certainly has its place, but we should be rigorous. If you are tempted to select a vendor based mainly on a prior relationship, slow down, evaluate the project requirements, and take stock of whether you are asking them to operate outside their area of expertise</p>
+<h2 dir="ltr">Client Communication and Project Management</h2>
+<p>In the early days of my vendor relations career, I prized technical chops over pretty much everything else. That was a mistake. Projects can fail for a variety of reasons, technology being only the most obvious. Successful projects are built on three pillars:</p>
+<ol><li dir="ltr">Technical proficiency of the designer, developer, or agency</li>
+<li dir="ltr">Project Management (PM)</li>
+<li dir="ltr">Client communication</li>
+</ol><p dir="ltr">I used to put all of my eggs in basket #1, but have since learned that this stool needs all three legs. Project Management is a highly technical skillset, and the people who are very good at it are rockstars. Not everyone can do it well. A technical PM is an invaluable asset, especially if they can provide deft pushback when needed (and it will be needed at least once on every single project).</p>
+<p>I have also learned that PM and client relations are separate proficiencies, and we need both. PMs can be extremely efficient communicators, but may not be best suited for the client relations role, and having an additional point of contact separate from the PM workflow is ideal. If it is an especially huge or complex project with a large stakeholder group on the Stanford side, it is recommended that you have a dedicated PM on the client side to work with the PM on the vendor side. I realize this sounds like overkill, but experience shows that staffing at this level can really pay off and take a great deal of stress off the Stanford project lead (a.k.a. “you”) and save money in the long run.</p>
+<h3>Inconvenient Truth Time</h3>
+<p dir="ltr">It is a stark fact that doesn’t get talked about much, but for projects that experience difficulty, clients are in fact the problem at least half the time (this is an industry-wide phenomenon and is not unique to Stanford). Technical and creative projects tend naturally toward entropy and confusion, which has to be mitigated on purpose. An agency that possesses a distinct client communication proficiency will succeed more often. Clients are not obtuse luddites, they may be brilliant minds at the top of their chosen field; it’s just that they don’t do web-related work every day, and sometimes need a congenial expert guide to keep the ship on course. If your agency has one of those people —in addition to a skilled development/design and strong PM— then you are in good shape.</p>
+<h2>Conclusion</h2>
+<p>These days many units at Stanford are opting for Drupal at project outset because of the great amount of resources and expertise that we have accumulated as a University in this technology, and, I wager, the inherent power of the Drupal framework. Drupal is complex, and hard to do well especially if you don\'t want to forward that complexity to the user. Because Drupal is complex, it is important to engage a bona fide Drupal agency if your project calls for custom solutions.</p>
+<p>Lastly, if any Stanford unit has a bad experience with an agency, please let me know. If your unit has a good experience with an agency, also let me know. We want to learn from mistakes and successes alike, and pass that information on to the community.</p>
+<p>Good luck with your project!</p>
+',
+        'safe_summary' => '',
+      ),
+    ),
+  ),
+  'field_slac_blog_image' => array(
+    'und' => array(
+      0 => array(
+        'fid' => NULL,
+        'alt' => '',
+        'title' => '',
+        'width' => 870,
+        'height' => 330,
+        'uid' => 1,
+        'filename' => 'vendor-selection.png',
+        'uri' => 'public://vendor-selection.png',
+        'filemime' => 'image/png',
+        'filesize' => 21422,
+        'status' => 1,
+        'timestamp' => NULL,
+        'type' => 'image',
+        'uuid' => '91b55a73-51cc-494b-b270-9e1a8f280e84',
+        'field_file_image_alt_text' => array(),
+        'field_file_image_title_text' => array(),
+        'field_file_image_description' => array(),
+        'rdf_mapping' => array(),
+        'metadata' => array(
+          'height' => 330,
+          'width' => 870,
+        ),
+        'uuid_features_file_data' => 'iVBORw0KGgoAAAANSUhEUgAAA2YAAAFKCAYAAAB2JEyaAAAgAElEQVR4nOzd61fi2Lou8EcTCRC5RCMXUbHKLu1a59TYY///n/fYX3pf1uozqtqytERFFJEIGAQkej7QiUkIEBQIWM9vjB4tt2QmzFDzzZzznUv/+c//eAYREREREREFZjnoAhAREREREf3qGJgREREREREFjIEZERERERFRwBiYERERERERBYyBGRERERERUcAYmBEREREREQWMgRkREREREVHAGJgREREREREFjIEZERERERFRwBiYERERERERBYyBGRERERERUcAYmBEREREREQWMgRkREREREVHAGJgREREREREFjIEZERERERFRwBiYERERERERBYyBGRERERERUcAYmBEREREREQWMgRkREREREVHAGJgREREREREFjIEZERERERFRwBiYERERERERBYyBGRERERERUcAYmBEREREREQWMgRkREREREVHAGJgREREREREFjIEZERERERFRwBiYERERERERBYyBGRERERERUcAYmBEREREREQWMgRkREREREVHAGJgREREREREFjIEZERERERFRwBiYERERERERBYyBGRERERERUcAYmBEREREREQWMgRkREREREVHAGJgREREREREFjIEZERERERFRwBiYERERERERBYyBGRERERERUcAYmBEREREREQWMgRkREREREVHAGJgREREREREFjIEZERERERFRwBiY0S9HFETks7uIyfGgi0JEREREBAAQgy4A0SytJdbwIbeHFXEF5ep10MUhIiIiIgLAwIx+EctLy8hv7iK9nrGe6zx2AiwREREREdELBmb07kkhCQe7nxENR63nnp4MGE9GgKUiIiIiInrBwIzeNTki4/fdz1hZCTme7zw+BlQiIiIiIqJ+DMzo3UqsJrC/+zuEZaHvtU6XwxjfMzkiQxR6P2/6g46u0Q24RD2J1YT1d+2+FmBJ5psckRGX44j/naCn2WpCb+mo1qoBl4y8zOv1RkS0aBiY0buUiCVxkP8dy8veiUe7XfaYvWdbqS3E5BgA4OjsaG6CoE87n6y///j6R4AlmV/b6W2k19OO58zvsn5fZ6N/Ds3r9UZEtGiYLp/enZgcHxqUAcDT09MMS0REfqSUVF9QZhi9uaANvcGgjIiI3jX2mNG7Eg6FcZA/GBqU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dNBsNREKhTwXRzbXvyIiIqLFxsCM5tbz8zOOz4+CLgbRTOgPOv788Se20luOBaulFclzAeHKXQWlSmmstOi02OzJXpiKnojo/WG6fCKiOSMKIuSIbK0HZjfu2ldERES0GNhjRkQ0Z7pGF7X7GgMwIiKiXwiTfxAREREREQWMgRkREREREVHAGJgREREREREFjIEZERERERFRwBiYERERERERBYyBGRERERERUcAYmBEREREREQWMgRkREREREVHAGJgREREREREFjIEZERERERFRwBiYERERERERBYyBGRERERERUcAYmBEREREREQWMgRkREREREVHAGJgREREREREFjIEZERERERFRwBiYERERERERBYyBGf1yREFEPruLmBwPuihERERERAAAMegCEM3SWmINH3J7WBFXUK5eB10cIiIiIiIADMzoF7G8tIz85i7S6xnruc5jJ8ASERERERG9YGBG754UknCw+xnRcNR67unJgPFkBFgqIiIiIqIXDMzoXZMjMn7f/YyVlZDj+c7jY0AlIiIiIiLqx8CM3q3EagL7u79DWBb6Xut0OYzxPUisJqy/a/e1AEtC45AjMkSh98+P/qCja3QDLhEREVHwGJjRu5SIJXGQ/x3Ly96JR7td9pi9B592Pll///H1j77XpZCEtfgaDMNAWSvPsmhTtejHtZXaQkyOAQCOzo4YVNPCW/RrkojmAwMzendicnxoUAYAT09PMyyRP6IgIr4ah7QiWc8ZhgG9pUN/0AMs2WKSQhL+8eEfEATBenx+fR5wqd7uvR4X0aLiNUlEk8LAjN6VcCiMg/zB0KAMwFwl/pBCErJqFmpSHfieZquJq9srVGvVGZZssa3F16yGEgCk19PvorH0Xo+LaFHxmiSiSWFgRu/GiriC3z/+A6K4MvK9gjAfVV+OyNjf2Xf8o+4lGo7iY+4jNpIbOL449pyTs53eRjQcRbPVZKMAQF2vI4ec9bhyVwmwNJMzr8fF+ke/Kr/XJK8RIhplPlqnRG+0tLSE/fwBwqGwr/eLcxCYSSHJEZQZhoHKXQV6S4dh9Hr0ouEo4nLcmo8Tk2PY29rDYeGwb3tqUh0Z4P1K9AcdR2dH1jIJN9pNwCWajHk9LtY/+lX5vSZ5jRDRKMG3TokmIJ/dRUyO+35/RPIXwE3TVnrL+ke62Wrie+F7X09Y7b6GUqWExGoCO9kdSCsSrm6vPLfHf/D71e5r7zKxxDweF+sf/cr8XJO8RohoFAZmtPDWkyoyanasz0ihMFbEFTwGlJ1RFEQoMcV6XCwXh6YMr93X8O3kG+Kr8blrkBMRERHR2w3PkEA056SQhA+5j6/6bNy2BtasyRHZ8dhPsNU1ugOTf8zD0Ez6dbH+EQ3Ha4SI/OAvBS2spaUl/La9/+p/8NSkits5SZzwWtm/ewql0EuK/VAoZD1vGrS2jiiIWIuvIbYaQzwadwy1abaaqGiVoWvypJQUBEHo235WzUKJK9acCwDQGhoqWsV3j19iNQElrkCJKVa52o9tVLQKbrQbX4sSm+UDgGq9inanPZPyi4KIDWWjbxsNvYG6Xvf8TLPV9H1ugjout7fWP6/tvbV8ZpbTmByzlp4wDAP1Zh2N+8ZE1pgyv1/7/E/Af/2UQhJSSgoxOeZZP/zUb6/v2CyXqqjWsQ8rU0pJQVVUqwyGYUBraChVSn11Kuj9AnDUK696b2euK2Zu3/29T/oaGXRNjnuNyBEZcduw/FKlNHCfg/Zf1+tcYoVoQTEwo4WVVTcdjaJxtNoPaOiNCZdojP13Wo7HKSX1qgZjLpXre05akfqeb+jOBqnZkMqsZwbOe4iGo9jJ7kBVVM/5bwCgxBXE5BiarabVqMhn845GjfXeWC/IOiudjTzW7fQ20uvpgceWWc+gcFUYug17+YBe4ONuyE2j/GuJNeQzec/zGpNjA+tssVz0HXwEcVxeXlv/3CZVvqya9SyTIAjWdmKrMRQuC74Cey8pJYVcKuf5/drrZ7Fc9CzvoDICL/XDrN/Dlsfw+o69MryaZVLiinUdi4KIva29vrooCALUpAolpuD72XfPxn1Q+wWc9c2r3tuFQ2Hr/V71b9LXyKBrctxrpGt0Ha+NCkCB3u/5TnbHenxzOB8JgYhofAzMaCFFpAi2Mttjf65rdHFWKuBGK+P5+XkKJfOn3Wmj/di27i7nUjm0H9szmz/mbhy1H9totppoPjQhCiKS8aRVtmg4iqyaHZreORqO9gUkZuArCIKjsbOT3UFNrw1sbOxu7jrWdDN7O5oPTcTlOKLhKARBwMdXDmGdZvkTqwlHuRp6Azd3NzAMA9KK1NdL0Gw1Hcc5aZP8XqbF3Ss6qXpj752UQpK1DyWmQNwSPTObjuLeh30/9utGEASoiopqveoIAN2fbz+20dAbaHfaiEaiVq+1Wb/FZXFkMBoNR5FSUlbD3F6vzGvF/DurZlGtVx0BiHm+Q6GQdc0LgoCPWx/x59Gfc7ffSZu3a6TdaUNraNYc5LX42shes/jqSw+b1tBefdOBiILHwIwW0oetPSwvjTdFsnZfw/H5ETqPnSmVajzFctFqxFy/QXAAACAASURBVAuCgE87n1C5q4wczmP3x9c/APQCgk87nwD0GhWjGp03dzeIyTErcHDfmT+/Pnc0ItPraZS18tBymcdSuavg4vrC0TiwN+DMx16Bnnuhbfe2SpWS1ds3qNfhtSZRfvt7rm+v+95T1srY296zgoSr26upB+OTOK5BXlv/7Mzve1L1xjAMnBRP+s7rhXCB/fw+ouEoYnJs7F7qlJJy1E2toeHi+sJxTZxfn/fKoqgolJy9cu66XSwX+xrcoiAiv5m3GuU72R3oLX3ksDTzHBXLRcfQQff20utpa/hkQ2/gtHTqKL+9N09akbCWWBvaaxfUfidt3q4Rrf4SmKmKOjowsw191Oqa77IR0fxh8g8KnCiISMaSvt+vJlXHP0R+XJaL+Ovn17kJygCgWqvirHTmeE5Nqvjy2xcc5A+wllib6r5Piic4LBwObACdXp6i/fjSeDLnawxzVjrD6eVp3x3bslZ2LLrqNVxIFERk1jPWY62heW6ra3RRqpTw7ee3keUZ11vKv5ZYc8yvGdR4K1y+DMG0H+80veW4ZmGS9cYrKAN69eb44tjqmVQVte89g4iC6LgRoDU0HJ8fe96oKFVK+HbyzRFMucvoFZRZZTw/dvSkbqW2fJXxrHSGUqXkOIddo+uob0DvHFbuKjgsHPaVv1QpOfYth51JiuZpv5M2T9dItVa1fnulFakvWZSbGcQZhjHTgJaIJo+BGQVqQ9nAvx38Oz7tHPhK4iEsC9jJ7vre/vPzM34WT3B2VQh06OIgZa2Mk+KJIwACenNNPuY+4sunL8iq2alk9PLzD3hFe2mQ2Cevexk0p8ZkT3rhNc9qQ9lwLLbtbti5TXpy+1vLbwZlAHBXvxu4na7RtYZKxeTYyPP6Vm89rmmbZL2p3A1P0GAOEwN6DWy/537cuulu3Ns/335sj+wBOb44tv6OybGRDfNh59Be34CXGx6D2HtcRgUhQe130ubxGrH/9m4oGwPft5ZYs+qWWbeJaHExMKNARMNR/J+9/4u97U9YEVcgCAI2fQxNy6W2EFoJ+drH8/Mzfpwf4XrAgszzolqr4tvJNxTLxb4AzZwk/uW3L31ZvGbBPu/JHnh4sd/xHrUtL0r8ZV23yl1l5vMk3lp+u3HKHg5Nd7HzSR7XNEyy3txoo5MeNB9sPTMjAh6vfbymbto/PyxoN7U7bcd5GdVbPeoc2n9X7MfvZZz6ENR+J20er5Fq/eXGmX3NSzf76JFBGV+JaHFwjhnNlLAsYCu9jYyaxdLSkuO1zHoGpZvLgYs+R6QIshubvvbz9PSEw9NvC7MYszk8r1QpYS2xho3khuPOrCAIfRnOpkEK9YbNSCsSpJA00TvXo3q47PuaxwbGtNJPBz1Rf97Tao9Tb/wciz1YGHWzwWsfr6mbr/m8Vtesz731OhwnWYX75tAi7nfSgrhG7ElABEEYOO+OwxiJ3hcGZjQz60kV+ezuwB6v5WUBm6ktFC5/er6+ndnpC+a8PD8/L1RQ5latVVGtVSFH5N7aQLaEAdFwFHtbe6/KKDeIuV6Yfd2naRgWgLh7LtzLCcyDUQGUvWGpxJWBw9VEQXRkZgw6MAo6MBxlWPkStkXiDcPAQf5g5PYGLQ/hZx/A+I109+f9/i7Z61MQQ0zpRVDXiD0JiBJX+gIvDmMken8YmNHUhaUIPuQ+ILE6OsFHej2N0k2xL0mHHFnFWmJ95Oefn5/xvXC4sEGZnf7Qy8Z2o9040kzH5BgSq4k3H2NiNYHMeqav0ddsNUeuwzNp7jl0s07ZPgnVWhW5VA7SimSlEh+0jhUbU5MnCMJMAphZNdKDHmJKwbP/pigxBaIgOuqffRijn2G8RDT/GJjR1CwvLyOX2sLmRs5XTxcALC8tI5faxs/iseP57czOgE+8eH5+xvH5EbT6+xrOoT/o+F74ji+/fbEa9EpceVNg5k4B3Ww1UdEqfesuue/203AnFyf4/OEzgF4qcUEQrAVipZCErfSWY+jRxfVFkMV9d4rl4ljvHzW3iChoFa1i3RzbUDYcPfHmb0n7sR14zzsRTQYDM5qarLqJrLrpOygzpdZSuLwpov33cLaYHPeVTv/08qcjrfF70jW6qNxVkF5PA/A/N8aLFJIcvWCDUnfPknvoohyRF7KhoT/oKJaL1vnNpXKePY7txzZOLk7mfhjhvHPXm2nU47fWTffnpZDkq0fYPq9snudf0XRV61XrN8Q+RFqOyNaNOj8JZYhoMTArI01NsXyB//7rv1C6uRwrVf3S0hK20i9r9+R8rONzVSnNffbFt5pUIz6lpBzpxYMOyoD+oYvTTiE/LVJIstar0hpaX49Ms9VEsVzsW+eKXqfdaTuG/PnNsjjuPuzGXWPLXcaE7K8X2n4NsGfv1zVoiQd7ps7qOxslQvQrY48ZTVW3+4hC6RTXt1fYzX30vZC0mtzAZbmIpaXlkZ/R6lUUSqdvLuusBdUrNK/ZDxt6w5ojFJfjC5lhbDe7C0EQ0NAbOD4/Hv0BerN6s24N6dpQNqZyTZnZ8YBer8WwNa8Gfd5M4hNbjY38vCiIjhTpjfvGkHf/OgzDsG4qjUriMm6Sl3lmTwKyFl9DqVKyfis5jJHofWGPGc1Eq9PCXz+/4uTi2Nek9l6v2TY2R6THb7aaODo7msvFo4dJKSl8/vDZ99pkoiBCVV6yMw4LqCaZAGGWC73aj0lNqiN7zVJKatpFGoscka1zP08B76zNOoOgfSFeNalOpdfMvvhxTI5hLTF8XbFhn1diysi5m+4Frdkj0mPvORzWcylHZOQz+VkU6VXGvUaqtao1nFWJK46lTOz1n4gWHwMzmqly9Rp//vinr6E560kV67ZU8W6P3Uf89fMbnp4WK3tZYjVhJd7IpXI4yB8MbaiJgoj8Zt6aV+bVUHPPYxm2ve6Td1Yv9z53N3dnkpHRdKPdOIL2va29vmyNJnfyknlgL+uiDsV8rXHq36TV7mto6C89Svs7+yODs3EDq2qt6thHPpMfeoxZNeu46eIu48fcx4FlTCkpx3V3dXvFuYh/s/+7oSZVz98HOSJjf2d/7nrM3nqNmAFYNBzlMEaid4xDGWnmWu0W/t+Pf+Hj1h7U5MbQ9w5KHPL8/Iwf50foLOCk+Np9DZW7ysvQJjmGmBxDs9WEVtdgGAbaj21rPoG5wKipWC72zXtpd9poP7at4C2XykEQBNTv65AjMqLhqDWXrHHfsIbFmGW40W6gP+iQIzLichyqokJakRxDh6ata3RxdXtlNUqj4Sg+f/yMilaxGmTSimStuQZgpuUbpXZfs8pjntfmQ3Ng4oau0X03Q5DGqX/TcHxxbGUtFQQBnz98xvXtNep63cpemlhNIBqOOur2OJlNL8oXVoNfEAR82vmEyl0Fdb1u3VCQViSk1bR1Hup63fqO3WXc39nH1e2VVbcFQehde7abUQ29MRdzQOdFtV61EiAJguD4fXCfv+vba+u98+Ct14g9CYj5f/uyJkT0PjAwo0A8PT3hx9kRHloPvlLhu11cn6PWWNxMVKeXp2h32sisZ6zAIhqOjhw6eFY6Gzg/pVgu4mPuo7Ut82+Tmba9rJUdwY2aVB2NQVNDb+C0dIovv30Z9/BerVQpQQpJVnmkFcmz184wDBTLRcdxzINiuWj15KlJFRgxpdIwDGgNDRfXFwvfK+K3/k1D1+ji+9l3x3p/6fX00IZ5XI6PFZjpDzq+n3139MYMunaA/oQd7jIKgjC0R1praChcFnyX71egP+iO+X6Dfh/MTLPJePJNGWwn7S3XiJkExD730D5ElojeBwZmFKhi+QLtxzb2tn7znVb/rq6hWF789Z9KlRJutBtsKBvWXfxBzOyJwxq21VoV4rJo3Yl1C4fC1uePL46RVbOeDdf2YxvXlWsrALTf5Z2F08tT1PW6tbCqmxkwtjvtmS0q7Fe1XoWqqL7n5pm9a0pMwZ8//lzo4Gyc+jcN+oOOrydfkVWzQ68nraGholVetQ6g/qDjzx9/9vaRVD2Ps/3YRkXzznZqrkm4oWw4bsq4P2+//sipcFlAR+0M/O0qlotW4qBOpzNXgdlbrxF7EhCAwxiJ3qOl//znfyxW1gR6l9bia/iUPxgZnHUeO/jX9/9d6AbsIHJEhhSSHA2JZqsJ/UEf63hFQUR8NW5tZ9g2pJCEhJywGgn2oVfzwBx+BvR6l2p6bW6H7oiCiP38PqLhKJqtJo4vjhEOhT3faw5Ttfe2XN9e4/z6fFbFnZpx6t80mcNyTdMoh71+AuNfP+76rbf0ubr+5pn7t6vZar4q2A7Ca68ROSJbC9g3W018Pfk69bIS0WwxMKO5kYwp2M8fYHl5cE6abz+/LvQQRnq/9rb3oMQUGIbhu/crq2atoVgNvYHDwuG0i0lEC2o7vW31FA4b1k5Ei4tZGWlu3DU0HJ0dDkx9f1UpMSijuWQmaQF6w0799spw4WAi8kMURKuHnUsoEL1fDMxormh1DT/O+9cle2g/4OyKE+FpPtmHLI4zVM4+bHVQ9kYiIvvadlpDe5fD+YmIgRnNodu7Ck4vfzqe+3lxjKenp4BKRDScvZGkKt7rK7nJEdmRUY4Z1ojIi31tO8MwuIQC0TvGrIw0l65vrxAOhZHd2ERFu0FdrwddJKKB9AcdzVazl9RjRcJ+fh+FUsEzkYMoiFiLrzkys13fXi9M4gIimq7EagKZ9QyarSZicsyRYMZrHUsiej8YmNHcOrsqQBRXcFY6DbooRCMVSgVrjatoOIrPHz6j/dhGp9NBs9VEKBSCuCz2pfc311wiIgJ6WVtjcqzvt4IJP4jeP2ZlJCKaEFEQsZXeGrjosJ2ftemI6NeTVbPWOneGYaDerOOqcsWlFIh+AQzMiIgmTBREyBHZc6HpRVpviYiIiGaHQxmJiCasa3RRu68xACMiIiLfmJWRiIiIiIgoYAzMiIiIiIiIAsbAjIiIiIiIKGAMzIiIiIiIiALGwIyIiIiIiChgDMyIiIiIiIgCxsCMiIiIiIgoYAzMiIiIiIiIAsbAjIiIiIiIKGAMzIiIiIiIiALGwIyIiIiIiChgDMyIiIiIiIgCxsCMiIiIiIgoYAzMiIiIiIiIAsbAjIiIiIiIKGAMzIiIiIiIiALGwIyIiIiIiChgDMzolyMKIvLZXcTkeNBFISIiIiICAIhBF4BoltYSa/iQ28OKuIJy9Tro4hARERERAWBgRr+I5aVl5Dd3kV7PWM91HjsBloiIiIiI6AUDM3r3pJCEg93PiIaj1nNPTwaMJyPAUhERERERvWBgRu+aHJHx++5nrKyEHM93Hh8DKhERERERUT8GZvRuJVYT2N/9HcKy0Pdap8thjPNIjsiIy3HE/07M0mw1obd0VGvVqexLFHo/gfqDjq7Rnfg+yFtiNWH9XbuvBViSt2Ed+rXx+yeiSWNgRu9SIpbEQf53LC97Jx7tdtljNm+209tIr6cdz8XkGACgfl+feKNnK7Vlbf/o7KgvQJBCEtbiazAMA2WtPNF9/+o+7Xyy/v7j6x8BluRtRtUhCsasrl1+/0Q0aQzM6N2JyfGhQRkAPD09zbBENEpKSfUFZYZhQBAENPTGzO9ESyEJ//jwDwiCYD0+vz6faRmIaHy8dolokTEwo3clHArjIH8wNCgDMBeJPw7yB9bd1lEaegPNVhPVehX6gz7lks1eWn0JyrSGhsJlwQrGpJA08/Ksxdeshh0ApNfTbNwRLQBeu0S0yBiY0buxIq7g94//gCiujHyvICxW1Y/JMcTkGNLraVTuKri4vpjr+Qzb6W1Ew1E0W82RjSIpJEFaeQm+3MfW7rSnVs5B6nodOeSsx5W7yszLQETjm8drd5zfQyL6tS1W65RogKWlJeznDxAOhX29X5yzwKyhN1DX656vxeW4o2dNTaqIhqP4evJ1VsUbm5pUHXeth7F/Z+3HdiCBmJv+oOPo7MhaYuFGuwm4RETkxzxeu+P8HhLRr22+WqdEr5TP7iL2dyY/PyKSvwBuVup6HaVKyfO1UqUEURCxoWwgl+rdCY6Go8iq2YGfCdprGyGdzvxky6zd1ziZn2gBzdu1y6CMiPwaPhGHaAGsJ1Vk1OxYn5FCYaz4GPI4L7pGF6VKCcVy0Xous54JsERERERENEkMzGihSSEJH3IfX/XZuG0tpUVhH5YjCALkiBxgabzN2zBRIqKg8PeQiMbBXwxaWEtLS/hte//V//CpSRW3czAxfBxdo2ulkQcG/6MvhSSklBRicsyaawG8zGW70W5GJg9JKSkIguBYC0gKSciqWSgxxXrtpHiC2n0N2b97Le1ZFEOhkPW8ydyeuf1h7x+2DtEkjtHP8QNAtV4dOfdt2uUxiYKItfgaYqsxxKNxxzCpZquJilYZuXaT13cLoPfdxhVH+bWGhopW8T00LLGagBJXrDoC9OYOVrTKxM4B8HK+k/GkI3lMs9WEVtcG7stev0Z9r+Z6WMDwujiqXIZhQGto0OraxIfYvfY8DLq+vcpeb9bHqgPmtrJqFjE51retxn3D9/pi5jBu91zbYXXK77U7iWtpkHF/D+WIjLhtOL7fYer2Y63r9XeZtZfoV8LAjBZWVt30nW7erdV+QENvTLhEs9F+bCMqRAe+nlWz1lw0NzO7Y2Y9g8JVAdVadeB2lLiCmBxDQ29YDYf9nX1H40UQBLQ6LQDw3Ke0IvU9b27P3P6w95vvndYxDmMvX7PVHNqAn0V5zAZqZj0zcM5KNBzFTnYHqqLie+H7wCDIPLZmq2l9t/ls3hGQWe+N9YKss9LZyEaq1yLhwMv3ap6Dt0opKeRSOc/zEA1HEQ1HkVnP4Or2qq+Ba/+eRn2v4VDYev+gumiXVbOe348gCFCTKtSkiuvb64ll5nvLeTDrQPuxjbJWHlp2sw74Lfug68G+rdhqzLEsxrjHZ69TxXLR8d2MunYneS0NMu7vYdfoOl7zczNIFETsZHesxzeHwSc6IaK3YWBGCykiRbCV2R77c12ji7NSATdaGc/Pz1Mo2fR5NZ5Nu5u7UJOq9bj92EZDb6DdaSMaiVp3hQVBwMfcR4jL4sjGZjQchRSSHEFZs9WEYRiIhqMzz6I4jWNchPLsbe319Rg0W000H5oQBdHRy2EmhxnViI6Go1hLrCGfyVvfrXnDQhAER13bye6gptcGft/u82D2jjQfmojLcUTDUescvEViNeFojLozmpo9foIgQIkrE+2lGyaXylnny33s9u8tvZ625oy+xaTOg7QiOdZUfGvZ3fXAXi4pJFk9qUpMgbgl4rBw6Gs79m3Z67sgCFAVFdV61ff3PI1r6a3anTa0hgYlpgDorcc2qo7EV1962LSGNtdLqBCRPwzMaCF92NrD8tJ4UyRr9zUcnx+h8zg/mf/GlXDNi7MPW8mqWUdDplgu9v3DLgoi8pt56x//newO9JY+dPiLIAjYze5CEAQ09AZOS6eejfM/vv5hlfHTzicAvYbUoIaX+bzf90/zGF9rluW5ubuxejBv7m76et7Or88djdn0ehplrTwycDYDJa/18VJKytH4Tykpzwaq+zy4t+WVWfS1VMW5n9PLU8frpUoJidUEcqkcji+OZ9ZYjYajMAyjr3eqVClBCknY29qzArdcKuerR2SYSZ6HmBybSNnt9cA+zNnuQrjAfn4f0XAUMTmGlJLqu1GRUlKO+qQ1NFxcXzj2eX593tufoqJQGt7z5jata8lu3N9DANDqL4GZqqijAzPb0EetrvkuGxHNLyb/oMCJgohkLOn7/WpSdfyD5MdluYi/fn5d6KAMcGZibOgNqzEiCqLjNa8AAej1GB6fH6PZalrPbaW2Ru43JsegNTQcFg4DW2ds2sc47+Wp1qo4KZ7gsHA4cDjk6eUp2o8v3485P2qUs9IZTi9P+xq3Za3sWKDXq7fWfR60hua5LbOn5dvPb77KNIjZcAV6i5F7qd3X8PXk60zrarPVxPez7551oN1p43vhOwzDsJ5zzzUa1yTPwyTK7q4HXkEZ8Pf1cHFsbc8eYJrbsQfvWkPD8fmx5zGUKiV8O/k29k2OaV5Lb1GtVa19SivSyOROZh0wDOPVQ6SJaL4wMKNAbSgb+LeDf8ennQNfSTyEZQE72V3f239+fsbP4gnOrgoLO3QRAOSI7BhuBABXt1fW3xvKhiPRwqg7rccXx9bfMTk2sgFgGAYKl2+fG/QW0z7GRSiPn8ZXRXsJpOyJBwZxz89xsw+P85rTaT8PfurJe01OUCwXhx5b1+g6rll7YBW0SZTdXg8qd8MThZjD9oCXodJe2/FTn17bIzqNa2kS7PvcUDYGvm8tsWadJ/NcEtHiY2BGgYiGo/g/e/8Xe9ufsCKuQBAEbPoY4pRLbSG0EvK1j+fnZ/w4P8K1rUExr+JyHFk12/ff3vYevnz6gs8fPjsaxWelM0fDR4m/NJTu6ncj99futB09OKPuBl/dXgU+f2Hax7jo5THZezbsWfoGsZdp1Pa82M9D5a4y9Xri6HlMT74ndJrsQa47I+m4Zn0eRpXdXg/sy3oM0nx4Kb/9JsWs69Mw415Lk1CtvwSMw4J3+6gR+3dDRIuNc8xopoRlAVvpbWTULJaWlhyvZdYzKN1c4rH76PnZiBRBdmPT136enp5wePpt4qmpp8XM3DdK+7GNYrnYd7fXPsTM7z/SWl2zPjcsoQgwuvE+C9M+xkUtjxTqDXmSViRIIWnixzmqh+s15+Etrm6vrHlxalJFNBx9U1rzWXKfy3Ao/OrhlrM+D6PKbq8HfnpF7cME7UHPrOuT3bSvJT/sSUAEQcBaYs2zd4/DGIneJwZmNDPrSRX57O7AHq/lZQGbqS0ULn96vr6d2ekL5rw8Pz8vVFA2ipkxbNDaP+6EIH6P294weu2yA7Myb8cYdHnMtcLsa0RNy7AeC/dwTHPphGmq1qqOtONmWvNcKofKXWXsJA2zZl+H0P7dpZSUo7fIy0X5wgp6gjgPg8puvx4Mw8BB/mDktrzS1A9LbjQts7yW/LInAVHiSl/gxWGMRO8XAzOaurAUwYfcByRWRyf4SK+nUbop9iXpkCOrWEusj/z88/MzvhcOFy4oG5Q4YppGDVF7D+btGN9ansRqApn1TF9Q12w1Hes1vTXzoV/ueaGzCohKlRKarabjXAiCgPR6Gun1NBp6wxHEzJNmq+kos0kQhJHBuvt8z/o8DCq7nZ/j8Guawxjn7Vqyq9aqyKVykFZ6ywuIgug4F/ZhjH6GjRLR4mBgRlOzvLyMXGoLmxs5Xz1dALC8tIxcahs/i8eO57czOwM+8eL5+RnH50fQ6hzWQe+PO3V9s9VERav0rd/k7nV4r2r3NdTua5AjMtbia1CTqhUsxOQYPn/47GtR7Flzr59lMgxj5KL3XoHKLM/DoLK7FcvFsbY766HSi3AtVbSKFRRuKBuOG3dmb1r7sT2XNx+I6PUYmNHUZNVNZNVN30GZKbWWwuVNEe2/h0XF5LivdPqnlz8dqb1/Fe7hY1JI8tVzYZ8/MayRNQ/m7RhnXR4pJDnu3AfRw+rFfR7kiDzzhqL+0FsT7vz6HCklhbSatoakTXMNu0mw96CWtfKbgqdZnwd72d314LV1cxb1aV6vJbdqvWqVU4krVhnliGwF3n6SDhHRYmFWRpqaYvkC//3Xf6F0czlWqvqlpSVHlrGcjzWfriqlhci+OA3tTtvRSErI/u7y2rOqzUNyj2Hm7RhnXZ6UknKkIp+XhqQ7GJ1VSvFByloZ306+Oc7tsJTjszarOVTTOA/Dyu6+Hl67NIW7PsnhyS5xAczvteQ2aEkBezbXKkeHEL07DMxoqrrdRxRKp/jn4f/gruH/7p6a3EBEiiAalkf2lmn1Kgql0zeVc9HZJ4DHVkfP7xAF0ZGKuXE/fAjVPJi3Y5xleYLMVDeKffjduAu/T4N7zS13Qgd7ADFonpTf18dlT+7RbDWnOodq1HkY16iy15sv9fItQaD9uhqVDOU15vlactPqL+fCDMjM4aQcxkj0PjEwo5lodVr46+dXnFwc+0qA0Os128bmiPT4zVYTR2dHC7149CTY/wFXYsrIuRHuRVynded1kpkQ5+0Y5608plmn+LY3btWkOrLXLKWk3rQ/PwvRD/uNsfciDeuRkSMy8pn8eIUbQo7IUJOq9di+kPBrvPU8jMNP2e3PqUn11b1m9usqJsewlpjOen9+TPpaGvf3sFqrWkOelbjiSOH/1vpDRPOJgRnNVLl6jT9//NPXMK71pIp1W2PA7bH7iL9+fsPT03xl3gtC7b7m6Ln4mPs4sGGUUlKOORaTXjzaPU9kUhPo5+kYZ12e7pN3RjY7URCxu7k78yxyN9qNIwDY29obGDS4ky6MSxRE7Of3sZ3eHhqYuHt37OyP1aTquR05ImN/Z3+sHrOd7M7Aui6FJOSzL0Fe+7H9pvlkkzgPdpMou/t62N/ZHxmceQVd1VrVsZ18Jj/0NySrZpFVs0P3Yzfra+mtv4dmABYNRzmMkegXwOQfNHOtdgv/78e/8HFrD2py+JCXQYlDnp+f8eP8CJ05T1oxS8cXx/jy2xcIggBBELC/s4+r2yurQSYIAuJy3HHnu6E3Jj7Hot1po/3YtoZO5VI5CIKA+n0dckRGNBx99T6ndYxxOY6u0R17aNCsznnjvmENgzS3daPdQH/QIUfk3j4UFdKK5FhrahbMIXP29bQ+f/yMilaxzoO0IllrRQF4dRm30luIhqOIhqNIxpNWJj1zbpIUkpBSUo7z7Q4iqvUq0utpAL3vx15W9/d1fXttvXcUaUXCp51P0BoaGvcNq6cjGo4is55xHO9Z6WzsY7ebxHnwKntDb0Cra68uu/t6+PzhM65vr1HX69YSJonVBKLhqKO+upc3uShfWIGxIAj4tPMJlbsK6nrdugkgrUiOBCd1ve7r+p3WtTToN+Stv4f2JCDm/+3p/InofWFgRoF4enrCj7MjPLQevWheJwAAE11JREFUfKXCd7u4PkdtjDlrv4Ku0cX3s+/IZ/OIhqMQBGHoHV+toaFwWZhKWYrlIj7mPgLoNe7Mv032RuQ4JnmM9jWZzHWf/vj6R2DlGaaslR2BjZpUHY1uU0Nv4LR0ii+/fRl7H29RqpQghSSrTPaFj+0Mw0CxXHQcyzi0umYtBGzuY9j5Piud9dUz/UGH1nhZwHdQWc1sfcl4cuT8rPZjG3f1O6TX01BiimMuoVeZ3rrO4iTOg11DbyAmx6z/Xlt29/UAvFxbg8TleN829Qcd38++O3otB9V5YLxEOpO8lvz+hrzl99BMAmKvU/bhnkT0vjAwo0AVyxdoP7axt/Wb77T6d3UNxfLFlEu2mPQHHd8L37GhbPTd6Ta1H9u4rlxPdX2naq0KcVm07g67hUPhV9/xndQxliolx5pPgP+099MozyjHF8fIqlnPRq57+/Y79LNyenmKul63FsZ1Mxu67U771YsQ1+5r+PPoz7508F77urq9GhhEFC4L6KidgeeyWC6iWusNFet0OiPPZafTwfn1Oep63XPRYrNMk1rseVLnwXR1e4Wr26uJlF1/0PH15CuyatbqefKiNTRUtMrAsukPOv788WdvO67r1NR+bKOijZ9ZcVLXkt/fkLf+Hmp1Z2DGYYxE79fSf/7zP37trAk0F9bia/iUPxgZnHUeO/jX9/+dajaz98QcNgT0eitmvaaTKIiIr8athk2z1YT+oE/0+3vLMYqCiLX4GgRBsBJyvLVs0z7nUkhCQk5YDTy/Q7hmyX0OanptKkOvpJAEOSJb9WvcfbnPZbPVfHNvFgBrSNxryvQarzkPB/kDKwg7OjuyjlsKSdZcpkmU3X4ugNf/BtjrFDCZej+Ja2mc35DX/h7KERmfP3y2PvP15OtYZSSixcHAjOZGMqZgP3+A5eXBOWm+/fzKIYxERG80KDCj+bOd3rZ6985KZ1Md7UBEwWJWRpobdw0NR2eHA1PfX1VKDMqIiOiXIQqiNQdumstsENF8YGBGc0Wra/hx3r8u2UP7AWdX00lUQURENI/s6x9qDY3D+IneOQZmNHdu7yo4vfzpeO7nxTGenp4CKhEREdFs2dc/NAxj4kubENH8YVZGmkvXt1cIh8LIbmyiot2grteDLhIREdHUJFYTyKxnrDT89mQnxXKRa5cR/QIYmNHcOrsqQBRXcFY6DbooREREUxUNRz3XkmPCD6JfBwMzmlvPz884Pj8KuhhERO+OfVFmzluaH4ZhWKn36806ripXc7ccBhFND9PlExERERERBYzJP4iIiIiIiALGwIyIiIiIiChgDMyIiIiIiIgCxsCMiIiIiIgoYAzMiIiIiIiIAsbAjIiIiIiIKGAMzIiIiIiIiALGwIyIiIiIiChgDMyIiIiIiIgCxsCMiIiIiIgoYAzMiIiIiIiIAsbAjIiIiIiIKGAMzIiIiIiIiALGwIyIiIiIiChgDMyIiIiIiIgCxsCMiIiIiIgoYAzMiIiIiIiIAsbAjIiIiIiIKGAMzOiXIwoi8tldxOR40EUhIiIiIgIAiEEXgGiW1hJr+JDbw4q4gnL1OujiEBEREREBYGBGv4jlpWXkN3eRXs9Yz3UeOwGWiIiIiIjoBQMzevekkISD3c+IhqPWc09PBownI8BSERERERG9YGBG75ockfH77mesrIQcz3ceHwMqERERERFRPwZm9G4lVhPY3/0dwrLQ91qny2GMfskRGXE5jvjfyVKarSb0lo5qrRpwyYiIiIjeDwZm9C4lYkkc5H/H8rJ34tFulz1mfmynt5FeTzuei8kxAED9vo6u0Q2iWERERETvDtPl07sTk+NDgzIAeHp6mmGJFlNKSfUFZYbRm5fX0BsMyoiIiIgmiD1m9K6EQ2Ec5A+GBmUA5iLxx0H+wOp9GqWhN9BsNVHWymh32lMuWU9afQnKtIaGwmXBCsakkDSTMhARERH9KhiY0buxIq7g94//gCiujHyvICxW1Y/JMcTkGNLraRTLRZQqpanuTwpJkFZegq+L6wtHD9msgkMiIiKiX8VitU6JBlhaWsJ+/gDhUNjX+8U5C8waegN1vd73vCiIiIajjp61XCoHURBxfn0+tfLYz2P7sc1AjIiIiGjK5qt1SvRK+ewuYn9nDfQjIvkL4GalrteH9oJJIQlb6S0oMQUAkF5Po67XUbuvTb1snQ4zWBIRERFNG5N/0MJbT6rIqNmxPiOFwljxMeRxXrQ7bRyfH6OhN6znlLgSYImIiIiIaJIYmNFCk0ISPuQ+vuqz8dXEhEszfVpds/72mziEiIiIiOYfhzLSwlpaWsJv2/uvni+mJlXc3lUmXKrpaj++zPWyJ+fwIoUkZNUsYnLMeq9hGKg362jcN1DWyn2fSSkpCILgyLoYCoWQtfVIGobh+dnX7M+9X/u2ze0pMcV67aR40jd8c9L7BdDbb1xBNBy1ntMaGipaxffwUVEQsaFsIC7HHUF0+7GNilbBjXYzcMmBtxyTfRspJYVkPOmoK81WE1pdG7p/IiIimj0GZrSwsurmq3uNWu0Hx7DA9yarZpFL5fqeFwQBSkyBElMQW405UuADveGR7nMqrUiObTX0/sDgtftz79fcthyRsb+zD0EQHNtqdVpT2a+5FIEckZHP5h0BmfXev7d3VjobGRillBRyqZyj/CbzfGbWMyiWixM/l6P2Hw1HEQ1HkVnP4Or2auoZPomIiMgfBma0kCJSBFuZ7bE/1zW6OCsVcKOV8fz8PIWSTZe758PL7uYu1KRqPbZnfJRCktUDpcQUiFsiDguHbyrTJPcXDUchhSRHUNZsNWEYBqLhqCM75KT3u5ZYQz6Tt/ZrBu6CIDgCtZ3sDmp6bWCmSne57GUTBdHqwRIEAaqiolqvWgHWJI4psZrATnbHcxsArJ5AQRCgxBX2nBEREc0JBma0kD5s7WF5abwpkrX7Go7Pj9B5XNwsg/aEH16BWVbNWg37QUP/LoQL7Of3rTT8KSVl9dqYDf3EagKfdj4B6DXsBwU1b92fmyAI2M3uQhAENPQGTkunngHQpPcLAB//nqtYuav0rduWUlKOYCelpDyXK0gpKUdgpTU0XFxfOI7h/Pq8V35FRaH00us1qWNSlZf9V+4qOL08dbxeqpSQWE0gl8rh+OKYQRkREdGcYPIPCpwoiEjGkr7fryZVxMdIjQ8Al+Ui/vr5dWGDMlEQsbu56xhmaE8EYr4ns56xHns17IFer+HxxTEMwwDgbMiPW6Zp7C8mx6A1NBwWDj2Dsmke51npDKeXp33BSlkro2Kbj+g11FEURMcQRK2h4fj82PMYSpUSvp18g/6gT/yYzCUVgN7C4F5q9zV8PfnK9emIiIjmCHvMKFAbygZ2srtYXlrG//z1XyPv3gvLAnayu763//z8jNPLn7i+vXpjSadLCklIeGSJFAQBcljuS+BwfXvd13DfUDasYXiVu+FJKtqdNrSGBjWpWsMHx22kT2t/hmGgcFmY+X695nvZ1fW61aPlNbfRXq5RxwDAUddn/d0RERHR/GFgRoGIhqP4kPvoWBR6M5XDWWl4YzaX2kJoJeRrH8/Pz/hxfrQQmRfVpNo3L2mQ69trz2F09mGON9rNyO00H5rA3x2VckQeu3E/rf1d3V4NDdCntd9Bc/ZMZi+Vn3JV7ipjDRGc5DE1W02rR28rvdU3lJGIiIjmEwMzmilhWcBWehsZNYulpSXHa5n1DEo3l3jsPnp+NiJFkN3Y9LWfp6cnHJ5+853afBGMStduH15nDpEbZpzU+7Pc36gAadbH6Xdf9nLZk234Mcljurq9subLmb1qFa3iK8U+ERERBYeBGc3MelJFPrs7sMdreVnAZmoLhcufnq9vZ3b6gjkvz8/PCxeUuTPnAb35Q2aj2yuJg519GKRhGDjIH4zcp1cqdb9mvb+g9wtgaA+Yexiqn+DK67OTOKZqrepY4iAajmInu4NcKofKXS9A49BHIiKi+cPAjKYuLEXwIfcBidXRCT7S62mUbop9STrkyCrWEusjP//8/IzvhcOFCsqAXg+Lez2p9mPb0fNxo934avALgvDq9d1eY9b7C3q/frw20+GkjqlUKaHZaiKznrG2JwgC0utppNfTaOgNXJQvxgogiYiIaLoYmNHULC8vI5fawuZGzldPFwAsLy0jl9rGz+Kx4/ntzM6AT7x4fn7G8fkRtHr1VeWdN9VaFRvJDathvZXa8r3mWLFcHGtfo4YPztv+gt7vNE3qmGr3NdTua5AjMtbia1CTqtXTFpNj+Pzhs6/FsomIiGg2GJjR1GTVTWTVTd9BmSm1lsLlTRHtTgsAEJPjvtLpn17+dKQ0fw8uyhf4/OEzAAxdi6v197kyuXvfJm3W+wt6v/+/vXtrajLLwgC8CJiAUQIYYPAA1V019A+buZl/MX9uaq7m4FjVKqhoQDlKSDCcEshcdBM5mtiS7IjPcxfIx9qbKqq+l/Vl7XYuris/ku+4G9XtPdX2a1Hbr8Xy+nJMjU/FdHG69Yjs7Mxs1A5qOmcA0AecY0bXvN9YiX+/+Fesbn6IZrPZ8XUDAwPxePpx6/WjqcdfePdv1rZW+34k/h9R26+dC5vTxekYGrz8/5TDo8NzUwPzI/murqvX9VLXbefiZ7byw52vq5d72ihvxPM3z8912SbHJ7tWDwDonGBGVzUa9Xi3+jaevvxP7OzudHxdcWwyRnIjcXc437ZbVq5ux7vVt9+0zn62sr7SunHP3cldeyNd3fs8PKQXN9u9rpe6bjvl3c8Hfp8df9+JXu6pcdyItTP/xPiWSZUAwM0RzOiJg6ODeLH0a7xZed32PKiI067Zk3jYZjz+3sFeLJYWv6oj9725eCP9aOpR5LKXb6a3yp87a8WxYte7Sb2ul7puO+Xq52B2P38/JgoTHV97k3u6qqN6USd/gwBAbwlm9NTG9no8e/W0oyEMD8aK8eALhy7XG/V4sfQ8Tk5u/03m6tbqubOrzj7qearyqRK7td3W6/nZ+bY3+F8THlLXS123ne3K9rl1zf1p7tIY/bNmijMxU5yJiJvb09DgUMzPzceT6SdfDGhnO3rfw0AUAPgRDP71b3/5e+pF8GNpHDdis7wRuWwu7rb5LM51g0OazWYslF7G3nc8tKA4Vmx1vnZru/Fp79MX3984brRuqEdyI1Hbr136bFPlUyUmxycjk8lEJpOJyfHJGMwMxsDAQOu9hXuFmBidiJ8e/RSTY5NX/pzh7HA8+P14gqP6UXysfLxyTTdV7+zvYruy3facrVR1z3ZwP2x+uPT9g6ODmBidaK3rQeFBZO9kI5PJRPZONoazw1HIF+LnJz/H+Oh4jOZHo/KpEvVG/Ub2NDszG4V7hbh3916MF8ZjMDMY9Ub986Ow2Vw8LD6MqYmp1jVLH5Z00ACgD5jKSBInJyfxqrQY+wf7HY3Cv2hlfTkqX/GZtdvg4vj82ZnZeLb47Nx7GseNWCgtxNzMXNwdvhsR0Tq76jqn4eCP6HW91HXbqe3XYqG0EPOz863R9MWxYhSv6fye7VbdxJ7K1XLcz9+P3J1c65Dp04Omr1JaLTlsGgD6hI4ZSe3WqnFwdBDjoxMdj9XfqZZj6f2bLq+s+762YxbxW0fmdDjE0OBQNJvNS9fVG/XYLG9Gs9mMXDZ37SNt5d1yrKyvXDl+v9OO2U3V+9rOVaq67Tpmp+va2tmKgYGBGMmNRCZz+Ynxw/phrH9cj6X3S1Fv1G9sT4dHh7GxvRGNRiOGh4evvX63thultVJs35Iz/wDgNhj459N/3N6pCXw3JkYn4s9zv7QNZ0f1o/jfwn+jcdzo0cq+f/mRfIzmR1uv9w72orZf69rvsNf1Utdtp3Cv0OqARURUa9WOzw371j3lsrnIj+RbkxePj4+jUqvokgFAHxLM6Btj98djfu6XKzsMp54v/frDPcIIAMDtZyojfWNntxyLpZfXjr5f21oVygAAuJUEM/pKuVqOV8uXzyXbP9yP0tq7RKsCAIDuEszoOx93tuLth6VzX1taeR0nJyeJVgQAAN0lmNGX1j+uxervU++2yptRrVUTrwgAALrHOWb0rdLauxgauhOl1beplwIAAF0lmNG3ms1mvF5eTL0MAADoOo8yAgAAJCaYAQAAJCaYAQAAJCaYAQAAJCaYAQAAJCaYAQAAJCaYAQAAJCaYAQAAJCaYAQAAJCaYAQAAJCaYAQAAJCaYAQAAJCaYAQAAJCaYAQAAJCaYAQAAJCaYAQAAJCaYAQAAJCaYAQAAJCaYAQAAJCaYAQAAJCaYAQAAJCaYAQAAJCaYAQAAJCaYAQAAJCaYAQAAJCaYAQAAJCaYAQAAJCaYAQAAJCaYAQAAJCaYAQAAJCaYAQAAJCaYAQAAJCaYAQAAJCaYAQAAJCaYAQAAJCaYAQAAJCaYAQAAJCaYAQAAJCaYAQAAJCaYAQAAJCaYAQAAJCaYAQAAJCaYAQAAJCaYAQAAJCaYAQAAJCaYAQAAJCaYAQAAJCaYAQAAJCaYAQAAJCaYAQAAJCaYAQAAJCaYAQAAJCaYAQAAJCaYAQAAJCaYAQAAJCaYAQAAJCaYAQAAJCaYAQAAJCaYAQAAJCaYAQAAJCaYAQAAJCaYAQAAJCaYAQAAJPZ/04nKgee76LMAAAAASUVORK5CYII=',
+      ),
+    ),
+  ),
+  'field_slac_blog_tags' => array(
+    'und' => array(
+      0 => array(
+        'tid' => 13,
+        'uuid' => '2779b052-a751-45e1-80a5-efa4dadb3867',
+      ),
+      1 => array(
+        'tid' => 17,
+        'uuid' => '6e1c034d-d332-4fd7-8771-e3c6a62ec739',
+      ),
+      2 => array(
+        'tid' => 23,
+        'uuid' => 'aaeef82f-6290-44e7-9e21-11965982c65c',
+      ),
+    ),
+  ),
+  'rdf_mapping' => array(
+    'rdftype' => array(
+      0 => 'sioc:Post',
+      1 => 'sioct:BlogPost',
+    ),
+    'title' => array(
+      'predicates' => array(
+        0 => 'dc:title',
+      ),
+    ),
+    'created' => array(
+      'predicates' => array(
+        0 => 'dc:date',
+        1 => 'dc:created',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'changed' => array(
+      'predicates' => array(
+        0 => 'dc:modified',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'body' => array(
+      'predicates' => array(
+        0 => 'content:encoded',
+      ),
+    ),
+    'uid' => array(
+      'predicates' => array(
+        0 => 'sioc:has_creator',
+      ),
+      'type' => 'rel',
+    ),
+    'name' => array(
+      'predicates' => array(
+        0 => 'foaf:name',
+      ),
+    ),
+    'comment_count' => array(
+      'predicates' => array(
+        0 => 'sioc:num_replies',
+      ),
+      'datatype' => 'xsd:integer',
+    ),
+    'last_activity' => array(
+      'predicates' => array(
+        0 => 'sioc:last_activity_date',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+  ),
+  'cid' => 0,
+  'last_comment_name' => NULL,
+  'last_comment_uid' => 0,
+  'comment_count' => 0,
+  'name' => 'usertest2',
+  'picture' => 0,
+  'subscriptions_notify' => TRUE,
+  'date' => '2013-04-21 04:35:51 -0700',
+  'author_uuid' => '4edce278-5dc3-4e83-b62e-9f3b5556007e',
 );
   return $nodes;
 }
