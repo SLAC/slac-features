@@ -47,7 +47,7 @@ dependencies[] = token
 dependencies[] = pathauto
 dependencies[] = jreject
 dependencies[] = googleanalytics
-dependencies[] = link_css
+
 
 ;Development modules
 dependencies[] = devel

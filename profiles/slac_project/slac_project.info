@@ -27,7 +27,7 @@ dependencies[] = file
 ; Contrib
 dependencies[] = jreject
 dependencies[] = googleanalytics
-dependencies[] = link_css
+
 
 
 ; Admin
