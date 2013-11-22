@@ -81,7 +81,7 @@ dependencies[] = pp_slideshow
 dependencies[] = slac_webform_botcha
 dependencies[] = slac_rss_block
 dependencies[] = slac_social_media
-
+dependencies[] = slac_block_style
 
 ; Features
 dependencies[] = default_site_template

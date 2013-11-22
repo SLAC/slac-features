@@ -78,7 +78,7 @@ dependencies[] = pp_crop
 dependencies[] = pp_lightbox
 dependencies[] = pp_slideshow
 dependencies[] = slac_webform_botcha
-
+dependencies[] = slac_block_style
 ; Features
 dependencies[] = default_site_template
 dependencies[] = slac_social_media_block

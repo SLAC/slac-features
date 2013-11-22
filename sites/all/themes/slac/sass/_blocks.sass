@@ -1,0 +1,57 @@
+//Contact information
+//-----------------------------------
+.contact-information
+  .views-label
+    font-size: em(10px)
+    font-weight: bold
+    color: $grey-2
+    text-transform: uppercase
+    
+  .field-content
+    +fontsize-rem(14px)
+    color: inherit
+
+  .views-field
+    margin-bottom: 11px
+
+
+//Blog Tags
+//----------------------------------- 
+.pane-blog-tags-panel-pane-1
+  ul
+    @extend .clearfix
+    li
+      float: left
+      margin-right: 23px
+      margin-bottom: 7px
+      a
+        display: block
+        padding: 2px 8px 4px
+        +border-radius(3px)
+        background-color: #fff
+        //font-size: em(14px)
+        color: $text-color-1
+        &:hover
+          background-color: $red
+          color: #fff
+          
+
+//Blog Archive
+//-----------------------------------    
+ul.blog-archive-class
+  padding-left: 5px
+
+  > li
+    a
+      margin-bottom: 9px
+      display: block
+    ul
+      padding-left: 19px
+      list-style-type: disc
+      list-style-position: inside
+      li
+        margin-bottom: 9px
+        a
+          
+
+
