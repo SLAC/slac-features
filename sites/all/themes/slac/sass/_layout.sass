@@ -268,19 +268,27 @@ html
   a
     color: inherit    
     
-  .panel-pane
-    background-color: $bg-col-1
+.panel-pane
+  .general-right &
+    
     margin-bottom: 35px
     padding: 13px 22px
 
-  h2.pane-title
+.region-grey-background-style
+  background-color: $bg-col-1
+
+.panel-title,
+.pane-title
+  .general-right &
     color: $grey-4
     +fontsize-rem(14px)
     text-transform: uppercase
     margin-bottom: 13px
     padding-bottom: 7px
-    border-bottom: 3px solid #fff
+    border-bottom: 3px solid
     
+  .region-grey-background-style &
+    border-bottom-color: #fff
 
 
 

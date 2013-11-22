@@ -20,9 +20,9 @@ img { height: auto; }
 
 img, object, embed { max-width: 100%; }
 
-.clearfix, .pane-pane-messages ul.tabs, .pane-system-user-menu ul, .main-menu ul, .footer-seccond ul, .pager, article.node-blog .links, .pane-blog-tags-panel-pane-1 ul { *zoom: 1; }
-.clearfix:before, .pane-pane-messages ul.tabs:before, .pane-system-user-menu ul:before, .main-menu ul:before, .footer-seccond ul:before, .pager:before, article.node-blog .links:before, .pane-blog-tags-panel-pane-1 ul:before, .clearfix:after, .pane-pane-messages ul.tabs:after, .pane-system-user-menu ul:after, .main-menu ul:after, .footer-seccond ul:after, .pager:after, article.node-blog .links:after, .pane-blog-tags-panel-pane-1 ul:after { content: ""; display: table; }
-.clearfix:after, .pane-pane-messages ul.tabs:after, .pane-system-user-menu ul:after, .main-menu ul:after, .footer-seccond ul:after, .pager:after, article.node-blog .links:after, .pane-blog-tags-panel-pane-1 ul:after { clear: both; }
+.clearfix, .pane-pane-messages ul.tabs, .pane-system-user-menu ul, .main-menu ul, .footer-seccond ul, .pager, article.node-blog .links, .blog-tags ul { *zoom: 1; }
+.clearfix:before, .pane-pane-messages ul.tabs:before, .pane-system-user-menu ul:before, .main-menu ul:before, .footer-seccond ul:before, .pager:before, article.node-blog .links:before, .blog-tags ul:before, .clearfix:after, .pane-pane-messages ul.tabs:after, .pane-system-user-menu ul:after, .main-menu ul:after, .footer-seccond ul:after, .pager:after, article.node-blog .links:after, .blog-tags ul:after { content: ""; display: table; }
+.clearfix:after, .pane-pane-messages ul.tabs:after, .pane-system-user-menu ul:after, .main-menu ul:after, .footer-seccond ul:after, .pager:after, article.node-blog .links:after, .blog-tags ul:after { clear: both; }
 
 .slac-font, article.node-blog header h2 a:after, .field-name-field-slideshow-btmdesc-slide .field-slideshow-controls .prev:after, .field-name-field-slideshow-btmdesc-slide .field-slideshow-controls .next:after { font-family: "slac"; font-weight: normal; font-style: normal; text-indent: 0; }
 
@@ -98,8 +98,13 @@ html { font-family: Arial, Helvetica, sans-serif; line-height: 1.25; -webkit-fon
 
 .general-right { font-size: 13px; font-size: 0.8125rem; color: #706161; }
 .general-right a { color: inherit; }
-.general-right .panel-pane { background-color: #f3f1eb; margin-bottom: 35px; padding: 13px 22px; }
-.general-right h2.pane-title { color: #444444; font-size: 14px; font-size: 0.875rem; text-transform: uppercase; margin-bottom: 13px; padding-bottom: 7px; border-bottom: 3px solid white; }
+
+.general-right .panel-pane { margin-bottom: 35px; padding: 13px 22px; }
+
+.region-grey-background-style { background-color: #f3f1eb; }
+
+.general-right .panel-title, .general-right .pane-title { color: #444444; font-size: 14px; font-size: 0.875rem; text-transform: uppercase; margin-bottom: 13px; padding-bottom: 7px; border-bottom: 3px solid; }
+.region-grey-background-style .panel-title, .region-grey-background-style .pane-title { border-bottom-color: white; }
 
 article.node-blog { background-color: #f1f1f1; margin-bottom: 51px; font-size: 14px; font-size: 0.875rem; }
 article.node-blog .separator { border-bottom: 3px solid white; }
@@ -139,9 +144,10 @@ article.node-blog .links li a { display: block; }
 .contact-information .field-content { font-size: 14px; font-size: 0.875rem; color: inherit; }
 .contact-information .views-field { margin-bottom: 11px; }
 
-.pane-blog-tags-panel-pane-1 ul li { float: left; margin-right: 23px; margin-bottom: 7px; }
-.pane-blog-tags-panel-pane-1 ul li a { display: block; padding: 2px 8px 4px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; background-color: white; color: #706161; }
-.pane-blog-tags-panel-pane-1 ul li a:hover { background-color: #720c20; color: white; }
+.blog-tags ul li { float: left; margin-right: 23px; margin-bottom: 7px; }
+.blog-tags ul li a { display: block; padding: 2px 8px 4px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; background-color: #f1f1f1; color: #706161; }
+.blog-tags ul li a:hover { background-color: #720c20; color: white; }
+.region-grey-background-style .blog-tags ul li a { background-color: white; }
 
 ul.blog-archive-class { padding-left: 5px; }
 ul.blog-archive-class > li a { margin-bottom: 9px; display: block; }

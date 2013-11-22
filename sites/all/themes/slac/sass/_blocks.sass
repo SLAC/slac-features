@@ -17,7 +17,7 @@
 
 //Blog Tags
 //----------------------------------- 
-.pane-blog-tags-panel-pane-1
+.blog-tags
   ul
     @extend .clearfix
     li
@@ -28,14 +28,21 @@
         display: block
         padding: 2px 8px 4px
         +border-radius(3px)
-        background-color: #fff
+        background-color: $grey-f1
         //font-size: em(14px)
         color: $text-color-1
         &:hover
           background-color: $red
           color: #fff
           
-
+  .region-grey-background-style &
+    ul
+      li
+        a
+          background-color: #fff
+  
+  
+  
 //Blog Archive
 //-----------------------------------    
 ul.blog-archive-class
