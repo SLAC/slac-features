@@ -39,7 +39,7 @@ function slac_admin_modules_menu() {
 function slac_admin_modules_admin_menu_output_alter(&$content) {
   if (user_access('administer demo modules')) {
     $content["menu"]['10'] = array(
-      '#title' => t('Administer modules'),
+      '#title' => t('Demo content'),
       '#href' => 'demo-modules',
       '#weight' => 0,
     );
