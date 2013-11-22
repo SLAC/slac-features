@@ -1,0 +1,32 @@
+<?php
+
+/**
+ * Implements hook_install().
+ */
+function slac_site_404_install() {
+  $node = (object) array(
+    'title' => t('Page not found'),
+    'type' => 'page',
+    'language' => 'und',
+    'name' => 'admin',
+    'uid' => 1,
+    'body' => array(
+      'und' => array(
+        0 => array(
+          'value' => '<p>The requested page could not be found.</p>',
+          'summary' => '',
+          'format' => 'full_html',
+          'safe_value' => '<p>The requested page could not be found.</p>',
+          'safe_summary' => '',
+        ),
+      ),
+    ),
+    'path' => array(
+      'alias' => 'page-not-found',
+      'pathauto' => 0,
+    ),
+  );
+  node_save($node);
+
+  variable_set('site_404', 'node/' . $node->nid);
+}

@@ -1,0 +1,4 @@
+name = SLAC site 404
+description = 'Provides a 404 page'
+core = 7.x
+package = SLAC
