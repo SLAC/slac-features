@@ -150,8 +150,20 @@ function slac_preprocess_html(&$variables) {
 	  ),
 	  '#suffix' => '</script>'
 	);	
+	
+  $selectivizr = array(
+    '#tag' => 'script',
+    '#attributes' => array(
+      'src' => $base_url . '/' . drupal_get_path('theme', 'samsung2') . '/js/selectivizr-min.js',
+    ),
+    '#prefix' => '<!--[if lt IE 9]>',
+    '#suffix' => '</script><![endif]-->',
+  );
+	
+	
 	drupal_add_html_head($element_css, 'main_styles');
 	drupal_add_html_head($element_modernizr, 'modernizr');
+	drupal_add_html_head($selectivizr, 'selectivzr');
 	
 }
 

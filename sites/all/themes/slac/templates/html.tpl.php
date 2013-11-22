@@ -10,9 +10,6 @@
 <meta name="viewport" content="width=device-width">
 <?php print $styles; ?>
 <?php print $scripts; ?>
-<!--[if lt IE 9]>
-<script src="/sites/all/themes/slac/js/selectivizr-min.js"></script>
-<![endif]--> 
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
 <!--[if lt IE 7]>
