@@ -359,11 +359,11 @@ function slac_profile_elements_views_default_views() {
   $handler->display->display_options['fields']['field_prf_social_twitter']['field'] = 'field_prf_social_twitter';
   $handler->display->display_options['fields']['field_prf_social_twitter']['label'] = '';
   $handler->display->display_options['fields']['field_prf_social_twitter']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_prf_social_twitter']['alter']['text'] = '<div class="connect-link">
-    <div class="field-twitter-icon"></div>
-    <div class="connect-link-item">[field_prf_social_twitter]</div>
-  </div>';
+  $handler->display->display_options['fields']['field_prf_social_twitter']['alter']['text'] = '<div class="twitter-link">[field_prf_social_twitter]</div>';
+  $handler->display->display_options['fields']['field_prf_social_twitter']['element_type'] = '0';
   $handler->display->display_options['fields']['field_prf_social_twitter']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_prf_social_twitter']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_prf_social_twitter']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_prf_social_twitter']['click_sort_column'] = 'url';
   /* Field: Profile: Facebook */
   $handler->display->display_options['fields']['field_prf_social_facebook']['id'] = 'field_prf_social_facebook';
@@ -371,11 +371,11 @@ function slac_profile_elements_views_default_views() {
   $handler->display->display_options['fields']['field_prf_social_facebook']['field'] = 'field_prf_social_facebook';
   $handler->display->display_options['fields']['field_prf_social_facebook']['label'] = '';
   $handler->display->display_options['fields']['field_prf_social_facebook']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_prf_social_facebook']['alter']['text'] = '<div class="connect-link">
-    <div class="field-facebook-icon"></div>
-    <div class="connect-link-item">[field_prf_social_facebook]</div>
-  </div>';
+  $handler->display->display_options['fields']['field_prf_social_facebook']['alter']['text'] = '<div class="facebook">[field_prf_social_facebook]</div>';
+  $handler->display->display_options['fields']['field_prf_social_facebook']['element_type'] = '0';
   $handler->display->display_options['fields']['field_prf_social_facebook']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_prf_social_facebook']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_prf_social_facebook']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_prf_social_facebook']['click_sort_column'] = 'url';
   /* Field: Profile: LinkedIn */
   $handler->display->display_options['fields']['field_prf_social_linkedin']['id'] = 'field_prf_social_linkedin';
@@ -383,11 +383,11 @@ function slac_profile_elements_views_default_views() {
   $handler->display->display_options['fields']['field_prf_social_linkedin']['field'] = 'field_prf_social_linkedin';
   $handler->display->display_options['fields']['field_prf_social_linkedin']['label'] = '';
   $handler->display->display_options['fields']['field_prf_social_linkedin']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_prf_social_linkedin']['alter']['text'] = '<div class="connect-link">
-    <div class="field-linkedin-icon"></div>
-    <div class="connect-link-item">[field_prf_social_linkedin]</div>
-  </div>';
+  $handler->display->display_options['fields']['field_prf_social_linkedin']['alter']['text'] = '<div class="linked-in">[field_prf_social_linkedin]</div>';
+  $handler->display->display_options['fields']['field_prf_social_linkedin']['element_type'] = '0';
   $handler->display->display_options['fields']['field_prf_social_linkedin']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_prf_social_linkedin']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_prf_social_linkedin']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_prf_social_linkedin']['click_sort_column'] = 'url';
   /* Field: Profile: Flickr */
   $handler->display->display_options['fields']['field_prf_social_flickr']['id'] = 'field_prf_social_flickr';
@@ -395,11 +395,11 @@ function slac_profile_elements_views_default_views() {
   $handler->display->display_options['fields']['field_prf_social_flickr']['field'] = 'field_prf_social_flickr';
   $handler->display->display_options['fields']['field_prf_social_flickr']['label'] = '';
   $handler->display->display_options['fields']['field_prf_social_flickr']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_prf_social_flickr']['alter']['text'] = '<div class="connect-link">
-    <div class="field-flickr-icon"></div>
-    <div class="connect-link-item">[field_prf_social_flickr]</div>
-  </div>';
+  $handler->display->display_options['fields']['field_prf_social_flickr']['alter']['text'] = '<div class="flikr">[field_prf_social_flickr]</div>';
+  $handler->display->display_options['fields']['field_prf_social_flickr']['element_type'] = '0';
   $handler->display->display_options['fields']['field_prf_social_flickr']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_prf_social_flickr']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_prf_social_flickr']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_prf_social_flickr']['click_sort_column'] = 'url';
   /* Field: Profile: Google+ */
   $handler->display->display_options['fields']['field_prf_social_googleplus']['id'] = 'field_prf_social_googleplus';
@@ -407,11 +407,11 @@ function slac_profile_elements_views_default_views() {
   $handler->display->display_options['fields']['field_prf_social_googleplus']['field'] = 'field_prf_social_googleplus';
   $handler->display->display_options['fields']['field_prf_social_googleplus']['label'] = '';
   $handler->display->display_options['fields']['field_prf_social_googleplus']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_prf_social_googleplus']['alter']['text'] = '<div class="connect-link">
-    <div class="field-googleplus-icon"></div>
-    <div class="connect-link-item">[field_prf_social_googleplus]</div>
-  </div>';
+  $handler->display->display_options['fields']['field_prf_social_googleplus']['alter']['text'] = '<div class="goolge-plus">[field_prf_social_googleplus]</div>';
+  $handler->display->display_options['fields']['field_prf_social_googleplus']['element_type'] = '0';
   $handler->display->display_options['fields']['field_prf_social_googleplus']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_prf_social_googleplus']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_prf_social_googleplus']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_prf_social_googleplus']['click_sort_column'] = 'url';
   /* Field: User: Uid */
   $handler->display->display_options['fields']['uid']['id'] = 'uid';
