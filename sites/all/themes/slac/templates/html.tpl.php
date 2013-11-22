@@ -8,8 +8,6 @@
 <title><?php print $head_title; ?></title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width">
-<link type="text/css" rel="stylesheet" href="/sites/all/themes/slac/css/styles.css" media="all" />
-<script src="/sites/all/themes/slac/js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 <?php print $styles; ?>
 <?php print $scripts; ?>
 <!--[if lt IE 9]>

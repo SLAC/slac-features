@@ -131,6 +131,30 @@ function STARTERKIT_preprocess_block(&$variables, $hook) {
 }
 // */
 
+function slac_preprocess_html(&$variables) {
+	global $base_url;
+	
+	$element_css = array(
+	  '#tag' => 'link', 
+	  '#attributes' => array(
+	    'href' => $base_url . '/' . drupal_get_path('theme', 'slac') . '/css/styles.css',
+	    'rel' => 'stylesheet',
+	    'type' => 'text/css',
+	    'media' => 'all'
+	  ),
+	);
+	$element_modernizr = array(
+	  '#tag' => 'script', 
+	  '#attributes' => array(
+	    'src' => $base_url . '/' . drupal_get_path('theme', 'slac') . '/js/modernizr-2.6.2-respond-1.1.0.min.js'
+	  ),
+	  '#suffix' => '</script>'
+	);	
+	drupal_add_html_head($element_css, 'main_styles');
+	drupal_add_html_head($element_modernizr, 'modernizr');
+	
+}
+
 
 
 
