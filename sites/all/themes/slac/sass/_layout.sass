@@ -49,21 +49,26 @@ html
 //System user panel
 //-----------------------------------
 .pane-pane-messages
+  margin-bottom: 10px
+  
+ul.tabs, .action-links
   font-size: em(12px)
   margin-bottom: 10px
-  ul.tabs
-    @extend .clearfix
-    li
-      float: left
-      margin-right: 10px
-      a
-        background-color: $grey-a
-        padding: 6px 12px
-        color: #fff
-        display: block
-        +border-radius(10px)
-        &:hover
-          background-color: $grey-2e
+  @extend .clearfix
+  li
+    float: left
+    margin-right: 10px
+    a
+      background-color: $grey-a
+      padding: 6px 12px
+      color: #fff
+      display: block
+      +border-radius(10px)
+      &:hover
+        background-color: $grey-2e
+
+
+
 
 //User menu
 //-----------------------------------
@@ -188,7 +193,7 @@ html
         padding-left: 10px
         &:before
           content: "\e605"
-          font-family: "slac"
+          @extend .slac-font
           position: absolute
           +fontsize-rem(8px)
           left: -1px
@@ -285,7 +290,7 @@ html
     text-transform: uppercase
     margin-bottom: 13px
     padding-bottom: 7px
-    border-bottom: 3px solid
+    border-bottom: 3px solid $bg-col-1
     
   .region-grey-background-style &
     border-bottom-color: #fff

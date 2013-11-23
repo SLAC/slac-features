@@ -36,13 +36,44 @@
           color: #fff
           
   .region-grey-background-style &
-    ul
-      li
-        a
-          background-color: #fff
-  
-  
-  
+    ul li a
+      background-color: #fff
+
+
+//Blog Archive
+//-----------------------------------    
+.connect-with-me
+  @extend .clearfix
+  .twitter-link,
+  .facebook,
+  .linked-in,
+  .flikr,
+  .goolge-plus
+    float: left
+    margin-right: 10px
+    a
+      text-indent: -9000px
+      display: block
+      &:after
+        @extend .slac-font
+
+
+  .twitter-link
+    a:after
+      content: '\e610'
+  .facebook
+    a:after
+      content: '\e604'  
+  .linked-in
+    a:after
+      content: '\e602'  
+  .flikr
+    a:after
+      content: '\e610'  
+  .goolge-plus
+    a:after
+      content: '\e610'  
+
 //Blog Archive
 //-----------------------------------    
 ul.blog-archive-class
@@ -61,4 +92,4 @@ ul.blog-archive-class
         a
           
 
-
+connect-with-me
