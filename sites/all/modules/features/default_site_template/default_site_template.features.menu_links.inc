@@ -26,7 +26,7 @@ function default_site_template_menu_default_menu_links() {
     'external' => 1,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -46,
+    'weight' => -47,
   );
   // Exported menu link: menu-footer-menu:http://slac-www.wearepropeople.md/general/careers.aspx
   $menu_links['menu-footer-menu:https://www6.slac.stanford.edu/general/careers.aspx'] = array(
@@ -80,7 +80,7 @@ function default_site_template_menu_default_menu_links() {
     'external' => 1,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -47,
+    'weight' => -46,
   );
   // Exported menu link: menu-footer-menu:http://slac-www.wearepropeople.md/general/site-index.aspx
   $menu_links['menu-footer-menu:https://www6.slac.stanford.edu/general/site-index.aspx'] = array(
