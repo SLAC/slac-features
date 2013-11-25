@@ -153,6 +153,16 @@ function slac_people_permissions_user_default_permissions() {
     'module' => 'panelizer',
   );
 
+  // Exported permission: administer panels styles.
+  $permissions['administer panels styles'] = array(
+    'name' => 'administer panels styles',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'site owner' => 'site owner',
+    ),
+    'module' => 'panels',
+  );
+
   // Exported permission: administer profile types.
   $permissions['administer profile types'] = array(
     'name' => 'administer profile types',

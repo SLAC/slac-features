@@ -31,6 +31,7 @@ features[user_permission][] = administer panelizer node landing_page defaults
 features[user_permission][] = administer panelizer node landing_page layout
 features[user_permission][] = administer panelizer node landing_page overview
 features[user_permission][] = administer panelizer node landing_page settings
+features[user_permission][] = administer panels styles
 features[user_permission][] = administer profile types
 features[user_permission][] = administer profiles
 features[user_permission][] = change layouts in place editing
