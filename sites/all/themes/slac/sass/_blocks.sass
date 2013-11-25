@@ -43,36 +43,55 @@
 //Blog Archive
 //-----------------------------------    
 .connect-with-me
-  @extend .clearfix
-  .twitter-link,
-  .facebook,
-  .linked-in,
-  .flikr,
-  .goolge-plus
-    float: left
-    margin-right: 10px
-    a
-      text-indent: -9000px
-      display: block
-      &:after
-        @extend .slac-font
+  .views-row
+    @extend .clearfix
 
+    > div
+      float: left
+      margin-right: 17px
+      a
+        text-indent: -9000px
+        display: block
+        color: $grey-87
+        position: relative
+        width: 36px
+        height: 36px
+        overflow: hidden
 
-  .twitter-link
-    a:after
-      content: '\e610'
-  .facebook
-    a:after
-      content: '\e604'  
-  .linked-in
-    a:after
-      content: '\e602'  
-  .flikr
-    a:after
-      content: '\e610'  
-  .goolge-plus
-    a:after
-      content: '\e610'  
+        &:after
+          @extend .slac-font
+          position: absolute
+          top: 50%
+          left: 50%
+          margin-top: -22px
+          margin-left: -18px         
+          +fontsize-rem(35px) 
+          
+        &:hover
+          color: $red
+
+      &:last-of-type
+        margin-right: 0
+
+      &.twitter-link
+        a:after
+          content: '\e610'
+      &.facebook
+        a:after
+          content: '\e604'  
+      &.linked-in
+        a:after
+          content: '\e602'  
+          +fontsize-rem(41px)
+          margin-top: -22px
+      &.flikr
+        a:after
+          content: '\e601' 
+           
+      &.goolge-plus
+        a:after
+          content: '\e603' 
+ 
 
 //Blog Archive
 //-----------------------------------    
@@ -89,7 +108,4 @@ ul.blog-archive-class
       list-style-position: inside
       li
         margin-bottom: 9px
-        a
-          
 
-connect-with-me
