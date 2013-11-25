@@ -11,9 +11,9 @@ function default_site_template_menu_default_menu_links() {
   $menu_links = array();
 
   // Exported menu link: menu-footer-menu:http://slac-www.wearepropeople.md/content/safety-slac
-  $menu_links['menu-footer-menu:http://slac-www.wearepropeople.md/content/safety-slac'] = array(
+  $menu_links['menu-footer-menu:https://www6.slac.stanford.edu/general/safety.aspx'] = array(
     'menu_name' => 'menu-footer-menu',
-    'link_path' => 'http://slac-www.wearepropeople.md/content/safety-slac',
+    'link_path' => 'https://www6.slac.stanford.edu/general/safety.aspx',
     'router_path' => '',
     'link_title' => 'Safety',
     'options' => array(
@@ -29,9 +29,9 @@ function default_site_template_menu_default_menu_links() {
     'weight' => -46,
   );
   // Exported menu link: menu-footer-menu:http://slac-www.wearepropeople.md/general/careers.aspx
-  $menu_links['menu-footer-menu:http://slac-www.wearepropeople.md/general/careers.aspx'] = array(
+  $menu_links['menu-footer-menu:https://www6.slac.stanford.edu/general/careers.aspx'] = array(
     'menu_name' => 'menu-footer-menu',
-    'link_path' => 'http://slac-www.wearepropeople.md/general/careers.aspx',
+    'link_path' => 'https://www6.slac.stanford.edu/general/careers.aspx',
     'router_path' => '',
     'link_title' => 'Careers',
     'options' => array(
@@ -47,9 +47,9 @@ function default_site_template_menu_default_menu_links() {
     'weight' => -50,
   );
   // Exported menu link: menu-footer-menu:http://slac-www.wearepropeople.md/general/feedback.aspx
-  $menu_links['menu-footer-menu:http://slac-www.wearepropeople.md/general/feedback.aspx'] = array(
+  $menu_links['menu-footer-menu:https://www6.slac.stanford.edu/general/feedback.aspx'] = array(
     'menu_name' => 'menu-footer-menu',
-    'link_path' => 'http://slac-www.wearepropeople.md/general/feedback.aspx',
+    'link_path' => 'https://www6.slac.stanford.edu/general/feedback.aspx',
     'router_path' => '',
     'link_title' => 'Site Feedback',
     'options' => array(
@@ -65,9 +65,9 @@ function default_site_template_menu_default_menu_links() {
     'weight' => -48,
   );
   // Exported menu link: menu-footer-menu:http://slac-www.wearepropeople.md/general/privacy.aspx
-  $menu_links['menu-footer-menu:http://slac-www.wearepropeople.md/general/privacy.aspx'] = array(
+  $menu_links['menu-footer-menu:https://www6.slac.stanford.edu/general/privacy.aspx'] = array(
     'menu_name' => 'menu-footer-menu',
-    'link_path' => 'http://slac-www.wearepropeople.md/general/privacy.aspx',
+    'link_path' => 'https://www6.slac.stanford.edu/general/privacy.aspx',
     'router_path' => '',
     'link_title' => 'Privacy Policy',
     'options' => array(
@@ -83,9 +83,9 @@ function default_site_template_menu_default_menu_links() {
     'weight' => -47,
   );
   // Exported menu link: menu-footer-menu:http://slac-www.wearepropeople.md/general/site-index.aspx
-  $menu_links['menu-footer-menu:http://slac-www.wearepropeople.md/general/site-index.aspx'] = array(
+  $menu_links['menu-footer-menu:https://www6.slac.stanford.edu/general/site-index.aspx'] = array(
     'menu_name' => 'menu-footer-menu',
-    'link_path' => 'http://slac-www.wearepropeople.md/general/site-index.aspx',
+    'link_path' => 'https://www6.slac.stanford.edu/general/site-index.aspx',
     'router_path' => '',
     'link_title' => 'Site Index',
     'options' => array(

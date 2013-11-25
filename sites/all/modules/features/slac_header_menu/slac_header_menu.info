@@ -1,0 +1,10 @@
+name = SLAC Header menu
+core = 7.x
+package = SLAC
+dependencies[] = default_site_template
+dependencies[] = features
+dependencies[] = menu
+features[features_api][] = api:2
+features[menu_links][] = menu-header-menu:http://science.energy.gov/
+features[menu_links][] = menu-header-menu:http://stanford.edu/
+features[menu_links][] = menu-header-menu:https://www6.slac.stanford.edu/
