@@ -141,7 +141,7 @@ article.node-blog .links li a { display: block; }
 
 .profile-affiliation { font-size: 16px; font-size: 1rem; }
 
-.profile-name-block, .profile-block { margin-bottom: 1em; }
+.profile-name-block { margin-bottom: 1em; }
 
 .profile-info-brief .profile-name-block { margin-top: 100px; }
 
@@ -165,8 +165,9 @@ article.node-blog .links li a { display: block; }
 @media (min-width: 690px) { .site-title:after { content: "tablet"; }
   .general-left, .panel-col-first { width: 53.91566%; float: left; margin-right: 7.53012%; }
   .general-right, .panel-col-last { width: 38.55422%; float: right; margin-right: 0; }
-  .general-right, .general-left { padding-top: 47px; }
   .front .general-right, .front .general-left { padding-top: 0; }
+  .general-right { padding-top: 56px; }
+  .pane-page-content .general-left .inside > .panel-pane { margin-bottom: 25px; }
   .footer-seccond { margin-bottom: 60px; }
   .footer-seccond ul { border-bottom: 0; padding-bottom: 0; margin-bottom: 0; }
   .panel-col-last { text-align: left; }
