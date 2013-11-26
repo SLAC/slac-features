@@ -406,6 +406,66 @@ article.node-blog
   text-align: center
 
 
+//Profile detail page
+//-----------------------------------
+.view-profile-user-elements
+  +fontsize-rem(14px)
+  
+  .profile-name
+    +fontsize-rem(20px)
+    font-weight: bold
+  .profile-affiliation
+    +fontsize-rem(16px)
+  .profile-name-block
+    margin-bottom: 1em
+
+  .views-label
+    +fontsize-rem(16px)
+    font-weight: bold
+    color: $grey-6
+    margin-bottom: 3px
+    display: inline-block
+
+  p
+    line-height: 20px
+
+  .views-row-2
+    @extend .clearfix
+    margin-bottom: 23px
+  
+.views-field-field-prf-bio-education, 
+.views-field-field-prf-bio-pexp, 
+.views-field-field-prf-bio-ar,
+.views-field-field-prf-bio-ha,
+.views-field-field-prf-bio-pa,
+.views-field-field-prf-bio-pub,
+.views-field-field-prf-bio-tp
+  margin-bottom: 1em
+  display: inline-block
+  .field-content
+    padding: 25px
+    border: 2px solid $menu_bg
+    border-top-width: 6px
+    +fontsize-rem(13px)
+
+    
+.views-field-field-prf-bio-bio
+  margin-bottom: 3em
+
+
+.views-field-field-prf-contact-photo
+  border: 8px solid $bg-col-1
+  border-left-width: 10px
+  border-right-width: 10px
+  display: inline-block
+  float: left
+  margin-right: 15px
+  img
+    display: block
+
+
+//Responsive information
+//-----------------------------------
 .site-title
   position: relative
   &:after
@@ -415,7 +475,7 @@ article.node-blog
     position: absolute
     +border-radius(5px)
     color: #fff
-    font-size: em(12px)
+    +fontsize-rem(12px)
     right: 13px
     top: 55px
   

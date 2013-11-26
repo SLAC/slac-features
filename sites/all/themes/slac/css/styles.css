@@ -20,9 +20,9 @@ img { height: auto; }
 
 img, object, embed { max-width: 100%; }
 
-.clearfix, ul.tabs, .action-links, .pane-system-user-menu ul, .main-menu ul, .footer-seccond ul, .pager, article.node-blog .links, .blog-tags ul, .connect-with-me .views-row { *zoom: 1; }
-.clearfix:before, ul.tabs:before, .action-links:before, .pane-system-user-menu ul:before, .main-menu ul:before, .footer-seccond ul:before, .pager:before, article.node-blog .links:before, .blog-tags ul:before, .connect-with-me .views-row:before, .clearfix:after, ul.tabs:after, .action-links:after, .pane-system-user-menu ul:after, .main-menu ul:after, .footer-seccond ul:after, .pager:after, article.node-blog .links:after, .blog-tags ul:after, .connect-with-me .views-row:after { content: ""; display: table; }
-.clearfix:after, ul.tabs:after, .action-links:after, .pane-system-user-menu ul:after, .main-menu ul:after, .footer-seccond ul:after, .pager:after, article.node-blog .links:after, .blog-tags ul:after, .connect-with-me .views-row:after { clear: both; }
+.clearfix, ul.tabs, .action-links, .pane-system-user-menu ul, .main-menu ul, .footer-seccond ul, .pager, article.node-blog .links, .view-profile-user-elements .views-row-2, .blog-tags ul, .connect-with-me .views-row { *zoom: 1; }
+.clearfix:before, ul.tabs:before, .action-links:before, .pane-system-user-menu ul:before, .main-menu ul:before, .footer-seccond ul:before, .pager:before, article.node-blog .links:before, .view-profile-user-elements .views-row-2:before, .blog-tags ul:before, .connect-with-me .views-row:before, .clearfix:after, ul.tabs:after, .action-links:after, .pane-system-user-menu ul:after, .main-menu ul:after, .footer-seccond ul:after, .pager:after, article.node-blog .links:after, .view-profile-user-elements .views-row-2:after, .blog-tags ul:after, .connect-with-me .views-row:after { content: ""; display: table; }
+.clearfix:after, ul.tabs:after, .action-links:after, .pane-system-user-menu ul:after, .main-menu ul:after, .footer-seccond ul:after, .pager:after, article.node-blog .links:after, .view-profile-user-elements .views-row-2:after, .blog-tags ul:after, .connect-with-me .views-row:after { clear: both; }
 
 .slac-font, .footer-seccond ul li a:before, article.node-blog header h2 a:after, .connect-with-me .views-row > div a:after, .field-name-field-slideshow-btmdesc-slide .field-slideshow-controls .prev:after, .field-name-field-slideshow-btmdesc-slide .field-slideshow-controls .next:after { font-family: "slac"; font-weight: normal; font-style: normal; text-indent: 0; }
 
@@ -137,8 +137,24 @@ article.node-blog .links li a { display: block; }
 
 .panel-col-last { text-align: center; }
 
+.view-profile-user-elements { font-size: 14px; font-size: 0.875rem; }
+.view-profile-user-elements .profile-name { font-size: 20px; font-size: 1.25rem; font-weight: bold; }
+.view-profile-user-elements .profile-affiliation { font-size: 16px; font-size: 1rem; }
+.view-profile-user-elements .profile-name-block { margin-bottom: 1em; }
+.view-profile-user-elements .views-label { font-size: 16px; font-size: 1rem; font-weight: bold; color: #666666; margin-bottom: 3px; display: inline-block; }
+.view-profile-user-elements p { line-height: 20px; }
+.view-profile-user-elements .views-row-2 { margin-bottom: 23px; }
+
+.views-field-field-prf-bio-education, .views-field-field-prf-bio-pexp, .views-field-field-prf-bio-ar, .views-field-field-prf-bio-ha, .views-field-field-prf-bio-pa, .views-field-field-prf-bio-pub, .views-field-field-prf-bio-tp { margin-bottom: 1em; display: inline-block; }
+.views-field-field-prf-bio-education .field-content, .views-field-field-prf-bio-pexp .field-content, .views-field-field-prf-bio-ar .field-content, .views-field-field-prf-bio-ha .field-content, .views-field-field-prf-bio-pa .field-content, .views-field-field-prf-bio-pub .field-content, .views-field-field-prf-bio-tp .field-content { padding: 25px; border: 2px solid #e7e6d9; border-top-width: 6px; font-size: 13px; font-size: 0.8125rem; }
+
+.views-field-field-prf-bio-bio { margin-bottom: 3em; }
+
+.views-field-field-prf-contact-photo { border: 8px solid #f3f1eb; border-left-width: 10px; border-right-width: 10px; display: inline-block; float: left; margin-right: 15px; }
+.views-field-field-prf-contact-photo img { display: block; }
+
 .site-title { position: relative; }
-.site-title:after { content: "mobile general"; background: #aaaaaa; padding: 6px; position: absolute; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; color: white; font-size: 0.75em; right: 13px; top: 55px; }
+.site-title:after { content: "mobile general"; background: #aaaaaa; padding: 6px; position: absolute; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; color: white; font-size: 12px; font-size: 0.75rem; right: 13px; top: 55px; }
 
 @media (min-width: 800px) { .footer-seccond .pane-1 p, .footer-seccond .pane-2 p { display: inline; } }
 @media (min-width: 690px) { .site-title:after { content: "tablet"; }
@@ -148,13 +164,12 @@ article.node-blog .links li a { display: block; }
   .front .general-right, .front .general-left { padding-top: 0; }
   .footer-seccond { margin-bottom: 60px; }
   .footer-seccond ul { border-bottom: 0; padding-bottom: 0; margin-bottom: 0; }
-  .panel-col-last { text-align: left; } }
+  .panel-col-last { text-align: left; }
+  .views-field-field-prf-contact-photo { width: 170px; } }
 @media (min-width: 894px) { .site-title:after { content: "small desktop"; }
   .general-left, .panel-col-first { width: 64.74654%; float: left; margin-right: 5.76037%; }
   .general-right, .panel-col-last { width: 29.49309%; float: right; margin-right: 0; } }
-@media (min-width: 1200px) { .site-title:after { content: "large desktop"; }
-  .general-left, .panel-col-first { width: 65.24702%; float: left; margin-right: 4.25894%; }
-  .general-right, .panel-col-last { width: 30.49404%; float: right; margin-right: 0; } }
+@media (min-width: 1200px) { .site-title:after { content: "large desktop"; } }
 .contact-information .views-label { font-size: 0.625em; font-weight: bold; color: #222222; text-transform: uppercase; }
 .contact-information .field-content { font-size: 14px; font-size: 0.875rem; color: inherit; }
 .contact-information .views-field { margin-bottom: 11px; }
