@@ -406,68 +406,17 @@ article.node-blog
   text-align: center
 
 
-
-
-
-//RESPONSIVE--------------------------------------------------------------------------------------------------
-
-+at-breakpoint($less-than-800)
-
-  .footer-seccond 
-    .pane-1, .pane-2 
-      p
-        display: inline
-        
-+at-breakpoint($tablet)
-
-
-
-
-
-  //Content
-  //-----------------------------------
-  .general-left
-    +span-columns(8,12)
-  .general-right
-    +span-columns(4 omega,12)
-  
-  .general-right, .general-left
-    padding-top: 47px
-    .front &
-      padding-top: 0
-  
-  .panel-col-first 
-    +span-columns(8,12)
-  .panel-col-last
-    +span-columns(4 omega,12)
-
-
-  //Last footer
-  //-----------------------------------
-  .footer-seccond
-    margin-bottom: 60px
-    
-    ul
-      border-bottom: 0
-      padding-bottom: 0
-      margin-bottom: 0
-
-  .panel-col-last
-    text-align: left
-
-
-+at-breakpoint($large-desktop)
-
-
-  .page-basic
-    > .content, 
-    > .header, 
-    > .header-menu, 
-    > .main-menu, 
-    > .site-title,
-    > .footer-first,
-    > .footer-seccond
-      > .inside 
-        +container    
+.site-title
+  position: relative
+  &:after
+    content: 'mobile general'  
+    background: #aaa
+    padding: 6px
+    position: absolute
+    +border-radius(5px)
+    color: #fff
+    font-size: em(12px)
+    right: 13px
+    top: 55px
   
  

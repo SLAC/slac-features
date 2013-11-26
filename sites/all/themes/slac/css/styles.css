@@ -137,18 +137,22 @@ article.node-blog .links li a { display: block; }
 
 .panel-col-last { text-align: center; }
 
+.site-title { position: relative; }
+.site-title:after { content: "mobile general"; background: #aaaaaa; padding: 6px; position: absolute; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; color: white; font-size: 0.75em; right: 13px; top: 55px; }
+
 @media (min-width: 800px) { .footer-seccond .pane-1 p, .footer-seccond .pane-2 p { display: inline; } }
-@media (min-width: 690px) { .general-left { width: 65.24702%; float: left; margin-right: 4.25894%; }
-  .general-right { width: 30.49404%; float: right; margin-right: 0; }
+@media (min-width: 690px) { .site-title:after { content: "tablet"; }
+  .general-left, .panel-col-first { width: 65.24702%; float: left; margin-right: 4.25894%; }
+  .general-right, .panel-col-last { width: 30.49404%; float: right; margin-right: 0; }
   .general-right, .general-left { padding-top: 47px; }
   .front .general-right, .front .general-left { padding-top: 0; }
-  .panel-col-first { width: 65.24702%; float: left; margin-right: 4.25894%; }
-  .panel-col-last { width: 30.49404%; float: right; margin-right: 0; }
   .footer-seccond { margin-bottom: 60px; }
   .footer-seccond ul { border-bottom: 0; padding-bottom: 0; margin-bottom: 0; }
   .panel-col-last { text-align: left; } }
-@media (min-width: 1200px) { .page-basic > .content > .inside, .page-basic > .header > .inside, .page-basic > .header-menu > .inside, .page-basic > .main-menu > .inside, .page-basic > .site-title > .inside, .page-basic > .footer-first > .inside, .page-basic > .footer-seccond > .inside { max-width: 1174px; padding-left: 13px; padding-right: 13px; margin-left: auto; margin-right: auto; }
-  .page-basic > .content > .inside:after, .page-basic > .header > .inside:after, .page-basic > .header-menu > .inside:after, .page-basic > .main-menu > .inside:after, .page-basic > .site-title > .inside:after, .page-basic > .footer-first > .inside:after, .page-basic > .footer-seccond > .inside:after { content: ""; display: table; clear: both; } }
+@media (min-width: 894px) { .site-title:after { content: "small desktop"; }
+  .general-left, .panel-col-first { width: 69.27711%; float: left; margin-right: 7.53012%; }
+  .general-right, .panel-col-last { width: 23.19277%; float: right; margin-right: 0; } }
+@media (min-width: 1200px) { .site-title:after { content: "large desktop"; } }
 .contact-information .views-label { font-size: 0.625em; font-weight: bold; color: #222222; text-transform: uppercase; }
 .contact-information .field-content { font-size: 14px; font-size: 0.875rem; color: inherit; }
 .contact-information .views-field { margin-bottom: 11px; }

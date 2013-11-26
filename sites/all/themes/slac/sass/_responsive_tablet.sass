@@ -1,0 +1,32 @@
++at-breakpoint($tablet)
+  .site-title
+    &:after
+      content: 'tablet'  
+
+
+  //Content
+  //-----------------------------------
+  .general-left, .panel-col-first 
+    +span-columns(8,12)
+  .general-right, .panel-col-last
+    +span-columns(4 omega,12)
+  
+  .general-right, .general-left
+    padding-top: 47px
+    .front &
+      padding-top: 0
+
+
+
+  //Last footer
+  //-----------------------------------
+  .footer-seccond
+    margin-bottom: 60px
+    
+    ul
+      border-bottom: 0
+      padding-bottom: 0
+      margin-bottom: 0
+
+  .panel-col-last
+    text-align: left
