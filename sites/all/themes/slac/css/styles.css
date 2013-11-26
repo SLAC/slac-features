@@ -142,17 +142,19 @@ article.node-blog .links li a { display: block; }
 
 @media (min-width: 800px) { .footer-seccond .pane-1 p, .footer-seccond .pane-2 p { display: inline; } }
 @media (min-width: 690px) { .site-title:after { content: "tablet"; }
-  .general-left, .panel-col-first { width: 65.24702%; float: left; margin-right: 4.25894%; }
-  .general-right, .panel-col-last { width: 30.49404%; float: right; margin-right: 0; }
+  .general-left, .panel-col-first { width: 53.91566%; float: left; margin-right: 7.53012%; }
+  .general-right, .panel-col-last { width: 38.55422%; float: right; margin-right: 0; }
   .general-right, .general-left { padding-top: 47px; }
   .front .general-right, .front .general-left { padding-top: 0; }
   .footer-seccond { margin-bottom: 60px; }
   .footer-seccond ul { border-bottom: 0; padding-bottom: 0; margin-bottom: 0; }
   .panel-col-last { text-align: left; } }
 @media (min-width: 894px) { .site-title:after { content: "small desktop"; }
-  .general-left, .panel-col-first { width: 69.27711%; float: left; margin-right: 7.53012%; }
-  .general-right, .panel-col-last { width: 23.19277%; float: right; margin-right: 0; } }
-@media (min-width: 1200px) { .site-title:after { content: "large desktop"; } }
+  .general-left, .panel-col-first { width: 64.74654%; float: left; margin-right: 5.76037%; }
+  .general-right, .panel-col-last { width: 29.49309%; float: right; margin-right: 0; } }
+@media (min-width: 1200px) { .site-title:after { content: "large desktop"; }
+  .general-left, .panel-col-first { width: 65.24702%; float: left; margin-right: 4.25894%; }
+  .general-right, .panel-col-last { width: 30.49404%; float: right; margin-right: 0; } }
 .contact-information .views-label { font-size: 0.625em; font-weight: bold; color: #222222; text-transform: uppercase; }
 .contact-information .field-content { font-size: 14px; font-size: 0.875rem; color: inherit; }
 .contact-information .views-field { margin-bottom: 11px; }

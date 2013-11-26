@@ -14,7 +14,7 @@
  *   - $content['right']: Content in the right column.
  */
 ?>
-<div class="panel-display general-two-col clearfix" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
+<div class="panel-display general-two-col" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
   <div class="panel-panel general-left">
      <?php if ($content['left']): ?>
         <div class="inside"><?php print $content['left']; ?></div>
@@ -25,5 +25,4 @@
         <div class="inside"><?php print $content['right']; ?></div>
       <?php endif ?>
   </div>
-  <div class="vertical-line"></div>
 </div>

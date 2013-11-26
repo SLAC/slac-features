@@ -2,3 +2,10 @@
   .site-title
     &:after
       content: 'large desktop'  
+      
+  //Content
+  //-----------------------------------
+  .general-left, .panel-col-first 
+    +span-columns(8,12)
+  .general-right, .panel-col-last
+    +span-columns(4 omega,12)
