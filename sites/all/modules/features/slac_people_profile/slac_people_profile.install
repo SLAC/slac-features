@@ -89,7 +89,7 @@ function _slac_people_profile_install__panes($did) {
           'uid' => 'simpleuser',
         ),
         'override_title' => 1,
-        'override_title_text' => '',
+        'override_title_text' => 'Profile Overview',
       ),
       'cache' => array(),
       'style' => array(
@@ -112,7 +112,7 @@ function _slac_people_profile_install__panes($did) {
           'uid' => 'simpleuser',
         ),
         'override_title' => 1,
-        'override_title_text' => '',
+        'override_title_text' => 'Overview / Contact Information',
       ),
       'cache' => array(),
       'style' => array(
