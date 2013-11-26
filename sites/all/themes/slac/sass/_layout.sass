@@ -40,7 +40,7 @@ html
 
   > .header
     background-color: $red
-    padding: 15px 0 10px
+    padding: 10px 0 7px
   
   > .content
     margin: 35px 0
@@ -108,8 +108,8 @@ ul.tabs, .action-links
 //-----------------------------------
 .pane-page-logo
   img
-    width: 158px
-
+    //width: 158px
+    width: 115px
 
 //Main menu
 //-----------------------------------
@@ -130,7 +130,8 @@ ul.tabs, .action-links
         display: block
         padding: 0 10px
         padding-bottom: 8px
-        &.active
+      &.active-trail
+        a
           border-bottom: 2px solid $red
    
 
@@ -398,10 +399,7 @@ article.node-blog
         display: block
 
 
-.pane-page-logo
-  +span-columns(6,12)
-.pane-system-user-menu
-  +span-columns(6 omega,12)
+
 
 
 .panel-col-last
