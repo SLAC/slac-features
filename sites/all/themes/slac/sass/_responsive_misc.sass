@@ -4,3 +4,43 @@
     .pane-1, .pane-2 
       p
         display: inline
+        
+
+
++at-breakpoint($less-than-480)
+  .views-field-field-prf-contact-photo
+    float: left
+    
+  .footer-seccond
+    background-color: $grey-87
+    color: #fff
+    +fontsize-rem(10px) 
+    padding: 16px 0 7px
+    
+    ul
+      text-transform: uppercase
+      +clearfix
+      border-top: 1px solid $grey-9
+      border-bottom: 1px solid $grey-9
+      display: inline-block
+      padding-top: 8px
+      padding-bottom: 8px
+  
+      li
+        float: left
+        margin-right: 46px
+        margin-bottom: 0
+        a
+          padding: 0 0 0 10px
+          background: none
+          &:before
+            content: "\e605"
+            +slac-font
+            position: absolute
+            +fontsize-rem(8px)
+            left: -1px
+            top: 2px
+            
+          &:after
+            display: none
+
