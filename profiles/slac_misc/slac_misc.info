@@ -62,6 +62,8 @@ dependencies[] = epsacrop
 dependencies[] = entity
 dependencies[] = libraries
 
+dependencies[] = menu_trail_by_path
+
 dependencies[] = panels_mini
 dependencies[] = panels_node
 dependencies[] = panels
