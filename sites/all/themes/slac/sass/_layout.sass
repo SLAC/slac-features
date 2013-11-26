@@ -181,9 +181,12 @@ ul.tabs, .action-links
     text-transform: uppercase
     @extend .clearfix
     border-top: 1px solid $grey-9
+    border-bottom: 1px solid $grey-9
     display: inline-block
     padding-top: 8px
     margin-top: 9px
+    padding-bottom: 8px
+    margin-bottom: 9px    
     li
       float: left
       margin-right: 46px
@@ -203,7 +206,7 @@ ul.tabs, .action-links
   .pane-1, .pane-2
     display: inline
     p
-      display: inline
+      display: block
     a
       text-transform: uppercase
       font-weight: bold
@@ -392,15 +395,33 @@ article.node-blog
       a
         display: block
 
-//RESPONSIVE--------------------------------------------------------------------------------------------------
-+at-breakpoint($tablet)
-  //$breakpoint-ie-output: true
-  //$breakpoint-raw-output: true
 
-  .pane-page-logo
-    +span-columns(6,12)
-  .pane-system-user-menu
-    +span-columns(6 omega,12)
+.pane-page-logo
+  +span-columns(6,12)
+.pane-system-user-menu
+  +span-columns(6 omega,12)
+
+
+.panel-col-last
+  text-align: center
+
+
+
+
+
+//RESPONSIVE--------------------------------------------------------------------------------------------------
+
++at-breakpoint($less-than-800)
+
+  .footer-seccond 
+    .pane-1, .pane-2 
+      p
+        display: inline
+        
++at-breakpoint($tablet)
+
+
+
 
 
   //Content
@@ -425,8 +446,14 @@ article.node-blog
   //-----------------------------------
   .footer-seccond
     margin-bottom: 60px
+    
+    ul
+      border-bottom: 0
+      padding-bottom: 0
+      margin-bottom: 0
 
-
+  .panel-col-last
+    text-align: left
 
 
 +at-breakpoint($large-desktop)
