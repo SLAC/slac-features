@@ -14,7 +14,7 @@
  *   - $content['right']: Content in the right column.
  */
 ?>
-<div class="panel-display page-basic clearfix" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
+<div class="panel-display page-basic" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
 
   <div class="panel-panel basic header">
      <?php if ($content['header']): ?>
