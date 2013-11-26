@@ -20,9 +20,9 @@ img { height: auto; }
 
 img, object, embed { max-width: 100%; }
 
-.clearfix, ul.tabs, .action-links, .pane-system-user-menu ul, .main-menu ul, .footer-seccond ul, .pager, article.node-blog .links, .view-profile-user-elements .views-row-2, .blog-tags ul, .connect-with-me .views-row { *zoom: 1; }
-.clearfix:before, ul.tabs:before, .action-links:before, .pane-system-user-menu ul:before, .main-menu ul:before, .footer-seccond ul:before, .pager:before, article.node-blog .links:before, .view-profile-user-elements .views-row-2:before, .blog-tags ul:before, .connect-with-me .views-row:before, .clearfix:after, ul.tabs:after, .action-links:after, .pane-system-user-menu ul:after, .main-menu ul:after, .footer-seccond ul:after, .pager:after, article.node-blog .links:after, .view-profile-user-elements .views-row-2:after, .blog-tags ul:after, .connect-with-me .views-row:after { content: ""; display: table; }
-.clearfix:after, ul.tabs:after, .action-links:after, .pane-system-user-menu ul:after, .main-menu ul:after, .footer-seccond ul:after, .pager:after, article.node-blog .links:after, .view-profile-user-elements .views-row-2:after, .blog-tags ul:after, .connect-with-me .views-row:after { clear: both; }
+.clearfix, ul.tabs, .action-links, .pane-system-user-menu ul, .main-menu ul, .footer-seccond ul, .pager, article.node-blog .links, .profile-info-full .views-row-2, .blog-tags ul, .connect-with-me .views-row { *zoom: 1; }
+.clearfix:before, ul.tabs:before, .action-links:before, .pane-system-user-menu ul:before, .main-menu ul:before, .footer-seccond ul:before, .pager:before, article.node-blog .links:before, .profile-info-full .views-row-2:before, .blog-tags ul:before, .connect-with-me .views-row:before, .clearfix:after, ul.tabs:after, .action-links:after, .pane-system-user-menu ul:after, .main-menu ul:after, .footer-seccond ul:after, .pager:after, article.node-blog .links:after, .profile-info-full .views-row-2:after, .blog-tags ul:after, .connect-with-me .views-row:after { content: ""; display: table; }
+.clearfix:after, ul.tabs:after, .action-links:after, .pane-system-user-menu ul:after, .main-menu ul:after, .footer-seccond ul:after, .pager:after, article.node-blog .links:after, .profile-info-full .views-row-2:after, .blog-tags ul:after, .connect-with-me .views-row:after { clear: both; }
 
 .slac-font, .footer-seccond ul li a:before, article.node-blog header h2 a:after, .connect-with-me .views-row > div a:after, .field-name-field-slideshow-btmdesc-slide .field-slideshow-controls .prev:after, .field-name-field-slideshow-btmdesc-slide .field-slideshow-controls .next:after { font-family: "slac"; font-weight: normal; font-style: normal; text-indent: 0; }
 
@@ -137,13 +137,18 @@ article.node-blog .links li a { display: block; }
 
 .panel-col-last { text-align: center; }
 
-.view-profile-user-elements { font-size: 14px; font-size: 0.875rem; }
-.view-profile-user-elements .profile-name { font-size: 20px; font-size: 1.25rem; font-weight: bold; }
-.view-profile-user-elements .profile-affiliation { font-size: 16px; font-size: 1rem; }
-.view-profile-user-elements .profile-name-block { margin-bottom: 1em; }
-.view-profile-user-elements .views-label { font-size: 16px; font-size: 1rem; font-weight: bold; color: #666666; margin-bottom: 3px; display: inline-block; }
-.view-profile-user-elements p { line-height: 20px; }
-.view-profile-user-elements .views-row-2 { margin-bottom: 23px; }
+.profile-name { font-size: 20px; font-size: 1.25rem; font-weight: bold; }
+
+.profile-affiliation { font-size: 16px; font-size: 1rem; }
+
+.profile-name-block, .profile-block { margin-bottom: 1em; }
+
+.profile-info-brief .profile-name-block { margin-top: 100px; }
+
+.profile-info-full { font-size: 14px; font-size: 0.875rem; }
+.profile-info-full .views-label { font-size: 16px; font-size: 1rem; font-weight: bold; color: #666666; margin-bottom: 3px; display: inline-block; }
+.profile-info-full p { line-height: 20px; }
+.profile-info-full .views-row-2 { margin-bottom: 23px; }
 
 .views-field-field-prf-bio-education, .views-field-field-prf-bio-pexp, .views-field-field-prf-bio-ar, .views-field-field-prf-bio-ha, .views-field-field-prf-bio-pa, .views-field-field-prf-bio-pub, .views-field-field-prf-bio-tp { margin-bottom: 1em; display: inline-block; }
 .views-field-field-prf-bio-education .field-content, .views-field-field-prf-bio-pexp .field-content, .views-field-field-prf-bio-ar .field-content, .views-field-field-prf-bio-ha .field-content, .views-field-field-prf-bio-pa .field-content, .views-field-field-prf-bio-pub .field-content, .views-field-field-prf-bio-tp .field-content { padding: 25px; border: 2px solid #e7e6d9; border-top-width: 6px; font-size: 13px; font-size: 0.8125rem; }
