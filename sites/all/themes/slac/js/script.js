@@ -14,9 +14,20 @@
 
 
 // To understand behaviors, see https://drupal.org/node/756722#behaviors
-Drupal.behaviors.my_custom_behavior = {
+Drupal.behaviors.mobile_header = {
   attach: function(context, settings) {
-
+	
+	$('<div class="icon-wrapper" ><div class="menu-icon mob-icon"></div><div class="account-icon mob-icon" style="display: none"></div><div class="logout-icon mob-icon" style="display: none"></div></div><div class="mobile-account mobile-block" style="display: none"></div><div class="mobile-main-menu mobile-block" style="display: none"></div>').insertAfter('.pane-page-logo')
+	
+	var element =  $('.pane-system-user-menu')
+	
+	if ($('.pane-system-user-menu')[0]) {
+		$('.account-icon').show()
+		$('.logout-icon').show()
+	}
+	
+	//$('.pane-page-logo').parent().text('<div>')
+	
     // Place your code here.
 
   }

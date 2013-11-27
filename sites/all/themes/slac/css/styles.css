@@ -20,11 +20,13 @@ img { height: auto; }
 
 img, object, embed { max-width: 100%; }
 
+input, textarea { width: 100%; }
+
 .clearfix, ul.tabs, .action-links, .pane-system-user-menu ul, .main-menu ul, .pager, article.node-blog .links, .profile-info-full .views-row-2, .blog-tags ul, .connect-with-me .views-row { *zoom: 1; }
 .clearfix:before, ul.tabs:before, .action-links:before, .pane-system-user-menu ul:before, .main-menu ul:before, .pager:before, article.node-blog .links:before, .profile-info-full .views-row-2:before, .blog-tags ul:before, .connect-with-me .views-row:before, .clearfix:after, ul.tabs:after, .action-links:after, .pane-system-user-menu ul:after, .main-menu ul:after, .pager:after, article.node-blog .links:after, .profile-info-full .views-row-2:after, .blog-tags ul:after, .connect-with-me .views-row:after { content: ""; display: table; }
 .clearfix:after, ul.tabs:after, .action-links:after, .pane-system-user-menu ul:after, .main-menu ul:after, .pager:after, article.node-blog .links:after, .profile-info-full .views-row-2:after, .blog-tags ul:after, .connect-with-me .views-row:after { clear: both; }
 
-.slac-font, .footer-seccond ul li a:after, article.node-blog header h2 a:after, .connect-with-me .views-row > div a:after, .field-name-field-slideshow-btmdesc-slide .field-slideshow-controls .prev:after, .field-name-field-slideshow-btmdesc-slide .field-slideshow-controls .next:after { font-family: "slac"; font-weight: normal; font-style: normal; text-indent: 0; }
+.slac-font, .mob-icon:before, .footer-seccond ul li a:after, article.node-blog header h2 a:after, .connect-with-me .views-row > div a:after, .field-name-field-slideshow-btmdesc-slide .field-slideshow-controls .prev:after, .field-name-field-slideshow-btmdesc-slide .field-slideshow-controls .next:after { font-family: "slac"; font-weight: normal; font-style: normal; text-indent: 0; }
 
 @font-face { font-family: "slac"; src: url('../fonts/slac.eot'); src: url('../fonts/slac.eot?#iefix') format('eot'), url('../fonts/slac.svg#slac') format('svg'), url('../fonts/slac.woff') format('woff'), url('../fonts/slac.ttf') format('truetype'); font-weight: normal; font-style: normal; }
 
@@ -46,7 +48,7 @@ html { font-family: Arial, Helvetica, sans-serif; line-height: 1.25; -webkit-fon
 .pane-pane-messages { margin-bottom: 10px; }
 
 ul.tabs, .action-links { font-size: 0.75em; margin-bottom: 10px; }
-ul.tabs li, .action-links li { float: left; margin-right: 10px; }
+ul.tabs li, .action-links li { float: left; margin-right: 10px; margin-bottom: 10px; }
 ul.tabs li a, .action-links li a { background-color: #aaaaaa; padding: 6px 12px; color: white; display: block; -webkit-border-radius: 10px; -moz-border-radius: 10px; -ms-border-radius: 10px; -o-border-radius: 10px; border-radius: 10px; }
 ul.tabs li a:hover, .action-links li a:hover { background-color: #2e2e2e; }
 
@@ -56,6 +58,19 @@ ul.tabs li a:hover, .action-links li a:hover { background-color: #2e2e2e; }
 .pane-system-user-menu li a { font-size: 0.6875em; color: inherit; text-decoration: none; display: block; }
 
 .pane-search-form { display: none; }
+
+.pane-page-logo { width: 43.01676%; float: left; margin-right: 13.96648%; display: inline; }
+
+.icon-wrapper { width: 43.01676%; float: right; margin-right: 0; *margin-left: -50px; display: inline; text-align: right; }
+
+.pane-system-user-menu { display: none !important; width: 43.01676%; float: right; margin-right: 0; *margin-left: -50px; display: inline; }
+
+.mob-icon { width: 20px; height: 20px; position: relative; cursor: pointer; display: inline-block; color: white; font-size: 25px; font-size: 1.5625rem; margin-left: 15px; }
+.mob-icon:first-of-type { margin-left: 0; }
+.mob-icon:before { position: absolute; top: 0; left: 0; line-height: 1; }
+.mob-icon.menu-icon:before { content: "\e611"; font-size: 25px; font-size: 1.5625rem; }
+.mob-icon.account-icon:before { content: "\e612"; font-size: 20px; font-size: 1.25rem; }
+.mob-icon.logout-icon:before { content: "\e614"; font-size: 21px; font-size: 1.3125rem; }
 
 .pane-page-site-name { font-size: 2.125em; font-weight: bold; }
 .footer-first .pane-page-site-name { font-size: 0.875em; }
@@ -160,9 +175,7 @@ article.node-blog .links li a { display: block; }
 .site-title:after { content: "mobile general"; background: #aaaaaa; padding: 6px; position: absolute; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; color: white; font-size: 12px; font-size: 0.75rem; right: 13px; top: 55px; }
 
 @media (min-width: 800px) { .footer-seccond .pane-1 p, .footer-seccond .pane-2 p { display: inline; } }
-@media (min-width: 480px) { .pane-page-logo { width: 47.87053%; float: left; margin-right: 4.25894%; }
-  .pane-system-user-menu { width: 47.87053%; float: right; margin-right: 0; }
-  .views-field-field-prf-contact-photo { float: left; }
+@media (min-width: 480px) { .views-field-field-prf-contact-photo { float: left; }
   .footer-seccond { background-color: #878787; color: white; font-size: 10px; font-size: 0.625rem; padding: 16px 0 7px; }
   .footer-seccond ul { text-transform: uppercase; *zoom: 1; border-top: 1px solid #999999; border-bottom: 1px solid #999999; display: inline-block; padding-top: 8px; padding-bottom: 8px; }
   .footer-seccond ul:before, .footer-seccond ul:after { content: ""; display: table; }
@@ -173,6 +186,8 @@ article.node-blog .links li a { display: block; }
   .footer-seccond ul li a:after { display: none; } }
 @media (min-width: 690px) { .site-title:after { content: "tablet"; }
   .page-basic > .header { padding: 15px 0 10px; }
+  .icon-wrapper { display: none !important; }
+  .pane-system-user-menu { display: block !important; }
   .general-left, .panel-col-first { width: 53.91566%; float: left; margin-right: 7.53012%; }
   .general-right, .panel-col-last { width: 38.55422%; float: right; margin-right: 0; }
   .front .general-right, .front .general-left { padding-top: 0; }

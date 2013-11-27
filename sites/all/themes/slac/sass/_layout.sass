@@ -58,6 +58,7 @@ ul.tabs, .action-links
   li
     float: left
     margin-right: 10px
+    margin-bottom: 10px
     a
       background-color: $grey-a
       padding: 6px 12px
@@ -93,7 +94,50 @@ ul.tabs, .action-links
 .pane-search-form
   display: none
 
+.pane-page-logo
+  +span-columns(2,4)
+.icon-wrapper
+  +span-columns(2 omega,4)
+  text-align: right
 
+
+
+.pane-system-user-menu
+  display: none !important
+  +span-columns(2 omega,4)
+
+
+.mob-icon
+  width: 20px
+  height: 20px
+  position: relative
+  cursor: pointer
+  display: inline-block
+  color: #fff
+  +fontsize-rem(25px) 
+  margin-left: 15px
+  &:first-of-type
+    margin-left: 0
+  
+  &:before
+    position: absolute
+    @extend .slac-font
+    top: 0
+    left: 0
+    line-height: 1
+  
+  &.menu-icon 
+    &:before 
+      content: '\e611'
+      +fontsize-rem(25px) 
+  &.account-icon
+    &:before 
+      content: '\e612'
+      +fontsize-rem(20px) 
+  &.logout-icon
+    &:before 
+      content: '\e614'
+      +fontsize-rem(21px) 
 //Site name
 //-----------------------------------
 .pane-page-site-name
