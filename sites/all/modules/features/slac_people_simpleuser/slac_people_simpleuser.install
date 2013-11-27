@@ -124,8 +124,8 @@ function _slac_people_simpleuser_install__create_profile($uid) {
   $profile_media->field_prf_social_twitter = array(
     $lang => array(
       array(
-        'url' => '',
-        'title' => '#simpleuser123',
+        'url' => 'http://twiter.com/simpleuser123',
+        'title' => 'twitter.com/simpleuser123',
       )
     )
   );
