@@ -18,7 +18,7 @@ Drupal.behaviors.mobile_header = {
   attach: function(context, settings) {
 	
 	//Lets insert mobile html
-	$('<div class="icon-wrapper" ><div class="menu-icon mob-icon"></div><div class="account-icon mob-icon" style="display: none"></div><div class="logout-icon mob-icon" style="display: none"></div></div><div class="clearfix"></div><div class="mobile-main-menu mobile-block" style="display: none"></div>').insertAfter('.pane-page-logo')
+	$('<div class="icon-wrapper" ><div class="menu-icon mob-icon"></div><div class="account-icon mob-icon" style="display: none"></div><div class="logout-icon mob-icon" style="display: none"></div></div><div class="mobile-main-menu mobile-block" style="display: none"></div>').insertAfter('.pane-page-logo')
 	
 	//Click User menu link through js
 	if ($('.pane-system-user-menu')[0]) {

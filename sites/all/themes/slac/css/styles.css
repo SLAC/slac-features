@@ -20,8 +20,6 @@ img { height: auto; }
 
 img, object, embed { max-width: 100%; }
 
-input, textarea { width: 100%; }
-
 .clearfix, ul.tabs, .action-links, .pane-system-user-menu ul, .pager, article.node-blog .links, .profile-info-full .views-row-2, .blog-tags ul, .connect-with-me .views-row { *zoom: 1; }
 .clearfix:before, ul.tabs:before, .action-links:before, .pane-system-user-menu ul:before, .pager:before, article.node-blog .links:before, .profile-info-full .views-row-2:before, .blog-tags ul:before, .connect-with-me .views-row:before, .clearfix:after, ul.tabs:after, .action-links:after, .pane-system-user-menu ul:after, .pager:after, article.node-blog .links:after, .profile-info-full .views-row-2:after, .blog-tags ul:after, .connect-with-me .views-row:after { content: ""; display: table; }
 .clearfix:after, ul.tabs:after, .action-links:after, .pane-system-user-menu ul:after, .pager:after, article.node-blog .links:after, .profile-info-full .views-row-2:after, .blog-tags ul:after, .connect-with-me .views-row:after { clear: both; }
@@ -44,6 +42,7 @@ html { font-family: Arial, Helvetica, sans-serif; line-height: 1.25; -webkit-fon
 .page-basic > .content > .inside:after, .page-basic > .header > .inside:after, .page-basic > .header-menu > .inside:after, .page-basic > .main-menu > .inside:after, .page-basic > .site-title > .inside:after, .page-basic > .footer-first > .inside:after, .page-basic > .footer-seccond > .inside:after { content: ""; display: table; clear: both; }
 .page-basic > .header { background-color: #720c20; padding: 10px 0 7px; }
 .page-basic > .content { margin: 15px 0; }
+.page-basic > .content input, .page-basic > .content textarea { width: 100%; }
 .page-basic > .header-menu, .page-basic > .main-menu { display: none; }
 
 .pane-pane-messages { margin-bottom: 10px; }
@@ -53,9 +52,9 @@ ul.tabs li, .action-links li { float: left; margin-right: 10px; margin-bottom: 1
 ul.tabs li a, .action-links li a { background-color: #aaaaaa; padding: 6px 12px; color: white; display: block; -webkit-border-radius: 10px; -moz-border-radius: 10px; -ms-border-radius: 10px; -o-border-radius: 10px; border-radius: 10px; }
 ul.tabs li a:hover, .action-links li a:hover { background-color: #2e2e2e; }
 
-.mobile-main-menu { max-height: 0; -webkit-transition: all 0.5s ease-in; -moz-transition: all 0.5s ease-in; -o-transition: all 0.5s ease-in; transition: all 0.5s ease-in; margin: 7px -13px -7px -13px; background: #e7e6d9; padding: 13px; }
-.mobile-main-menu.active { display: block !important; max-height: 400px; -webkit-transition: all 0.5s ease-out; -moz-transition: all 0.5s ease-out; -o-transition: all 0.5s ease-out; transition: all 0.5s ease-out; }
-.mobile-main-menu .main-menu { background-color: #e7e6d9; padding: 8px 0 0px; text-transform: uppercase; }
+.mobile-main-menu { max-height: 0; margin: 7px -13px -7px -13px; background: #e7e6d9; padding: 13px; clear: both; border-top: 7px solid #720c20; }
+.mobile-main-menu.active { display: block !important; max-height: 400px; }
+.mobile-main-menu .main-menu { background-color: #e7e6d9; text-transform: uppercase; }
 .mobile-main-menu .main-menu ul li { display: block; margin-bottom: 5px; }
 .mobile-main-menu .main-menu ul li a { display: block; padding: 5px 13px; color: white; background-color: #aaaaaa; position: relative; }
 .mobile-main-menu .main-menu ul li a:after { content: "\3e"; position: absolute; font-size: 25px; font-size: 1.5625rem; right: 8px; top: 3px; line-height: 1; }
@@ -179,7 +178,7 @@ article.node-blog .links li a { display: block; }
 @media (min-width: 800px) { .footer-seccond .pane-1 p, .footer-seccond .pane-2 p { display: inline; } }
 @media (min-width: 480px) { .views-field-field-prf-contact-photo { float: left; }
   .footer-seccond { background-color: #878787; color: white; font-size: 10px; font-size: 0.625rem; padding: 16px 0 7px; }
-  .footer-seccond ul { text-transform: uppercase; *zoom: 1; border-top: 1px solid #999999; border-bottom: 1px solid #999999; display: inline-block; padding-top: 8px; padding-bottom: 8px; }
+  .footer-seccond ul { *zoom: 1; border-top: 1px solid #999999; border-bottom: 1px solid #999999; display: inline-block; padding-top: 8px; padding-bottom: 8px; }
   .footer-seccond ul:before, .footer-seccond ul:after { content: ""; display: table; }
   .footer-seccond ul:after { clear: both; }
   .footer-seccond ul li { float: left; margin-right: 46px; margin-bottom: 0; }

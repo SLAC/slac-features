@@ -45,7 +45,8 @@ html
   > .content
     margin: 15px 0
 
-
+    input, textarea
+      width: 100%
 
 
   > .header-menu, 
@@ -78,19 +79,21 @@ ul.tabs, .action-links
 
 .mobile-main-menu
   max-height: 0
-  +transition(all 0.5s ease-in)
+  //+transition(all 0.5s ease-in)
   margin: 7px -13px -7px -13px
   background: $menu_bg
   padding: 13px
+  clear: both
+  border-top: 7px solid $red
   &.active
     display: block !important
     max-height: 400px
-    +transition(all 0.5s ease-out)
+    //+transition(all 0.5s ease-out)
 
 
   .main-menu
     background-color: $menu_bg
-    padding: 8px 0 0px
+    //padding: 8px 0 0px
     //margin-bottom: 35px
     text-transform: uppercase
     ul
