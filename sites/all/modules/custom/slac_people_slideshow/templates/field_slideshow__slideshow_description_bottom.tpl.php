@@ -39,7 +39,14 @@ if (!isset($pager_position)) {
               <span class="field-slideshow-caption-text"><?php print $item['caption']; ?></span>
             </div>
           <?php endif; ?>
-          <?php if (isset($item['field_fcollection_description'])) : ?>
+          <?php if (isset($item['field_fcollection_description']) && isset($item['path']['path'])) : ?>
+            <div class="field-slideshow-description">
+              <a href="<?php print $item['path']['path']; ?>">
+                <?php $desc = $item['field_fcollection_description'][LANGUAGE_NONE][0]['safe_value']; ?>
+                <?php print strlen($desc) > 190 ? substr($desc, 0, 190) . '...' : $desc; ?>
+              </a>
+            </div>
+          <?php elseif (isset($item['field_fcollection_description'])) : ?>
             <div class="field-slideshow-description">
               <?php print $item['field_fcollection_description'][LANGUAGE_NONE][0]['safe_value']; ?>
             </div>
