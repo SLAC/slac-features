@@ -5,6 +5,7 @@ package = SLAC
 php = 5.2.4
 dependencies[] = image
 dependencies[] = slac_blog
+dependencies[] = textformatter
 dependencies[] = views
 dependencies[] = views_content
 features[ctools][] = views:views_default:3.0

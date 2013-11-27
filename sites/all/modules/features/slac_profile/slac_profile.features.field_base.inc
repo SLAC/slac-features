@@ -13,13 +13,10 @@ function slac_profile_field_default_field_bases() {
   // Exported field_base: 'field_prf_bio_ar'
   $field_bases['field_prf_bio_ar'] = array(
     'active' => 1,
-    'cardinality' => 1,
+    'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_prf_bio_ar',
-    'field_permissions' => array(
-      'type' => 0,
-    ),
     'foreign keys' => array(
       'format' => array(
         'columns' => array(
@@ -36,10 +33,11 @@ function slac_profile_field_default_field_bases() {
     'locked' => 0,
     'module' => 'text',
     'settings' => array(
+      'max_length' => 500,
       'profile2_private' => 0,
     ),
     'translatable' => 0,
-    'type' => 'text_long',
+    'type' => 'text',
   );
 
   // Exported field_base: 'field_prf_bio_bio'
@@ -49,9 +47,6 @@ function slac_profile_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_prf_bio_bio',
-    'field_permissions' => array(
-      'type' => 0,
-    ),
     'foreign keys' => array(
       'format' => array(
         'columns' => array(
@@ -77,13 +72,10 @@ function slac_profile_field_default_field_bases() {
   // Exported field_base: 'field_prf_bio_education'
   $field_bases['field_prf_bio_education'] = array(
     'active' => 1,
-    'cardinality' => 1,
+    'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_prf_bio_education',
-    'field_permissions' => array(
-      'type' => 0,
-    ),
     'foreign keys' => array(
       'format' => array(
         'columns' => array(
@@ -100,22 +92,20 @@ function slac_profile_field_default_field_bases() {
     'locked' => 0,
     'module' => 'text',
     'settings' => array(
+      'max_length' => 500,
       'profile2_private' => 0,
     ),
     'translatable' => 0,
-    'type' => 'text_long',
+    'type' => 'text',
   );
 
   // Exported field_base: 'field_prf_bio_ha'
   $field_bases['field_prf_bio_ha'] = array(
     'active' => 1,
-    'cardinality' => 1,
+    'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_prf_bio_ha',
-    'field_permissions' => array(
-      'type' => 0,
-    ),
     'foreign keys' => array(
       'format' => array(
         'columns' => array(
@@ -132,22 +122,20 @@ function slac_profile_field_default_field_bases() {
     'locked' => 0,
     'module' => 'text',
     'settings' => array(
+      'max_length' => 500,
       'profile2_private' => 0,
     ),
     'translatable' => 0,
-    'type' => 'text_long',
+    'type' => 'text',
   );
 
   // Exported field_base: 'field_prf_bio_pa'
   $field_bases['field_prf_bio_pa'] = array(
     'active' => 1,
-    'cardinality' => 1,
+    'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_prf_bio_pa',
-    'field_permissions' => array(
-      'type' => 0,
-    ),
     'foreign keys' => array(
       'format' => array(
         'columns' => array(
@@ -164,22 +152,20 @@ function slac_profile_field_default_field_bases() {
     'locked' => 0,
     'module' => 'text',
     'settings' => array(
+      'max_length' => 500,
       'profile2_private' => 0,
     ),
     'translatable' => 0,
-    'type' => 'text_long',
+    'type' => 'text',
   );
 
   // Exported field_base: 'field_prf_bio_pexp'
   $field_bases['field_prf_bio_pexp'] = array(
     'active' => 1,
-    'cardinality' => 1,
+    'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_prf_bio_pexp',
-    'field_permissions' => array(
-      'type' => 0,
-    ),
     'foreign keys' => array(
       'format' => array(
         'columns' => array(
@@ -196,22 +182,20 @@ function slac_profile_field_default_field_bases() {
     'locked' => 0,
     'module' => 'text',
     'settings' => array(
+      'max_length' => 500,
       'profile2_private' => 0,
     ),
     'translatable' => 0,
-    'type' => 'text_long',
+    'type' => 'text',
   );
 
   // Exported field_base: 'field_prf_bio_pub'
   $field_bases['field_prf_bio_pub'] = array(
     'active' => 1,
-    'cardinality' => 1,
+    'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_prf_bio_pub',
-    'field_permissions' => array(
-      'type' => 0,
-    ),
     'foreign keys' => array(
       'format' => array(
         'columns' => array(
@@ -228,22 +212,20 @@ function slac_profile_field_default_field_bases() {
     'locked' => 0,
     'module' => 'text',
     'settings' => array(
+      'max_length' => 500,
       'profile2_private' => 0,
     ),
     'translatable' => 0,
-    'type' => 'text_long',
+    'type' => 'text',
   );
 
   // Exported field_base: 'field_prf_bio_tp'
   $field_bases['field_prf_bio_tp'] = array(
     'active' => 1,
-    'cardinality' => 1,
+    'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_prf_bio_tp',
-    'field_permissions' => array(
-      'type' => 0,
-    ),
     'foreign keys' => array(
       'format' => array(
         'columns' => array(
@@ -260,10 +242,11 @@ function slac_profile_field_default_field_bases() {
     'locked' => 0,
     'module' => 'text',
     'settings' => array(
+      'max_length' => 500,
       'profile2_private' => 0,
     ),
     'translatable' => 0,
-    'type' => 'text_long',
+    'type' => 'text',
   );
 
   // Exported field_base: 'field_prf_contact_affiliation'

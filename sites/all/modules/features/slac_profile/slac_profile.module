@@ -5,3 +5,20 @@
  */
 
 include_once 'slac_profile.features.inc';
+
+if (module_exists('libraries') && file_exists(libraries_get_path('hideMaxListItem') . '/hideMaxListItem.js')) {
+  define('HIDE_MAX_LIST_ITEM', TRUE);
+}
+else {
+  define('HIDE_MAX_LIST_ITEM', FALSE);
+}
+
+/**
+ * Implements hook_views_pre_view().
+ */
+function slac_profile_views_pre_view(&$view, &$display_id, &$args) {
+  if ($view->name == 'profile_user_elements' && $display_id == 'panel_pane_4' && HIDE_MAX_LIST_ITEM) {
+    drupal_add_js(libraries_get_path('hideMaxListItem') . '/hideMaxListItem.js');
+    drupal_add_js(drupal_get_path('module', 'slac_profile') . '/js/slac_profile.js');
+  }
+}

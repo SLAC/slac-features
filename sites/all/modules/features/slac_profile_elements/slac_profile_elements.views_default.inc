@@ -651,41 +651,140 @@ function slac_profile_elements_views_default_views() {
   $handler->display->display_options['fields']['field_prf_bio_bio']['alter']['max_length'] = '600';
   $handler->display->display_options['fields']['field_prf_bio_bio']['alter']['more_link_text'] = 'View entire profile';
   $handler->display->display_options['fields']['field_prf_bio_bio']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_prf_bio_bio']['settings'] = array(
+    'expandText' => 'Expand »',
+    'expandPrefix' => '...',
+    'slicePoint' => '50',
+    'collapseTimer' => '',
+    'userCollapseText' => 'Collapse',
+    'userCollapsePrefix' => '',
+  );
   /* Field: Profile: Education */
   $handler->display->display_options['fields']['field_prf_bio_education']['id'] = 'field_prf_bio_education';
   $handler->display->display_options['fields']['field_prf_bio_education']['table'] = 'field_data_field_prf_bio_education';
   $handler->display->display_options['fields']['field_prf_bio_education']['field'] = 'field_prf_bio_education';
   $handler->display->display_options['fields']['field_prf_bio_education']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_prf_bio_education']['type'] = 'textformatter_list';
+  $handler->display->display_options['fields']['field_prf_bio_education']['settings'] = array(
+    'textformatter_type' => 'ul',
+    'textformatter_comma_and' => 0,
+    'textformatter_comma_full_stop' => 0,
+    'textformatter_comma_override' => 0,
+    'textformatter_separator_custom' => '',
+    'textformatter_separator_custom_tag' => 'span',
+    'textformatter_separator_custom_class' => 'textformatter-separator',
+    'textformatter_comma_tag' => 'div',
+    'textformatter_class' => 'profile-textformatter-list',
+  );
+  $handler->display->display_options['fields']['field_prf_bio_education']['delta_offset'] = '0';
   /* Field: Profile: Professional Experience */
   $handler->display->display_options['fields']['field_prf_bio_pexp']['id'] = 'field_prf_bio_pexp';
   $handler->display->display_options['fields']['field_prf_bio_pexp']['table'] = 'field_data_field_prf_bio_pexp';
   $handler->display->display_options['fields']['field_prf_bio_pexp']['field'] = 'field_prf_bio_pexp';
   $handler->display->display_options['fields']['field_prf_bio_pexp']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_prf_bio_pexp']['type'] = 'textformatter_list';
+  $handler->display->display_options['fields']['field_prf_bio_pexp']['settings'] = array(
+    'textformatter_type' => 'ul',
+    'textformatter_comma_and' => 0,
+    'textformatter_comma_full_stop' => 0,
+    'textformatter_comma_override' => 0,
+    'textformatter_separator_custom' => '',
+    'textformatter_separator_custom_tag' => 'span',
+    'textformatter_separator_custom_class' => 'textformatter-separator',
+    'textformatter_comma_tag' => 'div',
+    'textformatter_class' => 'profile-textformatter-list',
+  );
+  $handler->display->display_options['fields']['field_prf_bio_pexp']['delta_offset'] = '0';
   /* Field: Profile: Areas of Research */
   $handler->display->display_options['fields']['field_prf_bio_ar']['id'] = 'field_prf_bio_ar';
   $handler->display->display_options['fields']['field_prf_bio_ar']['table'] = 'field_data_field_prf_bio_ar';
   $handler->display->display_options['fields']['field_prf_bio_ar']['field'] = 'field_prf_bio_ar';
   $handler->display->display_options['fields']['field_prf_bio_ar']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_prf_bio_ar']['type'] = 'textformatter_list';
+  $handler->display->display_options['fields']['field_prf_bio_ar']['settings'] = array(
+    'textformatter_type' => 'ul',
+    'textformatter_comma_and' => 0,
+    'textformatter_comma_full_stop' => 0,
+    'textformatter_comma_override' => 0,
+    'textformatter_separator_custom' => '',
+    'textformatter_separator_custom_tag' => 'span',
+    'textformatter_separator_custom_class' => 'textformatter-separator',
+    'textformatter_comma_tag' => 'div',
+    'textformatter_class' => 'profile-textformatter-list',
+  );
+  $handler->display->display_options['fields']['field_prf_bio_ar']['delta_offset'] = '0';
   /* Field: Profile: Honors and Awards */
   $handler->display->display_options['fields']['field_prf_bio_ha']['id'] = 'field_prf_bio_ha';
   $handler->display->display_options['fields']['field_prf_bio_ha']['table'] = 'field_data_field_prf_bio_ha';
   $handler->display->display_options['fields']['field_prf_bio_ha']['field'] = 'field_prf_bio_ha';
   $handler->display->display_options['fields']['field_prf_bio_ha']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_prf_bio_ha']['type'] = 'textformatter_list';
+  $handler->display->display_options['fields']['field_prf_bio_ha']['settings'] = array(
+    'textformatter_type' => 'ul',
+    'textformatter_comma_and' => 0,
+    'textformatter_comma_full_stop' => 0,
+    'textformatter_comma_override' => 0,
+    'textformatter_separator_custom' => '',
+    'textformatter_separator_custom_tag' => 'span',
+    'textformatter_separator_custom_class' => 'textformatter-separator',
+    'textformatter_comma_tag' => 'div',
+    'textformatter_class' => 'profile-textformatter-list',
+  );
+  $handler->display->display_options['fields']['field_prf_bio_ha']['delta_offset'] = '0';
   /* Field: Profile: Professional Activities */
   $handler->display->display_options['fields']['field_prf_bio_pa']['id'] = 'field_prf_bio_pa';
   $handler->display->display_options['fields']['field_prf_bio_pa']['table'] = 'field_data_field_prf_bio_pa';
   $handler->display->display_options['fields']['field_prf_bio_pa']['field'] = 'field_prf_bio_pa';
   $handler->display->display_options['fields']['field_prf_bio_pa']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_prf_bio_pa']['type'] = 'textformatter_list';
+  $handler->display->display_options['fields']['field_prf_bio_pa']['settings'] = array(
+    'textformatter_type' => 'ul',
+    'textformatter_comma_and' => 0,
+    'textformatter_comma_full_stop' => 0,
+    'textformatter_comma_override' => 0,
+    'textformatter_separator_custom' => '',
+    'textformatter_separator_custom_tag' => 'span',
+    'textformatter_separator_custom_class' => 'textformatter-separator',
+    'textformatter_comma_tag' => 'div',
+    'textformatter_class' => 'profile-textformatter-list',
+  );
+  $handler->display->display_options['fields']['field_prf_bio_pa']['delta_offset'] = '0';
   /* Field: Profile: Publications */
   $handler->display->display_options['fields']['field_prf_bio_pub']['id'] = 'field_prf_bio_pub';
   $handler->display->display_options['fields']['field_prf_bio_pub']['table'] = 'field_data_field_prf_bio_pub';
   $handler->display->display_options['fields']['field_prf_bio_pub']['field'] = 'field_prf_bio_pub';
   $handler->display->display_options['fields']['field_prf_bio_pub']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_prf_bio_pub']['type'] = 'textformatter_list';
+  $handler->display->display_options['fields']['field_prf_bio_pub']['settings'] = array(
+    'textformatter_type' => 'ul',
+    'textformatter_comma_and' => 0,
+    'textformatter_comma_full_stop' => 0,
+    'textformatter_comma_override' => 0,
+    'textformatter_separator_custom' => '',
+    'textformatter_separator_custom_tag' => 'span',
+    'textformatter_separator_custom_class' => 'textformatter-separator',
+    'textformatter_comma_tag' => 'div',
+    'textformatter_class' => 'profile-textformatter-list',
+  );
+  $handler->display->display_options['fields']['field_prf_bio_pub']['delta_offset'] = '0';
   /* Field: Profile: Talks and Presentations */
   $handler->display->display_options['fields']['field_prf_bio_tp']['id'] = 'field_prf_bio_tp';
   $handler->display->display_options['fields']['field_prf_bio_tp']['table'] = 'field_data_field_prf_bio_tp';
   $handler->display->display_options['fields']['field_prf_bio_tp']['field'] = 'field_prf_bio_tp';
   $handler->display->display_options['fields']['field_prf_bio_tp']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_prf_bio_tp']['type'] = 'textformatter_list';
+  $handler->display->display_options['fields']['field_prf_bio_tp']['settings'] = array(
+    'textformatter_type' => 'ul',
+    'textformatter_comma_and' => 0,
+    'textformatter_comma_full_stop' => 0,
+    'textformatter_comma_override' => 0,
+    'textformatter_separator_custom' => '',
+    'textformatter_separator_custom_tag' => 'span',
+    'textformatter_separator_custom_class' => 'textformatter-separator',
+    'textformatter_comma_tag' => 'div',
+    'textformatter_class' => 'profile-textformatter-list',
+  );
+  $handler->display->display_options['fields']['field_prf_bio_tp']['delta_offset'] = '0';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Profile: Type */
   $handler->display->display_options['sorts']['type']['id'] = 'type';
