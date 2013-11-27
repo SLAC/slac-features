@@ -73,6 +73,7 @@ dependencies[] = paranoia
 
 dependencies[] = views
 dependencies[] = views_ui
+dependencies[] = textformatter
 
 ; Custom modules
 dependencies[] = pp_admin

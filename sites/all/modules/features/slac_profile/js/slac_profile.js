@@ -3,7 +3,7 @@
     Drupal.behaviors.slac_profile = {};
     Drupal.behaviors.slac_profile.attach = function (context, settings) {
         $('.profile-textformatter-list').hideMaxListItems({
-            'max':2,
+            'max':4,
             'speed':50,
             'moreText':'expand listings',
             'lessText':'collaps listings'
