@@ -21,7 +21,7 @@ function default_site_template_default_panels_mini() {
   $mini->contexts = array();
   $mini->relationships = array();
   $display = new panels_display();
-  $display->layout = 'twocol';
+  $display->layout = 'two_col';
   $display->layout_settings = array(
     'items' => array(
       'canvas' => array(
