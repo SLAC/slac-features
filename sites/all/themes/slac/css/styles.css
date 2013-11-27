@@ -106,6 +106,7 @@ ul.tabs li a:hover, .action-links li a:hover { background-color: #2e2e2e; }
 .footer-seccond .pane-1 p, .footer-seccond .pane-2 p { display: block; }
 .footer-seccond .pane-1 a, .footer-seccond .pane-2 a { text-transform: uppercase; font-weight: bold; }
 .footer-seccond .pane-1 p { margin-bottom: 5px; }
+.footer-seccond .general-right { text-align: center; }
 
 .pager li { float: left; font-size: 1.0625em; line-height: 14px; display: inline-block; vertical-align: middle; background-color: #f1f1f1; margin-right: 13px; }
 .pager li.pager-last, .pager li.pager-first { display: none; }
@@ -150,8 +151,6 @@ article.node-blog .field-type-text-with-summary p { line-height: 21px; margin-bo
 article.node-blog .links { padding: 10px 42px; }
 article.node-blog .links li { float: left; margin-right: 10px; }
 article.node-blog .links li a { display: block; }
-
-.panel-col-last { text-align: center; }
 
 .profile-name { font-size: 20px; font-size: 1.25rem; font-weight: bold; }
 
@@ -209,9 +208,11 @@ article.node-blog .links li a { display: block; }
   .general-left, .panel-col-first { width: 53.91566%; float: left; margin-right: 7.53012%; }
   .general-right, .panel-col-last { width: 38.55422%; float: right; margin-right: 0; }
   .front .general-right, .front .general-left { padding-top: 0; }
-  .general-right { padding-top: 56px; }
+  .content .general-right { padding-top: 56px; }
   .pane-page-content .general-left .inside > .panel-pane { margin-bottom: 25px; }
-  .footer-seccond { margin-bottom: 60px; }
+  .footer-seccond { margin-bottom: 60px; *zoom: 1; }
+  .footer-seccond:before, .footer-seccond:after { content: ""; display: table; }
+  .footer-seccond:after { clear: both; }
   .footer-seccond ul { border-bottom: 0; padding-bottom: 0; margin-bottom: 0; }
   .panel-col-last { text-align: left; }
   .views-field-field-prf-contact-photo { width: 170px; }
