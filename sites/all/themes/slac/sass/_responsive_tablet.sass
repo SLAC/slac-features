@@ -5,6 +5,53 @@
     > .main-menu
       display: block
 
+
+  //Main menu
+  //-----------------------------------
+  .main-menu
+    background-color: $menu_bg
+    padding: 8px 0 0px
+    //margin-bottom: 35px
+    text-transform: uppercase
+    ul
+      @extend .clearfix
+      li
+        float: left
+        margin: 0 25px
+        font-size: em(14px)
+        &:first-child
+          margin-left: 0
+        a
+          display: block
+          padding: 0 10px
+          padding-bottom: 8px
+        &.active-trail
+          a
+            border-bottom: 2px solid $red
+
+
+  //Header menu
+  //-----------------------------------
+  .header-menu
+    text-align: right
+    font-size: em(11px)
+    padding: 9px 0
+    ul
+      display: inline-block
+      li
+        float: left
+        a
+          color: $grey-6
+          padding: 0 13px
+          border-right: 1px solid $grey-6
+          display: block
+          text-decoration: none
+        &:last-child
+          a
+            
+            border-right: 0
+            padding-right: 0
+
   //Responsive information
   //-----------------------------------
   .site-title

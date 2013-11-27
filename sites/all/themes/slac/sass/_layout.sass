@@ -77,8 +77,46 @@ ul.tabs, .action-links
 
 
 .mobile-main-menu
+  max-height: 0
+  +transition(all 0.5s ease-in)
+  margin: 7px -13px -7px -13px
+  background: $menu_bg
+  padding: 13px
   &.active
     display: block !important
+    max-height: 400px
+    +transition(all 0.5s ease-out)
+
+
+  .main-menu
+    background-color: $menu_bg
+    padding: 8px 0 0px
+    //margin-bottom: 35px
+    text-transform: uppercase
+    ul
+
+      li
+        display: block
+        margin-bottom: 5px
+
+        a
+          display: block
+          padding: 5px 13px
+          color: #fff
+          background-color: $grey-a
+          position: relative
+          &:after
+            content: "\3e"
+            @extend .slac-font
+            position: absolute
+            +fontsize-rem(25px)
+            right: 8px
+            top: 3px
+            line-height: 1
+            
+        &.active-trail
+          a
+            background-color: $grey-87
 
 //User menu
 //-----------------------------------
@@ -117,7 +155,7 @@ ul.tabs, .action-links
 
 
 .mob-icon
-  width: 20px
+  width: 22px
   height: 20px
   position: relative
   cursor: pointer
@@ -125,8 +163,12 @@ ul.tabs, .action-links
   color: #fff
   +fontsize-rem(25px) 
   margin-left: 15px
+  +no-select 
   &:first-of-type
     margin-left: 0
+  
+  &.active
+    color: $rose
   
   &:before
     position: absolute
@@ -147,6 +189,9 @@ ul.tabs, .action-links
     &:before 
       content: '\e614'
       +fontsize-rem(21px) 
+      
+      
+      
 //Site name
 //-----------------------------------
 .pane-page-site-name
@@ -164,52 +209,10 @@ ul.tabs, .action-links
     //width: 158px
     width: 115px
 
-//Main menu
-//-----------------------------------
-.main-menu
-  background-color: $menu_bg
-  padding: 8px 0 0px
-  //margin-bottom: 35px
-  text-transform: uppercase
-  ul
-    @extend .clearfix
-    li
-      float: left
-      margin: 0 25px
-      font-size: em(14px)
-      &:first-child
-        margin-left: 0
-      a
-        display: block
-        padding: 0 10px
-        padding-bottom: 8px
-      &.active-trail
-        a
-          border-bottom: 2px solid $red
+
    
 
 
-//Header menu
-//-----------------------------------
-.header-menu
-  text-align: right
-  font-size: em(11px)
-  padding: 9px 0
-  ul
-    display: inline-block
-    li
-      float: left
-      a
-        color: $grey-6
-        padding: 0 13px
-        border-right: 1px solid $grey-6
-        display: block
-        text-decoration: none
-      &:last-child
-        a
-          
-          border-right: 0
-          padding-right: 0
 
 
 .site-title
