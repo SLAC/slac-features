@@ -17,54 +17,55 @@
 Drupal.behaviors.mobile_header = {
   attach: function(context, settings) {
 	
+	//Lets insert mobile html
 	$('<div class="icon-wrapper" ><div class="menu-icon mob-icon"></div><div class="account-icon mob-icon" style="display: none"></div><div class="logout-icon mob-icon" style="display: none"></div></div><div class="mobile-account mobile-block" style="display: none"></div><div class="mobile-main-menu mobile-block" style="display: none"></div>').insertAfter('.pane-page-logo')
 	
-
-	
-	
-	
+	//Click User menu link through js
 	if ($('.pane-system-user-menu')[0]) {
-		
-		var $acc_link 
-		var	$logout_link
-		
-		var $element =  $('.pane-system-user-menu')
-		var $link_account = $element.find('a')	
-		
-
+		var $element =  $('.pane-system-user-menu'),
+			$link_account = $element.find('a'),
+			$acc_link,
+			$logout_link
 		
 		$('.pane-system-user-menu a').each(function(){
-			
 			if($(this).attr('href') == '/user') {
 				$acc_link = this
 			}
-			
 			if($(this).attr('href') == '/user/logout') {
 				$logout_link = this
 			}			
-			
 		})
-
-				
-		console.log($acc_link)
-		
 		
 		$('.account-icon').show().click(function(){
 			$acc_link.click()
 		})
 		
-		
 		$('.logout-icon').show().click(function(){
 			$logout_link.click()
 		})
-		
-		
-		
 	}
 	
-	//$('.pane-page-logo').parent().text('<div>')
+	//Menu cloning
 	
-    // Place your code here.
+	var $cloned_main_menu = $('div.main-menu').clone(),
+		$cloned_header_menu = $('div.header-menu').clone(),
+		$mobile_wrapper = $('.mobile-main-menu')
+		
+	$mobile_wrapper.empty()
+	$mobile_wrapper.append($cloned_main_menu)
+	$mobile_wrapper.append($cloned_header_menu)
+
+	 $('.menu-icon').click(function(event){
+		 $(this).toggleClass('active')
+		 $mobile_wrapper.toggleClass('active')
+			event.stopPropagation();
+	 })
+	
+		$(document).click(function() {
+			// all dropdowns
+			$('.menu-icon, .mobile-main-menu').removeClass('active');
+		});
+
 
   }
 };

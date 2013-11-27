@@ -1,10 +1,20 @@
 +at-breakpoint($tablet)
+
+  .page-basic
+    > .header-menu, 
+    > .main-menu
+      display: block
+
   //Responsive information
   //-----------------------------------
   .site-title
     &:after
       content: 'tablet'  
-
+  
+  .mobile-main-menu
+    &.active
+      display: none !important
+  
   .page-basic
     > .header
       padding: 15px 0 10px
