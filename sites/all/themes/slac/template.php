@@ -154,7 +154,7 @@ function slac_preprocess_html(&$variables) {
   $selectivizr = array(
     '#tag' => 'script',
     '#attributes' => array(
-      'src' => $base_url . '/' . drupal_get_path('theme', 'samsung2') . '/js/selectivizr-min.js',
+      'src' => $base_url . '/' . drupal_get_path('theme', 'slac') . '/js/selectivizr-min.js',
     ),
     '#prefix' => '<!--[if lt IE 9]>',
     '#suffix' => '</script><![endif]-->',

@@ -43,7 +43,7 @@ html
     padding: 10px 0 7px
   
   > .content
-    margin: 35px 0
+    margin: 15px 0
 
 
 
@@ -117,7 +117,29 @@ ul.tabs, .action-links
         &.active-trail
           a
             background-color: $grey-87
-
+            &:after
+              content: "\e606"
+              
+  //Header menu
+  //-----------------------------------
+  .header-menu
+    text-align: center
+    font-size: em(13px)
+    padding: 10px 0 0 0
+    ul
+  
+      li
+        display: inline-block
+        margin: 0 6px
+        a
+          color: $grey-6
+          display: block
+          text-decoration: none
+          &:hover
+            color: $red
+           
+              
+              
 //User menu
 //-----------------------------------
 .pane-system-user-menu
@@ -195,8 +217,8 @@ ul.tabs, .action-links
 //Site name
 //-----------------------------------
 .pane-page-site-name
-  font-size: em(34px)
-  font-weight: bold
+  font-size: em(26px)
+
   
   .footer-first &
     font-size: em(14px)
@@ -217,7 +239,7 @@ ul.tabs, .action-links
 
 .site-title
   margin-bottom: 9px
-
+  margin: 10px 0
 
 
 //First footer
@@ -535,7 +557,7 @@ article.node-blog
 .site-title
   position: relative
   &:after
-    content: 'mobile general'  
+    //content: 'mobile general'  
     background: #aaa
     padding: 6px
     position: absolute

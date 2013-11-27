@@ -43,7 +43,7 @@ html { font-family: Arial, Helvetica, sans-serif; line-height: 1.25; -webkit-fon
 .page-basic > .content > .inside, .page-basic > .header > .inside, .page-basic > .header-menu > .inside, .page-basic > .main-menu > .inside, .page-basic > .site-title > .inside, .page-basic > .footer-first > .inside, .page-basic > .footer-seccond > .inside { max-width: 1174px; _width: 1174px; padding-left: 13px; padding-right: 13px; margin-left: auto; margin-right: auto; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; }
 .page-basic > .content > .inside:after, .page-basic > .header > .inside:after, .page-basic > .header-menu > .inside:after, .page-basic > .main-menu > .inside:after, .page-basic > .site-title > .inside:after, .page-basic > .footer-first > .inside:after, .page-basic > .footer-seccond > .inside:after { content: ""; display: table; clear: both; }
 .page-basic > .header { background-color: #720c20; padding: 10px 0 7px; }
-.page-basic > .content { margin: 35px 0; }
+.page-basic > .content { margin: 15px 0; }
 .page-basic > .header-menu, .page-basic > .main-menu { display: none; }
 
 .pane-pane-messages { margin-bottom: 10px; }
@@ -60,6 +60,11 @@ ul.tabs li a:hover, .action-links li a:hover { background-color: #2e2e2e; }
 .mobile-main-menu .main-menu ul li a { display: block; padding: 5px 13px; color: white; background-color: #aaaaaa; position: relative; }
 .mobile-main-menu .main-menu ul li a:after { content: "\3e"; position: absolute; font-size: 25px; font-size: 1.5625rem; right: 8px; top: 3px; line-height: 1; }
 .mobile-main-menu .main-menu ul li.active-trail a { background-color: #878787; }
+.mobile-main-menu .main-menu ul li.active-trail a:after { content: "\e606"; }
+.mobile-main-menu .header-menu { text-align: center; font-size: 0.8125em; padding: 10px 0 0 0; }
+.mobile-main-menu .header-menu ul li { display: inline-block; margin: 0 6px; }
+.mobile-main-menu .header-menu ul li a { color: #666666; display: block; text-decoration: none; }
+.mobile-main-menu .header-menu ul li a:hover { color: #720c20; }
 
 .pane-system-user-menu { text-align: right; color: white; }
 .pane-system-user-menu ul { list-style-type: none; display: inline-block; position: relative; top: -4px; }
@@ -82,12 +87,12 @@ ul.tabs li a:hover, .action-links li a:hover { background-color: #2e2e2e; }
 .mob-icon.account-icon:before { content: "\e612"; font-size: 20px; font-size: 1.25rem; }
 .mob-icon.logout-icon:before { content: "\e614"; font-size: 21px; font-size: 1.3125rem; }
 
-.pane-page-site-name { font-size: 2.125em; font-weight: bold; }
+.pane-page-site-name { font-size: 1.625em; }
 .footer-first .pane-page-site-name { font-size: 0.875em; }
 
 .pane-page-logo img { width: 115px; }
 
-.site-title { margin-bottom: 9px; }
+.site-title { margin-bottom: 9px; margin: 10px 0; }
 
 .footer-first { background-color: #e7e6d9; }
 
@@ -170,7 +175,7 @@ article.node-blog .links li a { display: block; }
 .views-field-field-prf-contact-photo img { display: block; }
 
 .site-title { position: relative; }
-.site-title:after { content: "mobile general"; background: #aaaaaa; padding: 6px; position: absolute; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; color: white; font-size: 12px; font-size: 0.75rem; right: 13px; top: 55px; }
+.site-title:after { background: #aaaaaa; padding: 6px; position: absolute; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; color: white; font-size: 12px; font-size: 0.75rem; right: 13px; top: 55px; }
 
 @media (min-width: 800px) { .footer-seccond .pane-1 p, .footer-seccond .pane-2 p { display: inline; } }
 @media (min-width: 480px) { .views-field-field-prf-contact-photo { float: left; }
@@ -183,6 +188,7 @@ article.node-blog .links li a { display: block; }
   .footer-seccond ul li a:before { content: "\e605"; font-family: "slac"; font-weight: normal; font-style: normal; text-indent: 0; position: absolute; font-size: 8px; font-size: 0.5rem; left: -1px; top: 2px; }
   .footer-seccond ul li a:after { display: none; } }
 @media (min-width: 690px) { .page-basic > .header-menu, .page-basic > .main-menu { display: block; }
+  .page-basic > .content { margin: 35px 0; }
   .main-menu { background-color: #e7e6d9; padding: 8px 0 0px; text-transform: uppercase; }
   .main-menu ul li { float: left; margin: 0 25px; font-size: 0.875em; }
   .main-menu ul li:first-child { margin-left: 0; }
@@ -193,7 +199,9 @@ article.node-blog .links li a { display: block; }
   .header-menu ul li { float: left; }
   .header-menu ul li a { color: #666666; padding: 0 13px; border-right: 1px solid #666666; display: block; text-decoration: none; }
   .header-menu ul li:last-child a { border-right: 0; padding-right: 0; }
+  .site-title { margin: 0 0 9px 0; }
   .site-title:after { content: "tablet"; }
+  .pane-page-site-name { font-size: 2.125em; font-weight: bold; }
   .mobile-main-menu.active { display: none !important; }
   .page-basic > .header { padding: 15px 0 10px; }
   .icon-wrapper { display: none !important; }
