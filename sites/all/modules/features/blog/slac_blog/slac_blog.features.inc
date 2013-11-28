@@ -110,8 +110,8 @@ function slac_blog_image_default_styles() {
         'module' => 'image',
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => 215,
-          'height' => 127,
+          'width' => 410,
+          'height' => 242,
         ),
         'weight' => -9,
       ),
