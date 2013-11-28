@@ -97,7 +97,7 @@ function _slac_people_frontpage_install__panes($did) {
   entity_save('field_collection_item', $field_collection_item);
   $field_collections[] = $field_collection_item;
 
-  $slideshow_panels_panes =array(
+  $frontpage_panels_panes =array(
     array(
       'did' => $did,
       'panel' => 'left',
@@ -215,8 +215,8 @@ function _slac_people_frontpage_install__panes($did) {
       'locks' => array(),
     ),
   );
-  foreach ($slideshow_panels_panes as $blog_panels_pane) {
-    drupal_write_record('panels_pane', $blog_panels_pane);
+  foreach ($frontpage_panels_panes as $frontpage_panels_pane) {
+    drupal_write_record('panels_pane', $frontpage_panels_pane);
   }
 }
 
