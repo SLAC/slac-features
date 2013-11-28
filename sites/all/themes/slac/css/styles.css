@@ -43,7 +43,7 @@ html { font-family: Arial, Helvetica, sans-serif; line-height: 1.25; -webkit-fon
 .page-basic > .header { background-color: #720c20; padding: 10px 0 7px; }
 .page-basic > .content { margin: 15px 0; }
 .page-basic > .content input, .page-basic > .content textarea { width: 100%; }
-.page-basic > .content .general-left { margin-bottom: 30px; }
+.page-basic > .content .general-right { margin-top: 30px; }
 .page-basic > .header-menu, .page-basic > .main-menu { display: none; }
 
 .pane-pane-messages { margin-bottom: 10px; }
@@ -108,6 +108,7 @@ ul.tabs li a:hover, .action-links li a:hover { background-color: #2e2e2e; }
 .footer-seccond .pane-1 p { margin-bottom: 5px; }
 .footer-seccond .general-right { text-align: center; }
 
+.pager { margin-top: 30px; }
 .pager li { float: left; font-size: 1.0625em; line-height: 14px; display: inline-block; vertical-align: middle; background-color: #f1f1f1; margin-right: 13px; }
 .pager li.pager-last, .pager li.pager-first { display: none; }
 .pager li.pager-current { background-color: #e7e6d9; padding: 14px 11px 10px; }
@@ -221,6 +222,7 @@ article.node-blog .links li a { display: block; }
   .content .general-right .panel-pane { padding: 13px 22px; }
   .general-left h2.pane-title { margin-bottom: 49px; }
   .pane-page-content .general-left .inside > .panel-pane { margin-bottom: 25px; }
+  .pane-page-content .general-left .inside > .panel-pane:last-of-type { margin-bottom: 0; }
   .footer-seccond { margin-bottom: 30px; *zoom: 1; }
   .footer-seccond:before, .footer-seccond:after { content: ""; display: table; }
   .footer-seccond:after { clear: both; }
