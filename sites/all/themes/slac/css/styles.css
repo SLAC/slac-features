@@ -195,6 +195,9 @@ article.node-blog .links li a { display: block; }
 @media (min-width: 690px) { .page-basic > .header-menu, .page-basic > .main-menu { display: block; }
   .page-basic > .content { margin: 35px 0; }
   .main-menu { background-color: #e7e6d9; padding: 8px 0 0px; text-transform: uppercase; }
+  .main-menu ul { *zoom: 1; }
+  .main-menu ul:before, .main-menu ul:after { content: ""; display: table; }
+  .main-menu ul:after { clear: both; }
   .main-menu ul li { float: left; margin: 0 25px; font-size: 0.875em; }
   .main-menu ul li:first-child { margin-left: 0; }
   .main-menu ul li a { display: block; padding: 0 10px; padding-bottom: 8px; }
