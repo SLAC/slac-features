@@ -20,5 +20,5 @@ function slac_faq_preprocess_views_view(&$vars) {
  */
 function slac_faq_form_salc_faq_node_form_alter(&$form, &$form_state, $form_id) {
   $form['title']['#title'] = t('Question');
-  $form['title']['#description'] = t('Please enter your question in the short format here');
+  $form['title']['#description'] = t('Please enter your question in the short format here.');
 }

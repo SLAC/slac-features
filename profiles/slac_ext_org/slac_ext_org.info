@@ -48,6 +48,9 @@ dependencies[] = token
 dependencies[] = pathauto
 dependencies[] = jreject
 dependencies[] = googleanalytics
+dependencies[] = panelizer
+dependencies[] = profile2
+
 
 
 ;Development modules
@@ -112,15 +115,20 @@ dependencies[] = slac_rss_block
 dependencies[] = default_site_template
 dependencies[] = slac_social_media_block
 
+; Profile.
+dependencies[] = pp_profile
+dependencies[] = slac_profile
+
 ;Custom modules
 dependencies[] = slac_site_variables
 dependencies[] = slac_social_media
 dependencies[] = slac_block_style
 dependencies[] = slac_profile_base
+dependencies[] = slac_people_slideshow
 
 dependencies[] = slac_form_building
 
-dependencies[] = slac_faq
+;dependencies[] = slac_faq
 ;dependencies[] = slac_faq_demo
 
 dependencies[] = slac_kb_article
@@ -132,9 +140,12 @@ dependencies[] = slac_news
 dependencies[] = slac_blog
 ;dependencies[] = slac_blog_demo
 
-dependencies[] = slac_event
+;dependencies[] = slac_event
 ;dependencies[] = slac_event_demo
 
 dependencies[] = slac_service_catalog
 ;dependencies[] = slac_service_catalog_demo
 dependencies[] = slac_service_help
+
+;Landing page content type
+dependencies[] = landing_page

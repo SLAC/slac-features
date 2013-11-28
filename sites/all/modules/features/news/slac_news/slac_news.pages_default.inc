@@ -21,7 +21,7 @@ function slac_news_default_page_manager_pages() {
     'type' => 'normal',
     'title' => 'News',
     'name' => 'main-menu',
-    'weight' => '5',
+    'weight' => '9',
     'parent' => array(
       'type' => 'none',
       'title' => '',

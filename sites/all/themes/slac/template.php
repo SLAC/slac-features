@@ -167,49 +167,6 @@ function slac_preprocess_html(&$variables) {
 	
 }
 
-function slac_preprocess_node(&$variables, $hook) {
-  $variables['unpublished'] = (!$variables['status']) ? TRUE : FALSE;
-  $user = user_load($variables['uid']);
-  $username = $user->name;
-
-  // Unset links like "add comment", "read more" etc. for teaser.
-  if ($variables['node']->type == 'blog' && $variables['teaser'] == TRUE && isset($variables['content']['links'])) {
-    unset($variables['content']['links']);
-  }
-  elseif ($variables['node']->type == 'blog' && isset($variables['content']['links']['blog'])) {
-    unset($variables['content']['links']['blog']);
-  }
-
-  // Load full user name from profile2 field.
-  if (profile2_by_uid_load($variables['node']->uid, 'contact') && $variables['node']->type == 'blog') {
-    $contact_profile = profile2_by_uid_load($variables['node']->uid, 'contact');
-    if (isset($contact_profile->field_prf_contact_name[LANGUAGE_NONE][0]['value'])) {
-      $username = $contact_profile->field_prf_contact_name[LANGUAGE_NONE][0]['value'];
-    }
-  }
-
-  // Display username as a link to the Profile page.
-  $username = '<a class="username" datatype="" property="foaf:name" typeof="sioc:UserAccount" about="/profile" xml:lang="" title="View user profile." href="/profile">' . $username . '</a>';
-
-  $variables['pubdate'] = '<time pubdate datetime="' . format_date($variables['node']->created, 'custom', 'c') . '">' . format_date($variables['created'], 'custom', 'l, F j, Y') . '</time>';
-  if ($variables['display_submitted']) {
-    $variables['submitted'] = t('Posted by !username on !datetime', array('!username' => $username, '!datetime' => $variables['pubdate']));
-  }
-
-  // Add a class for the view mode.
-  if (!$variables['teaser']) {
-    $variables['classes_array'][] = 'view-mode-' . $variables['view_mode'];
-  }
-
-  // Add a class to show node is authored by current user.
-  if ($variables['uid'] && $variables['uid'] == $GLOBALS['user']->uid) {
-    $variables['classes_array'][] = 'node-by-viewer';
-  }
-
-  $variables['title_attributes_array']['class'][] = 'node__title';
-  $variables['title_attributes_array']['class'][] = 'node-title';
-}
-
 function slac_menu_link(array $variables) {
   $element = $variables['element'];
   $original_link = $element['#original_link'];

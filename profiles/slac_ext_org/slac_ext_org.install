@@ -23,12 +23,17 @@ function slac_ext_org_install_tasks($install_state) {
 function slac_ext_org_install_task_demo_content() {
   module_enable(
     array(
+      'slac_faq',
       'slac_faq_demo',
-      'slac_blog_demo',
+      'slac_event',
       'slac_event_demo',
       'slac_news_demo',
       'slac_service_catalog_demo',
       'slac_kb_demo',
+      'slac_blog_demo',
+      'slac_admin_modules',
+      'slac_ext_org_frontpage',
+      'slac_site_404',
     )
   );
 }

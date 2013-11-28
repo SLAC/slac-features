@@ -2,3 +2,4 @@ name = SLAC People frontpage
 core = 7.x
 package = SLAC
 dependencies[] = panelizer
+dependencies[] = slac_people_slideshow
