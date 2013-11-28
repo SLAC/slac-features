@@ -517,7 +517,8 @@ article.node-blog
     +fontsize-rem(16px)
     font-weight: bold
     color: $grey-6
-    margin-bottom: 3px
+    margin-bottom: 5px
+    padding-left: 3px
     display: inline-block
 
   p
@@ -526,6 +527,50 @@ article.node-blog
   .views-row-2
     @extend .clearfix
     margin-bottom: 23px
+
+  .profile-textformatter-list
+    list-style-type: disc
+    padding-left: 17px
+    li
+      margin-bottom: 17px
+      overflow: visible !important
+
+  .profile-maxlist-more
+    line-height: inherit
+    float: right
+    position: relative
+    
+    a
+      $experimental-support-for-svg: true
+      +background(linear-gradient(top, #fcfcfc 0%,#ededed 100%))
+      +filter-gradient(#fcfcfc, #ededed, vertical)      
+      color: $grey-47
+      padding: 8px 15px 5px 47px
+      
+      display: inline-block
+      +fontsize-rem(11px)
+      
+    .expand-collapse-icon 
+      position: absolute
+      left: 14px
+      top: 50%      
+      margin-top: -10px
+
+      &:before
+        @extend .slac-font
+        
+        +fontsize-rem(20px) 
+           
+      &.collapsed-list
+        &:before
+          content: '\e615'    
+
+      &.expanded-list  
+        &:before
+          content: '\e616'
+
+
+    
   
 .views-field-field-prf-bio-education, 
 .views-field-field-prf-bio-pexp, 
@@ -535,9 +580,10 @@ article.node-blog
 .views-field-field-prf-bio-pub,
 .views-field-field-prf-bio-tp
   margin-bottom: 1em
-  display: inline-block
+  display: block
+  @extend .clearfix
   .field-content
-    padding: 25px
+    padding: 25px 25px 8px 25px
     border: 2px solid $menu_bg
     border-top-width: 6px
     +fontsize-rem(13px)
