@@ -48,7 +48,10 @@ html
     input, textarea
       width: 100%
 
-
+    .general-left
+      margin-bottom: 30px
+  
+  
   > .header-menu, 
   > .main-menu
     display: none
@@ -116,9 +119,7 @@ ul.tabs, .action-links
             right: 8px
             top: 3px
             line-height: 1
-            
-        &.active-trail
-          a
+          &.active-trail, &.active
             background-color: $grey-87
             &:after
               content: "\e606"
@@ -344,10 +345,11 @@ ul.tabs, .action-links
   h2.pane-title
     color: $grey-3
     border-bottom: 3px solid $bg-col-1
-    margin-bottom: 49px
+    margin-bottom: 30px
     padding-bottom: 5px
 
 
+    
 
 //Right site blocks
 //-----------------------------------
@@ -362,7 +364,7 @@ ul.tabs, .action-links
   .general-right &
     
     margin-bottom: 35px
-    padding: 13px 22px
+    //padding: 13px 22px
     &:last-of-type
       margin-bottom: 0
 
@@ -386,10 +388,16 @@ ul.tabs, .action-links
 
 
 
-
+.view-blog-page
+  .views-row
+    margin-bottom: 25px
+    &:last-of-type
+      margin-bottom: 0    
+      
+      
 article.node-blog
   background-color: $grey-f1
-  margin-bottom: 51px
+  
   +fontsize-rem(14px) 
 
   .separator
@@ -402,7 +410,7 @@ article.node-blog
       a
         color: $red
         display: block
-        padding: 13px 40px 9px
+        padding: 13px 35px 9px 13px
         position: relative
         &:after
           content: '\e608'
@@ -421,7 +429,7 @@ article.node-blog
         
     .submitted
       +fontsize-rem(12px) 
-      padding: 9px 42px 7px
+      padding: 9px 13px 7px
       font-style: italic
       color: $grey-87
       a
@@ -439,23 +447,17 @@ article.node-blog
           display: inline-block
         
   .blog-wrapper
-    display: table
-    padding: 14px 42px
+    
+    padding: 13px
     +fontsize-rem(14px) 
-    > .field
-      vertical-align: top
+
     
     h2
       font-size: inherit
     
   .field-name-field-slac-blog-image
-    width: 215px
-    display: table-cell
-    padding-right: 35px
-    box-sizing: content-box
-    vertical-align: top        
-    top: 5px
-    position: relative
+    margin-bottom: 10px
+    
     a
       border: 3px solid #fff
       display: block

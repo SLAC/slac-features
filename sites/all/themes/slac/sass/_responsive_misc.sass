@@ -1,10 +1,8 @@
-+at-breakpoint($less-than-800)
++at-breakpoint($less-than-320)            
 
-  .footer-seccond 
-    .pane-1, .pane-2 
-      p
-        display: inline
-        
+
+
+
 
 
 +at-breakpoint($less-than-480)
@@ -28,7 +26,7 @@
       +clearfix
       border-top: 1px solid $grey-9
       border-bottom: 1px solid $grey-9
-      display: inline-block
+      display: block
       padding-top: 8px
       padding-bottom: 8px
   
@@ -49,4 +47,21 @@
             
           &:after
             display: none
+
+  article.node-blog
+    .field-name-field-slac-blog-image
+      float: left
+      margin-right: 25px
+      width: 215px
+    .blog-wrapper            
+      +clearfix
+      
+      
++at-breakpoint($less-than-800)
+
+  .footer-seccond 
+    .pane-1, .pane-2 
+      p
+        display: inline
+        
 

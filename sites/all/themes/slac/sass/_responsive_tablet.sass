@@ -26,8 +26,7 @@
           display: block
           padding: 0 10px
           padding-bottom: 8px
-        &.active-trail
-          a
+          &.active-trail, &.active
             border-bottom: 2px solid $red
 
 
@@ -84,9 +83,9 @@
   //Content
   //-----------------------------------
   .general-left, .panel-col-first 
-    +span-columns(4,7)
+    +span-columns(8,12)
   .general-right, .panel-col-last
-    +span-columns(3 omega,7)
+    +span-columns(4 omega,12)
   
   .general-right, .general-left
     //padding-top: 47px
@@ -95,6 +94,15 @@
   .general-right
     .content &
       padding-top: 56px
+
+      .panel-pane
+        padding: 13px 22px
+
+
+  .general-left
+    h2.pane-title
+      margin-bottom: 49px
+
 
   .pane-page-content
     .general-left    
@@ -105,7 +113,7 @@
   //Last footer
   //-----------------------------------
   .footer-seccond
-    margin-bottom: 60px
+    margin-bottom: 30px
     +clearfix
     ul
       border-bottom: 0
