@@ -35,11 +35,11 @@ function slac_blog_preprocess_node(&$variables, $hook) {
       if (isset($contact_profile->field_prf_contact_name[LANGUAGE_NONE][0]['value'])) {
         $username = $contact_profile->field_prf_contact_name[LANGUAGE_NONE][0]['value'];
       }
+
+      // Display username as a link to the Profile page.
+      $username = '<a class="username" datatype="" property="foaf:name" typeof="sioc:UserAccount" about="/profile" xml:lang="" title="View user profile." href="/profile">' . $username . '</a>';
     }
   }
-
-  // Display username as a link to the Profile page.
-  $username = '<a class="username" datatype="" property="foaf:name" typeof="sioc:UserAccount" about="/profile" xml:lang="" title="View user profile." href="/profile">' . $username . '</a>';
 
   $variables['pubdate'] = '<time pubdate datetime="' . format_date($variables['node']->created, 'custom', 'c') . '">' . format_date($variables['created'], 'custom', 'l, F j, Y') . '</time>';
   if ($variables['display_submitted']) {

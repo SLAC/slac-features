@@ -51,6 +51,17 @@ function slac_people_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: access user profiles.
+  $permissions['access user profiles'] = array(
+    'name' => 'access user profiles',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'user',
+  );
+
   // Exported permission: administer content types.
   $permissions['administer content types'] = array(
     'name' => 'administer content types',
