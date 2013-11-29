@@ -299,6 +299,12 @@ ul.tabs, .action-links
   .general-right
     text-align: center
 
++at-breakpoint($less-than-800)
+  .footer-seccond 
+    .pane-1, .pane-2 
+      p
+        display: inline
+
 
 //Pagination
 //-----------------------------------
@@ -397,94 +403,141 @@ ul.tabs, .action-links
       
       
 article.node-blog
-  background-color: $grey-f1
-  
-  +fontsize-rem(14px) 
 
-  .separator
-    border-bottom: 3px solid #fff
-
-  header 
-    h2
-      font-size: em(20px)
-      padding: 0
-      a
-        color: $red
-        display: block
-        padding: 13px 35px 9px 13px
-        position: relative
-        &:after
-          content: '\e608'
-          @extend .slac-font
-          position: absolute
-          right: 3px
-          top: 50%
-          margin-top: -17px
-          +fontsize-rem(30px)
-          color: $normal-arrow
-        &:hover
-          background-color: $menu_bg
-          &:after
-            color: $red
-            
-        
-    .submitted
-      +fontsize-rem(12px) 
-      padding: 9px 13px 7px
-      font-style: italic
-      color: $grey-87
-      a
-        color: $rose
-        position: relative
-        &:after
-          position: absolute
-          width: 100%
-          border-bottom: 1px dashed
-          bottom: 0
-          left: 0
-          display: none
-          content: ''
-        &:hover:after
-          display: inline-block
-        
-  .blog-wrapper
-    
-    padding: 13px
-    +fontsize-rem(14px) 
-
-    
-    h2
-      font-size: inherit
-    
-  .field-name-field-slac-blog-image
-    margin-bottom: 10px
-    
+  .submitted
+    font-style: italic
+    color: $grey-87
     a
-      border: 3px solid #fff
-      display: block
-      +box-shadow(0px 0px 0px 3px #f3f2eb ) 
-    img
-      display: block
+      color: $rose
+      position: relative
+      &:after
+        position: absolute
+        width: 100%
+        border-bottom: 1px dashed
+        bottom: 0
+        left: 0
+        display: none
+        content: ''
+      &:hover:after
+        display: inline-block
 
 
-  .field-type-text-with-summary
-    color: $grey-47
-    p
-      line-height: 21px
-      margin-bottom: 5px
+  &.view-mode-full
+    header 
+      h2
 
 
-  .links
-    padding: 10px 42px
-    @extend .clearfix 
-    li
-      float: left
-      margin-right: 10px
+
+  &.node-teaser
+    background-color: $grey-f1
+    
+    +fontsize-rem(14px) 
+  
+    .separator
+      border-bottom: 3px solid #fff
+  
+    header 
+      h2
+        font-size: em(20px)
+        padding: 0
+        a
+          color: $red
+          display: block
+          padding: 13px 35px 9px 13px
+          position: relative
+          &:after
+            content: '\e608'
+            @extend .slac-font
+            position: absolute
+            right: 3px
+            top: 50%
+            margin-top: -17px
+            +fontsize-rem(30px)
+            color: $normal-arrow
+          &:hover
+            background-color: $menu_bg
+            &:after
+              color: $red
+              
+          
+      .submitted
+        padding: 9px 13px 7px
+        +fontsize-rem(12px) 
+          
+    .blog-wrapper
+      
+      padding: 13px
+      +fontsize-rem(14px) 
+  
+      
+      h2
+        font-size: inherit
+      
+    .field-name-field-slac-blog-image
+      margin-bottom: 10px
+      
       a
+        border: 3px solid #fff
         display: block
+        +box-shadow(0px 0px 0px 3px #f3f2eb ) 
+      img
+        display: block
+  
+  
+    .field-type-text-with-summary
+      color: $grey-47
+      p
+        line-height: 21px
+        margin-bottom: 5px
+  
+  
+    .links
+      padding: 10px 42px
+      @extend .clearfix 
+      li
+        float: left
+        margin-right: 10px
+        a
+          display: block
+          
++at-breakpoint($less-than-480)
+  article.node-blog
+    &.node-teaser
+      .field-name-field-slac-blog-image
+        float: left
+        margin-right: 25px
+        width: 215px
+      .blog-wrapper            
+        +clearfix
 
-
-
++at-breakpoint($large-desktop)
+  article.node-blog
+    &.node-teaser
+      header
+        h2
+          a
+            padding: 13px 40px 9px    
+ 
+        .submitted
+          padding: 9px 42px 7px    
+                       
+      .blog-wrapper
+        display: table
+        padding: 14px 42px
+        +fontsize-rem(14px) 
+        > .field
+          vertical-align: top
+    
+        
+      .field-name-field-slac-blog-image
+        width: 215px
+        display: table-cell
+        padding-right: 35px
+        +box-sizing(content-box)
+        vertical-align: top        
+        top: 5px
+        position: relative
+        float: none
 
 
 

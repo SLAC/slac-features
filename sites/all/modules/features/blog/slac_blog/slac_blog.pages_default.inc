@@ -470,7 +470,7 @@ function slac_blog_default_page_manager_handlers() {
       'view_mode' => 'full',
       'context' => 'argument_entity_id:node_1',
       'override_title' => 1,
-      'override_title_text' => '%node:title',
+      'override_title_text' => 'Blog post',
     );
     $pane->cache = array();
     $pane->style = array(
