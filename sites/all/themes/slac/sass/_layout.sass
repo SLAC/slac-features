@@ -407,6 +407,7 @@ article.node-blog
   .submitted
     font-style: italic
     color: $grey-87
+    
     a
       color: $rose
       position: relative
@@ -426,9 +427,41 @@ article.node-blog
     header 
       margin-bottom: 25px
       h2
+        +fontsize-rem(20px)
 
+    .submitted
+      margin-top: 5px
+      font-size: 14px
+        
+    .blog-wrapper
+      +fontsize-rem(14px)
 
+      h2
+        +fontsize-rem(16px)
+        margin-bottom: 5px
+        margin-top: 15px
+      h3
+        +fontsize-rem(14px)
+        font-weight: bold
 
+    .field-name-field-slac-blog-image
+      margin-bottom: 10px
+      
+    .field-type-text-with-summary  
+      p
+        margin-bottom: 5px
+        line-height: 20px
+      
+      ul, ol
+        list-style-type: disc
+        padding-left: 20px
+        margin-bottom: 10px
+        li
+          line-height: 20px
+          margin-bottom: 5px
+        
+      
+      
   &.node-teaser
     background-color: $grey-f1
     
