@@ -12,7 +12,7 @@
             var more = $(this).find('p.maxlist-more');
             if ($(this).find('p.maxlist-more a').length > 0) {
                 more.hide();
-                $('<p class="profile-maxlist-more"><span class="expand-collapse-icon collapsed-list"></span><a href="#">expand listings</a></p>').insertAfter(this);
+                $('<p class="profile-maxlist-more"><a class="expand-collapse-icon collapsed-list" href="#">expand listings</a></p>').insertAfter(this);
             }
         })
         $('.profile-info-full p.profile-maxlist-more a').click(function(e) {
@@ -20,12 +20,12 @@
             var original_link = $(this).parent().parent().find('p.maxlist-more a');
             original_link.click();
             if (original_link.text() == 'collaps listings') {
-                $(this).parent().find('span.expand-collapse-icon').addClass('expanded-list');
-                $(this).parent().find('span.expand-collapse-icon').removeClass('collapsed-list');
+                $(this).parent().find('.expand-collapse-icon').toggleClass('collapsed-list');
+                //$(this).parent().find('.expand-collapse-icon').removeClass();
             }
             else {
-                $(this).parent().find('span.expand-collapse-icon').addClass('collapsed-list');
-                $(this).parent().find('span.expand-collapse-icon').removeClass('expanded-list');
+                $(this).parent().find('.expand-collapse-icon').toggleClass('collapsed-list');
+                //$(this).parent().find('.expand-collapse-icon').removeClass('expanded-list');
             }
             $(this).text(original_link.text());
         })

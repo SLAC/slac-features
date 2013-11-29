@@ -45,7 +45,7 @@ html
   > .content
     margin: 15px 0
 
-    input, textarea
+    input[type='text'], input[type='password'], textarea
       width: 100%
 
     .general-right
@@ -424,6 +424,7 @@ article.node-blog
 
   &.view-mode-full
     header 
+      margin-bottom: 25px
       h2
 
 
@@ -590,8 +591,7 @@ article.node-blog
 
   .profile-maxlist-more
     line-height: inherit
-    float: right
-    position: relative
+    text-align: right  
     
     a
       $experimental-support-for-svg: true
@@ -602,25 +602,23 @@ article.node-blog
       
       display: inline-block
       +fontsize-rem(11px)
+      position: relative
       
-    .expand-collapse-icon 
-      position: absolute
-      left: 14px
-      top: 50%      
-      margin-top: -10px
-
       &:before
+        position: absolute
         @extend .slac-font
-        
+        left: 14px
+        top: 50%      
+        margin-top: -10px        
         +fontsize-rem(20px) 
-           
+        content: '\e616'   
+        
       &.collapsed-list
         &:before
           content: '\e615'    
+  
 
-      &.expanded-list  
-        &:before
-          content: '\e616'
+          
 
 
     
