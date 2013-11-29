@@ -209,6 +209,11 @@ function slac_profile_elements_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['inline'] = array(
+    'field_prf_contact_title' => 'field_prf_contact_title',
+    'field_prf_contact_affiliation' => 'field_prf_contact_affiliation',
+  );
+  $handler->display->display_options['row_options']['separator'] = ',';
   $handler->display->display_options['row_options']['hide_empty'] = TRUE;
   /* Field: Profile: Profile ID */
   $handler->display->display_options['fields']['pid']['id'] = 'pid';
@@ -467,6 +472,18 @@ function slac_profile_elements_views_default_views() {
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['inline'] = array(
+    'field_prf_contact_title' => 'field_prf_contact_title',
+    'field_prf_contact_affiliation' => 'field_prf_contact_affiliation',
+  );
+  $handler->display->display_options['row_options']['separator'] = ',';
+  $handler->display->display_options['row_options']['hide_empty'] = TRUE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['footer'] = FALSE;
   /* Footer: Global: Text area */
   $handler->display->display_options['footer']['area']['id'] = 'area';
@@ -488,6 +505,7 @@ function slac_profile_elements_views_default_views() {
   $handler->display->display_options['fields']['field_prf_contact_photo']['field'] = 'field_prf_contact_photo';
   $handler->display->display_options['fields']['field_prf_contact_photo']['label'] = '';
   $handler->display->display_options['fields']['field_prf_contact_photo']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_prf_contact_photo']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_prf_contact_photo']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_prf_contact_photo']['settings'] = array(
     'image_style' => 'profile_home_user_image',
@@ -498,8 +516,10 @@ function slac_profile_elements_views_default_views() {
   $handler->display->display_options['fields']['field_prf_contact_name']['table'] = 'field_data_field_prf_contact_name';
   $handler->display->display_options['fields']['field_prf_contact_name']['field'] = 'field_prf_contact_name';
   $handler->display->display_options['fields']['field_prf_contact_name']['label'] = '';
-  $handler->display->display_options['fields']['field_prf_contact_name']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_prf_contact_name']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_prf_contact_name']['element_wrapper_type'] = 'div';
+  $handler->display->display_options['fields']['field_prf_contact_name']['element_wrapper_class'] = 'profile-name';
+  $handler->display->display_options['fields']['field_prf_contact_name']['hide_empty'] = TRUE;
   /* Field: Profile: Title */
   $handler->display->display_options['fields']['field_prf_contact_title']['id'] = 'field_prf_contact_title';
   $handler->display->display_options['fields']['field_prf_contact_title']['table'] = 'field_data_field_prf_contact_title';
@@ -507,28 +527,17 @@ function slac_profile_elements_views_default_views() {
   $handler->display->display_options['fields']['field_prf_contact_title']['label'] = '';
   $handler->display->display_options['fields']['field_prf_contact_title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_prf_contact_title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_prf_contact_title']['hide_empty'] = TRUE;
   /* Field: Profile: Affiliation */
   $handler->display->display_options['fields']['field_prf_contact_affiliation']['id'] = 'field_prf_contact_affiliation';
   $handler->display->display_options['fields']['field_prf_contact_affiliation']['table'] = 'field_data_field_prf_contact_affiliation';
   $handler->display->display_options['fields']['field_prf_contact_affiliation']['field'] = 'field_prf_contact_affiliation';
   $handler->display->display_options['fields']['field_prf_contact_affiliation']['label'] = '';
-  $handler->display->display_options['fields']['field_prf_contact_affiliation']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_prf_contact_affiliation']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['field_prf_contact_affiliation']['alter']['text'] = '[field_prf_contact_title], [field_prf_contact_affiliation]';
+  $handler->display->display_options['fields']['field_prf_contact_affiliation']['element_label_type'] = 'div';
+  $handler->display->display_options['fields']['field_prf_contact_affiliation']['element_label_class'] = 'profile-affiliation';
   $handler->display->display_options['fields']['field_prf_contact_affiliation']['element_label_colon'] = FALSE;
-  /* Field: Name and affiliation */
-  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['table'] = 'views';
-  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['ui_name'] = 'Name and affiliation';
-  $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="profile-block">
-<div class="profile-name">[field_prf_contact_name]</div>
-<div class="profile-affiliation">[field_prf_contact_affiliation]</div>
-</div>';
-  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['nothing']['element_wrapper_type'] = 'div';
-  $handler->display->display_options['fields']['nothing']['element_wrapper_class'] = 'name-affiliation';
   /* Field: Profile: Bio */
   $handler->display->display_options['fields']['field_prf_bio_bio']['id'] = 'field_prf_bio_bio';
   $handler->display->display_options['fields']['field_prf_bio_bio']['table'] = 'field_data_field_prf_bio_bio';
@@ -538,6 +547,8 @@ function slac_profile_elements_views_default_views() {
   $handler->display->display_options['fields']['field_prf_bio_bio']['alter']['more_link_text'] = 'View entire profile';
   $handler->display->display_options['fields']['field_prf_bio_bio']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['field_prf_bio_bio']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_prf_bio_bio']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_prf_bio_bio']['type'] = 'text_plain';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Profile: Type */
   $handler->display->display_options['sorts']['type']['id'] = 'type';
@@ -547,12 +558,22 @@ function slac_profile_elements_views_default_views() {
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Profile: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'profile';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'bio' => 'bio',
+    'contact' => 'contact',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
   /* Filter criterion: User: Name */
   $handler->display->display_options['filters']['uid']['id'] = 'uid';
   $handler->display->display_options['filters']['uid']['table'] = 'users';
   $handler->display->display_options['filters']['uid']['field'] = 'uid';
   $handler->display->display_options['filters']['uid']['relationship'] = 'user';
   $handler->display->display_options['filters']['uid']['value'] = '';
+  $handler->display->display_options['filters']['uid']['group'] = 1;
   $handler->display->display_options['filters']['uid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['uid']['expose']['operator_id'] = 'uid_op';
   $handler->display->display_options['filters']['uid']['expose']['label'] = 'Name';
@@ -610,8 +631,9 @@ function slac_profile_elements_views_default_views() {
   $handler->display->display_options['fields']['field_prf_contact_name']['table'] = 'field_data_field_prf_contact_name';
   $handler->display->display_options['fields']['field_prf_contact_name']['field'] = 'field_prf_contact_name';
   $handler->display->display_options['fields']['field_prf_contact_name']['label'] = '';
-  $handler->display->display_options['fields']['field_prf_contact_name']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_prf_contact_name']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_prf_contact_name']['element_wrapper_type'] = 'div';
+  $handler->display->display_options['fields']['field_prf_contact_name']['element_wrapper_class'] = 'profile-name';
   /* Field: Profile: Title */
   $handler->display->display_options['fields']['field_prf_contact_title']['id'] = 'field_prf_contact_title';
   $handler->display->display_options['fields']['field_prf_contact_title']['table'] = 'field_data_field_prf_contact_title';
@@ -624,23 +646,11 @@ function slac_profile_elements_views_default_views() {
   $handler->display->display_options['fields']['field_prf_contact_affiliation']['table'] = 'field_data_field_prf_contact_affiliation';
   $handler->display->display_options['fields']['field_prf_contact_affiliation']['field'] = 'field_prf_contact_affiliation';
   $handler->display->display_options['fields']['field_prf_contact_affiliation']['label'] = '';
-  $handler->display->display_options['fields']['field_prf_contact_affiliation']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_prf_contact_affiliation']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['field_prf_contact_affiliation']['alter']['text'] = '[field_prf_contact_title], [field_prf_contact_affiliation]';
   $handler->display->display_options['fields']['field_prf_contact_affiliation']['element_label_colon'] = FALSE;
-  /* Field: Name and affiliation */
-  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['table'] = 'views';
-  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['ui_name'] = 'Name and affiliation';
-  $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="profile-name-block">
-<div class="profile-name">[field_prf_contact_name]</div>
-<div class="profile-affiliation">[field_prf_contact_affiliation]</div>
-</div>';
-  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['nothing']['element_wrapper_type'] = 'div';
-  $handler->display->display_options['fields']['nothing']['element_wrapper_class'] = 'name-affiliation';
+  $handler->display->display_options['fields']['field_prf_contact_affiliation']['element_wrapper_type'] = 'div';
+  $handler->display->display_options['fields']['field_prf_contact_affiliation']['element_wrapper_class'] = 'profile-affiliation';
   /* Field: Profile: Bio */
   $handler->display->display_options['fields']['field_prf_bio_bio']['id'] = 'field_prf_bio_bio';
   $handler->display->display_options['fields']['field_prf_bio_bio']['table'] = 'field_data_field_prf_bio_bio';
@@ -811,6 +821,14 @@ function slac_profile_elements_views_default_views() {
     1 => 0,
     3 => 0,
     4 => 0,
+  );
+  /* Filter criterion: Profile: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'profile';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'bio' => 'bio',
+    'contact' => 'contact',
   );
   $handler->display->display_options['pane_category']['name'] = 'Profile';
   $handler->display->display_options['pane_category']['weight'] = '0';
