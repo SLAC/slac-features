@@ -113,3 +113,6 @@ dependencies[] = landing_page
 ;Profile frontpage elements
 dependencies[] = slac_profile_elements
 
+;Configurations
+dependencies[] = slac_configurations
+

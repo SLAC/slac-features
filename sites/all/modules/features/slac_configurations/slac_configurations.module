@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Slac Configurations feature.
+ */
+
+include_once 'slac_configurations.features.inc';

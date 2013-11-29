@@ -134,7 +134,7 @@ function _slac_people_blog_install__panes($did) {
       'shown' => 1,
       'access' => array(),
       'configuration' => array(
-        'items_per_page' => 20,
+        'items_per_page' => 10,
       ),
       'cache' => array(),
       'style' => array(

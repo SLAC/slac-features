@@ -1,0 +1,9 @@
+name = Slac Configurations
+description = Exports site configurations.
+core = 7.x
+package = SLAC
+dependencies[] = ctools
+dependencies[] = strongarm
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:2
+features[variable][] = pathauto_ignore_words

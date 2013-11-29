@@ -149,3 +149,6 @@ dependencies[] = slac_service_help
 
 ;Landing page content type
 dependencies[] = landing_page
+
+;Configurations
+dependencies[] = slac_configurations
