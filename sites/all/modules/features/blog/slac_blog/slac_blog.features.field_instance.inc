@@ -99,7 +99,7 @@ function slac_blog_field_default_field_instances() {
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
-          'image_style' => 'slac_block_image_details',
+          'image_style' => 'slac_blog_image_details',
         ),
         'type' => 'image',
         'weight' => 0,

@@ -35,6 +35,7 @@ features[field_instance][] = user-user-field_last_name
 features[image][] = blog_thumbnail
 features[image][] = profile-image-blog-icon
 features[image][] = slac_blog_image
+features[image][] = slac_blog_image_details
 features[menu_links][] = navigation:blog
 features[menu_links][] = navigation:blog/%
 features[menu_links][] = navigation:node/add/blog
