@@ -12,9 +12,14 @@
   //-----------------------------------
   .general-left, .panel-col-first 
     +span-columns(6,9)
+    .pane-page-content &
+      .front &
+        +span-columns(6,9)  
   .general-right, .panel-col-last
     +span-columns(3 omega,9)
-    
+    .pane-page-content &
+      .front &
+        +span-columns(3 omega,9)     
   .general-left
     h2.pane-title
       margin-bottom: 49px    
@@ -24,3 +29,5 @@
   .footer-seccond
     margin-bottom: 60px
     
+    .pane-page-content &
+      .front &

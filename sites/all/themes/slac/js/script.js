@@ -14,6 +14,18 @@
 
 
 // To understand behaviors, see https://drupal.org/node/756722#behaviors
+
+Drupal.behaviors.wrapp_frontpage = {
+  attach: function(context, settings) {
+  	var $front_page_block = $('.front .pane-page-content .general-right .panel-pane')
+  	
+  	if ($('.front .pane-page-content .general-left .panel-pane')[0]) {
+  		$('.pane-page-content .general-left .panel-pane').not('.pane-bundle-slideshow-description-bottom').wrapAll( "<span class='frontpage-wrapper'></span>" )
+  	} 
+  }
+}
+
+
 Drupal.behaviors.mobile_header = {
   attach: function(context, settings) {
 	

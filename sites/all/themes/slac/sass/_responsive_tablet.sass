@@ -86,16 +86,29 @@
   //-----------------------------------
   .general-left, .panel-col-first 
     +span-columns(8,12)
+
+        
+        
   .general-right, .panel-col-last
     +span-columns(4 omega,12)
-  
+ 
+
   .general-right, .general-left
     //padding-top: 47px
-    .front &
-      padding-top: 0
+    
+    .pane-page-content &
+      .front &
+        padding-top: 0
+        +reset-columns 
+
+                
+      
+      
   .general-right
     .content &
       padding-top: 56px
+      .front &
+        padding-top: 0
 
       .panel-pane
         padding: 13px 22px
@@ -108,9 +121,9 @@
     .general-left    
       .inside
         > .panel-pane
-          margin-bottom: 25px
+          //margin-bottom: 25px
           &:last-of-type
-            margin-bottom: 0
+            //margin-bottom: 0
 
   //Last footer
   //-----------------------------------

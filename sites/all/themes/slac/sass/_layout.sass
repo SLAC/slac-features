@@ -50,12 +50,16 @@ html
 
     .general-right
       margin-top: 30px
+      .front &
+        margin-top: 0
   
   
   > .header-menu, 
   > .main-menu
     display: none
-  
+
+
+ 
   
 //System user panel
 //-----------------------------------
@@ -354,7 +358,11 @@ ul.tabs, .action-links
     border-bottom: 3px solid $bg-col-1
     margin-bottom: 30px
     padding-bottom: 5px
-
+  .pane-page-content &
+    .front &
+      .panel-pane
+        margin-bottom: 25px
+        //+clearfix
 
     
 
@@ -544,6 +552,30 @@ article.node-blog
       .blog-wrapper            
         +clearfix
 
+
+
+
++at-breakpoint($only-tablet )
+  .general-right
+    .pane-page-content &
+      .front &
+        .inside
+          +span-columns(4 omega,12)
+            
+
+    
+  .general-left
+    .pane-page-content &
+      .front &
+        > .inside
+          .frontpage-wrapper
+            +span-columns(8,12)
+
+.frontpage-wrapper
+  .panel-pane
+    +clearfix 
+
+
 +at-breakpoint($large-desktop)
   article.node-blog
     &.node-teaser
@@ -610,7 +642,9 @@ article.node-blog
 
   p
     line-height: 20px
-
+  .views-row-1
+    margin-bottom: 15px
+  
   .views-row-2
     @extend .clearfix
     margin-bottom: 23px
@@ -651,8 +685,10 @@ article.node-blog
           content: '\e615'    
   
 
-          
-
++at-breakpoint($less-than-480)          
+  .profile-info-full
+    .views-row-1
+      +clearfix
 
     
   
@@ -686,6 +722,10 @@ article.node-blog
   margin-bottom: 25px
   img
     display: block
+
+
+
+
 
 
 //Responsive information
