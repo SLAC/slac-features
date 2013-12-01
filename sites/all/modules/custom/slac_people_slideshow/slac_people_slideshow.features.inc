@@ -14,7 +14,7 @@ function slac_people_slideshow_image_default_styles() {
   $styles['slideshow_image_description_bottom'] = array(
     'name' => 'slideshow_image_description_bottom',
     'effects' => array(
-      3 => array(
+      1 => array(
         'label' => 'EPSA Image Crop',
         'help' => '',
         'dimensions callback' => 'epsacrop_crop_dimensions',
@@ -23,8 +23,8 @@ function slac_people_slideshow_image_default_styles() {
         'module' => 'epsacrop',
         'name' => 'epsacrop_crop',
         'data' => array(
-          'width' => 745,
-          'height' => 220,
+          'width' => 894,
+          'height' => 268,
           'anchor' => 'center-center',
           'jcrop_settings' => array(
             'aspect_ratio' => '',
@@ -35,7 +35,7 @@ function slac_people_slideshow_image_default_styles() {
         ),
         'weight' => 1,
       ),
-      4 => array(
+      2 => array(
         'label' => 'Scale and crop',
         'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
         'effect callback' => 'image_scale_and_crop_effect',
@@ -45,8 +45,8 @@ function slac_people_slideshow_image_default_styles() {
         'module' => 'image',
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => 745,
-          'height' => 220,
+          'width' => 894,
+          'height' => 268,
         ),
         'weight' => 2,
       ),
