@@ -83,6 +83,8 @@
         margin-top: -25px
         left: 50%
         color: #fff
+        .no-rgba &
+          color: $red
         position: absolute
         font-size: 45px
       &:hover
@@ -105,10 +107,13 @@
   .field-slideshow-body
     padding: 0 35px
     +fontsize-rem(12px) 
+    color: #fff
     background-color: rgba(0,0,0,.3) 
+    .no-rgba &
+      +background(image-url("fall_back_3perc.png") repeat 0 0)
     height: 70px
     line-height: 70px
-    color: #fff
+   
     a
       color: inherit    
   .field-slideshow-description
@@ -132,6 +137,8 @@
       a 
         top: 50%
         background-color: rgba(200, 200, 200, 0.5)
+        .no-rgba &
+          background-color: #fff
         +border-radius(10px)
         z-index: 99
         margin-top: -40px
@@ -141,7 +148,8 @@
         
         &:hover
           background-color: rgba(200, 200, 200, 0.7)
-
+          .no-rgba &
+            background-color: #fff
         &.prev 
           left: 20px
         &.next 
