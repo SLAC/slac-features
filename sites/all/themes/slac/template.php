@@ -139,9 +139,9 @@ function slac_preprocess_html(&$variables) {
 	  '#attributes' => array(
 	    'href' => $base_url . '/' . drupal_get_path('theme', 'slac') . '/css/styles.css',
 	    'rel' => 'stylesheet',
-	    'type' => 'text/css',
 	    'media' => 'all'
 	  ),
+	  '#weight' => '-99999',
 	);
 	$element_modernizr = array(
 	  '#tag' => 'script', 
