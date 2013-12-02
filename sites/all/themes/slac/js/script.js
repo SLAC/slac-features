@@ -30,31 +30,66 @@ Drupal.behaviors.mobile_header = {
   attach: function(context, settings) {
 	
 	//Lets insert mobile html
-	$('<div class="icon-wrapper" ><div class="menu-icon mob-icon"></div><div class="account-icon mob-icon" style="display: none"></div><div class="logout-icon mob-icon" style="display: none"></div></div><div class="mobile-main-menu mobile-block" style="display: none"></div>').insertAfter('.pane-page-logo')
+	$('<div class="icon-wrapper" ><div class="menu-icon mob-icon"></div><div class="account-icon mob-icon" style="display: none"></div><div class="logout-icon mob-icon" style="display: none"></div><div class="login-icon mob-icon" style="display: none"></div></div><div class="mobile-main-menu mobile-block" style="display: none"></div>').insertAfter('.pane-page-logo')
 	
 	//Click User menu link through js
 	if ($('.pane-system-user-menu')[0]) {
 		var $element =  $('.pane-system-user-menu'),
 			$link_account = $element.find('a'),
 			$acc_link,
-			$logout_link
-		
+			$logout_link,
+			$login_link
+			$pathname = window.location.pathname
+			
 		$('.pane-system-user-menu a').each(function(){
 			if($(this).attr('href') == '/user') {
 				$acc_link = this
 			}
 			if($(this).attr('href') == '/user/logout') {
 				$logout_link = this
+			}		
+			if($(this).attr('href') == '/user/login') {
+				$login_link = this
 			}			
+			
+
+				
 		})
 		
-		$('.account-icon').show().click(function(){
-			$acc_link.click()
-		})
+//console.log($pathname)
 		
-		$('.logout-icon').show().click(function(){
-			$logout_link.click()
-		})
+		if($acc_link){
+			$('.account-icon').show().click(function(){
+				$acc_link.click()
+			})
+			
+			if($pathname.search('/user') == 0 )  {
+				$('.account-icon').addClass('active')
+			}			
+			
+
+		}
+		
+		if($logout_link){
+			$('.logout-icon').show().click(function(){
+				$logout_link.click()
+			})
+			
+		}		
+		if($login_link){
+			$('.login-icon').show().click(function(){
+				$login_link.click()
+			})
+			
+			if($pathname.search('/user') == 0 ) {
+				$('.login-icon').addClass('active')
+			}
+		}		
+
+
+
+		
+
 	}
 	
 	//Menu cloning
