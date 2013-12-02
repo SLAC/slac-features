@@ -80,13 +80,14 @@ ul.tabs li a:hover, .action-links li a:hover { background-color: #2e2e2e; }
 
 .pane-system-user-menu { display: none !important; width: 43.01676%; float: right; margin-right: 0; *margin-left: -50px; display: inline; }
 
-.mob-icon { width: 22px; height: 20px; position: relative; cursor: pointer; display: inline-block; color: white; font-size: 25px; font-size: 1.5625rem; margin-left: 15px; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
-.mob-icon:first-of-type { margin-left: 0; }
+.mob-icon { width: 22px; height: 20px; position: relative; cursor: pointer; display: inline-block; color: white; font-size: 25px; font-size: 1.5625rem; margin-left: 15px; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; overflow: hidden; text-indent: 9000px; vertical-align: top; }
+.mob-icon:hover { color: #f3f1eb; }
 .mob-icon.active { color: #b8737d; }
 .mob-icon:before { position: absolute; top: 0; left: 0; line-height: 1; }
-.mob-icon.menu-icon:before { content: "\e611"; font-size: 25px; font-size: 1.5625rem; }
+.mob-icon.menu-icon { margin-left: 0; }
+.mob-icon.menu-icon:before { content: "\e611"; font-size: 25px; font-size: 1.5625rem; top: -2px; }
 .mob-icon.account-icon:before { content: "\e612"; font-size: 20px; font-size: 1.25rem; }
-.mob-icon.logout-icon:before { content: "\e614"; font-size: 21px; font-size: 1.3125rem; }
+.mob-icon.logout-icon:before { content: "\e614"; font-size: 20px; font-size: 1.25rem; }
 .mob-icon.login-icon:before { content: "\e617"; font-size: 21px; font-size: 1.3125rem; }
 
 .pane-page-site-name { font-size: 1.625em; }

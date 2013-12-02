@@ -194,9 +194,12 @@ ul.tabs, .action-links
   +fontsize-rem(25px) 
   margin-left: 15px
   +no-select 
-  &:first-of-type
-    margin-left: 0
-  
+  overflow: hidden
+  text-indent: 9000px
+  vertical-align: top
+
+  &:hover
+    color: $bg-col-1
   &.active
     color: $rose
   
@@ -208,9 +211,11 @@ ul.tabs, .action-links
     line-height: 1
   
   &.menu-icon 
+    margin-left: 0
     &:before 
       content: '\e611'
       +fontsize-rem(25px) 
+      top: -2px
   &.account-icon
     &:before 
       content: '\e612'
@@ -218,12 +223,14 @@ ul.tabs, .action-links
   &.logout-icon
     &:before 
       content: '\e614'
-      +fontsize-rem(21px) 
+      +fontsize-rem(20px) 
       
   &.login-icon     
     &:before 
       content: '\e617'
       +fontsize-rem(21px)       
+      
+      
 //Site name
 //-----------------------------------
 .pane-page-site-name

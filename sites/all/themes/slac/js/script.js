@@ -30,77 +30,53 @@ Drupal.behaviors.mobile_header = {
   attach: function(context, settings) {
 	
 	//Lets insert mobile html
-	$('<div class="icon-wrapper" ><div class="menu-icon mob-icon"></div><div class="account-icon mob-icon" style="display: none"></div><div class="logout-icon mob-icon" style="display: none"></div><div class="login-icon mob-icon" style="display: none"></div></div><div class="mobile-main-menu mobile-block" style="display: none"></div>').insertAfter('.pane-page-logo')
+	$('<div class="icon-wrapper" ><div class="menu-icon mob-icon"></div><span class="user-icons"></span></div><div class="mobile-main-menu mobile-block" style="display: none"></div>').insertAfter('.pane-page-logo')
 	
-	//Click User menu link through js
-	if ($('.pane-system-user-menu')[0]) {
-		var $element =  $('.pane-system-user-menu'),
-			$link_account = $element.find('a'),
-			$acc_link,
-			$logout_link,
-			$login_link
-			$pathname = window.location.pathname
-			
-		$('.pane-system-user-menu a').each(function(){
-			if($(this).attr('href') == '/user') {
-				$acc_link = this
-			}
-			if($(this).attr('href') == '/user/logout') {
-				$logout_link = this
-			}		
-			if($(this).attr('href') == '/user/login') {
-				$login_link = this
-			}			
-			
 
-				
-		})
-		
-//console.log($pathname)
-		
-		if($acc_link){
-			$('.account-icon').show().click(function(){
-				$acc_link.click()
-			})
-			
-			if($pathname.search('/user') == 0 )  {
-				$('.account-icon').addClass('active')
-			}			
-			
-
-		}
-		
-		if($logout_link){
-			$('.logout-icon').show().click(function(){
-				$logout_link.click()
-			})
-			
-		}		
-		if($login_link){
-			$('.login-icon').show().click(function(){
-				$login_link.click()
-			})
-			
-			if($pathname.search('/user') == 0 ) {
-				$('.login-icon').addClass('active')
-			}
-		}		
-
-
-
-		
-
-	}
 	
 	//Menu cloning
 	
 	var $cloned_main_menu = $('div.main-menu').clone(),
 		$cloned_header_menu = $('div.header-menu').clone(),
-		$mobile_wrapper = $('.mobile-main-menu')
+		$mobile_wrapper = $('.mobile-main-menu'),
+		$mobile_user_menu = $('.pane-system-user-menu ul li a').clone(),
+		$icons_wrapper = $('.user-icons'),
+		$pathname = window.location.pathname
+		$icons_wrapper_a = $icons_wrapper.find('a')
 		
 	$mobile_wrapper.empty()
 	$mobile_wrapper.append($cloned_main_menu)
 	$mobile_wrapper.append($cloned_header_menu)
+	$icons_wrapper.append($mobile_user_menu)
+
+$('.user-icons a').each(function(){
+
+	//Add icon class
+	$(this).addClass('mob-icon')
+	
+	//Add class to make icon appear
+	if($(this).attr('href') == '/user/login'){
+		$(this).addClass('login-icon')
+	}
+	
+	if($(this).attr('href') == '/user/logout'){
+		$(this).addClass('logout-icon')
+	}	
+	
+	if($(this).attr('href') == '/user'){
+		$(this).addClass('account-icon')
+	}	
+	
+	//Add active class for icons
+	if($(this).attr('href') == '/user/login' && $pathname.search('/user') == 0 ) {
+		$(this).addClass('active')
+	}
+	if($(this).attr('href') == '/user' && $pathname.search('/user') == 0 ) {
+		$(this).addClass('active')
+	}	
+	
+})
+
 
 	 $('.menu-icon').click(function(event){
 		 $(this).toggleClass('active')
