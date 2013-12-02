@@ -24,7 +24,7 @@ img, object, embed { max-width: 100%; }
 .clearfix:before, ul.tabs:before, .action-links:before, .pane-system-user-menu ul:before, .pager:before, article.node-blog.node-teaser .links:before, .profile-info-full .views-row-2:before, .views-field-field-prf-bio-education:before, .views-field-field-prf-bio-pexp:before, .views-field-field-prf-bio-ar:before, .views-field-field-prf-bio-ha:before, .views-field-field-prf-bio-pa:before, .views-field-field-prf-bio-pub:before, .views-field-field-prf-bio-tp:before, .blog-tags ul:before, .connect-with-me .views-row:before, ul.blog-archive-class > li ul:before, .clearfix:after, ul.tabs:after, .action-links:after, .pane-system-user-menu ul:after, .pager:after, article.node-blog.node-teaser .links:after, .profile-info-full .views-row-2:after, .views-field-field-prf-bio-education:after, .views-field-field-prf-bio-pexp:after, .views-field-field-prf-bio-ar:after, .views-field-field-prf-bio-ha:after, .views-field-field-prf-bio-pa:after, .views-field-field-prf-bio-pub:after, .views-field-field-prf-bio-tp:after, .blog-tags ul:after, .connect-with-me .views-row:after, ul.blog-archive-class > li ul:after { content: ""; display: table; }
 .clearfix:after, ul.tabs:after, .action-links:after, .pane-system-user-menu ul:after, .pager:after, article.node-blog.node-teaser .links:after, .profile-info-full .views-row-2:after, .views-field-field-prf-bio-education:after, .views-field-field-prf-bio-pexp:after, .views-field-field-prf-bio-ar:after, .views-field-field-prf-bio-ha:after, .views-field-field-prf-bio-pa:after, .views-field-field-prf-bio-pub:after, .views-field-field-prf-bio-tp:after, .blog-tags ul:after, .connect-with-me .views-row:after, ul.blog-archive-class > li ul:after { clear: both; }
 
-.slac-font, .mobile-main-menu .main-menu ul li a:after, .mob-icon:before, .footer-seccond ul li a:after, article.node-blog.node-teaser header h2 a:after, .view-entire-profile a:after, .profile-info-full .profile-maxlist-more a:before, .connect-with-me .views-row > div a:after, .pane-bundle-slideshow-description-bottom .field-slideshow-controls a:after { font-family: "slac"; font-weight: normal; font-style: normal; text-indent: 0; }
+.slac-font, .mobile-main-menu .main-menu ul li a:after, .mob-icon:before, .footer-seccond ul li a:after, article.node-blog.node-teaser header h2 a:after, .profile-info-brief .views-more-link:after, .profile-info-full .profile-maxlist-more a:before, .connect-with-me .views-row > div a:after, .pane-bundle-slideshow-description-bottom .field-slideshow-controls a:after { font-family: "slac"; font-weight: normal; font-style: normal; text-indent: 0; }
 
 @font-face { font-family: "slac"; src: url('../fonts/slac.eot'); src: url('../fonts/slac.eot?#iefix') format('eot'), url('../fonts/slac.svg#slac') format('svg'), url('../fonts/slac.woff') format('woff'), url('../fonts/slac.ttf') format('truetype'); font-weight: normal; font-style: normal; }
 
@@ -193,7 +193,9 @@ article.node-blog.node-teaser .links li a { display: block; }
 .profile-info-brief .profile-name-block { margin-top: 100px; }
 .profile-info-brief .views-field-field-prf-bio-bio { margin-bottom: 0; }
 .profile-info-brief .views-row-1 { margin-bottom: 18px; }
-.profile-info-brief .short-bio-text { font-size: 14px; font-size: 0.875rem; margin-bottom: 10px; line-height: 20px; }
+.profile-info-brief .views-field-field-prf-bio-bio { font-size: 14px; font-size: 0.875rem; margin-bottom: 10px; line-height: 20px; }
+.profile-info-brief .views-more-link { margin-top: 10px; display: block; text-transform: uppercase; color: #720c20; font-size: 11px; font-size: 0.6875rem; }
+.profile-info-brief .views-more-link:after { content: "\3e"; font-size: 14px; font-size: 0.875rem; line-height: 16px; vertical-align: bottom; margin-left: 3px; }
 
 @media (min-width: 480px) { .profile-info-brief .views-field-field-prf-contact-photo { margin-right: 0; position: relative; z-index: 1; }
   .profile-info-brief .views-row-1 { margin-bottom: 34px; }
@@ -202,9 +204,6 @@ article.node-blog.node-teaser .links li a { display: block; }
   .profile-info-brief .profile-name { padding-top: 6px; }
   .profile-info-brief .views-field-field-prf-contact-affiliation { padding-bottom: 6px; } }
 @media (min-width: 690px) { .profile-info-brief .views-row-2, .profile-info-brief .profile-name, .profile-info-brief .views-field-field-prf-contact-affiliation { padding-left: 185px; } }
-.view-entire-profile a { text-transform: uppercase; color: #720c20; font-size: 11px; font-size: 0.6875rem; }
-.view-entire-profile a:after { content: "\3e"; font-size: 14px; font-size: 0.875rem; line-height: 16px; vertical-align: bottom; margin-left: 3px; }
-
 .profile-info-full { font-size: 14px; font-size: 0.875rem; }
 .profile-info-full .views-label { font-size: 16px; font-size: 1rem; font-weight: bold; color: #666666; margin-bottom: 5px; padding-left: 3px; display: inline-block; }
 .profile-info-full p { line-height: 20px; }
@@ -236,10 +235,11 @@ article.node-blog.node-teaser .links li a { display: block; }
   .footer-seccond ul { *zoom: 1; border-top: 1px solid #999999; border-bottom: 1px solid #999999; display: block; padding-top: 8px; padding-bottom: 8px; }
   .footer-seccond ul:before, .footer-seccond ul:after { content: ""; display: table; }
   .footer-seccond ul:after { clear: both; }
-  .footer-seccond ul li { float: left; margin-right: 46px; margin-bottom: 0; }
+  .footer-seccond ul li { float: left; margin-right: 10px; margin-bottom: 0; }
   .footer-seccond ul li a { padding: 0 0 0 10px; background: none; }
   .footer-seccond ul li a:before { content: "\e605"; font-family: "slac"; font-weight: normal; font-style: normal; text-indent: 0; position: absolute; font-size: 8px; font-size: 0.5rem; left: -1px; top: 2px; }
-  .footer-seccond ul li a:after { display: none; } }
+  .footer-seccond ul li a:after { display: none; }
+  .footer-seccond ul li:last-of-type { margin-right: 0; } }
 @media (min-width: 690px) { .page-basic > .header-menu, .page-basic > .main-menu { display: block; }
   .page-basic > .content { margin: 35px 0; }
   .main-menu { background-color: #e7e6d9; padding: 8px 0 0px; text-transform: uppercase; }

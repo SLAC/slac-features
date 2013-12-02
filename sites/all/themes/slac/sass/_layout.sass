@@ -633,15 +633,31 @@ article.node-blog
   .views-row-1
     margin-bottom: 18px
 
-  .short-bio-text
+  .views-field-field-prf-bio-bio
     +fontsize-rem(14px)
     margin-bottom: 10px
     line-height: 20px
+
+  .views-more-link
+    margin-top: 10px
+    display: block
+    text-transform: uppercase
+    color: $red
+    +fontsize-rem(11px)
+    &:after
+      @extend .slac-font
+      content: '\3e'
+      +fontsize-rem(14px)
+      line-height: 16px
+      vertical-align: bottom
+      margin-left: 3px 
+
+ 
     
 +at-breakpoint($less-than-480)
   .profile-info-brief
-  
-  
+ 
+    
     .views-field-field-prf-contact-photo
       margin-right: 0
       position: relative
@@ -672,17 +688,7 @@ article.node-blog
       padding-left: 185px
 
     
-.view-entire-profile a
-  text-transform: uppercase
-  color: $red
-  +fontsize-rem(11px)
-  &:after
-    @extend .slac-font
-    content: '\3e'
-    +fontsize-rem(14px)
-    line-height: 16px
-    vertical-align: bottom
-    margin-left: 3px
+
 
 .profile-info-full
   +fontsize-rem(14px)
