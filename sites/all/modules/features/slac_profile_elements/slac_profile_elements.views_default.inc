@@ -545,12 +545,19 @@ function slac_profile_elements_views_default_views() {
   $handler->display->display_options['fields']['field_prf_bio_bio']['label'] = '';
   $handler->display->display_options['fields']['field_prf_bio_bio']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['field_prf_bio_bio']['alter']['text'] = '<div class="short-bio-text">[field_prf_bio_bio]</div><div class="view-entire-profile"><a href="/profile">View entire profile</a></div>';
+  $handler->display->display_options['fields']['field_prf_bio_bio']['alter']['trim_whitespace'] = TRUE;
   $handler->display->display_options['fields']['field_prf_bio_bio']['alter']['max_length'] = '600';
+  $handler->display->display_options['fields']['field_prf_bio_bio']['alter']['more_link'] = TRUE;
   $handler->display->display_options['fields']['field_prf_bio_bio']['alter']['more_link_text'] = 'View entire profile';
+  $handler->display->display_options['fields']['field_prf_bio_bio']['alter']['more_link_path'] = 'profile';
+  $handler->display->display_options['fields']['field_prf_bio_bio']['alter']['strip_tags'] = TRUE;
   $handler->display->display_options['fields']['field_prf_bio_bio']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['field_prf_bio_bio']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_prf_bio_bio']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_prf_bio_bio']['type'] = 'text_plain';
+  $handler->display->display_options['fields']['field_prf_bio_bio']['settings'] = array(
+    'trim_length' => '600',
+  );
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Profile: Type */
   $handler->display->display_options['sorts']['type']['id'] = 'type';

@@ -27,7 +27,10 @@ function _slac_people_simpleuser_install__create_profile($uid) {
   // Bio
   $profile_bio = profile_create(array('type' => 'bio', 'uid' => $uid));
 
-  $profile_bio->field_prf_bio_bio[$lang][0]['value'] = 'Phasellus vel gravida quam. Sed non elementum erat. Nullam accumsan vestibulum orci, at rhoncus tortor accumsan eu? Nullam fermentum leo nibh, quis condimentum metus porta vitae! Vestibulum ultrices felis non urna laoreet, id rhoncus orci fringilla. Mauris venenatis dolor metus, in dignissim nullam.';
+  $profile_bio->field_prf_bio_bio[$lang][0]['value'] = 'Phasellus vel gravida quam. Sed non elementum erat. Nullam accumsan vestibulum orci, at rhoncus tortor accumsan eu? Nullam fermentum leo nibh, quis condimentum metus porta vitae! Vestibulum ultrices felis non urna laoreet, id rhoncus orci fringilla. Mauris venenatis dolor metus, in dignissim nullam.' .
+  'Mauris venenatis dolor metus, in dignissim nullam. Phasellus vel gravida quam. Sed non elementum erat. Nullam accumsan vestibulum orci, at rhoncus tortor accumsan eu? Nullam fermentum leo nibh, quis condimentum metus porta vitae! Vestibulum ultrices felis non urna laoreet, id rhoncus orci fringilla. Mauris venenatis dolor metus, in dignissim nullam.' .
+  ' Phasellus vel gravida quam. Sed non elementum erat. Nullam accumsan vestibulum orci, at rhoncus tortor accumsan eu? Nullam fermentum leo nibh, quis condimentum metus porta vitae! Vestibulum ultrices felis non urna laoreet, id rhoncus orci fringilla. Mauris venenatis dolor metus, in dignissim nullam. Phasellus vel gravida quam. Sed non elementum erat.' .
+  ' Nullam accumsan vestibulum orci, at rhoncus tortor accumsan eu? Nullam fermentum leo nibh, quis condimentum metus porta vitae! Vestibulum ultrices felis non urna laoreet, id rhoncus orci fringilla. Mauris venenatis dolor metus, in dignissim nullam.';
 
   // Education.
   $profile_bio->field_prf_bio_education[$lang][0]['value'] = '1997 | PhD, Scientific Computing and Computational Mathematics';
