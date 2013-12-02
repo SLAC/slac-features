@@ -15,6 +15,12 @@ function pp_lightbox_media_token_to_markup_alter(&$element, $tag_info, &$setting
   if (strpos($tag_info['view_mode'], 'crop_') === FALSE) {
     return;
   }
+
+  // Do not alter output if Lighbox checkbox is not enabled.
+  if (!isset($tag_info['pp_lightbox']) || !$tag_info['pp_lightbox']) {
+    return;
+  }
+
   $image_style = substr($tag_info['view_mode'], strlen('crop_'));
   if (isset($element['content']['file'])) {
     $element['content']['file']['#theme'] = 'image_style_lightbox';
