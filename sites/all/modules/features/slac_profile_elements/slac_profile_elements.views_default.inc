@@ -492,13 +492,6 @@ function slac_profile_elements_views_default_views() {
   $handler->display->display_options['row_options']['hide_empty'] = TRUE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['footer'] = FALSE;
-  /* Footer: Global: Text area */
-  $handler->display->display_options['footer']['area']['id'] = 'area';
-  $handler->display->display_options['footer']['area']['table'] = 'views';
-  $handler->display->display_options['footer']['area']['field'] = 'area';
-  $handler->display->display_options['footer']['area']['content'] = '<div class="view-entire-profile"><a href="/profile">View entire profile ›</a></div>';
-  $handler->display->display_options['footer']['area']['format'] = 'full_html';
-  $handler->display->display_options['footer']['area']['tokenize'] = TRUE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relationship: Profile: User uid */
   $handler->display->display_options['relationships']['user']['id'] = 'user';
@@ -550,6 +543,8 @@ function slac_profile_elements_views_default_views() {
   $handler->display->display_options['fields']['field_prf_bio_bio']['table'] = 'field_data_field_prf_bio_bio';
   $handler->display->display_options['fields']['field_prf_bio_bio']['field'] = 'field_prf_bio_bio';
   $handler->display->display_options['fields']['field_prf_bio_bio']['label'] = '';
+  $handler->display->display_options['fields']['field_prf_bio_bio']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_prf_bio_bio']['alter']['text'] = '<div class="short-bio-text">[field_prf_bio_bio]</div><div class="view-entire-profile"><a href="/profile">View entire profile</a></div>';
   $handler->display->display_options['fields']['field_prf_bio_bio']['alter']['max_length'] = '600';
   $handler->display->display_options['fields']['field_prf_bio_bio']['alter']['more_link_text'] = 'View entire profile';
   $handler->display->display_options['fields']['field_prf_bio_bio']['alter']['trim'] = TRUE;
