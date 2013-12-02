@@ -10,6 +10,124 @@
 function slac_event_field_default_field_bases() {
   $field_bases = array();
 
+  // Exported field_base: 'body'
+  $field_bases['body'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(
+      0 => 'node',
+    ),
+    'field_name' => 'body',
+    'foreign keys' => array(
+      'format' => array(
+        'columns' => array(
+          'format' => 'format',
+        ),
+        'table' => 'filter_format',
+      ),
+    ),
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'text_with_summary',
+  );
+
+  // Exported field_base: 'field_location'
+  $field_bases['field_location'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_location',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
+    'foreign keys' => array(),
+    'indexes' => array(
+      'lid' => array(
+        0 => 'lid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'location_cck',
+    'settings' => array(
+      'gmap_macro' => '[gmap ]',
+      'gmap_marker' => 'drupal',
+      'location_settings' => array(
+        'display' => array(
+          'hide' => array(
+            'additional' => 'additional',
+            'city' => 'city',
+            'coords' => 'coords',
+            'country' => 'country',
+            'country_name' => 'country_name',
+            'locpick' => 'locpick',
+            'map_link' => 'map_link',
+            'name' => 0,
+            'postal_code' => 'postal_code',
+            'province' => 'province',
+            'province_name' => 'province_name',
+            'street' => 'street',
+          ),
+        ),
+        'form' => array(
+          'fields' => array(
+            'additional' => array(
+              'collect' => 0,
+              'default' => '',
+              'weight' => 6,
+            ),
+            'city' => array(
+              'collect' => 0,
+              'default' => '',
+              'weight' => 8,
+            ),
+            'country' => array(
+              'collect' => 1,
+              'default' => 'us',
+              'weight' => 14,
+            ),
+            'locpick' => array(
+              'collect' => 0,
+              'weight' => 20,
+            ),
+            'name' => array(
+              'collect' => 1,
+              'default' => '',
+              'weight' => 2,
+            ),
+            'postal_code' => array(
+              'collect' => 0,
+              'default' => '',
+              'weight' => 12,
+            ),
+            'province' => array(
+              'collect' => 0,
+              'default' => '',
+              'weight' => 10,
+              'widget' => 'autocomplete',
+            ),
+            'street' => array(
+              'collect' => 0,
+              'default' => '',
+              'weight' => 4,
+            ),
+          ),
+        ),
+      ),
+      'profile2_private' => FALSE,
+    ),
+    'translatable' => 0,
+    'type' => 'location',
+  );
+
   // Exported field_base: 'field_slac_event_category'
   $field_bases['field_slac_event_category'] = array(
     'active' => 1,
@@ -129,7 +247,7 @@ function slac_event_field_default_field_bases() {
         'second' => 0,
         'year' => 'year',
       ),
-      'repeat' => 1,
+      'repeat' => 0,
       'timezone_db' => 'UTC',
       'todate' => 'required',
       'tz_handling' => 'site',

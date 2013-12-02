@@ -11,7 +11,6 @@ function slac_event_demo_uuid_features_default_content() {
   $nodes = array();
 
   $nodes[] = array(
-  'uid' => 1,
   'title' => 'Science and Engineering of Solid-state Thermoelectric Energy Conversion',
   'log' => '',
   'status' => 1,
@@ -27,11 +26,24 @@ function slac_event_demo_uuid_features_default_content() {
   'uuid' => '138d43a6-3ee6-45fa-b295-420bfa469195',
   'revision_uid' => 1,
   'body' => array(),
+  'field_location' => array(),
   'field_slac_event_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 28,
+        'tid' => 24,
         'uuid' => '89e0ecf3-9e9f-476b-a920-392077f1e1eb',
+      ),
+    ),
+  ),
+  'field_slac_event_date' => array(
+    'und' => array(
+      0 => array(
+        'value' => '2014-08-20T05:00:00',
+        'value2' => '2014-08-20T09:00:00',
+        'rrule' => NULL,
+        'timezone' => 'Europe/Helsinki',
+        'timezone_db' => 'UTC',
+        'date_type' => 'date',
       ),
     ),
   ),
@@ -47,50 +59,6 @@ function slac_event_demo_uuid_features_default_content() {
   'field_slac_event_organization' => array(),
   'field_slac_event_scientific_area' => array(),
   'field_slac_event_tags' => array(),
-  'field_slac_event_date' => array(
-    'und' => array(
-      0 => array(
-        'value' => '2013-08-04T05:00:00',
-        'value2' => '2013-08-04T09:00:00',
-        'rrule' => 'RRULE:FREQ=DAILY;INTERVAL=1;COUNT=5;WKST=SU',
-        'timezone' => 'Europe/Helsinki',
-        'timezone_db' => 'UTC',
-        'date_type' => 'date',
-      ),
-      1 => array(
-        'value' => '2013-08-05T05:00:00',
-        'value2' => '2013-08-05T09:00:00',
-        'rrule' => 'RRULE:FREQ=DAILY;INTERVAL=1;COUNT=5;WKST=SU',
-        'timezone' => 'Europe/Helsinki',
-        'timezone_db' => 'UTC',
-        'date_type' => 'date',
-      ),
-      2 => array(
-        'value' => '2013-08-06T05:00:00',
-        'value2' => '2013-08-06T09:00:00',
-        'rrule' => 'RRULE:FREQ=DAILY;INTERVAL=1;COUNT=5;WKST=SU',
-        'timezone' => 'Europe/Helsinki',
-        'timezone_db' => 'UTC',
-        'date_type' => 'date',
-      ),
-      3 => array(
-        'value' => '2013-08-07T05:00:00',
-        'value2' => '2013-08-07T09:00:00',
-        'rrule' => 'RRULE:FREQ=DAILY;INTERVAL=1;COUNT=5;WKST=SU',
-        'timezone' => 'Europe/Helsinki',
-        'timezone_db' => 'UTC',
-        'date_type' => 'date',
-      ),
-      4 => array(
-        'value' => '2013-08-08T05:00:00',
-        'value2' => '2013-08-08T09:00:00',
-        'rrule' => 'RRULE:FREQ=DAILY;INTERVAL=1;COUNT=5;WKST=SU',
-        'timezone' => 'Europe/Helsinki',
-        'timezone_db' => 'UTC',
-        'date_type' => 'date',
-      ),
-    ),
-  ),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:Item',
@@ -152,12 +120,10 @@ function slac_event_demo_uuid_features_default_content() {
   'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
-  'data' => 'b:0;',
   'date' => '2013-08-10 17:35:56 +0300',
-  'author_uuid' => '306f8481-4295-413f-a765-f4d5acee30d3',
+  'author_uuid' => '2861a36a-6f9c-49cb-bd60-478069839275',
 );
   $nodes[] = array(
-  'uid' => 1,
   'title' => 'FACET & Test Facilities User Meeting and SAREC Review',
   'log' => '',
   'status' => 1,
@@ -173,11 +139,24 @@ function slac_event_demo_uuid_features_default_content() {
   'uuid' => '2164cab5-1e7f-4ff7-9470-b1ec9fa76b52',
   'revision_uid' => 1,
   'body' => array(),
+  'field_location' => array(),
   'field_slac_event_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 33,
+        'tid' => 29,
         'uuid' => 'f0644a12-d7ad-4bce-b9fd-84ec84a94f7e',
+      ),
+    ),
+  ),
+  'field_slac_event_date' => array(
+    'und' => array(
+      0 => array(
+        'value' => '2014-08-20T09:30:00',
+        'value2' => '2014-08-20T19:30:00',
+        'rrule' => NULL,
+        'timezone' => 'Europe/Helsinki',
+        'timezone_db' => 'UTC',
+        'date_type' => 'date',
       ),
     ),
   ),
@@ -193,58 +172,6 @@ function slac_event_demo_uuid_features_default_content() {
   'field_slac_event_organization' => array(),
   'field_slac_event_scientific_area' => array(),
   'field_slac_event_tags' => array(),
-  'field_slac_event_date' => array(
-    'und' => array(
-      0 => array(
-        'value' => '2013-08-15T09:30:00',
-        'value2' => '2013-08-15T19:30:00',
-        'rrule' => 'RRULE:FREQ=DAILY;INTERVAL=3;UNTIL=20130830T205959Z;WKST=SU',
-        'timezone' => 'Europe/Helsinki',
-        'timezone_db' => 'UTC',
-        'date_type' => 'date',
-      ),
-      1 => array(
-        'value' => '2013-08-18T09:30:00',
-        'value2' => '2013-08-18T19:30:00',
-        'rrule' => 'RRULE:FREQ=DAILY;INTERVAL=3;UNTIL=20130830T205959Z;WKST=SU',
-        'timezone' => 'Europe/Helsinki',
-        'timezone_db' => 'UTC',
-        'date_type' => 'date',
-      ),
-      2 => array(
-        'value' => '2013-08-21T09:30:00',
-        'value2' => '2013-08-21T19:30:00',
-        'rrule' => 'RRULE:FREQ=DAILY;INTERVAL=3;UNTIL=20130830T205959Z;WKST=SU',
-        'timezone' => 'Europe/Helsinki',
-        'timezone_db' => 'UTC',
-        'date_type' => 'date',
-      ),
-      3 => array(
-        'value' => '2013-08-24T09:30:00',
-        'value2' => '2013-08-24T19:30:00',
-        'rrule' => 'RRULE:FREQ=DAILY;INTERVAL=3;UNTIL=20130830T205959Z;WKST=SU',
-        'timezone' => 'Europe/Helsinki',
-        'timezone_db' => 'UTC',
-        'date_type' => 'date',
-      ),
-      4 => array(
-        'value' => '2013-08-27T09:30:00',
-        'value2' => '2013-08-27T19:30:00',
-        'rrule' => 'RRULE:FREQ=DAILY;INTERVAL=3;UNTIL=20130830T205959Z;WKST=SU',
-        'timezone' => 'Europe/Helsinki',
-        'timezone_db' => 'UTC',
-        'date_type' => 'date',
-      ),
-      5 => array(
-        'value' => '2013-08-30T09:30:00',
-        'value2' => '2013-08-30T19:30:00',
-        'rrule' => 'RRULE:FREQ=DAILY;INTERVAL=3;UNTIL=20130830T205959Z;WKST=SU',
-        'timezone' => 'Europe/Helsinki',
-        'timezone_db' => 'UTC',
-        'date_type' => 'date',
-      ),
-    ),
-  ),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:Item',
@@ -306,12 +233,10 @@ function slac_event_demo_uuid_features_default_content() {
   'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
-  'data' => 'b:0;',
   'date' => '2013-08-10 17:35:05 +0300',
-  'author_uuid' => '306f8481-4295-413f-a765-f4d5acee30d3',
+  'author_uuid' => '2861a36a-6f9c-49cb-bd60-478069839275',
 );
   $nodes[] = array(
-  'uid' => 1,
   'title' => 'Organic and Carbon Nanostructures for Energy Conversion and Energy Storage Devices',
   'log' => '',
   'status' => 1,
@@ -325,13 +250,26 @@ function slac_event_demo_uuid_features_default_content() {
   'tnid' => 0,
   'translate' => 0,
   'uuid' => '36897199-c3a1-4c6e-bee9-0fc1f155f814',
-  'revision_uid' => 1,
+  'revision_uid' => 0,
   'body' => array(),
+  'field_location' => array(),
   'field_slac_event_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 28,
+        'tid' => 24,
         'uuid' => '89e0ecf3-9e9f-476b-a920-392077f1e1eb',
+      ),
+    ),
+  ),
+  'field_slac_event_date' => array(
+    'und' => array(
+      0 => array(
+        'value' => '2014-08-20T06:45:00',
+        'value2' => '2014-08-20T13:30:00',
+        'rrule' => NULL,
+        'timezone' => 'Europe/Helsinki',
+        'timezone_db' => 'UTC',
+        'date_type' => 'date',
       ),
     ),
   ),
@@ -347,18 +285,6 @@ function slac_event_demo_uuid_features_default_content() {
   'field_slac_event_organization' => array(),
   'field_slac_event_scientific_area' => array(),
   'field_slac_event_tags' => array(),
-  'field_slac_event_date' => array(
-    'und' => array(
-      0 => array(
-        'value' => '2013-08-20T06:45:00',
-        'value2' => '2013-08-20T13:30:00',
-        'rrule' => NULL,
-        'timezone' => 'Europe/Helsinki',
-        'timezone_db' => 'UTC',
-        'date_type' => 'date',
-      ),
-    ),
-  ),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:Item',
@@ -420,12 +346,10 @@ function slac_event_demo_uuid_features_default_content() {
   'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
-  'data' => 'b:0;',
   'date' => '2013-08-10 17:34:29 +0300',
-  'author_uuid' => '306f8481-4295-413f-a765-f4d5acee30d3',
+  'author_uuid' => '2861a36a-6f9c-49cb-bd60-478069839275',
 );
   $nodes[] = array(
-  'uid' => 1,
   'title' => 'SLAC Colloquium: \'A Walk on the Dark Side\'',
   'log' => '',
   'status' => 1,
@@ -439,13 +363,26 @@ function slac_event_demo_uuid_features_default_content() {
   'tnid' => 0,
   'translate' => 0,
   'uuid' => '5d5c713d-0b6d-4737-a7c6-56a3d530aeea',
-  'revision_uid' => 1,
+  'revision_uid' => 0,
   'body' => array(),
+  'field_location' => array(),
   'field_slac_event_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 33,
+        'tid' => 29,
         'uuid' => 'f0644a12-d7ad-4bce-b9fd-84ec84a94f7e',
+      ),
+    ),
+  ),
+  'field_slac_event_date' => array(
+    'und' => array(
+      0 => array(
+        'value' => '2014-08-31T12:30:00',
+        'value2' => '2014-08-31T18:45:00',
+        'rrule' => NULL,
+        'timezone' => 'Europe/Helsinki',
+        'timezone_db' => 'UTC',
+        'date_type' => 'date',
       ),
     ),
   ),
@@ -461,18 +398,6 @@ function slac_event_demo_uuid_features_default_content() {
   'field_slac_event_organization' => array(),
   'field_slac_event_scientific_area' => array(),
   'field_slac_event_tags' => array(),
-  'field_slac_event_date' => array(
-    'und' => array(
-      0 => array(
-        'value' => '2013-08-31T12:30:00',
-        'value2' => '2013-08-31T18:45:00',
-        'rrule' => NULL,
-        'timezone' => 'Europe/Helsinki',
-        'timezone_db' => 'UTC',
-        'date_type' => 'date',
-      ),
-    ),
-  ),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:Item',
@@ -534,12 +459,10 @@ function slac_event_demo_uuid_features_default_content() {
   'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
-  'data' => 'b:0;',
   'date' => '2013-08-10 17:16:00 +0300',
-  'author_uuid' => '306f8481-4295-413f-a765-f4d5acee30d3',
+  'author_uuid' => '2861a36a-6f9c-49cb-bd60-478069839275',
 );
   $nodes[] = array(
-  'uid' => 1,
   'title' => '8th International Conference on Inelastic X-ray Scattering',
   'log' => '',
   'status' => 1,
@@ -555,11 +478,43 @@ function slac_event_demo_uuid_features_default_content() {
   'uuid' => '62b7dd3c-ab5d-4569-be28-62efda4c3eb1',
   'revision_uid' => 1,
   'body' => array(),
+  'field_location' => array(
+    'und' => array(
+      0 => array(
+        'lid' => 2,
+        'name' => 'Kavli Auditorium',
+        'street' => '',
+        'additional' => '',
+        'city' => '',
+        'province' => '',
+        'postal_code' => '',
+        'country' => 'us',
+        'latitude' => 0,
+        'longitude' => 0,
+        'source' => 0,
+        'is_primary' => 0,
+        'province_name' => '',
+        'country_name' => 'United States',
+      ),
+    ),
+  ),
   'field_slac_event_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 30,
+        'tid' => 26,
         'uuid' => 'a7aa9fdf-cada-4543-a91a-b3c8e4fe8681',
+      ),
+    ),
+  ),
+  'field_slac_event_date' => array(
+    'und' => array(
+      0 => array(
+        'value' => '2013-12-27T16:30:00',
+        'value2' => '2013-12-27T21:45:00',
+        'rrule' => NULL,
+        'timezone' => 'Europe/Helsinki',
+        'timezone_db' => 'UTC',
+        'date_type' => 'date',
       ),
     ),
   ),
@@ -575,18 +530,6 @@ function slac_event_demo_uuid_features_default_content() {
   'field_slac_event_organization' => array(),
   'field_slac_event_scientific_area' => array(),
   'field_slac_event_tags' => array(),
-  'field_slac_event_date' => array(
-    'und' => array(
-      0 => array(
-        'value' => '2013-08-04T15:30:00',
-        'value2' => '2013-08-04T20:45:00',
-        'rrule' => NULL,
-        'timezone' => 'Europe/Helsinki',
-        'timezone_db' => 'UTC',
-        'date_type' => 'date',
-      ),
-    ),
-  ),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:Item',
@@ -648,12 +591,10 @@ function slac_event_demo_uuid_features_default_content() {
   'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
-  'data' => 'b:0;',
   'date' => '2013-08-10 17:38:37 +0300',
-  'author_uuid' => '306f8481-4295-413f-a765-f4d5acee30d3',
+  'author_uuid' => '2861a36a-6f9c-49cb-bd60-478069839275',
 );
   $nodes[] = array(
-  'uid' => 1,
   'title' => 'July 8, 9 SLAC Colloquia Postponed for One Week',
   'log' => '',
   'status' => 1,
@@ -667,7 +608,7 @@ function slac_event_demo_uuid_features_default_content() {
   'tnid' => 0,
   'translate' => 0,
   'uuid' => '8a45b255-165b-4d61-9303-82b8218eba16',
-  'revision_uid' => 1,
+  'revision_uid' => 0,
   'body' => array(
     'und' => array(
       0 => array(
@@ -680,11 +621,24 @@ function slac_event_demo_uuid_features_default_content() {
       ),
     ),
   ),
+  'field_location' => array(),
   'field_slac_event_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 30,
+        'tid' => 26,
         'uuid' => 'a7aa9fdf-cada-4543-a91a-b3c8e4fe8681',
+      ),
+    ),
+  ),
+  'field_slac_event_date' => array(
+    'und' => array(
+      0 => array(
+        'value' => '2013-12-29T08:45:00',
+        'value2' => '2013-12-29T20:45:00',
+        'rrule' => NULL,
+        'timezone' => 'Europe/Helsinki',
+        'timezone_db' => 'UTC',
+        'date_type' => 'date',
       ),
     ),
   ),
@@ -710,20 +664,8 @@ function slac_event_demo_uuid_features_default_content() {
   'field_slac_event_tags' => array(
     'und' => array(
       0 => array(
-        'tid' => 29,
+        'tid' => 25,
         'uuid' => '9914b3dc-1371-45c4-970d-93a26ca5fba9',
-      ),
-    ),
-  ),
-  'field_slac_event_date' => array(
-    'und' => array(
-      0 => array(
-        'value' => '2013-08-08T07:45:00',
-        'value2' => '2013-08-08T19:45:00',
-        'rrule' => NULL,
-        'timezone' => 'Europe/Helsinki',
-        'timezone_db' => 'UTC',
-        'date_type' => 'date',
       ),
     ),
   ),
@@ -788,12 +730,10 @@ function slac_event_demo_uuid_features_default_content() {
   'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
-  'data' => 'b:0;',
   'date' => '2013-08-10 17:37:03 +0300',
-  'author_uuid' => '306f8481-4295-413f-a765-f4d5acee30d3',
+  'author_uuid' => '2861a36a-6f9c-49cb-bd60-478069839275',
 );
   $nodes[] = array(
-  'uid' => 1,
   'title' => 'Electroweak Production: The Path to SUSY?',
   'log' => '',
   'status' => 1,
@@ -807,13 +747,26 @@ function slac_event_demo_uuid_features_default_content() {
   'tnid' => 0,
   'translate' => 0,
   'uuid' => 'a9f2976c-2174-4e45-99d1-f25d3244a4a1',
-  'revision_uid' => 1,
+  'revision_uid' => 0,
   'body' => array(),
+  'field_location' => array(),
   'field_slac_event_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 30,
+        'tid' => 26,
         'uuid' => 'a7aa9fdf-cada-4543-a91a-b3c8e4fe8681',
+      ),
+    ),
+  ),
+  'field_slac_event_date' => array(
+    'und' => array(
+      0 => array(
+        'value' => '2014-11-22T22:45:00',
+        'value2' => '2014-11-23T15:45:00',
+        'rrule' => NULL,
+        'timezone' => 'Europe/Helsinki',
+        'timezone_db' => 'UTC',
+        'date_type' => 'date',
       ),
     ),
   ),
@@ -829,18 +782,6 @@ function slac_event_demo_uuid_features_default_content() {
   'field_slac_event_organization' => array(),
   'field_slac_event_scientific_area' => array(),
   'field_slac_event_tags' => array(),
-  'field_slac_event_date' => array(
-    'und' => array(
-      0 => array(
-        'value' => '2013-08-22T21:45:00',
-        'value2' => '2013-08-23T14:45:00',
-        'rrule' => NULL,
-        'timezone' => 'Europe/Helsinki',
-        'timezone_db' => 'UTC',
-        'date_type' => 'date',
-      ),
-    ),
-  ),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:Item',
@@ -902,12 +843,10 @@ function slac_event_demo_uuid_features_default_content() {
   'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
-  'data' => 'b:0;',
   'date' => '2013-08-10 17:33:43 +0300',
-  'author_uuid' => '306f8481-4295-413f-a765-f4d5acee30d3',
+  'author_uuid' => '2861a36a-6f9c-49cb-bd60-478069839275',
 );
   $nodes[] = array(
-  'uid' => 1,
   'title' => 'Photon Science Seminar Today: Shedding Light into Rapidly Changing, Opaque Plasmas',
   'log' => '',
   'status' => 1,
@@ -925,33 +864,16 @@ function slac_event_demo_uuid_features_default_content() {
   'body' => array(
     'und' => array(
       0 => array(
-        'value' => '<p>At today\'s Photon Science Seminar, Marta Fajardo of IST in Portugal will discuss how matter behaves under conditions of extreme temperature, pressure, density and electromagnetic fields. IST (Instituto Superior Técnico) is a Technical University of Lisbon engineering school.</p>
-<p>Her talk, "4D-HD for high-energy-density plasmas: shedding light into rapidly changing, opaque plasmas," begins at 3 p.m. in Building 901\'s Redtail Hawk conference room.</p>
-<p>The talk will highlight how high-energy-density states of matter occur in astrophysical scenarios and also during every high-intensity laser-solid interaction, when a solid is heated to the plasma state. Although such states are easy to produce, the high densities last only briefly, and since visible radiation cannot penetrate them, traditional diagnostics leave an incomplete picture of these plasmas.</p>
-<p>Fajardo will discuss how high-harmonic radiation from laser-gas interactions, with photon energies in the extreme ultraviolet spectrum, is capable of probing solid density matter. This source, she will explain, has many unique qualities:</p>
-<ul>
-<li>
-		It holds the record for the shortest pulses ever produced, in the attosecond range.</li>
-<li>
-		It essentially behaves like a laser, with linear polarization, small divergence and full spatio-temporal coherence.</li>
-<li>
-		It has a "bonus" feature: a multicolored discrete spectrum.</li>
-</ul>
-<p>These characteristics allow for applications such as nanometer-scale coherent imaging. Different techniques, such as diffraction imaging and 3-D holography, have been demonstrated by Fajardo\'s research groups and other researchers. Recent improvements have allowed single-shot imaging and opened the way for attosecond time resolution.</p>
-<p>Fajardo will describe the use of high-harmonic generation (HHG) for opacity measurements and the development of an extreme ultraviolet (XUV) plasma refractive index diagnostic equipped with a wave-front sensor, as well as recent advances in XUV holography and plans to measure warm dense plasmas produced at SLAC\'s Linac Coherent Light Source (LCLS) with these techniques.</p>
-<p>Tapping into the potential of HHG sources as a probe, one goal, according to Fajardo, is to shine some light into matter under extreme conditions through ultrafast imaging of dense plasmas.</p>',
+        'value' => '<p>At today&#39;s Photon Science Seminar, Marta Fajardo of IST in Portugal will discuss how matter behaves under conditions of extreme temperature, pressure, density and electromagnetic fields. IST (Instituto Superior Técnico) is a Technical University of Lisbon engineering school.</p><p>Her talk, &quot;4D-HD for high-energy-density plasmas: shedding light into rapidly changing, opaque plasmas,&quot; begins at 3 p.m. in Building 901&#39;s Redtail Hawk conference room.</p><p>The talk will highlight how high-energy-density states of matter occur in astrophysical scenarios and also during every high-intensity laser-solid interaction, when a solid is heated to the plasma state. Although such states are easy to produce, the high densities last only briefly, and since visible radiation cannot penetrate them, traditional diagnostics leave an incomplete picture of these plasmas.</p><p>Fajardo will discuss how high-harmonic radiation from laser-gas interactions, with photon energies in the extreme ultraviolet spectrum, is capable of probing solid density matter. This source, she will explain, has many unique qualities:</p><ul><li>It holds the record for the shortest pulses ever produced, in the attosecond range.</li><li>It essentially behaves like a laser, with linear polarization, small divergence and full spatio-temporal coherence.</li><li>It has a &quot;bonus&quot; feature: a multicolored discrete spectrum.</li></ul><p>These characteristics allow for applications such as nanometer-scale coherent imaging. Different techniques, such as diffraction imaging and 3-D holography, have been demonstrated by Fajardo&#39;s research groups and other researchers. Recent improvements have allowed single-shot imaging and opened the way for attosecond time resolution.</p><p>Fajardo will describe the use of high-harmonic generation (HHG) for opacity measurements and the development of an extreme ultraviolet (XUV) plasma refractive index diagnostic equipped with a wave-front sensor, as well as recent advances in XUV holography and plans to measure warm dense plasmas produced at SLAC&#39;s Linac Coherent Light Source (LCLS) with these techniques.</p><p>Tapping into the potential of HHG sources as a probe, one goal, according to Fajardo, is to shine some light into matter under extreme conditions through ultrafast imaging of dense plasmas.</p>',
         'summary' => '',
         'format' => 'full_html',
         'safe_value' => '<p>At today\'s Photon Science Seminar, Marta Fajardo of IST in Portugal will discuss how matter behaves under conditions of extreme temperature, pressure, density and electromagnetic fields. IST (Instituto Superior Técnico) is a Technical University of Lisbon engineering school.</p>
 <p>Her talk, "4D-HD for high-energy-density plasmas: shedding light into rapidly changing, opaque plasmas," begins at 3 p.m. in Building 901\'s Redtail Hawk conference room.</p>
 <p>The talk will highlight how high-energy-density states of matter occur in astrophysical scenarios and also during every high-intensity laser-solid interaction, when a solid is heated to the plasma state. Although such states are easy to produce, the high densities last only briefly, and since visible radiation cannot penetrate them, traditional diagnostics leave an incomplete picture of these plasmas.</p>
 <p>Fajardo will discuss how high-harmonic radiation from laser-gas interactions, with photon energies in the extreme ultraviolet spectrum, is capable of probing solid density matter. This source, she will explain, has many unique qualities:</p>
-<ul><li>
-		It holds the record for the shortest pulses ever produced, in the attosecond range.</li>
-<li>
-		It essentially behaves like a laser, with linear polarization, small divergence and full spatio-temporal coherence.</li>
-<li>
-		It has a "bonus" feature: a multicolored discrete spectrum.</li>
+<ul><li>It holds the record for the shortest pulses ever produced, in the attosecond range.</li>
+<li>It essentially behaves like a laser, with linear polarization, small divergence and full spatio-temporal coherence.</li>
+<li>It has a "bonus" feature: a multicolored discrete spectrum.</li>
 </ul><p>These characteristics allow for applications such as nanometer-scale coherent imaging. Different techniques, such as diffraction imaging and 3-D holography, have been demonstrated by Fajardo\'s research groups and other researchers. Recent improvements have allowed single-shot imaging and opened the way for attosecond time resolution.</p>
 <p>Fajardo will describe the use of high-harmonic generation (HHG) for opacity measurements and the development of an extreme ultraviolet (XUV) plasma refractive index diagnostic equipped with a wave-front sensor, as well as recent advances in XUV holography and plans to measure warm dense plasmas produced at SLAC\'s Linac Coherent Light Source (LCLS) with these techniques.</p>
 <p>Tapping into the potential of HHG sources as a probe, one goal, according to Fajardo, is to shine some light into matter under extreme conditions through ultrafast imaging of dense plasmas.</p>
@@ -960,11 +882,43 @@ function slac_event_demo_uuid_features_default_content() {
       ),
     ),
   ),
+  'field_location' => array(
+    'und' => array(
+      0 => array(
+        'lid' => 1,
+        'name' => 'Kavli Auditorium',
+        'street' => '',
+        'additional' => '',
+        'city' => '',
+        'province' => '',
+        'postal_code' => '',
+        'country' => 'us',
+        'latitude' => 0,
+        'longitude' => 0,
+        'source' => 0,
+        'is_primary' => 0,
+        'province_name' => '',
+        'country_name' => 'United States',
+      ),
+    ),
+  ),
   'field_slac_event_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 28,
+        'tid' => 24,
         'uuid' => '89e0ecf3-9e9f-476b-a920-392077f1e1eb',
+      ),
+    ),
+  ),
+  'field_slac_event_date' => array(
+    'und' => array(
+      0 => array(
+        'value' => '2013-12-24T22:00:00',
+        'value2' => '2013-12-24T22:00:00',
+        'rrule' => NULL,
+        'timezone' => 'Europe/Helsinki',
+        'timezone_db' => 'UTC',
+        'date_type' => 'date',
       ),
     ),
   ),
@@ -974,20 +928,8 @@ function slac_event_demo_uuid_features_default_content() {
   'field_slac_event_tags' => array(
     'und' => array(
       0 => array(
-        'tid' => 27,
+        'tid' => 23,
         'uuid' => '887e35db-2734-405e-a001-daad4a60daa7',
-      ),
-    ),
-  ),
-  'field_slac_event_date' => array(
-    'und' => array(
-      0 => array(
-        'value' => '2013-08-25T06:45:00',
-        'value2' => '2013-08-25T15:45:00',
-        'rrule' => NULL,
-        'timezone' => 'Europe/Helsinki',
-        'timezone_db' => 'UTC',
-        'date_type' => 'date',
       ),
     ),
   ),
@@ -1052,12 +994,10 @@ function slac_event_demo_uuid_features_default_content() {
   'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
-  'data' => 'b:0;',
   'date' => '2013-08-10 17:37:55 +0300',
-  'author_uuid' => '306f8481-4295-413f-a765-f4d5acee30d3',
+  'author_uuid' => '2861a36a-6f9c-49cb-bd60-478069839275',
 );
   $nodes[] = array(
-  'uid' => 1,
   'title' => 'SLAC Colloquium: \'LZ and the future of WIMPs\'',
   'log' => '',
   'status' => 1,
@@ -1073,11 +1013,24 @@ function slac_event_demo_uuid_features_default_content() {
   'uuid' => 'c9e5b13e-e0e9-4a14-acd9-404f43836024',
   'revision_uid' => 1,
   'body' => array(),
+  'field_location' => array(),
   'field_slac_event_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 28,
+        'tid' => 24,
         'uuid' => '89e0ecf3-9e9f-476b-a920-392077f1e1eb',
+      ),
+    ),
+  ),
+  'field_slac_event_date' => array(
+    'und' => array(
+      0 => array(
+        'value' => '2013-12-25T11:45:00',
+        'value2' => '2013-12-25T14:30:00',
+        'rrule' => NULL,
+        'timezone' => 'Europe/Helsinki',
+        'timezone_db' => 'UTC',
+        'date_type' => 'date',
       ),
     ),
   ),
@@ -1093,18 +1046,6 @@ function slac_event_demo_uuid_features_default_content() {
   'field_slac_event_organization' => array(),
   'field_slac_event_scientific_area' => array(),
   'field_slac_event_tags' => array(),
-  'field_slac_event_date' => array(
-    'und' => array(
-      0 => array(
-        'value' => '2013-08-20T10:45:00',
-        'value2' => '2013-08-20T13:30:00',
-        'rrule' => NULL,
-        'timezone' => 'Europe/Helsinki',
-        'timezone_db' => 'UTC',
-        'date_type' => 'date',
-      ),
-    ),
-  ),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:Item',
@@ -1166,12 +1107,10 @@ function slac_event_demo_uuid_features_default_content() {
   'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
-  'data' => 'b:0;',
   'date' => '2013-08-10 17:32:29 +0300',
-  'author_uuid' => '306f8481-4295-413f-a765-f4d5acee30d3',
+  'author_uuid' => '2861a36a-6f9c-49cb-bd60-478069839275',
 );
   $nodes[] = array(
-  'uid' => 1,
   'title' => 'SLAC Colloquium: \'Do WIMPs Rule? The LUX Experiment and the Search for Cosmic Dark Matter\'',
   'log' => '',
   'status' => 1,
@@ -1185,13 +1124,26 @@ function slac_event_demo_uuid_features_default_content() {
   'tnid' => 0,
   'translate' => 0,
   'uuid' => 'e218684b-adf0-4b39-a29d-52e6d07583b9',
-  'revision_uid' => 1,
+  'revision_uid' => 0,
   'body' => array(),
+  'field_location' => array(),
   'field_slac_event_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 28,
+        'tid' => 24,
         'uuid' => '89e0ecf3-9e9f-476b-a920-392077f1e1eb',
+      ),
+    ),
+  ),
+  'field_slac_event_date' => array(
+    'und' => array(
+      0 => array(
+        'value' => '2014-01-22T06:45:00',
+        'value2' => '2014-01-22T14:45:00',
+        'rrule' => NULL,
+        'timezone' => 'Europe/Helsinki',
+        'timezone_db' => 'UTC',
+        'date_type' => 'date',
       ),
     ),
   ),
@@ -1207,18 +1159,6 @@ function slac_event_demo_uuid_features_default_content() {
   'field_slac_event_organization' => array(),
   'field_slac_event_scientific_area' => array(),
   'field_slac_event_tags' => array(),
-  'field_slac_event_date' => array(
-    'und' => array(
-      0 => array(
-        'value' => '2013-08-02T05:45:00',
-        'value2' => '2013-08-02T13:45:00',
-        'rrule' => NULL,
-        'timezone' => 'Europe/Helsinki',
-        'timezone_db' => 'UTC',
-        'date_type' => 'date',
-      ),
-    ),
-  ),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:Item',
@@ -1280,12 +1220,10 @@ function slac_event_demo_uuid_features_default_content() {
   'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
-  'data' => 'b:0;',
   'date' => '2013-08-10 17:33:04 +0300',
-  'author_uuid' => '306f8481-4295-413f-a765-f4d5acee30d3',
+  'author_uuid' => '2861a36a-6f9c-49cb-bd60-478069839275',
 );
   $nodes[] = array(
-  'uid' => 1,
   'title' => 'Photon Science Seminar: Commissioning the New LCLS \'XTCAV\'',
   'log' => '',
   'status' => 1,
@@ -1301,11 +1239,24 @@ function slac_event_demo_uuid_features_default_content() {
   'uuid' => 'e8b52dfa-625e-454b-ab59-e7fe0d68a866',
   'revision_uid' => 1,
   'body' => array(),
+  'field_location' => array(),
   'field_slac_event_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 30,
+        'tid' => 26,
         'uuid' => 'a7aa9fdf-cada-4543-a91a-b3c8e4fe8681',
+      ),
+    ),
+  ),
+  'field_slac_event_date' => array(
+    'und' => array(
+      0 => array(
+        'value' => '2014-08-20T10:45:00',
+        'value2' => '2014-08-20T13:45:00',
+        'rrule' => NULL,
+        'timezone' => 'Europe/Helsinki',
+        'timezone_db' => 'UTC',
+        'date_type' => 'date',
       ),
     ),
   ),
@@ -1321,18 +1272,6 @@ function slac_event_demo_uuid_features_default_content() {
   'field_slac_event_organization' => array(),
   'field_slac_event_scientific_area' => array(),
   'field_slac_event_tags' => array(),
-  'field_slac_event_date' => array(
-    'und' => array(
-      0 => array(
-        'value' => '2013-08-13T10:45:00',
-        'value2' => '2013-08-13T13:45:00',
-        'rrule' => NULL,
-        'timezone' => 'Europe/Helsinki',
-        'timezone_db' => 'UTC',
-        'date_type' => 'date',
-      ),
-    ),
-  ),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:Item',
@@ -1394,9 +1333,8 @@ function slac_event_demo_uuid_features_default_content() {
   'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
-  'data' => 'b:0;',
   'date' => '2013-08-10 17:31:44 +0300',
-  'author_uuid' => '306f8481-4295-413f-a765-f4d5acee30d3',
+  'author_uuid' => '2861a36a-6f9c-49cb-bd60-478069839275',
 );
   return $nodes;
 }

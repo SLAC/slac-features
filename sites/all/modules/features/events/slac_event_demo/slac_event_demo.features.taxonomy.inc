@@ -11,72 +11,72 @@ function slac_event_demo_taxonomy_default_vocabularies() {
   return array(
     'category_colors' => array(
       'name' => 'Category colors',
-      'rdf_mapping' => array(
-        'description' => array(
-          'predicates' => array(
-            0 => 'rdfs:comment',
-          ),
-        ),
-        'name' => array(
-          'predicates' => array(
-            0 => 'dc:title',
-          ),
-        ),
-        'rdftype' => array(
-          0 => 'skos:ConceptScheme',
-        ),
-      ),
       'machine_name' => 'category_colors',
       'description' => '',
       'hierarchy' => 0,
       'module' => 'taxonomy',
       'weight' => 0,
-    ),
-    'event_categories' => array(
-      'name' => 'Event Categories',
       'rdf_mapping' => array(
-        'description' => array(
-          'predicates' => array(
-            0 => 'rdfs:comment',
-          ),
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
         ),
         'name' => array(
           'predicates' => array(
             0 => 'dc:title',
           ),
         ),
-        'rdftype' => array(
-          0 => 'skos:ConceptScheme',
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
         ),
       ),
+    ),
+    'event_categories' => array(
+      'name' => 'Event Categories',
       'machine_name' => 'event_categories',
       'description' => '',
       'hierarchy' => 0,
       'module' => 'taxonomy',
       'weight' => 0,
-    ),
-    'events_tags' => array(
-      'name' => 'Events Tags',
       'rdf_mapping' => array(
-        'description' => array(
-          'predicates' => array(
-            0 => 'rdfs:comment',
-          ),
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
         ),
         'name' => array(
           'predicates' => array(
             0 => 'dc:title',
           ),
         ),
-        'rdftype' => array(
-          0 => 'skos:ConceptScheme',
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
         ),
       ),
+    ),
+    'events_tags' => array(
+      'name' => 'Events Tags',
       'machine_name' => 'events_tags',
       'description' => '',
       'hierarchy' => 0,
       'module' => 'taxonomy',
       'weight' => 0,
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
     ),
   );
 }
