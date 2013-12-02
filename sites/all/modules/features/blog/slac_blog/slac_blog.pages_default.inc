@@ -508,7 +508,7 @@ function slac_blog_default_page_manager_handlers() {
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'items_per_page' => '20',
+      'items_per_page' => '10',
       'override_title' => 1,
       'override_title_text' => 'Tags',
     );
@@ -864,23 +864,12 @@ function slac_blog_default_page_manager_pages() {
     $pane = new stdClass();
     $pane->pid = 'new-3';
     $pane->panel = 'right';
-    $pane->type = 'views';
-    $pane->subtype = 'blog_tags';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'blog_tags-panel_pane_1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_pager_settings' => 0,
-      'use_pager' => 0,
-      'nodes_per_page' => '0',
-      'pager_id' => '0',
-      'offset' => '0',
-      'more_link' => 0,
-      'feed_icons' => 0,
-      'panel_args' => 0,
-      'link_to_view' => 0,
-      'args' => '',
-      'url' => '',
-      'display' => 'block',
+      'items_per_page' => '10',
       'override_title' => 0,
       'override_title_text' => '',
     );
