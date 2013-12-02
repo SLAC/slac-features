@@ -640,12 +640,34 @@ article.node-blog
     
 +at-breakpoint($less-than-480)
   .profile-info-brief
-    .views-row-2
+  
+    .views-field-field-prf-contact-photo
+      margin-right: 0
+      position: relative
+      z-index: 1
+      
+    .views-row-1
+      margin-bottom: 34px  
+  
+    .views-row-2, .profile-name, .views-field-field-prf-contact-affiliation
       padding-left: 235px
+
+    .profile-name, .views-field-field-prf-contact-affiliation
+      background-color: $bg-col-1
+      width: 100%
+      display: block
+      position: relative
+      top: 20px
+      
+    .profile-name
+      padding-top: 6px
+      
+    .views-field-field-prf-contact-affiliation
+      padding-bottom: 6px
 
 +at-breakpoint($tablet)
   .profile-info-brief
-    .views-row-2
+    .views-row-2, .profile-name, .views-field-field-prf-contact-affiliation
       padding-left: 185px
 
     

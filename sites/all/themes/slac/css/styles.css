@@ -195,8 +195,13 @@ article.node-blog.node-teaser .links li a { display: block; }
 .profile-info-brief .views-row-1 { margin-bottom: 18px; }
 .profile-info-brief .short-bio-text { font-size: 14px; font-size: 0.875rem; margin-bottom: 10px; line-height: 20px; }
 
-@media (min-width: 480px) { .profile-info-brief .views-row-2 { padding-left: 235px; } }
-@media (min-width: 690px) { .profile-info-brief .views-row-2 { padding-left: 185px; } }
+@media (min-width: 480px) { .profile-info-brief .views-field-field-prf-contact-photo { margin-right: 0; position: relative; z-index: 1; }
+  .profile-info-brief .views-row-1 { margin-bottom: 34px; }
+  .profile-info-brief .views-row-2, .profile-info-brief .profile-name, .profile-info-brief .views-field-field-prf-contact-affiliation { padding-left: 235px; }
+  .profile-info-brief .profile-name, .profile-info-brief .views-field-field-prf-contact-affiliation { background-color: #f3f1eb; width: 100%; display: block; position: relative; top: 20px; }
+  .profile-info-brief .profile-name { padding-top: 6px; }
+  .profile-info-brief .views-field-field-prf-contact-affiliation { padding-bottom: 6px; } }
+@media (min-width: 690px) { .profile-info-brief .views-row-2, .profile-info-brief .profile-name, .profile-info-brief .views-field-field-prf-contact-affiliation { padding-left: 185px; } }
 .view-entire-profile a { text-transform: uppercase; color: #720c20; font-size: 11px; font-size: 0.6875rem; }
 .view-entire-profile a:after { content: "\3e"; font-size: 14px; font-size: 0.875rem; line-height: 16px; vertical-align: bottom; margin-left: 3px; }
 
