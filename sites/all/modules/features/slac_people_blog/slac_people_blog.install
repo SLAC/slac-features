@@ -120,6 +120,7 @@ function _slac_people_blog_install__panes($did) {
       'cache' => array(),
       'style' => array(
         'settings' => NULL,
+        'style' => 'greybackground',
       ),
       'css' => array(),
       'extras' => array(),
@@ -139,6 +140,7 @@ function _slac_people_blog_install__panes($did) {
       'cache' => array(),
       'style' => array(
         'settings' => NULL,
+        'style' => 'greybackground',
       ),
       'css' => array(),
       'extras' => array(),

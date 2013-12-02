@@ -117,6 +117,7 @@ function _slac_people_profile_install__panes($did) {
       'cache' => array(),
       'style' => array(
         'settings' => NULL,
+        'style' => 'greybackground',
       ),
       'css' => array(),
       'extras' => array(),
