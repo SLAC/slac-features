@@ -277,6 +277,14 @@ function slac_people_install() {
   );
   menu_link_save($item);
 
+  // Create a Site Login menu item in user menu.
+  $item = array(
+    'link_title' => st('Site Login'),
+    'link_path' => 'user/login',
+    'menu_name' => 'user-menu',
+  );
+  menu_link_save($item);
+
   // Update the menu router information.
   menu_rebuild();
 
@@ -288,4 +296,5 @@ function slac_people_install() {
     ->execute();
   variable_set('admin_theme', 'seven');
   variable_set('node_admin_theme', '1');
+  variable_set('install_profile', 'slac_people');
 }
