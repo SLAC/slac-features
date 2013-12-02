@@ -87,7 +87,7 @@
           color: $red
         position: absolute
         font-size: 45px
-      &:hover
+      &:hover, &:focus
         &:after
           color: $red
         
@@ -144,7 +144,8 @@
         margin-top: -40px
         width: 30px
         height: 55px        
-        
+        &:after
+          margin-top: -29px
         
         &:hover
           background-color: rgba(200, 200, 200, 0.7)
@@ -161,8 +162,6 @@
       height: auto
       width: 100%
       padding: 0
-
-      
       line-height: 20px
       display: block
       padding: 10px 16px 10px
