@@ -229,6 +229,8 @@ function pp_crop_theme() {
   );
 }
 
+
+
 function theme_images_thumbnails_list($variables) {
   if (empty($variables['thumbnail_options']) || $variables['file'] == NULL) {
     return;
