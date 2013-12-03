@@ -538,13 +538,20 @@ function slac_profile_elements_views_default_views() {
   $handler->display->display_options['fields']['field_prf_contact_affiliation']['element_label_type'] = 'div';
   $handler->display->display_options['fields']['field_prf_contact_affiliation']['element_label_class'] = 'profile-affiliation';
   $handler->display->display_options['fields']['field_prf_contact_affiliation']['element_label_colon'] = FALSE;
+  /* Field: Profile: URL */
+  $handler->display->display_options['fields']['url']['id'] = 'url';
+  $handler->display->display_options['fields']['url']['table'] = 'views_entity_profile2';
+  $handler->display->display_options['fields']['url']['field'] = 'url';
+  $handler->display->display_options['fields']['url']['label'] = 'Profile URL';
+  $handler->display->display_options['fields']['url']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['url']['link_to_entity'] = 0;
   /* Field: Profile: Bio */
   $handler->display->display_options['fields']['field_prf_bio_bio']['id'] = 'field_prf_bio_bio';
   $handler->display->display_options['fields']['field_prf_bio_bio']['table'] = 'field_data_field_prf_bio_bio';
   $handler->display->display_options['fields']['field_prf_bio_bio']['field'] = 'field_prf_bio_bio';
   $handler->display->display_options['fields']['field_prf_bio_bio']['label'] = '';
   $handler->display->display_options['fields']['field_prf_bio_bio']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_prf_bio_bio']['alter']['text'] = '<div class="short-bio-text">[field_prf_bio_bio]</div><div class="view-entire-profile"><a href="/profile">View entire profile</a></div>';
+  $handler->display->display_options['fields']['field_prf_bio_bio']['alter']['text'] = '<div class="short-bio-text">[field_prf_bio_bio]</div><div class="view-entire-profile"><a href="[url]">View entire profile</a></div>';
   $handler->display->display_options['fields']['field_prf_bio_bio']['alter']['trim_whitespace'] = TRUE;
   $handler->display->display_options['fields']['field_prf_bio_bio']['alter']['max_length'] = '600';
   $handler->display->display_options['fields']['field_prf_bio_bio']['alter']['more_link'] = TRUE;
