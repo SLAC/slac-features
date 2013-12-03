@@ -279,7 +279,7 @@ function slac_people_install() {
 
   // Create a Site Login menu item in user menu.
   $item = array(
-    'link_title' => st('Site Login'),
+    'link_title' => st('SLAC Login'),
     'link_path' => 'user/login',
     'menu_name' => 'user-menu',
   );
