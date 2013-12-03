@@ -135,7 +135,7 @@ function pp_crop_element_process($element, $form_state, $form) {
 
 
 /**
- * Implements hook_media_format_form_prepare_alter().
+ * Implements hook_media_wysiwyg_format_form_prepare_alter().
  *
  * Alter media image selection view_mode form. Add cropping button.
  *
@@ -143,7 +143,7 @@ function pp_crop_element_process($element, $form_state, $form) {
  * @param $form_state
  * @param $file
  */
-function pp_crop_media_format_form_prepare_alter(&$form, $form_state, $file) {
+function pp_crop_media_wysiwyg_format_form_prepare_alter(&$form, $form_state, $file) {
   if ($file->type != 'image') {
     return;
   }
@@ -354,8 +354,11 @@ function pp_crop_epsacrop_load_styles_alter(&$styles, $entity_name, $field_name,
   }
 }
 
+/**
+ * Implements hook_js_alter().
+ */
 function pp_crop_js_alter(&$js) {
-  $wysiwyg_media = drupal_get_path('module', 'media'). '/js/wysiwyg-media.js';
+  $wysiwyg_media = drupal_get_path('module', 'media_wysiwyg'). '/js/wysiwyg-media.js';
   if (isset($js[$wysiwyg_media])) {
     $pp_crop_wysiwyg = drupal_get_path('module', 'pp_crop'). '/js/pp_crop-wysiwyg-media.js';
     $js[$pp_crop_wysiwyg] = array_merge($js[$wysiwyg_media], array('data' => $pp_crop_wysiwyg, 'weight' => 0.9));

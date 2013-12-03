@@ -11,7 +11,7 @@ include_once 'pp_lightbox.features.inc';
  *
  * Needed to display thumbnails properly in WYSIWYG on inserting.
  */
-function pp_lightbox_media_token_to_markup_alter(&$element, $tag_info, &$settings) {
+function pp_lightbox_media_wysiwyg_token_to_markup_alter(&$element, $tag_info, &$settings) {
   if (strpos($tag_info['view_mode'], 'crop_') === FALSE) {
     return;
   }
@@ -135,7 +135,7 @@ function theme_image_style_lightbox($variables) {
  * Implements hook_js_alter().
  */
 function pp_lightbox_js_alter(&$js) {
-  $wysiwyg_media = drupal_get_path('module', 'media'). '/js/wysiwyg-media.js';
+  $wysiwyg_media = drupal_get_path('module', 'media_wysiwyg'). '/js/wysiwyg-media.js';
   if (isset($js[$wysiwyg_media])) {
     $pp_lightbox_wysiwyg = drupal_get_path('module', 'pp_lightbox'). '/js/pp_lightbox-wysiwyg-media.js';
     $js[$pp_lightbox_wysiwyg] = array_merge($js[$wysiwyg_media], array('data' => $pp_lightbox_wysiwyg, 'weight' => 1));
@@ -147,7 +147,7 @@ function pp_lightbox_js_alter(&$js) {
  *
  * Alter media_format_form form.
  */
-function pp_lightbox_form_media_format_form_alter(&$form, $form_state) {
+function pp_lightbox_form_media_wysiwyg_format_form_alter(&$form, $form_state) {
   $form['pp_lightbox'] = array(
     '#type' => 'checkbox',
     '#title' => t('Lightbox'),
