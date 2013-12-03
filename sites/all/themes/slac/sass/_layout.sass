@@ -467,6 +467,23 @@ article.node-blog
       &:hover:after
         display: inline-block
 
+  table
+    margin-bottom: 25px
+    thead
+      
+      text-transform: uppercase
+      th
+        background-color: $menu_bg
+        font-weight: bold
+    tbody
+    td, th
+      border: 1px solid $menu_bg
+      padding: 6px
+      
+      tr
+        th
+        td
+
 
   &.view-mode-full
     header 
@@ -483,14 +500,14 @@ article.node-blog
 
       h2
         +fontsize-rem(16px)
-        margin-bottom: 5px
+        margin-bottom: 10px
         margin-top: 15px
       h3
         +fontsize-rem(14px)
         font-weight: bold
 
     .field-name-field-slac-blog-image
-      margin-bottom: 10px
+      margin-bottom: 25px
       
     .field-type-text-with-summary  
       p
