@@ -65,8 +65,10 @@ html
 //-----------------------------------
 .pane-pane-messages
   margin-bottom: 10px
+
+
   
-ul.tabs, .action-links
+ul.tabs, .action-links, 
   font-size: em(12px)
   margin-bottom: 10px
   @extend .clearfix
@@ -82,7 +84,20 @@ ul.tabs, .action-links
       +border-radius(10px)
       &:hover
         background-color: $grey-2e
-
+        
+.links
+  font-size: em(12px)
+  li
+    display: inline-block
+  a
+    background-color: $grey-a
+    padding: 3px
+    color: #fff
+    +border-radius(3px)
+    display: inline-block
+    margin: 3px 3px 3px 0  
+    &:hover
+      background-color: $grey-2e
 
 .mobile-main-menu
   max-height: 100%
@@ -840,7 +855,14 @@ article.node-blog
     display: block
 
 
-
+table.sticky-table
+  margin-bottom: 25px
+  th
+    font-weight: bold
+    background-color: $grey-f1
+  td, th
+    border: 1px solid $bg-col-1
+    padding: 6px
 
 
 

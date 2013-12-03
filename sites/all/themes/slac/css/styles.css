@@ -54,6 +54,11 @@ ul.tabs li, .action-links li { float: left; margin-right: 10px; margin-bottom: 1
 ul.tabs li a, .action-links li a { background-color: #aaaaaa; padding: 6px 12px; color: white; display: block; -webkit-border-radius: 10px; -moz-border-radius: 10px; -ms-border-radius: 10px; -o-border-radius: 10px; border-radius: 10px; }
 ul.tabs li a:hover, .action-links li a:hover { background-color: #2e2e2e; }
 
+.links { font-size: 0.75em; }
+.links li { display: inline-block; }
+.links a { background-color: #aaaaaa; padding: 3px; color: white; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; display: inline-block; margin: 3px 3px 3px 0; }
+.links a:hover { background-color: #2e2e2e; }
+
 .mobile-main-menu { max-height: 100%; margin: 7px -13px -7px -13px; background: #e7e6d9; padding: 13px; clear: both; border-top: 7px solid #871628; }
 .mobile-main-menu.active { display: block !important; }
 .mobile-main-menu .main-menu { background-color: #e7e6d9; text-transform: uppercase; }
@@ -236,6 +241,10 @@ article.node-blog.node-teaser .links li a { display: block; }
 
 .views-field-field-prf-contact-photo { border: 8px solid #f3f1eb; border-left-width: 10px; border-right-width: 10px; display: inline-block; margin-right: 15px; margin-bottom: 25px; }
 .views-field-field-prf-contact-photo img { display: block; }
+
+table.sticky-table { margin-bottom: 25px; }
+table.sticky-table th { font-weight: bold; background-color: #f1f1f1; }
+table.sticky-table td, table.sticky-table th { border: 1px solid #f3f1eb; padding: 6px; }
 
 .site-title { position: relative; }
 
