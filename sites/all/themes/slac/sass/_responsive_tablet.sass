@@ -29,6 +29,7 @@
           padding: 0 10px
           padding-bottom: 3px
           &.active-trail, &.active
+            color: $red
             border-bottom: 2px solid $red
 
 
@@ -115,9 +116,15 @@
         //padding-top: 0
 
       .panel-pane
-        padding: 13px 22px
-
-
+        padding: 0px 22px 13px 22px
+        &:first-of-type
+          margin-top: -24px
+          &.region-grey-background-style, .front &
+            margin-top: 0
+        
+        
+        &.region-grey-background-style
+          padding-top: 13px
 
 
 
@@ -145,7 +152,7 @@
   //Profile detail page
   //-----------------------------------
   .views-field-field-prf-contact-photo
-    width: 170px
+    width: 188px
 
 
   //Site logo header
