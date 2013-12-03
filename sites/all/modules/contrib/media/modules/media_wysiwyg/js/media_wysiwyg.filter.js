@@ -14,15 +14,15 @@
      * @param content
      */
     replaceTokenWithPlaceholder: function(content) {
-      var tagmap = Drupal.media.filter.ensure_tagmap(),
+      Drupal.media.filter.ensure_tagmap()
+      var tagmap = Drupal.settings.tagmap,
         matches = content.match(/\[\[.*?\]\]/g),
-        media_definition,
-        id = 0;
+        media_definition;
 
       if (matches) {
-        var i = 1;
         for (var macro in tagmap) {
-          var index = matches.indexOf(macro);
+          // We cant use indexOf because of IE.
+          var index = $.inArray(macro, matches);
           if (index !== -1) {
             var media_json = macro.replace('[[', '').replace(']]', '');
 
@@ -38,10 +38,9 @@
               var element = Drupal.media.filter.create_element(tagmap[macro], media_definition);
               var markup = Drupal.media.filter.outerHTML(element);
 
-              content = content.replace(macro, Drupal.media.filter.getWrapperStart(i) + markup + Drupal.media.filter.getWrapperEnd(i));
+              content = content.replace(macro, markup);
             }
           }
-          i++;
         }
       }
       return content;
@@ -52,55 +51,23 @@
      * @param content
      */
     replacePlaceholderWithToken: function(content) {
-      var tagmap = Drupal.media.filter.ensure_tagmap();
-      var i = 1;
-      for (var macro in tagmap) {
-        var startTag = Drupal.media.filter.getWrapperStart(i), endTag = Drupal.media.filter.getWrapperEnd(i);
-        var startPos = content.indexOf(startTag), endPos = content.indexOf(endTag);
-        if (startPos !== -1 && endPos !== -1) {
-          // If the placeholder wrappers are empty, remove the macro too.
-          if (endPos - startPos - startTag.length === 0) {
-            macro = '';
-          }
-          content = content.substr(0, startPos) + macro + content.substr(endPos + (new String(endTag)).length);
-        }
-        i++;
-      }
-      return content;
-    },
+      Drupal.media.filter.ensure_tagmap();
+      // Convert all xhtml markup to html for reliable matching/replacing.
+      content = content.replace(/[\s]\/\>/g, '>');
 
-    getWrapperStart: function(i) {
-      return '<!--MEDIA-WRAPPER-START-' + i + '-->';
-    },
+      // Re-build the macros in case any element has changed in the editor.
+      $('.media-element', content).each(function(i, element) {
+        var markup = Drupal.media.filter.outerHTML($(element));
+          macro = Drupal.media.filter.create_macro($(element));
 
-    getWrapperEnd: function(i) {
-      return '<!--MEDIA-WRAPPER-END-' + i + '-->';
-    },
-
-    /**
-     * Register new element and returns the placeholder markup.
-     *
-     * @param formattedMedia a formatted media object as given by the onSubmit
-     * function of the media Style popup.
-     * @param fid the file id.
-     *
-     * @return The registered element.
-     */
-    registerNewElement: function (formattedMedia, fid) {
-      var element = Drupal.media.filter.create_element(formattedMedia.html, {
-        fid: fid,
-        view_mode: formattedMedia.type,
-        attributes: formattedMedia.options
+        // Store the macro => html for more efficient rendering in
+        // replaceTokenWithPlaceholder().
+        Drupal.settings.tagmap[macro] = markup;
+        // Replace the media element with its macro.
+        content = content.replace(markup, macro);
       });
 
-      var markup = Drupal.media.filter.outerHTML(element),
-        macro = Drupal.media.filter.create_macro(element);
-
-      // Store macro/markup pair in the tagmap.
-      Drupal.media.filter.ensure_tagmap();
-      Drupal.settings.tagmap[macro] = markup;
-
-      return element;
+      return content;
     },
 
     /**
@@ -122,7 +89,7 @@
 
       // Move attributes from the file info array to the placeholder element.
       if (info.attributes) {
-        $.each(Drupal.media.filter.allowed_attributes(), function(i, a) {
+        $.each(Drupal.settings.media.wysiwyg_allowed_attributes, function(i, a) {
           if (info.attributes[a]) {
             element.attr(a, info.attributes[a]);
           }
@@ -182,7 +149,7 @@
         file_info.attributes = {};
 
         // Extract whitelisted attributes.
-        $.each(Drupal.media.filter.allowed_attributes, function(i, a) {
+        $.each(Drupal.settings.media.wysiwyg_allowed_attributes, function(i, a) {
           if (value = element.attr(a)) {
             file_info.attributes[a] = value;
           }
@@ -199,7 +166,7 @@
      * @param element (jQuery object)
      */
     outerHTML: function (element) {
-      return $('<div>').append(element.eq(0).clone()).html();
+      return element[0].outerHTML || $('<div>').append(element.eq(0).clone()).html();
     },
 
     /**
@@ -225,9 +192,9 @@
       }
       Drupal.settings.tagmap[macro] = markup;
 
-      // Return the wrapped html code to insert in an editor and use it with
+      // Return the html code to insert in an editor and use it with
       // replacePlaceholderWithToken()
-      return Drupal.media.filter.getWrapperStart(i) + markup + Drupal.media.filter.getWrapperEnd(i);
+      return markup;
     },
 
     /**
@@ -236,15 +203,6 @@
     ensure_tagmap: function () {
       Drupal.settings.tagmap = Drupal.settings.tagmap || {};
       return Drupal.settings.tagmap;
-    },
-
-    /**
-     * Ensures the wysiwyg_allowed_attributes and returns it.
-     * In case of an error the default settings are returned.
-     */
-    allowed_attributes: function () {
-      Drupal.settings.wysiwyg_allowed_attributes = Drupal.settings.wysiwyg_allowed_attributes || ['height', 'width', 'hspace', 'vspace', 'border', 'align', 'style', 'alt', 'title', 'class', 'id', 'usemap'];
-      return Drupal.settings.wysiwyg_allowed_attributes;
     }
   }
 })(jQuery);

@@ -26,26 +26,16 @@ Drupal.behaviors.mediaFormatForm = {
 
     // Adding the buttons should only be done once in order to prevent multiple
     // buttons from being added if part of the form is updated via AJAX
-    $('#media-format-form').once('format', function() {
-      $('<a class="button fake-ok">' + Drupal.t('Submit') + '</a>').appendTo($('#media-format-form')).bind('click', Drupal.media.formatForm.submit);
-      $('<a class="button fake-cancel">' + Drupal.t('Cancel') + '</a>').appendTo($('#media-format-form')).bind('click', Drupal.media.formatForm.submit);
+    $('#media-wysiwyg-format-form').once('format', function() {
+      $('<a class="button fake-ok">' + Drupal.t('Submit') + '</a>').appendTo($('#media-wysiwyg-format-form')).bind('click', Drupal.media.formatForm.submit);
+      $('<a class="button fake-cancel">' + Drupal.t('Cancel') + '</a>').appendTo($('#media-wysiwyg-format-form')).bind('click', Drupal.media.formatForm.submit);
     });
-
-    // Resize the window on load.
-    // @TODO this duplicates Drupal.media.browser.resizeIframe()
-    //       can we put a resize function into media.core.js?
-    $(document).ready(function () {
-      // Get the height and add a bit of padding to acomidate the form buttons.
-      var h = $('body').height() + 20;
-      $(parent.window.document).find('#mediaStyleSelector').height(h);
-    });
-
   }
 };
 
 Drupal.media.formatForm.getOptions = function () {
   // Get all the values
-  var ret = {}; $.each($('#media-format-form fieldset#edit-options *').serializeArray(), function (i, field) { ret[field.name] = field.value; });
+  var ret = {}; $.each($('#media-wysiwyg-format-form fieldset#edit-options *').serializeArray(), function (i, field) { ret[field.name] = field.value; });
   return ret;
 };
 

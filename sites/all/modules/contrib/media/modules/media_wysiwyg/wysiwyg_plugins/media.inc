@@ -8,33 +8,33 @@
 /**
  * Implements WYSIWYG's hook_INCLUDE_plugin().
  */
-function media_media_plugin() {
+function media_wysiwyg_media_plugin() {
   // Include the required browser JS.
   // @todo: wyswiyg should allow libraries and multiple js files
   // to be defined by this hook.
   // @see http://drupal.org/node/1039076
-  media_include_browser_js();
+  media_wysiwyg_include_browser_js();
 
   // Add the filter handling.
-  drupal_add_js(drupal_get_path('module', 'media') . '/js/media.filter.js');
+  drupal_add_js(drupal_get_path('module', 'media_wysiwyg') . '/js/media_wysiwyg.filter.js');
 
   // Plugin definition.
   $plugins['media'] = array(
-    'title' => media_variable_get('wysiwyg_title'),
+    'title' => variable_get('media_wysiwyg_wysiwyg_title', t('Media browser')),
     'vendor url' => 'http://drupal.org/project/media',
-    'icon path' => drupal_get_path('module', 'media') . '/images',
+    'icon path' => drupal_get_path('module', 'media_wysiwyg') . '/images',
     'icon file' => 'wysiwyg-media.gif',
-    'icon title' => media_variable_get('wysiwyg_icon_title'),
+    'icon title' => variable_get('media_wysiwyg_wysiwyg_icon_title', t('Add media')),
     // @todo: move this to the plugin directory for the wysiwyg plugin.
-    'js path' => drupal_get_path('module', 'media') . '/js',
+    'js path' => drupal_get_path('module', 'media_wysiwyg') . '/js',
     'js file' => 'wysiwyg-media.js',
-    'css file' => NULL,
-    'css path' => NULL,
+    'css path' => drupal_get_path('module', 'media_wysiwyg') . '/css',
+    'css file' => 'media_wysiwyg.css',
     'settings' => array(
       'global' => array(
-        'enabledPlugins' => media_variable_get('wysiwyg_browser_plugins'),
-        'file_directory' => media_variable_get('wysiwyg_upload_directory'),
-        'types' => media_variable_get('wysiwyg_allowed_types'),
+        'enabledPlugins' => variable_get('media_wysiwyg_wysiwyg_browser_plugins', array()),
+        'file_directory' => variable_get('media_wysiwyg_wysiwyg_upload_directory', ''),
+        'types' => variable_get('media_wysiwyg_wysiwyg_allowed_types', array('audio', 'image', 'video', 'document')),
         'id' => 'media_wysiwyg',
       ),
     ),
@@ -48,7 +48,7 @@ function media_media_plugin() {
  *
  * Defines default variables.
  */
-function media_include_browser_js() {
+function media_wysiwyg_include_browser_js() {
   static $included;
   if ($included) {
     return;
@@ -68,24 +68,6 @@ function media_include_browser_js() {
     }
   }
   // Add wysiwyg-specific settings.
-  $settings = array('wysiwyg_allowed_attributes' => media_variable_get('wysiwyg_allowed_attributes'));
+  $settings = array('wysiwyg_allowed_attributes' => variable_get('media_wysiwyg_wysiwyg_allowed_attributes', _media_wysiwyg_wysiwyg_allowed_attributes_default()));
   drupal_add_js(array('media' => $settings), 'setting');
-}
-
-/**
- * Element validate callback for the media WYSIWYG button.
- */
-function media_wysiwyg_button_element_validate($element, &$form_state) {
-  if (!empty($element['#value'])) {
-    $format = filter_format_load($form_state['build_info']['args'][0]->format);
-    $filters = filter_list_format($format->format);
-    if (empty($filters['media_filter']->status)) {
-      form_error($element, t('The <em>Convert Media tags to markup</em> filter must be enabled for the <a href="@format-link">@format format</a> in order to use the Media browser WYSIWYG button.', array(
-        '@format-link' => url('admin/config/content/formats/' . $format->format, array('query' => array('destination' => $_GET['q']))),
-        '@format' => $format->name,
-      )));
-    }
-  }
-
-  return $element;
 }

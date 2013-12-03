@@ -7,21 +7,6 @@
  * Theming functions for the Media module.
  */
 
-
-/**
- * Display a media file list.
- *
- * @param array $element
- *   The form element.
- *
- * @return string
- *   HTML of the file list
- */
-function theme_media_file_list($element) {
-  // Add the CSS for our display.
-  return '<div class="media-file-list">' . theme('form_element', $element, $element['#children']) . '</div>';
-}
-
 /**
  * Add messages to the page.
  */
@@ -85,13 +70,26 @@ function template_preprocess_media_thumbnail(&$variables) {
  */
 function theme_media_formatter_large_icon($variables) {
   $file = $variables['file'];
-  $icon_dir = media_variable_get('icon_base_directory') . '/' . media_variable_get('icon_set');
+  $icon_dir = variable_get('media_icon_base_directory', 'public://media-icons') . '/' . variable_get('media_icon_set', 'default');
   $icon = file_icon_path($file, $icon_dir);
   $variables['path'] = $icon;
+
   // theme_image() requires the 'alt' attribute passed as its own variable.
   // @see http://drupal.org/node/999338
   if (!isset($variables['alt']) && isset($variables['attributes']['alt'])) {
     $variables['alt'] = $variables['attributes']['alt'];
   }
-  return theme('image', $variables);
+
+  // Add image height and width for the image theme functions.
+  if ($info = image_get_info($icon)) {
+    $variables += $info;
+  }
+
+  if ($variables['style_name']) {
+    $output = theme('image_style', $variables);
+  }
+  else {
+    $output = theme('image', $variables);
+  }
+  return $output;
 }

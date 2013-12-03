@@ -78,7 +78,7 @@ Drupal.wysiwyg.plugins.media = {
  * inserting a media element into the WYSIWYG.
  * Keeps track of the WYSIWYG instance id.
  */
-InsertMedia = function (instance_id) {
+var InsertMedia = function (instance_id) {
   this.instanceId = instance_id;
   return this;
 };
