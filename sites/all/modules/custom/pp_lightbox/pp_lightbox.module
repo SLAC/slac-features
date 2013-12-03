@@ -17,7 +17,7 @@ function pp_lightbox_media_token_to_markup_alter(&$element, $tag_info, &$setting
   }
 
   // Do not alter output if Lighbox checkbox is not enabled.
-  if (!isset($tag_info['pp_lightbox']) || !$tag_info['pp_lightbox']) {
+  if (!isset($tag_info['fields']) || !isset($tag_info['fields']['pp_lightbox']) || !$tag_info['fields']['pp_lightbox']) {
     return;
   }
 
@@ -152,4 +152,12 @@ function pp_lightbox_form_media_format_form_alter(&$form, $form_state) {
     '#type' => 'checkbox',
     '#title' => t('Lightbox'),
   );
+
+  if (!isset($_GET['fields'])) {
+    return;
+  }
+  $fields = json_decode($_GET['fields']);
+  if (isset($fields->pp_lightbox)) {
+    $form['pp_lightbox']['#default_value'] = $fields->pp_lightbox;
+  }
 }

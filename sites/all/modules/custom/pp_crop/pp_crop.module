@@ -353,3 +353,11 @@ function pp_crop_epsacrop_load_styles_alter(&$styles, $entity_name, $field_name,
     $styles['styles'] = array_filter($wysiwyg_styles);
   }
 }
+
+function pp_crop_js_alter(&$js) {
+  $wysiwyg_media = drupal_get_path('module', 'media'). '/js/wysiwyg-media.js';
+  if (isset($js[$wysiwyg_media])) {
+    $pp_crop_wysiwyg = drupal_get_path('module', 'pp_crop'). '/js/pp_crop-wysiwyg-media.js';
+    $js[$pp_crop_wysiwyg] = array_merge($js[$wysiwyg_media], array('data' => $pp_crop_wysiwyg, 'weight' => 0.9));
+  }
+}
