@@ -334,10 +334,10 @@ ul.blog-archive-class > li ul li { margin-bottom: 9px; margin-right: 15px; float
 
 .pane-bundle-slideshow-description-bottom { margin: 0 -13px; }
 .pane-bundle-slideshow-description-bottom h2.pane-title { display: none; }
-.pane-bundle-slideshow-description-bottom .field-slideshow-controls a { display: block; text-indent: -9000px; overflow: hidden; width: 35px; height: 70px; position: absolute; z-index: 5; bottom: 0px; }
-.pane-bundle-slideshow-description-bottom .field-slideshow-controls a:after { top: 50%; margin-top: -28px; left: 50%; color: white; position: absolute; font-size: 45px; }
-.no-rgba .pane-bundle-slideshow-description-bottom .field-slideshow-controls a:after { color: #720c20; }
-.pane-bundle-slideshow-description-bottom .field-slideshow-controls a:hover:after, .pane-bundle-slideshow-description-bottom .field-slideshow-controls a:focus:after { color: #720c20; }
+.pane-bundle-slideshow-description-bottom .field-slideshow-controls a { display: block; text-indent: -9000px; overflow: hidden; width: 35px; height: 70px; position: absolute; z-index: 5; bottom: 0px; color: white; }
+.pane-bundle-slideshow-description-bottom .field-slideshow-controls a:after { top: 50%; margin-top: -28px; left: 50%; position: absolute; font-size: 45px; }
+.pane-bundle-slideshow-description-bottom .field-slideshow-controls a:focus { color: #720c20; }
+.no-touch .pane-bundle-slideshow-description-bottom .field-slideshow-controls a:hover { color: #720c20; }
 .pane-bundle-slideshow-description-bottom .field-slideshow-controls a.prev { left: 0; }
 .pane-bundle-slideshow-description-bottom .field-slideshow-controls a.prev:after { content: "\e609"; margin-left: -10px; }
 .pane-bundle-slideshow-description-bottom .field-slideshow-controls a.next { right: 0; }

@@ -73,24 +73,26 @@
       overflow: hidden  
       width: 35px
       height: 70px
-      
       position: absolute
       z-index: 5
-      bottom: 0px      
+      bottom: 0px  
+      color: #fff    
       &:after
         @extend .slac-font
         top: 50%
         margin-top: -28px
         left: 50%
-        color: #fff
-        .no-rgba &
-          color: $red
         position: absolute
         font-size: 45px
-      &:hover, &:focus
-        &:after
-          color: $red
-        
+
+      &:focus
+        color: $red 
+      
+      .no-touch &
+        &:hover
+          color: $red      
+      
+      
       &.prev 
         left: 0
         &:after
