@@ -286,19 +286,15 @@ function slac_news_field_default_field_instances() {
   // Exported field_instance: 'node-slac_news-field_slac_news_type'
   $field_instances['node-slac_news-field_slac_news_type'] = array(
     'bundle' => 'slac_news',
-    'default_value' => array(
-      0 => array(
-        'value' => 'news_article',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Please select the type of news article this is',
+    'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'list',
+        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'list_default',
+        'type' => 'taxonomy_term_reference_link',
         'weight' => 7,
       ),
       'teaser' => array(
@@ -310,8 +306,8 @@ function slac_news_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_slac_news_type',
-    'label' => 'Type',
-    'required' => 1,
+    'label' => 'News type',
+    'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -332,13 +328,12 @@ function slac_news_field_default_field_instances() {
   t('If the news article is academic in nature, please include any citation information here');
   t('Media');
   t('News Source');
+  t('News type');
   t('Optional: if this is a press release or similar, include the contact information here.');
   t('Please enter a comma separated list of tags for this article, i.e. Photon, X-ray');
   t('Please enter where the news article came from, this should be the title of the source as well as the url');
-  t('Please select the type of news article this is');
   t('Please upload or select any media such as images or videos you would like to include in the article.');
   t('Tags');
-  t('Type');
 
   return $field_instances;
 }

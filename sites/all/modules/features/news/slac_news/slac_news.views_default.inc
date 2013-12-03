@@ -105,22 +105,96 @@ function slac_news_views_default_views() {
     'slac_news' => 'slac_news',
   );
 
-  /* Display: News Listing */
-  $handler = $view->new_display('panel_pane', 'News Listing', 'panel_pane_1');
+  /* Display: News Listing by type */
+  $handler = $view->new_display('panel_pane', 'News Listing by type', 'panel_pane_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Media */
+  $handler->display->display_options['fields']['field_slac_news_media']['id'] = 'field_slac_news_media';
+  $handler->display->display_options['fields']['field_slac_news_media']['table'] = 'field_data_field_slac_news_media';
+  $handler->display->display_options['fields']['field_slac_news_media']['field'] = 'field_slac_news_media';
+  $handler->display->display_options['fields']['field_slac_news_media']['label'] = '';
+  $handler->display->display_options['fields']['field_slac_news_media']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_slac_news_media']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_slac_news_media']['settings'] = array(
+    'file_view_mode' => 'crop_crop_landscape',
+  );
+  $handler->display->display_options['fields']['field_slac_news_media']['delta_offset'] = '0';
+  /* Field: Content: Post date */
+  $handler->display->display_options['fields']['created']['id'] = 'created';
+  $handler->display->display_options['fields']['created']['table'] = 'node';
+  $handler->display->display_options['fields']['created']['field'] = 'created';
+  $handler->display->display_options['fields']['created']['label'] = '';
+  $handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['created']['date_format'] = 'custom';
+  $handler->display->display_options['fields']['created']['custom_date_format'] = 'm/d/Y';
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['alter']['max_length'] = '400';
+  $handler->display->display_options['fields']['body']['alter']['strip_tags'] = TRUE;
+  $handler->display->display_options['fields']['body']['alter']['trim'] = TRUE;
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
+  $handler->display->display_options['fields']['body']['settings'] = array(
+    'trim_length' => '400',
+  );
+  /* Field: Content: News Source */
+  $handler->display->display_options['fields']['field_slac_news_source']['id'] = 'field_slac_news_source';
+  $handler->display->display_options['fields']['field_slac_news_source']['table'] = 'field_data_field_slac_news_source';
+  $handler->display->display_options['fields']['field_slac_news_source']['field'] = 'field_slac_news_source';
+  $handler->display->display_options['fields']['field_slac_news_source']['label'] = '';
+  $handler->display->display_options['fields']['field_slac_news_source']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_slac_news_source']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_slac_news_source']['type'] = 'link_title_plain';
+  /* Field: Content: Contact information */
+  $handler->display->display_options['fields']['field_slac_news_contact']['id'] = 'field_slac_news_contact';
+  $handler->display->display_options['fields']['field_slac_news_contact']['table'] = 'field_data_field_slac_news_contact';
+  $handler->display->display_options['fields']['field_slac_news_contact']['field'] = 'field_slac_news_contact';
+  $handler->display->display_options['fields']['field_slac_news_contact']['exclude'] = TRUE;
+  /* Field: Content: Tags */
+  $handler->display->display_options['fields']['field_slac_news_tags']['id'] = 'field_slac_news_tags';
+  $handler->display->display_options['fields']['field_slac_news_tags']['table'] = 'field_data_field_slac_news_tags';
+  $handler->display->display_options['fields']['field_slac_news_tags']['field'] = 'field_slac_news_tags';
+  $handler->display->display_options['fields']['field_slac_news_tags']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_slac_news_tags']['type'] = 'taxonomy_term_reference_plain';
+  $handler->display->display_options['fields']['field_slac_news_tags']['delta_offset'] = '0';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Type (field_slac_news_type) */
-  $handler->display->display_options['arguments']['field_slac_news_type_value']['id'] = 'field_slac_news_type_value';
-  $handler->display->display_options['arguments']['field_slac_news_type_value']['table'] = 'field_data_field_slac_news_type';
-  $handler->display->display_options['arguments']['field_slac_news_type_value']['field'] = 'field_slac_news_type_value';
-  $handler->display->display_options['arguments']['field_slac_news_type_value']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['field_slac_news_type_value']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['field_slac_news_type_value']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['field_slac_news_type_value']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['field_slac_news_type_value']['limit'] = '0';
-  $handler->display->display_options['arguments']['field_slac_news_type_value']['case'] = 'lower';
-  $handler->display->display_options['arguments']['field_slac_news_type_value']['path_case'] = 'lower';
-  $handler->display->display_options['arguments']['field_slac_news_type_value']['transform_dash'] = TRUE;
+  /* Contextual filter: Content: News type (field_slac_news_type) */
+  $handler->display->display_options['arguments']['field_slac_news_type_tid']['id'] = 'field_slac_news_type_tid';
+  $handler->display->display_options['arguments']['field_slac_news_type_tid']['table'] = 'field_data_field_slac_news_type';
+  $handler->display->display_options['arguments']['field_slac_news_type_tid']['field'] = 'field_slac_news_type_tid';
+  $handler->display->display_options['arguments']['field_slac_news_type_tid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['field_slac_news_type_tid']['default_argument_type'] = 'raw';
+  $handler->display->display_options['arguments']['field_slac_news_type_tid']['default_argument_options']['index'] = '1';
+  $handler->display->display_options['arguments']['field_slac_news_type_tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_slac_news_type_tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_slac_news_type_tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_slac_news_type_tid']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['field_slac_news_type_tid']['validate']['type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['field_slac_news_type_tid']['validate_options']['vocabularies'] = array(
+    'news_types' => 'news_types',
+  );
+  $handler->display->display_options['arguments']['field_slac_news_type_tid']['validate_options']['type'] = 'convert';
+  $handler->display->display_options['arguments']['field_slac_news_type_tid']['validate']['fail'] = 'ignore';
+  $handler->display->display_options['allow']['use_pager'] = 0;
+  $handler->display->display_options['allow']['items_per_page'] = 'items_per_page';
+  $handler->display->display_options['allow']['offset'] = 0;
+  $handler->display->display_options['allow']['link_to_view'] = 0;
+  $handler->display->display_options['allow']['more_link'] = 0;
+  $handler->display->display_options['allow']['path_override'] = 0;
+  $handler->display->display_options['allow']['title_override'] = 0;
+  $handler->display->display_options['allow']['exposed_form'] = 0;
+  $handler->display->display_options['allow']['fields_override'] = 0;
   $handler->display->display_options['argument_input'] = array(
     'field_slac_news_type_value' => array(
       'type' => 'user',
@@ -177,9 +251,12 @@ function slac_news_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'node_rss';
   $handler->display->display_options['path'] = 'news/rss';
   $handler->display->display_options['displays'] = array(
-    'panel_pane_1' => 'panel_pane_1',
     'default' => 0,
+    'panel_pane_1' => 0,
     'panel_pane_2' => 0,
+    'panel_pane_3' => 0,
+    'panel_pane_4' => 0,
+    'panel_pane_5' => 0,
   );
 
   /* Display: Featured News */
@@ -254,21 +331,6 @@ function slac_news_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Type (field_slac_news_type) */
-  $handler->display->display_options['arguments']['field_slac_news_type_value']['id'] = 'field_slac_news_type_value';
-  $handler->display->display_options['arguments']['field_slac_news_type_value']['table'] = 'field_data_field_slac_news_type';
-  $handler->display->display_options['arguments']['field_slac_news_type_value']['field'] = 'field_slac_news_type_value';
-  $handler->display->display_options['arguments']['field_slac_news_type_value']['default_action'] = 'summary';
-  $handler->display->display_options['arguments']['field_slac_news_type_value']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['field_slac_news_type_value']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['field_slac_news_type_value']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['field_slac_news_type_value']['summary_options']['base_path'] = 'news';
-  $handler->display->display_options['arguments']['field_slac_news_type_value']['summary_options']['count'] = FALSE;
-  $handler->display->display_options['arguments']['field_slac_news_type_value']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['field_slac_news_type_value']['limit'] = '0';
-  $handler->display->display_options['arguments']['field_slac_news_type_value']['case'] = 'ucfirst';
-  $handler->display->display_options['arguments']['field_slac_news_type_value']['path_case'] = 'lower';
-  $handler->display->display_options['arguments']['field_slac_news_type_value']['transform_dash'] = TRUE;
 
   /* Display: Last 3 news */
   $handler = $view->new_display('panel_pane', 'Last 3 news', 'panel_pane_5');
@@ -304,6 +366,111 @@ function slac_news_views_default_views() {
   $handler->display->display_options['fields']['created']['custom_date_format'] = 'm/d/Y';
   $handler->display->display_options['pane_category']['name'] = 'NEWS';
   $handler->display->display_options['pane_category']['weight'] = '0';
+
+  /* Display: News Listing by year */
+  $handler = $view->new_display('panel_pane', 'News Listing by year', 'panel_pane_6');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['defaults']['empty'] = FALSE;
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['content'] = 'No results were found.';
+  $handler->display->display_options['empty']['area']['format'] = 'full_html';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Media */
+  $handler->display->display_options['fields']['field_slac_news_media']['id'] = 'field_slac_news_media';
+  $handler->display->display_options['fields']['field_slac_news_media']['table'] = 'field_data_field_slac_news_media';
+  $handler->display->display_options['fields']['field_slac_news_media']['field'] = 'field_slac_news_media';
+  $handler->display->display_options['fields']['field_slac_news_media']['label'] = '';
+  $handler->display->display_options['fields']['field_slac_news_media']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_slac_news_media']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_slac_news_media']['settings'] = array(
+    'file_view_mode' => 'crop_crop_landscape',
+  );
+  $handler->display->display_options['fields']['field_slac_news_media']['delta_offset'] = '0';
+  /* Field: Content: Post date */
+  $handler->display->display_options['fields']['created']['id'] = 'created';
+  $handler->display->display_options['fields']['created']['table'] = 'node';
+  $handler->display->display_options['fields']['created']['field'] = 'created';
+  $handler->display->display_options['fields']['created']['label'] = '';
+  $handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['created']['date_format'] = 'custom';
+  $handler->display->display_options['fields']['created']['custom_date_format'] = 'm/d/Y';
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['alter']['max_length'] = '400';
+  $handler->display->display_options['fields']['body']['alter']['strip_tags'] = TRUE;
+  $handler->display->display_options['fields']['body']['alter']['trim'] = TRUE;
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
+  $handler->display->display_options['fields']['body']['settings'] = array(
+    'trim_length' => '400',
+  );
+  /* Field: Content: News Source */
+  $handler->display->display_options['fields']['field_slac_news_source']['id'] = 'field_slac_news_source';
+  $handler->display->display_options['fields']['field_slac_news_source']['table'] = 'field_data_field_slac_news_source';
+  $handler->display->display_options['fields']['field_slac_news_source']['field'] = 'field_slac_news_source';
+  $handler->display->display_options['fields']['field_slac_news_source']['label'] = '';
+  $handler->display->display_options['fields']['field_slac_news_source']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_slac_news_source']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_slac_news_source']['type'] = 'link_title_plain';
+  /* Field: Content: Contact information */
+  $handler->display->display_options['fields']['field_slac_news_contact']['id'] = 'field_slac_news_contact';
+  $handler->display->display_options['fields']['field_slac_news_contact']['table'] = 'field_data_field_slac_news_contact';
+  $handler->display->display_options['fields']['field_slac_news_contact']['field'] = 'field_slac_news_contact';
+  $handler->display->display_options['fields']['field_slac_news_contact']['exclude'] = TRUE;
+  /* Field: Content: Tags */
+  $handler->display->display_options['fields']['field_slac_news_tags']['id'] = 'field_slac_news_tags';
+  $handler->display->display_options['fields']['field_slac_news_tags']['table'] = 'field_data_field_slac_news_tags';
+  $handler->display->display_options['fields']['field_slac_news_tags']['field'] = 'field_slac_news_tags';
+  $handler->display->display_options['fields']['field_slac_news_tags']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_slac_news_tags']['type'] = 'taxonomy_term_reference_plain';
+  $handler->display->display_options['fields']['field_slac_news_tags']['delta_offset'] = '0';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Created year */
+  $handler->display->display_options['arguments']['created_year']['id'] = 'created_year';
+  $handler->display->display_options['arguments']['created_year']['table'] = 'node';
+  $handler->display->display_options['arguments']['created_year']['field'] = 'created_year';
+  $handler->display->display_options['arguments']['created_year']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['created_year']['default_argument_type'] = 'raw';
+  $handler->display->display_options['arguments']['created_year']['default_argument_options']['index'] = '1';
+  $handler->display->display_options['arguments']['created_year']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['created_year']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['created_year']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['created_year']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['created_year']['validate']['type'] = 'numeric';
+  $handler->display->display_options['arguments']['created_year']['validate']['fail'] = 'access denied';
+  $handler->display->display_options['allow']['use_pager'] = 0;
+  $handler->display->display_options['allow']['items_per_page'] = 'items_per_page';
+  $handler->display->display_options['allow']['offset'] = 0;
+  $handler->display->display_options['allow']['link_to_view'] = 0;
+  $handler->display->display_options['allow']['more_link'] = 0;
+  $handler->display->display_options['allow']['path_override'] = 0;
+  $handler->display->display_options['allow']['title_override'] = 0;
+  $handler->display->display_options['allow']['exposed_form'] = 0;
+  $handler->display->display_options['allow']['fields_override'] = 0;
+  $handler->display->display_options['argument_input'] = array(
+    'field_slac_news_type_value' => array(
+      'type' => 'user',
+      'context' => 'entity:comment.author',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'News Type',
+    ),
+  );
   $export['news'] = $view;
 
   return $export;

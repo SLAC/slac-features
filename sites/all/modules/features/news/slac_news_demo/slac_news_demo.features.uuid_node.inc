@@ -109,7 +109,8 @@ afreeberg@slac.stanford.edu',
   'field_slac_news_type' => array(
     'und' => array(
       0 => array(
-        'value' => 'Press Release',
+        'tid' => 9,
+        'uuid' => '05339b25-6cf8-4e75-b4ea-f91d490f5b04',
       ),
     ),
   ),
@@ -262,7 +263,8 @@ afreeberg@slac.stanford.edu',
   'field_slac_news_type' => array(
     'und' => array(
       0 => array(
-        'value' => 'Press Release',
+        'tid' => 10,
+        'uuid' => '47c46adc-4bf5-41cc-91a2-96c057b16297',
       ),
     ),
   ),
@@ -413,7 +415,8 @@ Sebastien Boutet, SLAC National Accelerator Laboratory: sboutet@slac.stanford.ed
   'field_slac_news_type' => array(
     'und' => array(
       0 => array(
-        'value' => 'News Article',
+        'tid' => 9,
+        'uuid' => '05339b25-6cf8-4e75-b4ea-f91d490f5b04',
       ),
     ),
   ),
@@ -582,7 +585,8 @@ Sebastien Boutet, SLAC National Accelerator Laboratory: sboutet@slac.stanford.ed
   'field_slac_news_type' => array(
     'und' => array(
       0 => array(
-        'value' => 'News Article',
+        'tid' => 10,
+        'uuid' => '47c46adc-4bf5-41cc-91a2-96c057b16297',
       ),
     ),
   ),

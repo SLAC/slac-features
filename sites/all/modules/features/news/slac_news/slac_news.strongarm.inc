@@ -70,6 +70,9 @@ function slac_news_strongarm() {
         'title' => array(
           'weight' => '0',
         ),
+        'path' => array(
+          'weight' => '8',
+        ),
       ),
       'display' => array(),
     ),

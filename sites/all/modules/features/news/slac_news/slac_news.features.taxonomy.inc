@@ -9,9 +9,9 @@
  */
 function slac_news_taxonomy_default_vocabularies() {
   return array(
-    'slac_news_tags' => array(
-      'name' => 'Tags (SLAC News)',
-      'machine_name' => 'slac_news_tags',
+    'news_types' => array(
+      'name' => 'News types',
+      'machine_name' => 'news_types',
       'description' => '',
       'hierarchy' => 0,
       'module' => 'taxonomy',
