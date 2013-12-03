@@ -44,6 +44,7 @@ Drupal.behaviors.mobile_header = {
 		$pathname = window.location.pathname
 		$icons_wrapper_a = $icons_wrapper.find('a')
 		
+		
 	$mobile_wrapper.empty()
 	$mobile_wrapper.append($cloned_main_menu)
 	$mobile_wrapper.append($cloned_header_menu)
@@ -88,7 +89,7 @@ $('.user-icons a').each(function(){
 	
 		$(document).click(function() {
 			// all dropdowns
-			$('.mobile-main-menu').slideToggle( "fast" )
+			$('.mobile-main-menu').slideUp( "fast" )
 			$('.menu-icon, .mobile-main-menu').removeClass('active');
 			
 		});
