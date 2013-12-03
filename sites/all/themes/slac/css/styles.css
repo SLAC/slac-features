@@ -55,7 +55,7 @@ ul.tabs li a, .action-links li a { background-color: #aaaaaa; padding: 6px 12px;
 ul.tabs li a:hover, .action-links li a:hover { background-color: #2e2e2e; }
 
 .mobile-main-menu { max-height: 100%; margin: 7px -13px -7px -13px; background: #e7e6d9; padding: 13px; clear: both; border-top: 7px solid #720c20; }
-.mobile-main-menu.active { display: block !important; max-height: 400px; }
+.mobile-main-menu.active { display: block !important; }
 .mobile-main-menu .main-menu { background-color: #e7e6d9; text-transform: uppercase; }
 .mobile-main-menu .main-menu ul li { display: block; margin-bottom: 5px; }
 .mobile-main-menu .main-menu ul li a { display: block; padding: 5px 13px; color: white; background-color: #aaaaaa; position: relative; }

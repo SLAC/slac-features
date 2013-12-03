@@ -88,7 +88,9 @@ $('.user-icons a').each(function(){
 	
 		$(document).click(function() {
 			// all dropdowns
+			$('.mobile-main-menu').slideToggle( "fast" )
 			$('.menu-icon, .mobile-main-menu').removeClass('active');
+			
 		});
 
 
