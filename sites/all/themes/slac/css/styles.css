@@ -54,12 +54,12 @@ ul.tabs li, .action-links li { float: left; margin-right: 10px; margin-bottom: 1
 ul.tabs li a, .action-links li a { background-color: #aaaaaa; padding: 6px 12px; color: white; display: block; -webkit-border-radius: 10px; -moz-border-radius: 10px; -ms-border-radius: 10px; -o-border-radius: 10px; border-radius: 10px; }
 ul.tabs li a:hover, .action-links li a:hover { background-color: #2e2e2e; }
 
-.mobile-main-menu { max-height: 0; margin: 7px -13px -7px -13px; background: #e7e6d9; padding: 13px; clear: both; border-top: 7px solid #720c20; }
+.mobile-main-menu { max-height: 100%; margin: 7px -13px -7px -13px; background: #e7e6d9; padding: 13px; clear: both; border-top: 7px solid #720c20; }
 .mobile-main-menu.active { display: block !important; max-height: 400px; }
 .mobile-main-menu .main-menu { background-color: #e7e6d9; text-transform: uppercase; }
 .mobile-main-menu .main-menu ul li { display: block; margin-bottom: 5px; }
 .mobile-main-menu .main-menu ul li a { display: block; padding: 5px 13px; color: white; background-color: #aaaaaa; position: relative; }
-.mobile-main-menu .main-menu ul li a:after { content: "\3d"; position: absolute; font-size: 25px; font-size: 1.5625rem; right: 8px; top: 3px; line-height: 1; }
+.mobile-main-menu .main-menu ul li a:after { content: "\3d"; position: absolute; font-size: 25px; font-size: 1.5625rem; right: 8px; top: 50%; margin-top: -13px; line-height: 1; }
 .mobile-main-menu .main-menu ul li a.active-trail, .mobile-main-menu .main-menu ul li a.active { background-color: #878787; }
 .mobile-main-menu .main-menu ul li a.active-trail:after, .mobile-main-menu .main-menu ul li a.active:after { content: "\e606"; }
 .mobile-main-menu .header-menu { text-align: center; font-size: 0.8125em; padding: 10px 0 0 0; }

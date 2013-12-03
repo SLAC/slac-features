@@ -85,8 +85,7 @@ ul.tabs, .action-links
 
 
 .mobile-main-menu
-  max-height: 0
-  //+transition(all 0.5s ease-in)
+  max-height: 100%
   margin: 7px -13px -7px -13px
   background: $menu_bg
   padding: 13px
@@ -100,15 +99,11 @@ ul.tabs, .action-links
 
   .main-menu
     background-color: $menu_bg
-    //padding: 8px 0 0px
-    //margin-bottom: 35px
     text-transform: uppercase
     ul
-
       li
         display: block
         margin-bottom: 5px
-
         a
           display: block
           padding: 5px 13px
@@ -121,12 +116,14 @@ ul.tabs, .action-links
             position: absolute
             +fontsize-rem(25px)
             right: 8px
-            top: 3px
+            top: 50%
+            margin-top: -13px
             line-height: 1
           &.active-trail, &.active
             background-color: $grey-87
             &:after
               content: "\e606"
+
               
   //Header menu
   //-----------------------------------

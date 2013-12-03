@@ -80,7 +80,9 @@ $('.user-icons a').each(function(){
 
 	 $('.menu-icon').click(function(event){
 		 $(this).toggleClass('active')
-		 $mobile_wrapper.toggleClass('active')
+		 //$mobile_wrapper.toggleClass('active')
+		 
+		 $mobile_wrapper.slideToggle( "fast" );
 			event.stopPropagation();
 	 })
 	
