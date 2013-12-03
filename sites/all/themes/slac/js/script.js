@@ -87,13 +87,16 @@ $('.user-icons a').each(function(){
 			event.stopPropagation();
 	 })
 	
-		$(document).click(function() {
+		var $close_menu = $(document).click(function() {
 			// all dropdowns
 			$('.mobile-main-menu').slideUp( "fast" )
 			$('.menu-icon, .mobile-main-menu').removeClass('active');
 			
 		});
 
+	$('.user-icons a').click(function(){
+		$close_menu()
+	})
 
   }
 };
