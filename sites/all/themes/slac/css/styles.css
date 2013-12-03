@@ -88,7 +88,7 @@ ul.tabs li a:hover, .action-links li a:hover { background-color: #2e2e2e; }
 .mob-icon.menu-icon:before { content: "\e611"; font-size: 25px; font-size: 1.5625rem; top: -2px; }
 .mob-icon.account-icon:before { content: "\e612"; font-size: 20px; font-size: 1.25rem; }
 .mob-icon.logout-icon:before { content: "\e614"; font-size: 20px; font-size: 1.25rem; }
-.mob-icon.login-icon:before { content: "\e617"; font-size: 21px; font-size: 1.3125rem; }
+.mob-icon.login-icon:before { content: "\e61b"; font-size: 21px; font-size: 1.3125rem; }
 
 .pane-page-site-name { font-size: 1.625em; }
 .footer-first .pane-page-site-name { font-size: 0.875em; }
@@ -197,7 +197,7 @@ article.node-blog.node-teaser .links li a { display: block; }
 .profile-info-brief .views-row-1 { margin-bottom: 18px; }
 .profile-info-brief .views-field-field-prf-bio-bio { font-size: 14px; font-size: 0.875rem; margin-bottom: 10px; line-height: 20px; }
 .profile-info-brief .views-more-link { margin-top: 10px; display: block; text-transform: uppercase; color: #720c20; font-size: 11px; font-size: 0.6875rem; }
-.profile-info-brief .views-more-link:after { content: "\3d"; font-size: 14px; font-size: 0.875rem; line-height: 16px; vertical-align: bottom; margin-left: 3px; }
+.profile-info-brief .views-more-link:after { content: "\e61e"; font-size: 14px; font-size: 0.875rem; vertical-align: middle; }
 
 @media (min-width: 480px) { .profile-info-brief .views-field-field-prf-contact-photo { margin-right: 0; position: relative; z-index: 1; }
   .profile-info-brief .views-row-1 { margin-bottom: 34px; }
@@ -338,7 +338,7 @@ ul.blog-archive-class > li ul li { margin-bottom: 9px; margin-right: 15px; float
 .pane-bundle-slideshow-description-bottom { margin: 0 -13px; }
 .pane-bundle-slideshow-description-bottom h2.pane-title { display: none; }
 .pane-bundle-slideshow-description-bottom .field-slideshow-controls a { display: block; text-indent: -9000px; overflow: hidden; width: 35px; height: 70px; position: absolute; z-index: 5; bottom: 0px; }
-.pane-bundle-slideshow-description-bottom .field-slideshow-controls a:after { top: 50%; margin-top: -25px; left: 50%; color: white; position: absolute; font-size: 45px; }
+.pane-bundle-slideshow-description-bottom .field-slideshow-controls a:after { top: 50%; margin-top: -28px; left: 50%; color: white; position: absolute; font-size: 45px; }
 .no-rgba .pane-bundle-slideshow-description-bottom .field-slideshow-controls a:after { color: #720c20; }
 .pane-bundle-slideshow-description-bottom .field-slideshow-controls a:hover:after, .pane-bundle-slideshow-description-bottom .field-slideshow-controls a:focus:after { color: #720c20; }
 .pane-bundle-slideshow-description-bottom .field-slideshow-controls a.prev { left: 0; }
