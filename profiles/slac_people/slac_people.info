@@ -54,6 +54,7 @@ dependencies[] = link
 
 dependencies[] = file_entity
 dependencies[] = media
+dependencies[] = media_wysiwyg
 dependencies[] = mediafield
 dependencies[] = media_internet
 
