@@ -103,7 +103,7 @@ ul.tabs li a:hover, .action-links li a:hover { background-color: #2e2e2e; }
 .footer-seccond ul { text-transform: uppercase; margin-top: 9px; margin-bottom: 9px; }
 .footer-seccond ul li { margin-bottom: 5px; }
 .footer-seccond ul li a { display: block; position: relative; padding: 6px 20px 6px 6px; background-color: #aaaaaa; }
-.footer-seccond ul li a:after { content: "\3d"; position: absolute; font-size: 25px; font-size: 1.5625rem; right: 5px; top: 0px; line-height: 1; }
+.footer-seccond ul li a:after { content: "\3d"; position: absolute; font-size: 25px; font-size: 1.5625rem; right: 5px; top: 50%; margin-top: -13px; line-height: 1; }
 .footer-seccond a { color: inherit; }
 .footer-seccond .pane-1, .footer-seccond .pane-2 { display: inline; }
 .footer-seccond .pane-1 p, .footer-seccond .pane-2 p { display: block; }
