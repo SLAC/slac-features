@@ -702,16 +702,21 @@ article.node-blog
     line-height: 20px
 
   .views-more-link
-    margin-top: 10px
-    display: block
+    margin-top: 15px
+    display: inline-block
+    vertical-align: middle
     text-transform: uppercase
     color: $red
     +fontsize-rem(11px)
+    letter-spacing: 0.05em
+    width: 100%
+    line-height: 1
     &:after
       @extend .slac-font
       content: '\e61e'
       +fontsize-rem(14px)
       vertical-align: middle
+      line-height: 1
 
     
 +at-breakpoint($less-than-480)
@@ -784,14 +789,16 @@ article.node-blog
   .profile-maxlist-more
     line-height: inherit
     text-align: right  
-    
+    position: absolute
+    right: 0
+    bottom: -26px    
     a
       $experimental-support-for-svg: true
       +background(linear-gradient(top, #fcfcfc 0%,#ededed 100%))
       +filter-gradient(#fcfcfc, #ededed, vertical)      
       color: $grey-47
       padding: 8px 15px 5px 47px
-      
+
       display: inline-block
       +fontsize-rem(11px)
       position: relative
@@ -824,12 +831,13 @@ article.node-blog
 .views-field-field-prf-bio-pa,
 .views-field-field-prf-bio-pub,
 .views-field-field-prf-bio-tp
-  margin-bottom: 1em
+  margin-bottom: 50px
   display: block
   @extend .clearfix
+  position: relative
   .field-content
     padding: 25px 25px 8px 25px
-    border: 2px solid $menu_bg
+    border: 2px solid $border-h2
     border-top-width: 6px
     +fontsize-rem(13px)
 
