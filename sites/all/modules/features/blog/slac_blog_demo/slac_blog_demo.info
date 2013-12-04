@@ -1,4 +1,5 @@
 name = SLAC Blog Demo
+description = Provides demo Blog Entry content.
 core = 7.x
 package = SLAC Demo
 php = 5.2.4
