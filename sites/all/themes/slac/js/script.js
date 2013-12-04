@@ -30,7 +30,12 @@ Drupal.behaviors.mobile_header = {
   attach: function(context, settings) {
 	
 	//Lets insert mobile html
-	$('<div class="icon-wrapper" ><div class="menu-icon mob-icon"></div><span class="user-icons"></span></div><div class="mobile-main-menu mobile-block" style="display: none"></div>').insertAfter('.pane-page-logo')
+	//$('<div class="icon-wrapper " ><div class="menu-icon mob-icon"></div><span class="user-icons"></span></div><div class="mobile-main-menu mobile-block" style="display: none"></div>').insertAfter('.pane-page-logo', context)
+	
+	$('.pane-page-logo').once(function(){
+		$('<div class="icon-wrapper"><div class="menu-icon mob-icon"></div><span class="user-icons"></span></div><div class="mobile-main-menu mobile-block" style="display: none"></div>').insertAfter(this)
+	})
+	
 	
 
 	
@@ -45,54 +50,60 @@ Drupal.behaviors.mobile_header = {
 		$icons_wrapper_a = $icons_wrapper.find('a')
 		
 		
-	$mobile_wrapper.empty()
-	$mobile_wrapper.append($cloned_main_menu)
-	$mobile_wrapper.append($cloned_header_menu)
-	$icons_wrapper.append($mobile_user_menu)
-
-$('.user-icons a').each(function(){
-
-	//Add icon class
-	$(this).addClass('mob-icon')
-	
-	//Add class to make icon appear
-	if($(this).attr('href') == '/user/login'){
-		$(this).addClass('login-icon')
-	}
-	
-	if($(this).attr('href') == '/user/logout'){
-		$(this).addClass('logout-icon')
-	}	
-	
-	if($(this).attr('href') == '/user'){
-		$(this).addClass('account-icon')
-	}	
-	
-	//Add active class for icons
-	if($(this).attr('href') == '/user/login' && $pathname.search('/user') == 0 ) {
-		$(this).addClass('active')
-	}
-	if($(this).attr('href') == '/user' && $pathname.search('/user') == 0 ) {
-		$(this).addClass('active')
-	}	
-	
-})
+	$mobile_wrapper.once(function(){
+		$(this).empty()
+		$(this).append($cloned_main_menu)
+		$(this).append($cloned_header_menu)
+	})	
+		
+	$icons_wrapper.once(function(){
+		$(this).append($mobile_user_menu)
+	})
 
 
-	 $('.menu-icon').click(function(event){
-		 $(this).toggleClass('active')
-		 //$mobile_wrapper.toggleClass('active')
-		 
-		 $mobile_wrapper.slideToggle( "fast" );
+	$('.user-icons a').each(function(){
+	
+		//Add icon class
+		$(this).addClass('mob-icon')
+		
+		//Add class to make icon appear
+		if($(this).attr('href') == '/user/login'){
+			$(this).addClass('login-icon')
+		}
+		
+		if($(this).attr('href') == '/user/logout'){
+			$(this).addClass('logout-icon')
+		}	
+		
+		if($(this).attr('href') == '/user'){
+			$(this).addClass('account-icon')
+		}	
+		
+		//Add active class for icons
+		if($(this).attr('href') == '/user/login' && $pathname.search('/user') == 0 ) {
+			$(this).addClass('active')
+		}
+		if($(this).attr('href') == '/user' && $pathname.search('/user') == 0 ) {
+			$(this).addClass('active')
+		}	
+		
+	})
+
+
+	 $('.menu-icon').once(function(){
+		$(this).click(function(event){
+			$(this).toggleClass('active')
+			 
+			$mobile_wrapper.slideToggle( "fast" );
 			event.stopPropagation();
+		 })	 	
 	 })
 	
-		var $close_menu = $(document).click(function() {
-			// all dropdowns
-			$('.mobile-main-menu').slideUp( "fast" )
-			$('.menu-icon, .mobile-main-menu').removeClass('active');
-			
-		});
+	var $close_menu = $(document).click(function() {
+		$('.mobile-main-menu').slideUp( "fast" )
+		$('.menu-icon, .mobile-main-menu').removeClass('active');
+		
+	});
 
 	$('.user-icons a').click(function(){
 		$close_menu()
