@@ -23,10 +23,8 @@ function slac_ext_org_install_tasks($install_state) {
 function slac_ext_org_install_task_demo_content() {
   module_enable(
     array(
-      'slac_faq',
       'slac_faq_demo',
-      'slac_event',
-      'slac_event_demo',
+      'slac_news_pages',
       'slac_news_demo',
       'slac_service_catalog_demo',
       'slac_kb_demo',
@@ -34,6 +32,7 @@ function slac_ext_org_install_task_demo_content() {
       'slac_admin_modules',
       'slac_ext_org_frontpage',
       'slac_site_404',
+      'slac_event_demo',
     )
   );
 }
@@ -46,6 +45,8 @@ function slac_ext_org_install_task_demo_content() {
  * @see system_install()
  */
 function slac_ext_org_install() {
+  variable_set('install_profile', 'slac_ext_org');
+
   // Add text formats.
   $filtered_html_format = array(
     'format' => 'filtered_html',

@@ -176,6 +176,7 @@ function slac_news_views_default_views() {
   $handler->display->display_options['arguments']['field_slac_news_type_tid']['default_action'] = 'default';
   $handler->display->display_options['arguments']['field_slac_news_type_tid']['default_argument_type'] = 'raw';
   $handler->display->display_options['arguments']['field_slac_news_type_tid']['default_argument_options']['index'] = '1';
+  $handler->display->display_options['arguments']['field_slac_news_type_tid']['default_argument_options']['use_alias'] = TRUE;
   $handler->display->display_options['arguments']['field_slac_news_type_tid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_slac_news_type_tid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['field_slac_news_type_tid']['summary_options']['items_per_page'] = '25';
@@ -186,13 +187,15 @@ function slac_news_views_default_views() {
   );
   $handler->display->display_options['arguments']['field_slac_news_type_tid']['validate_options']['type'] = 'convert';
   $handler->display->display_options['arguments']['field_slac_news_type_tid']['validate']['fail'] = 'ignore';
+  $handler->display->display_options['pane_category']['name'] = 'NEWS';
+  $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['allow']['use_pager'] = 0;
   $handler->display->display_options['allow']['items_per_page'] = 'items_per_page';
   $handler->display->display_options['allow']['offset'] = 0;
   $handler->display->display_options['allow']['link_to_view'] = 0;
   $handler->display->display_options['allow']['more_link'] = 0;
   $handler->display->display_options['allow']['path_override'] = 0;
-  $handler->display->display_options['allow']['title_override'] = 0;
+  $handler->display->display_options['allow']['title_override'] = 'title_override';
   $handler->display->display_options['allow']['exposed_form'] = 0;
   $handler->display->display_options['allow']['fields_override'] = 0;
   $handler->display->display_options['argument_input'] = array(
@@ -452,6 +455,8 @@ function slac_news_views_default_views() {
   $handler->display->display_options['arguments']['created_year']['specify_validation'] = TRUE;
   $handler->display->display_options['arguments']['created_year']['validate']['type'] = 'numeric';
   $handler->display->display_options['arguments']['created_year']['validate']['fail'] = 'access denied';
+  $handler->display->display_options['pane_category']['name'] = 'NEWS';
+  $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['allow']['use_pager'] = 0;
   $handler->display->display_options['allow']['items_per_page'] = 'items_per_page';
   $handler->display->display_options['allow']['offset'] = 0;

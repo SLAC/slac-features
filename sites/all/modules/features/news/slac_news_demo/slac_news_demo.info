@@ -10,6 +10,7 @@ dependencies[] = slac_news
 dependencies[] = taxonomy
 dependencies[] = uuid
 dependencies[] = uuid_features
+dependencies[] = slac_news_pages
 __drupal_alter_by_ref[][node][slac_news] = slac_news
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:2
