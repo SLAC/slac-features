@@ -284,10 +284,11 @@ table.sticky-table td, table.sticky-table th { border: 1px solid #f3f1eb; paddin
   .general-left, .panel-col-first { width: 65.24702%; float: left; margin-right: 4.25894%; }
   .general-right, .panel-col-last { width: 30.49404%; float: right; margin-right: 0; }
   .front .pane-page-content .general-right, .front .pane-page-content .general-left { padding-top: 0; float: none; width: auto; margin-right: auto; }
-  .content .general-right .panel-pane { padding: 0px 22px 13px 22px; }
-  .content .general-right .panel-pane:first-of-type { margin-top: -24px; }
-  .content .general-right .panel-pane:first-of-type.region-grey-background-style, .front .content .general-right .panel-pane:first-of-type { margin-top: 0; }
-  .content .general-right .panel-pane.region-grey-background-style { padding-top: 13px; }
+  .content .general-right .panel-pane, .content .general-right .panels-ipe-portlet-wrapper { padding: 0px 22px 13px 22px; }
+  .content .general-right .panel-pane:first-of-type, .content .general-right .panels-ipe-portlet-wrapper:first-of-type { margin-top: -24px; }
+  .content .general-right .panel-pane:first-of-type.region-grey-background-style, .front .content .general-right .panel-pane:first-of-type, .content .general-right .panels-ipe-portlet-wrapper:first-of-type.region-grey-background-style, .front .content .general-right .panels-ipe-portlet-wrapper:first-of-type { margin-top: 0; }
+  .content .general-right .panel-pane.region-grey-background-style, .content .general-right .panels-ipe-portlet-wrapper.region-grey-background-style { padding-top: 13px; }
+  .content .general-right .panels-ipe-portlet-wrapper { margin-bottom: 15px; }
   .footer-seccond { margin-bottom: 30px; *zoom: 1; }
   .footer-seccond:before, .footer-seccond:after { content: ""; display: table; }
   .footer-seccond:after { clear: both; }
@@ -309,6 +310,7 @@ table.sticky-table td, table.sticky-table th { border: 1px solid #f3f1eb; paddin
 .blog-tags ul li a { display: block; padding: 2px 8px 4px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; background-color: #f1f1f1; color: #706161; }
 .blog-tags ul li a:hover { background-color: #871628; color: white; }
 .region-grey-background-style .blog-tags ul li a { background-color: white; }
+.region-grey-background-style .blog-tags ul li a:hover { color: white; background-color: #871628; }
 
 .connect-with-me .views-row > div { float: left; margin-right: 17px; margin-bottom: 17px; }
 .connect-with-me .views-row > div a { text-indent: -9000px; display: block; color: #878787; position: relative; width: 36px; height: 36px; overflow: hidden; }
