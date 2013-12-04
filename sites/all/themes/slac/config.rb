@@ -1,6 +1,5 @@
 # Require any additional compass plugins here.
 require 'compass'
-require 'compass-h5bp'
 require 'susy'
 
 # Set this to the root of your project when deployed:
@@ -27,3 +26,5 @@ asset_cache_buster :none
 output_style = :compact
 sprite_engine = :chunky_png
 chunky_png_options = {:best_compression  => Zlib::BEST_COMPRESSION}
+sass_options = {:sourcemap => true}
+enable_sourcemaps = true

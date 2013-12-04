@@ -26,7 +26,7 @@ img, object, embed { max-width: 100%; }
 
 .slac-font, .mobile-main-menu .main-menu ul li a:after, .mob-icon:before, .footer-seccond ul li a:after, article.node-blog.node-teaser header h2 a:after, .profile-info-brief .views-more-link:after, .profile-info-full .profile-maxlist-more a:before, .connect-with-me .views-row > div a:after, .pane-bundle-slideshow-description-bottom .field-slideshow-controls a:after { font-family: "slac"; font-weight: normal; font-style: normal; text-indent: 0; }
 
-@font-face { font-family: "slac"; src: url('../fonts/slac.eot'); src: url('../fonts/slac.eot?#iefix') format('eot'), url('../fonts/slac.svg#slac') format('svg'), url('../fonts/slac.woff') format('woff'), url('../fonts/slac.ttf') format('truetype'); font-weight: normal; font-style: normal; }
+@font-face { font-family: "slac"; src: url('../fonts/slac.eot'); src: url('../fonts/slac.eot?#iefix') format('embedded-opentype'), url('../fonts/slac.svg#slac') format('svg'), url('../fonts/slac.woff') format('woff'), url('../fonts/slac.ttf') format('truetype'); font-weight: normal; font-style: normal; }
 
 * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
@@ -379,3 +379,5 @@ ul.blog-archive-class > li ul li { margin-bottom: 9px; margin-right: 15px; float
 @media (min-width: 690px) { .field-name-field-slideshow-btmdesc-slide { border: 5px solid white; }
   .pane-bundle-slideshow-description-bottom .field-slideshow-body { font-size: 16px; font-size: 1rem; padding: 20px; }
   .pane-bundle-slideshow-description-bottom .field-slideshow-description { line-height: 20px; } }
+
+/*@ sourceMappingURL=styles.css.map */
