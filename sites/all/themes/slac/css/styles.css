@@ -279,8 +279,7 @@ table.sticky-table td, table.sticky-table th { border: 1px solid #f3f1eb; paddin
   .page-basic > .header { padding: 15px 0 10px; }
   .icon-wrapper { display: none !important; }
   .pane-system-user-menu { display: block !important; }
-  .pane-system-user-menu ul li a { text-decoration: underline; }
-  .pane-system-user-menu ul li a:hover { text-decoration: none; }
+  .pane-system-user-menu ul li a:hover { text-decoration: underline; }
   .general-left, .panel-col-first { width: 65.24702%; float: left; margin-right: 4.25894%; }
   .general-right, .panel-col-last { width: 30.49404%; float: right; margin-right: 0; }
   .front .pane-page-content .general-right, .front .pane-page-content .general-left { padding-top: 0; float: none; width: auto; margin-right: auto; }
