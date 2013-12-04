@@ -41,6 +41,11 @@ function slac_admin_modules_form($form, $form_state = array()) {
   if (!empty($form_state['storage'])) {
     return slac_admin_modules_form_confirm_form($visible_files, $form_state['storage']);
   }
+  
+  // Help text explaining what the page does
+  $form['description'] = array(
+    '#markup' => '<p>' . t('Uncheck and click "Save configuration" to remove demo content from the site.') . '</p>',
+  );
 
   //$modules = array();
   $form['modules'] = array('#tree' => TRUE);
