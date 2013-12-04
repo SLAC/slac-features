@@ -133,6 +133,27 @@ function _slac_ext_org_frontpage_install__panes($did) {
       'position' => 0,
       'locks' => array(),
     ),
+    array(
+      'did' => $did,
+      'panel' => 'right',
+      'type' => 'views_panes',
+      'subtype' => 'calendar-panel_pane_2',
+      'shown' => 1,
+      'access' => array(),
+      'configuration' => array(
+        'items_per_page' => 5,
+        'override_title' => 0,
+        'override_title_text' => '',
+      ),
+      'cache' => array(),
+      'style' => array(
+        'settings' => NULL,
+      ),
+      'css' => array(),
+      'extras' => array(),
+      'position' => 1,
+      'locks' => array(),
+    ),
   );
   foreach ($frontpage_panels_panes as $frontpage_panels_pane) {
     drupal_write_record('panels_pane', $frontpage_panels_pane);
