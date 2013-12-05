@@ -461,6 +461,8 @@ ul.tabs, .action-links {
   color: #706161; }
   .general-right a {
     color: inherit; }
+  .content .general-right .panels-ipe-portlet-wrapper {
+    margin-bottom: 25px; }
 
 .general-right .panel-pane {
   margin-bottom: 36px; }
@@ -968,8 +970,6 @@ table.sticky-table {
         margin-top: 0; }
     .content .general-right .panel-pane.region-grey-background-style, .content .general-right .panels-ipe-portlet-wrapper.region-grey-background-style {
       padding-top: 13px; }
-  .content .general-right .panels-ipe-portlet-wrapper {
-    margin-bottom: 15px; }
 
   .footer-seccond {
     margin-bottom: 30px;
