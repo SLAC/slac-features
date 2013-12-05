@@ -1,5 +1,5 @@
-name = SLAC News Pages
+name = SLAC Event Pages
 core = 7.x
 package = SLAC
 dependencies[] = panelizer
-dependencies[] = slac_news
+dependencies[] = slac_event

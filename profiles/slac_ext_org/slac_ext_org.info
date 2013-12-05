@@ -130,7 +130,7 @@ dependencies[] = slac_form_building
 dependencies[] = slac_faq
 ;dependencies[] = slac_faq_demo
 
-dependencies[] = slac_kb_article
+;dependencies[] = slac_kb_article
 ;dependencies[] = slac_kb_demo
 
 dependencies[] = slac_news

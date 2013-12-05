@@ -12,6 +12,7 @@ dependencies[] = strongarm
 dependencies[] = text
 dependencies[] = uuid
 dependencies[] = uuid_features
+dependencies[] = slac_event_pages
 __drupal_alter_by_ref[][node][event] = event
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:2

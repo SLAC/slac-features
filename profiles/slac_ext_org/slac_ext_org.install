@@ -9,32 +9,76 @@
  */
 function slac_ext_org_install_tasks($install_state) {
   $tasks = array();
-  $tasks['demo_content'] = array(
-    'display_name' => st('Demo content'),
+  $tasks['slac_ext_org_install_task_demo_content'] = array(
+    'display_name' => st('Install demo content'),
     'display' => TRUE,
-    'type' => 'normal',
-    'run' => INSTALL_TASK_RUN_IF_NOT_COMPLETED,
-    'function' => 'slac_ext_org_install_task_demo_content',
+    'type' => 'batch',
   );
 
   return $tasks;
 }
 
 function slac_ext_org_install_task_demo_content() {
-  module_enable(
-    array(
-      'slac_faq_demo',
-      'slac_news_pages',
-      'slac_news_demo',
-      'slac_service_catalog_demo',
-      'slac_kb_demo',
-      'slac_blog_demo',
-      'slac_admin_modules',
-      'slac_ext_org_frontpage',
-      'slac_site_404',
-      'slac_event_demo',
-    )
+  $modules = array(
+    'slac_people_blog',
+    'slac_blog_demo',
+    'slac_faq_demo',
+    'slac_news_pages',
+    'slac_news_demo',
+    'slac_event_pages',
+    'slac_event_demo',
+    'slac_service_catalog_demo',
+    'slac_kb_demo',
+    'slac_admin_modules',
+    'slac_ext_org_frontpage',
+    'slac_site_404',
   );
+
+  // Resolve the dependencies now, so that module_enable() doesn't need
+  // to do it later for each individual module (which kills performance).
+  $files = system_rebuild_module_data();
+  $modules_sorted = array();
+  foreach ($modules as $module) {
+    if ($files[$module]->requires) {
+      // Create a list of dependencies that haven't been installed yet.
+      $dependencies = array_keys($files[$module]->requires);
+      $dependencies = array_filter($dependencies, '_slac_ext_org_filter_dependencies');
+      // Add them to the module list.
+      $modules = array_merge($modules, $dependencies);
+    }
+  }
+  $modules = array_unique($modules);
+  foreach ($modules as $module) {
+    $modules_sorted[$module] = $files[$module]->sort;
+  }
+  arsort($modules_sorted);
+
+  $operations = array();
+
+  foreach ($modules_sorted as $module => $weight) {
+    $operations[] = array('_slac_ext_org_enable_module', array($module, $files[$module]->info['name']));
+  }
+  $operations[] = array('_slac_ext_org_flush_caches', array(t('Flushed caches.')));
+
+  $batch = array(
+    'title' => t('Installing demo content and additional modules. This can take a few minutes.'),
+    'operations' => $operations,
+  );
+  return $batch;
+}
+
+function _slac_ext_org_filter_dependencies($dependency) {
+  return !module_exists($dependency);
+}
+
+function _slac_ext_org_enable_module($module, $module_name, &$context) {
+  module_enable(array($module), FALSE);
+  $context['message'] = st('Installed %module module.', array('%module' => $module_name));
+}
+
+function _slac_ext_org_flush_caches($operation, &$context) {
+  $context['message'] = t('@operation', array('@operation' => $operation));
+  drupal_flush_all_caches();
 }
 
 /**
