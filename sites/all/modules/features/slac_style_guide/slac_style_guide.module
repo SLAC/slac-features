@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the SLAC Style Guide feature.
- */
-
-include_once 'slac_style_guide.features.inc';
