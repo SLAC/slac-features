@@ -17,6 +17,7 @@ dependencies[] = strongarm
 dependencies[] = taxonomy
 dependencies[] = views_content
 dependencies[] = wysiwyg
+features[taxonomy][] = blog_categories
 features[ctools][] = page_manager:pages_default:1
 features[ctools][] = strongarm:strongarm:1
 features[ctools][] = views:views_default:3.0
