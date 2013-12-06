@@ -17,11 +17,16 @@ $plugin = array(
  * @ingroup themeable
  */
 function theme_slac_block_style_greybackground_style_render_pane($vars) {
+  if (is_array($vars['content']->content) && $vars['content']->type == 'fieldable_panels_pane') {
+    return;
+  }
+
   $output = '';
   $output .= '<div class="panel-pane region-grey-background-style">';
   $output .= '<h2 class="panel-title panel-title-grey-background-style">' . $vars['content']->title . '</h2>';
   $output .= '<div class="pane-body-grey-background-style">' . $vars['content']->content . '</div>';
   $output .= '</div>';
+
   return $output;
 }
 
