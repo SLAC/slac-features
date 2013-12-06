@@ -92,7 +92,6 @@ dependencies[] = diff
 dependencies[] = default_site_template
 dependencies[] = slac_social_media_block
 dependencies[] = slac_header_menu
-dependencies[] = slac_style_guide
 
 ;Custom modules
 dependencies[] = slac_site_variables
