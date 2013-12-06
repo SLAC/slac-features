@@ -135,8 +135,6 @@
         display: block  
 
 
-        
-
     .field-slideshow-controls 
       display: none
       a 
@@ -180,14 +178,26 @@
         font-size: 17px
         line-height: normal
 
-+at-breakpoint($tablet)
++at-breakpoint($only-tablet)
+
+  .pane-bundle-slideshow-description-bottom
+    .field-slideshow-body
+
+      +fontsize-rem(12px) 
+
++at-breakpoint($small-desktop)
   .field-name-field-slideshow-btmdesc-slide
     border: 5px solid #fff
     
   .pane-bundle-slideshow-description-bottom
     .field-slideshow-body
-      +fontsize-rem(16px) 
-      padding: 20px
-      
+      +fontsize-rem(14px) 
+
     .field-slideshow-description
       line-height: 20px
+      
++at-breakpoint($large-desktop)      
+  .pane-bundle-slideshow-description-bottom
+    .field-slideshow-body
+      padding: 20px
+      +fontsize-rem(16px)
