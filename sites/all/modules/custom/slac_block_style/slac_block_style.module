@@ -16,10 +16,10 @@ function slac_block_style_ctools_plugin_directory($module, $plugin) {
  * @param type $form_id 
  */
 function slac_block_style_form_alter(&$form, &$form_state, $form_id) {
-// unset default style from panels
+  // Unset default style from panels.
   if($form_id == 'panels_edit_style_type_form') {
-      unset($form['style']['#options']['block']);
-      unset($form['style']['#options']['naked']);
-      unset($form['style']['#options']['rounded_corners']);
+    unset($form['style']['#options']['block']);
+    unset($form['style']['#options']['naked']);
+    unset($form['style']['#options']['rounded_corners']);
   }
 }
