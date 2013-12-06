@@ -161,8 +161,8 @@ function slac_style_guide_uuid_features_default_content() {
   'comment_count' => 0,
   'name' => '',
   'picture' => 0,
-  'date' => '2013-12-05 14:07:12 -0700',
-  'author_uuid' => 'fcc9c5cc-0368-4aa9-a703-1008553db9d9',
+  'date' => '2013-12-05 23:07:12 +0200',
+  'author_uuid' => 'cc4fae8d-fb12-4bdd-8eb1-a2c65d0da3f4',
 );
   return $nodes;
 }
