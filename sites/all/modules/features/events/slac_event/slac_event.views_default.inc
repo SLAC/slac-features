@@ -101,25 +101,21 @@ function slac_event_views_default_views() {
   $handler->display->display_options['fields']['field_slac_event_color']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_slac_event_color']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_slac_event_color']['type'] = 'text_plain';
-  /* Field: Broken/missing handler */
-  $handler->display->display_options['fields']['php']['id'] = 'php';
-  $handler->display->display_options['fields']['php']['table'] = 'views';
-  $handler->display->display_options['fields']['php']['field'] = 'php';
-  $handler->display->display_options['fields']['php']['label'] = '';
-  $handler->display->display_options['fields']['php']['element_label_colon'] = FALSE;
   /* Field: Content: Event date */
   $handler->display->display_options['fields']['field_slac_event_date']['id'] = 'field_slac_event_date';
   $handler->display->display_options['fields']['field_slac_event_date']['table'] = 'field_data_field_slac_event_date';
   $handler->display->display_options['fields']['field_slac_event_date']['field'] = 'field_slac_event_date';
   $handler->display->display_options['fields']['field_slac_event_date']['label'] = '';
+  $handler->display->display_options['fields']['field_slac_event_date']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_slac_event_date']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_slac_event_date']['hide_alter_empty'] = FALSE;
   $handler->display->display_options['fields']['field_slac_event_date']['settings'] = array(
-    'format_type' => 'hour',
+    'format_type' => 'long',
     'fromto' => 'both',
     'multiple_number' => '',
     'multiple_from' => '',
     'multiple_to' => '',
+    'show_repeat_rule' => 'show',
   );
   $handler->display->display_options['fields']['field_slac_event_date']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_slac_event_date']['delta_offset'] = '0';
@@ -128,10 +124,20 @@ function slac_event_views_default_views() {
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['hide_alter_empty'] = FALSE;
+  /* Field: Content with background */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['ui_name'] = 'Content with background';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="event-date">[field_slac_event_date]</div><div class="event-title">[title]</div>
+';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   /* Sort criterion: Content: Event date -  start date (field_slac_event_date) */
   $handler->display->display_options['sorts']['field_slac_event_date_value']['id'] = 'field_slac_event_date_value';
   $handler->display->display_options['sorts']['field_slac_event_date_value']['table'] = 'field_data_field_slac_event_date';

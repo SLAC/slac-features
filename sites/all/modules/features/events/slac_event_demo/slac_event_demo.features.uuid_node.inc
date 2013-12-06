@@ -30,7 +30,7 @@ function slac_event_demo_uuid_features_default_content() {
   'field_slac_event_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 24,
+        'tid' => 2,
         'uuid' => '89e0ecf3-9e9f-476b-a920-392077f1e1eb',
       ),
     ),
@@ -40,7 +40,6 @@ function slac_event_demo_uuid_features_default_content() {
       0 => array(
         'value' => '2014-08-20T05:00:00',
         'value2' => '2014-08-20T09:00:00',
-        'rrule' => NULL,
         'timezone' => 'Europe/Helsinki',
         'timezone_db' => 'UTC',
         'date_type' => 'date',
@@ -121,7 +120,7 @@ function slac_event_demo_uuid_features_default_content() {
   'name' => 'admin',
   'picture' => 0,
   'date' => '2013-08-10 17:35:56 +0300',
-  'author_uuid' => '2861a36a-6f9c-49cb-bd60-478069839275',
+  'author_uuid' => 'e3c3c703-ee9b-4c0f-a943-ffe3b1eea843',
 );
   $nodes[] = array(
   'title' => 'FACET & Test Facilities User Meeting and SAREC Review',
@@ -143,7 +142,7 @@ function slac_event_demo_uuid_features_default_content() {
   'field_slac_event_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 29,
+        'tid' => 7,
         'uuid' => 'f0644a12-d7ad-4bce-b9fd-84ec84a94f7e',
       ),
     ),
@@ -153,7 +152,6 @@ function slac_event_demo_uuid_features_default_content() {
       0 => array(
         'value' => '2014-08-20T09:30:00',
         'value2' => '2014-08-20T19:30:00',
-        'rrule' => NULL,
         'timezone' => 'Europe/Helsinki',
         'timezone_db' => 'UTC',
         'date_type' => 'date',
@@ -234,7 +232,7 @@ function slac_event_demo_uuid_features_default_content() {
   'name' => 'admin',
   'picture' => 0,
   'date' => '2013-08-10 17:35:05 +0300',
-  'author_uuid' => '2861a36a-6f9c-49cb-bd60-478069839275',
+  'author_uuid' => 'e3c3c703-ee9b-4c0f-a943-ffe3b1eea843',
 );
   $nodes[] = array(
   'title' => 'Organic and Carbon Nanostructures for Energy Conversion and Energy Storage Devices',
@@ -250,13 +248,13 @@ function slac_event_demo_uuid_features_default_content() {
   'tnid' => 0,
   'translate' => 0,
   'uuid' => '36897199-c3a1-4c6e-bee9-0fc1f155f814',
-  'revision_uid' => 0,
+  'revision_uid' => 1,
   'body' => array(),
   'field_location' => array(),
   'field_slac_event_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 24,
+        'tid' => 2,
         'uuid' => '89e0ecf3-9e9f-476b-a920-392077f1e1eb',
       ),
     ),
@@ -266,7 +264,6 @@ function slac_event_demo_uuid_features_default_content() {
       0 => array(
         'value' => '2014-08-20T06:45:00',
         'value2' => '2014-08-20T13:30:00',
-        'rrule' => NULL,
         'timezone' => 'Europe/Helsinki',
         'timezone_db' => 'UTC',
         'date_type' => 'date',
@@ -347,7 +344,7 @@ function slac_event_demo_uuid_features_default_content() {
   'name' => 'admin',
   'picture' => 0,
   'date' => '2013-08-10 17:34:29 +0300',
-  'author_uuid' => '2861a36a-6f9c-49cb-bd60-478069839275',
+  'author_uuid' => 'e3c3c703-ee9b-4c0f-a943-ffe3b1eea843',
 );
   $nodes[] = array(
   'title' => 'SLAC Colloquium: \'A Walk on the Dark Side\'',
@@ -363,13 +360,13 @@ function slac_event_demo_uuid_features_default_content() {
   'tnid' => 0,
   'translate' => 0,
   'uuid' => '5d5c713d-0b6d-4737-a7c6-56a3d530aeea',
-  'revision_uid' => 0,
+  'revision_uid' => 1,
   'body' => array(),
   'field_location' => array(),
   'field_slac_event_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 29,
+        'tid' => 7,
         'uuid' => 'f0644a12-d7ad-4bce-b9fd-84ec84a94f7e',
       ),
     ),
@@ -379,7 +376,6 @@ function slac_event_demo_uuid_features_default_content() {
       0 => array(
         'value' => '2014-08-31T12:30:00',
         'value2' => '2014-08-31T18:45:00',
-        'rrule' => NULL,
         'timezone' => 'Europe/Helsinki',
         'timezone_db' => 'UTC',
         'date_type' => 'date',
@@ -460,7 +456,7 @@ function slac_event_demo_uuid_features_default_content() {
   'name' => 'admin',
   'picture' => 0,
   'date' => '2013-08-10 17:16:00 +0300',
-  'author_uuid' => '2861a36a-6f9c-49cb-bd60-478069839275',
+  'author_uuid' => 'e3c3c703-ee9b-4c0f-a943-ffe3b1eea843',
 );
   $nodes[] = array(
   'title' => '8th International Conference on Inelastic X-ray Scattering',
@@ -501,7 +497,7 @@ function slac_event_demo_uuid_features_default_content() {
   'field_slac_event_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 26,
+        'tid' => 4,
         'uuid' => 'a7aa9fdf-cada-4543-a91a-b3c8e4fe8681',
       ),
     ),
@@ -511,7 +507,6 @@ function slac_event_demo_uuid_features_default_content() {
       0 => array(
         'value' => '2013-12-27T16:30:00',
         'value2' => '2013-12-27T21:45:00',
-        'rrule' => NULL,
         'timezone' => 'Europe/Helsinki',
         'timezone_db' => 'UTC',
         'date_type' => 'date',
@@ -592,7 +587,7 @@ function slac_event_demo_uuid_features_default_content() {
   'name' => 'admin',
   'picture' => 0,
   'date' => '2013-08-10 17:38:37 +0300',
-  'author_uuid' => '2861a36a-6f9c-49cb-bd60-478069839275',
+  'author_uuid' => 'e3c3c703-ee9b-4c0f-a943-ffe3b1eea843',
 );
   $nodes[] = array(
   'title' => 'July 8, 9 SLAC Colloquia Postponed for One Week',
@@ -608,7 +603,7 @@ function slac_event_demo_uuid_features_default_content() {
   'tnid' => 0,
   'translate' => 0,
   'uuid' => '8a45b255-165b-4d61-9303-82b8218eba16',
-  'revision_uid' => 0,
+  'revision_uid' => 1,
   'body' => array(
     'und' => array(
       0 => array(
@@ -625,7 +620,7 @@ function slac_event_demo_uuid_features_default_content() {
   'field_slac_event_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 26,
+        'tid' => 4,
         'uuid' => 'a7aa9fdf-cada-4543-a91a-b3c8e4fe8681',
       ),
     ),
@@ -635,7 +630,6 @@ function slac_event_demo_uuid_features_default_content() {
       0 => array(
         'value' => '2013-12-29T08:45:00',
         'value2' => '2013-12-29T20:45:00',
-        'rrule' => NULL,
         'timezone' => 'Europe/Helsinki',
         'timezone_db' => 'UTC',
         'date_type' => 'date',
@@ -664,7 +658,7 @@ function slac_event_demo_uuid_features_default_content() {
   'field_slac_event_tags' => array(
     'und' => array(
       0 => array(
-        'tid' => 25,
+        'tid' => 3,
         'uuid' => '9914b3dc-1371-45c4-970d-93a26ca5fba9',
       ),
     ),
@@ -731,7 +725,7 @@ function slac_event_demo_uuid_features_default_content() {
   'name' => 'admin',
   'picture' => 0,
   'date' => '2013-08-10 17:37:03 +0300',
-  'author_uuid' => '2861a36a-6f9c-49cb-bd60-478069839275',
+  'author_uuid' => 'e3c3c703-ee9b-4c0f-a943-ffe3b1eea843',
 );
   $nodes[] = array(
   'title' => 'Electroweak Production: The Path to SUSY?',
@@ -747,13 +741,13 @@ function slac_event_demo_uuid_features_default_content() {
   'tnid' => 0,
   'translate' => 0,
   'uuid' => 'a9f2976c-2174-4e45-99d1-f25d3244a4a1',
-  'revision_uid' => 0,
+  'revision_uid' => 1,
   'body' => array(),
   'field_location' => array(),
   'field_slac_event_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 26,
+        'tid' => 4,
         'uuid' => 'a7aa9fdf-cada-4543-a91a-b3c8e4fe8681',
       ),
     ),
@@ -763,7 +757,6 @@ function slac_event_demo_uuid_features_default_content() {
       0 => array(
         'value' => '2014-11-22T22:45:00',
         'value2' => '2014-11-23T15:45:00',
-        'rrule' => NULL,
         'timezone' => 'Europe/Helsinki',
         'timezone_db' => 'UTC',
         'date_type' => 'date',
@@ -844,7 +837,7 @@ function slac_event_demo_uuid_features_default_content() {
   'name' => 'admin',
   'picture' => 0,
   'date' => '2013-08-10 17:33:43 +0300',
-  'author_uuid' => '2861a36a-6f9c-49cb-bd60-478069839275',
+  'author_uuid' => 'e3c3c703-ee9b-4c0f-a943-ffe3b1eea843',
 );
   $nodes[] = array(
   'title' => 'Photon Science Seminar Today: Shedding Light into Rapidly Changing, Opaque Plasmas',
@@ -905,7 +898,7 @@ function slac_event_demo_uuid_features_default_content() {
   'field_slac_event_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 24,
+        'tid' => 2,
         'uuid' => '89e0ecf3-9e9f-476b-a920-392077f1e1eb',
       ),
     ),
@@ -915,7 +908,6 @@ function slac_event_demo_uuid_features_default_content() {
       0 => array(
         'value' => '2013-12-24T22:00:00',
         'value2' => '2013-12-24T22:00:00',
-        'rrule' => NULL,
         'timezone' => 'Europe/Helsinki',
         'timezone_db' => 'UTC',
         'date_type' => 'date',
@@ -928,7 +920,7 @@ function slac_event_demo_uuid_features_default_content() {
   'field_slac_event_tags' => array(
     'und' => array(
       0 => array(
-        'tid' => 23,
+        'tid' => 1,
         'uuid' => '887e35db-2734-405e-a001-daad4a60daa7',
       ),
     ),
@@ -995,7 +987,7 @@ function slac_event_demo_uuid_features_default_content() {
   'name' => 'admin',
   'picture' => 0,
   'date' => '2013-08-10 17:37:55 +0300',
-  'author_uuid' => '2861a36a-6f9c-49cb-bd60-478069839275',
+  'author_uuid' => 'e3c3c703-ee9b-4c0f-a943-ffe3b1eea843',
 );
   $nodes[] = array(
   'title' => 'SLAC Colloquium: \'LZ and the future of WIMPs\'',
@@ -1017,7 +1009,7 @@ function slac_event_demo_uuid_features_default_content() {
   'field_slac_event_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 24,
+        'tid' => 2,
         'uuid' => '89e0ecf3-9e9f-476b-a920-392077f1e1eb',
       ),
     ),
@@ -1027,7 +1019,6 @@ function slac_event_demo_uuid_features_default_content() {
       0 => array(
         'value' => '2013-12-25T11:45:00',
         'value2' => '2013-12-25T14:30:00',
-        'rrule' => NULL,
         'timezone' => 'Europe/Helsinki',
         'timezone_db' => 'UTC',
         'date_type' => 'date',
@@ -1108,7 +1099,7 @@ function slac_event_demo_uuid_features_default_content() {
   'name' => 'admin',
   'picture' => 0,
   'date' => '2013-08-10 17:32:29 +0300',
-  'author_uuid' => '2861a36a-6f9c-49cb-bd60-478069839275',
+  'author_uuid' => 'e3c3c703-ee9b-4c0f-a943-ffe3b1eea843',
 );
   $nodes[] = array(
   'title' => 'SLAC Colloquium: \'Do WIMPs Rule? The LUX Experiment and the Search for Cosmic Dark Matter\'',
@@ -1124,13 +1115,13 @@ function slac_event_demo_uuid_features_default_content() {
   'tnid' => 0,
   'translate' => 0,
   'uuid' => 'e218684b-adf0-4b39-a29d-52e6d07583b9',
-  'revision_uid' => 0,
+  'revision_uid' => 1,
   'body' => array(),
   'field_location' => array(),
   'field_slac_event_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 24,
+        'tid' => 2,
         'uuid' => '89e0ecf3-9e9f-476b-a920-392077f1e1eb',
       ),
     ),
@@ -1140,7 +1131,6 @@ function slac_event_demo_uuid_features_default_content() {
       0 => array(
         'value' => '2014-01-22T06:45:00',
         'value2' => '2014-01-22T14:45:00',
-        'rrule' => NULL,
         'timezone' => 'Europe/Helsinki',
         'timezone_db' => 'UTC',
         'date_type' => 'date',
@@ -1221,7 +1211,7 @@ function slac_event_demo_uuid_features_default_content() {
   'name' => 'admin',
   'picture' => 0,
   'date' => '2013-08-10 17:33:04 +0300',
-  'author_uuid' => '2861a36a-6f9c-49cb-bd60-478069839275',
+  'author_uuid' => 'e3c3c703-ee9b-4c0f-a943-ffe3b1eea843',
 );
   $nodes[] = array(
   'title' => 'Photon Science Seminar: Commissioning the New LCLS \'XTCAV\'',
@@ -1243,7 +1233,7 @@ function slac_event_demo_uuid_features_default_content() {
   'field_slac_event_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 26,
+        'tid' => 4,
         'uuid' => 'a7aa9fdf-cada-4543-a91a-b3c8e4fe8681',
       ),
     ),
@@ -1253,7 +1243,6 @@ function slac_event_demo_uuid_features_default_content() {
       0 => array(
         'value' => '2014-08-20T10:45:00',
         'value2' => '2014-08-20T13:45:00',
-        'rrule' => NULL,
         'timezone' => 'Europe/Helsinki',
         'timezone_db' => 'UTC',
         'date_type' => 'date',
@@ -1334,7 +1323,7 @@ function slac_event_demo_uuid_features_default_content() {
   'name' => 'admin',
   'picture' => 0,
   'date' => '2013-08-10 17:31:44 +0300',
-  'author_uuid' => '2861a36a-6f9c-49cb-bd60-478069839275',
+  'author_uuid' => 'e3c3c703-ee9b-4c0f-a943-ffe3b1eea843',
 );
   return $nodes;
 }

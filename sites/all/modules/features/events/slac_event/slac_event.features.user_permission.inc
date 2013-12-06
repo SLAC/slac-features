@@ -45,21 +45,5 @@ function slac_event_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: use PHP to import nodes.
-  $permissions['use PHP to import nodes'] = array(
-    'name' => 'use PHP to import nodes',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'node_export',
-  );
-
-  // Exported permission: use text format php_code.
-  $permissions['use text format php_code'] = array(
-    'name' => 'use text format php_code',
-    'roles' => array(),
-    'module' => 'filter',
-  );
-
   return $permissions;
 }

@@ -28,7 +28,7 @@ function slac_event_uuid_features_default_terms() {
     'field_slac_event_color_reference' => array(
       'und' => array(
         0 => array(
-          'tid' => 'faab5f7d-ef22-4b05-a4f8-f590ecbedbb9',
+          'tid' => 'e9de47f4-620d-4bd4-853f-cee296f6e5aa',
         ),
       ),
     ),
@@ -43,7 +43,7 @@ function slac_event_uuid_features_default_terms() {
   );
   $terms[] = array(
     'name' => 'Cosmology Seminars',
-    'description' => 'test',
+    'description' => '',
     'format' => 'filtered_html',
     'weight' => 0,
     'uuid' => 'a7aa9fdf-cada-4543-a91a-b3c8e4fe8681',
@@ -51,7 +51,7 @@ function slac_event_uuid_features_default_terms() {
     'field_slac_event_color_reference' => array(
       'und' => array(
         0 => array(
-          'tid' => 'e9de47f4-620d-4bd4-853f-cee296f6e5aa',
+          'tid' => 'faab5f7d-ef22-4b05-a4f8-f590ecbedbb9',
         ),
       ),
     ),
@@ -63,15 +63,7 @@ function slac_event_uuid_features_default_terms() {
     'weight' => 0,
     'uuid' => 'd01d5031-6a61-4e11-9be5-478d34f59e2a',
     'vocabulary_machine_name' => 'category_colors',
-    'field_slac_event_color' => array(
-      'und' => array(
-        0 => array(
-          'value' => '#ab1500',
-          'format' => NULL,
-          'safe_value' => '#ab1500',
-        ),
-      ),
-    ),
+    'field_slac_event_color' => array(),
   );
   $terms[] = array(
     'name' => 'Blue',
@@ -80,15 +72,7 @@ function slac_event_uuid_features_default_terms() {
     'weight' => 0,
     'uuid' => 'e9de47f4-620d-4bd4-853f-cee296f6e5aa',
     'vocabulary_machine_name' => 'category_colors',
-    'field_slac_event_color' => array(
-      'und' => array(
-        0 => array(
-          'value' => 'blue',
-          'format' => NULL,
-          'safe_value' => 'blue',
-        ),
-      ),
-    ),
+    'field_slac_event_color' => array(),
   );
   $terms[] = array(
     'name' => 'SLAC Public Lectures',
@@ -112,15 +96,7 @@ function slac_event_uuid_features_default_terms() {
     'weight' => 0,
     'uuid' => 'faab5f7d-ef22-4b05-a4f8-f590ecbedbb9',
     'vocabulary_machine_name' => 'category_colors',
-    'field_slac_event_color' => array(
-      'und' => array(
-        0 => array(
-          'value' => 'green',
-          'format' => NULL,
-          'safe_value' => 'green',
-        ),
-      ),
-    ),
+    'field_slac_event_color' => array(),
   );
   return $terms;
 }
