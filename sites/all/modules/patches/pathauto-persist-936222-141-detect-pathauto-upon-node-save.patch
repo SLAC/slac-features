@@ -1,0 +1,28 @@
+diff --git a/pathauto.module b/pathauto.module
+index fbbdae3..4438de6 100644
+--- a/pathauto.module
++++ b/pathauto.module
+@@ -559,6 +559,23 @@ function pathauto_node_operations() {
+  *   An optional array of additional options.
+  */
+ function pathauto_node_update_alias(stdClass $node, $op, array $options = array()) {
++  if (!empty($node->original) && (!isset($node->path) || !isset($node->path['pathauto']))) {
++    // This node was saved without specifying the desired pathauto options,
++    // probably programmatically.
++    // We will only create a new alias automatically if and only if the original
++    // title matched the auto generated path alias.
++    $original = $node->original;
++    module_load_include('inc', 'pathauto');
++    $uri = entity_uri('node', $original);
++    $path = drupal_get_path_alias($uri['path'], $original->language);
++    $pathauto_alias = pathauto_create_alias('node', 'return', $uri['path'], array('node' => $original), $original->type, $original->language);
++
++    if (!isset($node->path)) {
++      $node->path = array();
++    }
++    $node->path['pathauto'] = ($path != $uri['path'] && $path == $pathauto_alias);
++  }
++
+   // Skip processing if the user has disabled pathauto for the node.
+   if (isset($node->path['pathauto']) && empty($node->path['pathauto'])) {
+     return;
