@@ -831,6 +831,22 @@ table.sticky-table {
 .site-title {
   position: relative; }
 
+.node-type-list dt, .node-type-list dd {
+  margin-bottom: 10px; }
+.node-type-list dt a {
+  background-color: #276cbd;
+  padding: 6px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  color: white;
+  font-size: 14px;
+  font-size: 0.875rem; }
+  .node-type-list dt a:hover {
+    background-color: rgba(39, 108, 189, 0.8); }
+
 @media (min-width: 480px) {
   .views-field-field-prf-contact-photo {
     float: left; }
