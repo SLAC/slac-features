@@ -21,12 +21,14 @@ function theme_slac_block_style_greybackground_style_render_pane($vars) {
     return;
   }
 
-  $output = '';
-  $output .= '<div class="panel-pane region-grey-background-style">';
-  $output .= '<h2 class="panel-title panel-title-grey-background-style">' . $vars['content']->title . '</h2>';
-  $output .= '<div class="pane-body-grey-background-style">' . $vars['content']->content . '</div>';
-  $output .= '</div>';
+  if (isset($vars['content']->title) && $vars['content']->content) {
+    $output = '';
+    $output .= '<div class="panel-pane region-grey-background-style">';
+    $output .= '<h2 class="panel-title panel-title-grey-background-style">' . $vars['content']->title . '</h2>';
+    $output .= '<div class="pane-body-grey-background-style">' . $vars['content']->content . '</div>';
+    $output .= '</div>';
 
-  return $output;
+    return $output;
+  }
 }
 
