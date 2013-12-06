@@ -50,10 +50,10 @@ function slac_admin_modules_admin_menu_output_alter(&$content) {
  * Implements hook_theme().
  */
 function slac_admin_modules_theme() {
-  return array_merge(drupal_common_theme(), array(
+  return array(
     'slac_admin_modules_fieldset' => array(
       'render element' => 'form',
       'file' => 'slac_admin_modules.admin.inc',
-    ),)
+    ),
   );
 }

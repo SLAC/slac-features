@@ -9,24 +9,7 @@ require_once DRUPAL_ROOT . '/' . drupal_get_path('module', 'system') . "/system.
  * Provides module enable/disable interface.
  */
 function slac_admin_modules_form($form, $form_state = array()) {
-  $demo_modules = array();
-  switch (variable_get('install_profile')) {
-    case 'slac_people':
-      $demo_modules = array(
-        'slac_blog_demo',
-      );
-      break;
-    case 'slac_ext_org':
-      $demo_modules = array(
-        'slac_blog_demo',
-        'slac_event_demo',
-        'slac_news_demo',
-        'slac_faq_demo',
-      );
-      break;
-    default:
-      break;
-  }
+  $demo_modules = module_invoke_all('demo_modules');
   $demo_modules_objects = array();
 
   // Get current list of modules.
@@ -38,7 +21,7 @@ function slac_admin_modules_form($form, $form_state = array()) {
     }
   }
 
-  if(empty($demo_modules_objects)) {
+  if (empty($demo_modules_objects)) {
     return;
   }
 

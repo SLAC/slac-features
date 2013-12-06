@@ -20,15 +20,18 @@ function slac_people_install_tasks($install_state) {
 }
 
 function slac_people_install_task_demo_content() {
-  $modules = array(
-    'slac_blog_demo',
-    'slac_admin_modules',
-    'slac_people_permissions',
-    'slac_people_simpleuser',
-    'slac_people_frontpage',
-    'slac_people_blog',
-    'slac_people_profile',
-    'slac_site_404',
+  $demo_modules = module_invoke_all('demo_modules');
+  $modules = array_merge(
+    array(
+      'slac_admin_modules',
+      'slac_people_permissions',
+      'slac_people_simpleuser',
+      'slac_people_frontpage',
+      'slac_people_blog',
+      'slac_people_profile',
+      'slac_site_404',
+    ),
+    $demo_modules
   );
 
   // Resolve the dependencies now, so that module_enable() doesn't need
@@ -62,20 +65,6 @@ function slac_people_install_task_demo_content() {
     'operations' => $operations,
   );
   return $batch;
-}
-
-function _slac_people_filter_dependencies($dependency) {
-  return !module_exists($dependency);
-}
-
-function _slac_people_enable_module($module, $module_name, &$context) {
-  module_enable(array($module), FALSE);
-  $context['message'] = st('Installed %module module.', array('%module' => $module_name));
-}
-
-function _slac_people_flush_caches($operation, &$context) {
-  $context['message'] = t('@operation', array('@operation' => $operation));
-  drupal_flush_all_caches();
 }
 
 /**
@@ -338,4 +327,18 @@ function slac_people_install() {
   variable_set('admin_theme', 'seven');
   variable_set('node_admin_theme', '1');
   variable_set('install_profile', 'slac_people');
+}
+
+function _slac_people_filter_dependencies($dependency) {
+  return !module_exists($dependency);
+}
+
+function _slac_people_enable_module($module, $module_name, &$context) {
+  module_enable(array($module), FALSE);
+  $context['message'] = st('Installed %module module.', array('%module' => $module_name));
+}
+
+function _slac_people_flush_caches($operation, &$context) {
+  $context['message'] = t('@operation', array('@operation' => $operation));
+  drupal_flush_all_caches();
 }
