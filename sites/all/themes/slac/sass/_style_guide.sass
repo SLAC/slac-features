@@ -2,19 +2,46 @@
   pre
     background: yellow
   .styles
+    > h2
+      border-bottom: 3px solid
+      margin-bottom: 15px
+      padding-bottom: 5px
+      color: $grey-6
+    > p
+      margin-bottom: 10px
     margin-bottom: 25px
     &.style-1
     
       .style-col1
-        height: 100px
-        +container    
-        +box-sizing(content-box)
-        //margin-left: -13px
-        //margin-right: -13px
-        +susy-grid-background
-        +at-breakpoint($tablet)
+        //+box-sizing(content-box)
+        margin-left: -13px
+        margin-right: -13px        
+        .grid
+          +container   
+          height: 100px
+          +box-sizing(content-box)
+
           +susy-grid-background
-        +at-breakpoint($small-desktop)
-          +susy-grid-background    
-        +at-breakpoint($large-desktop)
-          +susy-grid-background    
+          +at-breakpoint($tablet)
+            +susy-grid-background
+          +at-breakpoint($small-desktop)
+            +susy-grid-background    
+          +at-breakpoint($large-desktop)
+            +susy-grid-background    
+
+.color-box
+  div &
+    @extend .clearfix
+  padding: 10px 10px 5px 10px
+  border: 1px solid $grey-9
+  float: left
+  margin-right: 20px
+  margin-bottom: 20px
+  width: 126px
+  span
+    width: 100%
+    height: 100px
+    display: block
+    margin-bottom: 5px
+  p
+    +fontsize-rem(12px)
