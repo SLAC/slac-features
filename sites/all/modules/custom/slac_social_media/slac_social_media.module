@@ -25,7 +25,6 @@ function slac_social_media_entity_info_alter(&$entity_info) {
 function slac_social_media_block_info() {
   $blocks['social_media'] = array(
     'info' => t('Social media'),
-    'region' => 'footer',
     'status' => 1,
   );
   
