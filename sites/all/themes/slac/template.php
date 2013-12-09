@@ -167,8 +167,6 @@ function slac_preprocess_html(&$variables) {
 
 function slac_preprocess_node(&$variables, $hook) {
   $variables['unpublished'] = (!$variables['status']) ? TRUE : FALSE;
-  $user = user_load($variables['uid']);
-  $username = $user->name;
 
   // Unset links like "add comment", "read more" etc. for teaser.
   if ($variables['node']->type == 'blog' && $variables['teaser'] == TRUE && isset($variables['content']['links'])) {
@@ -178,22 +176,14 @@ function slac_preprocess_node(&$variables, $hook) {
     unset($variables['content']['links']['blog']);
   }
 
-  if (module_exists('profile2') && drupal_get_profile() == 'slac_people') {
-    // Load full user name from profile2 field.
-    if (profile2_by_uid_load($variables['node']->uid, 'contact') && $variables['node']->type == 'blog') {
-      $contact_profile = profile2_by_uid_load($variables['node']->uid, 'contact');
-      if (isset($contact_profile->field_prf_contact_name[LANGUAGE_NONE][0]['value'])) {
-        $username = $contact_profile->field_prf_contact_name[LANGUAGE_NONE][0]['value'];
-      }
-    }
-
-    // Display username as a link to the Profile page.
-    $username = '<a class="username" datatype="" property="foaf:name" typeof="sioc:UserAccount" about="/profile" xml:lang="" title="View user profile." href="/profile">' . $username . '</a>';
+  // Add pubdate to submitted variable.
+  $variables['pubdate'] = '<time pubdate datetime="' . format_date($variables['node']->created, 'custom', 'c') . '">' . $variables['date'] . '</time>';
+  if ($variables['node']->type == 'blog' && drupal_get_profile() == 'slac_people' && $variables['display_submitted']) {
+    $variables['pubdate'] = '<time pubdate datetime="' . format_date($variables['node']->created, 'custom', 'c') . '">' . format_date($variables['created'], 'custom', 'l, F j, Y') . '</time>';
+    $variables['submitted'] = t('Posted on !datetime', array('!datetime' => $variables['pubdate']));
   }
-
-  $variables['pubdate'] = '<time pubdate datetime="' . format_date($variables['node']->created, 'custom', 'c') . '">' . format_date($variables['created'], 'custom', 'l, F j, Y') . '</time>';
-  if ($variables['display_submitted']) {
-    $variables['submitted'] = t('Posted by !username on !datetime', array('!username' => $username, '!datetime' => $variables['pubdate']));
+  elseif ($variables['display_submitted']) {
+    $variables['submitted'] = t('Submitted by !username on !datetime', array('!username' => $variables['name'], '!datetime' => $variables['pubdate']));
   }
 
   // Add a class for the view mode.
