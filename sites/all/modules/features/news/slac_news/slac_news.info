@@ -53,6 +53,7 @@ features[variable][] = comment_form_location_slac_news
 features[variable][] = comment_preview_slac_news
 features[variable][] = comment_slac_news
 features[variable][] = comment_subject_field_slac_news
+features[variable][] = date_format_month_day_year
 features[variable][] = field_bundle_settings_node__slac_news
 features[variable][] = menu_options_slac_news
 features[variable][] = menu_parent_slac_news
