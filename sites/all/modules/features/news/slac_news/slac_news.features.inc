@@ -38,9 +38,8 @@ function slac_news_image_default_styles() {
   // Exported image style: crop_news_landscape.
   $styles['crop_news_landscape'] = array(
     'name' => 'crop_news_landscape',
-    'label' => 'News landscape',
     'effects' => array(
-      2 => array(
+      1 => array(
         'label' => 'EPSA Image Crop',
         'help' => '',
         'dimensions callback' => 'epsacrop_crop_dimensions',
@@ -49,8 +48,8 @@ function slac_news_image_default_styles() {
         'module' => 'epsacrop',
         'name' => 'epsacrop_crop',
         'data' => array(
-          'width' => 300,
-          'height' => 200,
+          'width' => 150,
+          'height' => 110,
           'anchor' => 'center-center',
           'jcrop_settings' => array(
             'aspect_ratio' => '',
@@ -61,7 +60,7 @@ function slac_news_image_default_styles() {
         ),
         'weight' => 1,
       ),
-      3 => array(
+      2 => array(
         'label' => 'Scale and crop',
         'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
         'effect callback' => 'image_scale_and_crop_effect',
@@ -71,8 +70,8 @@ function slac_news_image_default_styles() {
         'module' => 'image',
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => 113,
-          'height' => 72,
+          'width' => 150,
+          'height' => 110,
         ),
         'weight' => 2,
       ),
