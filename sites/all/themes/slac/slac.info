@@ -28,8 +28,6 @@ plugins[panels][styles] = plugins/styles
 plugins[panels][layouts] = plugins/layouts
 
 regions[content]        = Content
-regions[help] = Help
-regions[footer] = Footer
 
 features[] = logo
 features[] = name
