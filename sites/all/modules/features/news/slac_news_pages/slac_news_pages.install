@@ -155,6 +155,7 @@ function _slac_news_pages_install__panes($did) {
       'cache' => array(),
       'style' => array(
         'settings' => NULL,
+        'style' => 'greybackground',
       ),
       'css' => array(),
       'extras' => array(),
@@ -164,17 +165,15 @@ function _slac_news_pages_install__panes($did) {
     array(
       'did' => $did,
       'panel' => 'right',
-      'type' => 'block',
-      'subtype' => 'menu-menu-news-archives',
+      'type' => 'menu',
+      'subtype' => 'menu',
       'shown' => 1,
       'access' => array(),
-      'configuration' => array(
-        'override_title' => 1,
-        'override_title_text' => 'News Archives',
-      ),
+      'configuration' => array(),
       'cache' => array(),
       'style' => array(
         'settings' => NULL,
+        'style' => 'greybackground',
       ),
       'css' => array(),
       'extras' => array(),

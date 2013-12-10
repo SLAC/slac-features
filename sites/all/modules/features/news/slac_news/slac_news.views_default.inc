@@ -108,6 +108,7 @@ function slac_news_views_default_views() {
   /* Display: News Listing by type */
   $handler = $view->new_display('panel_pane', 'News Listing by type', 'panel_pane_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'News and Press Releases';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Media */
   $handler->display->display_options['fields']['field_slac_news_media']['id'] = 'field_slac_news_media';
@@ -174,6 +175,8 @@ function slac_news_views_default_views() {
   $handler->display->display_options['arguments']['field_slac_news_type_tid']['table'] = 'field_data_field_slac_news_type';
   $handler->display->display_options['arguments']['field_slac_news_type_tid']['field'] = 'field_slac_news_type_tid';
   $handler->display->display_options['arguments']['field_slac_news_type_tid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['field_slac_news_type_tid']['title_enable'] = TRUE;
+  $handler->display->display_options['arguments']['field_slac_news_type_tid']['title'] = '%1s';
   $handler->display->display_options['arguments']['field_slac_news_type_tid']['default_argument_type'] = 'raw';
   $handler->display->display_options['arguments']['field_slac_news_type_tid']['default_argument_options']['index'] = '1';
   $handler->display->display_options['arguments']['field_slac_news_type_tid']['default_argument_options']['use_alias'] = TRUE;
@@ -186,6 +189,7 @@ function slac_news_views_default_views() {
     'news_types' => 'news_types',
   );
   $handler->display->display_options['arguments']['field_slac_news_type_tid']['validate_options']['type'] = 'convert';
+  $handler->display->display_options['arguments']['field_slac_news_type_tid']['validate_options']['transform'] = TRUE;
   $handler->display->display_options['arguments']['field_slac_news_type_tid']['validate']['fail'] = 'ignore';
   $handler->display->display_options['pane_category']['name'] = 'NEWS';
   $handler->display->display_options['pane_category']['weight'] = '0';
@@ -373,6 +377,17 @@ function slac_news_views_default_views() {
   /* Display: News Listing by year */
   $handler = $view->new_display('panel_pane', 'News Listing by year', 'panel_pane_6');
   $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['defaults']['query'] = FALSE;
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['inline'] = array(
+    'field_slac_news_source' => 'field_slac_news_source',
+  );
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['empty'] = FALSE;
   /* No results behavior: Global: Text area */
   $handler->display->display_options['empty']['area']['id'] = 'area';
@@ -381,6 +396,7 @@ function slac_news_views_default_views() {
   $handler->display->display_options['empty']['area']['empty'] = TRUE;
   $handler->display->display_options['empty']['area']['content'] = 'No results were found.';
   $handler->display->display_options['empty']['area']['format'] = 'full_html';
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Media */
   $handler->display->display_options['fields']['field_slac_news_media']['id'] = 'field_slac_news_media';
@@ -446,15 +462,23 @@ function slac_news_views_default_views() {
   $handler->display->display_options['arguments']['created_year']['id'] = 'created_year';
   $handler->display->display_options['arguments']['created_year']['table'] = 'node';
   $handler->display->display_options['arguments']['created_year']['field'] = 'created_year';
-  $handler->display->display_options['arguments']['created_year']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['created_year']['title_enable'] = TRUE;
+  $handler->display->display_options['arguments']['created_year']['title'] = 'News Archive %1';
   $handler->display->display_options['arguments']['created_year']['default_argument_type'] = 'raw';
-  $handler->display->display_options['arguments']['created_year']['default_argument_options']['index'] = '1';
+  $handler->display->display_options['arguments']['created_year']['default_argument_options']['index'] = '2';
   $handler->display->display_options['arguments']['created_year']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['created_year']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['created_year']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['created_year']['specify_validation'] = TRUE;
-  $handler->display->display_options['arguments']['created_year']['validate']['type'] = 'numeric';
-  $handler->display->display_options['arguments']['created_year']['validate']['fail'] = 'access denied';
+  /* Contextual filter: Content: Created month */
+  $handler->display->display_options['arguments']['created_month']['id'] = 'created_month';
+  $handler->display->display_options['arguments']['created_month']['table'] = 'node';
+  $handler->display->display_options['arguments']['created_month']['field'] = 'created_month';
+  $handler->display->display_options['arguments']['created_month']['title_enable'] = TRUE;
+  $handler->display->display_options['arguments']['created_month']['title'] = 'News Archive: %1 %2';
+  $handler->display->display_options['arguments']['created_month']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['created_month']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['created_month']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['created_month']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['pane_category']['name'] = 'NEWS';
   $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['allow']['use_pager'] = 0;
@@ -467,15 +491,24 @@ function slac_news_views_default_views() {
   $handler->display->display_options['allow']['exposed_form'] = 0;
   $handler->display->display_options['allow']['fields_override'] = 0;
   $handler->display->display_options['argument_input'] = array(
-    'field_slac_news_type_value' => array(
-      'type' => 'user',
+    'created_year' => array(
+      'type' => 'panel',
       'context' => 'entity:comment.author',
       'context_optional' => 0,
       'panel' => '0',
       'fixed' => '',
-      'label' => 'News Type',
+      'label' => 'Content: Created year',
+    ),
+    'created_month' => array(
+      'type' => 'panel',
+      'context' => 'entity:comment.author',
+      'context_optional' => 0,
+      'panel' => '1',
+      'fixed' => '',
+      'label' => 'Content: Created month',
     ),
   );
+  $handler->display->display_options['inherit_panels_path'] = '0';
   $export['news'] = $view;
 
   return $export;

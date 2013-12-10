@@ -152,14 +152,11 @@ function slac_news_default_page_manager_handlers() {
     $pane = new stdClass();
     $pane->pid = 'new-5';
     $pane->panel = 'right';
-    $pane->type = 'block';
-    $pane->subtype = 'menu-menu-news-archives';
+    $pane->type = 'menu';
+    $pane->subtype = 'menu';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => 'News Archive',
-    );
+    $pane->configuration = array();
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
@@ -190,7 +187,7 @@ function slac_news_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'News by year';
   $page->admin_description = 'Displays news by year';
-  $page->path = 'news/%year';
+  $page->path = 'news/archive/%year/!month';
   $page->access = array(
     'logic' => 'and',
     'plugins' => array(),
@@ -204,7 +201,14 @@ function slac_news_default_page_manager_pages() {
       'settings' => array(
         'use_tail' => 0,
       ),
-      'keyword' => 'year',
+    ),
+    'month' => array(
+      'id' => 2,
+      'identifier' => 'String 2',
+      'name' => 'string',
+      'settings' => array(
+        'use_tail' => 0,
+      ),
     ),
   );
   $page->conf = array(
@@ -237,7 +241,16 @@ function slac_news_default_page_manager_pages() {
           'settings' => array(
             'description' => '',
             'php' => 'if (is_numeric($contexts[\'argument_string_1\']->data) && strlen($contexts[\'argument_string_1\']->data) == 4) {
-return TRUE;
+if (isset($contexts[\'argument_string_2\']->data)) {
+ if (strlen($contexts[\'argument_string_2\']->data) == 2) {
+   if ($contexts[\'argument_string_2\']->data <= 12 && $contexts[\'argument_string_2\']->data >= 1) {
+     return TRUE;
+}
+else {return FALSE;}
+}
+else {return FALSE;}
+}
+  return TRUE;
 } ',
           ),
           'not' => FALSE,
@@ -257,7 +270,7 @@ return TRUE;
     ),
   );
   $display->cache = array();
-  $display->title = 'News and Press Releases - %year:html_safe';
+  $display->title = '';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
@@ -305,14 +318,11 @@ return TRUE;
     $pane = new stdClass();
     $pane->pid = 'new-3';
     $pane->panel = 'right';
-    $pane->type = 'block';
-    $pane->subtype = 'menu-menu-news-archives';
+    $pane->type = 'menu';
+    $pane->subtype = 'menu';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => 'News Archive',
-    );
+    $pane->configuration = array();
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
@@ -324,8 +334,8 @@ return TRUE;
     $pane->locks = array();
     $display->content['new-3'] = $pane;
     $display->panels['right'][1] = 'new-3';
-  $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = '0';
+  $display->hide_title = PANELS_TITLE_NONE;
+  $display->title_pane = 'new-1';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['news_by_year'] = $page;

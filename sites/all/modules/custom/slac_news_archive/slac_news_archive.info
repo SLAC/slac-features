@@ -1,0 +1,6 @@
+name = SLAC News Archive
+description = Provide list of years and months by Post date of SLAC News nodes
+package = Propeople
+core = 7.x
+
+dependencies[] = panels

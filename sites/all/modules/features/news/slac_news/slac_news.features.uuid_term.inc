@@ -11,7 +11,7 @@ function slac_news_uuid_features_default_terms() {
   $terms = array();
 
   $terms[] = array(
-    'name' => 'news-article',
+    'name' => 'News Article',
     'description' => '',
     'format' => 'full_html',
     'weight' => 0,
@@ -19,7 +19,7 @@ function slac_news_uuid_features_default_terms() {
     'vocabulary_machine_name' => 'news_types',
   );
   $terms[] = array(
-    'name' => 'press-release',
+    'name' => 'Press Release',
     'description' => '',
     'format' => 'full_html',
     'weight' => 0,
