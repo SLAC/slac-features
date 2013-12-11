@@ -141,14 +141,15 @@ function slac_blog_default_page_manager_handlers() {
     $pane = new stdClass();
     $pane->pid = 'new-2';
     $pane->panel = 'right';
-    $pane->type = 'menu';
-    $pane->subtype = 'menu';
+    $pane->type = 'blog_archive_menu';
+    $pane->subtype = 'blog_archive_menu';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
+      'style' => 'greybackground',
     );
     $pane->css = array();
     $pane->extras = array();
@@ -485,8 +486,8 @@ function slac_blog_default_page_manager_handlers() {
     $pane = new stdClass();
     $pane->pid = 'new-8';
     $pane->panel = 'right';
-    $pane->type = 'menu';
-    $pane->subtype = 'menu';
+    $pane->type = 'blog_archive_menu';
+    $pane->subtype = 'blog_archive_menu';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
@@ -850,8 +851,8 @@ function slac_blog_default_page_manager_pages() {
     $pane = new stdClass();
     $pane->pid = 'new-2';
     $pane->panel = 'right';
-    $pane->type = 'menu';
-    $pane->subtype = 'menu';
+    $pane->type = 'blog_archive_menu';
+    $pane->subtype = 'blog_archive_menu';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();

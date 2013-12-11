@@ -112,8 +112,8 @@ function _slac_people_blog_install__panes($did) {
     array(
       'did' => $did,
       'panel' => 'right',
-      'type' => 'menu',
-      'subtype' => 'menu',
+      'type' => 'blog_archive_menu',
+      'subtype' => 'blog_archive_menu',
       'shown' => 1,
       'access' => array(),
       'configuration' => array(),
@@ -124,7 +124,7 @@ function _slac_people_blog_install__panes($did) {
       ),
       'css' => array(),
       'extras' => array(),
-      'position' => 0,
+      'position' => 1,
       'locks' => array(),
     ),
     array(

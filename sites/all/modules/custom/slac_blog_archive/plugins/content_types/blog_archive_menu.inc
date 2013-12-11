@@ -5,12 +5,12 @@
  * by the system that includes this file.
  */
 $plugin = array(
-  //'single' => TRUE,
-  'title' => t('News archive'),
-  'icon' => 'icon_node.png',
-  'description' => t('Show years / months of news posts for easier navigation.'),
-  'category' => t('NEWS'),
-  'render callback' => 'slac_news_archive_menu_render',
+  'single' => TRUE,
+  'title' => t('Blog archive'),
+  'defaults' => array(),
+  'description' => t('Show years / months of blog posts for easier navigation.'),
+  'category' => t('Blog'),
+  'render callback' => 'blog_archive_menu_content_type_render',
 );
 
 /**
@@ -21,12 +21,12 @@ $plugin = array(
  * @param type $context
  * @return \stdClass
  */
-function slac_news_archive_menu_render($subtype, $conf, $panel_args, $context) {
+function blog_archive_menu_content_type_render($subtype, $conf, $panel_args, $context) {
   $block = new stdClass();
-  $block->module = 'slac_news_archive';
+  $block->module = 'slac_blog_archive';
 
-  $block->title = t('News Archive');
-  $block->content = slac_news_archive_create_list();
+  $block->title = t('Blog Archive');
+  $block->content = slac_blog_archive_create_list();
 
   return $block;
 }
@@ -35,7 +35,7 @@ function slac_news_archive_menu_render($subtype, $conf, $panel_args, $context) {
  * Generate list of years and months
  * @return rendered list with items
  */
-function slac_news_archive_create_list() {
+function slac_blog_archive_create_list() {
 
   $menu = array();
   $menu_item = menu_get_item();
@@ -49,28 +49,18 @@ function slac_news_archive_create_list() {
     $years = date('Y', $menu_item['page_arguments'][0]->created);
     $months = date('m', $menu_item['page_arguments'][0]->created);
   }
-  elseif ($menu_item['original_map'][0] == 'news') {
-    if (isset($menu_item['page_arguments'][1])) {
-      if (is_numeric($menu_item['page_arguments'][1])) {
-        $years = $menu_item['page_arguments'][1];
-      }
-      elseif (isset($menu_item['page_arguments'][1]->data)) {
-        if (is_numeric($menu_item['page_arguments'][1]->data)) {
-          $years = $menu_item['page_arguments'][1]->data;
-        }
-      }
-    }
+  elseif ($menu_item['original_map'][0] == 'blog') {
+    $years = isset($menu_item['page_arguments'][1]) ? $menu_item['page_arguments'][1] : $years;
     $months = isset($menu_item['page_arguments'][2]) ? $menu_item['page_arguments'][2] : $months;
   }
-
   // get cached list if already cached
-  if ($data = cache_get('slac_news_archive_plugin' . $years, 'cache_menu')) {
+  if ($data = cache_get('slac_blog_archive_plugin' . $years, 'cache_menu')) {
     return $data->data;
   }
 
-  if (_slac_news_archive_years()) {
+  if (_slac_blog_archive_years()) {
     // create the years items
-    foreach (_slac_news_archive_years() as $value) {
+    foreach (_slac_blog_archive_years() as $value) {
       $children = array();
       $year_attributes = array();
 
@@ -81,7 +71,7 @@ function slac_news_archive_create_list() {
       if ($years == $value->years) {
 
         // create the months items
-        foreach (_slac_news_archive_months($value->years) as $value_months) {
+        foreach (_slac_blog_archive_months($value->years) as $value_months) {
           $month_attributes = array();
           $year_count = '';
 
@@ -95,25 +85,25 @@ function slac_news_archive_create_list() {
 
           $children[] = array(
             'data' => l(
-                $value_months->months . ' (' . $value_months->nid_count . ')', 'news/archive/' . $value->years . '/' . $value_months->months_numeric, $month_attributes),
+                $value_months->months . ' (' . $value_months->nid_count . ')', 'blog/archive/' . $value->years . '/' . $value_months->months_numeric, $month_attributes),
           );
         }
       }
       $menu[] = array(
-        'data' => l($value->years . $year_count, 'news/archive/' . $value->years, $year_attributes),
+        'data' => l($value->years . $year_count, 'blog/archive/' . $value->years, $year_attributes),
         'children' => ($children) ? $children : '',
       );
     }
   }
   $type = 'ul';
   $attributes = array(
-    'id' => 'news-archive',
-    'class' => 'news-archive-class',
+    'id' => 'blog-archive',
+    'class' => 'blog-archive-class',
   );
   $data = theme('item_list', array('items' => $menu, 'type' => $type, 'attributes' => $attributes));
 
   // set cache
-  cache_set('slac_news_archive_plugin' . $years, $data, 'cache_menu');
+  cache_set('slac_blog_archive_plugin' . $years, $data, 'cache_menu');
   return $data;
 }
 
@@ -121,10 +111,10 @@ function slac_news_archive_create_list() {
  * Custom query of years items
  * @return type list of years and index of the counted nodes
  */
-function _slac_news_archive_years() {
+function _slac_blog_archive_years() {
   $query = db_select('node', 'n')
       ->condition('n.status', 1, '=')
-      ->condition('n.type', 'slac_news', '=')
+      ->condition('n.type', 'blog', '=')
       ->groupBy('years')
       ->orderBy('years', 'DESC');
   $query->addExpression('COUNT(nid)', 'nid_count');
@@ -137,10 +127,10 @@ function _slac_news_archive_years() {
  * @param type $year
  * @return type list of months and index of the counted nodes
  */
-function _slac_news_archive_months($year = NULL) {
+function _slac_blog_archive_months($year = NULL) {
   $query = db_select('node', 'n')
       ->condition('n.status', 1, '=')
-      ->condition('n.type', 'slac_news', '=')
+      ->condition('n.type', 'blog', '=')
       ->fields('n', array('created'))
       ->groupBy('months')
       ->orderBy('months_numeric', 'DESC');

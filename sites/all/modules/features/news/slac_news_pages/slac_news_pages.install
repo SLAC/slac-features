@@ -165,8 +165,8 @@ function _slac_news_pages_install__panes($did) {
     array(
       'did' => $did,
       'panel' => 'right',
-      'type' => 'menu',
-      'subtype' => 'menu',
+      'type' => 'news_archive_menu',
+      'subtype' => 'news_archive_menu',
       'shown' => 1,
       'access' => array(),
       'configuration' => array(),
