@@ -13,7 +13,6 @@ dependencies[] = uuid_features
 __drupal_alter_by_ref[][node][blog] = blog
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:2
-features[taxonomy][] = slac_blog_tags
 features[uuid_node][] = 0490d0e1-4e5a-422b-98c9-a1265f04b258
 features[uuid_node][] = 0f11674f-9eec-4fc8-b643-53cab7884fcd
 features[uuid_node][] = 2dfbdcf1-e6bf-4400-950d-897675abce2f

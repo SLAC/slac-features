@@ -554,8 +554,8 @@ function slac_blog_default_page_manager_handlers() {
         0 => array(
           'name' => 'term_vocabulary',
           'settings' => array(
-            'vids' => array(
-              12 => '12',
+            'machine_name' => array(
+              'slac_blog_tags' => 'slac_blog_tags',
             ),
           ),
           'context' => 'argument_term_1',
