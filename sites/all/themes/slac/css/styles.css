@@ -983,7 +983,6 @@ table.sticky-table {
       padding-top: 13px; }
 
   .footer-seccond {
-    margin-bottom: 30px;
     *zoom: 1; }
     .footer-seccond:before, .footer-seccond:after {
       content: "";
@@ -1021,10 +1020,8 @@ table.sticky-table {
       float: right;
       margin-right: 0; }
 
-  .footer-seccond {
-    margin-bottom: 60px; }
-    .footer-seccond ul li {
-      margin-right: 8%; } }
+  .footer-seccond ul li {
+    margin-right: 8%; } }
 .contact-information .views-label {
   font-size: 0.625em;
   font-weight: bold;
@@ -1280,6 +1277,44 @@ ul.blog-archive-class {
     padding: 20px;
     font-size: 16px;
     font-size: 1rem; } }
+form#user-profile-form {
+  background-color: #f6f6f6;
+  border: 3px solid #ececec;
+  padding: 26px 38px; }
+  form#user-profile-form input[type='text'], form#user-profile-form input[type='password'] {
+    width: 325px; }
+  form#user-profile-form .confirm-parent, form#user-profile-form .password-parent {
+    width: 100%; }
+form label {
+  color: #474747;
+  font-size: 14px;
+  font-size: 0.875rem;
+  margin: 0 0 4px 0;
+  display: block; }
+
+input[type='submit'] {
+  border: 1px solid #cecece;
+  background-color: #e4e4e4;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  color: #871628;
+  font-size: 12px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 9px 28px 7px; }
+
+input[type='text'], input[type='password'] {
+  margin: 0;
+  border: 1px solid #c3c3c3;
+  border-bottom-color: #dddddd;
+  -webkit-box-shadow: 0px -2px 0px 0px #7c7c7c;
+  -moz-box-shadow: 0px -2px 0px 0px #7c7c7c;
+  box-shadow: 0px -2px 0px 0px #7c7c7c;
+  padding: 6px 6px 3px 6px; }
+
 .style-guide pre {
   background: yellow; }
 .style-guide .styles {
@@ -1292,8 +1327,8 @@ ul.blog-archive-class {
   .style-guide .styles > p {
     margin-bottom: 10px; }
   .style-guide .styles.style-1 .style-col1 {
-    /* margin-left: -5%; */
-    /* margin-right: -13px; */ }
+    margin-left: -13px;
+    margin-right: -13px; }
     .style-guide .styles.style-1 .style-col1 .grid {
       max-width: 1174px;
       _width: 1174px;
