@@ -313,6 +313,25 @@ function slac_blog_default_page_manager_handlers() {
     $pane = new stdClass();
     $pane->pid = 'new-5';
     $pane->panel = 'right';
+    $pane->type = 'blog_archive_menu';
+    $pane->subtype = 'blog_archive_menu';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+      'style' => 'greybackground',
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-5'] = $pane;
+    $display->panels['right'][0] = 'new-5';
+    $pane = new stdClass();
+    $pane->pid = 'new-6';
+    $pane->panel = 'right';
     $pane->type = 'views';
     $pane->subtype = 'blog_tags';
     $pane->shown = TRUE;
@@ -333,24 +352,6 @@ function slac_blog_default_page_manager_handlers() {
       'override_title' => 0,
       'override_title_text' => '',
     );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-5'] = $pane;
-    $display->panels['right'][0] = 'new-5';
-    $pane = new stdClass();
-    $pane->pid = 'new-6';
-    $pane->panel = 'right';
-    $pane->type = 'menu';
-    $pane->subtype = 'menu';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
@@ -554,7 +555,7 @@ function slac_blog_default_page_manager_handlers() {
           'name' => 'term_vocabulary',
           'settings' => array(
             'vids' => array(
-              3 => '3',
+              12 => '12',
             ),
           ),
           'context' => 'argument_term_1',
@@ -663,8 +664,8 @@ function slac_blog_default_page_manager_handlers() {
     $pane = new stdClass();
     $pane->pid = 'new-11';
     $pane->panel = 'right';
-    $pane->type = 'menu';
-    $pane->subtype = 'menu';
+    $pane->type = 'blog_archive_menu';
+    $pane->subtype = 'blog_archive_menu';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
