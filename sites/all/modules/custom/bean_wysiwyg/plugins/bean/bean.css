@@ -1,0 +1,12 @@
+.block-insert {
+  border: 2px dotted red;
+  cursor: default;
+}
+
+.block-insert-active {
+  background-color: yellow;
+}
+
+.element-invisible {
+  display: none;
+}

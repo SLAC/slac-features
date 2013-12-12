@@ -1,0 +1,296 @@
+<?php
+/**
+ * @file
+ */
+
+/**
+ * Implementation of hook_menu().
+ */
+function bean_wysiwyg_menu() {
+  $items = array();
+
+  $items['bean_wysiwyg/block/%'] = array(
+    'title' => 'Form to add/edit a block',
+    'page callback' => 'bean_wysiwyg_block_page',
+    'page arguments' => array(2),
+    'access arguments' => array('use block insert'),
+    'description' => 'Callback to create or edit a block',
+    'file' => 'bean_wysiwyg.pages.inc',
+  );
+
+  $items['bean_wysiwyg/browser'] = array(
+    'title' => 'Block insert browser',
+    'description' => 'Browser to select the type of the block to insert',
+    'page callback' => 'bean_wysiwyg_browser',
+    'access arguments' => array('use block insert'),
+    'type' => MENU_CALLBACK,
+    'file' => 'bean_wysiwyg.pages.inc',
+  );
+
+  $items['admin/config/content/bean-wysiwyg'] = array(
+    'title' => 'Bean wysiwyg',
+    'description' => 'Configure the block types available in the Bean wysiwyg module.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('bean_wysiwyg_settings_form'),
+    'access arguments' => array('administer bean wysiwyg'),
+    'file' => 'bean_wysiwyg.admin.inc',
+  );
+
+  return $items;
+}
+
+/**
+ * Implements hook_permission().
+ */
+function bean_wysiwyg_permission() {
+  return array(
+    'use block insert' => array(
+      'title' => t('Use blocks insert functionality'),
+      'description' => t('Use blocks insert functionality'),
+    ),
+    'administer bean wysiwyg' => array(
+      'title' => t('Administer Bean wysiwyg'),
+      'description' => t('Access the configuration of the Bean wysiwyg module.'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_wysiwyg_include_directory().
+ */
+function bean_wysiwyg_wysiwyg_include_directory($type) {
+  switch ($type) {
+    case 'plugins':
+      return $type;
+  }
+}
+
+/**
+ * Implements hook_bean_types_api_info().
+ */
+function bean_wysiwyg_bean_types_api_info() {
+  return array('api' => 4);
+}
+
+/**
+ * Implements hook_library().
+ */
+function bean_wysiwyg_library() {
+  $libraries = array();
+
+  $libraries['bean_wysiwyg_browser'] = array(
+    'title' => 'Block Insert popup libraries',
+    'js' => array(
+      drupal_get_path('module', 'bean_wysiwyg') . '/js/bean_wysiwyg.popups.js' => array('group' => JS_DEFAULT),
+    ),
+    'dependencies' => array(
+      array('media', 'media_base'),
+      array('system', 'ui.resizable'),
+      array('system', 'ui.draggable'),
+      array('system', 'ui.dialog'),
+    ),
+    'version' => '1.0',
+  );
+
+  return $libraries;
+}
+
+/**
+ * Implements hook_wysiwyg_editor_settings_alter().
+ */
+function bean_wysiwyg_wysiwyg_editor_settings_alter(&$settings, $context) {
+  if ($context['profile']->editor != 'ckeditor') {
+    return;
+  }
+
+  // Do not display Block Insert plugin inside of its iframe popup.
+  if (arg(0) == 'bean_wysiwyg') {
+    $extra_plugins = explode(',', $settings['extraPlugins']);
+    $extra_plugins = array_filter($extra_plugins, function($value) { return $value != 'bean_wysiwyg'; });
+    $settings['extraPlugins'] = implode(',', $extra_plugins);
+  }
+}
+
+/**
+ * Default settings of the javascripts.
+ */
+function bean_wysiwyg_browser_js() {
+  $settings = array(
+    'browserUrl' => url('bean_wysiwyg/browser',
+      array('query' => array('render' => 'block_types'))),
+    'browserUpdateBlockUrl' => url('bean_wysiwyg/block/'),
+  );
+
+  $js = array(
+    'library' => array(
+      array('bean_wysiwyg', 'bean_wysiwyg_browser'),
+    ),
+    'js' => array(
+      array(
+       'data' => array('bean_wysiwyg' => $settings),
+       'type' => 'setting',
+      ),
+    ),
+  );
+  return $js;
+}
+
+/**
+ * Implements hook_admin_paths().
+ */
+function bean_wysiwyg_admin_paths() {
+  $paths['bean_wysiwyg/*'] = TRUE;
+  return $paths;
+}
+
+/**
+ * Alter bean_form form.
+ */
+function bean_wysiwyg_form_bean_form_alter(&$form, $form_state) {
+  // We pass 'ajax' argument in bean_wysiwyg_block_page().
+  if (!in_array('ajax', $form_state['build_info']['args'])) {
+    return;
+  }
+
+  $form['#prefix'] = '<div id="bean-wysiwyg-form-bean-form">';
+  $form['#suffix'] = '</div>';
+
+  $form['#attached']['js'] = array(drupal_get_path('module', 'bean_wysiwyg') . '/js/bean_wysiwyg.iframe.js');
+  $form['actions']['submit']['#ajax'] = array(
+    'callback' => 'bean_form_ajax_callback',
+    'wrapper' => 'bean-wysiwyg-form-bean-form',
+  );
+  // @todo Add ajax call to Delete button and remove the block instead of hiding the button.
+  if (isset($form['actions']['delete'])) {
+    unset($form['actions']['delete']);
+  }
+
+  $form['actions']['cancel'] = array(
+    '#markup' => l(t('Cancel'), '', array('attributes' => array('class' => array('button', 'button-no', 'fake-cancel')))),
+    '#weight' => 210,
+  );
+}
+
+function bean_form_ajax_callback($form, &$form_state) {
+  $errors = form_get_errors();
+  if (!empty($errors)) {
+    $form_state['rebuild'] = TRUE;
+    return $form;
+  }
+
+  $commands = array();
+  $bean = $form_state['bean'];
+  $build = bean_view($bean);
+  _bean_wysiwyg_strip_contextual_links($build);
+  $commands[] = ajax_command_invoke('body', 'blockSelectDialogFinalizeSelection', array(
+    array('bid' => $bean->bid, 'html' => drupal_render($build)),
+  ));
+  return array('#type' => 'ajax', '#commands' => $commands);
+}
+
+/**
+ * Implements hook_filter_info().
+ */
+function bean_wysiwyg_filter_info() {
+  $filters['bean_wysiwyg_filter'] = array(
+    'title' => t('Convert Block Insert tags to markup'),
+    'description' => t('This filter will convert [block_insert]...[/block_insert] tags into markup.'),
+    'process callback' => 'bean_wysiwyg_filter_process',
+    'weight' => 2,
+  );
+
+  return $filters;
+}
+
+/**
+ * Finds all matches and run them through bean_wysiwyg_token_to_markup().
+ */
+function bean_wysiwyg_filter_process($text) {
+  $text = ' ' . $text . ' ';
+  $text = preg_replace_callback("/\[block_insert\].*?\[\/block_insert\]/s", 'bean_wysiwyg_token_to_markup', $text);
+
+  return $text;
+}
+
+/**
+ * Convert tokens to markup.
+ */
+function bean_wysiwyg_token_to_markup($match) {
+  $bean_bid = substr($match[0], strlen('[block_insert]'), strlen($match[0]) - strlen('[block_insert]') - strlen('[/block_insert]'));
+  if (!is_numeric($bean_bid)) {
+    return;
+  }
+  if ($bean = bean_load($bean_bid)) {
+    $build = bean_view($bean);
+    _bean_wysiwyg_strip_contextual_links($build);
+    return drupal_render($build);
+  }
+}
+
+/**
+ * Implements hook_element_info_alter().
+ */
+function bean_wysiwyg_element_info_alter(&$types) {
+  $types['text_format']['#pre_render'][] = 'bean_wysiwyg_pre_render_text_format';
+}
+
+function bean_wysiwyg_pre_render_text_format($element) {
+  // filter_process_format() copies properties to the expanded 'value' child
+  // element.
+  if (!isset($element['format'])) {
+    return $element;
+  }
+
+  $field = &$element['value'];
+
+  $tagmap = _bean_wysiwyg_generate_tagMap($field['#value']);
+
+  if (isset($tagmap)) {
+    drupal_add_js(array('bean_wysiwyg_tagmap' => $tagmap), 'setting');
+  }
+  return $element;
+}
+
+function _bean_wysiwyg_generate_tagMap($text) {
+  // Making $tagmap static as this function is called many times and
+  // adds duplicate markup for each tag code in Drupal.settings JS,
+  // so in media_process_form it adds something like tagCode:<markup>,
+  // <markup> and when we replace in attach see two duplicate images
+  // for one tagCode. Making static would make function remember value
+  // between function calls. Since media_process_form is multiple times
+  // with same form, this function is also called multiple times.
+  static $tagmap = array();
+  preg_match_all("/\[block_insert\].*?\[\/block_insert\]/s", $text, $matches, PREG_SET_ORDER);
+  foreach ($matches as $match) {
+    $bid = substr($match[0], strlen('[block_insert]'), strlen($match[0]) - strlen('[block_insert]') - strlen('[/block_insert]'));;
+    // We see if tagContent is already in $tagMap, if not we add it
+    // to $tagmap.  If we return an empty array, we break embeddings of the same
+    // media multiple times.
+    if (empty($tagmap[$match[0]])) {
+      $markup = bean_wysiwyg_token_to_markup($match);
+      if (empty($markup)) {
+        $missing_image_url = file_create_url(drupal_get_path('module', 'media') . '/images/icons/default/image-x-generic.png');
+        $markup = '<img class="block-insert-placeholder" src="' . $missing_image_url . '" width="100px" height="100px"/>';
+      }
+      $tagmap[$match[0]] = '<div class="block-insert" data-block_insert="' . $bid . '" contenteditable="false">' . $markup . '<!-- block-insert --></div>';
+    }
+  }
+  return $tagmap;
+}
+
+/**
+ * Recursively strip all contextual links in the element.
+ */
+function _bean_wysiwyg_strip_contextual_links(&$element) {
+  if (!is_array($element)) {
+    return;
+  }
+
+  if (isset($element['#contextual_links'])) {
+    unset($element['#contextual_links']);
+  }
+
+  foreach (element_children($element) as $key) {
+    _bean_wysiwyg_strip_contextual_links($element[$key]);
+  }
+}

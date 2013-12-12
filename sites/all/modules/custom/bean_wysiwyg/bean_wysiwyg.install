@@ -1,0 +1,11 @@
+<?php
+/**
+ * @file
+ */
+
+/**
+ * Implementation of hook_uninstall().
+ */
+function bean_wysiwyg_uinstall() {
+  variable_del('bean_wysiwyg_types_enabled');
+}
