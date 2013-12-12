@@ -17,7 +17,7 @@ dependencies[] = options
 dependencies[] = path
 dependencies[] = taxonomy
 dependencies[] = dblog
-dependencies[] = search
+;dependencies[] = search
 dependencies[] = field_ui
 dependencies[] = file
 
@@ -28,21 +28,21 @@ dependencies[] = ctools
 dependencies[] = page_manager
 dependencies[] = views
 dependencies[] = views_ui
+dependencies[] = textformatter
 dependencies[] = date
 dependencies[] = date_api
 dependencies[] = date_popup
 dependencies[] = date_ical
 dependencies[] = date_views
-dependencies[] = features
-dependencies[] = features_override
-dependencies[] = strongarm
 dependencies[] = link
 dependencies[] = entity
 dependencies[] = libraries
 dependencies[] = menu_trail_by_path
 dependencies[] = panels_mini
-dependencies[] = panels_node
+;dependencies[] = panels_node
 dependencies[] = panels
+dependencies[] = panels_ipe
+dependencies[] = panelizer
 dependencies[] = paranoia
 dependencies[] = token
 dependencies[] = pathauto
@@ -56,13 +56,12 @@ dependencies[] = devel
 dependencies[] = devel_generate
 
 ;Features dependencies
+dependencies[] = features
 dependencies[] = uuid
 dependencies[] = uuid_features
+dependencies[] = strongarm
 
-; Media
-dependencies[] = epsacrop
-dependencies[] = pp_crop
-dependencies[] = pp_admin
+
 
 ;FAQ
 dependencies[] = entity_token
@@ -77,20 +76,24 @@ dependencies[] = bueditor
 dependencies[] = ajax_markup
 dependencies[] = imce
 
-;Blog/News
-dependencies[] = media
+;Media
 dependencies[] = file_entity
+dependencies[] = media
+dependencies[] = media_wysiwyg
+dependencies[] = mediafield
+dependencies[] = media_internet
+
+dependencies[] = epsacrop
+
+dependencies[] = pp_crop
+dependencies[] = pp_admin
 
 ;Blog
 dependencies[] = blog
 
-;News
-dependencies[] = mediafield
-
 ;Events
 dependencies[] = better_exposed_filters
 dependencies[] = field_redirection
-dependencies[] = node_export
 
 dependencies[] = pp_demo
 
@@ -99,9 +102,6 @@ dependencies[] = support
 
 ; Lightbox
 dependencies[] = pp_lightbox
-
-; Carousel / Slideshow
-dependencies[] = pp_slideshow
 
 ; Forms
 dependencies[] = slac_webform_botcha
@@ -117,6 +117,12 @@ dependencies[] = slac_social_media_block
 dependencies[] = pp_profile
 dependencies[] = slac_profile
 
+;Landing page content type
+dependencies[] = landing_page
+
+;Configurations
+dependencies[] = slac_configurations
+
 ;Custom modules
 dependencies[] = slac_site_variables
 dependencies[] = slac_social_media
@@ -124,21 +130,20 @@ dependencies[] = slac_block_style
 dependencies[] = slac_profile_base
 dependencies[] = slac_people_slideshow
 dependencies[] = slac_style_guide
-dependencies[] = media_wysiwyg
 
 dependencies[] = slac_form_building
+
+dependencies[] = slac_blog
+;dependencies[] = slac_blog_demo
 
 dependencies[] = slac_faq
 ;dependencies[] = slac_faq_demo
 
-;dependencies[] = slac_kb_article
+dependencies[] = slac_kb_article
 ;dependencies[] = slac_kb_demo
 
 dependencies[] = slac_news
 ;dependencies[] = slac_news_demo
-
-dependencies[] = slac_blog
-;dependencies[] = slac_blog_demo
 
 dependencies[] = slac_event
 ;dependencies[] = slac_event_demo
@@ -146,9 +151,3 @@ dependencies[] = slac_event
 dependencies[] = slac_service_catalog
 ;dependencies[] = slac_service_catalog_demo
 dependencies[] = slac_service_help
-
-;Landing page content type
-dependencies[] = landing_page
-
-;Configurations
-dependencies[] = slac_configurations

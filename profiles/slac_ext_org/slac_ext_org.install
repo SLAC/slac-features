@@ -22,7 +22,6 @@ function slac_ext_org_install_task_demo_content() {
   $demo_modules = module_invoke_all('demo_modules');
   $modules = array_merge(
     array(
-      'slac_people_blog',
       'slac_news_pages',
       'slac_event_pages',
       'slac_admin_modules',
@@ -59,8 +58,10 @@ function slac_ext_org_install_task_demo_content() {
   $operations[] = array('_slac_ext_org_flush_caches', array(t('Flushed caches.')));
 
   $batch = array(
-    'title' => t('Installing demo content and additional modules. This can take a few minutes.'),
+    'title' => t('Installing demo content and other modules. This can take a few minutes.'),
     'operations' => $operations,
+    'error_message' => st('An error occurred. Please try reinstalling again.'),
+    'finish' => 'debug_print_backtrace',
   );
   return $batch;
 }
