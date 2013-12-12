@@ -483,6 +483,18 @@ function slac_faq_views_default_views() {
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Categories';
   $handler->display->display_options['defaults']['empty'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Content: Author */
+  $handler->display->display_options['relationships']['uid']['id'] = 'uid';
+  $handler->display->display_options['relationships']['uid']['table'] = 'node';
+  $handler->display->display_options['relationships']['uid']['field'] = 'uid';
+  /* Relationship: FAQ Category */
+  $handler->display->display_options['relationships']['field_slac_faq_category_tid']['id'] = 'field_slac_faq_category_tid';
+  $handler->display->display_options['relationships']['field_slac_faq_category_tid']['table'] = 'field_data_field_slac_faq_category';
+  $handler->display->display_options['relationships']['field_slac_faq_category_tid']['field'] = 'field_slac_faq_category_tid';
+  $handler->display->display_options['relationships']['field_slac_faq_category_tid']['ui_name'] = 'FAQ Category';
+  $handler->display->display_options['relationships']['field_slac_faq_category_tid']['label'] = 'FAQ Category';
+  $handler->display->display_options['relationships']['field_slac_faq_category_tid']['required'] = TRUE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */

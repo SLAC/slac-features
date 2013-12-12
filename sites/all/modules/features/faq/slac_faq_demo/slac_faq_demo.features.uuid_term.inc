@@ -11,6 +11,14 @@ function slac_faq_demo_uuid_features_default_terms() {
   $terms = array();
 
   $terms[] = array(
+    'name' => 'Recreation Center',
+    'description' => '',
+    'format' => 'full_html',
+    'weight' => 0,
+    'uuid' => 'b9236867-2fed-4032-8c59-5a6076d8d2fa',
+    'vocabulary_machine_name' => 'slac_faq_category',
+  );
+  $terms[] = array(
     'name' => 'General feedback',
     'description' => '',
     'format' => 'plain_text',
