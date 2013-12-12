@@ -12,3 +12,10 @@ function media_internet_uninstall() {
   // Remove variables.
   variable_del('media_internet_fromurl_supported_schemes');
 }
+
+/**
+ * Rebuild the registry in order to accommodate moved classes.
+ */
+function media_internet_update_7000() {
+  registry_rebuild();
+}

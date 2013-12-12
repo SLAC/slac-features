@@ -8,16 +8,8 @@
  * See http://drupal.org/project/media for more details.
  */
 
-/* ***************************************** */
-/* INCLUDES                                  */
-/* ***************************************** */
-
 // Code relating to using media as a field.
 require_once dirname(__FILE__) . '/includes/media.fields.inc';
-
-/* ***************************************** */
-/* Hook Implementations                      */
-/* ***************************************** */
 
 /**
  * Implements hook_hook_info().
@@ -82,16 +74,6 @@ function media_entity_info_alter(&$entity_info) {
     $entity_info['file']['translation']['entity_translation']['class'] = 'MediaEntityTranslationHandler';
     $entity_info['file']['translation']['entity_translation']['path schemes']['media'] = array('edit path' => 'media/%file/edit/%ctools_js');
   }
-}
-
-/**
- * Access callback for files. This function is deprecated.
- *
- * @todo Completely remove this function in favor of file_entity_access after
- * a few releases, to ensure rest of contib catches up.
- */
-function media_access($op, $account = NULL) {
-  return user_access('administer files', $account);
 }
 
 /**
@@ -381,10 +363,6 @@ function media_browser_form_submit($form, &$form_state) {
     $form_state['redirect'] = array($url, $parameters);
   }
 }
-
-/* ***************************************** */
-/* Callbacks                                 */
-/* ***************************************** */
 
 /**
  * Implements hook_library().

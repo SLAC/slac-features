@@ -12,7 +12,7 @@ function media_wysiwyg_entity_uuid_load(&$entities, $entity_type) {
   // Go through all the entity's text fields and replace file IDs in media
   // tokens with the corresponding UUID.
   foreach ($entities as $entity) {
-    media_wysiwyg_filter_replace_tokens_in_all_text_fields($entity_type, $entity, 'media_token_fid_to_uuid');
+    media_wysiwyg_filter_replace_tokens_in_all_text_fields($entity_type, $entity, 'media_wysiwyg_token_fid_to_uuid');
   }
 }
 
@@ -22,7 +22,7 @@ function media_wysiwyg_entity_uuid_load(&$entities, $entity_type) {
 function media_wysiwyg_entity_uuid_presave(&$entity, $entity_type) {
   // Go through all the entity's text fields and replace UUIDs in media tokens
   // with the corresponding file ID.
-  media_wysiwyg_filter_replace_tokens_in_all_text_fields($entity_type, $entity, 'media_token_uuid_to_fid');
+  media_wysiwyg_filter_replace_tokens_in_all_text_fields($entity_type, $entity, 'media_wysiwyg_token_uuid_to_fid');
 }
 
 /**
