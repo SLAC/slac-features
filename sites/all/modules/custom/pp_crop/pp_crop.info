@@ -8,9 +8,3 @@ core = 7.x
 
 configure = admin/config/media/pp_crop
 
-
-; Information added by drush on 2013-08-30
-version = "unknown"
-project = "pp_crop"
-datestamp = "1377870473"
-

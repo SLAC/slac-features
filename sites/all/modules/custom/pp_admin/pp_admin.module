@@ -5,3 +5,16 @@
  */
 
 include_once 'pp_admin.features.inc';
+
+/**
+ * Implements hook_wysiwyg_editor_settings_alter().
+ */
+function pp_admin_wysiwyg_editor_settings_alter(&$settings, $context) {
+  if ($context['profile']->editor != 'ckeditor') {
+    return;
+  }
+
+  // Remove "Insert paragraph here" plugin.
+  // @see http://ckeditor.com/forums/CKEditor/How-to-Remove-Insert-Paragraph-Here-Pointer
+  $settings['removePlugins'] = 'magicline';
+}

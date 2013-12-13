@@ -120,15 +120,6 @@ Drupal.bean_wysiwyg.popups.blockUpdateDialog = function (update, bean_bid, globa
 
     // Create it as a modal window.
     var browserSrc = options.widget.updateSrc + bean_bid;
-//    if ($.isArray(browserSrc) && browserSrc.length) {
-//      browserSrc = browserSrc[browserSrc.length - 1];
-//    }
-//    // Params to send along to the iframe.  WIP.
-//    var params = {};
-//    $.extend(params, options.global);
-//    params.plugins = options.plugins;
-//
-//    browserSrc += '&' + $.param(params);
     var blockInsertIframe = Drupal.bean_wysiwyg.popups.getPopupIframe(browserSrc, 'blockInsertBrowser');
     Drupal.bean_wysiwyg.popups.blockSelectDialog.blockInsertIframe = blockInsertIframe;
     // Attach the onLoad event

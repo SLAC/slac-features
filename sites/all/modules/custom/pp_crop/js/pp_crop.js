@@ -39,6 +39,6 @@
         $(this).attr('src', src);
       });
     });
-  };
-  
+  }
+
 })(jQuery);
