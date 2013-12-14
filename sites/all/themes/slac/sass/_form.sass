@@ -1,22 +1,65 @@
 form
-  &#user-profile-form
+  &#user-profile-form, &#user-login, &#user-register-form, &#user-pass
     background-color: $form-bg
     border: 3px solid $form-bdr
-    padding: 26px 38px
+    padding: 10px
     
     input[type='text'], input[type='password']
-      width: 325px
+      //width: 100%
       
     .confirm-parent, .password-parent
       width: 100%
       
+    .password-strength, div.password-confirm
+      width: auto
+      float: none
+      display: block
+      margin: 0 0 10px 0
+
+    div.password-suggestions, .wrapped-with-icon .description
+      background-color: $menu_bg
+      padding: 16px
+      margin: 10px 0
+      width: 100%
+      border: 0 none
+      +box-shadow(1px 1px 1px 1px #cfcfcf)
+      +border-radius(5px) 
+      color: $grey-47
+      +fontsize-rem(13px)
+    
+    .form-item
+      margin-bottom: 35px
+    
     
   label
     color: #474747
     +fontsize-rem(14px)
-    margin: 0 0 4px 0 
+    margin: 0 0 3px 0 
     display: block
+
+
+
++at-breakpoint($tablet)
+  form
+    &#user-profile-form
+      padding: 26px 370px 26px 38px
       
+      input[type='text'], input[type='password']
+        width: 325px
+
++at-breakpoint($small-desktop)
+  form
+    &#user-profile-form
+      padding: 26px 370px 26px 38px
+
+.wrapped-with-icon
+  position: relative
+  padding-right: 35px
+  .form-item
+    margin-bottom: 0 !important
+  
+
+    
       
 input[type='submit']
   border: 1px solid #cecece
@@ -32,9 +75,31 @@ input[type='text'], input[type='password']
   border: 1px solid #c3c3c3
   border-bottom-color: $grey-d
   +box-shadow(0px -2px 0px 0px #7c7c7c )
-  padding: 6px 6px 3px 6px
+  padding: 5px 6px 4px 6px
+  outline: 0 none
   
   
-
+.icon-ask
+  position: absolute
+  top: 20px 
+  right: 0
+  background-color: #e4e4e4
+  width: 25px
+  height: 25px
+  +border-radius(100%)
+  border: 1px solid #cecece
+  cursor: pointer
+  +no-select
+  &:after
+    content: '?'
+    color: $red
+    position: absolute
+    top: 50%
+    left: 50%
+    margin-top: -8px
+    margin-left: -5px
+    font-weight: bold
+    +fontsize-rem(15px)
+    
   
   

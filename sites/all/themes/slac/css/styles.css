@@ -1002,11 +1002,11 @@ table.sticky-table {
   .pane-page-logo img {
     width: 158px; } }
 @media (min-width: 894px) {
-  .general-left, .panel-col-first {
+  .general-left, .panel-col-first, #user-profile-form {
     width: 64.74654%;
     float: left;
     margin-right: 5.76037%; }
-    .front .pane-page-content .general-left, .front .pane-page-content .panel-col-first {
+    .front .pane-page-content .general-left, .front .pane-page-content .panel-col-first, .front .pane-page-content #user-profile-form {
       width: 64.74654%;
       float: left;
       margin-right: 5.76037%; }
@@ -1277,20 +1277,56 @@ ul.blog-archive-class {
     padding: 20px;
     font-size: 16px;
     font-size: 1rem; } }
-form#user-profile-form {
+form#user-profile-form, form#user-login, form#user-register-form, form#user-pass {
   background-color: #f6f6f6;
   border: 3px solid #ececec;
-  padding: 26px 38px; }
-  form#user-profile-form input[type='text'], form#user-profile-form input[type='password'] {
-    width: 325px; }
-  form#user-profile-form .confirm-parent, form#user-profile-form .password-parent {
+  padding: 10px; }
+  form#user-profile-form .confirm-parent, form#user-profile-form .password-parent, form#user-login .confirm-parent, form#user-login .password-parent, form#user-register-form .confirm-parent, form#user-register-form .password-parent, form#user-pass .confirm-parent, form#user-pass .password-parent {
     width: 100%; }
+  form#user-profile-form .password-strength, form#user-profile-form div.password-confirm, form#user-login .password-strength, form#user-login div.password-confirm, form#user-register-form .password-strength, form#user-register-form div.password-confirm, form#user-pass .password-strength, form#user-pass div.password-confirm {
+    width: auto;
+    float: none;
+    display: block;
+    margin: 0 0 10px 0; }
+  form#user-profile-form div.password-suggestions, form#user-profile-form .wrapped-with-icon .description, form#user-login div.password-suggestions, form#user-login .wrapped-with-icon .description, form#user-register-form div.password-suggestions, form#user-register-form .wrapped-with-icon .description, form#user-pass div.password-suggestions, form#user-pass .wrapped-with-icon .description {
+    background-color: #ebebdf;
+    padding: 16px;
+    margin: 10px 0;
+    width: 100%;
+    border: 0 none;
+    -webkit-box-shadow: 1px 1px 1px 1px #cfcfcf;
+    -moz-box-shadow: 1px 1px 1px 1px #cfcfcf;
+    box-shadow: 1px 1px 1px 1px #cfcfcf;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    color: #474747;
+    font-size: 13px;
+    font-size: 0.8125rem; }
+  form#user-profile-form .form-item, form#user-login .form-item, form#user-register-form .form-item, form#user-pass .form-item {
+    margin-bottom: 35px; }
 form label {
   color: #474747;
   font-size: 14px;
   font-size: 0.875rem;
-  margin: 0 0 4px 0;
+  margin: 0 0 3px 0;
   display: block; }
+
+@media (min-width: 690px) {
+  form#user-profile-form {
+    padding: 26px 370px 26px 38px; }
+    form#user-profile-form input[type='text'], form#user-profile-form input[type='password'] {
+      width: 325px; } }
+@media (min-width: 894px) {
+  form#user-profile-form {
+    padding: 26px 370px 26px 38px; } }
+.wrapped-with-icon {
+  position: relative;
+  padding-right: 35px; }
+  .wrapped-with-icon .form-item {
+    margin-bottom: 0 !important; }
 
 input[type='submit'] {
   border: 1px solid #cecece;
@@ -1313,7 +1349,40 @@ input[type='text'], input[type='password'] {
   -webkit-box-shadow: 0px -2px 0px 0px #7c7c7c;
   -moz-box-shadow: 0px -2px 0px 0px #7c7c7c;
   box-shadow: 0px -2px 0px 0px #7c7c7c;
-  padding: 6px 6px 3px 6px; }
+  padding: 5px 6px 4px 6px;
+  outline: 0 none; }
+
+.icon-ask {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  background-color: #e4e4e4;
+  width: 25px;
+  height: 25px;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  border-radius: 100%;
+  border: 1px solid #cecece;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+  .icon-ask:after {
+    content: "?";
+    color: #871628;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -8px;
+    margin-left: -5px;
+    font-weight: bold;
+    font-size: 15px;
+    font-size: 0.9375rem; }
 
 .style-guide pre {
   background: yellow; }
