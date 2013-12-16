@@ -160,7 +160,7 @@ html {
   padding: 10px 0 7px; }
 .page-basic > .content {
   margin: 15px 0; }
-  .page-basic > .content input[type='text'], .page-basic > .content input[type='password'], .page-basic > .content textarea {
+  .page-basic > .content input[type='text'], .page-basic > .content input[type='password'], .page-basic > .content textarea, .page-basic > .content select, .page-basic > .content input[type='file'] {
     width: 100%; }
   .page-basic > .content .general-right {
     margin-top: 40px; }
@@ -1307,6 +1307,10 @@ form#user-profile-form, form#user-login, form#user-register-form, form#user-pass
     font-size: 0.8125rem; }
   form#user-profile-form .form-item, form#user-login .form-item, form#user-register-form .form-item, form#user-pass .form-item {
     margin-bottom: 35px; }
+  form#user-profile-form > div, form#user-login > div, form#user-register-form > div, form#user-pass > div {
+    max-width: 360px; }
+  form#user-profile-form legend, form#user-login legend, form#user-register-form legend, form#user-pass legend {
+    display: none; }
 form label {
   color: #474747;
   font-size: 14px;
@@ -1315,18 +1319,15 @@ form label {
   display: block; }
 
 @media (min-width: 690px) {
-  form#user-profile-form {
-    padding: 26px 370px 26px 38px; }
-    form#user-profile-form input[type='text'], form#user-profile-form input[type='password'] {
-      width: 325px; } }
-@media (min-width: 894px) {
-  form#user-profile-form {
-    padding: 26px 370px 26px 38px; } }
+  form#user-profile-form, form#user-login, form#user-register-form, form#user-pass {
+    padding: 26px 38px 26px 38px; } }
 .wrapped-with-icon {
   position: relative;
   padding-right: 35px; }
   .wrapped-with-icon .form-item {
     margin-bottom: 0 !important; }
+  .wrapped-with-icon.form-type-password-confirm .icon-ask {
+    top: 55px; }
 
 input[type='submit'] {
   border: 1px solid #cecece;
@@ -1342,7 +1343,7 @@ input[type='submit'] {
   font-weight: bold;
   padding: 9px 28px 7px; }
 
-input[type='text'], input[type='password'] {
+input[type='text'], input[type='password'], select {
   margin: 0;
   border: 1px solid #c3c3c3;
   border-bottom-color: #dddddd;

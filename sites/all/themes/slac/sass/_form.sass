@@ -3,9 +3,6 @@ form
     background-color: $form-bg
     border: 3px solid $form-bdr
     padding: 10px
-    
-    input[type='text'], input[type='password']
-      //width: 100%
       
     .confirm-parent, .password-parent
       width: 100%
@@ -29,7 +26,12 @@ form
     
     .form-item
       margin-bottom: 35px
+
+    > div
+      max-width: 360px    
     
+    legend
+      display: none
     
   label
     color: #474747
@@ -41,16 +43,9 @@ form
 
 +at-breakpoint($tablet)
   form
-    &#user-profile-form
-      padding: 26px 370px 26px 38px
+    &#user-profile-form, &#user-login, &#user-register-form, &#user-pass
+      padding: 26px 38px 26px 38px
       
-      input[type='text'], input[type='password']
-        width: 325px
-
-+at-breakpoint($small-desktop)
-  form
-    &#user-profile-form
-      padding: 26px 370px 26px 38px
 
 .wrapped-with-icon
   position: relative
@@ -58,7 +53,9 @@ form
   .form-item
     margin-bottom: 0 !important
   
-
+  &.form-type-password-confirm
+    .icon-ask  
+      top: 55px
     
       
 input[type='submit']
@@ -70,7 +67,7 @@ input[type='submit']
   font-weight: bold
   padding: 9px 28px 7px
   
-input[type='text'], input[type='password']
+input[type='text'], input[type='password'], select
   margin: 0
   border: 1px solid #c3c3c3
   border-bottom-color: $grey-d

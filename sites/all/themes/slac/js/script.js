@@ -88,38 +88,34 @@
     }
   };
 
-  
   //Hide description text and make this visible by hover or tap
   Drupal.behaviors.form_elements = {
-    attach: function (context) {
+    attach: function () {
       var $form = $('#user-profile-form, #user-login, #user-register-form, #user-pass'),
-          $description = $form.find('.description'),
-          $description_icon,
-          $action_description,
-          $close_all_description;
-      
+        $description = $form.find('.description'),
+        $description_icon,
+        $action_description,
+        $close_all_description;
+
       //Funtion to hide all descriptions text
       $close_all_description = function () {
         $description.hide();
       };
-      
+
       $close_all_description();
-      
+
       $description.parent().addClass('wrapped-with-icon');
-      
+
       $('<div class="icon-ask"></div>').appendTo($description.parent());
-      
+
       $description_icon = $form.find('.icon-ask');
-      
-      
-      $action_description = function() {
+
+      $action_description = function () {
         $form.find('.description').not($(this).siblings('.description')).hide();
         $(this).siblings('.description').toggle();
       };
 
       $description_icon.click($action_description);
-
     }
   };
-  
 }(this, this.document, this.jQuery, this.Drupal));
