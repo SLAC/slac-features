@@ -77,6 +77,13 @@ function slac_service_catalog_views_default_views() {
 
   /* Display: Category listing */
   $handler = $view->new_display('panel_pane', 'Category listing', 'panel_pane_1');
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'grid';
+  $handler->display->display_options['style_options']['columns'] = '2';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'entity';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
 
   /* Display: Category A-Z */
   $handler = $view->new_display('panel_pane', 'Category A-Z', 'panel_pane_2');
