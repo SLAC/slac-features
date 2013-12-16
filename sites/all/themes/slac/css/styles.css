@@ -434,6 +434,11 @@ ul.tabs, .action-links {
 
 .front .pane-page-content .general-left .panel-pane {
   margin-bottom: 36px; }
+.front .pane-page-content .general-left .panels-ipe-portlet-wrapper .panel-pane {
+  margin-bottom: 0; }
+
+.front .pane-page-content .general-left .panels-ipe-portlet-wrapper {
+  margin-bottom: 36px; }
 
 .pane-page-content .general-left h2.pane-title, .pane-page-content .general-left h2.panel-title {
   border-bottom: 3px solid #f3f1eb;
@@ -1116,10 +1121,11 @@ ul.blog-archive-class {
     float: none; } }
 .field-slideshow {
   overflow: hidden;
-  max-width: 100%; }
+  max-width: 100% !important;
+  max-height: 100% !important; }
 
 .field-slideshow-slide {
-  max-width: 100%;
+  max-width: 100% !important;
   height: auto !important;
   width: auto !important; }
   .field-slideshow-slide a, .field-slideshow-slide img {
