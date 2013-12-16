@@ -445,6 +445,9 @@ function slac_ext_org_install() {
     ->execute();
   variable_set('admin_theme', 'seven');
   variable_set('node_admin_theme', '1');
+
+  variable_set('install_profile', 'slac_ext_org');
+  variable_set('distribution_name', 'SLAC Ext Org');
 }
 
 function _slac_ext_org_filter_dependencies($dependency) {

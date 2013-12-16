@@ -71,8 +71,8 @@ dependencies[] = field_permissions
 
 ;Wiki 
 dependencies[] = diff
-dependencies[] = markdown
-dependencies[] = bueditor
+;dependencies[] = markdown
+;dependencies[] = bueditor
 dependencies[] = ajax_markup
 dependencies[] = imce
 
@@ -87,6 +87,12 @@ dependencies[] = epsacrop
 
 dependencies[] = pp_crop
 dependencies[] = pp_admin
+
+dependencies[] = bean
+dependencies[] = bean_wysiwyg
+dependencies[] = pp_demo_beans
+
+
 
 ;Blog
 dependencies[] = blog
