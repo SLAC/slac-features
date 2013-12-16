@@ -91,7 +91,7 @@
   //Hide description text and make this visible by hover or tap
   Drupal.behaviors.form_elements = {
     attach: function () {
-      var $form = $('#user-profile-form, #user-login, #user-register-form, #user-pass'),
+      var $form = $('#user-profile-form, #user-login, #user-register-form, #user-pass, form.node-blog-form'),
         $description = $form.find('.description'),
         $description_icon,
         $action_description,

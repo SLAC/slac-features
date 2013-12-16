@@ -1,3 +1,14 @@
+.description_block
+  background-color: $menu_bg
+  padding: 16px
+  margin: 10px 0
+  width: 100%
+  border: 0 none
+  +box-shadow(1px 1px 1px 1px #cfcfcf)
+  +border-radius(5px) 
+  color: $grey-47
+  +fontsize-rem(13px)
+
 form
   &#user-profile-form, &#user-login, &#user-register-form, &#user-pass
     background-color: $form-bg
@@ -14,15 +25,7 @@ form
       margin: 0 0 10px 0
 
     div.password-suggestions, .wrapped-with-icon .description
-      background-color: $menu_bg
-      padding: 16px
-      margin: 10px 0
-      width: 100%
-      border: 0 none
-      +box-shadow(1px 1px 1px 1px #cfcfcf)
-      +border-radius(5px) 
-      color: $grey-47
-      +fontsize-rem(13px)
+      @extend .description_block
     
     .form-item
       margin-bottom: 35px
@@ -39,6 +42,8 @@ form
     margin: 0 0 3px 0 
     display: block
 
+  
+    
 
 
 +at-breakpoint($tablet)
@@ -58,7 +63,7 @@ form
       top: 55px
     
       
-input[type='submit']
+input[type='submit'], .button
   border: 1px solid #cecece
   background-color: #e4e4e4
   +border-radius(5px)
@@ -66,14 +71,24 @@ input[type='submit']
   +fontsize-rem(12px)
   font-weight: bold
   padding: 9px 28px 7px
-  
-input[type='text'], input[type='password'], select
+  cursor: pointer
+  margin-right: 10px
+  display: inline-block
+  &:hover, &:focus
+    background-color: $bg-col-1
+    
+
+    
+    
+input[type='text'], input[type='password'], select, textarea
   margin: 0
   border: 1px solid #c3c3c3
   border-bottom-color: $grey-d
   +box-shadow(0px -2px 0px 0px #7c7c7c )
   padding: 5px 6px 4px 6px
   outline: 0 none
+  font-family: inherit
+  +fontsize-rem(14px)
   
   
 .icon-ask
@@ -99,4 +114,80 @@ input[type='text'], input[type='password'], select
     +fontsize-rem(15px)
     
   
+html.js input
+  &.form-autocomplete
+    background-position: 100% 5px !important
+  &.throbbing
+    background-position: 100% -15px !important
+    
+//Blog add and edit form
+form.node-blog-form
+  .description
+    @extend .description_block
+
+  > div
+    > div
+      margin-bottom: 25px
   
+  .filter-guidelines
+    clear: none
+    padding: 0
+    
+  .filter-wrapper 
+    .form-item
+      float: none
+      padding: 1.5em 0 .5em 0
+      
+  .fieldset-wrapper
+    label
+      display: inline-block
+  
+    input[type="checkbox"]
+      display: inline-block
+        
+
+      
+  .vertical-tabs fieldset.vertical-tabs-pane
+    padding: 1em !important
+
+  ul.vertical-tabs-list
+    margin: 0
+    width: 100%
+    border: 0 none
+    border-bottom: 1px solid $grey-c
+    
+    li
+      border: 0 none
+    
+  div.vertical-tabs  
+    margin: 0 0 1em 0
+    
+  .filter-help
+    float: left
+    padding: 0
+    a 
+      padding-left: 0
+    
+    
+    
++at-breakpoint($tablet)
+
+
+
+
+  form.node-blog-form
+    div.vertical-tabs
+      margin: 1em 0 1em 15em
+      
+    ul.vertical-tabs-list
+      margin: -1px 0 -1px -15em  
+      width: 15em
+      //border-top: 1px solid #ccc
+      border-bottom: 0 none
+      
+      li 
+        border: 1px solid #ccc
+        
+    .filter-help
+      float: right
+      padding: 0
