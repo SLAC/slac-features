@@ -926,7 +926,7 @@ table.sticky-table
       &:hover
         background-color: rgba($blue, .8)
         
-//EXT ORG Profile
+//+++++++++++++++++++++++EXT ORG Profile
 //News landing page
 .news-landing
   h2
@@ -983,3 +983,76 @@ table.sticky-table
       
     .news-content
       padding-left: 170px
+
+//Research projects
+.projects-blocks-wrapper
+  
+  .project-title a
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    background-color: rgba(0, 0, 0, 0.3)
+    color: #fff
+    text-transform: uppercase
+    font-weight: bold
+    padding: 9px
+    
+    
+  .project-image
+    position: static
+    img, a
+      display: block
+
+  .project-block-wrapper
+    position: relative
+    margin-bottom: 2em
+      
++at-breakpoint(321px)  
+  .projects-blocks-wrapper
+    +clearfix
+    
+  .project-block-wrapper
+    float: left
+    width: 45%
+    margin-right: 10%
+    margin-bottom: 10%
+    &:nth-child(2n+2)
+      margin-right: 0
+
+
++at-breakpoint($less-than-480) 
+  .project-block-wrapper
+    width: 30%
+    margin-right: 5%
+    margin-bottom: 5%
+    
+    &:nth-child(2n+2)
+      margin-right: 5% 
+      
+    &:nth-child(3n+3)
+      margin-right: 0
+
+        
++at-breakpoint($tablet)         
+
+  .project-block-wrapper
+    width: 45%
+    margin-right: 10% !important
+    margin-bottom: 10%
+    
+    &:nth-child(2n+2)
+      margin-right: 0 !important
+        
+        
++at-breakpoint($small-desktop) 
+  .project-block-wrapper
+    width: 30%
+    margin-right: 5% !important
+    margin-bottom: 5%
+    
+    &:nth-child(2n+2)
+      margin-right: 5% !important   
+      
+    &:nth-child(3n+3)
+      margin-right: 0 !important       
