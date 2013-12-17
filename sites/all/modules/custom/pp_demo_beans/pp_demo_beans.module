@@ -1,0 +1,122 @@
+<?php
+/**
+ * @file
+ * Code for the pp_demo_beans feature.
+ */
+
+include_once 'pp_demo_beans.features.inc';
+
+/**
+ * Implements hook_entity_view_alter().
+ */
+function pp_demo_beans_entity_view_alter(&$build, $type) {
+  if ($type != 'bean') {
+    return;
+  }
+  if ($build['#bundle'] == 'block_with_brochures') {
+    $build['#theme'] = 'pp_demo_beans_block_with_brochures';
+  }
+  if ($build['#bundle'] == 'content_block') {
+    $build['#theme'] = 'pp_demo_beans_content_block';
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function pp_demo_beans_theme() {
+  return array(
+    'pp_demo_beans_block_with_brochures' => array(
+      'render element' => 'entity',
+      'template' => 'pp_demo_beans_block_with_brochures',
+    ),
+    'pp_demo_beans_content_block' => array(
+      'render element' => 'entity',
+      'template' => 'pp_demo_beans_content_block',
+    ),
+  );
+}
+
+/**
+ * Preprocess function for pp_demo_beans_block_with_brochures.tpl.php template.
+ */
+function pp_demo_beans_preprocess_pp_demo_beans_content_block(&$vars) {
+  $entity = $vars['entity'];
+  $vars += array(
+    'title' => '',
+    'subtitle' => '',
+    'body' => $entity['field_content_block_body'][0]['#markup'],
+    'image' => '',
+    'link' => '',
+    'link_url' => '',
+    'shaded' => '',
+  );
+
+  if (isset($entity['#entity']->title) && !empty($entity['#entity']->title)) {
+    $vars['title'] = check_plain($entity['#entity']->title);
+  }
+
+  if (isset($entity['field_content_block_subtitle']['#items'][0]['value'])
+    && !empty($entity['field_content_block_subtitle']['#items'][0]['value'])) {
+    $vars['subtitle'] = $entity['field_content_block_subtitle']['#items'][0]['value'];
+  }
+
+  if (isset($entity['field_content_block_image']) && !empty($entity['field_content_block_image'])) {
+    $vars['image'] = drupal_render($entity['field_content_block_image'][0]['file']);
+  }
+
+  if (isset($entity['field_image_position']['#items'][0]['value']) && !empty($entity['field_image_position']['#items'][0]['value'])) {
+    $vars['image_position'] = $entity['field_image_position']['#items'][0]['value'];
+  }
+
+  if (isset($entity['field_content_block_link']) && !empty($entity['field_content_block_link'])) {
+    $entity['field_content_block_link'][0]['#element']['title'] .= ' »';
+    $vars['link'] = drupal_render($entity['field_content_block_link'][0]);
+    $vars['link_url'] = $entity['field_content_block_link'][0]['#element']['display_url'];
+  }
+
+  if (isset($entity['#entity']->field_content_block_background[LANGUAGE_NONE][0]['value'])) {
+    $value = $entity['#entity']->field_content_block_background[LANGUAGE_NONE][0]['value'];
+    if ($value == 'shaded') {
+      $vars['shaded'] = TRUE;
+    }
+  }
+}
+
+/**
+ * Preprocess function for pp_demo_beans_block_with_brochures.tpl.php template.
+ */
+function pp_demo_beans_preprocess_pp_demo_beans_block_with_brochures(&$vars) {
+  $item_values = array();
+
+  foreach (element_children($vars['entity']['field_block_bb_content']) as $key) {
+    foreach ($vars['entity']['field_block_bb_content'][$key]['entity']['field_collection_item'] as $item) {
+      foreach (element_children($item['field_block_bb_brochures']) as $bb_key) {
+        foreach ($item['field_block_bb_brochures'][$bb_key]['entity']['field_collection_item'] as $bb_item) {
+          $image_alt = '';
+          if (isset($bb_item['field_brochure_image'][0]['#item']['field_file_image_alt_text'][LANGUAGE_NONE][0]['value'])) {
+            $image_alt = $bb_item['field_brochure_image'][0]['#item']['field_file_image_alt_text'][LANGUAGE_NONE][0]['value'];
+          }
+          $image_title = '';
+          if (isset($bb_item['field_brochure_image'][0]['#item']['field_file_image_title_text'][LANGUAGE_NONE][0]['value'])) {
+            $image_title = $bb_item['field_brochure_image'][0]['#item']['field_file_image_title_text'][LANGUAGE_NONE][0]['value'];
+          }
+          $brochure_items[] = array(
+            'image' => drupal_render($bb_item['field_brochure_image'][0]),
+            'image_alt' => $image_alt,
+            'image_title' => $image_title,
+            'title' => $bb_item['field_brochure_title'][0]['#markup'],
+            'link' => drupal_render($bb_item['field_brochure_download_link'][0]),
+            'url' => $bb_item['field_brochure_download_link']['#items'][0]['url'],
+          );
+        }
+      }
+      $item_values[] = array(
+        'title' => $item['field_block_bb_title'][0]['#markup'],
+        'brochure_items' => $brochure_items,
+      );
+    }
+  }
+
+  $vars['blocks'] = $item_values;
+}
