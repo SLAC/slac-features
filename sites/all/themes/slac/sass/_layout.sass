@@ -929,10 +929,57 @@ table.sticky-table
 //EXT ORG Profile
 //News landing page
 .news-landing
+  h2
+    +fontsize-rem(18px)
+    margin-bottom: 4px  
+    a 
+      color: $red
+  .field-name-body 
+    margin-bottom: 5px
+    p 
+      color: $grey-5
+      +fontsize-rem(12px)
+      line-height: 20px
+      
+      
+  .news-image 
+    margin-bottom: 10px 
 
+  .field-name-field-slac-news-source a
+    color: $grey-7
+    +fontsize-rem(12px)
+    font-style: italic
+      
   .views-row
-    border-bottom: 1px solid $separator
-
-  article
+    border-bottom: 2px solid $separator
+    padding-bottom: 20px
+    margin-bottom: 20px
+    min-height: 155px 
   
   
+  
+  
+  time
+    color: $grey-5
+    +fontsize-rem(12px)
+    display: block
+    margin-bottom: 7px
+    
+  .news-content
+  
++at-breakpoint($less-than-480)   
+  .news-landing
+  
+    article
+      position: relative
+      padding: 0  15px
+  
+    .news-image
+      max-width: 150px
+      position: absolute
+      top: 2px
+      left: 15px
+      margin-bottom: 0
+      
+    .news-content
+      padding-left: 170px

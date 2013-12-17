@@ -16,10 +16,8 @@
       <?php endif; ?>
       <div class="news-content">
       <?php if ($display_submitted): ?>
-        <p class="submitted separator">
-          <?php print $user_picture; ?>
-          <?php print $submitted; ?>
-        </p>
+        <?php print $user_picture; ?>
+        <?php print $submitted; ?>
       <?php endif; ?>
       <?php print render($title_prefix); ?>
       <?php if (!$page && $title): ?>

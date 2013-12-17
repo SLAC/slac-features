@@ -850,9 +850,50 @@ table.sticky-table {
   .node-type-list dt a:hover {
     background-color: rgba(39, 108, 189, 0.8); }
 
+.news-landing h2 {
+  font-size: 18px;
+  font-size: 1.125rem;
+  margin-bottom: 4px; }
+  .news-landing h2 a {
+    color: #871628; }
+.news-landing .field-name-body {
+  margin-bottom: 5px; }
+  .news-landing .field-name-body p {
+    color: #555555;
+    font-size: 12px;
+    font-size: 0.75rem;
+    line-height: 20px; }
+.news-landing .news-image {
+  margin-bottom: 10px; }
+.news-landing .field-name-field-slac-news-source a {
+  color: #777777;
+  font-size: 12px;
+  font-size: 0.75rem;
+  font-style: italic; }
 .news-landing .views-row {
-  border-bottom: 1px solid #e0decd; }
+  border-bottom: 2px solid #e0decd;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  min-height: 155px; }
+.news-landing time {
+  color: #555555;
+  font-size: 12px;
+  font-size: 0.75rem;
+  display: block;
+  margin-bottom: 7px; }
 
+@media (min-width: 480px) {
+  .news-landing article {
+    position: relative;
+    padding: 0 15px; }
+  .news-landing .news-image {
+    max-width: 150px;
+    position: absolute;
+    top: 2px;
+    left: 15px;
+    margin-bottom: 0; }
+  .news-landing .news-content {
+    padding-left: 170px; } }
 @media (min-width: 480px) {
   .views-field-field-prf-contact-photo {
     float: left; }
