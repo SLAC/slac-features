@@ -48,8 +48,8 @@ function slac_news_image_default_styles() {
         'module' => 'epsacrop',
         'name' => 'epsacrop_crop',
         'data' => array(
-          'width' => 150,
-          'height' => 110,
+          'width' => 294,
+          'height' => 239,
           'anchor' => 'center-center',
           'jcrop_settings' => array(
             'aspect_ratio' => '',
@@ -70,8 +70,8 @@ function slac_news_image_default_styles() {
         'module' => 'image',
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => 150,
-          'height' => 110,
+          'width' => 294,
+          'height' => 239,
         ),
         'weight' => 2,
       ),

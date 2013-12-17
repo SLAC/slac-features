@@ -850,6 +850,9 @@ table.sticky-table {
   .node-type-list dt a:hover {
     background-color: rgba(39, 108, 189, 0.8); }
 
+.news-landing .views-row {
+  border-bottom: 1px solid #e0decd; }
+
 @media (min-width: 480px) {
   .views-field-field-prf-contact-photo {
     float: left; }
