@@ -182,6 +182,10 @@ function slac_preprocess_node(&$variables, $hook) {
     $variables['pubdate'] = '<time pubdate datetime="' . format_date($variables['node']->created, 'custom', 'c') . '">' . format_date($variables['created'], 'custom', 'l, F j, Y') . '</time>';
     $variables['submitted'] = t('Posted on !datetime', array('!datetime' => $variables['pubdate']));
   }
+  elseif ($variables['node']->type == 'slac_news' && $variables['display_submitted']) {
+    $variables['pubdate'] = '<time pubdate datetime="' . format_date($variables['node']->created, 'custom', 'c') . '">' . format_date($variables['created'], 'custom', 'm/d/Y') . '</time>';
+    $variables['submitted'] = t('Posted on !datetime', array('!datetime' => $variables['pubdate']));
+  }
   elseif ($variables['display_submitted']) {
     $variables['submitted'] = t('Submitted by !username on !datetime', array('!username' => $variables['name'], '!datetime' => $variables['pubdate']));
   }
