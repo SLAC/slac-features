@@ -971,7 +971,7 @@ table.sticky-table {
   border-top: 1px solid #f3f1eb;
   border-bottom: 1px solid #f3f1eb;
   display: block;
-  padding: 2px 0;
+  padding: 2px 0 4px;
   text-align: right; }
   .last-three-news .more-link a {
     color: #720c20;
