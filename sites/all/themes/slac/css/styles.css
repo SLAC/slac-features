@@ -78,7 +78,7 @@ a[href*='mailto:'] {
   .views-field-field-prf-bio-tp:after, .blog-tags ul:after, .connect-with-me .views-row:after, ul.blog-archive-class > li ul:after, div .color-box:after {
     clear: both; }
 
-.slac-font, .mobile-main-menu .main-menu ul li a:after, .mob-icon:before, .footer-seccond ul li a:after, article.node-blog.node-teaser header h2 a:after, .profile-info-brief .views-more-link:after, .profile-info-full .profile-maxlist-more a:before, .connect-with-me .views-row > div a:after, .pane-bundle-slideshow-description-bottom .field-slideshow-controls a:after {
+.slac-font, .mobile-main-menu .main-menu ul li a:after, .mob-icon:before, .footer-seccond ul li a:after, article.node-blog.node-teaser header h2 a:after, .profile-info-brief .views-more-link:after, .profile-info-full .profile-maxlist-more a:before, .last-three-news .more-link a:after, .connect-with-me .views-row > div a:after, .pane-bundle-slideshow-description-bottom .field-slideshow-controls a:after {
   font-family: "slac";
   font-weight: normal;
   font-style: normal;
@@ -333,7 +333,7 @@ ul.tabs, .action-links {
   .mob-icon.menu-icon {
     margin-left: 0; }
     .mob-icon.menu-icon:before {
-      content: "\e61f";
+      content: "\e611";
       font-size: 25px;
       font-size: 1.5625rem;
       top: -2px; }
@@ -953,6 +953,40 @@ table.sticky-table {
       margin-right: 5% !important; }
     .project-block-wrapper:nth-child(3n+3) {
       margin-right: 0 !important; } }
+.last-three-news .views-row {
+  margin-bottom: 8px; }
+  .last-three-news .views-row:last-of-type {
+    margin-bottom: 35px; }
+.last-three-news .views-field-title {
+  margin-bottom: 2px; }
+  .last-three-news .views-field-title a {
+    color: #720c20;
+    font-size: 12px;
+    font-size: 0.75rem; }
+.last-three-news .views-field-created {
+  font-size: 11px;
+  font-size: 0.6875rem;
+  color: #777777; }
+.last-three-news .more-link {
+  border-top: 1px solid #f3f1eb;
+  border-bottom: 1px solid #f3f1eb;
+  display: block;
+  padding: 2px 0;
+  text-align: right; }
+  .last-three-news .more-link a {
+    color: #720c20;
+    font-size: 11px;
+    font-size: 0.6875rem;
+    display: inline-block;
+    vertical-align: middle; }
+    .last-three-news .more-link a:after {
+      content: "\e605";
+      line-height: 1;
+      vertical-align: middle;
+      display: inline-block;
+      font-size: 9px;
+      font-size: 0.5625rem; }
+
 @media (min-width: 480px) {
   .views-field-field-prf-contact-photo {
     float: left; }

@@ -1056,3 +1056,50 @@ table.sticky-table
       
     &:nth-child(3n+3)
       margin-right: 0 !important       
+
+//Last three news
+.last-three-news
+
+  .views-row
+    margin-bottom: 8px
+    &:last-of-type
+      margin-bottom: 35px
+
+  .views-field-title 
+    margin-bottom: 2px
+    a
+      color: $red-1
+      +fontsize-rem(12px)
+
+  
+  
+  .views-field-created
+    +fontsize-rem(11px)
+    color: $grey-7
+  
+  
+  .more-link 
+    border-top: 1px solid $bg-col-1
+    border-bottom: 1px solid $bg-col-1
+    display: block
+    padding: 2px 0
+    text-align: right
+    a
+      
+      color: $red-1
+      +fontsize-rem(11px)
+      display: inline-block
+      vertical-align: middle
+      
+  
+      &:after
+        content: '\e605'
+        @extend .slac-font
+        line-height: 1
+        vertical-align: middle
+        display: inline-block
+        +fontsize-rem(9px)
+        
+        
+        
+        
