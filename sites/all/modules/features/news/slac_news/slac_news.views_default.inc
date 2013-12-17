@@ -349,6 +349,8 @@ function slac_news_views_default_views() {
 
   /* Display: Last 3 news */
   $handler = $view->new_display('panel_pane', 'Last 3 news', 'panel_pane_5');
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'last-three-news';
   $handler->display->display_options['defaults']['use_more'] = FALSE;
   $handler->display->display_options['use_more'] = TRUE;
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
