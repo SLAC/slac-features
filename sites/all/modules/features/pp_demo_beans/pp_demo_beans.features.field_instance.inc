@@ -73,7 +73,7 @@ function pp_demo_beans_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 6,
+      'weight' => 7,
     ),
   );
 
@@ -107,7 +107,7 @@ function pp_demo_beans_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
@@ -223,7 +223,7 @@ function pp_demo_beans_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 5,
+      'weight' => 6,
     ),
   );
 
@@ -258,6 +258,41 @@ function pp_demo_beans_field_default_field_instances() {
       ),
       'type' => 'text_textfield',
       'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'bean-content_block-field_image_position'
+  $field_instances['bean-content_block-field_image_position'] = array(
+    'bundle' => 'content_block',
+    'default_value' => array(
+      0 => array(
+        'value' => 'right',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'Position of the image (if a image is selected).',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 5,
+      ),
+    ),
+    'entity_type' => 'bean',
+    'field_name' => 'field_image_position',
+    'label' => 'Image position',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 4,
     ),
   );
 
@@ -499,7 +534,9 @@ function pp_demo_beans_field_default_field_instances() {
   t('Brochure title');
   t('Brochures info');
   t('Image');
+  t('Image position');
   t('Link');
+  t('Position of the image (if a image is selected).');
   t('Subtitle');
   t('The Subtitle of the block.');
 
