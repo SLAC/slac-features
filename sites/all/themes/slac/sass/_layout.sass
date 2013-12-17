@@ -4,6 +4,24 @@ a
   text-decoration: none
   &:hover
     color: $red
+  
+  &.active, &.active-item  
+    li & 
+      ul &
+        .panel-pane &
+          .general-right &
+            .content &  
+              text-decoration: underline
+
+
+
+li 
+  ul &
+    .panel-pane &
+      .general-right &
+        .content &  
+          margin-bottom: 5px
+          
 
 h2
   +fontsize-rem(28px)
@@ -1068,7 +1086,7 @@ table.sticky-table
   .views-field-title 
     margin-bottom: 2px
     a
-      color: $red-1
+      color: $red
       +fontsize-rem(12px)
 
   
@@ -1086,7 +1104,7 @@ table.sticky-table
     text-align: right
     a
       
-      color: $red-1
+      color: $red
       +fontsize-rem(11px)
       display: inline-block
       vertical-align: middle
@@ -1101,5 +1119,10 @@ table.sticky-table
         +fontsize-rem(9px)
         
         
-        
+//News by
+ul.news-archive-class
+  
+  li 
+    .item-list
+      margin-left: 10px
         

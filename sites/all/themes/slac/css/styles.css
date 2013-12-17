@@ -101,6 +101,11 @@ a {
   text-decoration: none; }
   a:hover {
     color: #871628; }
+  .content .general-right .panel-pane ul li a.active, .content .general-right .panel-pane ul li a.active-item {
+    text-decoration: underline; }
+
+.content .general-right .panel-pane ul li {
+  margin-bottom: 5px; }
 
 h2 {
   font-size: 28px;
@@ -960,7 +965,7 @@ table.sticky-table {
 .last-three-news .views-field-title {
   margin-bottom: 2px; }
   .last-three-news .views-field-title a {
-    color: #720c20;
+    color: #871628;
     font-size: 12px;
     font-size: 0.75rem; }
 .last-three-news .views-field-created {
@@ -974,7 +979,7 @@ table.sticky-table {
   padding: 2px 0 4px;
   text-align: right; }
   .last-three-news .more-link a {
-    color: #720c20;
+    color: #871628;
     font-size: 11px;
     font-size: 0.6875rem;
     display: inline-block;
@@ -986,6 +991,9 @@ table.sticky-table {
       display: inline-block;
       font-size: 9px;
       font-size: 0.5625rem; }
+
+ul.news-archive-class li .item-list {
+  margin-left: 10px; }
 
 @media (min-width: 480px) {
   .views-field-field-prf-contact-photo {
