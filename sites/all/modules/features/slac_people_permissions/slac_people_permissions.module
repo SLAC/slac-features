@@ -1,5 +1,32 @@
 <?php
 /**
  * @file
- * Drupal needs this blank file.
+ * Sets permissions.
  */
+
+/**
+ * Implements hook_menu_alter
+ */
+
+function slac_people_permissions_menu_alter(&$items){
+	
+	$items['node/%node/edit']['access callback'] = 'mymodule_landing_access';
+}
+
+/**
+ * Denies access if role is site owner and content type landing-page
+ */
+
+function slac_people_permissions_landing_access($node){
+	
+	$type = is_string($node) ? $node : $node->type;
+	if ($type == 'landing-page'){
+		global $user;
+		$role=user_role_load_by_name('site owner');
+		if ( in_array( $role->rid, $user->roles)){
+			return FALSE;
+		}
+	}
+
+	return TRUE;
+}
