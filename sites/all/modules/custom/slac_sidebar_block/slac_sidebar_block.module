@@ -3,16 +3,16 @@
 /**
  * Implements hook_entity_info_alter().
  */
-function slac_projects_entity_info_alter(&$entity_info) {
-  $entity_info['fieldable_panels_pane']['bundles']['slac_projects'] = array(
-    'label' => t('Projects'),
+function slac_sidebar_block_entity_info_alter(&$entity_info) {
+  $entity_info['fieldable_panels_pane']['bundles']['slac_sidebar_block'] = array(
+    'label' => t('Sidebar Block'),
     'pane category' => t('SLAC panes'),
     'pane top level' => TRUE, // set to true to make this show as a top level icon
     'admin' => array(
       'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
       'bundle argument' => 4,
       // Note that this has all _ replaced with - from the bundle name.
-      'real path' => 'admin/structure/fieldable-panels-panes/manage/slac-projects',
+      'real path' => 'admin/structure/fieldable-panels-panes/manage/slac-sidebar-block',
       'access arguments' => array('administer fieldable panels panes'),
     ),
   );
@@ -22,39 +22,39 @@ function slac_projects_entity_info_alter(&$entity_info) {
 /**
  * Implements hook_entity_view_alter().
  */
-function slac_projects_entity_view_alter(&$build, $type) {
+function slac_sidebar_block_entity_view_alter(&$build, $type) {
   if ($type != 'fieldable_panels_pane') {
     return;
   }
-  if ($build['#bundle'] == 'slac_projects') {
-    $build['#theme'] = 'slac_projects_block';
+  if ($build['#bundle'] == 'slac_sidebar_block') {
+    $build['#theme'] = 'slac_sidebar_block_template';
   }
 }
 
 /**
  * Implements hook_theme().
  */
-function slac_projects_theme() {
+function slac_sidebar_block_theme() {
   return array(
-    'slac_projects_block' => array(
+    'slac_sidebar_block_block' => array(
       'render element' => 'entity',
-      'template' => 'slac_projects_block',
+      'template' => 'slac_sidebar_block_template',
     ),
   );
 }
 
 /**
- * Preprocess function for slac_projects_block.tpl.php template.
+ * Preprocess function for slac_sidebar_block_template.tpl.php template.
  */
-function slac_projects_preprocess_slac_projects_block(&$vars) {
-  if (!isset($vars['entity']['field_project_info'])) {
+function slac_sidebar_block_preprocess_slac_sidebar_block_template(&$vars) {
+  if (!isset($vars['entity']['slac_sidebar_block'])) {
     return;
   }
 
-  $projects_info = $vars['entity']['field_project_info'];
+  //$projects_info = $vars['entity']['field_project_info'];
 
   $item_values = array();
-  foreach (element_children($projects_info) as $key) {
+  /*foreach (element_children($projects_info) as $key) {
     foreach ($projects_info[$key]['entity']['field_collection_item'] as $project_info) {
       if (isset($project_info['field_project_info_name']['#items'][0]['safe_value'])) {
         $item_values[$key]['title'] = $project_info['field_project_info_name']['#items'][0]['safe_value'];
@@ -66,7 +66,7 @@ function slac_projects_preprocess_slac_projects_block(&$vars) {
         $item_values[$key]['link'] = $project_info['field_project_info_link']['#items'][0]['url'];
       }
     }
-  }
+  }*/
 
   $vars['projects_list'] = $item_values;
 }
@@ -74,12 +74,12 @@ function slac_projects_preprocess_slac_projects_block(&$vars) {
 /**
  * Implements hook_image_default_styles().
  */
-function slac_projects_image_default_styles() {
+function slac_sidebar_block_image_default_styles() {
   $styles = array();
 
-  // Exported image style: crop_slac_projects.
-  $styles['crop_slac_projects'] = array(
-    'name' => 'crop_slac_projects',
+  // Exported image style: crop_slac_sidebar_block.
+  $styles['crop_slac_sidebar_block'] = array(
+    'name' => 'crop_slac_sidebar_block',
     'effects' => array(
       1 => array(
         'label' => 'EPSA Image Crop',
@@ -90,8 +90,8 @@ function slac_projects_image_default_styles() {
         'module' => 'epsacrop',
         'name' => 'epsacrop_crop',
         'data' => array(
-          'width' => 230,
-          'height' => 160,
+          'width' => 100,
+          'height' => 150,
           'anchor' => 'center-center',
           'jcrop_settings' => array(
             'aspect_ratio' => '',
@@ -112,8 +112,8 @@ function slac_projects_image_default_styles() {
         'module' => 'image',
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => 230,
-          'height' => 160,
+          'width' => 100,
+          'height' => 150,
         ),
         'weight' => 2,
       ),
