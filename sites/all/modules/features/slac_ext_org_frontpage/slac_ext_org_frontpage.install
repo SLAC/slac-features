@@ -72,37 +72,68 @@ function _slac_ext_org_frontpage_install__panelizer_entity($node, $did) {
  * Create panel panes.
  */
 function _slac_ext_org_frontpage_install__panes($did) {
-  $files = _slac_ext_org_frontpage_install__slideshow_images();
+  $slideshow_files = _slac_ext_org_frontpage_install__slideshow_images();
 
-  // First we need to create host entity for field collection.
-  $fieldable_panels_pane = (object) array(
+  // Create host entity for field collection (frontpage slideshow).
+  $slideshow_fpp = (object) array(
     'title' => t('Frontpage slideshow'),
     'bundle' => 'slideshow_description_bottom',
   );
-  entity_save('fieldable_panels_pane', $fieldable_panels_pane);
+  entity_save('fieldable_panels_pane', $slideshow_fpp);
 
   $field_collection_item = entity_create('field_collection_item', array('field_name' => 'field_slideshow_btmdesc_slide'));
-  $field_collection_item->field_fcollection_image = array(LANGUAGE_NONE => array(array('fid' => $files[0]->fid)));
+  $field_collection_item->field_fcollection_image = array(LANGUAGE_NONE => array(array('fid' => $slideshow_files[0]->fid)));
   $field_collection_item->field_fcollection_link = array(LANGUAGE_NONE => array(array('url' => 'http://slac.stanford.edu')));
   $field_collection_item->field_fcollection_description = array(LANGUAGE_NONE => array(array('value' => t('Description of the first slide. Duis autem vel eum. Duis autem vel eum. Duis autem vel eum. Duis autem vel eum.'))));
-  $field_collection_item->setHostEntity('fieldable_panels_pane', $fieldable_panels_pane);
+  $field_collection_item->setHostEntity('fieldable_panels_pane', $slideshow_fpp);
   entity_save('field_collection_item', $field_collection_item);
-  $field_collections[] = $field_collection_item;
 
   $field_collection_item = entity_create('field_collection_item', array('field_name' => 'field_slideshow_btmdesc_slide'));
-  $field_collection_item->field_fcollection_image = array(LANGUAGE_NONE => array(array('fid' => $files[1]->fid)));
+  $field_collection_item->field_fcollection_image = array(LANGUAGE_NONE => array(array('fid' => $slideshow_files[1]->fid)));
   $field_collection_item->field_fcollection_link = array(LANGUAGE_NONE => array(array('url' => 'http://slac.stanford.edu')));
   $field_collection_item->field_fcollection_description = array(LANGUAGE_NONE => array(array('value' => t('Description of the second slide. Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit.'))));
-  $field_collection_item->setHostEntity('fieldable_panels_pane', $fieldable_panels_pane);
+  $field_collection_item->setHostEntity('fieldable_panels_pane', $slideshow_fpp);
   entity_save('field_collection_item', $field_collection_item);
-  $field_collections[] = $field_collection_item;
+
+  $projects_files = _slac_ext_org_frontpage_install__projects_images();
+
+  // Create host entity for field collection (frontpage projects block).
+  $projects_fpp = (object) array(
+    'title' => t('Research Projects'),
+    'bundle' => 'slac_projects',
+  );
+  entity_save('fieldable_panels_pane', $projects_fpp);
+
+  for ($i = 0; $i <= 5; $i++) {
+    $field_collection_item = entity_create('field_collection_item', array('field_name' => 'field_project_info'));
+    $field_collection_item->field_project_info_image = array(LANGUAGE_NONE => array(array('fid' => $projects_files[$i]->fid)));
+    $field_collection_item->field_project_info_link = array(LANGUAGE_NONE => array(array('url' => 'http://slac.stanford.edu')));
+    $field_collection_item->field_project_info_name = array(LANGUAGE_NONE => array(array('value' => t('Project ') . ($i+1))));
+    $field_collection_item->setHostEntity('fieldable_panels_pane', $projects_fpp);
+    entity_save('field_collection_item', $field_collection_item);
+  }
 
   $frontpage_panels_panes = array(
     array(
       'did' => $did,
       'panel' => 'left',
       'type' => 'fieldable_panels_pane',
-      'subtype' => 'uuid:' . $fieldable_panels_pane->uuid,
+      'subtype' => 'uuid:' . $slideshow_fpp->uuid,
+      'shown' => 1,
+      'access' => array(),
+      'configuration' => array(),
+      'cache' => array(),
+      'style' => array(),
+      'css' => array(),
+      'extras' => array(),
+      'position' => 0,
+      'locks' => array(),
+    ),
+    array(
+      'did' => $did,
+      'panel' => 'left',
+      'type' => 'fieldable_panels_pane',
+      'subtype' => 'uuid:' . $projects_fpp->uuid,
       'shown' => 1,
       'access' => array(),
       'configuration' => array(),
@@ -161,7 +192,7 @@ function _slac_ext_org_frontpage_install__panes($did) {
 }
 
 /**
- * Create images for slideshow.
+ * Create images for slideshow fpp.
  */
 function _slac_ext_org_frontpage_install__slideshow_images() {
   global $user;
@@ -171,6 +202,33 @@ function _slac_ext_org_frontpage_install__slideshow_images() {
   foreach (array(1, 2) as $i) {
     $filename =  'slideshow_slide' . $i . '.jpg';
     $source = DRUPAL_ROOT . '/' . drupal_get_path('module', 'slac_ext_org_frontpage') . '/' . $filename;
+    $destination = $destination_directory . '/' . $filename;
+    $uri = file_unmanaged_copy($source, $destination);
+
+    $file = new stdClass();
+    $file->fid = NULL;
+    $file->uri = $uri;
+    $file->filename = drupal_basename($uri);
+    $file->filemime = file_get_mimetype($file->uri);
+    $file->uid      = $user->uid;
+    $file->status   = FILE_STATUS_PERMANENT;
+    $files[] = file_save($file);
+  }
+
+  return $files;
+}
+
+/**
+ * Create images for projects fpp.
+ */
+function _slac_ext_org_frontpage_install__projects_images() {
+  global $user;
+  $files = array();
+  $destination_directory = 'public://projects_block_images';
+  file_prepare_directory($destination_directory, FILE_CREATE_DIRECTORY);
+  foreach (array(1, 2, 3, 4, 5, 6) as $i) {
+    $filename =  'frontpage_project' . $i . '.jpg';
+    $source = DRUPAL_ROOT . '/' . drupal_get_path('module', 'slac_ext_org_frontpage') . '/projects_block_images/' . $filename;
     $destination = $destination_directory . '/' . $filename;
     $uri = file_unmanaged_copy($source, $destination);
 

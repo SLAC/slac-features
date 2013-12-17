@@ -1,0 +1,23 @@
+name = SLAC Projects
+description = Provide new bundle for FPP
+core = 7.x
+package = SLAC
+
+dependencies[] = features
+dependencies[] = fieldable_panels_panes
+dependencies[] = field_collection
+dependencies[] = image
+dependencies[] = link
+dependencies[] = media
+dependencies[] = text
+features[features_api][] = api:2
+features[field_base][] = field_image
+features[field_base][] = field_project_info
+features[field_base][] = field_project_info_image
+features[field_base][] = field_project_info_link
+features[field_base][] = field_project_info_name
+features[field_instance][] = field_collection_item-field_project_info-field_project_info_image
+features[field_instance][] = field_collection_item-field_project_info-field_project_info_link
+features[field_instance][] = field_collection_item-field_project_info-field_project_info_name
+features[field_instance][] = fieldable_panels_pane-slac_projects-field_project_info
+features[image][] = crop_slac_projects

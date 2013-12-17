@@ -1,0 +1,124 @@
+<?php
+
+/**
+ * Implements hook_entity_info_alter().
+ */
+function slac_projects_entity_info_alter(&$entity_info) {
+  $entity_info['fieldable_panels_pane']['bundles']['slac_projects'] = array(
+    'label' => t('Projects'),
+    'pane category' => t('SLAC panes'),
+    'pane top level' => TRUE, // set to true to make this show as a top level icon
+    'admin' => array(
+      'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
+      'bundle argument' => 4,
+      // Note that this has all _ replaced with - from the bundle name.
+      'real path' => 'admin/structure/fieldable-panels-panes/manage/slac_projects',
+      'access arguments' => array('administer fieldable panels panes'),
+    ),
+  );
+}
+
+
+/**
+ * Implements hook_entity_view_alter().
+ */
+function slac_projects_entity_view_alter(&$build, $type) {
+  if ($type != 'fieldable_panels_pane') {
+    return;
+  }
+  if ($build['#bundle'] == 'slac_projects') {
+    $build['#theme'] = 'slac_projects_block';
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function slac_projects_theme() {
+  return array(
+    'slac_projects_block' => array(
+      'render element' => 'entity',
+      'template' => 'slac_projects_block',
+    ),
+  );
+}
+
+/**
+ * Preprocess function for slac_projects_block.tpl.php template.
+ */
+function slac_projects_preprocess_slac_projects_block(&$vars) {
+  if (!isset($vars['entity']['field_project_info'])) {
+    return;
+  }
+
+  $projects_info = $vars['entity']['field_project_info'];
+
+  $item_values = array();
+  foreach (element_children($projects_info) as $key) {
+    foreach ($projects_info[$key]['entity']['field_collection_item'] as $project_info) {
+      if (isset($project_info['field_project_info_name']['#items'][0]['safe_value'])) {
+        $item_values[$key]['title'] = $project_info['field_project_info_name']['#items'][0]['safe_value'];
+      }
+      if (isset($project_info['field_project_info_image'][0])) {
+        $item_values[$key]['image'] = drupal_render($project_info['field_project_info_image'][0]);
+      }
+      if (isset($project_info['field_project_info_link']['#items'][0]['url'])) {
+        $item_values[$key]['link'] = $project_info['field_project_info_link']['#items'][0]['url'];
+      }
+    }
+  }
+
+  $vars['projects_list'] = $item_values;
+}
+
+/**
+ * Implements hook_image_default_styles().
+ */
+function slac_projects_image_default_styles() {
+  $styles = array();
+
+  // Exported image style: crop_slac_projects.
+  $styles['crop_slac_projects'] = array(
+    'name' => 'crop_slac_projects',
+    'effects' => array(
+      1 => array(
+        'label' => 'EPSA Image Crop',
+        'help' => '',
+        'dimensions callback' => 'epsacrop_crop_dimensions',
+        'effect callback' => 'epsacrop_crop_image',
+        'form callback' => 'epsacrop_crop_image_form',
+        'module' => 'epsacrop',
+        'name' => 'epsacrop_crop',
+        'data' => array(
+          'width' => 230,
+          'height' => 160,
+          'anchor' => 'center-center',
+          'jcrop_settings' => array(
+            'aspect_ratio' => '',
+            'bgcolor' => 'black',
+            'bgopacity' => 0.6,
+            'fallback' => 0,
+          ),
+        ),
+        'weight' => 1,
+      ),
+      2 => array(
+        'label' => 'Scale and crop',
+        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
+        'effect callback' => 'image_scale_and_crop_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'image_resize_form',
+        'summary theme' => 'image_resize_summary',
+        'module' => 'image',
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 230,
+          'height' => 160,
+        ),
+        'weight' => 2,
+      ),
+    ),
+  );
+
+  return $styles;
+}
