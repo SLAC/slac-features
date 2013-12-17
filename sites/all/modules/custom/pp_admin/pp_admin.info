@@ -18,10 +18,3 @@ features[image][] = crop_portrait
 features[image][] = crop_square
 features[variable][] = pp_crop_wysiwyg_settings
 features[wysiwyg][] = full_html
-
-
-; Information added by drush on 2013-08-30
-version = "unknown"
-project = "pp_admin"
-datestamp = "1377870473"
-

@@ -40,6 +40,10 @@ function pp_admin_filter_default_formats() {
         'status' => 1,
         'settings' => array(),
       ),
+      'bean_wysiwyg_filter' => array(
+        'status' => 1,
+        'weight' => 2,
+      ),
     ),
   );
 
