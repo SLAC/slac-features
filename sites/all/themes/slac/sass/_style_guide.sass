@@ -1,4 +1,9 @@
 .style-guide
+
+  
+  ins
+    text-decoration: none
+
   pre
     background: yellow
   .styles
@@ -13,21 +18,58 @@
     &.style-1
     
       .style-col1
-        //+box-sizing(content-box)
-        margin-left: -13px
-        margin-right: -13px        
-        .grid
-          +container   
-          height: 100px
-          +box-sizing(content-box)
+      
+      .wrapper
+        +clearfix
+        
+        margin-bottom: 10px  
+        
+        > div
+          color: #fff
+          line-height: 30px
+          background-color: $grey-9
+          +fontsize-rem(12px)
+          text-align: center
+          
+          &.grid1
+            +span-columns(1,12)  
+            &:nth-child(12n)
+              +omega  
+          
+          
+          &.grid2
+            +span-columns(2,12)  
+            
+          &.grid3
+            +span-columns(3,12)  
+          
+          &.grid4
+            +span-columns(4,12)    
+            
+          &.grid5
+            +span-columns(5,12)  
+          
+          &.grid6
+            +span-columns(6,12)             
 
-          +susy-grid-background
-          +at-breakpoint($tablet)
-            +susy-grid-background
-          +at-breakpoint($small-desktop)
-            +susy-grid-background    
-          +at-breakpoint($large-desktop)
-            +susy-grid-background    
+          &.grid7
+            +span-columns(7,12)  
+          
+          &.grid8
+            +span-columns(8,12)  
+            
+          &.grid9
+            +span-columns(9,12)  
+          
+          &.grid10
+            +span-columns(10,12)    
+            
+          &.grid11
+            +span-columns(11,12)  
+          
+          &.grid12
+            +span-columns(12,12)  
+
 
 .color-box
   div &

@@ -1,1 +1,122 @@
-Lorem ipsum dolor sit amet, et putent nominavi mediocrem nam, mea et sumo nullam complectitur. Id tota ubique pro. Sed essent eirmod ad, iusto clita vidisse te sit. Eu ius erat feugiat. Altera erroribus te est, vix salutandi erroribus eu. Alii quando tincidunt eos id. <h1>Dicam suavitate</h1> cum at, minim sonet mea te. Probo legimus ex sea, suas voluptua nec ea. Docendi iracundia id est, duo ne virtute nonumes platonem. Ex aperiri maluisset est. Rebum choro constituto mei te, mei ne novum quodsi. Mutat nonumes assueverit qui an. No alii graeci eam, sed id erant tacimates postulnt. Eos pertinax conclusionemque ex. In ius detraxit qualisque. Denique deserunt dissentiet per in. Labores intellegam te nec, mea ullum mentitum ad. Admodum expetenda sea ei, illud aeque libris eam et, tibique vituperatoribus per in. Aliquid molestie recusabo et vis, pro cu recusabo petentium, ut mei nonumy malorum prodesset. Ut nec labore quaeque, mutat laoreet indoctum ad usu.
+<div class='style-guide'>
+  <h1>Style guide used for SLAC Profiles</h1>
+  <div class="styles style-1">
+    <h2>The grid system</h2>
+    <p>SLAC Profiles uses Susy grid systems</p>
+    <div class="style-col1">
+      <div class="wrapper">
+        <div class="grid1">1 col</div>
+      </div>
+      <div class="wrapper">
+        <div class="grid2">2 col</div>
+      </div>      
+      <div class="wrapper">
+        <div class="grid3">3 col</div>
+      </div>   
+      <div class="wrapper">
+        <div class="grid4">4 col</div>
+      </div>      
+      <div class="wrapper">
+        <div class="grid5">5 col</div>
+      </div> 
+      <div class="wrapper">
+        <div class="grid6">6 col</div>
+      </div>      
+      <div class="wrapper">
+        <div class="grid7">7 col</div>
+      </div> 
+      <div class="wrapper">
+        <div class="grid8">8 col</div>
+      </div>
+      <div class="wrapper">
+        <div class="grid9">9 col</div>
+      </div>
+      <div class="wrapper">
+        <div class="grid10">10 col</div>
+      </div>
+      <div class="wrapper">
+        <div class="grid11">11 col</div>
+      </div>
+      <div class="wrapper">
+        <div class="grid12">12 col</div>
+      </div>
+      
+      <div class="wrapper wrapper2">
+        <div class="grid1">1 col</div>
+        <div class="grid1">1 col</div>
+        <div class="grid1">1 col</div>
+        <div class="grid1">1 col</div>
+        <div class="grid1">1 col</div>
+        <div class="grid1">1 col</div>
+        <div class="grid1">1 col</div>
+        <div class="grid1">1 col</div>
+        <div class="grid1">1 col</div>
+        <div class="grid1">1 col</div>
+        <div class="grid1">1 col</div>
+        <div class="grid1">1 col</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="styles style-2">
+    <h2>Headings</h2>
+    <p>All available styles for headings</p>
+    <div class="style-col1">
+
+    <pre>&lt;h1></pre>
+    <h1>Heading H1</h1>
+    <pre>&lt;h2></pre>
+    <h2>Heading H2</h2>   
+    <pre>&lt;h3></pre>
+    <h3>Heading H3</h3>   
+    <pre>&lt;h4></pre>
+    <h4>Heading H4</h4>   
+    <pre>&lt;h5></pre>
+    <h5>Heading H5</h5> 
+    <pre>&lt;h6></pre>
+    <h6>Heading H6</h6>   
+    </div>
+
+  </div>
+  <div class="styles style-3">
+    <h2>Colors</h2>
+    <p>Defined colors for entire project</p>
+    <div class="style-col1">
+      <div class="color-box">
+        <span></span>
+        <p>HEX <ins>#871628</ins><br>Sass: $red</p>
+      </div>
+      <div class="color-box">
+        <span></span>
+        <p>HEX <ins>#f3f1eb</ins><br>Sass: $bg-col-1</p>
+      </div>
+      <div class="color-box">
+        <span></span>
+        <p>Hex <ins>#ebebdf</ins><br>Sass: $menu_bg</p>
+      </div>  
+      <div class="color-box">
+        <span></span>
+        <p>HEX <ins>#e7ebe6</ins><br>Sass: $border-h2</p>
+      </div>
+      <div class="color-box">
+        <span></span>
+        <p>HEX <ins>#b8737d</ins><br>Sass: $rose</p>
+      </div>  
+      <div class="color-box">
+        <span></span>
+        <p>HEX <ins>#f1f1f1</ins><br>Sass: $grey-f1</p>
+      </div>  
+      <div class="color-box">
+        <span></span>
+        <p>HEX <ins>#626263</ins><br>Sass: $h2-color</p>
+      </div>  
+      <div class="color-box">
+        <span></span>
+        <p>HEX <ins>#999</ins><br>Sass: $grey-9</p>
+      </div>        
+    </div>  
+  </div>
+</div>
+
+
