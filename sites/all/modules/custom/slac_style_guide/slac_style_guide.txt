@@ -246,11 +246,46 @@
         <span class="icon-locked"></span>
         <p>Code: <ins>e61a</ins></p>
       </div>  
- 
- 
- 
-
-	  
     </div>
   </div>
+  
+<div class="styles style-5">
+    <h2>Form elements</h2>
+    <p>Inputs, textareas, selects, buttons etc.</p>
+	
+	<form action="/user/login" method="post" id="user-login" accept-charset="UTF-8">
+		<div>
+			<div class="form-item form-type-textfield form-item-name wrapped-with-icon">
+				<label for="edit-name">Username <span class="form-required" title="This field is required.">*</span></label>
+				<input type="text" id="edit-name" name="name" value="" size="60" maxlength="60" class="form-text required">
+				<div class="description" style="display: none;">Enter your SLAC username.</div>
+				<div class="icon-ask"></div>
+			</div>
+			<div class="form-item form-type-textfield form-item-name wrapped-with-icon">
+				<label for="edit-name">Password <span class="form-required" title="This field is required.">*</span></label>
+				<input type="password" id="edit-name" name="name" value="" size="60" maxlength="60" class="form-text required">
+				<div class="description" style="display: none;">Enter your SLAC password.</div>
+				<div class="icon-ask"></div>
+			</div>	
+			<div class="form-item form-type-textfield form-item-name wrapped-with-icon">
+				<label for="edit-name">Text <span class="form-required" title="This field is required.">*</span></label>
+				<textarea></textarea>
+				<div class="description" style="display: none;">Enter your SLAC password.</div>
+				<div class="icon-ask"></div>
+			</div>	
+			<div class="form-item form-type-textfield form-item-name wrapped-with-icon">
+				<label for="edit-name">Options <span class="form-required" title="This field is required.">*</span></label>
+				<select>
+					<option>Option 1</option>
+					<option>Option 2</option>
+					<option>Option 3</option>
+				</select>
+				<div class="description" style="display: none;">Select an option.</div>
+				<div class="icon-ask"></div>
+			</div>			
+		</div>
+	</form>
+	
+</div>
+  
 </div>

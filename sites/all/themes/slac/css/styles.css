@@ -1695,6 +1695,7 @@ input[type='text'], input[type='password'], select, textarea {
   .icon-ask:after {
     content: "?";
     color: #871628;
+    font-family: Arial, Helvetica, sans-serif;
     position: absolute;
     top: 50%;
     left: 50%;
