@@ -52,7 +52,7 @@ a[href*='mailto:'] {
 .views-field-field-prf-bio-ha,
 .views-field-field-prf-bio-pa,
 .views-field-field-prf-bio-pub,
-.views-field-field-prf-bio-tp, .blog-tags ul, .connect-with-me .views-row, ul.blog-archive-class > li ul, div .color-box {
+.views-field-field-prf-bio-tp, .blog-tags ul, .connect-with-me .views-row, ul.blog-archive-class > li ul, div .color-box, .icons {
   *zoom: 1; }
   .clearfix:before, ul.tabs:before, .action-links:before, .pane-system-user-menu ul:before, .pager:before, article.node-blog.node-teaser .links:before, .profile-info-full .views-row-2:before, .views-field-field-prf-bio-education:before,
   .views-field-field-prf-bio-pexp:before,
@@ -60,13 +60,13 @@ a[href*='mailto:'] {
   .views-field-field-prf-bio-ha:before,
   .views-field-field-prf-bio-pa:before,
   .views-field-field-prf-bio-pub:before,
-  .views-field-field-prf-bio-tp:before, .blog-tags ul:before, .connect-with-me .views-row:before, ul.blog-archive-class > li ul:before, div .color-box:before, .clearfix:after, ul.tabs:after, .action-links:after, .pane-system-user-menu ul:after, .pager:after, article.node-blog.node-teaser .links:after, .profile-info-full .views-row-2:after, .views-field-field-prf-bio-education:after,
+  .views-field-field-prf-bio-tp:before, .blog-tags ul:before, .connect-with-me .views-row:before, ul.blog-archive-class > li ul:before, div .color-box:before, .icons:before, .clearfix:after, ul.tabs:after, .action-links:after, .pane-system-user-menu ul:after, .pager:after, article.node-blog.node-teaser .links:after, .profile-info-full .views-row-2:after, .views-field-field-prf-bio-education:after,
   .views-field-field-prf-bio-pexp:after,
   .views-field-field-prf-bio-ar:after,
   .views-field-field-prf-bio-ha:after,
   .views-field-field-prf-bio-pa:after,
   .views-field-field-prf-bio-pub:after,
-  .views-field-field-prf-bio-tp:after, .blog-tags ul:after, .connect-with-me .views-row:after, ul.blog-archive-class > li ul:after, div .color-box:after {
+  .views-field-field-prf-bio-tp:after, .blog-tags ul:after, .connect-with-me .views-row:after, ul.blog-archive-class > li ul:after, div .color-box:after, .icons:after {
     content: "";
     display: table; }
   .clearfix:after, ul.tabs:after, .action-links:after, .pane-system-user-menu ul:after, .pager:after, article.node-blog.node-teaser .links:after, .profile-info-full .views-row-2:after, .views-field-field-prf-bio-education:after,
@@ -75,7 +75,7 @@ a[href*='mailto:'] {
   .views-field-field-prf-bio-ha:after,
   .views-field-field-prf-bio-pa:after,
   .views-field-field-prf-bio-pub:after,
-  .views-field-field-prf-bio-tp:after, .blog-tags ul:after, .connect-with-me .views-row:after, ul.blog-archive-class > li ul:after, div .color-box:after {
+  .views-field-field-prf-bio-tp:after, .blog-tags ul:after, .connect-with-me .views-row:after, ul.blog-archive-class > li ul:after, div .color-box:after, .icons:after {
     clear: both; }
 
 .slac-font, .mobile-main-menu .main-menu ul li a:after, .mob-icon:before, .footer-seccond ul li a:after, article.node-blog.node-teaser header h2 a:after, .profile-info-brief .views-more-link:after, .profile-info-full .profile-maxlist-more a:before, .last-three-news .more-link a:after, .connect-with-me .views-row > div a:after, .pane-bundle-slideshow-description-bottom .field-slideshow-controls a:after {
@@ -90,6 +90,114 @@ a[href*='mailto:'] {
   src: url('../fonts/slac.eot?#iefix') format('eot'), url('../fonts/slac.svg#slac') format('svg'), url('../fonts/slac.woff') format('woff'), url('../fonts/slac.ttf') format('truetype');
   font-weight: normal;
   font-style: normal; }
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: "slac";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1; }
+
+.icon-ytb:before {
+  content: "\e600"; }
+
+.icon-unk:before {
+  content: "\e601"; }
+
+.icon-gp:before {
+  content: "\e603"; }
+
+.icon-fb:before {
+  content: "\e604"; }
+
+.icon-ac:before {
+  content: "\e605"; }
+
+.icon-tw:before {
+  content: "\e610"; }
+
+.icon-arr:before {
+  content: "\e608"; }
+
+.icon-arr2:before {
+  content: "\e615"; }
+
+.icon-arr:before {
+  content: "\e616"; }
+
+.icon-angle-down:before {
+  content: "\e606"; }
+
+.icon-angle-up:before {
+  content: "\e607"; }
+
+.icon-angle-right:before {
+  content: "\3d"; }
+
+.icon-angle-left:before {
+  content: "\e609"; }
+
+.icon-double-angle-down:before {
+  content: "\e60a"; }
+
+.icon-double-angle-up:before {
+  content: "\e60b"; }
+
+.icon-double-angle-right:before {
+  content: "\e60c"; }
+
+.icon-double-angle-left:before {
+  content: "\e60d"; }
+
+.icon-linkedin-sign:before {
+  content: "\e602"; }
+
+.icon-signout:before {
+  content: "\e613"; }
+
+.icon-reorder:before {
+  content: "\e611"; }
+
+.icon-calendar:before {
+  content: "\e61f"; }
+
+.icon-list:before {
+  content: "\e60e"; }
+
+.icon-logout:before {
+  content: "\e614"; }
+
+.icon-key:before {
+  content: "\e61b"; }
+
+.icon-arrow-left:before {
+  content: "\e617"; }
+
+.icon-arrow-down:before {
+  content: "\e61c"; }
+
+.icon-arrow-up:before {
+  content: "\e61d"; }
+
+.icon-arrow-right:before {
+  content: "\e61e"; }
+
+.icon-list2:before {
+  content: "\e60f"; }
+
+.icon-key2:before {
+  content: "\e618"; }
+
+.icon-user:before {
+  content: "\e612"; }
+
+.icon-key:before {
+  content: "\e619"; }
+
+.icon-locked:before {
+  content: "\e61a"; }
 
 * {
   -webkit-box-sizing: border-box;
@@ -1080,6 +1188,7 @@ ul.news-archive-class li .item-list {
             font-weight: normal;
             font-style: normal;
             text-indent: 0;
+            speak: none;
             position: absolute;
             font-size: 8px;
             font-size: 0.5rem;
@@ -1750,5 +1859,20 @@ form.node-blog-form .filter-help {
   .color-box p {
     font-size: 12px;
     font-size: 0.75rem; }
+
+.icon-box {
+  padding: 10px 10px 5px 10px;
+  border: 1px solid #999999;
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  width: 126px;
+  text-align: center; }
+  .icon-box span {
+    font-size: 30px;
+    font-size: 1.875rem; }
+  .icon-box p {
+    text-align: left;
+    margin-top: 10px; }
 
 /*@ sourceMappingURL=styles.css.map */

@@ -117,6 +117,140 @@
       </div>        
     </div>  
   </div>
+  <div class="styles style-4">
+    <h2>Font-face icons</h2>
+    <p>Icons that are used and reserved for any cases.</p>
+    <div class="icons">
+      <div class="icon-box">
+        <span class="icon-ytb"></span>
+        <p>Code: <ins>e600</ins></p>
+      </div>
+      <div class="icon-box">
+        <span class="icon-unk"></span>
+        <p>Code: <ins>e601</ins></p>
+      </div>
+      <div class="icon-box">
+        <span class="icon-gp"></span>
+        <p>Code: <ins>e603</ins></p>
+      </div>
+      <div class="icon-box">
+        <span class="icon-fb"></span>
+        <p>Code: <ins>e604</ins></p>
+      </div> 
+      <div class="icon-box">
+        <span class="icon-ac"></span>
+        <p>Code: <ins>e605</ins></p>
+      </div>
+      <div class="icon-box">
+        <span class="icon-tw"></span>
+        <p>Code: <ins>e610</ins></p>
+      </div>
+      <div class="icon-box">
+        <span class="icon-arr"></span>
+        <p>Code: <ins>e608</ins></p>
+      </div>
+      <div class="icon-box">
+        <span class="icon-arr2"></span>
+        <p>Code: <ins>e615</ins></p>
+      </div>
+      <div class="icon-box">
+        <span class="icon-angle-down"></span>
+        <p>Code: <ins>e606</ins></p>
+      </div>
+      <div class="icon-box">
+        <span class="icon-angle-up"></span>
+        <p>Code: <ins>e607</ins></p>
+      </div>
+      <div class="icon-box">
+        <span class="icon-angle-right"></span>
+        <p>Code: <ins>3d</ins></p>
+      </div>
+      <div class="icon-box">
+        <span class="icon-angle-left"></span>
+        <p>Code: <ins>e609</ins></p>
+      </div>
+      <div class="icon-box">
+        <span class="icon-double-angle-down"></span>
+        <p>Code: <ins>e60a</ins></p>
+      </div>	  
+      <div class="icon-box">
+        <span class="icon-double-angle-up"></span>
+        <p>Code: <ins>e60b</ins></p>
+      </div>
+      <div class="icon-box">
+        <span class="icon-double-angle-right"></span>
+        <p>Code: <ins>e60c</ins></p>
+      </div>
+      <div class="icon-box">
+        <span class="icon-double-angle-left"></span>
+        <p>Code: <ins>e60d</ins></p>
+      </div>
+      <div class="icon-box">
+        <span class="icon-linkedin-sign"></span>
+        <p>Code: <ins>e602</ins></p>
+      </div>
+      <div class="icon-box">
+        <span class="icon-signout"></span>
+        <p>Code: <ins>e613</ins></p>
+      </div>
+      <div class="icon-box">
+        <span class="icon-reorder"></span>
+        <p>Code: <ins>e611</ins></p>
+      </div>
+       <div class="icon-box">
+        <span class="icon-calendar"></span>
+        <p>Code: <ins>e61f</ins></p>
+      </div> 
+       <div class="icon-box">
+        <span class="icon-list"></span>
+        <p>Code: <ins>e60e</ins></p>
+      </div>  
+      <div class="icon-box">
+        <span class="icon-logout"></span>
+        <p>Code: <ins>e614</ins></p>
+      </div>
+      <div class="icon-box">
+        <span class="icon-key"></span>
+        <p>Code: <ins>e61b</ins></p>
+      </div> 
+      <div class="icon-box">
+        <span class="icon-arrow-left"></span>
+        <p>Code: <ins>e617</ins></p>
+      </div> 
+      <div class="icon-box">
+        <span class="icon-arrow-down"></span>
+        <p>Code: <ins>e61c</ins></p>
+      </div> 
+      <div class="icon-box">
+        <span class="icon-arrow-up"></span>
+        <p>Code: <ins>e61d</ins></p>
+      </div>  
+      <div class="icon-box">
+        <span class="icon-arrow-right"></span>
+        <p>Code: <ins>e61e</ins></p>
+      </div> 
+      <div class="icon-box">
+        <span class="icon-list2"></span>
+        <p>Code: <ins>e60f</ins></p>
+      </div>  
+      <div class="icon-box">
+        <span class="icon-key2"></span>
+        <p>Code: <ins>e618</ins></p>
+      </div>  
+      <div class="icon-box">
+        <span class="icon-user"></span>
+        <p>Code: <ins>e612</ins></p>
+      </div> 
+
+       <div class="icon-box">
+        <span class="icon-locked"></span>
+        <p>Code: <ins>e61a</ins></p>
+      </div>  
+ 
+ 
+ 
+
+	  
+    </div>
+  </div>
 </div>
-
-
