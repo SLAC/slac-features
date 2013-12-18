@@ -16,6 +16,7 @@ stylesheets[all][] = search.css
 stylesheets[all][] = date.css
 stylesheets[all][] = twocol.css
 stylesheets[all][] = two_col.css
+stylesheets[all][] = two_col_article.css
 stylesheets[all][] = slideshow_description_bottom.css
 stylesheets[all][] = field_slideshow.css
 

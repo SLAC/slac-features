@@ -547,7 +547,7 @@ article.node-blog
 
     .submitted
       margin-top: 5px
-      font-size: 14px
+      +fontsize-rem(14px)
         
     .blog-wrapper
       +fontsize-rem(14px)
@@ -1156,4 +1156,30 @@ ul.news-archive-class
   li 
     .item-list
       margin-left: 10px
-        
+
+
+//Article layout based on plugin layout
+.article_panel_layout
+  .pane-node-title
+    margin-bottom: 5px
+    h2
+      +fontsize-rem(20px)
+  
+  .author
+    border-right: 1px solid $grey-87
+    margin-right: 1px
+    padding-right: 5px
+  
+  .pane-node-created, .author
+    display: inline-block
+    +fontsize-rem(14px)
+    font-style: italic
+    color: $grey-87
+    line-height: 1
+    margin-bottom: 10px
+    
+  .pane-node-body
+    +fontsize-rem(14px)
+    p 
+      margin-bottom: 5px
+      line-height: 20px
