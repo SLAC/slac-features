@@ -96,6 +96,49 @@ a[href*='mailto:'] {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+.sprites-sprite, .sprites-Microsoft-Office-Excel-icon, .sprites-Microsoft-Office-Word-icon, .sprites-Microsoft-PowerPoint-icon, .sprites-compressed-icon, .profile-info-full span.document-type-compressed, .sprites-external-icon, .profile-info-full span.document-type-external, .sprites-google-docs-icon, .profile-info-full span.document-type-gdoc, .sprites-keynote-on-icon, .profile-info-full span.document-type-keynote, .sprites-pdf_icon_16px, .profile-info-full span.document-type-pdf {
+  background: url('../images/sprites-s7e31974e21.png') no-repeat; }
+
+.sprites-Microsoft-Office-Excel-icon {
+  background-position: 0 -36px;
+  height: 16px;
+  width: 16px; }
+
+.sprites-Microsoft-Office-Word-icon {
+  background-position: 0 0;
+  height: 16px;
+  width: 16px; }
+
+.sprites-Microsoft-PowerPoint-icon {
+  background-position: 0 -180px;
+  height: 16px;
+  width: 16px; }
+
+.sprites-compressed-icon, .profile-info-full span.document-type-compressed {
+  background-position: 0 -216px;
+  height: 16px;
+  width: 16px; }
+
+.sprites-external-icon, .profile-info-full span.document-type-external {
+  background-position: 0 -252px;
+  height: 11px;
+  width: 12px; }
+
+.sprites-google-docs-icon, .profile-info-full span.document-type-gdoc {
+  background-position: 0 -108px;
+  height: 16px;
+  width: 16px; }
+
+.sprites-keynote-on-icon, .profile-info-full span.document-type-keynote {
+  background-position: 0 -72px;
+  height: 16px;
+  width: 16px; }
+
+.sprites-pdf_icon_16px, .profile-info-full span.document-type-pdf {
+  background-position: 0 -144px;
+  height: 16px;
+  width: 16px; }
+
 a {
   color: #222222;
   text-decoration: none; }
@@ -752,6 +795,9 @@ article.node-blog.node-teaser {
     .profile-info-full .profile-textformatter-list li {
       margin-bottom: 17px;
       overflow: visible !important; }
+      .profile-info-full .profile-textformatter-list li a {
+        display: inline-block;
+        vertical-align: middle; }
   .profile-info-full .profile-maxlist-more {
     line-height: inherit;
     text-align: right;
@@ -782,6 +828,11 @@ article.node-blog.node-teaser {
         content: "\e616"; }
       .profile-info-full .profile-maxlist-more a.collapsed-list:before {
         content: "\e615"; }
+  .profile-info-full span[class*="document-type-"] {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: middle; }
 
 @media (min-width: 480px) {
   .profile-info-full .views-row-1 {

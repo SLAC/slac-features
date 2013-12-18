@@ -5,6 +5,9 @@
 @import "compass/css3/box-sizing"
 @import "compass/css3/border-radius"
 @import "compass/css3/transition"
+@import "compass/utilities/sprites/base"
+@import "compass/utilities/sprites/sprite-img"
+
 
 // HTML5 BOILERPLATE INCLUDE
 @import "compass/css3/transition"
@@ -44,6 +47,13 @@ $container-width  : container-outer-width($large-desktop)
 
 $legacy-support-for-ie: false
 $breakpoint-ie-output: false
+
+//SPRITES
+$sprites-spacing: 20px
+$sprites-layout: vertical
+$sprites-sprite-dimensions: true
+@import "sprites/*.png"
+@include all-sprites-sprites
 
 @import layout
 @import responsive_misc

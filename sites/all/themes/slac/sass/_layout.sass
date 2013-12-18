@@ -830,6 +830,9 @@ article.node-blog
     li
       margin-bottom: 17px
       overflow: visible !important
+      a
+        display: inline-block
+        vertical-align: middle
 
   .profile-maxlist-more
     line-height: inherit
@@ -860,6 +863,36 @@ article.node-blog
       &.collapsed-list
         &:before
           content: '\e615'    
+
+
+
+  span[class*="document-type-"]
+    width: 16px
+    height: 16px
+    display: inline-block
+    vertical-align: middle
+
+  
+  span  
+    &.document-type-ms_office
+    &.document-type-external
+      @extend .sprites-external-icon
+    &.document-type-pdf
+      @extend .sprites-pdf_icon_16px
+    &.document-type-gdoc
+      @extend .sprites-google-docs-icon
+    &.document-type-keynote
+      @extend .sprites-keynote-on-icon
+    &.document-type-compressed
+      @extend .sprites-compressed-icon
+      
+  //.sprites-Microsoft-Office-Excel-icon, 
+  //.sprites-Microsoft-Office-Word-icon, 
+  //.sprites-Microsoft-PowerPoint-icon, 
+
+
+ 
+
   
 
 +at-breakpoint($less-than-480)          
