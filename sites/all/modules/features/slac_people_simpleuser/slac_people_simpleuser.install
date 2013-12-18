@@ -63,18 +63,92 @@ function _slac_people_simpleuser_install__create_profile($uid) {
   $profile_bio->field_prf_bio_pa[$lang][3]['value'] = '2013 - current | Advisor Board, Computational Mathematics, University College Dublin';
 
   // Publications.
-  $profile_bio->field_prf_bio_pub[$lang][0]['value'] = '2013 | First Results From the Electron Hose Instability Studies in FACET';
-  $profile_bio->field_prf_bio_pub[$lang][1]['value'] = '2013 | 3D Simulations of Multipacting in the 56 MHz SRF Cavity';
-  $profile_bio->field_prf_bio_pub[$lang][2]['value'] = '2012 | Novel Six-Quark Hidden-Color Dibaryon States in QCD';
-  $profile_bio->field_prf_bio_pub[$lang][3]['value'] = '2012 | LCLS Femto-Second Timing and Synchronization System Update';
-  $profile_bio->field_prf_bio_pub[$lang][4]['value'] = '2011 | Injected Beam Imaging at SPEAR 3 with a Digital Optic Mask';
-  $profile_bio->field_prf_bio_pub[$lang][5]['value'] = '2010 | Calculation of Coherent Wiggler Radiation Using Eigenfunction Expansion Method';
+  $publications_info = array(
+    array(
+      'title' => '2013 | First Results From the Electron Hose Instability Studies in FACET',
+      'url' => '',
+      'doc_type' => 'pdf'
+    ),
+    array(
+      'title' => '2013 | 3D Simulations of Multipacting in the 56 MHz SRF Cavity',
+      'url' => '',
+      'doc_type' => '_none'
+    ),
+    array(
+      'title' => '2012 | Novel Six-Quark Hidden-Color Dibaryon States in QCD',
+      'url' => '',
+      'doc_type' => 'ms_office'
+    ),
+    array(
+      'title' => '2012 | LCLS Femto-Second Timing and Synchronization System Update',
+      'url' => '',
+      'doc_type' => 'compressed'
+    ),
+    array(
+      'title' => '2011 | Injected Beam Imaging at SPEAR 3 with a Digital Optic Mask',
+      'url' => '',
+      'doc_type' => 'external'
+    ),
+    array(
+      'title' => '2010 | Calculation of Coherent Wiggler Radiation Using Eigenfunction Expansion Method',
+      'url' => '',
+      'doc_type' => 'pdf'
+    ),
+  );
 
-  // Talks and Presentations
-  $profile_bio->field_prf_bio_tp[$lang][0]['value'] = '2013 | DOE Climate Change Study';
-  $profile_bio->field_prf_bio_tp[$lang][1]['value'] = '2012 | 9th Annual SSRL/LCS Users Meeting Presentation. "Developing Nanotube with New Materials."';
-  $profile_bio->field_prf_bio_tp[$lang][2]['value'] = '2012 | Snowmass Conference, Panel Moderator, Funding Strategies Discusion (YouTube)';
-  $profile_bio->field_prf_bio_tp[$lang][3]['value'] = '2011 | 9th Annual SSRL/LCS Users Meeting Presentation. "Developing Nanotube with New Materials."';
+  foreach ($publications_info as $info) {
+    $field_collection_item = entity_create('field_collection_item', array('field_name' => 'field_prf_bio_pub'));
+    $field_collection_item->field_title_and_url = array(
+      $lang => array(
+        array(
+          'url' => 'http://slac.stanford.edu/',
+          'title' => $info['title'],
+        )
+      )
+    );
+    $field_collection_item->field_document_type = array(LANGUAGE_NONE => array(array('value' => $info['doc_type'])));
+    $field_collection_item->setHostEntity('profile2', $profile_bio);
+    entity_save('field_collection_item', $field_collection_item);
+  }
+
+  // Talks and Presentations.
+  $talks_info = array(
+    array(
+      'title' => '2013 | DOE Climate Change Study',
+      'url' => '',
+      'doc_type' => 'pdf'
+    ),
+    array(
+      'title' => '2012 | 9th Annual SSRL/LCS Users Meeting Presentation. "Developing Nanotube with New Materials."',
+      'url' => '',
+      'doc_type' => 'gdoc'
+    ),
+    array(
+      'title' => '2012 | Snowmass Conference, Panel Moderator, Funding Strategies Discusion (YouTube)',
+      'url' => '',
+      'doc_type' => 'ms_office'
+    ),
+    array(
+      'title' => '2011 | 9th Annual SSRL/LCS Users Meeting Presentation. "Developing Nanotube with New Materials."',
+      'url' => '',
+      'doc_type' => 'keynote'
+    ),
+  );
+
+  foreach ($talks_info as $info) {
+    $field_collection_item = entity_create('field_collection_item', array('field_name' => 'field_prf_bio_tp'));
+    $field_collection_item->field_title_and_url = array(
+      $lang => array(
+        array(
+          'url' => 'http://slac.stanford.edu/',
+          'title' => $info['title'],
+        )
+      )
+    );
+    $field_collection_item->field_document_type = array(LANGUAGE_NONE => array(array('value' => $info['doc_type'])));
+    $field_collection_item->setHostEntity('profile2', $profile_bio);
+    entity_save('field_collection_item', $field_collection_item);
+  }
 
   $profile_bio->bundle = 'bio';
   $profiles[] = array(
@@ -193,6 +267,7 @@ function _slac_people_simpleuser_install__create_profile($uid) {
     $profile['profile']->bundle = $profile['type'];
     profile2_save($profile['profile']);
   }
+
 }
 
 /**

@@ -10,6 +10,164 @@
 function slac_profile_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'field_collection_item-field_prf_bio_pub-field_document_type'
+  $field_instances['field_collection_item-field_prf_bio_pub-field_document_type'] = array(
+    'bundle' => 'field_prf_bio_pub',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Select the document type icon (will be displayed if a URL is added).',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_document_type',
+    'label' => 'Document Type',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'field_collection_item-field_prf_bio_pub-field_title_and_url'
+  $field_instances['field_collection_item-field_prf_bio_pub-field_title_and_url'] = array(
+    'bundle' => 'field_prf_bio_pub',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'The URL field can contain a link to a document, presentation, article.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_title_and_url',
+    'label' => 'Title and URL',
+    'required' => 0,
+    'settings' => array(
+      'attributes' => array(
+        'class' => '',
+        'configurable_title' => 0,
+        'rel' => '',
+        'target' => 'default',
+        'title' => '',
+      ),
+      'display' => array(
+        'url_cutoff' => 80,
+      ),
+      'enable_tokens' => 1,
+      'rel_remove' => 'default',
+      'title' => 'required',
+      'title_maxlength' => 255,
+      'title_value' => '',
+      'url' => 'optional',
+      'user_register_form' => FALSE,
+      'validate_url' => 1,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'link',
+      'settings' => array(),
+      'type' => 'link_field',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'field_collection_item-field_prf_bio_tp-field_document_type'
+  $field_instances['field_collection_item-field_prf_bio_tp-field_document_type'] = array(
+    'bundle' => 'field_prf_bio_tp',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Select the document type icon (will be displayed if a URL is added).',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_document_type',
+    'label' => 'Document Type',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance: 'field_collection_item-field_prf_bio_tp-field_title_and_url'
+  $field_instances['field_collection_item-field_prf_bio_tp-field_title_and_url'] = array(
+    'bundle' => 'field_prf_bio_tp',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'The URL field can contain a link to a document, presentation, article.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_title_and_url',
+    'label' => 'Title and URL',
+    'required' => 0,
+    'settings' => array(
+      'attributes' => array(
+        'class' => '',
+        'configurable_title' => 0,
+        'rel' => '',
+        'target' => 'default',
+        'title' => '',
+      ),
+      'display' => array(
+        'url_cutoff' => 80,
+      ),
+      'enable_tokens' => 1,
+      'rel_remove' => 'default',
+      'title' => 'required',
+      'title_maxlength' => 255,
+      'title_value' => '',
+      'url' => 'optional',
+      'user_register_form' => FALSE,
+      'validate_url' => 1,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'link',
+      'settings' => array(),
+      'type' => 'link_field',
+      'weight' => 2,
+    ),
+  );
+
   // Exported field_instance: 'profile2-bio-field_prf_bio_ar'
   $field_instances['profile2-bio-field_prf_bio_ar'] = array(
     'bundle' => 'bio',
@@ -221,7 +379,7 @@ function slac_profile_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'size' => 60,
+        'size' => 120,
       ),
       'type' => 'text_textfield',
       'weight' => 5,
@@ -283,22 +441,12 @@ function slac_profile_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'textformatter',
+        'module' => 'field_collection',
         'settings' => array(
-          'textformatter_class' => 'textformatter-list',
-          'textformatter_comma_and' => 0,
-          'textformatter_comma_full_stop' => 0,
-          'textformatter_comma_override' => 0,
-          'textformatter_comma_tag' => 'div',
-          'textformatter_contrib' => array(),
-          'textformatter_separator_custom' => '',
-          'textformatter_separator_custom_class' => 'textformatter-separator',
-          'textformatter_separator_custom_tag' => 'span',
-          'textformatter_term_plain' => 0,
-          'textformatter_type' => 'ul',
+          'view_mode' => 'full',
         ),
-        'type' => 'textformatter_list',
-        'weight' => 6,
+        'type' => 'field_collection_fields',
+        'weight' => 8,
       ),
     ),
     'entity_type' => 'profile2',
@@ -306,16 +454,13 @@ function slac_profile_field_default_field_instances() {
     'label' => 'Publications',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 120,
-      ),
-      'type' => 'text_textfield',
+      'active' => 0,
+      'module' => 'field_collection',
+      'settings' => array(),
+      'type' => 'field_collection_embed',
       'weight' => 6,
     ),
   );
@@ -329,21 +474,11 @@ function slac_profile_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'textformatter',
+        'module' => 'field_collection',
         'settings' => array(
-          'textformatter_class' => 'textformatter-list',
-          'textformatter_comma_and' => 0,
-          'textformatter_comma_full_stop' => 0,
-          'textformatter_comma_override' => 0,
-          'textformatter_comma_tag' => 'div',
-          'textformatter_contrib' => array(),
-          'textformatter_separator_custom' => '',
-          'textformatter_separator_custom_class' => 'textformatter-separator',
-          'textformatter_separator_custom_tag' => 'span',
-          'textformatter_term_plain' => 0,
-          'textformatter_type' => 'ul',
+          'view_mode' => 'full',
         ),
-        'type' => 'textformatter_list',
+        'type' => 'field_collection_fields',
         'weight' => 7,
       ),
     ),
@@ -352,16 +487,13 @@ function slac_profile_field_default_field_instances() {
     'label' => 'Talks and Presentations',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 120,
-      ),
-      'type' => 'text_textfield',
+      'active' => 0,
+      'module' => 'field_collection',
+      'settings' => array(),
+      'type' => 'field_collection_embed',
       'weight' => 7,
     ),
   );
@@ -999,6 +1131,7 @@ function slac_profile_field_default_field_instances() {
   t('Affiliation');
   t('Areas of Research');
   t('Bio');
+  t('Document Type');
   t('Education');
   t('Email');
   t('Facebook');
@@ -1015,8 +1148,11 @@ function slac_profile_field_default_field_instances() {
   t('Professional Experience');
   t('Publications');
   t('Research Group');
+  t('Select the document type icon (will be displayed if a URL is added).');
   t('Talks and Presentations');
+  t('The URL field can contain a link to a document, presentation, article.');
   t('Title');
+  t('Title and URL');
   t('Twitter');
   t('Website');
 

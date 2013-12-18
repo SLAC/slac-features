@@ -780,37 +780,23 @@ function slac_profile_elements_views_default_views() {
   $handler->display->display_options['fields']['field_prf_bio_pub']['table'] = 'field_data_field_prf_bio_pub';
   $handler->display->display_options['fields']['field_prf_bio_pub']['field'] = 'field_prf_bio_pub';
   $handler->display->display_options['fields']['field_prf_bio_pub']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_prf_bio_pub']['type'] = 'textformatter_list';
+  $handler->display->display_options['fields']['field_prf_bio_pub']['type'] = 'field_collection_fields';
   $handler->display->display_options['fields']['field_prf_bio_pub']['settings'] = array(
-    'textformatter_type' => 'ul',
-    'textformatter_comma_and' => 0,
-    'textformatter_comma_full_stop' => 0,
-    'textformatter_comma_override' => 0,
-    'textformatter_separator_custom' => '',
-    'textformatter_separator_custom_tag' => 'span',
-    'textformatter_separator_custom_class' => 'textformatter-separator',
-    'textformatter_comma_tag' => 'div',
-    'textformatter_class' => 'profile-textformatter-list',
+    'view_mode' => 'full',
   );
   $handler->display->display_options['fields']['field_prf_bio_pub']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_prf_bio_pub']['field_api_classes'] = TRUE;
   /* Field: Profile: Talks and Presentations */
   $handler->display->display_options['fields']['field_prf_bio_tp']['id'] = 'field_prf_bio_tp';
   $handler->display->display_options['fields']['field_prf_bio_tp']['table'] = 'field_data_field_prf_bio_tp';
   $handler->display->display_options['fields']['field_prf_bio_tp']['field'] = 'field_prf_bio_tp';
   $handler->display->display_options['fields']['field_prf_bio_tp']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_prf_bio_tp']['type'] = 'textformatter_list';
+  $handler->display->display_options['fields']['field_prf_bio_tp']['type'] = 'field_collection_fields';
   $handler->display->display_options['fields']['field_prf_bio_tp']['settings'] = array(
-    'textformatter_type' => 'ul',
-    'textformatter_comma_and' => 0,
-    'textformatter_comma_full_stop' => 0,
-    'textformatter_comma_override' => 0,
-    'textformatter_separator_custom' => '',
-    'textformatter_separator_custom_tag' => 'span',
-    'textformatter_separator_custom_class' => 'textformatter-separator',
-    'textformatter_comma_tag' => 'div',
-    'textformatter_class' => 'profile-textformatter-list',
+    'view_mode' => 'full',
   );
   $handler->display->display_options['fields']['field_prf_bio_tp']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_prf_bio_tp']['field_api_classes'] = TRUE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Profile: Type */
   $handler->display->display_options['sorts']['type']['id'] = 'type';
