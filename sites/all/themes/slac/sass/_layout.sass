@@ -872,7 +872,6 @@ span[class*="document-type-"]
 
 
 span  
-  &.document-type-ms_office
   &.document-type-external
     @extend .sprites-external-icon
   &.document-type-pdf
@@ -883,10 +882,12 @@ span
     @extend .sprites-keynote-on-icon
   &.document-type-compressed
     @extend .sprites-compressed-icon
-    
-//.sprites-Microsoft-Office-Excel-icon, 
-//.sprites-Microsoft-Office-Word-icon, 
-//.sprites-Microsoft-PowerPoint-icon, 
+  &.document-type-ms-office-word
+    @extend .sprites-Microsoft-Office-Word-icon
+  &.document-type-ms-office-excel
+    @extend .sprites-Microsoft-Office-Excel-icon
+  &.document-type-ms-office-powerpoint
+    @extend .sprites-Microsoft-PowerPoint-icon
 
 
  

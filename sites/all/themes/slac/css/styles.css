@@ -204,20 +204,20 @@ a[href*='mailto:'] {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-.sprites-sprite, .sprites-Microsoft-Office-Excel-icon, .sprites-Microsoft-Office-Word-icon, .sprites-Microsoft-PowerPoint-icon, .sprites-compressed-icon, span.document-type-compressed, .sprites-external-icon, span.document-type-external, .sprites-google-docs-icon, span.document-type-gdoc, .sprites-keynote-on-icon, span.document-type-keynote, .sprites-pdf_icon_16px, span.document-type-pdf {
+.sprites-sprite, .sprites-Microsoft-Office-Excel-icon, span.document-type-ms-office-excel, .sprites-Microsoft-Office-Word-icon, span.document-type-ms-office-word, .sprites-Microsoft-PowerPoint-icon, span.document-type-ms-office-powerpoint, .sprites-compressed-icon, span.document-type-compressed, .sprites-external-icon, span.document-type-external, .sprites-google-docs-icon, span.document-type-gdoc, .sprites-keynote-on-icon, span.document-type-keynote, .sprites-pdf_icon_16px, span.document-type-pdf {
   background: url('../images/sprites-s7e31974e21.png') no-repeat; }
 
-.sprites-Microsoft-Office-Excel-icon {
+.sprites-Microsoft-Office-Excel-icon, span.document-type-ms-office-excel {
   background-position: 0 -36px;
   height: 16px;
   width: 16px; }
 
-.sprites-Microsoft-Office-Word-icon {
+.sprites-Microsoft-Office-Word-icon, span.document-type-ms-office-word {
   background-position: 0 0;
   height: 16px;
   width: 16px; }
 
-.sprites-Microsoft-PowerPoint-icon {
+.sprites-Microsoft-PowerPoint-icon, span.document-type-ms-office-powerpoint {
   background-position: 0 -180px;
   height: 16px;
   width: 16px; }
@@ -1173,7 +1173,7 @@ ul.news-archive-class li .item-list {
   margin-bottom: 10px; }
 .article_panel_layout .pane-node-body {
   font-size: 14px;
-  /* font-size: 0.875rem; */ }
+  font-size: 0.875rem; }
   .article_panel_layout .pane-node-body p {
     margin-bottom: 5px;
     line-height: 20px; }
