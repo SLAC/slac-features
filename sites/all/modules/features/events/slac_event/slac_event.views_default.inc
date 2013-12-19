@@ -459,6 +459,8 @@ function slac_event_views_default_views() {
   $handler = $view->new_display('panel_pane', 'Event Calendar block', 'panel_pane_2');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Event Calendar';
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'event-calendar-block';
   $handler->display->display_options['defaults']['use_more'] = FALSE;
   $handler->display->display_options['use_more'] = TRUE;
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;

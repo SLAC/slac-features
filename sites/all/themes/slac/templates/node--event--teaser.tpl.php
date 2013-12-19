@@ -8,7 +8,7 @@
  */
 ?>
 <?php $date_prefix = '
-  <div class="date">
+  <div class="event-block"><div class="date">
       <ins>' . $month . '</ins>
       <i>' . $day . '</i>
   </div>
@@ -16,7 +16,7 @@
 ?>
 
 <?php $date_suffix = '
-</div>';
+</div></div>';
 ?>
 
 <?php
