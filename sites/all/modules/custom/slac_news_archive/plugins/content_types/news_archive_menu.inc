@@ -60,12 +60,6 @@ function slac_news_archive_create_list() {
         }
       }
     }
-    $months = isset($menu_item['page_arguments'][2]) ? $menu_item['page_arguments'][2] : $months;
-  }
-
-  // get cached list if already cached
-  if ($data = cache_get('slac_news_archive_plugin' . $years, 'cache_menu')) {
-    return $data->data;
   }
 
   if (_slac_news_archive_years()) {
@@ -84,6 +78,12 @@ function slac_news_archive_create_list() {
         foreach (_slac_news_archive_months($value->years) as $value_months) {
           $month_attributes = array();
           $year_count = '';
+
+          $months = isset($menu_item['page_arguments'][2]) ? $menu_item['page_arguments'][2] : 0;
+          if (is_numeric(arg(1))) {
+            $node_type = isset(node_load(arg(1))->type) ? node_load(arg(1))->type : '';
+            $months = ($node_type == 'slac_news') ? date('m', node_load(arg(1))->created) : 0;
+          }
 
           // add the classes for the current active month item
           if ($months == $value_months->months_numeric) {
@@ -112,8 +112,6 @@ function slac_news_archive_create_list() {
   );
   $data = theme('item_list', array('items' => $menu, 'type' => $type, 'attributes' => $attributes));
 
-  // set cache
-  cache_set('slac_news_archive_plugin' . $years, $data, 'cache_menu');
   return $data;
 }
 
