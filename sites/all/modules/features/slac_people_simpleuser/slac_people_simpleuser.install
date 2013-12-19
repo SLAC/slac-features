@@ -67,7 +67,7 @@ function _slac_people_simpleuser_install__create_profile($uid) {
     array(
       'title' => '2013 | First Results From the Electron Hose Instability Studies in FACET',
       'url' => '',
-      'doc_type' => 'pdf'
+      'doc_type' => 'ms-office-word'
     ),
     array(
       'title' => '2013 | 3D Simulations of Multipacting in the 56 MHz SRF Cavity',
@@ -77,7 +77,7 @@ function _slac_people_simpleuser_install__create_profile($uid) {
     array(
       'title' => '2012 | Novel Six-Quark Hidden-Color Dibaryon States in QCD',
       'url' => '',
-      'doc_type' => 'ms_office'
+      'doc_type' => 'pdf'
     ),
     array(
       'title' => '2012 | LCLS Femto-Second Timing and Synchronization System Update',
@@ -116,7 +116,7 @@ function _slac_people_simpleuser_install__create_profile($uid) {
     array(
       'title' => '2013 | DOE Climate Change Study',
       'url' => '',
-      'doc_type' => 'pdf'
+      'doc_type' => 'ms-office-excel'
     ),
     array(
       'title' => '2012 | 9th Annual SSRL/LCS Users Meeting Presentation. "Developing Nanotube with New Materials."',
@@ -126,7 +126,7 @@ function _slac_people_simpleuser_install__create_profile($uid) {
     array(
       'title' => '2012 | Snowmass Conference, Panel Moderator, Funding Strategies Discusion (YouTube)',
       'url' => '',
-      'doc_type' => 'ms_office'
+      'doc_type' => 'ms-office-powerpoint'
     ),
     array(
       'title' => '2011 | 9th Annual SSRL/LCS Users Meeting Presentation. "Developing Nanotube with New Materials."',

@@ -28,7 +28,9 @@ function slac_profile_field_default_field_bases() {
     'settings' => array(
       'allowed_values' => array(
         'pdf' => 'PDF',
-        'ms_office' => 'MS Office',
+        'ms-office-word' => 'MS Office Word',
+        'ms-office-excel' => 'MS Office Excel',
+        'ms-office-powerpoint' => 'MS Office PowerPoint',
         'keynote' => 'Keynote Presentation',
         'gdoc' => 'Google Doc',
         'compressed' => 'Zipped (Compressed) Folder',
