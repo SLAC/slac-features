@@ -165,6 +165,9 @@ function slac_preprocess_html(&$variables) {
 	drupal_add_html_head($selectivizr, 'selectivzr');
 }
 
+/**
+ * Preprocess for node.tpl.php templates.
+ */
 function slac_preprocess_node(&$variables, $hook) {
   $variables['unpublished'] = (!$variables['status']) ? TRUE : FALSE;
 
@@ -202,6 +205,9 @@ function slac_preprocess_node(&$variables, $hook) {
 
   $variables['title_attributes_array']['class'][] = 'node__title';
   $variables['title_attributes_array']['class'][] = 'node-title';
+
+  // Use templates like node--event--teaser.tpl.php.
+  $variables['theme_hook_suggestions'][] = 'node__' . $variables['type'] . '__' . $variables['view_mode'];
 }
 
 function slac_menu_link(array $variables) {

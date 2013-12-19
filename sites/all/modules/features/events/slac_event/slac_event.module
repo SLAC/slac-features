@@ -5,3 +5,58 @@
  */
 
 include_once 'slac_event.features.inc';
+
+/**
+ * Preprocess function for node template.
+ */
+function slac_event_preprocess_node(&$vars) {
+  if ($vars['type'] != 'event' || $vars['view_mode'] != 'teaser') {
+    return;
+  }
+
+  $previous_event_year_month_day = &drupal_static(__FUNCTION__ . '-previous_event_year_month_day', '');
+  $row_counter = &drupal_static(__FUNCTION__ . '-row_counter', 1);
+  $total_rows = count($vars['view']->result);
+
+  $vars += array(
+    'add_date_html_prefix' => FALSE,
+    'add_date_html_suffix' => FALSE,
+    'add_last_date_html_suffix' => FALSE,
+  );
+
+  $event_date = $vars['field_slac_event_date'][LANGUAGE_NONE][0]['value'];
+
+  // Explode date value like 2013-12-24T22:00:00
+  list($year_month_day, $time) = explode('T', $event_date);
+
+  if ($year_month_day != $previous_event_year_month_day) {
+    $vars['add_date_html_prefix'] = TRUE;
+    if ($row_counter != 1) {
+      $vars['add_date_html_suffix'] = TRUE;
+    }
+  }
+  if ($row_counter == $total_rows) {
+    $vars['add_last_date_html_suffix'] = TRUE;
+  }
+
+  $event_date_timestamp = strtotime($event_date);
+  $vars['month'] = format_date($event_date_timestamp, 'custom', 'M');
+  $vars['day'] = format_date($event_date_timestamp, 'custom', 'j');
+
+  $event_date_end = $vars['field_slac_event_date'][LANGUAGE_NONE][0]['value2'];
+  $event_date_end_timestamp = strtotime($event_date_end);
+
+  $vars['period'] = t('All Day');
+  if ($event_date != $event_date_end) {
+    $vars['period'] = format_date($event_date_timestamp, 'custom', 'g:ia') . ' - ' . format_date($event_date_end_timestamp, 'custom', 'g:ia');
+  }
+
+  $vars['location'] = '';
+  if (isset($vars['field_location'][LANGUAGE_NONE][0]['name'])) {
+    $vars['location'] = ', ' . check_plain($vars['field_location'][LANGUAGE_NONE][0]['name']);
+  }
+
+  $previous_event_year_month_day = $year_month_day;
+  $row_counter++;
+}
+
