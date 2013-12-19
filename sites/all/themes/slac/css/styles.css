@@ -612,12 +612,11 @@ ul.tabs, .action-links {
   font-size: 0.875rem;
   margin-bottom: 13px;
   padding-bottom: 7px;
-  border-bottom: 3px solid #f3f1eb; }
-.pane-page-content .general-right .region-grey-background-style h2.pane-title, .pane-page-content .general-right .region-grey-background-style h2.panel-title {
-  border-bottom-color: white; }
-.front .pane-page-content h2.pane-title, .front .pane-page-content h2.panel-title {
+  border-bottom: 3px solid #f3f1eb;
   text-transform: uppercase;
   letter-spacing: 0.05em; }
+.pane-page-content .general-right .region-grey-background-style h2.pane-title, .pane-page-content .general-right .region-grey-background-style h2.panel-title {
+  border-bottom-color: white; }
 
 .general-right {
   font-size: 13px;
