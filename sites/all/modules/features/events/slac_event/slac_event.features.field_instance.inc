@@ -176,12 +176,8 @@ function slac_event_field_default_field_instances() {
       ),
       'teaser' => array(
         'label' => 'above',
-        'module' => 'field_redirection',
-        'settings' => array(
-          '404_if_empty' => FALSE,
-          'code' => 301,
-        ),
-        'type' => 'field_redirection',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 0,
       ),
     ),
