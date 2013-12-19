@@ -1112,6 +1112,27 @@ table.sticky-table
       margin-right: 0 !important       
 
 //Last three news
+
+
+.more-link-template  
+  border-top: 1px solid $bg-col-1
+  border-bottom: 1px solid $bg-col-1
+  display: block
+  padding: 2px 0 4px
+  text-align: right
+  a
+    color: $red
+    +fontsize-rem(11px)
+    display: inline-block
+    vertical-align: middle
+    &:after
+      content: '\e605'
+      @extend .slac-font
+      line-height: 1
+      vertical-align: middle
+      display: inline-block
+      +fontsize-rem(9px)
+
 .last-three-news
 
   .views-row
@@ -1133,26 +1154,9 @@ table.sticky-table
   
   
   .more-link 
-    border-top: 1px solid $bg-col-1
-    border-bottom: 1px solid $bg-col-1
-    display: block
-    padding: 2px 0 4px
-    text-align: right
-    a
-      
-      color: $red
-      +fontsize-rem(11px)
-      display: inline-block
-      vertical-align: middle
-      
+    @extend .more-link-template 
   
-      &:after
-        content: '\e605'
-        @extend .slac-font
-        line-height: 1
-        vertical-align: middle
-        display: inline-block
-        +fontsize-rem(9px)
+
         
         
 //News by
@@ -1188,3 +1192,70 @@ ul.news-archive-class
     p 
       margin-bottom: 5px
       line-height: 20px
+      
+//Event calendar block 
+.event-calendar-block
+  .more-link 
+    @extend .more-link-template   
+  .view-content
+    margin-bottom: 30px
+  
+.event-block
+  position: relative
+  padding-left: 85px
+  border-bottom: 1px solid $bg-col-1
+  margin-bottom: 10px
+  min-height: 40px
+  &:last-of-type
+    border-bottom: 0 none
+  .date
+    position: absolute
+    top: 0
+    left: 0
+    font-family: Georgia, "Times New Roman", Times, serif
+    color: $h2-color
+    line-height: 1
+    
+    i 
+      +fontsize-rem(24px)
+      position: absolute
+      top: 5px
+      left: 0
+    
+    ins
+      +fontsize-rem(12px)
+      text-decoration: none
+      text-transform: uppercase
+      display: block
+      
+
+
+  .events 
+    +fontsize-rem(11px)
+  .event  
+    color: $h2-color
+    padding-right: 25px
+    margin-bottom: 10px
+    line-height: 16px  
+  a
+    color: $red
+  
+    &.icon
+      position: absolute
+      line-height: 1
+      right: 3px
+      top: 0
+      +fontsize-rem(15px)
+      color: $h2-color
+      &:after
+        content: "\e61f"
+        @extend .slac-font
+    
+   
++at-breakpoint(691px 1138px)     
+  .event-block
+    padding-left: 0
+    .date
+      position: static
+      display: block
+      min-height: 35px

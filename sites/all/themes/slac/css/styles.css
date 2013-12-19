@@ -78,7 +78,7 @@ a[href*='mailto:'] {
   .views-field-field-prf-bio-tp:after, .blog-tags ul:after, .connect-with-me .views-row:after, ul.blog-archive-class > li ul:after, div .color-box:after, .icons:after {
     clear: both; }
 
-.slac-font, .mobile-main-menu .main-menu ul li a:after, .mob-icon:before, .footer-seccond ul li a:after, article.node-blog.node-teaser header h2 a:after, .profile-info-brief .views-more-link:after, .profile-info-full .profile-maxlist-more a:before, .last-three-news .more-link a:after, .connect-with-me .views-row > div a:after, .pane-bundle-slideshow-description-bottom .field-slideshow-controls a:after {
+.slac-font, .mobile-main-menu .main-menu ul li a:after, .mob-icon:before, .footer-seccond ul li a:after, article.node-blog.node-teaser header h2 a:after, .profile-info-brief .views-more-link:after, .profile-info-full .profile-maxlist-more a:before, .more-link-template a:after, .last-three-news .more-link a:after, .event-calendar-block .more-link a:after, .event-block a.icon:after, .connect-with-me .views-row > div a:after, .pane-bundle-slideshow-description-bottom .field-slideshow-controls a:after {
   font-family: "slac";
   font-weight: normal;
   font-style: normal;
@@ -1116,6 +1116,26 @@ table.sticky-table {
       margin-right: 5% !important; }
     .project-block-wrapper:nth-child(3n+3) {
       margin-right: 0 !important; } }
+.more-link-template, .last-three-news .more-link, .event-calendar-block .more-link {
+  border-top: 1px solid #f3f1eb;
+  border-bottom: 1px solid #f3f1eb;
+  display: block;
+  padding: 2px 0 4px;
+  text-align: right; }
+  .more-link-template a, .last-three-news .more-link a, .event-calendar-block .more-link a {
+    color: #871628;
+    font-size: 11px;
+    font-size: 0.6875rem;
+    display: inline-block;
+    vertical-align: middle; }
+    .more-link-template a:after, .last-three-news .more-link a:after, .event-calendar-block .more-link a:after {
+      content: "\e605";
+      line-height: 1;
+      vertical-align: middle;
+      display: inline-block;
+      font-size: 9px;
+      font-size: 0.5625rem; }
+
 .last-three-news .views-row {
   margin-bottom: 8px; }
   .last-three-news .views-row:last-of-type {
@@ -1130,25 +1150,6 @@ table.sticky-table {
   font-size: 11px;
   font-size: 0.6875rem;
   color: #777777; }
-.last-three-news .more-link {
-  border-top: 1px solid #f3f1eb;
-  border-bottom: 1px solid #f3f1eb;
-  display: block;
-  padding: 2px 0 4px;
-  text-align: right; }
-  .last-three-news .more-link a {
-    color: #871628;
-    font-size: 11px;
-    font-size: 0.6875rem;
-    display: inline-block;
-    vertical-align: middle; }
-    .last-three-news .more-link a:after {
-      content: "\e605";
-      line-height: 1;
-      vertical-align: middle;
-      display: inline-block;
-      font-size: 9px;
-      font-size: 0.5625rem; }
 
 ul.news-archive-class li .item-list {
   margin-left: 10px; }
@@ -1177,6 +1178,64 @@ ul.news-archive-class li .item-list {
     margin-bottom: 5px;
     line-height: 20px; }
 
+.event-calendar-block .view-content {
+  margin-bottom: 30px; }
+
+.event-block {
+  position: relative;
+  padding-left: 85px;
+  border-bottom: 1px solid #f3f1eb;
+  margin-bottom: 10px;
+  min-height: 40px; }
+  .event-block:last-of-type {
+    border-bottom: 0 none; }
+  .event-block .date {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: #626263;
+    line-height: 1; }
+    .event-block .date i {
+      font-size: 24px;
+      font-size: 1.5rem;
+      position: absolute;
+      top: 5px;
+      left: 0; }
+    .event-block .date ins {
+      font-size: 12px;
+      font-size: 0.75rem;
+      text-decoration: none;
+      text-transform: uppercase;
+      display: block; }
+  .event-block .events {
+    font-size: 11px;
+    font-size: 0.6875rem; }
+  .event-block .event {
+    color: #626263;
+    padding-right: 25px;
+    margin-bottom: 10px;
+    line-height: 16px; }
+  .event-block a {
+    color: #871628; }
+    .event-block a.icon {
+      position: absolute;
+      line-height: 1;
+      right: 3px;
+      top: 0;
+      font-size: 15px;
+      font-size: 0.9375rem;
+      color: #626263; }
+      .event-block a.icon:after {
+        content: "\e61f"; }
+
+@media (min-width: 691px) and (max-width: 1138px) {
+  .event-block {
+    padding-left: 0; }
+    .event-block .date {
+      position: static;
+      display: block;
+      min-height: 35px; } }
 @media (min-width: 480px) {
   .views-field-field-prf-contact-photo {
     float: left; }
