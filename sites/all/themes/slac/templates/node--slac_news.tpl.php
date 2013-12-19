@@ -9,7 +9,7 @@
 ?>
 <article class="node-<?php print $node->nid; ?> <?php print $classes; ?>"<?php print $attributes; ?>>
   <?php if ($title_prefix || $title_suffix || $display_submitted || $unpublished || !$page && $title): ?>
-    <?php if ($content['field_slac_news_media']): ?>
+    <?php if (isset($content['field_slac_news_media'])): ?>
         <div class="news-image">
         <?php print render($content['field_slac_news_media']); ?>
         </div>
