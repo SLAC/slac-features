@@ -31,7 +31,9 @@
   <?php endif; ?>
 
   <?php
-    hide($content['field_slac_news_media']);
+    if (isset($content['field_slac_news_media'])):
+      hide($content['field_slac_news_media']);
+    endif;
     hide($content['comments']);
     hide($content['links']);
     print render($content);
