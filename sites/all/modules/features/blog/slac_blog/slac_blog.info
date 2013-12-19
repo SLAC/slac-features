@@ -12,6 +12,7 @@ dependencies[] = menu
 dependencies[] = page_manager
 dependencies[] = pathauto
 dependencies[] = rdf
+dependencies[] = slac_blog_archive
 dependencies[] = taxonomy
 dependencies[] = views_content
 dependencies[] = wysiwyg
