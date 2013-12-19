@@ -43,6 +43,7 @@ features[user_permission][] = delete own slac_news content
 features[user_permission][] = edit any slac_news content
 features[user_permission][] = edit own slac_news content
 features[uuid_term][] = 05339b25-6cf8-4e75-b4ea-f91d490f5b04
+features[uuid_term][] = 47c46adc-4bf5-41cc-91a2-96c057b16297
 features[variable][] = comment_anonymous_slac_news
 features[variable][] = comment_default_mode_slac_news
 features[variable][] = comment_default_per_page_slac_news
