@@ -192,7 +192,7 @@ function slac_service_catalog_default_page_manager_pages() {
     'relationships' => array(),
   );
   $display = new panels_display();
-  $display->layout = 'flexible:service_catalog';
+  $display->layout = 'two_col';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -207,7 +207,7 @@ function slac_service_catalog_default_page_manager_pages() {
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-1';
-    $pane->panel = 'center';
+    $pane->panel = 'left';
     $pane->type = 'block';
     $pane->subtype = 'menu-menu-service-catalog-support';
     $pane->shown = TRUE;
@@ -225,10 +225,10 @@ function slac_service_catalog_default_page_manager_pages() {
     $pane->position = 0;
     $pane->locks = array();
     $display->content['new-1'] = $pane;
-    $display->panels['center'][0] = 'new-1';
+    $display->panels['left'][0] = 'new-1';
     $pane = new stdClass();
     $pane->pid = 'new-2';
-    $pane->panel = 'center';
+    $pane->panel = 'left';
     $pane->type = 'views_panes';
     $pane->subtype = 'service_catalog_item-panel_pane_1';
     $pane->shown = TRUE;
@@ -243,7 +243,7 @@ function slac_service_catalog_default_page_manager_pages() {
     $pane->position = 1;
     $pane->locks = array();
     $display->content['new-2'] = $pane;
-    $display->panels['center'][1] = 'new-2';
+    $display->panels['left'][1] = 'new-2';
     $pane = new stdClass();
     $pane->pid = 'new-3';
     $pane->panel = 'right';
@@ -353,7 +353,7 @@ function slac_service_catalog_default_page_manager_pages() {
     'relationships' => array(),
   );
   $display = new panels_display();
-  $display->layout = 'flexible:service_catalog';
+  $display->layout = 'two_col';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -368,7 +368,7 @@ function slac_service_catalog_default_page_manager_pages() {
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-6';
-    $pane->panel = 'center';
+    $pane->panel = 'left';
     $pane->type = 'block';
     $pane->subtype = 'menu-menu-service-catalog-support';
     $pane->shown = TRUE;
@@ -386,10 +386,10 @@ function slac_service_catalog_default_page_manager_pages() {
     $pane->position = 0;
     $pane->locks = array();
     $display->content['new-6'] = $pane;
-    $display->panels['center'][0] = 'new-6';
+    $display->panels['left'][0] = 'new-6';
     $pane = new stdClass();
     $pane->pid = 'new-7';
-    $pane->panel = 'center';
+    $pane->panel = 'left';
     $pane->type = 'views_panes';
     $pane->subtype = 'service_catalog_category-panel_pane_1';
     $pane->shown = TRUE;
@@ -404,7 +404,7 @@ function slac_service_catalog_default_page_manager_pages() {
     $pane->position = 1;
     $pane->locks = array();
     $display->content['new-7'] = $pane;
-    $display->panels['center'][1] = 'new-7';
+    $display->panels['left'][1] = 'new-7';
     $pane = new stdClass();
     $pane->pid = 'new-8';
     $pane->panel = 'right';
