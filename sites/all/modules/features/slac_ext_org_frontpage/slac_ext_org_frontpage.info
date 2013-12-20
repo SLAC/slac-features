@@ -4,3 +4,4 @@ package = SLAC
 dependencies[] = panelizer
 dependencies[] = slac_people_slideshow
 dependencies[] = slac_projects
+dependencies[] = slac_sidebar_block_elements

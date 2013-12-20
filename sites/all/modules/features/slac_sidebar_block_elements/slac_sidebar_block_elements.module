@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the SLAC Sidebar Block elements feature.
+ */
+
+include_once 'slac_sidebar_block_elements.features.inc';

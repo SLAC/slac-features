@@ -1,0 +1,17 @@
+name = SLAC Sidebar Block elements
+core = 7.x
+package = SLAC
+php = 5.2.4
+dependencies[] = features
+dependencies[] = image
+dependencies[] = media
+dependencies[] = slac_sidebar_block
+dependencies[] = text
+features[features_api][] = api:2
+features[field_base][] = field_body
+features[field_base][] = field_image
+features[field_base][] = field_subtitle
+features[field_instance][] = fieldable_panels_pane-slac_sidebar_block-field_body
+features[field_instance][] = fieldable_panels_pane-slac_sidebar_block-field_image
+features[field_instance][] = fieldable_panels_pane-slac_sidebar_block-field_subtitle
+features[image][] = crop_slac_sidebar_block

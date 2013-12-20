@@ -113,6 +113,49 @@ function _slac_ext_org_frontpage_install__panes($did) {
     entity_save('field_collection_item', $field_collection_item);
   }
 
+  $mission_fpp = (object) array(
+    'title' => t('Mission and Vision'),
+    'bundle' => 'slac_sidebar_block',
+    'field_body' => array(
+      LANGUAGE_NONE => array(
+        array(
+          'value' => 'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc sed accumsan tellus. Suspendisse et dui vitae diam hendrerit adipiscing? Duis et ante urna. Suspendisse nisi ipsum, porttitor a hendrerit et; bibendum a sapien. Quisque at posuere nisi. In imperdiet sed. Vivamus laoreet eget metus a tincidunt. Morbi ac lorem sed turpis pulvinar gravida. Nunc porttitor arcu malesuada vestibulum pellentesque. Nulla hendrerit enim in blandit facilisis. Nulla porta ullamcorper odio non viverra? Morbi vestibulum sodales euismod!',
+        )
+      )
+    ),
+  );
+  entity_save('fieldable_panels_pane', $mission_fpp);
+
+  $research_fpp = (object) array(
+    'title' => t('Research Openings'),
+    'bundle' => 'slac_sidebar_block',
+    'field_body' => array(
+      LANGUAGE_NONE => array(
+        array(
+          'value' => '<p>PPA Leadership Openings</p><ul><li><a href="http://slac.stanford.edu/">Deputy ALD, KIPAC</a></li><li><a href="http://slac.stanford.edu/">Research Fellow - BaBar Collaboration</a></li></ul><p>PostDoc Fellowships</p><ul><li><a href="http://slac.stanford.edu/">Research Associate - Kavli Institute</a></li><li><a href="http://slac.stanford.edu/">Research Fellow - BaBar Collaboration</a></li></ul>',
+        )
+      )
+    ),
+  );
+  entity_save('fieldable_panels_pane', $research_fpp);
+
+  $gallery_files = _slac_ext_org_frontpage_install__gallery_images();
+
+  // Create host entity for field collection (frontpage Image gallery slideshow).
+  $gallery_fpp = (object) array(
+    'title' => t('Image Gallery'),
+    'bundle' => 'slac_mini_slideshow',
+  );
+  entity_save('fieldable_panels_pane', $gallery_fpp);
+
+  for ($i = 0; $i <= 2; $i++) {
+    $field_collection_item = entity_create('field_collection_item', array('field_name' => 'field_mini_slideshow_slide'));
+    $field_collection_item->field_fcollection_image = array(LANGUAGE_NONE => array(array('fid' => $gallery_files[$i]->fid)));
+    $field_collection_item->field_fcollection_link = array(LANGUAGE_NONE => array(array('url' => 'http://slac.stanford.edu')));
+    $field_collection_item->setHostEntity('fieldable_panels_pane', $gallery_fpp);
+    entity_save('field_collection_item', $field_collection_item);
+  }
+
   $frontpage_panels_panes = array(
     array(
       'did' => $did,
@@ -142,6 +185,42 @@ function _slac_ext_org_frontpage_install__panes($did) {
       'css' => array(),
       'extras' => array(),
       'position' => 0,
+      'locks' => array(),
+    ),
+    array(
+      'did' => $did,
+      'panel' => 'left',
+      'type' => 'fieldable_panels_pane',
+      'subtype' => 'uuid:' . $mission_fpp->uuid,
+      'shown' => 1,
+      'access' => array(),
+      'configuration' => array(
+        'view_mode' => 'full',
+      ),
+      'cache' => array(),
+      'style' => array(),
+      'css' => array(),
+      'extras' => array(),
+      'position' => 2,
+      'locks' => array(),
+    ),
+    array(
+      'did' => $did,
+      'panel' => 'left',
+      'type' => 'fieldable_panels_pane',
+      'subtype' => 'uuid:' . $gallery_fpp->uuid,
+      'shown' => 1,
+      'access' => array(),
+      'configuration' => array(
+        'view_mode' => 'full',
+      ),
+      'cache' => array(),
+      'style' => array(
+        'settings' => NULL,
+      ),
+      'css' => array(),
+      'extras' => array(),
+      'position' => 3,
       'locks' => array(),
     ),
     array(
@@ -183,6 +262,25 @@ function _slac_ext_org_frontpage_install__panes($did) {
       'css' => array(),
       'extras' => array(),
       'position' => 1,
+      'locks' => array(),
+    ),
+    array(
+      'did' => $did,
+      'panel' => 'right',
+      'type' => 'fieldable_panels_pane',
+      'subtype' => 'uuid:' . $research_fpp->uuid,
+      'shown' => 1,
+      'access' => array(),
+      'configuration' => array(
+        'view_mode' => 'full',
+      ),
+      'cache' => array(),
+      'style' => array(
+        'settings' => NULL,
+      ),
+      'css' => array(),
+      'extras' => array(),
+      'position' => 2,
       'locks' => array(),
     ),
   );
@@ -229,6 +327,33 @@ function _slac_ext_org_frontpage_install__projects_images() {
   foreach (array(1, 2, 3, 4, 5, 6) as $i) {
     $filename =  'frontpage_project' . $i . '.jpg';
     $source = DRUPAL_ROOT . '/' . drupal_get_path('module', 'slac_ext_org_frontpage') . '/projects_block_images/' . $filename;
+    $destination = $destination_directory . '/' . $filename;
+    $uri = file_unmanaged_copy($source, $destination);
+
+    $file = new stdClass();
+    $file->fid = NULL;
+    $file->uri = $uri;
+    $file->filename = drupal_basename($uri);
+    $file->filemime = file_get_mimetype($file->uri);
+    $file->uid      = $user->uid;
+    $file->status   = FILE_STATUS_PERMANENT;
+    $files[] = file_save($file);
+  }
+
+  return $files;
+}
+
+/**
+ * Create images for image gallery fpp.
+ */
+function _slac_ext_org_frontpage_install__gallery_images() {
+  global $user;
+  $files = array();
+  $destination_directory = 'public://image_gallery';
+  file_prepare_directory($destination_directory, FILE_CREATE_DIRECTORY);
+  foreach (array(1, 2, 3) as $i) {
+    $filename =  'slide' . $i . '.jpg';
+    $source = DRUPAL_ROOT . '/' . drupal_get_path('module', 'slac_ext_org_frontpage') . '/image_gallery/' . $filename;
     $destination = $destination_directory . '/' . $filename;
     $uri = file_unmanaged_copy($source, $destination);
 

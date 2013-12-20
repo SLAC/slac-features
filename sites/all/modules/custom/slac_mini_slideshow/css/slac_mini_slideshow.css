@@ -1,0 +1,44 @@
+.field-name-field-mini-slideshow-slide {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.field-name-field-mini-slideshow-slide .field-slideshow-image a,
+.field-name-field-mini-slideshow-slide .field-slideshow-image img {
+    display:block;
+    max-width: 100%;
+    height: auto;
+}
+.field-name-field-mini-slideshow-slide .field-slideshow-controls a {
+    position: absolute;
+    top: 40%;
+    width: 30px;
+    height: 70px;
+    display: block;
+    overflow: hidden;
+    background-color: rgba(200, 200, 200, 0.5);
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -o-border-radius: 10px;
+    -ms-border-radius: 10px;
+    border-radius: 10px;
+    z-index: 99;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.field-name-field-mini-slideshow-slide .field-slideshow-controls .prev {
+    left: 20px;
+    background-image: url("../images/slideshow_text_bottom/slider-back.png");
+}
+.field-name-field-mini-slideshow-slide .field-slideshow-controls .next {
+    right: 20px;
+    background-image: url("../images/slideshow_text_bottom/slider-next.png");
+}
+.field-name-field-mini-slideshow-slide .field-slideshow-controls a {
+    display: block;
+    text-indent: -9000px;
+    text-transform: capitalize;
+}
+.field-name-field-mini-slideshow-slide .field-slideshow-pager a.activeSlide {
+    background-image: url("../images/slideshow_text_bottom/slider-pager-active.png");
+}
