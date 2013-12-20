@@ -6,8 +6,8 @@
 function slac_projects_entity_info_alter(&$entity_info) {
   $entity_info['fieldable_panels_pane']['bundles']['slac_projects'] = array(
     'label' => t('Projects'),
-    'pane category' => t('SLAC panes'),
-    'pane top level' => TRUE, // set to true to make this show as a top level icon
+    'pane category' => t('Frontpage'),
+    'pane top level' => FALSE,
     'admin' => array(
       'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
       'bundle argument' => 4,

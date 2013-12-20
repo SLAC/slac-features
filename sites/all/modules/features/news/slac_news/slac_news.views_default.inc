@@ -199,7 +199,7 @@ function slac_news_views_default_views() {
   $handler->display->display_options['arguments']['field_slac_news_type_tid']['validate_options']['type'] = 'convert';
   $handler->display->display_options['arguments']['field_slac_news_type_tid']['validate_options']['transform'] = TRUE;
   $handler->display->display_options['arguments']['field_slac_news_type_tid']['validate']['fail'] = 'ignore';
-  $handler->display->display_options['pane_category']['name'] = 'NEWS';
+  $handler->display->display_options['pane_category']['name'] = 'News';
   $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['allow']['use_pager'] = 0;
   $handler->display->display_options['allow']['items_per_page'] = 'items_per_page';
@@ -381,7 +381,7 @@ function slac_news_views_default_views() {
   $handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['created']['date_format'] = 'custom';
   $handler->display->display_options['fields']['created']['custom_date_format'] = 'm/d/Y';
-  $handler->display->display_options['pane_category']['name'] = 'NEWS';
+  $handler->display->display_options['pane_category']['name'] = 'News';
   $handler->display->display_options['pane_category']['weight'] = '0';
 
   /* Display: News Listing by year */
@@ -488,7 +488,7 @@ function slac_news_views_default_views() {
   $handler->display->display_options['arguments']['created_month']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['created_month']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['created_month']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['pane_category']['name'] = 'NEWS';
+  $handler->display->display_options['pane_category']['name'] = 'News';
   $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['allow']['use_pager'] = 0;
   $handler->display->display_options['allow']['items_per_page'] = 'items_per_page';

@@ -9,7 +9,7 @@ $plugin = array(
   'title' => t('News archive'),
   'defaults' => array(),
   'description' => t('Show years / months of news posts for easier navigation.'),
-  'category' => t('NEWS'),
+  'category' => t('News'),
   'render callback' => 'news_archive_menu_content_type_render',
 );
 
