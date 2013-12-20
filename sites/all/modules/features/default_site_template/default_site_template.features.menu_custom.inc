@@ -16,12 +16,6 @@ function default_site_template_menu_default_menu_custom() {
     'title' => 'Footer menu',
     'description' => '',
   );
-  // Exported menu: menu-footer-menu-1.
-  $menus['menu-footer-menu-1'] = array(
-    'menu_name' => 'menu-footer-menu-1',
-    'title' => 'Footer Menu 1',
-    'description' => '',
-  );
   // Exported menu: menu-header-menu.
   $menus['menu-header-menu'] = array(
     'menu_name' => 'menu-header-menu',
@@ -30,7 +24,6 @@ function default_site_template_menu_default_menu_custom() {
   );
   // Translatables
   // Included for use with string extractors like potx.
-  t('Footer Menu 1');
   t('Footer menu');
   t('Header menu');
 

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Default Site Template feature.
+ */
+
+include_once 'default_site_template_eo.features.inc';

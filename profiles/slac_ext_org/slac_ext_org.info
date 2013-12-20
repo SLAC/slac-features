@@ -117,6 +117,7 @@ dependencies[] = slac_rss_block
 
 ;Features
 dependencies[] = default_site_template
+dependencies[] = default_site_template_eo
 dependencies[] = slac_social_media_block
 
 ; Profile.
