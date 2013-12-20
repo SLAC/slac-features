@@ -5,3 +5,19 @@
  */
 
 include_once 'landing_page.features.inc';
+
+/**
+ * Implements hook_menu_alter().
+ */
+function landing_page_menu_alter(&$items) {
+  $items['node/%node/edit']['title callback'] = 'landing_page_title_callback';
+  $items['node/%node/edit']['title arguments'] = array(1);
+}
+
+function landing_page_title_callback($node) {
+  if ($node->type == 'landing_page') {
+    return t('Edit page metadata');
+  }
+
+  return t('Edit');
+}
