@@ -67,7 +67,8 @@ html
       width: 100%
 
         
-    
+    .general-left
+      +clearfix
     .general-right
       margin-top: 40px
       .front &
@@ -272,6 +273,10 @@ ul.tabs, .action-links,
   
   .footer-first &
     font-size: em(14px)
+    border-right: 1px solid
+    padding-right: 17px
+    margin-right: 15px
+    line-height: 1
 
 
 //Site logo header
@@ -282,20 +287,50 @@ ul.tabs, .action-links,
     width: 115px
 
 
-   
-
-
-
-
 .site-title
   margin-bottom: 9px
   margin: 10px 0
+  
+  
+  
 
 
 //First footer
 //-----------------------------------
 .footer-first
   background-color: $menu_bg
+  color: $footer-color
+  padding: 16px 0
+  .inside > div
+    display: inline-block
+    vertical-align: text-top
+  
+  ul.menu
+    display: inline
+    @extend .clearfix
+    +fontsize-rem(12px)
+    li 
+      float: left
+      margin-right: 20px
+      
+      &:after
+        content: ':'
+        margin-left: 20px
+      
+      &:last-of-type
+        margin-right: 0
+        &:after
+          display: none
+    a
+      color: inherit
+    
+  .pane-site-address
+    display: block !important
+    +fontsize-rem(11px)
+    margin-top: 0px
+
+  
+
 
 
 //Last footer
@@ -1259,3 +1294,51 @@ ul.news-archive-class
       position: static
       display: block
       min-height: 35px
+      
+      
+.pane-bundle-slac-sidebar-block
+  //width: 65%
+  //float: left
+  p 
+    +fontsize-rem(13px)
+    line-height: 18px
+
+.pane-bundle-slac-mini-slideshow
+  
+  > div
+    text-align: center
+    margin: 0 auto
+    max-width: 315px
+    position: relative
+
++at-breakpoint($less-than-480) 
+  .pane-bundle-slac-sidebar-block
+    float: left
+  .pane-bundle-slac-mini-slideshow 
+    float: right
+
+  .pane-bundle-slac-sidebar-block, .pane-bundle-slac-mini-slideshow   
+    width: 47% 
+    
++at-breakpoint($tablet)     
+  .pane-bundle-slac-sidebar-block, .pane-bundle-slac-mini-slideshow 
+    float: none
+    width: auto
+
++at-breakpoint(760px)  
+
+  .pane-bundle-slac-sidebar-block, .pane-bundle-slac-mini-slideshow   
+    width: 45% 
+
+  .pane-bundle-slac-sidebar-block
+    float: left
+
+  .pane-bundle-slac-mini-slideshow    
+    float: right
+    
++at-breakpoint($small-desktop)      
+  .pane-bundle-slac-sidebar-block
+    width: 65%
+
+  .pane-bundle-slac-mini-slideshow    
+    width: 30%

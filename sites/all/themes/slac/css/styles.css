@@ -46,7 +46,7 @@ img, object, embed {
 a[href*='mailto:'] {
   word-break: break-all; }
 
-.clearfix, ul.tabs, .action-links, .pane-system-user-menu ul, .pager, article.node-blog.node-teaser .links, .profile-info-full .views-row-2, .views-field-field-prf-bio-education,
+.clearfix, ul.tabs, .action-links, .pane-system-user-menu ul, .footer-first ul.menu, .pager, article.node-blog.node-teaser .links, .profile-info-full .views-row-2, .views-field-field-prf-bio-education,
 .views-field-field-prf-bio-pexp,
 .views-field-field-prf-bio-ar,
 .views-field-field-prf-bio-ha,
@@ -54,13 +54,13 @@ a[href*='mailto:'] {
 .views-field-field-prf-bio-pub,
 .views-field-field-prf-bio-tp, .blog-tags ul, .connect-with-me .views-row, ul.blog-archive-class > li ul, div .color-box, .icons {
   *zoom: 1; }
-  .clearfix:before, ul.tabs:before, .action-links:before, .pane-system-user-menu ul:before, .pager:before, article.node-blog.node-teaser .links:before, .profile-info-full .views-row-2:before, .views-field-field-prf-bio-education:before,
+  .clearfix:before, ul.tabs:before, .action-links:before, .pane-system-user-menu ul:before, .footer-first ul.menu:before, .pager:before, article.node-blog.node-teaser .links:before, .profile-info-full .views-row-2:before, .views-field-field-prf-bio-education:before,
   .views-field-field-prf-bio-pexp:before,
   .views-field-field-prf-bio-ar:before,
   .views-field-field-prf-bio-ha:before,
   .views-field-field-prf-bio-pa:before,
   .views-field-field-prf-bio-pub:before,
-  .views-field-field-prf-bio-tp:before, .blog-tags ul:before, .connect-with-me .views-row:before, ul.blog-archive-class > li ul:before, div .color-box:before, .icons:before, .clearfix:after, ul.tabs:after, .action-links:after, .pane-system-user-menu ul:after, .pager:after, article.node-blog.node-teaser .links:after, .profile-info-full .views-row-2:after, .views-field-field-prf-bio-education:after,
+  .views-field-field-prf-bio-tp:before, .blog-tags ul:before, .connect-with-me .views-row:before, ul.blog-archive-class > li ul:before, div .color-box:before, .icons:before, .clearfix:after, ul.tabs:after, .action-links:after, .pane-system-user-menu ul:after, .footer-first ul.menu:after, .pager:after, article.node-blog.node-teaser .links:after, .profile-info-full .views-row-2:after, .views-field-field-prf-bio-education:after,
   .views-field-field-prf-bio-pexp:after,
   .views-field-field-prf-bio-ar:after,
   .views-field-field-prf-bio-ha:after,
@@ -69,7 +69,7 @@ a[href*='mailto:'] {
   .views-field-field-prf-bio-tp:after, .blog-tags ul:after, .connect-with-me .views-row:after, ul.blog-archive-class > li ul:after, div .color-box:after, .icons:after {
     content: "";
     display: table; }
-  .clearfix:after, ul.tabs:after, .action-links:after, .pane-system-user-menu ul:after, .pager:after, article.node-blog.node-teaser .links:after, .profile-info-full .views-row-2:after, .views-field-field-prf-bio-education:after,
+  .clearfix:after, ul.tabs:after, .action-links:after, .pane-system-user-menu ul:after, .footer-first ul.menu:after, .pager:after, article.node-blog.node-teaser .links:after, .profile-info-full .views-row-2:after, .views-field-field-prf-bio-education:after,
   .views-field-field-prf-bio-pexp:after,
   .views-field-field-prf-bio-ar:after,
   .views-field-field-prf-bio-ha:after,
@@ -78,7 +78,7 @@ a[href*='mailto:'] {
   .views-field-field-prf-bio-tp:after, .blog-tags ul:after, .connect-with-me .views-row:after, ul.blog-archive-class > li ul:after, div .color-box:after, .icons:after {
     clear: both; }
 
-.slac-font, .mobile-main-menu .main-menu ul li a:after, .mob-icon:before, .footer-seccond ul li a:after, article.node-blog.node-teaser header h2 a:after, .profile-info-brief .views-more-link:after, .profile-info-full .profile-maxlist-more a:before, .more-link-template a:after, .last-three-news .more-link a:after, .event-calendar-block .more-link a:after, .event-block a.icon:after, .connect-with-me .views-row > div a:after, .pane-bundle-slideshow-description-bottom .field-slideshow-controls a:after {
+.slac-font, .mobile-main-menu .main-menu ul li a:after, .mob-icon:before, .footer-seccond ul li a:after, article.node-blog.node-teaser header h2 a:after, .profile-info-brief .views-more-link:after, .profile-info-full .profile-maxlist-more a:before, .more-link-template a:after, .last-three-news .more-link a:after, .event-calendar-block .more-link a:after, .event-block a.icon:after, .connect-with-me .views-row > div a:after, .pane-bundle-slideshow-description-bottom .field-slideshow-controls a:after, .pane-bundle-slac-mini-slideshow .field-slideshow-controls a:after {
   font-family: "slac";
   font-weight: normal;
   font-style: normal;
@@ -318,6 +318,13 @@ html {
   margin: 15px 0; }
   .page-basic > .content input[type='text'], .page-basic > .content input[type='password'], .page-basic > .content textarea, .page-basic > .content select, .page-basic > .content input[type='file'] {
     width: 100%; }
+  .page-basic > .content .general-left {
+    *zoom: 1; }
+    .page-basic > .content .general-left:before, .page-basic > .content .general-left:after {
+      content: "";
+      display: table; }
+    .page-basic > .content .general-left:after {
+      clear: both; }
   .page-basic > .content .general-right {
     margin-top: 40px; }
     .front .page-basic > .content .general-right {
@@ -509,7 +516,11 @@ ul.tabs, .action-links {
 .pane-page-site-name {
   font-size: 1.625em; }
   .footer-first .pane-page-site-name {
-    font-size: 0.875em; }
+    font-size: 0.875em;
+    border-right: 1px solid;
+    padding-right: 17px;
+    margin-right: 15px;
+    line-height: 1; }
 
 .pane-page-logo img {
   width: 115px; }
@@ -519,7 +530,33 @@ ul.tabs, .action-links {
   margin: 10px 0; }
 
 .footer-first {
-  background-color: #ebebdf; }
+  background-color: #ebebdf;
+  color: #88655a;
+  padding: 16px 0; }
+  .footer-first .inside > div {
+    display: inline-block;
+    vertical-align: text-top; }
+  .footer-first ul.menu {
+    display: inline;
+    font-size: 12px;
+    font-size: 0.75rem; }
+    .footer-first ul.menu li {
+      float: left;
+      margin-right: 20px; }
+      .footer-first ul.menu li:after {
+        content: ":";
+        margin-left: 20px; }
+      .footer-first ul.menu li:last-of-type {
+        margin-right: 0; }
+        .footer-first ul.menu li:last-of-type:after {
+          display: none; }
+    .footer-first ul.menu a {
+      color: inherit; }
+  .footer-first .pane-site-address {
+    display: block !important;
+    font-size: 11px;
+    font-size: 0.6875rem;
+    margin-top: 0px; }
 
 .footer-seccond {
   background-color: #878787;
@@ -1236,6 +1273,45 @@ ul.news-archive-class li .item-list {
       position: static;
       display: block;
       min-height: 35px; } }
+.pane-bundle-slac-sidebar-block p {
+  font-size: 13px;
+  font-size: 0.8125rem;
+  line-height: 18px; }
+
+.pane-bundle-slac-mini-slideshow > div {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 315px;
+  position: relative; }
+
+@media (min-width: 480px) {
+  .pane-bundle-slac-sidebar-block {
+    float: left; }
+
+  .pane-bundle-slac-mini-slideshow {
+    float: right; }
+
+  .pane-bundle-slac-sidebar-block, .pane-bundle-slac-mini-slideshow {
+    width: 47%; } }
+@media (min-width: 690px) {
+  .pane-bundle-slac-sidebar-block, .pane-bundle-slac-mini-slideshow {
+    float: none;
+    width: auto; } }
+@media (min-width: 760px) {
+  .pane-bundle-slac-sidebar-block, .pane-bundle-slac-mini-slideshow {
+    width: 45%; }
+
+  .pane-bundle-slac-sidebar-block {
+    float: left; }
+
+  .pane-bundle-slac-mini-slideshow {
+    float: right; } }
+@media (min-width: 894px) {
+  .pane-bundle-slac-sidebar-block {
+    width: 65%; }
+
+  .pane-bundle-slac-mini-slideshow {
+    width: 30%; } }
 @media (min-width: 480px) {
   .views-field-field-prf-contact-photo {
     float: left; }
@@ -1670,6 +1746,54 @@ ul.blog-archive-class {
     padding: 20px;
     font-size: 16px;
     font-size: 1rem; } }
+.pane-bundle-slac-mini-slideshow .field-slideshow-controls a:after {
+  top: 50%;
+  margin-top: -28px;
+  left: 50%;
+  position: absolute;
+  font-size: 45px; }
+.pane-bundle-slac-mini-slideshow .field-slideshow-controls a:focus {
+  color: #871628; }
+.no-touch .pane-bundle-slac-mini-slideshow .field-slideshow-controls a:hover {
+  color: #871628; }
+.pane-bundle-slac-mini-slideshow .field-slideshow-controls a.prev {
+  left: 10px; }
+  .pane-bundle-slac-mini-slideshow .field-slideshow-controls a.prev:after {
+    content: "\e609";
+    margin-left: -10px; }
+.pane-bundle-slac-mini-slideshow .field-slideshow-controls a.next {
+  right: 10px; }
+  .pane-bundle-slac-mini-slideshow .field-slideshow-controls a.next:after {
+    content: "\3d";
+    margin-left: -6px; }
+.pane-bundle-slac-mini-slideshow .field-slideshow-controls a {
+  top: 50%;
+  background-color: rgba(200, 200, 200, 0.5);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  z-index: 99;
+  margin-top: -30px;
+  width: 30px;
+  height: 55px;
+  display: block;
+  text-indent: -9000px;
+  overflow: hidden;
+  position: absolute;
+  z-index: 5;
+  bottom: 0px;
+  color: white; }
+  .no-rgba .pane-bundle-slac-mini-slideshow .field-slideshow-controls a {
+    background: url('../images/fall_back_50perc_grey.png') repeat 0 0; }
+  .pane-bundle-slac-mini-slideshow .field-slideshow-controls a:after {
+    margin-top: -29px; }
+  .pane-bundle-slac-mini-slideshow .field-slideshow-controls a:hover {
+    background-color: rgba(200, 200, 200, 0.7); }
+    .no-rgba .pane-bundle-slac-mini-slideshow .field-slideshow-controls a:hover {
+      background: url('../images/fall_back_70perc_grey.png') repeat 0 0; }
+
 .description_block, form#user-profile-form div.password-suggestions, form#user-profile-form .wrapped-with-icon .description, form#user-login div.password-suggestions, form#user-login .wrapped-with-icon .description, form#user-register-form div.password-suggestions, form#user-register-form .wrapped-with-icon .description, form#user-pass div.password-suggestions, form#user-pass .wrapped-with-icon .description, form.node-blog-form .description {
   background-color: #ebebdf;
   padding: 16px;
