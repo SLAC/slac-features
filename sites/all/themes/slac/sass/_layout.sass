@@ -268,17 +268,26 @@ ul.tabs, .action-links,
 //Site name
 //-----------------------------------
 .pane-page-site-name
-  font-size: em(26px)
+  +fontsize-rem(26px)
 
+  .external-organisation &
+    +fontsize-rem(35px)
+    font-weight: normal
+  
   
   .footer-first &
-    font-size: em(14px)
+    +fontsize-rem(14px)
     border-right: 1px solid
     padding-right: 17px
     margin-right: 15px
     line-height: 1
-
-
+    
+.pane-site-name-abbreviation
+  +fontsize-rem(48px)
+  font-weight: bold
+  margin-right: 14px
+    
+    
 //Site logo header
 //-----------------------------------
 .pane-page-logo
@@ -290,8 +299,10 @@ ul.tabs, .action-links,
 .site-title
   margin-bottom: 9px
   margin: 10px 0
-  
-  
+  .external-organisation &  
+    .inside > div
+      display: inline-block
+      vertical-align: baseline
   
 
 
@@ -1220,7 +1231,7 @@ ul.news-archive-class
     font-style: italic
     color: $grey-87
     line-height: 1
-    margin-bottom: 10px
+    margin-bottom: 35px
     
   .pane-node-body
     +fontsize-rem(14px)
