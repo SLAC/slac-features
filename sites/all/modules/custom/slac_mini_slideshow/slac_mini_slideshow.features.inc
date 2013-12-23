@@ -23,8 +23,8 @@ function slac_mini_slideshow_image_default_styles() {
         'module' => 'epsacrop',
         'name' => 'epsacrop_crop',
         'data' => array(
-          'width' => 315,
-          'height' => 210,
+          'width' => 228,
+          'height' => 152,
           'anchor' => 'center-center',
           'jcrop_settings' => array(
             'aspect_ratio' => '',
@@ -45,8 +45,8 @@ function slac_mini_slideshow_image_default_styles() {
         'module' => 'image',
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => 315,
-          'height' => 210,
+          'width' => 228,
+          'height' => 152,
         ),
         'weight' => 2,
       ),
