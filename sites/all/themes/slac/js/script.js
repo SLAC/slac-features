@@ -112,7 +112,7 @@
 
       $action_description = function () {
         $form.find('.description').not($(this).siblings('.description')).hide();
-        $(this).siblings('.description').toggle();
+        $(this).siblings('.description:not(.password-suggestions)').toggle();
       };
 
       $description_icon.click($action_description);
