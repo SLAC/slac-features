@@ -156,8 +156,9 @@ function slac_preprocess_html(&$variables) {
     '#attributes' => array(
       'src' => $base_url . '/' . drupal_get_path('theme', 'slac') . '/js/selectivizr-min.js',
     ),
-    '#prefix' => '<!--[if lt IE 9]>',
-    '#suffix' => '</script><![endif]-->',
+    //'#prefix' => '<!--[if lt IE 9]>',
+    //'#suffix' => '</script><![endif]-->',
+    '#suffix' => '</script>',
   );
 
 	drupal_add_html_head($element_css, 'main_styles');

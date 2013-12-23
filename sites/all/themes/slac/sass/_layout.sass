@@ -338,7 +338,7 @@ ul.tabs, .action-links,
         content: ':'
         margin-left: 20px
       
-      &:last-of-type
+      &:last-child
         margin-right: 0
         &:after
           display: none
@@ -366,7 +366,7 @@ ul.tabs, .action-links,
     float: left
     margin-right: 15px
     margin-bottom: 15px
-    &:last-of-type
+    &:last-child
       margin-right: 0
   
     a
@@ -609,7 +609,7 @@ h2
 .panel-pane
   .general-right &
     margin-bottom: 36px
-    &:last-of-type
+    &:last-child
       margin-bottom: 0
 
 .region-grey-background-style
@@ -624,7 +624,7 @@ h2
 .view-blog-page
   .views-row
     margin-bottom: 25px
-    &:last-of-type
+    &:last-child
       margin-bottom: 0    
       
 +at-breakpoint($tablet)
@@ -1201,10 +1201,10 @@ table.sticky-table
     margin-right: 5%
     margin-bottom: 5%
     
-    &:nth-child(2n+2)
+    &.nth-2
       margin-right: 5% 
       
-    &:nth-child(3n+3)
+    &.nth-3
       margin-right: 0
 
         
@@ -1215,7 +1215,7 @@ table.sticky-table
     margin-right: 10% !important
     margin-bottom: 10%
     
-    &:nth-child(2n+2)
+    &.nth-2
       margin-right: 0 !important
         
         
@@ -1225,10 +1225,10 @@ table.sticky-table
     margin-right: 5% !important
     margin-bottom: 5%
     
-    &:nth-child(2n+2)
+    &.nth-2
       margin-right: 5% !important   
       
-    &:nth-child(3n+3)
+    &.nth-3
       margin-right: 0 !important       
 
 //Last three news
@@ -1257,7 +1257,7 @@ table.sticky-table
 
   .views-row
     margin-bottom: 8px
-    &:last-of-type
+    &:last-child
       margin-bottom: 17px
 
   .views-field-title 
@@ -1326,7 +1326,7 @@ ul.news-archive-class
   border-bottom: 1px solid $bg-col-1
   margin-bottom: 10px
   min-height: 40px
-  &:last-of-type
+  &:last-child
     border-bottom: 0 none
   .date
     position: absolute
@@ -1335,12 +1335,16 @@ ul.news-archive-class
     font-family: Georgia, "Times New Roman", Times, serif
     color: $h2-color
     line-height: 1
+    .touch &
+      font-family: Arial, Helvetica, sans-serif
     
     i 
       +fontsize-rem(24px)
       position: absolute
       top: 5px
       left: 0
+      .touch &
+        top: 10px
     
     ins
       +fontsize-rem(12px)
@@ -1382,8 +1386,6 @@ ul.news-archive-class
       
       
 .pane-bundle-slac-sidebar-block
-  //width: 65%
-  //float: left
   p 
     +fontsize-rem(13px)
     line-height: 18px
@@ -1399,6 +1401,7 @@ ul.news-archive-class
 +at-breakpoint($less-than-480) 
 
   .inner_col
+    +clearfix
     .inner_left
       float: left
     .inner_right

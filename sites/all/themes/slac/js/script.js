@@ -118,4 +118,11 @@
       $description_icon.click($action_description);
     }
   };
+
+  Drupal.behaviors.nth_issues = {
+    attach: function () {
+      $('.projects-blocks-wrapper .project-block-wrapper:nth-child(2n+2)').addClass('nth-2');
+      $('.projects-blocks-wrapper .project-block-wrapper:nth-child(3n+3)').addClass('nth-3');
+    }
+  };
 }(this, this.document, this.jQuery, this.Drupal));
