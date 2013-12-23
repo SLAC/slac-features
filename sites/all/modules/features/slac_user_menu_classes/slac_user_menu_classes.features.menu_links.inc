@@ -37,7 +37,13 @@ function slac_user_menu_classes_menu_default_menu_links() {
     'link_path' => 'user/login',
     'router_path' => 'user/login',
     'link_title' => 'Log in',
-    'options' => array(),
+    'options' => array(
+      'attributes' => array(
+        'class' => array(
+          0 => 'icon-login',
+        ),
+      ),
+    ),
     'module' => 'system',
     'hidden' => -1,
     'external' => 0,
