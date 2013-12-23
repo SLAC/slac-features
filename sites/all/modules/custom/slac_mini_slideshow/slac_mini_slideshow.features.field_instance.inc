@@ -41,8 +41,8 @@ function slac_mini_slideshow_field_default_field_instances() {
           'crop_square' => 0,
           'lightbox_text_bottom' => 0,
           'lightbox_text_left_right' => 0,
-          'slac_blog_image' => 0,
           'mini_slideshow_image_style' => 'mini_slideshow_image_style',
+          'slac_blog_image' => 0,
         ),
       ),
       'file_directory' => '',
@@ -192,7 +192,6 @@ function slac_mini_slideshow_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Description');
   t('Image');
   t('Link');
   t('Slide');
