@@ -1,0 +1,12 @@
+name = SLAC user menu classes
+description = Sets CSS classes for the user menu using menu attributes
+core = 7.x
+package = SLAC
+dependencies[] = features
+dependencies[] = menu
+features[features_api][] = api:2
+features[menu_custom][] = user-menu
+features[menu_links][] = user-menu:user
+features[menu_links][] = user-menu:user/login
+features[menu_links][] = user-menu:user/logout
+project path = sites/all/modules/features
