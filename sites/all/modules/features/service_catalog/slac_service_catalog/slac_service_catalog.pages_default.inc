@@ -501,53 +501,6 @@ function slac_service_catalog_default_page_manager_pages() {
   $page = new stdClass();
   $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
   $page->api_version = 1;
-  $page->name = 'service_catalog_view';
-  $page->task = 'page';
-  $page->admin_title = 'Service Catalog. View';
-  $page->admin_description = '';
-  $page->path = 'service-catalog/view';
-  $page->access = array(
-    'type' => 'none',
-    'settings' => NULL,
-  );
-  $page->menu = array(
-    'type' => 'default tab',
-    'title' => 'View',
-    'name' => 'navigation',
-    'weight' => '0',
-    'parent' => array(
-      'type' => 'none',
-      'title' => 'Service Catalog',
-      'name' => 'navigation',
-      'weight' => '0',
-    ),
-  );
-  $page->arguments = array();
-  $page->conf = array(
-    'admin_paths' => FALSE,
-  );
-  $page->default_handlers = array();
-  $handler = new stdClass();
-  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
-  $handler->api_version = 1;
-  $handler->name = 'page_service_catalog_view_http_response';
-  $handler->task = 'page';
-  $handler->subtask = 'service_catalog_view';
-  $handler->handler = 'http_response';
-  $handler->weight = 0;
-  $handler->conf = array(
-    'title' => 'HTTP response code',
-    'contexts' => array(),
-    'relationships' => array(),
-    'code' => '301',
-    'destination' => 'service-catalog',
-  );
-  $page->default_handlers[$handler->name] = $handler;
-  $pages['service_catalog_view'] = $page;
-
-  $page = new stdClass();
-  $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
-  $page->api_version = 1;
   $page->name = 'service_catalog_view_support_queue';
   $page->task = 'page';
   $page->admin_title = 'Service Catalog. View support queue';
@@ -600,7 +553,10 @@ function slac_service_catalog_default_page_manager_pages() {
   $page->admin_title = 'Service Catalog';
   $page->admin_description = 'Landing page for the information catalog';
   $page->path = 'service-catalog';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array(
     'type' => 'normal',
     'title' => 'Service',

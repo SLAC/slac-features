@@ -48,7 +48,6 @@ features[page_manager_pages][] = service_catalog_category_listing
 features[page_manager_pages][] = service_catalog_manage_self_help_topics
 features[page_manager_pages][] = service_catalog_manage_service_category
 features[page_manager_pages][] = service_catalog_submit_support_request
-features[page_manager_pages][] = service_catalog_view
 features[page_manager_pages][] = service_catalog_view_support_queue
 features[page_manager_pages][] = slac_sc_catalog_landing
 features[panels_layout][] = service_catalog

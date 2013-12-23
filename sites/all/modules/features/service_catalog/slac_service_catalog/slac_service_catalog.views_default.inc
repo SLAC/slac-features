@@ -84,6 +84,11 @@ function slac_service_catalog_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'entity';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Taxonomy term: Weight */
+  $handler->display->display_options['sorts']['weight']['id'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['sorts']['weight']['field'] = 'weight';
 
   /* Display: Category A-Z */
   $handler = $view->new_display('panel_pane', 'Category A-Z', 'panel_pane_2');
@@ -168,6 +173,11 @@ function slac_service_catalog_views_default_views() {
   $handler->display->display_options['fields']['field_sc_catalog_item_extlink']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_sc_catalog_item_extlink']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_sc_catalog_item_extlink']['type'] = 'link_plain';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Taxonomy term: Weight */
+  $handler->display->display_options['sorts']['weight']['id'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['sorts']['weight']['field'] = 'weight';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Taxonomy term: Vocabulary */
