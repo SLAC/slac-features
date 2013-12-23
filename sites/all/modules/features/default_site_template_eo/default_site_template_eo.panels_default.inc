@@ -241,5 +241,211 @@ function default_site_template_eo_default_panels_mini() {
   $mini->display = $display;
   $export['footer'] = $mini;
 
+  $mini = new stdClass();
+  $mini->disabled = FALSE; /* Edit this to true to make a default mini disabled initially */
+  $mini->api_version = 1;
+  $mini->name = 'second_footer';
+  $mini->category = 'Page elements';
+  $mini->admin_title = 'Second Footer';
+  $mini->admin_description = '';
+  $mini->requiredcontexts = array();
+  $mini->contexts = array();
+  $mini->relationships = array();
+  $display = new panels_display();
+  $display->layout = 'two_col';
+  $display->layout_settings = array(
+    'items' => array(
+      'canvas' => array(
+        'type' => 'row',
+        'contains' => 'column',
+        'children' => array(
+          0 => 'main',
+          1 => 1,
+        ),
+        'parent' => NULL,
+      ),
+      'main' => array(
+        'type' => 'column',
+        'width' => '74.94863443995015',
+        'width_type' => '%',
+        'children' => array(
+          0 => 'main-row',
+          1 => 3,
+        ),
+        'parent' => 'canvas',
+      ),
+      'main-row' => array(
+        'type' => 'row',
+        'contains' => 'region',
+        'children' => array(
+          0 => 'center',
+        ),
+        'parent' => 'main',
+      ),
+      'center' => array(
+        'type' => 'region',
+        'title' => 'Footer text',
+        'width' => 100,
+        'width_type' => '%',
+        'parent' => 'main-row',
+        'class' => 'footer-text',
+      ),
+      1 => array(
+        'type' => 'column',
+        'width' => '25.051365560049845',
+        'width_type' => '%',
+        'parent' => 'canvas',
+        'children' => array(
+          0 => 2,
+        ),
+        'class' => '',
+      ),
+      2 => array(
+        'type' => 'row',
+        'contains' => 'region',
+        'children' => array(
+          0 => 'footer_logo',
+        ),
+        'parent' => '1',
+        'class' => '',
+      ),
+      'footer_logo' => array(
+        'type' => 'region',
+        'title' => 'Footer Logo',
+        'width' => 100,
+        'width_type' => '%',
+        'parent' => '2',
+        'class' => 'footer-logo',
+      ),
+      3 => array(
+        'type' => 'row',
+        'contains' => 'region',
+        'children' => array(
+          0 => 'footer_menu',
+        ),
+        'parent' => 'main',
+        'class' => '',
+      ),
+      'footer_menu' => array(
+        'type' => 'region',
+        'title' => 'Footer Menu',
+        'width' => 100,
+        'width_type' => '%',
+        'parent' => '3',
+        'class' => 'footer-menu',
+      ),
+    ),
+  );
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'center' => NULL,
+      'footer_logo' => NULL,
+      'footer_menu' => NULL,
+      'left' => NULL,
+      'right' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-6';
+    $pane->panel = 'left';
+    $pane->type = 'page_site_name';
+    $pane->subtype = 'page_site_name';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-6'] = $pane;
+    $display->panels['left'][0] = 'new-6';
+    $pane = new stdClass();
+    $pane->pid = 'new-7';
+    $pane->panel = 'left';
+    $pane->type = 'block';
+    $pane->subtype = 'menu-menu-footer-menu-1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $display->content['new-7'] = $pane;
+    $display->panels['left'][1] = 'new-7';
+    $pane = new stdClass();
+    $pane->pid = 'new-8';
+    $pane->panel = 'left';
+    $pane->type = 'site_address';
+    $pane->subtype = 'site_address';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $display->content['new-8'] = $pane;
+    $display->panels['left'][2] = 'new-8';
+    $pane = new stdClass();
+    $pane->pid = 'new-9';
+    $pane->panel = 'right';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => 'Social icons',
+      'title' => '',
+      'body' => '<div class="social-icon-block">
+	<div class="social-icon-facebook"><a href="http://www.facebook.com/" onclick="window.location = \'http://www.facebook.com/sharer/sharer.php?u=\' + encodeURIComponent(window.location); return false">Facebook</a></div>
+
+	<div class="social-icon-twitter"><a href="http://www.twitter.com/" onclick="window.location = \'http://www.twitter.com/intent/tweet?source=\' + encodeURIComponent(window.location) + \'&amp;text=\' +  encodeURIComponent(window.location); return false">Twitter</a></div>
+
+	<div class="social-icon-delicious"><a href="http://delicious.com/" onclick="window.location = \'http://www.delicious.com/save?url=\' + encodeURIComponent(window.location); return false">Delicious</a></div>
+
+	<div class="social-icon-googleplus"><a href="http://plus.google.com/" onclick="window.location = \'http://www.reddit.com/submit?url=\' + encodeURIComponent(window.location); return false">Google+</a></div>
+
+	<div class="social-icon-youtube"><a href="http://youtube.com/" onclick="window.location = \'http://www.reddit.com/submit?url=\' + encodeURIComponent(window.location); return false">Youtube</a></div>
+</div>
+',
+      'format' => 'full_html',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-9'] = $pane;
+    $display->panels['right'][0] = 'new-9';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $mini->display = $display;
+  $export['second_footer'] = $mini;
+
   return $export;
 }
