@@ -1432,3 +1432,38 @@ ul.news-archive-class
       width: 65%
     .inner_right  
       width: 30%
+      
+      
+      
+//Service catalog
+.service-listing
+  h2
+    +fontsize-rem(20px)
+    
+    a
+      color: $red
+  
+  p 
+    +fontsize-rem(14px)
+    line-height: 20px
+  
+
+.views-responsive-grid 
+  &.views-columns-2    
+    .views-row
+      @extend .clearfix
+     
+    .views-column
+
++at-breakpoint($less-than-480)
+  .views-responsive-grid 
+    &.views-columns-2    
+
+       
+      .views-column
+        &.views-column-1
+          +span-columns(6,12)
+        &.views-column-2
+          +span-columns(6 omega,12) 
+
+         

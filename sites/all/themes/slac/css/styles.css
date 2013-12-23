@@ -52,7 +52,7 @@ a[href*='mailto:'] {
 .views-field-field-prf-bio-ha,
 .views-field-field-prf-bio-pa,
 .views-field-field-prf-bio-pub,
-.views-field-field-prf-bio-tp, .blog-tags ul, .connect-with-me .views-row, ul.blog-archive-class > li ul, div .color-box, .icons {
+.views-field-field-prf-bio-tp, .views-responsive-grid.views-columns-2 .views-row, .blog-tags ul, .connect-with-me .views-row, ul.blog-archive-class > li ul, div .color-box, .icons {
   *zoom: 1; }
   .clearfix:before, ul.tabs:before, .action-links:before, .pane-system-user-menu ul:before, .footer-first ul.menu:before, .social-icon-block:before, .pager:before, article.node-blog.node-teaser .links:before, .profile-info-full .views-row-2:before, .views-field-field-prf-bio-education:before,
   .views-field-field-prf-bio-pexp:before,
@@ -60,13 +60,13 @@ a[href*='mailto:'] {
   .views-field-field-prf-bio-ha:before,
   .views-field-field-prf-bio-pa:before,
   .views-field-field-prf-bio-pub:before,
-  .views-field-field-prf-bio-tp:before, .blog-tags ul:before, .connect-with-me .views-row:before, ul.blog-archive-class > li ul:before, div .color-box:before, .icons:before, .clearfix:after, ul.tabs:after, .action-links:after, .pane-system-user-menu ul:after, .footer-first ul.menu:after, .social-icon-block:after, .pager:after, article.node-blog.node-teaser .links:after, .profile-info-full .views-row-2:after, .views-field-field-prf-bio-education:after,
+  .views-field-field-prf-bio-tp:before, .views-responsive-grid.views-columns-2 .views-row:before, .blog-tags ul:before, .connect-with-me .views-row:before, ul.blog-archive-class > li ul:before, div .color-box:before, .icons:before, .clearfix:after, ul.tabs:after, .action-links:after, .pane-system-user-menu ul:after, .footer-first ul.menu:after, .social-icon-block:after, .pager:after, article.node-blog.node-teaser .links:after, .profile-info-full .views-row-2:after, .views-field-field-prf-bio-education:after,
   .views-field-field-prf-bio-pexp:after,
   .views-field-field-prf-bio-ar:after,
   .views-field-field-prf-bio-ha:after,
   .views-field-field-prf-bio-pa:after,
   .views-field-field-prf-bio-pub:after,
-  .views-field-field-prf-bio-tp:after, .blog-tags ul:after, .connect-with-me .views-row:after, ul.blog-archive-class > li ul:after, div .color-box:after, .icons:after {
+  .views-field-field-prf-bio-tp:after, .views-responsive-grid.views-columns-2 .views-row:after, .blog-tags ul:after, .connect-with-me .views-row:after, ul.blog-archive-class > li ul:after, div .color-box:after, .icons:after {
     content: "";
     display: table; }
   .clearfix:after, ul.tabs:after, .action-links:after, .pane-system-user-menu ul:after, .footer-first ul.menu:after, .social-icon-block:after, .pager:after, article.node-blog.node-teaser .links:after, .profile-info-full .views-row-2:after, .views-field-field-prf-bio-education:after,
@@ -75,7 +75,7 @@ a[href*='mailto:'] {
   .views-field-field-prf-bio-ha:after,
   .views-field-field-prf-bio-pa:after,
   .views-field-field-prf-bio-pub:after,
-  .views-field-field-prf-bio-tp:after, .blog-tags ul:after, .connect-with-me .views-row:after, ul.blog-archive-class > li ul:after, div .color-box:after, .icons:after {
+  .views-field-field-prf-bio-tp:after, .views-responsive-grid.views-columns-2 .views-row:after, .blog-tags ul:after, .connect-with-me .views-row:after, ul.blog-archive-class > li ul:after, div .color-box:after, .icons:after {
     clear: both; }
 
 .slac-font, .mobile-main-menu .main-menu ul li a:after, .mob-icon:before, .social-icon-block > div a:after, .footer-seccond ul li a:after, article.node-blog.node-teaser header h2 a:after, .profile-info-brief .views-more-link:after, .profile-info-full .profile-maxlist-more a:before, .more-link-template a:after, .last-three-news .more-link a:after, .event-calendar-block .more-link a:after, .event-block a.icon:after, .connect-with-me .views-row > div a:after, .pane-bundle-slideshow-description-bottom .field-slideshow-controls a:after, .pane-bundle-slac-mini-slideshow .field-slideshow-controls a:after {
@@ -1380,6 +1380,25 @@ ul.news-archive-class li .item-list {
     width: 65%; }
   .inner_col .inner_right {
     width: 30%; } }
+.service-listing h2 {
+  font-size: 20px;
+  font-size: 1.25rem; }
+  .service-listing h2 a {
+    color: #871628; }
+.service-listing p {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 20px; }
+
+@media (min-width: 480px) {
+  .views-responsive-grid.views-columns-2 .views-column.views-column-1 {
+    width: 47.87053%;
+    float: left;
+    margin-right: 4.25894%; }
+  .views-responsive-grid.views-columns-2 .views-column.views-column-2 {
+    width: 47.87053%;
+    float: right;
+    margin-right: 0; } }
 @media (min-width: 480px) {
   .views-field-field-prf-contact-photo {
     float: left; }
