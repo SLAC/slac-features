@@ -222,7 +222,7 @@ function default_site_template_default_panels_mini() {
     $pane->configuration = array(
       'admin_title' => 'Footer logo',
       'title' => '',
-      'body' => '<p><a href="http://www.stanford.edu" target="_blank"><img alt="stanford-logo" src="/sites/default/files/stanford-logo.png" /></a><a href="http://science.energy.gov" target="_blank"><img alt="doe-logo" src="/sites/default/files/doe-logo.png" /></a></p>',
+      'body' => '<p><a href="http://www.stanford.edu" target="_blank"><img alt="stanford-logo" src="/sites/all/modules/features/default_site_template/stanford-logo.png" /></a><a href="http://science.energy.gov" target="_blank"><img alt="doe-logo" src="/sites/all/modules/features/default_site_template/doe-logo.png" /></a></p>',
       'format' => 'full_html',
       'substitute' => TRUE,
     );
