@@ -151,12 +151,62 @@ function slac_service_catalog_default_page_manager_pages() {
   $page = new stdClass();
   $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
   $page->api_version = 1;
+  $page->name = 'service_catalog_add_a_new_service';
+  $page->task = 'page';
+  $page->admin_title = 'Service Catalog. Add a new service';
+  $page->admin_description = '';
+  $page->path = 'service-catalog/add-new-service';
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
+  $page->menu = array(
+    'type' => 'tab',
+    'title' => 'Add a new service',
+    'name' => 'navigation',
+    'weight' => '4',
+    'parent' => array(
+      'type' => 'none',
+      'title' => '',
+      'name' => 'navigation',
+      'weight' => '0',
+    ),
+  );
+  $page->arguments = array();
+  $page->conf = array(
+    'admin_paths' => FALSE,
+  );
+  $page->default_handlers = array();
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_service_catalog_add_a_new_service_http_response';
+  $handler->task = 'page';
+  $handler->subtask = 'service_catalog_add_a_new_service';
+  $handler->handler = 'http_response';
+  $handler->weight = 0;
+  $handler->conf = array(
+    'title' => 'HTTP response code',
+    'contexts' => array(),
+    'relationships' => array(),
+    'code' => '301',
+    'destination' => 'node/add/slac-sc-catalog-item?destination=service-catalog',
+  );
+  $page->default_handlers[$handler->name] = $handler;
+  $pages['service_catalog_add_a_new_service'] = $page;
+
+  $page = new stdClass();
+  $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
+  $page->api_version = 1;
   $page->name = 'service_catalog_category_listing';
   $page->task = 'page';
   $page->admin_title = 'Service Catalog category listing';
   $page->admin_description = '';
   $page->path = 'service-catalog/%category';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array();
   $page->arguments = array(
     'category' => array(
@@ -310,6 +360,241 @@ function slac_service_catalog_default_page_manager_pages() {
   $page = new stdClass();
   $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
   $page->api_version = 1;
+  $page->name = 'service_catalog_manage_self_help_topics';
+  $page->task = 'page';
+  $page->admin_title = 'Service Catalog. Manage self help topics';
+  $page->admin_description = '';
+  $page->path = 'service-catalog/manage-self-help-topic';
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
+  $page->menu = array(
+    'type' => 'tab',
+    'title' => 'Manage self help topics',
+    'name' => 'navigation',
+    'weight' => '6',
+    'parent' => array(
+      'type' => 'none',
+      'title' => '',
+      'name' => 'navigation',
+      'weight' => '0',
+    ),
+  );
+  $page->arguments = array();
+  $page->conf = array(
+    'admin_paths' => FALSE,
+  );
+  $page->default_handlers = array();
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_service_catalog_manage_self_help_topics_http_response';
+  $handler->task = 'page';
+  $handler->subtask = 'service_catalog_manage_self_help_topics';
+  $handler->handler = 'http_response';
+  $handler->weight = 0;
+  $handler->conf = array(
+    'title' => 'HTTP response code',
+    'contexts' => array(),
+    'relationships' => array(),
+    'code' => '301',
+    'destination' => 'admin/structure/taxonomy/slac_sc_catalog_self_help?destination=service-catalog',
+  );
+  $page->default_handlers[$handler->name] = $handler;
+  $pages['service_catalog_manage_self_help_topics'] = $page;
+
+  $page = new stdClass();
+  $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
+  $page->api_version = 1;
+  $page->name = 'service_catalog_manage_service_category';
+  $page->task = 'page';
+  $page->admin_title = 'Service Catalog. Manage service category';
+  $page->admin_description = '';
+  $page->path = 'service-catalog/manage-service-category';
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
+  $page->menu = array(
+    'type' => 'tab',
+    'title' => 'Manage service category',
+    'name' => 'navigation',
+    'weight' => '7',
+    'parent' => array(
+      'type' => 'none',
+      'title' => '',
+      'name' => 'navigation',
+      'weight' => '0',
+    ),
+  );
+  $page->arguments = array();
+  $page->conf = array(
+    'admin_paths' => FALSE,
+  );
+  $page->default_handlers = array();
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_service_catalog_manage_service_category_http_response';
+  $handler->task = 'page';
+  $handler->subtask = 'service_catalog_manage_service_category';
+  $handler->handler = 'http_response';
+  $handler->weight = 0;
+  $handler->conf = array(
+    'title' => 'HTTP response code',
+    'contexts' => array(),
+    'relationships' => array(),
+    'code' => '301',
+    'destination' => 'admin/structure/taxonomy/slac_sc_catalog_category?destination=service-catalog',
+  );
+  $page->default_handlers[$handler->name] = $handler;
+  $pages['service_catalog_manage_service_category'] = $page;
+
+  $page = new stdClass();
+  $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
+  $page->api_version = 1;
+  $page->name = 'service_catalog_submit_support_request';
+  $page->task = 'page';
+  $page->admin_title = 'Service Catalog. Submit support request';
+  $page->admin_description = '';
+  $page->path = 'service-catalog/add-support-request';
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
+  $page->menu = array(
+    'type' => 'tab',
+    'title' => 'Submit support request',
+    'name' => 'navigation',
+    'weight' => '0',
+    'parent' => array(
+      'type' => 'none',
+      'title' => '',
+      'name' => 'navigation',
+      'weight' => '0',
+    ),
+  );
+  $page->arguments = array();
+  $page->conf = array(
+    'admin_paths' => FALSE,
+  );
+  $page->default_handlers = array();
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_service_catalog_submit_support_request_http_response';
+  $handler->task = 'page';
+  $handler->subtask = 'service_catalog_submit_support_request';
+  $handler->handler = 'http_response';
+  $handler->weight = 0;
+  $handler->conf = array(
+    'title' => 'HTTP response code',
+    'contexts' => array(),
+    'relationships' => array(),
+    'code' => '301',
+    'destination' => 'node/add/support-ticket&destination=service-catalog',
+  );
+  $page->default_handlers[$handler->name] = $handler;
+  $pages['service_catalog_submit_support_request'] = $page;
+
+  $page = new stdClass();
+  $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
+  $page->api_version = 1;
+  $page->name = 'service_catalog_view';
+  $page->task = 'page';
+  $page->admin_title = 'Service Catalog. View';
+  $page->admin_description = '';
+  $page->path = 'service-catalog/view';
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
+  $page->menu = array(
+    'type' => 'default tab',
+    'title' => 'View',
+    'name' => 'navigation',
+    'weight' => '0',
+    'parent' => array(
+      'type' => 'none',
+      'title' => 'Service Catalog',
+      'name' => 'navigation',
+      'weight' => '0',
+    ),
+  );
+  $page->arguments = array();
+  $page->conf = array(
+    'admin_paths' => FALSE,
+  );
+  $page->default_handlers = array();
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_service_catalog_view_http_response';
+  $handler->task = 'page';
+  $handler->subtask = 'service_catalog_view';
+  $handler->handler = 'http_response';
+  $handler->weight = 0;
+  $handler->conf = array(
+    'title' => 'HTTP response code',
+    'contexts' => array(),
+    'relationships' => array(),
+    'code' => '301',
+    'destination' => 'service-catalog',
+  );
+  $page->default_handlers[$handler->name] = $handler;
+  $pages['service_catalog_view'] = $page;
+
+  $page = new stdClass();
+  $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
+  $page->api_version = 1;
+  $page->name = 'service_catalog_view_support_queue';
+  $page->task = 'page';
+  $page->admin_title = 'Service Catalog. View support queue';
+  $page->admin_description = '';
+  $page->path = 'service-catalog/support-queue';
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
+  $page->menu = array(
+    'type' => 'tab',
+    'title' => 'View support queue',
+    'name' => 'navigation',
+    'weight' => '3',
+    'parent' => array(
+      'type' => 'none',
+      'title' => '',
+      'name' => 'navigation',
+      'weight' => '0',
+    ),
+  );
+  $page->arguments = array();
+  $page->conf = array(
+    'admin_paths' => FALSE,
+  );
+  $page->default_handlers = array();
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_service_catalog_view_support_queue_http_response';
+  $handler->task = 'page';
+  $handler->subtask = 'service_catalog_view_support_queue';
+  $handler->handler = 'http_response';
+  $handler->weight = 0;
+  $handler->conf = array(
+    'title' => 'HTTP response code',
+    'contexts' => array(),
+    'relationships' => array(),
+    'code' => '301',
+    'destination' => 'support',
+  );
+  $page->default_handlers[$handler->name] = $handler;
+  $pages['service_catalog_view_support_queue'] = $page;
+
+  $page = new stdClass();
+  $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
+  $page->api_version = 1;
   $page->name = 'slac_sc_catalog_landing';
   $page->task = 'page';
   $page->admin_title = 'Service Catalog';
@@ -360,6 +645,7 @@ function slac_service_catalog_default_page_manager_pages() {
       'default' => NULL,
       'center' => NULL,
       'right' => NULL,
+      'left' => NULL,
     ),
   );
   $display->cache = array();
@@ -368,27 +654,6 @@ function slac_service_catalog_default_page_manager_pages() {
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-6';
-    $pane->panel = 'left';
-    $pane->type = 'block';
-    $pane->subtype = 'menu-menu-service-catalog-support';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-6'] = $pane;
-    $display->panels['left'][0] = 'new-6';
-    $pane = new stdClass();
-    $pane->pid = 'new-7';
     $pane->panel = 'left';
     $pane->type = 'views_panes';
     $pane->subtype = 'service_catalog_category-panel_pane_1';
@@ -401,33 +666,12 @@ function slac_service_catalog_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $display->content['new-7'] = $pane;
-    $display->panels['left'][1] = 'new-7';
-    $pane = new stdClass();
-    $pane->pid = 'new-8';
-    $pane->panel = 'right';
-    $pane->type = 'block';
-    $pane->subtype = 'menu-menu-service-catalog-admin';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => 'Manage Service Catalog',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-8'] = $pane;
-    $display->panels['right'][0] = 'new-8';
+    $display->content['new-6'] = $pane;
+    $display->panels['left'][0] = 'new-6';
     $pane = new stdClass();
-    $pane->pid = 'new-9';
+    $pane->pid = 'new-7';
     $pane->panel = 'right';
     $pane->type = 'views_panes';
     $pane->subtype = 'service_catalog_category-panel_pane_4';
@@ -440,12 +684,12 @@ function slac_service_catalog_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-9'] = $pane;
-    $display->panels['right'][1] = 'new-9';
+    $display->content['new-7'] = $pane;
+    $display->panels['right'][0] = 'new-7';
     $pane = new stdClass();
-    $pane->pid = 'new-10';
+    $pane->pid = 'new-8';
     $pane->panel = 'right';
     $pane->type = 'views_panes';
     $pane->subtype = 'service_catalog_item-panel_pane_3';
@@ -458,12 +702,12 @@ function slac_service_catalog_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-10'] = $pane;
-    $display->panels['right'][2] = 'new-10';
+    $display->content['new-8'] = $pane;
+    $display->panels['right'][1] = 'new-8';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-7';
+  $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['slac_sc_catalog_landing'] = $page;
