@@ -1346,32 +1346,28 @@ ul.news-archive-class li .item-list {
   position: relative; }
 
 @media (min-width: 480px) {
-  .pane-bundle-slac-sidebar-block {
+  .inner_col .inner_left {
     float: left; }
-
-  .pane-bundle-slac-mini-slideshow {
+  .inner_col .inner_right {
     float: right; }
-
-  .pane-bundle-slac-sidebar-block, .pane-bundle-slac-mini-slideshow {
+  .inner_col > div {
     width: 47%; } }
 @media (min-width: 690px) {
-  .pane-bundle-slac-sidebar-block, .pane-bundle-slac-mini-slideshow {
+  .inner_col .inner_left,
+  .inner_col .inner_right {
     float: none;
-    width: auto; } }
+    width: 100%; } }
 @media (min-width: 760px) {
-  .pane-bundle-slac-sidebar-block, .pane-bundle-slac-mini-slideshow {
+  .inner_col > div {
     width: 45%; }
-
-  .pane-bundle-slac-sidebar-block {
+  .inner_col .inner_left {
     float: left; }
-
-  .pane-bundle-slac-mini-slideshow {
+  .inner_col .inner_right {
     float: right; } }
 @media (min-width: 894px) {
-  .pane-bundle-slac-sidebar-block {
+  .inner_col .inner_left {
     width: 65%; }
-
-  .pane-bundle-slac-mini-slideshow {
+  .inner_col .inner_right {
     width: 30%; } }
 @media (min-width: 480px) {
   .views-field-field-prf-contact-photo {

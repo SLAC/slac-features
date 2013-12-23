@@ -1397,33 +1397,35 @@ ul.news-archive-class
     position: relative
 
 +at-breakpoint($less-than-480) 
-  .pane-bundle-slac-sidebar-block
-    float: left
-  .pane-bundle-slac-mini-slideshow 
-    float: right
 
-  .pane-bundle-slac-sidebar-block, .pane-bundle-slac-mini-slideshow   
-    width: 47% 
+  .inner_col
+    .inner_left
+      float: left
+    .inner_right
+      float: right
+    > div
+      width: 47% 
+
     
 +at-breakpoint($tablet)     
-  .pane-bundle-slac-sidebar-block, .pane-bundle-slac-mini-slideshow 
-    float: none
-    width: auto
+  .inner_col
+    .inner_left,
+    .inner_right
+      float: none
+      width: 100%
 
 +at-breakpoint(760px)  
-
-  .pane-bundle-slac-sidebar-block, .pane-bundle-slac-mini-slideshow   
-    width: 45% 
-
-  .pane-bundle-slac-sidebar-block
-    float: left
-
-  .pane-bundle-slac-mini-slideshow    
-    float: right
+  .inner_col
+    > div
+      width: 45% 
+    .inner_left
+      float: left
+    .inner_right   
+      float: right
     
-+at-breakpoint($small-desktop)      
-  .pane-bundle-slac-sidebar-block
-    width: 65%
-
-  .pane-bundle-slac-mini-slideshow    
-    width: 30%
++at-breakpoint($small-desktop)   
+  .inner_col
+    .inner_left
+      width: 65%
+    .inner_right  
+      width: 30%
