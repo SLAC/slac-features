@@ -281,6 +281,7 @@ ul.tabs, .action-links,
     padding-right: 17px
     margin-right: 15px
     line-height: 1
+    font-weight: bold
     
 .pane-site-name-abbreviation
   +fontsize-rem(48px)
@@ -311,10 +312,19 @@ ul.tabs, .action-links,
 .footer-first
   background-color: $menu_bg
   color: $footer-color
-  padding: 16px 0
-  .inside > div
-    display: inline-block
-    vertical-align: text-top
+  padding: 16px 0 0
+  .general-left
+    margin-bottom: 20px
+    .inside > div
+      display: inline-block
+      vertical-align: text-top
+  
+  .general-right
+    .inside 
+      text-align: center
+     
+      > div
+        display: inline-block
   
   ul.menu
     display: inline
@@ -340,7 +350,71 @@ ul.tabs, .action-links,
     +fontsize-rem(11px)
     margin-top: 0px
 
++at-breakpoint($tablet)  
+  .footer-first
+    .general-right
+      .inside 
+        text-align: right    
   
+  
+  
+//Icons
+.social-icon-block
+  @extend .clearfix
+  
+  > div
+    float: left
+    margin-right: 15px
+    margin-bottom: 15px
+    &:last-of-type
+      margin-right: 0
+  
+    a
+      text-indent: -9000px
+      display: block
+      color: $icons-color
+      position: relative
+      width: 36px
+      height: 36px
+      overflow: hidden
+      text-align: left
+
+      &:after
+        @extend .slac-font
+        position: absolute
+        
+        top: 50%
+        left: 50%
+        margin-top: -22px
+        margin-left: -18px         
+        +fontsize-rem(35px) 
+        
+      &:hover
+        color: $red
+          
+    &.social-icon-twitter
+      a:after
+        content: '\e610'
+
+    &.social-icon-facebook
+      a:after
+        content: '\e604'  
+       
+    &.social-icon-googleplus
+      a:after
+        content: '\e603'           
+          
+    &.social-icon-youtube
+      a:after
+        content: '\e600' 
+  
+
+    &.social-icon-delicious
+      a:after
+        content: '\e601' 
+
+
+
 
 
 

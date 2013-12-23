@@ -19,6 +19,9 @@ function pp_demo_beans_entity_view_alter(&$build, $type) {
   if ($build['#bundle'] == 'content_block') {
     $build['#theme'] = 'pp_demo_beans_content_block';
   }
+  if ($build['#bundle'] == 'content_block_with_links') {
+    $build['#theme'] = 'pp_demo_beans_content_block_with_links';
+  }
 }
 
 /**
@@ -33,6 +36,10 @@ function pp_demo_beans_theme() {
     'pp_demo_beans_content_block' => array(
       'render element' => 'entity',
       'template' => 'pp_demo_beans_content_block',
+    ),
+    'pp_demo_beans_content_block_with_links' => array(
+      'render element' => 'entity',
+      'template' => 'pp_demo_beans_content_block_with_links',
     ),
   );
 }
@@ -84,7 +91,7 @@ function pp_demo_beans_preprocess_pp_demo_beans_content_block(&$vars) {
 }
 
 /**
- * Preprocess function for pp_demo_beans_block_with_brochures.tpl.php template.
+ * Preprocess function for pp_demo_beans_block.tpl.php template.
  */
 function pp_demo_beans_preprocess_pp_demo_beans_block_with_brochures(&$vars) {
   $item_values = array();
@@ -119,4 +126,47 @@ function pp_demo_beans_preprocess_pp_demo_beans_block_with_brochures(&$vars) {
   }
 
   $vars['blocks'] = $item_values;
+}
+
+/**
+ * Preprocess function for pp_demo_beans_block_with_links.tpl.php template.
+ */
+function pp_demo_beans_preprocess_pp_demo_beans_content_block_with_links(&$vars) {
+  $entity = $vars['entity'];
+  $vars += array(
+    'title' => '',
+    'subtitle' => '',
+    'body' => $entity['field_content_block_body'][0]['#markup'],
+    'links_list' => '',
+    'link' => '',
+    'link_url' => '',
+    'shaded' => '',
+  );
+
+  if (isset($entity['#entity']->title) && !empty($entity['#entity']->title)) {
+    $vars['title'] = check_plain($entity['#entity']->title);
+  }
+
+  if (isset($entity['field_content_block_subtitle']['#items'][0]['value'])
+    && !empty($entity['field_content_block_subtitle']['#items'][0]['value'])) {
+    $vars['subtitle'] = $entity['field_content_block_subtitle']['#items'][0]['value'];
+  }
+
+  if (isset($entity['field_list_of_links']['#items'][0]['url'])
+    && !empty($entity['field_list_of_links']['#items'][0]['url'])) {
+    $vars['links_list'] = drupal_render($entity['field_list_of_links']);
+  }
+
+  if (isset($entity['field_content_block_link']) && !empty($entity['field_content_block_link'])) {
+    $entity['field_content_block_link'][0]['#element']['title'] .= ' »';
+    $vars['link'] = drupal_render($entity['field_content_block_link'][0]);
+    $vars['link_url'] = $entity['field_content_block_link'][0]['#element']['display_url'];
+  }
+
+  if (isset($entity['#entity']->field_content_block_background[LANGUAGE_NONE][0]['value'])) {
+    $value = $entity['#entity']->field_content_block_background[LANGUAGE_NONE][0]['value'];
+    if ($value == 'shaded') {
+      $vars['shaded'] = TRUE;
+    }
+  }
 }

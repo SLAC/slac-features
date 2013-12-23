@@ -17,6 +17,7 @@ function pp_demo_beans_strongarm() {
   $strongarm->value = array(
     'block_with_brochures' => 'block_with_brochures',
     'content_block' => 'content_block',
+    'content_block_with_links' => 'content_block_with_links',
   );
   $export['bean_wysiwyg_types_enabled'] = $strongarm;
 

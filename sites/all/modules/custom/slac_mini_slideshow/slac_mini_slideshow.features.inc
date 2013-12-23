@@ -10,7 +10,7 @@
 function slac_mini_slideshow_image_default_styles() {
   $styles = array();
 
-  // Exported image style: slideshow_image_description_bottom.
+  // Exported image style: mini_slideshow_image_style.
   $styles['mini_slideshow_image_style'] = array(
     'name' => 'mini_slideshow_image_style',
     'effects' => array(
@@ -23,8 +23,8 @@ function slac_mini_slideshow_image_default_styles() {
         'module' => 'epsacrop',
         'name' => 'epsacrop_crop',
         'data' => array(
-          'width' => 228,
-          'height' => 152,
+          'width' => 320,
+          'height' => 232,
           'anchor' => 'center-center',
           'jcrop_settings' => array(
             'aspect_ratio' => '',
@@ -45,8 +45,8 @@ function slac_mini_slideshow_image_default_styles() {
         'module' => 'image',
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => 228,
-          'height' => 152,
+          'width' => 320,
+          'height' => 232,
         ),
         'weight' => 2,
       ),
