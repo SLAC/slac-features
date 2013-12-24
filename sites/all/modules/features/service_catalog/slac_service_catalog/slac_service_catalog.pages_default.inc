@@ -45,13 +45,14 @@ function slac_service_catalog_default_page_manager_handlers() {
     ),
   );
   $display = new panels_display();
-  $display->layout = 'flexible:service_catalog';
+  $display->layout = 'two_col';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
       'default' => NULL,
       'center' => NULL,
       'right' => NULL,
+      'left' => NULL,
     ),
   );
   $display->cache = array();
@@ -60,7 +61,7 @@ function slac_service_catalog_default_page_manager_handlers() {
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-1';
-    $pane->panel = 'center';
+    $pane->panel = 'left';
     $pane->type = 'node_title';
     $pane->subtype = 'node_title';
     $pane->shown = TRUE;
@@ -69,7 +70,7 @@ function slac_service_catalog_default_page_manager_handlers() {
       'link' => 0,
       'markup' => 'h2',
       'id' => '',
-      'class' => '',
+      'class' => 'pane-title',
       'context' => 'argument_entity_id:node_1',
       'override_title' => 1,
       'override_title_text' => '',
@@ -83,10 +84,10 @@ function slac_service_catalog_default_page_manager_handlers() {
     $pane->position = 0;
     $pane->locks = array();
     $display->content['new-1'] = $pane;
-    $display->panels['center'][0] = 'new-1';
+    $display->panels['left'][0] = 'new-1';
     $pane = new stdClass();
     $pane->pid = 'new-2';
-    $pane->panel = 'center';
+    $pane->panel = 'left';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_slac_sc_service_overview';
     $pane->shown = TRUE;
@@ -111,10 +112,10 @@ function slac_service_catalog_default_page_manager_handlers() {
     $pane->position = 1;
     $pane->locks = array();
     $display->content['new-2'] = $pane;
-    $display->panels['center'][1] = 'new-2';
+    $display->panels['left'][1] = 'new-2';
     $pane = new stdClass();
     $pane->pid = 'new-3';
-    $pane->panel = 'center';
+    $pane->panel = 'left';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:body';
     $pane->shown = TRUE;
@@ -139,7 +140,7 @@ function slac_service_catalog_default_page_manager_handlers() {
     $pane->position = 2;
     $pane->locks = array();
     $display->content['new-3'] = $pane;
-    $display->panels['center'][2] = 'new-3';
+    $display->panels['left'][2] = 'new-3';
     $pane = new stdClass();
     $pane->pid = 'new-4';
     $pane->panel = 'right';
