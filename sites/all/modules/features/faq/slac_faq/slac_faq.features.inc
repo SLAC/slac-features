@@ -34,7 +34,7 @@ function slac_faq_views_api() {
  */
 function slac_faq_node_info() {
   $items = array(
-    'salc_faq' => array(
+    'slac_faq' => array(
       'name' => t('SALC FAQ'),
       'base' => 'node_content',
       'description' => t('A set of question and answer commonly asked.'),

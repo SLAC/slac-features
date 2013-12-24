@@ -19,9 +19,9 @@ function slac_faq_user_default_permissions() {
     'module' => 'field_permissions',
   );
 
-  // Exported permission: create salc_faq content.
-  $permissions['create salc_faq content'] = array(
-    'name' => 'create salc_faq content',
+  // Exported permission: create slac_faq content.
+  $permissions['create slac_faq content'] = array(
+    'name' => 'create slac_faq content',
     'roles' => array(
       'authenticated user' => 'authenticated user',
     ),

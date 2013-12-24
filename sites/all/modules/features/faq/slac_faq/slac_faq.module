@@ -18,7 +18,7 @@ function slac_faq_preprocess_views_view(&$vars) {
 /**
  * Implements hook_form_FORM_ID_alter
  */
-function slac_faq_form_salc_faq_node_form_alter(&$form, &$form_state, $form_id) {
+function slac_faq_form_slac_faq_node_form_alter(&$form, &$form_state, $form_id) {
   $form['title']['#title'] = t('Question');
   $form['title']['#description'] = t('Please enter your question in the short format here.');
 }

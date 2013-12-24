@@ -10,9 +10,9 @@
 function slac_faq_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-salc_faq-body'
-  $field_instances['node-salc_faq-body'] = array(
-    'bundle' => 'salc_faq',
+  // Exported field_instance: 'node-slac_faq-body'
+  $field_instances['node-slac_faq-body'] = array(
+    'bundle' => 'slac_faq',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => 'Please enter the long form of the question here including all the details',
@@ -55,9 +55,9 @@ function slac_faq_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-salc_faq-field_slac_faq_answer'
-  $field_instances['node-salc_faq-field_slac_faq_answer'] = array(
-    'bundle' => 'salc_faq',
+  // Exported field_instance: 'node-slac_faq-field_slac_faq_answer'
+  $field_instances['node-slac_faq-field_slac_faq_answer'] = array(
+    'bundle' => 'slac_faq',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => 'Answer to the question, this is to be fulfilled by administrative users',
@@ -95,9 +95,9 @@ function slac_faq_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-salc_faq-field_slac_faq_category'
-  $field_instances['node-salc_faq-field_slac_faq_category'] = array(
-    'bundle' => 'salc_faq',
+  // Exported field_instance: 'node-slac_faq-field_slac_faq_category'
+  $field_instances['node-slac_faq-field_slac_faq_category'] = array(
+    'bundle' => 'slac_faq',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => 'Please select the category this question/answer set belongs to',
@@ -132,9 +132,9 @@ function slac_faq_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-salc_faq-field_slac_faq_status'
-  $field_instances['node-salc_faq-field_slac_faq_status'] = array(
-    'bundle' => 'salc_faq',
+  // Exported field_instance: 'node-slac_faq-field_slac_faq_status'
+  $field_instances['node-slac_faq-field_slac_faq_status'] = array(
+    'bundle' => 'slac_faq',
     'default_value' => array(
       0 => array(
         'value' => 'open',

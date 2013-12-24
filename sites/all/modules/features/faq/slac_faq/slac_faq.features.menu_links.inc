@@ -46,11 +46,11 @@ function slac_faq_menu_default_menu_links() {
     'expanded' => 0,
     'weight' => 0,
   );
-  // Exported menu link: menu-faq:node/add/salc-faq
-  $menu_links['menu-faq:node/add/salc-faq'] = array(
+  // Exported menu link: menu-faq:node/add/slac-faq
+  $menu_links['menu-faq:node/add/slac-faq'] = array(
     'menu_name' => 'menu-faq',
-    'link_path' => 'node/add/salc-faq',
-    'router_path' => 'node/add/salc-faq',
+    'link_path' => 'node/add/slac-faq',
+    'router_path' => 'node/add/slac-faq',
     'link_title' => 'Ask a new question',
     'options' => array(
       'attributes' => array(
@@ -65,7 +65,7 @@ function slac_faq_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => 0,
+    'weight' => 1,
   );
   // Translatables
   // Included for use with string extractors like potx.

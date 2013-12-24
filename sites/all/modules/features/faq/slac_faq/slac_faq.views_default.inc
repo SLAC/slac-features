@@ -135,7 +135,7 @@ function slac_faq_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'salc_faq' => 'salc_faq',
+    'slac_faq' => 'slac_faq',
   );
   /* Filter criterion: Content: Status (field_slac_faq_status) */
   $handler->display->display_options['filters']['field_slac_faq_status_value']['id'] = 'field_slac_faq_status_value';
@@ -192,7 +192,7 @@ function slac_faq_views_default_views() {
   $handler = $view->new_display('page', 'Page: FAQ queue', 'page');
   $handler->display->display_options['defaults']['access'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
-  $handler->display->display_options['access']['perm'] = 'edit any salc_faq content';
+  $handler->display->display_options['access']['perm'] = 'edit any slac_faq content';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relationship: Content: Author */
   $handler->display->display_options['relationships']['uid']['id'] = 'uid';
@@ -240,7 +240,7 @@ function slac_faq_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'salc_faq' => 'salc_faq',
+    'slac_faq' => 'slac_faq',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
   /* Filter criterion: Content: Status (field_slac_faq_status) */
@@ -387,7 +387,7 @@ function slac_faq_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'salc_faq' => 'salc_faq',
+    'slac_faq' => 'slac_faq',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
   /* Filter criterion: Content: Published */
@@ -458,7 +458,7 @@ function slac_faq_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'salc_faq' => 'salc_faq',
+    'slac_faq' => 'slac_faq',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
   /* Filter criterion: Content: Published */
@@ -509,7 +509,7 @@ function slac_faq_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'salc_faq' => 'salc_faq',
+    'slac_faq' => 'slac_faq',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
   $export['faq'] = $view;

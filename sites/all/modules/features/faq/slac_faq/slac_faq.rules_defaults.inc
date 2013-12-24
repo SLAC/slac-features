@@ -18,7 +18,7 @@ function slac_faq_default_rules_configuration() {
       "IF" : [
         { "node_is_of_type" : {
             "node" : [ "node" ],
-            "type" : { "value" : { "salc_faq" : "salc_faq" } }
+            "type" : { "value" : { "slac_faq" : "slac_faq" } }
           }
         },
         { "data_is" : { "data" : [ "node:field-slac-faq-status" ], "value" : "closed" } }
@@ -43,7 +43,7 @@ function slac_faq_default_rules_configuration() {
       "IF" : [
         { "node_is_of_type" : {
             "node" : [ "node" ],
-            "type" : { "value" : { "salc_faq" : "salc_faq" } }
+            "type" : { "value" : { "slac_faq" : "slac_faq" } }
           }
         }
       ],
