@@ -34,7 +34,7 @@ function pp_demo_beans_bean_admin_ui_types() {
   $bean_type->name = 'content_block_with_links';
   $bean_type->label = 'Content Block with links list';
   $bean_type->options = '';
-  $bean_type->description = 'Block heading, block title (inside the content area), text (wyiswyg enabled), list of links and link. All items except text are optional.';
+  $bean_type->description = 'Block heading, block title (inside the content area), text (wyiswyg enabled), list of links and link. Text and list of links are required.';
   $export['content_block_with_links'] = $bean_type;
 
   return $export;

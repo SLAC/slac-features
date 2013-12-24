@@ -137,7 +137,7 @@ function pp_demo_beans_preprocess_pp_demo_beans_content_block_with_links(&$vars)
     'title' => '',
     'subtitle' => '',
     'body' => $entity['field_content_block_body'][0]['#markup'],
-    'links_list' => '',
+    'links_list' => array(),
     'link' => '',
     'link_url' => '',
     'shaded' => '',
@@ -152,9 +152,10 @@ function pp_demo_beans_preprocess_pp_demo_beans_content_block_with_links(&$vars)
     $vars['subtitle'] = $entity['field_content_block_subtitle']['#items'][0]['value'];
   }
 
-  if (isset($entity['field_list_of_links']['#items'][0]['url'])
-    && !empty($entity['field_list_of_links']['#items'][0]['url'])) {
-    $vars['links_list'] = drupal_render($entity['field_list_of_links']);
+  if (isset($entity['field_list_of_links']['#items'][0]['url'])) {
+    foreach ($entity['field_list_of_links']['#items'] as $key => $item) {
+      $vars['links_list'][] = drupal_render($entity['field_list_of_links'][$key]);
+    }
   }
 
   if (isset($entity['field_content_block_link']) && !empty($entity['field_content_block_link'])) {

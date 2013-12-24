@@ -430,7 +430,7 @@ function pp_demo_beans_field_default_field_instances() {
     'entity_type' => 'bean',
     'field_name' => 'field_list_of_links',
     'label' => 'List of links',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'attributes' => array(
         'class' => '',
