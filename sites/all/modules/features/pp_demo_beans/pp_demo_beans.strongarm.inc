@@ -18,6 +18,7 @@ function pp_demo_beans_strongarm() {
     'block_with_brochures' => 'block_with_brochures',
     'content_block' => 'content_block',
     'content_block_with_links' => 'content_block_with_links',
+    'content_block_large_image' => 'content_block_large_image',
   );
   $export['bean_wysiwyg_types_enabled'] = $strongarm;
 

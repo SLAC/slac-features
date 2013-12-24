@@ -40,34 +40,24 @@
         </div>
       <?php endif; ?>
 
-      <?php if (!empty($links_list)): ?>
-        <div style="
-          background: #DBDADB;
-          width: 100%;
-          padding: 1px 3%;
-          font-size: 13px;
-          overflow: hidden;
-          margin-top: 0;
-          float: right;
-          width: 15%;
-        ">
-        <ul>
-          <?php foreach($links_list as $link_from_list): ?>
-            <li style="list-style-type: disc;">
-              <?php print $link_from_list; ?>
-            </li>
-          <? endforeach; ?>
-        </ul>
-        </div>
-      <?php endif; // if ($links_list) ?>
+
+      <?php if (isset($image)): ?>
+        <div style="float: right;">
+            <div style="display: block;
+                        padding: 2px;
+                        border: 2px solid #DBDADB;
+                        line-height: 0;
+                        background-color: #fff;
+                        margin-bottom: 5px;
+                        margin-left: 10px;">
+              <?php print $image; ?>
+            </div>
+          </div>
+      <?php endif; // if ($image) ?>
 
       <p>
-        <?php print $body; ?>
+          <?php print $body; ?>
       </p>
-
-      <?php if ($link): ?>
-        <p><?php print $link; ?></p>
-      <?php endif; ?>
 
     </div>
   </div>

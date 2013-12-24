@@ -31,6 +31,15 @@ function pp_demo_beans_bean_admin_ui_types() {
   $bean_type = new stdClass();
   $bean_type->disabled = FALSE; /* Edit this to true to make a default bean_type disabled initially */
   $bean_type->api_version = 5;
+  $bean_type->name = 'content_block_large_image';
+  $bean_type->label = 'Content Block large image';
+  $bean_type->options = '';
+  $bean_type->description = 'Block heading, block title (inside the content area), text (wyiswyg enabled), image (large image) and link. All items except text are optional.';
+  $export['content_block_large_image'] = $bean_type;
+
+  $bean_type = new stdClass();
+  $bean_type->disabled = FALSE; /* Edit this to true to make a default bean_type disabled initially */
+  $bean_type->api_version = 5;
   $bean_type->name = 'content_block_with_links';
   $bean_type->label = 'Content Block with links list';
   $bean_type->options = '';
