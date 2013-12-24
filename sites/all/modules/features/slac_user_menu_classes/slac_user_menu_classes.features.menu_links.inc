@@ -30,13 +30,14 @@ function slac_user_menu_classes_menu_default_menu_links() {
     'has_children' => 0,
     'expanded' => 0,
     'weight' => -10,
+    'customized' => 1,
   );
   // Exported menu link: user-menu:user/login
   $menu_links['user-menu:user/login'] = array(
     'menu_name' => 'user-menu',
     'link_path' => 'user/login',
     'router_path' => 'user/login',
-    'link_title' => 'Log in',
+    'link_title' => 'SLAC Login',
     'options' => array(
       'attributes' => array(
         'class' => array(
@@ -51,6 +52,7 @@ function slac_user_menu_classes_menu_default_menu_links() {
     'expanded' => 0,
     'weight' => 0,
     'parent_path' => 'user',
+    'customized' => 1,
   );
   // Exported menu link: user-menu:user/logout
   $menu_links['user-menu:user/logout'] = array(
@@ -71,6 +73,7 @@ function slac_user_menu_classes_menu_default_menu_links() {
     'has_children' => 0,
     'expanded' => 0,
     'weight' => 10,
+    'customized' => 1,
   );
   // Translatables
   // Included for use with string extractors like potx.
