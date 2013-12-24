@@ -123,6 +123,7 @@ dependencies[] = slac_social_media_block
 ; Profile.
 dependencies[] = pp_profile
 dependencies[] = slac_profile
+dependencies[] = slac_profile_completeness
 
 ;Landing page content type
 dependencies[] = landing_page
