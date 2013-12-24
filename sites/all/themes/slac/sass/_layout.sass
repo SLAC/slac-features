@@ -277,11 +277,16 @@ ul.tabs, .action-links,
   
   .footer-first &
     +fontsize-rem(14px)
-    border-right: 1px solid
-    padding-right: 17px
-    margin-right: 15px
     line-height: 1
     font-weight: bold
+    
++at-breakpoint($less-than-480)
+  .pane-page-site-name  
+    .footer-first &
+      border-right: 1px solid
+      padding-right: 17px
+      margin-right: 15px
+
     
 .pane-site-name-abbreviation
   +fontsize-rem(48px)
@@ -314,10 +319,9 @@ ul.tabs, .action-links,
   color: $footer-color
   padding: 16px 0 0
   .general-left
-    margin-bottom: 20px
+    
     .inside > div
-      display: inline-block
-      vertical-align: text-top
+      margin-bottom: 10px
   
   .general-right
     .inside 
@@ -346,9 +350,23 @@ ul.tabs, .action-links,
       color: inherit
     
   .pane-site-address
-    display: block !important
-    +fontsize-rem(11px)
-    margin-top: 0px
+    display: none
+
+
++at-breakpoint($less-than-480) 
+  .footer-first
+    .general-left
+      margin-bottom: 20px
+      .inside > div
+        display: inline-block
+        vertical-align: text-top
+        margin-bottom: 0
+
+    .pane-site-address
+      display: block !important
+      +fontsize-rem(11px)
+      margin-top: 0px    
+    
 
 +at-breakpoint($tablet)  
   .footer-first

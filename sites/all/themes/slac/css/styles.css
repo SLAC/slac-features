@@ -523,12 +523,14 @@ ul.tabs, .action-links {
   .footer-first .pane-page-site-name {
     font-size: 14px;
     font-size: 0.875rem;
-    border-right: 1px solid;
-    padding-right: 17px;
-    margin-right: 15px;
     line-height: 1;
     font-weight: bold; }
 
+@media (min-width: 480px) {
+  .footer-first .pane-page-site-name {
+    border-right: 1px solid;
+    padding-right: 17px;
+    margin-right: 15px; } }
 .pane-site-name-abbreviation {
   font-size: 48px;
   font-size: 3rem;
@@ -549,11 +551,8 @@ ul.tabs, .action-links {
   background-color: #ebebdf;
   color: #88655a;
   padding: 16px 0 0; }
-  .footer-first .general-left {
-    margin-bottom: 20px; }
-    .footer-first .general-left .inside > div {
-      display: inline-block;
-      vertical-align: text-top; }
+  .footer-first .general-left .inside > div {
+    margin-bottom: 10px; }
   .footer-first .general-right .inside {
     text-align: center; }
     .footer-first .general-right .inside > div {
@@ -575,11 +574,20 @@ ul.tabs, .action-links {
     .footer-first ul.menu a {
       color: inherit; }
   .footer-first .pane-site-address {
+    display: none; }
+
+@media (min-width: 480px) {
+  .footer-first .general-left {
+    margin-bottom: 20px; }
+    .footer-first .general-left .inside > div {
+      display: inline-block;
+      vertical-align: text-top;
+      margin-bottom: 0; }
+  .footer-first .pane-site-address {
     display: block !important;
     font-size: 11px;
     font-size: 0.6875rem;
-    margin-top: 0px; }
-
+    margin-top: 0px; } }
 @media (min-width: 690px) {
   .footer-first .general-right .inside {
     text-align: right; } }
