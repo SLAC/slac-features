@@ -1,0 +1,184 @@
+<?php
+
+/**
+ * Implements hook_install().
+ */
+function slac_ext_org_blog_install() {
+  $blog_node = (object) array(
+    'title' => t('Blog'),
+    'type' => 'landing_page',
+    'language' => 'und',
+    'name' => 'admin',
+    'uid' => 1,
+    'path' => array(
+      'alias' => 'blog',
+      'pathauto' => 0,
+    ),
+  );
+  node_save($blog_node);
+
+  $panels_display = _slac_ext_org_blog_install__panels_display();
+
+  _slac_ext_org_blog_install__panelizer_entity($blog_node, $panels_display['did']);
+
+  _slac_ext_org_blog_install__panes($panels_display['did']);
+
+  _slac_ext_org_blog_install__menu_item($blog_node->nid);
+}
+
+/**
+ * Create panels display.
+ */
+function _slac_ext_org_blog_install__panels_display() {
+  $panels_display = array(
+    'layout' => 'two_col',
+    'layout_settings' => array(),
+    'panel_settings' => array(
+      'style_settings' => array (
+        'default' => NULL,
+        'center' => NULL,
+        'left' => NULL,
+        'right' => NULL,
+      ),
+    ),
+  );
+  drupal_write_record('panels_display', $panels_display);
+  return $panels_display;
+}
+
+/**
+ * Create panelized entity.
+ */
+function _slac_ext_org_blog_install__panelizer_entity($node, $did) {
+  $panelizer_entity = array(
+    'entity_type' => 'node',
+    'entity_id' => $node->nid,
+    'revision_id' => $node->vid,
+    'name' => NULL,
+    'no_blocks' => 0,
+    'css_id' => '',
+    'css' => '',
+    'pipeline' => 'ipe',
+    'context' => array(),
+    'relationships' => array(),
+    'did' => $did,
+    'view_mode' => 'page_manager',
+    'css_class' => '',
+    'title_element' => 'H2',
+    'link_to_entity' => 1,
+    'extra' => array(),
+  );
+  drupal_write_record('panelizer_entity', $panelizer_entity);
+  return $panelizer_entity;
+}
+
+/**
+ * Create panel panes.
+ */
+function _slac_ext_org_blog_install__panes($did) {
+  $blog_panels_panes = array(
+    array(
+      'did' => $did,
+      'panel' => 'left',
+      'type' => 'views',
+      'subtype' => 'blog_page',
+      'shown' => 1,
+      'access' => array(),
+      'configuration' => array(
+        'override_pager_settings' => 0,
+        'use_pager' => 1,
+        'nodes_per_page' => 5,
+        'pager_id' => 0,
+        'offset' => 0,
+        'more_link' => 0,
+        'feed_icons' => 0,
+        'panel_args' => 0,
+        'link_to_view' => 0,
+        'args' => '',
+        'url' => '',
+        'display' => 'block_1',
+        'override_title' => 1,
+        'override_title_text' => 'Blog Posts',
+      ),
+      'cache' => array(),
+      'style' => array(
+        'settings' => NULL,
+      ),
+      'css' => array(),
+      'extras' => array(),
+      'position' => 0,
+      'locks' => array(),
+    ),
+    array(
+      'did' => $did,
+      'panel' => 'right',
+      'type' => 'blog_archive_menu',
+      'subtype' => 'blog_archive_menu',
+      'shown' => 1,
+      'access' => array(),
+      'configuration' => array(),
+      'cache' => array(),
+      'style' => array(
+        'settings' => NULL,
+        'style' => 'greybackground',
+      ),
+      'css' => array(),
+      'extras' => array(),
+      'position' => 1,
+      'locks' => array(),
+    ),
+    array(
+      'did' => $did,
+      'panel' => 'right',
+      'type' => 'views_panes',
+      'subtype' => 'blog_tags-panel_pane_1',
+      'shown' => 1,
+      'access' => array(),
+      'configuration' => array(
+        'items_per_page' => 10,
+      ),
+      'cache' => array(),
+      'style' => array(
+        'settings' => NULL,
+        'style' => 'greybackground',
+      ),
+      'css' => array(),
+      'extras' => array(),
+      'position' => 1,
+      'locks' => array(),
+    ),
+  );
+  foreach ($blog_panels_panes as $blog_panels_pane) {
+    drupal_write_record('panels_pane', $blog_panels_pane);
+  }
+}
+
+/**
+ * Create menu item.
+ */
+function _slac_ext_org_blog_install__menu_item($nid) {
+  if (!is_numeric($nid)) {
+    return;
+  }
+  $item = array(
+    'menu_name' => 'main-menu',
+    'link_path' => 'node/' . $nid,
+    'router_path' => 'node/%',
+    'link_title' => t('Blog'),
+    'module' => 'menu',
+    'weight' => 7,
+    'expanded' => 0,
+  );
+  $exists = db_query(
+    "SELECT mlid from {menu_links} WHERE link_title=:link_title AND link_path=:link_path",
+    array(
+      ':link_title' => $item['link_title'],
+      ':link_path' => $item['link_path']
+    )
+  )->fetchField();
+
+  // Save the record if the data does not exist
+  if(!$exists) {
+    menu_link_save($item);
+  }
+}

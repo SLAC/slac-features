@@ -26,6 +26,7 @@ function slac_ext_org_install_task_demo_content() {
       'slac_event_pages',
       'slac_admin_modules',
       'slac_ext_org_frontpage',
+      'slac_ext_org_blog',
       'slac_site_404',
     ),
     $demo_modules

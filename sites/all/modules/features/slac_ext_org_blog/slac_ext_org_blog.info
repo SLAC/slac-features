@@ -1,0 +1,5 @@
+name = SLAC ExtOrg Blog
+core = 7.x
+package = SLAC
+dependencies[] = panelizer
+dependencies[] = slac_blog
