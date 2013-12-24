@@ -18,7 +18,7 @@ function slac_faq_field_default_field_bases() {
     'entity_types' => array(),
     'field_name' => 'field_slac_faq_answer',
     'field_permissions' => array(
-      'type' => 2,
+      'type' => 0,
     ),
     'foreign keys' => array(
       'format' => array(
@@ -35,7 +35,9 @@ function slac_faq_field_default_field_bases() {
     ),
     'locked' => 0,
     'module' => 'text',
-    'settings' => array(),
+    'settings' => array(
+      'profile2_private' => FALSE,
+    ),
     'translatable' => 0,
     'type' => 'text_long',
   );

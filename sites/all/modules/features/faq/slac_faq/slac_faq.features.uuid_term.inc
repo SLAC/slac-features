@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * slac_faq_demo.features.uuid_term.inc
+ * slac_faq.features.uuid_term.inc
  */
 
 /**
