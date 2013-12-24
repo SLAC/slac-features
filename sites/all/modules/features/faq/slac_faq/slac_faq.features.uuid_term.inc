@@ -7,7 +7,7 @@
 /**
  * Implements hook_uuid_features_default_terms().
  */
-function slac_faq_demo_uuid_features_default_terms() {
+function slac_faq_uuid_features_default_terms() {
   $terms = array();
 
   $terms[] = array(
