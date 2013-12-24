@@ -280,6 +280,8 @@ function slac_service_catalog_views_default_views() {
 
   /* Display: Catalog item by category */
   $handler = $view->new_display('panel_pane', 'Catalog item by category', 'panel_pane_1');
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'service-catalog-item';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['defaults']['style_options'] = FALSE;

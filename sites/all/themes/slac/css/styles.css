@@ -258,6 +258,11 @@ a {
 .content .general-right .panel-pane ul li {
   margin-bottom: 5px; }
 
+h1 {
+  font-size: 28px;
+  font-size: 1.75rem;
+  font-weight: bold; }
+
 h2 {
   font-size: 28px;
   font-size: 1.75rem;
