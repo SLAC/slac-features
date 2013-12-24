@@ -189,8 +189,6 @@ function pp_demo_beans_preprocess_pp_demo_beans_content_block_large_image(&$vars
     'subtitle' => '',
     'body' => $entity['field_content_block_body'][0]['#markup'],
     'image' => '',
-    'link' => '',
-    'link_url' => '',
     'shaded' => '',
   );
 
