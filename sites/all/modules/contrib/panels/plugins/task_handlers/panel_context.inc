@@ -317,11 +317,16 @@ function panels_panel_context_render($handler, $base_contexts, $args, $test = TR
   // Remove and add body element classes
   $panel_body_css = &drupal_static('panel_body_css');
 
-  if (isset($handler->conf['body_classes_to_remove']) && !isset($panel_body_css['body_classes_to_remove'])) {
-    $panel_body_css['body_classes_to_remove'] = $handler->conf['body_classes_to_remove'];
+  if (!isset($panel_body_css['body_classes_to_remove'])) {
+    $panel_body_css['body_classes_to_add'] = '';
+    $panel_body_css['body_classes_to_remove'] = '';
   }
-  if (isset($handler->conf['body_classes_to_add']) && !isset($panel_body_css['body_classes_to_add'])) {
-    $panel_body_css['body_classes_to_add'] = $handler->conf['body_classes_to_add'];
+
+  if (isset($handler->conf['body_classes_to_remove'])) {
+    $panel_body_css['body_classes_to_remove'] .= ' ' . $handler->conf['body_classes_to_remove'];
+  }
+  if (isset($handler->conf['body_classes_to_add'])) {
+    $panel_body_css['body_classes_to_add'] .= ' ' . $handler->conf['body_classes_to_add'];
   }
 
   $info = array(
