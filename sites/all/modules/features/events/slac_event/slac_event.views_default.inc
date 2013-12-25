@@ -77,30 +77,12 @@ function slac_event_views_default_views() {
   $handler->display->display_options['relationships']['field_slac_event_category_tid']['id'] = 'field_slac_event_category_tid';
   $handler->display->display_options['relationships']['field_slac_event_category_tid']['table'] = 'field_data_field_slac_event_category';
   $handler->display->display_options['relationships']['field_slac_event_category_tid']['field'] = 'field_slac_event_category_tid';
-  /* Relationship: Taxonomy term: Color (field_slac_event_color_reference) */
-  $handler->display->display_options['relationships']['field_slac_event_color_reference_tid']['id'] = 'field_slac_event_color_reference_tid';
-  $handler->display->display_options['relationships']['field_slac_event_color_reference_tid']['table'] = 'field_data_field_slac_event_color_reference';
-  $handler->display->display_options['relationships']['field_slac_event_color_reference_tid']['field'] = 'field_slac_event_color_reference_tid';
-  $handler->display->display_options['relationships']['field_slac_event_color_reference_tid']['relationship'] = 'field_slac_event_category_tid';
   /* Field: Content: Event Series */
   $handler->display->display_options['fields']['field_slac_event_category']['id'] = 'field_slac_event_category';
   $handler->display->display_options['fields']['field_slac_event_category']['table'] = 'field_data_field_slac_event_category';
   $handler->display->display_options['fields']['field_slac_event_category']['field'] = 'field_slac_event_category';
   $handler->display->display_options['fields']['field_slac_event_category']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_slac_event_category']['type'] = 'taxonomy_term_reference_plain';
-  /* Field: Taxonomy term: Color */
-  $handler->display->display_options['fields']['field_slac_event_color']['id'] = 'field_slac_event_color';
-  $handler->display->display_options['fields']['field_slac_event_color']['table'] = 'field_data_field_slac_event_color';
-  $handler->display->display_options['fields']['field_slac_event_color']['field'] = 'field_slac_event_color';
-  $handler->display->display_options['fields']['field_slac_event_color']['relationship'] = 'field_slac_event_color_reference_tid';
-  $handler->display->display_options['fields']['field_slac_event_color']['label'] = '';
-  $handler->display->display_options['fields']['field_slac_event_color']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_slac_event_color']['element_type'] = '0';
-  $handler->display->display_options['fields']['field_slac_event_color']['element_label_type'] = '0';
-  $handler->display->display_options['fields']['field_slac_event_color']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_slac_event_color']['element_wrapper_type'] = '0';
-  $handler->display->display_options['fields']['field_slac_event_color']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_slac_event_color']['type'] = 'text_plain';
   /* Field: Content: Event date */
   $handler->display->display_options['fields']['field_slac_event_date']['id'] = 'field_slac_event_date';
   $handler->display->display_options['fields']['field_slac_event_date']['table'] = 'field_data_field_slac_event_date';
@@ -129,15 +111,36 @@ function slac_event_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['hide_alter_empty'] = FALSE;
+  /* Field: Taxonomy term: Term ID */
+  $handler->display->display_options['fields']['tid']['id'] = 'tid';
+  $handler->display->display_options['fields']['tid']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['tid']['field'] = 'tid';
+  $handler->display->display_options['fields']['tid']['relationship'] = 'field_slac_event_category_tid';
+  $handler->display->display_options['fields']['tid']['label'] = '';
+  $handler->display->display_options['fields']['tid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['tid']['element_label_colon'] = FALSE;
   /* Field: Content with background */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['ui_name'] = 'Content with background';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="event-date">[field_slac_event_date]</div><div class="event-title">[title]</div>
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="event-wrapper"><div class="event-date">[field_slac_event_date]</div><div class="event-title event-title">[title]</div></div>
 ';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  /* Field: Taxonomy term: Event Color */
+  $handler->display->display_options['fields']['field_field_slac_event_color']['id'] = 'field_field_slac_event_color';
+  $handler->display->display_options['fields']['field_field_slac_event_color']['table'] = 'field_data_field_field_slac_event_color';
+  $handler->display->display_options['fields']['field_field_slac_event_color']['field'] = 'field_field_slac_event_color';
+  $handler->display->display_options['fields']['field_field_slac_event_color']['relationship'] = 'field_slac_event_category_tid';
+  $handler->display->display_options['fields']['field_field_slac_event_color']['label'] = '';
+  $handler->display->display_options['fields']['field_field_slac_event_color']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_field_slac_event_color']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_field_slac_event_color']['settings'] = array(
+    'selector' => '.event-title > a',
+    'property' => 'color',
+    'important' => 1,
+  );
   /* Sort criterion: Content: Event date -  start date (field_slac_event_date) */
   $handler->display->display_options['sorts']['field_slac_event_date_value']['id'] = 'field_slac_event_date_value';
   $handler->display->display_options['sorts']['field_slac_event_date_value']['table'] = 'field_data_field_slac_event_date';
@@ -626,44 +629,48 @@ function slac_event_views_default_views() {
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'none';
-  $handler->display->display_options['style_plugin'] = 'list';
-  $handler->display->display_options['style_options']['grouping'] = array(
-    0 => array(
-      'field' => 'field_slac_event_color_reference',
-      'rendered' => 1,
-      'rendered_strip' => 0,
-    ),
-  );
+  $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['inline'] = array(
     'name' => 'name',
   );
-  $handler->display->display_options['row_options']['separator'] = ',';
+  $handler->display->display_options['row_options']['hide_empty'] = TRUE;
   /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['content'] = 'Legend';
   $handler->display->display_options['header']['area']['format'] = 'filtered_html';
+  /* Field: Taxonomy term: Event Color */
+  $handler->display->display_options['fields']['field_field_slac_event_color']['id'] = 'field_field_slac_event_color';
+  $handler->display->display_options['fields']['field_field_slac_event_color']['table'] = 'field_data_field_field_slac_event_color';
+  $handler->display->display_options['fields']['field_field_slac_event_color']['field'] = 'field_field_slac_event_color';
+  $handler->display->display_options['fields']['field_field_slac_event_color']['label'] = '';
+  $handler->display->display_options['fields']['field_field_slac_event_color']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_field_slac_event_color']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_field_slac_event_color']['type'] = 'color_field_swatch';
+  $handler->display->display_options['fields']['field_field_slac_event_color']['settings'] = array(
+    'width' => '10',
+    'height' => '10',
+  );
   /* Field: Taxonomy term: Name */
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['fields']['name']['field'] = 'name';
-  $handler->display->display_options['fields']['name']['relationship'] = 'reverse_field_slac_event_color_reference_taxonomy_term';
   $handler->display->display_options['fields']['name']['label'] = '';
+  $handler->display->display_options['fields']['name']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['name']['alter']['text'] = '<div class="legend-item-wrapper">
+<div class="legend-item-color">
+[field_field_slac_event_color]
+</div>
+<div class="legend-item-name">
+[name]
+</div>
+</div>';
   $handler->display->display_options['fields']['name']['element_type'] = '0';
   $handler->display->display_options['fields']['name']['element_label_type'] = '0';
   $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['name']['element_wrapper_type'] = '0';
-  /* Field: Taxonomy term: Color */
-  $handler->display->display_options['fields']['field_slac_event_color_reference']['id'] = 'field_slac_event_color_reference';
-  $handler->display->display_options['fields']['field_slac_event_color_reference']['table'] = 'field_data_field_slac_event_color_reference';
-  $handler->display->display_options['fields']['field_slac_event_color_reference']['field'] = 'field_slac_event_color_reference';
-  $handler->display->display_options['fields']['field_slac_event_color_reference']['relationship'] = 'reverse_field_slac_event_color_reference_taxonomy_term';
-  $handler->display->display_options['fields']['field_slac_event_color_reference']['label'] = '';
-  $handler->display->display_options['fields']['field_slac_event_color_reference']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_slac_event_color_reference']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_slac_event_color_reference']['type'] = 'taxonomy_term_reference_plain';
   /* Filter criterion: Taxonomy vocabulary: Machine name */
   $handler->display->display_options['filters']['machine_name']['id'] = 'machine_name';
   $handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';

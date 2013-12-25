@@ -120,7 +120,7 @@ function slac_event_demo_uuid_features_default_content() {
   'name' => 'admin',
   'picture' => 0,
   'date' => '2013-08-10 17:35:56 +0300',
-  'author_uuid' => 'e3c3c703-ee9b-4c0f-a943-ffe3b1eea843',
+  'author_uuid' => '41374da2-73b8-4d69-a8a8-dc45942a1888',
 );
   $nodes[] = array(
   'title' => 'FACET & Test Facilities User Meeting and SAREC Review',
@@ -150,8 +150,8 @@ function slac_event_demo_uuid_features_default_content() {
   'field_slac_event_date' => array(
     'und' => array(
       0 => array(
-        'value' => '2014-08-20T09:30:00',
-        'value2' => '2014-08-20T19:30:00',
+        'value' => '2013-12-28T10:30:00',
+        'value2' => '2013-12-28T20:30:00',
         'timezone' => 'Europe/Helsinki',
         'timezone_db' => 'UTC',
         'date_type' => 'date',
@@ -232,7 +232,7 @@ function slac_event_demo_uuid_features_default_content() {
   'name' => 'admin',
   'picture' => 0,
   'date' => '2013-08-10 17:35:05 +0300',
-  'author_uuid' => 'e3c3c703-ee9b-4c0f-a943-ffe3b1eea843',
+  'author_uuid' => '41374da2-73b8-4d69-a8a8-dc45942a1888',
 );
   $nodes[] = array(
   'title' => 'Organic and Carbon Nanostructures for Energy Conversion and Energy Storage Devices',
@@ -344,7 +344,7 @@ function slac_event_demo_uuid_features_default_content() {
   'name' => 'admin',
   'picture' => 0,
   'date' => '2013-08-10 17:34:29 +0300',
-  'author_uuid' => 'e3c3c703-ee9b-4c0f-a943-ffe3b1eea843',
+  'author_uuid' => '41374da2-73b8-4d69-a8a8-dc45942a1888',
 );
   $nodes[] = array(
   'title' => 'SLAC Colloquium: \'A Walk on the Dark Side\'',
@@ -374,8 +374,8 @@ function slac_event_demo_uuid_features_default_content() {
   'field_slac_event_date' => array(
     'und' => array(
       0 => array(
-        'value' => '2014-08-31T12:30:00',
-        'value2' => '2014-08-31T18:45:00',
+        'value' => '2014-01-15T13:30:00',
+        'value2' => '2014-01-17T19:45:00',
         'timezone' => 'Europe/Helsinki',
         'timezone_db' => 'UTC',
         'date_type' => 'date',
@@ -456,7 +456,7 @@ function slac_event_demo_uuid_features_default_content() {
   'name' => 'admin',
   'picture' => 0,
   'date' => '2013-08-10 17:16:00 +0300',
-  'author_uuid' => 'e3c3c703-ee9b-4c0f-a943-ffe3b1eea843',
+  'author_uuid' => '41374da2-73b8-4d69-a8a8-dc45942a1888',
 );
   $nodes[] = array(
   'title' => '8th International Conference on Inelastic X-ray Scattering',
@@ -587,7 +587,7 @@ function slac_event_demo_uuid_features_default_content() {
   'name' => 'admin',
   'picture' => 0,
   'date' => '2013-08-10 17:38:37 +0300',
-  'author_uuid' => 'e3c3c703-ee9b-4c0f-a943-ffe3b1eea843',
+  'author_uuid' => '41374da2-73b8-4d69-a8a8-dc45942a1888',
 );
   $nodes[] = array(
   'title' => 'July 8, 9 SLAC Colloquia Postponed for One Week',
@@ -725,7 +725,7 @@ function slac_event_demo_uuid_features_default_content() {
   'name' => 'admin',
   'picture' => 0,
   'date' => '2013-08-10 17:37:03 +0300',
-  'author_uuid' => 'e3c3c703-ee9b-4c0f-a943-ffe3b1eea843',
+  'author_uuid' => '41374da2-73b8-4d69-a8a8-dc45942a1888',
 );
   $nodes[] = array(
   'title' => 'Electroweak Production: The Path to SUSY?',
@@ -837,7 +837,7 @@ function slac_event_demo_uuid_features_default_content() {
   'name' => 'admin',
   'picture' => 0,
   'date' => '2013-08-10 17:33:43 +0300',
-  'author_uuid' => 'e3c3c703-ee9b-4c0f-a943-ffe3b1eea843',
+  'author_uuid' => '41374da2-73b8-4d69-a8a8-dc45942a1888',
 );
   $nodes[] = array(
   'title' => 'Photon Science Seminar Today: Shedding Light into Rapidly Changing, Opaque Plasmas',
@@ -860,7 +860,7 @@ function slac_event_demo_uuid_features_default_content() {
         'value' => '<p>At today&#39;s Photon Science Seminar, Marta Fajardo of IST in Portugal will discuss how matter behaves under conditions of extreme temperature, pressure, density and electromagnetic fields. IST (Instituto Superior Técnico) is a Technical University of Lisbon engineering school.</p><p>Her talk, &quot;4D-HD for high-energy-density plasmas: shedding light into rapidly changing, opaque plasmas,&quot; begins at 3 p.m. in Building 901&#39;s Redtail Hawk conference room.</p><p>The talk will highlight how high-energy-density states of matter occur in astrophysical scenarios and also during every high-intensity laser-solid interaction, when a solid is heated to the plasma state. Although such states are easy to produce, the high densities last only briefly, and since visible radiation cannot penetrate them, traditional diagnostics leave an incomplete picture of these plasmas.</p><p>Fajardo will discuss how high-harmonic radiation from laser-gas interactions, with photon energies in the extreme ultraviolet spectrum, is capable of probing solid density matter. This source, she will explain, has many unique qualities:</p><ul><li>It holds the record for the shortest pulses ever produced, in the attosecond range.</li><li>It essentially behaves like a laser, with linear polarization, small divergence and full spatio-temporal coherence.</li><li>It has a &quot;bonus&quot; feature: a multicolored discrete spectrum.</li></ul><p>These characteristics allow for applications such as nanometer-scale coherent imaging. Different techniques, such as diffraction imaging and 3-D holography, have been demonstrated by Fajardo&#39;s research groups and other researchers. Recent improvements have allowed single-shot imaging and opened the way for attosecond time resolution.</p><p>Fajardo will describe the use of high-harmonic generation (HHG) for opacity measurements and the development of an extreme ultraviolet (XUV) plasma refractive index diagnostic equipped with a wave-front sensor, as well as recent advances in XUV holography and plans to measure warm dense plasmas produced at SLAC&#39;s Linac Coherent Light Source (LCLS) with these techniques.</p><p>Tapping into the potential of HHG sources as a probe, one goal, according to Fajardo, is to shine some light into matter under extreme conditions through ultrafast imaging of dense plasmas.</p>',
         'summary' => '',
         'format' => 'full_html',
-        'safe_value' => '<p>At today\'s Photon Science Seminar, Marta Fajardo of IST in Portugal will discuss how matter behaves under conditions of extreme temperature, pressure, density and electromagnetic fields. IST (Instituto Superior Técnico) is a Technical University of Lisbon engineering school.</p>
+        'safe_value' => ' <p>At today\'s Photon Science Seminar, Marta Fajardo of IST in Portugal will discuss how matter behaves under conditions of extreme temperature, pressure, density and electromagnetic fields. IST (Instituto Superior Técnico) is a Technical University of Lisbon engineering school.</p>
 <p>Her talk, "4D-HD for high-energy-density plasmas: shedding light into rapidly changing, opaque plasmas," begins at 3 p.m. in Building 901\'s Redtail Hawk conference room.</p>
 <p>The talk will highlight how high-energy-density states of matter occur in astrophysical scenarios and also during every high-intensity laser-solid interaction, when a solid is heated to the plasma state. Although such states are easy to produce, the high densities last only briefly, and since visible radiation cannot penetrate them, traditional diagnostics leave an incomplete picture of these plasmas.</p>
 <p>Fajardo will discuss how high-harmonic radiation from laser-gas interactions, with photon energies in the extreme ultraviolet spectrum, is capable of probing solid density matter. This source, she will explain, has many unique qualities:</p>
@@ -870,8 +870,8 @@ function slac_event_demo_uuid_features_default_content() {
 </ul><p>These characteristics allow for applications such as nanometer-scale coherent imaging. Different techniques, such as diffraction imaging and 3-D holography, have been demonstrated by Fajardo\'s research groups and other researchers. Recent improvements have allowed single-shot imaging and opened the way for attosecond time resolution.</p>
 <p>Fajardo will describe the use of high-harmonic generation (HHG) for opacity measurements and the development of an extreme ultraviolet (XUV) plasma refractive index diagnostic equipped with a wave-front sensor, as well as recent advances in XUV holography and plans to measure warm dense plasmas produced at SLAC\'s Linac Coherent Light Source (LCLS) with these techniques.</p>
 <p>Tapping into the potential of HHG sources as a probe, one goal, according to Fajardo, is to shine some light into matter under extreme conditions through ultrafast imaging of dense plasmas.</p>
-',
-        'safe_summary' => '',
+ ',
+        'safe_summary' => '  ',
       ),
     ),
   ),
@@ -987,7 +987,7 @@ function slac_event_demo_uuid_features_default_content() {
   'name' => 'admin',
   'picture' => 0,
   'date' => '2013-08-10 17:37:55 +0300',
-  'author_uuid' => 'e3c3c703-ee9b-4c0f-a943-ffe3b1eea843',
+  'author_uuid' => '41374da2-73b8-4d69-a8a8-dc45942a1888',
 );
   $nodes[] = array(
   'title' => 'SLAC Colloquium: \'LZ and the future of WIMPs\'',
@@ -1099,7 +1099,7 @@ function slac_event_demo_uuid_features_default_content() {
   'name' => 'admin',
   'picture' => 0,
   'date' => '2013-08-10 17:32:29 +0300',
-  'author_uuid' => 'e3c3c703-ee9b-4c0f-a943-ffe3b1eea843',
+  'author_uuid' => '41374da2-73b8-4d69-a8a8-dc45942a1888',
 );
   $nodes[] = array(
   'title' => 'SLAC Colloquium: \'Do WIMPs Rule? The LUX Experiment and the Search for Cosmic Dark Matter\'',
@@ -1211,7 +1211,7 @@ function slac_event_demo_uuid_features_default_content() {
   'name' => 'admin',
   'picture' => 0,
   'date' => '2013-08-10 17:33:04 +0300',
-  'author_uuid' => 'e3c3c703-ee9b-4c0f-a943-ffe3b1eea843',
+  'author_uuid' => '41374da2-73b8-4d69-a8a8-dc45942a1888',
 );
   $nodes[] = array(
   'title' => 'Photon Science Seminar: Commissioning the New LCLS \'XTCAV\'',
@@ -1241,8 +1241,8 @@ function slac_event_demo_uuid_features_default_content() {
   'field_slac_event_date' => array(
     'und' => array(
       0 => array(
-        'value' => '2014-08-20T10:45:00',
-        'value2' => '2014-08-20T13:45:00',
+        'value' => '2014-01-02T11:45:00',
+        'value2' => '2014-01-06T14:45:00',
         'timezone' => 'Europe/Helsinki',
         'timezone_db' => 'UTC',
         'date_type' => 'date',
@@ -1323,7 +1323,7 @@ function slac_event_demo_uuid_features_default_content() {
   'name' => 'admin',
   'picture' => 0,
   'date' => '2013-08-10 17:31:44 +0300',
-  'author_uuid' => 'e3c3c703-ee9b-4c0f-a943-ffe3b1eea843',
+  'author_uuid' => '41374da2-73b8-4d69-a8a8-dc45942a1888',
 );
   return $nodes;
 }

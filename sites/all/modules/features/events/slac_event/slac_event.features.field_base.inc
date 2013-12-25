@@ -39,6 +39,36 @@ function slac_event_field_default_field_bases() {
     'type' => 'text_with_summary',
   );
 
+  // Exported field_base: 'field_field_slac_event_color'
+  $field_bases['field_field_slac_event_color'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_field_slac_event_color',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
+    'foreign keys' => array(),
+    'indexes' => array(
+      'rgb' => array(
+        0 => 'rgb',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'color_field',
+    'settings' => array(
+      'palette' => '',
+      'profile2_private' => FALSE,
+      'show_buttons' => 0,
+      'show_input' => 1,
+      'show_palette' => 0,
+      'show_palette_only' => 0,
+    ),
+    'translatable' => 0,
+    'type' => 'color_field_rgb',
+  );
+
   // Exported field_base: 'field_location'
   $field_bases['field_location'] = array(
     'active' => 1,
@@ -157,73 +187,6 @@ function slac_event_field_default_field_bases() {
           'parent' => 0,
         ),
       ),
-    ),
-    'translatable' => 0,
-    'type' => 'taxonomy_term_reference',
-  );
-
-  // Exported field_base: 'field_slac_event_color'
-  $field_bases['field_slac_event_color'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_slac_event_color',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
-    'indexes' => array(
-      'format' => array(
-        0 => 'format',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'text',
-    'settings' => array(
-      'max_length' => 255,
-    ),
-    'translatable' => 0,
-    'type' => 'text',
-  );
-
-  // Exported field_base: 'field_slac_event_color_reference'
-  $field_bases['field_slac_event_color_reference'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_slac_event_color_reference',
-    'field_permissions' => array(
-      'type' => 0,
-    ),
-    'foreign keys' => array(
-      'tid' => array(
-        'columns' => array(
-          'tid' => 'tid',
-        ),
-        'table' => 'taxonomy_term_data',
-      ),
-    ),
-    'indexes' => array(
-      'tid' => array(
-        0 => 'tid',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'taxonomy',
-    'settings' => array(
-      'allowed_values' => array(
-        0 => array(
-          'vocabulary' => 'category_colors',
-          'parent' => 0,
-        ),
-      ),
-      'profile2_private' => FALSE,
     ),
     'translatable' => 0,
     'type' => 'taxonomy_term_reference',

@@ -490,77 +490,46 @@ function slac_event_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-category_colors-field_slac_event_color'
-  $field_instances['taxonomy_term-category_colors-field_slac_event_color'] = array(
-    'bundle' => 'category_colors',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'taxonomy_term',
-    'field_name' => 'field_slac_event_color',
-    'label' => 'Color',
-    'required' => 1,
-    'settings' => array(
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
-      'weight' => 1,
-    ),
-  );
-
-  // Exported field_instance: 'taxonomy_term-event_categories-field_slac_event_color_reference'
-  $field_instances['taxonomy_term-event_categories-field_slac_event_color_reference'] = array(
+  // Exported field_instance: 'taxonomy_term-event_categories-field_field_slac_event_color'
+  $field_instances['taxonomy_term-event_categories-field_field_slac_event_color'] = array(
     'bundle' => 'event_categories',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'rgb' => '#e8dfdf',
+      ),
+    ),
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
+        'label' => 'hidden',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 0,
+        'type' => 'hidden',
+        'weight' => 1,
       ),
     ),
     'entity_type' => 'taxonomy_term',
-    'field_name' => 'field_slac_event_color_reference',
-    'label' => 'Color',
+    'field_name' => 'field_field_slac_event_color',
+    'label' => 'Event Color',
     'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 1,
-      'module' => 'options',
+      'active' => 0,
+      'module' => 'color_field',
       'settings' => array(),
-      'type' => 'options_select',
-      'weight' => 1,
+      'type' => 'color_field_spectrum_widget',
+      'weight' => 2,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Color');
   t('Comment');
   t('Description');
   t('Enter comma separated tags (i.e. Photon, X-Ray, Accelerator)');
+  t('Event Color');
   t('Event Organization');
   t('Event Scientific Area');
   t('Event Series');

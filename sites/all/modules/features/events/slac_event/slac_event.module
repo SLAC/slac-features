@@ -16,7 +16,7 @@ function slac_event_preprocess_node(&$vars) {
 
   $previous_event_year_month_day = &drupal_static(__FUNCTION__ . '-previous_event_year_month_day', '');
   $row_counter = &drupal_static(__FUNCTION__ . '-row_counter', 1);
-  $total_rows = count($vars['view']->result);
+  $total_rows = _taxonomy_term_count_nodes($vars['field_slac_event_category']['und'][0]['tid']);
 
   $vars += array(
     'add_date_html_prefix' => FALSE,
@@ -69,4 +69,30 @@ function _get_display_date($date, $timezone, $timezone_db) {
   $date_convert = new DateTime($date, new DateTimeZone($timezone_db));
   $date_convert->setTimezone(new DateTimeZone($timezone));
   return $date_convert->getTimestamp();
+}
+
+/**
+ * Count the number of nodes tagged with a term.
+ */
+function _taxonomy_term_count_nodes($tid, $type = 0) {
+  static $count;
+
+  if (isset($count[$type][$tid])) {
+    return $count[$type][$tid];
+  }
+
+  $query = db_select('taxonomy_index', 't');
+  $query->condition('tid', $tid, '=');
+  $query->addExpression('COUNT(*)', 'count_nodes');
+
+
+  // Restrict query by Content Type.
+  if (!empty($type)) {
+    $query->join('node', 'n', 't.nid = n.nid');
+    $query->condition('type', $type, '=');
+  }
+
+  $count[$type][$tid] = $query->execute()->fetchField();
+
+  return $count[$type][$tid];
 }

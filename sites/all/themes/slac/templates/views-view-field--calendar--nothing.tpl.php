@@ -24,18 +24,24 @@
 $color = '';
 if (isset($row->field_field_slac_event_category[0]['raw']['taxonomy_term'])) {
   $taxonomy_term = $row->field_field_slac_event_category[0]['raw']['taxonomy_term'];
-  if (isset($taxonomy_term->field_slac_event_color_reference[LANGUAGE_NONE][0]['tid'])) {
-    $term_tid = $taxonomy_term->field_slac_event_color_reference[LANGUAGE_NONE][0]['tid'];
-    $term_color = taxonomy_term_load($term_tid);
-    $color = strtolower($term_color->name);
+  if (isset($taxonomy_term->field_field_slac_event_color[LANGUAGE_NONE][0]['rgb'])) {
+    $color = $taxonomy_term->field_field_slac_event_color[LANGUAGE_NONE][0]['rgb'];
   }
 }
+if (isset($row->field_field_slac_event_date[0]['rendered']['#markup'])) {
+  $date = $row->field_field_slac_event_date[0]['rendered']['#markup'];
+}
+$title = $row->node_title;
+$node_url = '/node/' . $row->nid;
 ?>
 
-<?php if ($color): ?>
-  <div class="event-bg-<?php print $color;?>" style="background-color:<?php print $color;?>">
-<?php endif;?>
-<?php print $output; ?>
-<?php if ($color): ?>
+<div class="event-wrapper">
+  <div class="event-date">
+    <?php print $date; ?>
   </div>
-<?php endif;?>
+  <div class="event-title event-title-<?php print $color;?>">
+    <a style="color:<?php print $color;?>" href="<?php print $node_url; ?>">
+      <?php print $title; ?>
+    </a>
+  </div>
+</div>
