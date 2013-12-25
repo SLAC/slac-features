@@ -32,6 +32,7 @@ features[field_instance][] = node-slac_news-field_slac_news_source
 features[field_instance][] = node-slac_news-field_slac_news_tags
 features[field_instance][] = node-slac_news-field_slac_news_type
 features[image][] = crop_news_landscape
+features[image][] = slac_news_image_details
 features[menu_custom][] = menu-news-menu
 features[node][] = slac_news
 features[page_manager_handlers][] = node_view_panel_context_2
