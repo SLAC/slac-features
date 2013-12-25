@@ -27,7 +27,7 @@ function slac_ext_org_frontpage_install() {
  */
 function _slac_ext_org_frontpage_install__panels_display() {
   $panels_display = array(
-    'layout' => 'two_col',
+    'layout' => 'two_col_extorg',
     'layout_settings' => array(),
     'panel_settings' => array(
       'style_settings' => array (
@@ -191,7 +191,7 @@ function _slac_ext_org_frontpage_install__panes($did) {
     ),
     array(
       'did' => $did,
-      'panel' => 'left',
+      'panel' => 'left_inner',
       'type' => 'fieldable_panels_pane',
       'subtype' => 'uuid:' . $mission_fpp->uuid,
       'shown' => 1,
@@ -208,7 +208,7 @@ function _slac_ext_org_frontpage_install__panes($did) {
     ),
     array(
       'did' => $did,
-      'panel' => 'left',
+      'panel' => 'right_inner',
       'type' => 'fieldable_panels_pane',
       'subtype' => 'uuid:' . $gallery_fpp->uuid,
       'shown' => 1,
