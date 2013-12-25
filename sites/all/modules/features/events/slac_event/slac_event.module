@@ -16,7 +16,12 @@ function slac_event_preprocess_node(&$vars) {
 
   $previous_event_year_month_day = &drupal_static(__FUNCTION__ . '-previous_event_year_month_day', '');
   $row_counter = &drupal_static(__FUNCTION__ . '-row_counter', 1);
-  $total_rows = _taxonomy_term_count_nodes($vars['field_slac_event_category']['und'][0]['tid']);
+  if (isset($vars['view']->result)) {
+    $total_rows = count($vars['view']->result);
+  }
+  else {
+    $total_rows = _taxonomy_term_count_nodes($vars['field_slac_event_category']['und'][0]['tid']);
+  }
 
   $vars += array(
     'add_date_html_prefix' => FALSE,
