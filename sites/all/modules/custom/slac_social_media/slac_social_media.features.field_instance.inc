@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * slac_social_media_block.features.field_instance.inc
+ * slac_social_media.features.field_instance.inc
  */
 
 /**
  * Implements hook_field_default_field_instances().
  */
-function slac_social_media_block_field_default_field_instances() {
+function slac_social_media_field_default_field_instances() {
   $field_instances = array();
 
   // Exported field_instance: 'fieldable_panels_pane-social_media-field_slac_sm_facebook_page'

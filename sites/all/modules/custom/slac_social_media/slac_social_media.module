@@ -1,5 +1,7 @@
 <?php
 
+include_once 'slac_social_media.features.inc';
+
 /**
  * Implements hook_entity_info_alter().
  */
@@ -22,7 +24,7 @@ function slac_social_media_entity_info_alter(&$entity_info) {
  * Implements hook_block_info()
  * @return type 
  */
-function slac_social_media_block_info() {
+function slac_social_media_info() {
   $blocks['social_media'] = array(
     'info' => t('Social media'),
     'status' => 1,
@@ -36,7 +38,7 @@ function slac_social_media_block_info() {
  * @param type $delta
  * @return type 
  */
-function slac_social_media_block_view($delta = ''){
+function slac_social_media_view($delta = ''){
   $block = array();
   if($delta == 'social_media') {
     $query = db_select('fieldable_panels_panes', 'fpp')->condition('bundle', 'social_media')->fields('fpp',array('fpid'))->execute()->fetchAll();

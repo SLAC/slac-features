@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * slac_social_media_block.strongarm.inc
+ * slac_social_media.strongarm.inc
  */
 
 /**
  * Implements hook_strongarm().
  */
-function slac_social_media_block_strongarm() {
+function slac_social_media_strongarm() {
   $export = array();
 
   $strongarm = new stdClass();

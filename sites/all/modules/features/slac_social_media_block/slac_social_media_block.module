@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the SLAC Social Media feature.
- */
-
-include_once 'slac_social_media_block.features.inc';

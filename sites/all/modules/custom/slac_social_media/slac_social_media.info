@@ -1,6 +1,26 @@
 name = SLAC Social Media
 description = Provide new bundle for FPP to add social media
-package = Propeople
+package = SLAC
 core = 7.x
 
+dependencies[] = ctools
+dependencies[] = features
 dependencies[] = fieldable_panels_panes
+dependencies[] = link
+dependencies[] = strongarm
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:2
+features[field_base][] = field_slac_sm_facebook_page
+features[field_base][] = field_slac_sm_flickr_page
+features[field_base][] = field_slac_sm_google_page
+features[field_base][] = field_slac_sm_twitter_page
+features[field_base][] = field_slac_sm_youtube_page
+features[field_instance][] = fieldable_panels_pane-social_media-field_slac_sm_facebook_page
+features[field_instance][] = fieldable_panels_pane-social_media-field_slac_sm_flickr_page
+features[field_instance][] = fieldable_panels_pane-social_media-field_slac_sm_google_page
+features[field_instance][] = fieldable_panels_pane-social_media-field_slac_sm_twitter_page
+features[field_instance][] = fieldable_panels_pane-social_media-field_slac_sm_youtube_page
+features[user_permission][] = create fieldable social_media
+features[user_permission][] = delete fieldable social_media
+features[user_permission][] = edit fieldable social_media
+features[variable][] = field_bundle_settings_fieldable_panels_pane__social_media

@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * slac_social_media_block.features.field_base.inc
+ * slac_social_media.features.field_base.inc
  */
 
 /**
  * Implements hook_field_default_field_bases().
  */
-function slac_social_media_block_field_default_field_bases() {
+function slac_social_media_field_default_field_bases() {
   $field_bases = array();
 
   // Exported field_base: 'field_slac_sm_facebook_page'

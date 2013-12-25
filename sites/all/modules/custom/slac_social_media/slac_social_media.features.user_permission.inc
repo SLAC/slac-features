@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * slac_social_media_block.features.user_permission.inc
+ * slac_social_media.features.user_permission.inc
  */
 
 /**
  * Implements hook_user_default_permissions().
  */
-function slac_social_media_block_user_default_permissions() {
+function slac_social_media_user_default_permissions() {
   $permissions = array();
 
   // Exported permission: create fieldable social_media.
