@@ -50,7 +50,8 @@ dependencies[] = jreject
 dependencies[] = googleanalytics
 dependencies[] = panelizer
 dependencies[] = profile2
-dependencies[] = views_responsive_grid
+dependencies[] = views_bulk_operations
+dependencies[] = admin_views
 
 ;Development modules
 dependencies[] = devel
