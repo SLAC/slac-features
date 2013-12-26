@@ -5,3 +5,23 @@
  */
 
 include_once 'slac_blog_demo.features.inc';
+
+/**
+ * Implements hook_entity_insert().
+ */
+function slac_blog_demo_entity_insert($entity, $type) {
+  if ($type != 'user' || !isset($entity->uuid)) {
+    return;
+  }
+
+  // Users created by this slac_blog_demo module.
+  $account_uuids = array(
+    '3b92ccfc-e7f7-4599-84d5-71e3e35c6981',
+    '4edce278-5dc3-4e83-b62e-9f3b5556007e',
+    'af70240a-9f15-49fa-a854-27c6f484ebc9');
+
+  if (in_array($entity->uuid, $account_uuids)) {
+    module_load_include('inc', 'slac_blog_demo', 'slac_blog_demo_profiles');
+    _slac_blog_demo_create_profiles($entity->uid);
+  }
+}

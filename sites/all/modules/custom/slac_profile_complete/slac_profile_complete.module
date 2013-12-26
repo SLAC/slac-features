@@ -17,8 +17,10 @@ function slac_profile_complete_ctools_plugin_directory($owner, $plugin_type) {
  * Implements hook_username_alter().
  */
 function slac_profile_complete_username_alter(&$name, $account) {
-  $contact_profile = profile2_load_by_user($account, SLAC_PROFILE_CONTACT_TYPE);
-  if (isset($contact_profile->field_prf_contact_name[LANGUAGE_NONE][0]['value'])) {
-    $name = $contact_profile->field_prf_contact_name[LANGUAGE_NONE][0]['value'];
+  if (function_exists('profile2_load_by_user')) {
+    $contact_profile = profile2_load_by_user($account, SLAC_PROFILE_CONTACT_TYPE);
+    if (isset($contact_profile->field_prf_contact_name[LANGUAGE_NONE][0]['value'])) {
+      $name = $contact_profile->field_prf_contact_name[LANGUAGE_NONE][0]['value'];
+    }
   }
 }
