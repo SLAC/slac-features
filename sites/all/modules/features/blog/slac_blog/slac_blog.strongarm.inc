@@ -14,7 +14,7 @@ function slac_blog_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_blog';
-  $strongarm->value = 'edit-display';
+  $strongarm->value = 'edit-comment';
   $export['additional_settings__active_tab_blog'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -28,7 +28,7 @@ function slac_blog_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_blog';
-  $strongarm->value = '2';
+  $strongarm->value = '1';
   $export['comment_blog'] = $strongarm;
 
   $strongarm = new stdClass();
