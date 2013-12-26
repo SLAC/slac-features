@@ -1,5 +1,9 @@
 <?php
 
+define('SLAC_PROFILE_BIO_TYPE', 'bio');
+define('SLAC_PROFILE_CONTACT_TYPE', 'contact');
+define('SLAC_PROFILE_SOCIAL_MEDIA_TYPE', 'social_media');
+
 /**
  * Implements hook_ctools_plugin_directory().
  */
@@ -7,4 +11,17 @@ function slac_profile_complete_ctools_plugin_directory($owner, $plugin_type) {
   if ($owner == 'ctools' && $plugin_type == 'content_types') {
     return 'plugins/' . $plugin_type;
   }
+}
+
+/**
+ * Build the full name of the account based on his profile.
+ */
+function _slac_profile_get_users_name($uid) {
+  $contact_profile = profile2_load_by_user($uid, SLAC_PROFILE_CONTACT_TYPE);
+  if (isset($contact_profile->field_prf_contact_name[LANGUAGE_NONE][0]['value'])) {
+    return $contact_profile->field_prf_contact_name[LANGUAGE_NONE][0]['value'];
+  }
+
+  $account = user_load($uid);
+  return $account->name;
 }

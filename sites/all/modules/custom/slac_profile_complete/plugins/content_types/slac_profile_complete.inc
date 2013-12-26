@@ -46,14 +46,23 @@ function slac_profile_complete_check_profile ($profile_type, $profile_label, $pr
  */
 function slac_profile_complete_pane_render($subtype, $conf, $args, $contexts) {
 
-  $content = slac_profile_complete_check_profile ('bio', 'Bio', 'profile-bio');
-  $content .= slac_profile_complete_check_profile ('contact', 'Contact', 'profile-contact');
-  $content .= slac_profile_complete_check_profile ('social_media', 'Social Media', "profile-social_media");
+  $accounts_uid = $args[0];
+  global $user;
 
   $block = new stdClass();
 
-  // initial content is blank
-  $block->title = t('Your Account'); // This will be overridden by the user within the panel options.
+  if ($user->uid == $accounts_uid) {
+    $block->title = t('Your account');
+
+    $content = slac_profile_complete_check_profile('bio', 'Bio', SLAC_PROFILE_BIO_TYPE);
+    $content .= slac_profile_complete_check_profile('contact', 'Contact', SLAC_PROFILE_CONTACT_TYPE);
+    $content .= slac_profile_complete_check_profile('social_media', 'Social Media', SLAC_PROFILE_SOCIAL_MEDIA_TYPE);
+  }
+  else {
+    $block->title = t('Account of @username', array('@username' => _slac_profile_get_users_name($accounts_uid)));
+
+    $content = t('Placeholder for profile information.');
+  }
   $block->content = $content;
 
   return $block;
