@@ -59,7 +59,8 @@ function slac_profile_complete_pane_render($subtype, $conf, $args, $contexts) {
     $content .= slac_profile_complete_check_profile('social_media', 'Social Media', SLAC_PROFILE_SOCIAL_MEDIA_TYPE);
   }
   else {
-    $block->title = t('Account of @username', array('@username' => _slac_profile_get_users_name($accounts_uid)));
+    $account = user_load($accounts_uid);
+    $block->title = t('Account of @username', array('@username' => format_username($account)));
 
     $content = t('Placeholder for profile information.');
   }

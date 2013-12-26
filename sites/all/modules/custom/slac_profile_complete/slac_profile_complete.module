@@ -14,14 +14,11 @@ function slac_profile_complete_ctools_plugin_directory($owner, $plugin_type) {
 }
 
 /**
- * Build the full name of the account based on his profile.
+ * Implements hook_username_alter().
  */
-function _slac_profile_get_users_name($uid) {
-  $contact_profile = profile2_load_by_user($uid, SLAC_PROFILE_CONTACT_TYPE);
+function slac_profile_complete_username_alter(&$name, $account) {
+  $contact_profile = profile2_load_by_user($account, SLAC_PROFILE_CONTACT_TYPE);
   if (isset($contact_profile->field_prf_contact_name[LANGUAGE_NONE][0]['value'])) {
-    return $contact_profile->field_prf_contact_name[LANGUAGE_NONE][0]['value'];
+    $name = $contact_profile->field_prf_contact_name[LANGUAGE_NONE][0]['value'];
   }
-
-  $account = user_load($uid);
-  return $account->name;
 }
