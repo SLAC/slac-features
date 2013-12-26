@@ -1,6 +1,12 @@
 name = SLAC Social Share Block
 description = Provide new bundle for FPP to add social share icons
-package = SLAC
 core = 7.x
-
+package = SLAC
+php = 5.2.4
+dependencies[] = features
 dependencies[] = fieldable_panels_panes
+dependencies[] = list
+dependencies[] = options
+features[features_api][] = api:2
+features[field_base][] = field_share_options
+features[field_instance][] = fieldable_panels_pane-share_block-field_share_options
