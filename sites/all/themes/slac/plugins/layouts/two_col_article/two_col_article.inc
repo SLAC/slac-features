@@ -14,6 +14,7 @@ $plugin = array(
   'regions' => array(
     'left' => t('Left Column'),
     'left_title' => t('Left Column Title'),
+    'left_author' => t('Left Column Author'),
     'right' => t('Right Column')
   ),
 );

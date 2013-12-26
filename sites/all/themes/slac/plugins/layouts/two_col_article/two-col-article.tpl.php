@@ -17,7 +17,13 @@
 <div class="panel-display general-two-col article_panel_layout" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
   <?php if ($content['left_title']): ?>
     <div class="panel-panel general-left-title">
-      <div class="inside"><?php print $content['left_title']; ?></div>
+      <div class="inside"><?php print $content['left_title']; ?>
+        <?php if ($content['left_title']): ?>
+          <div class="author-details">
+            <?php print $content['left_author']; ?>
+          </div>
+        <?php endif ?>
+      </div>
     </div>
   <?php endif ?>
   <div class="panel-panel general-left">

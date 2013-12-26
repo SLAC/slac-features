@@ -331,12 +331,15 @@ html {
     .page-basic > .content .general-left:after {
       clear: both; }
   .page-basic > .content .general-right {
-    margin-top: 40px; }
+    /*margin-top: 40px */ }
     .front .page-basic > .content .general-right {
       margin-top: 0; }
 .page-basic > .header-menu,
 .page-basic > .main-menu {
   display: none; }
+
+.general-left-title {
+  margin-bottom: 25px; }
 
 .pane-pane-messages {
   margin-bottom: 10px; }
@@ -1265,11 +1268,9 @@ table.sticky-table {
 ul.news-archive-class li .item-list {
   margin-left: 10px; }
 
-.article_panel_layout .pane-node-title {
-  margin-bottom: 5px; }
-  .article_panel_layout .pane-node-title h2 {
-    font-size: 20px;
-    font-size: 1.25rem; }
+.article_panel_layout .pane-node-title h2 {
+  font-size: 20px;
+  font-size: 1.25rem; }
 .article_panel_layout .author {
   border-right: 1px solid #878787;
   margin-right: 1px;
@@ -1280,8 +1281,9 @@ ul.news-archive-class li .item-list {
   font-size: 0.875rem;
   font-style: italic;
   color: #878787;
-  line-height: 1;
-  margin-bottom: 35px; }
+  line-height: 1; }
+.article_panel_layout .pane-node-field-slac-news-media {
+  margin-bottom: 25px; }
 .article_panel_layout .pane-node-body {
   font-size: 14px;
   font-size: 0.875rem; }

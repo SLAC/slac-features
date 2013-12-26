@@ -75,7 +75,7 @@ html
     .general-left
       +clearfix
     .general-right
-      margin-top: 40px
+      /*margin-top: 40px*/
       .front &
         margin-top: 0
   
@@ -84,7 +84,8 @@ html
   > .main-menu
     display: none
 
-
+.general-left-title
+  margin-bottom: 25px
  
   
 //System user panel
@@ -1313,7 +1314,7 @@ ul.news-archive-class
 //Article layout based on plugin layout
 .article_panel_layout
   .pane-node-title
-    margin-bottom: 5px
+    //margin-bottom: 25px
     h2
       +fontsize-rem(20px)
   
@@ -1328,7 +1329,10 @@ ul.news-archive-class
     font-style: italic
     color: $grey-87
     line-height: 1
-    margin-bottom: 35px
+    //margin-bottom: 35px
+    
+  .pane-node-field-slac-news-media
+    margin-bottom: 25px  
     
   .pane-node-body
     +fontsize-rem(14px)
