@@ -2282,7 +2282,6 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'use page manager',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
     ),
     'module' => 'page_manager',
   );
