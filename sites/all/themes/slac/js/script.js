@@ -41,31 +41,7 @@
         $(this).append($mobile_user_menu);
       });
 
-      $('.user-icons a').each(function () {
-        //Add icon class
-        $(this).addClass('mob-icon');
 
-        //Add class to make icon appear
-        if ($(this).attr('href') === '/user/login') {
-          $(this).addClass('login-icon');
-        }
-
-        if ($(this).attr('href') === '/user/logout') {
-          $(this).addClass('logout-icon');
-        }
-
-        if ($(this).attr('href') === '/user') {
-          $(this).addClass('account-icon');
-        }
-
-        //Add active class for icons
-        if ($(this).attr('href') === '/user/login' && $pathname.search('/user') === 0) {
-          $(this).addClass('active');
-        }
-        if ($(this).attr('href') === '/user' && $pathname.search('/user') === 0) {
-          $(this).addClass('active');
-        }
-      });
 
       $('.menu-icon', context).once('menu-icon', function () {
         $(this).click(function (event) {
