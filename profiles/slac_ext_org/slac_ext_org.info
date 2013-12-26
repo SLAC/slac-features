@@ -120,6 +120,7 @@ dependencies[] = slac_rss_block
 
 ;Features
 dependencies[] = default_site_template_eo
+dependencies[] = slac_user_menu_classes
 
 ; Profile.
 dependencies[] = pp_profile
