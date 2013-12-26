@@ -1,0 +1,85 @@
+<?php
+
+/**
+ * Implements hook_entity_info_alter().
+ */
+function slac_share_block_entity_info_alter(&$entity_info) {
+  $entity_info['fieldable_panels_pane']['bundles']['share_block'] = array(
+    'label' => t('Share Block'),
+    'pane category' => t('Share Block'),
+    'pane top level' => TRUE, // set to true to make this show as a top level icon
+    'admin' => array(
+      'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
+      'bundle argument' => 4,
+      // Note that this has all _ replaced with - from the bundle name.
+      'real path' => 'admin/structure/fieldable-panels-panes/manage/share-block',
+      'access arguments' => array('administer fieldable panels panes'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_entity_view_alter().
+ */
+function slac_share_block_entity_view_alter(&$build, $type) {
+  if ($type != 'fieldable_panels_pane') {
+    return;
+  }
+  if ($build['#bundle'] == 'share_block') {
+    $build['#theme'] = 'slac_share_block';
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function slac_share_block_theme() {
+  return array(
+    'slac_share_block' => array(
+      'render element' => 'entity',
+      'template' => 'slac_share_block',
+    ),
+  );
+}
+
+/**
+ * Preprocess function for slac_share_block_block.tpl.php template.
+ */
+function slac_share_block_preprocess_slac_share_block(&$vars) {
+  global $base_url;
+  $current_page_url = $base_url . '/' . drupal_get_path_alias(current_path());
+
+  $item_values = array();
+  $entity = $vars['entity'];
+
+  if (isset($entity['field_share_options']['#items'])) {
+    $items = $entity['field_share_options']['#items'];
+    foreach($items as $key => $item) {
+      dpm($item['value']);
+      switch ($item['value']) {
+        case 'facebook':
+          $item_values[] = array(
+            'url' => 'https://www.facebook.com/sharer.php?u=' . $current_page_url,
+            'title' => $entity['field_share_options'][$key]['#markup'],
+            //'pop_up' => 'javascript:window.open(this.href, \'\', \'height=320, width=640, toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, directories=no, status=no\');return false;',
+          );
+          break;
+        case 'twitter':
+          $item_values[] = array(
+            'url' => 'https://twitter.com/intent/tweet?url=' . $current_page_url,
+            'title' => $entity['field_share_options'][$key]['#markup'],
+            //'pop_up' => 'javascript:window.open(this.href, \'\', \'height=320, width=640, toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, directories=no, status=no\');return false;',
+          );
+          break;
+        case 'googleplus':
+          $item_values[] = array(
+            'url' => 'https://plus.google.com/share?url=' . $current_page_url,
+            'title' => $entity['field_share_options'][$key]['#markup'],
+            //'pop_up' => 'javascript:window.open(this.href, \'\', \'height=320, width=640, toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, directories=no, status=no\');return false;',
+          );
+          break;
+      }
+    }
+  }
+  $vars['share_options'] = $item_values;
+}

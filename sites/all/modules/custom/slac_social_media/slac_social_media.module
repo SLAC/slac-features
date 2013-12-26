@@ -20,31 +20,3 @@ function slac_social_media_entity_info_alter(&$entity_info) {
   );
 }
 
-/**
- * Implements hook_block_info()
- * @return type 
- */
-function slac_social_media_info() {
-  $blocks['social_media'] = array(
-    'info' => t('Social media'),
-    'status' => 1,
-  );
-  
-  return $blocks;
-}
-
-/**
- * Implements hook_block_view()
- * @param type $delta
- * @return type 
- */
-function slac_social_media_view($delta = ''){
-  $block = array();
-  if($delta == 'social_media') {
-    $query = db_select('fieldable_panels_panes', 'fpp')->condition('bundle', 'social_media')->fields('fpp',array('fpid'))->execute()->fetchAll();
-    $block['subject'] = t('Social media');
-    $block['content'] = ($query) ? drupal_render(fieldable_panels_panes_view(fieldable_panels_panes_load($query[0]->fpid))) : '';
-  }
-  
-  return $block;
-}
