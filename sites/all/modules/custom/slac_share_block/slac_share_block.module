@@ -55,7 +55,6 @@ function slac_share_block_preprocess_slac_share_block(&$vars) {
   if (isset($entity['field_share_options']['#items'])) {
     $items = $entity['field_share_options']['#items'];
     foreach($items as $key => $item) {
-      dpm($item['value']);
       switch ($item['value']) {
         case 'facebook':
           $item_values[] = array(
