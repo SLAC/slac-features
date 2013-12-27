@@ -268,7 +268,7 @@ ul.tabs, .action-links,
       content: '\e614'
       +fontsize-rem(20px) 
       
-  &.login-icon     
+  &.icon-login    
     &:before 
       content: '\e61b'
       +fontsize-rem(21px)       
@@ -392,7 +392,7 @@ ul.tabs, .action-links,
 //Icons
 .social-icon-block
   @extend .clearfix
-  
+  margin-top: 5px
   > div
     float: left
     margin-right: 15px
@@ -445,7 +445,9 @@ ul.tabs, .action-links,
         content: '\e601' 
 
 
-
++at-breakpoint($less-than-480)
+  .social-icon-block
+    margin-top: 0px  
 
 
 

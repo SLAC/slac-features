@@ -519,7 +519,7 @@ ul.tabs, .action-links {
     content: "\e614";
     font-size: 20px;
     font-size: 1.25rem; }
-  .mob-icon.login-icon:before, .user-icons a.login-icon:before {
+  .mob-icon.icon-login:before, .user-icons a.icon-login:before {
     content: "\e61b";
     font-size: 21px;
     font-size: 1.3125rem; }
@@ -610,42 +610,47 @@ ul.tabs, .action-links {
 @media (min-width: 690px) {
   .footer-first .general-right .inside {
     text-align: right; } }
-.social-icon-block > div {
-  float: left;
-  margin-right: 15px;
-  margin-bottom: 15px; }
-  .social-icon-block > div:last-child {
-    margin-right: 0; }
-  .social-icon-block > div a {
-    text-indent: -9000px;
-    display: block;
-    color: #bbb892;
-    position: relative;
-    width: 36px;
-    height: 36px;
-    overflow: hidden;
-    text-align: left; }
-    .social-icon-block > div a:after {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      margin-top: -22px;
-      margin-left: -18px;
-      font-size: 35px;
-      font-size: 2.1875rem; }
-    .social-icon-block > div a:hover {
-      color: #871628; }
-  .social-icon-block > div.social-icon-twitter a:after {
-    content: "\e610"; }
-  .social-icon-block > div.social-icon-facebook a:after {
-    content: "\e604"; }
-  .social-icon-block > div.social-icon-googleplus a:after {
-    content: "\e603"; }
-  .social-icon-block > div.social-icon-youtube a:after {
-    content: "\e600"; }
-  .social-icon-block > div.social-icon-delicious a:after {
-    content: "\e601"; }
+.social-icon-block {
+  margin-top: 5px; }
+  .social-icon-block > div {
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px; }
+    .social-icon-block > div:last-child {
+      margin-right: 0; }
+    .social-icon-block > div a {
+      text-indent: -9000px;
+      display: block;
+      color: #bbb892;
+      position: relative;
+      width: 36px;
+      height: 36px;
+      overflow: hidden;
+      text-align: left; }
+      .social-icon-block > div a:after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -22px;
+        margin-left: -18px;
+        font-size: 35px;
+        font-size: 2.1875rem; }
+      .social-icon-block > div a:hover {
+        color: #871628; }
+    .social-icon-block > div.social-icon-twitter a:after {
+      content: "\e610"; }
+    .social-icon-block > div.social-icon-facebook a:after {
+      content: "\e604"; }
+    .social-icon-block > div.social-icon-googleplus a:after {
+      content: "\e603"; }
+    .social-icon-block > div.social-icon-youtube a:after {
+      content: "\e600"; }
+    .social-icon-block > div.social-icon-delicious a:after {
+      content: "\e601"; }
 
+@media (min-width: 480px) {
+  .social-icon-block {
+    margin-top: 0px; } }
 .footer-seccond {
   background-color: #878787;
   color: white;
