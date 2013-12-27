@@ -24,7 +24,7 @@ function slac_kb_article_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -45,
+    'weight' => 12,
   );
   // Translatables
   // Included for use with string extractors like potx.
