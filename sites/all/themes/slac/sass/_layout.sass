@@ -338,10 +338,11 @@ ul.tabs, .action-links,
   
   .general-right
     .inside 
-      text-align: center
+      
      
       > div
-        display: inline-block
+        display: block
+        text-align: center
   
   ul.menu
     display: inline
@@ -385,14 +386,15 @@ ul.tabs, .action-links,
   .footer-first
     .general-right
       .inside 
-        text-align: right    
+  
   
   
   
 //Icons
 .social-icon-block
   @extend .clearfix
-  margin-top: 5px
+  display: inline-block
+  margin: 5px auto 0
   > div
     float: left
     margin-right: 15px
@@ -401,7 +403,7 @@ ul.tabs, .action-links,
       margin-right: 0
   
     a
-      text-indent: -9000px
+      text-indent: -9000px 
       display: block
       color: $icons-color
       position: relative
@@ -445,9 +447,9 @@ ul.tabs, .action-links,
         content: '\e601' 
 
 
-+at-breakpoint($less-than-480)
++at-breakpoint($less-than-480) 
   .social-icon-block
-    margin-top: 0px  
+    margin: 0 auto 
 
 
 
@@ -644,6 +646,7 @@ h2
     margin-bottom: 36px
     &:last-child
       margin-bottom: 0
+      //text-align: center
 
 .region-grey-background-style
   background-color: $bg-col-1
