@@ -46,12 +46,11 @@ function slac_user_menu_classes_menu_default_menu_links() {
       ),
     ),
     'module' => 'system',
-    'hidden' => -1,
+    'hidden' => 0,
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
     'weight' => 0,
-    'parent_path' => 'user',
     'customized' => 1,
   );
   // Exported menu link: user-menu:user/logout
@@ -77,7 +76,7 @@ function slac_user_menu_classes_menu_default_menu_links() {
   );
   // Translatables
   // Included for use with string extractors like potx.
-  t('Log in');
+  t('SLAC Login');
   t('Log out');
   t('User account');
 
