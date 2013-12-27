@@ -7,7 +7,7 @@
 /**
  * Implements hook_menu_default_menu_links().
  */
-/*function slac_kb_article_menu_default_menu_links() {
+function slac_kb_article_menu_default_menu_links() {
   $menu_links = array();
 
   // Exported menu link: main-menu:kb/all
@@ -32,4 +32,4 @@
 
 
   return $menu_links;
-}*/
+}
