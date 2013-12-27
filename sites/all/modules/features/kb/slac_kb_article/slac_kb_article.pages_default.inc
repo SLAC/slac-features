@@ -358,7 +358,7 @@ function slac_kb_article_default_page_manager_pages() {
     'relationships' => array(),
   );
   $display = new panels_display();
-  $display->layout = 'two_col';
+  $display->layout = 'two_col_article';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -382,7 +382,7 @@ function slac_kb_article_default_page_manager_pages() {
     $pane->access = array();
     $pane->configuration = array(
       'items_per_page' => '10',
-      'override_title' => 0,
+      'override_title' => 1,
       'override_title_text' => '',
     );
     $pane->cache = array();
@@ -397,6 +397,31 @@ function slac_kb_article_default_page_manager_pages() {
     $display->panels['left'][0] = 'new-1';
     $pane = new stdClass();
     $pane->pid = 'new-2';
+    $pane->panel = 'left_title';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => 'title',
+      'title' => '',
+      'body' => '<h2 class="pane-title">Knowledge Base Articles</h2>
+',
+      'format' => 'full_html',
+      'substitute' => 1,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-2'] = $pane;
+    $display->panels['left_title'][0] = 'new-2';
+    $pane = new stdClass();
+    $pane->pid = 'new-3';
     $pane->panel = 'right';
     $pane->type = 'views_panes';
     $pane->subtype = 'kb_articles-panel_pane_2';
@@ -416,10 +441,10 @@ function slac_kb_article_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['right'][0] = 'new-2';
-  $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = '0';
+    $display->content['new-3'] = $pane;
+    $display->panels['right'][0] = 'new-3';
+  $display->hide_title = PANELS_TITLE_NONE;
+  $display->title_pane = 'new-2';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['kb_articles'] = $page;
