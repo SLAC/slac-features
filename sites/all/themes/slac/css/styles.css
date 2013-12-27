@@ -576,7 +576,7 @@ ul.tabs, .action-links {
     display: block;
     text-align: center; }
   .footer-first ul.menu {
-    display: inline;
+    display: block;
     font-size: 12px;
     font-size: 0.75rem; }
     .footer-first ul.menu li {
@@ -608,6 +608,7 @@ ul.tabs, .action-links {
     margin-top: 0px; } }
 .social-icon-block {
   display: inline-block;
+  vertical-align: bottom;
   margin: 5px auto 0; }
   .social-icon-block > div {
     float: left;
