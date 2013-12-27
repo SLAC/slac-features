@@ -72,7 +72,7 @@ function slac_service_catalog_views_default_views() {
   $handler->display->display_options['filters']['vid']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['filters']['vid']['field'] = 'vid';
   $handler->display->display_options['filters']['vid']['value'] = array(
-    10 => '10',
+    9 => '9',
   );
 
   /* Display: Category listing */
@@ -91,6 +91,15 @@ function slac_service_catalog_views_default_views() {
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
   $handler->display->display_options['sorts']['weight']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Taxonomy term: Vocabulary */
+  $handler->display->display_options['filters']['vid']['id'] = 'vid';
+  $handler->display->display_options['filters']['vid']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['filters']['vid']['field'] = 'vid';
+  $handler->display->display_options['filters']['vid']['value'] = array(
+    9 => '9',
+  );
 
   /* Display: Category A-Z */
   $handler = $view->new_display('panel_pane', 'Category A-Z', 'panel_pane_2');
