@@ -18,7 +18,7 @@
   <?php if ($content['left_title']): ?>
     <div class="panel-panel general-left-title">
       <div class="inside"><?php print $content['left_title']; ?>
-        <?php if ($content['left_title']): ?>
+        <?php if ($content['left_author']): ?>
           <div class="author-details">
             <?php print $content['left_author']; ?>
           </div>
@@ -26,7 +26,7 @@
       </div>
     </div>
   <?php endif ?>
-  <div class="panel-panel general-left">
+  <div class="panel-panel general-left <?php if ($content['left_title']){ print 'top_title_exist';}; ?>">
      <?php if ($content['left']): ?>
         <div class="inside"><?php print $content['left']; ?></div>
       <?php endif ?>

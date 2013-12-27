@@ -267,6 +267,12 @@ h2 {
   font-size: 28px;
   font-size: 1.75rem;
   font-weight: bold; }
+  .general-left-title h2 {
+    font-size: 20px;
+    font-size: 1.25rem; }
+    .general-left-title h2.pane-title {
+      font-size: 28px;
+      font-size: 1.75rem; }
 
 html {
   font-family: Arial, Helvetica, sans-serif;
@@ -338,8 +344,8 @@ html {
 .page-basic > .main-menu {
   display: none; }
 
-.general-left-title {
-  margin-bottom: 25px; }
+.top_title_exist {
+  margin-top: 25px; }
 
 .pane-pane-messages {
   margin-bottom: 10px; }
@@ -724,11 +730,10 @@ ul.tabs, .action-links {
 .front .pane-page-content .general-left .panels-ipe-portlet-wrapper {
   margin-bottom: 36px; }
 
-.pane-page-content .general-left h2.pane-title, .pane-page-content .general-left h2.panel-title {
+.pane-page-content .general-left h2.pane-title, .pane-page-content .general-left-title h2.pane-title, .pane-page-content .general-left h2.panel-title, .pane-page-content .general-left-title h2.panel-title {
   border-bottom: 3px solid #f3f1eb;
-  margin-bottom: 49px;
   padding-bottom: 5px; }
-  .front .pane-page-content .general-left h2.pane-title, .front .pane-page-content .general-left h2.panel-title {
+  .front .pane-page-content .general-left h2.pane-title, .front .pane-page-content .general-left-title h2.pane-title, .front .pane-page-content .general-left h2.panel-title, .front .pane-page-content .general-left-title h2.panel-title {
     color: #626263;
     border-bottom: 6px solid #e7ebe6;
     font-size: inherit;
@@ -1283,9 +1288,6 @@ table.sticky-table {
 ul.news-archive-class li .item-list {
   margin-left: 10px; }
 
-.article_panel_layout .pane-node-title h2 {
-  font-size: 20px;
-  font-size: 1.25rem; }
 .article_panel_layout .author {
   border-right: 1px solid #878787;
   margin-right: 1px;

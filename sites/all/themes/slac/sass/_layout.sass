@@ -30,6 +30,10 @@ h1
 h2
   +fontsize-rem(28px)
   font-weight: bold
+  .general-left-title &
+    +fontsize-rem(20px)
+    &.pane-title
+      +fontsize-rem(28px)
 
 
 
@@ -74,6 +78,9 @@ html
         
     .general-left
       +clearfix
+
+      
+      
     .general-right
       /*margin-top: 40px*/
       .front &
@@ -85,9 +92,17 @@ html
     display: none
 
 .general-left-title
-  margin-bottom: 25px
- 
-  
+  //margin-bottom: 25px
+
+.page-basic
+  > .content
+    .article_panel_layout
+      .general-left
+        //margin-top: 25px  
+
+.top_title_exist
+  margin-top: 25px
+
 //System user panel
 //-----------------------------------
 .pane-pane-messages
@@ -579,10 +594,10 @@ ul.tabs, .action-links,
 //Main heading style
 h2
   &.pane-title, &.panel-title  
-    .general-left &
+    .general-left &, .general-left-title &
       .pane-page-content &  
         border-bottom: 3px solid $bg-col-1
-        margin-bottom: 49px
+        //margin-bottom: 49px
         padding-bottom: 5px       
 
         .front &
@@ -1337,7 +1352,7 @@ ul.news-archive-class
   .pane-node-title
     //margin-bottom: 25px
     h2
-      +fontsize-rem(20px)
+      //+fontsize-rem(20px)
   
   .author
     border-right: 1px solid $grey-87
