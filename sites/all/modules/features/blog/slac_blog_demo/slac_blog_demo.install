@@ -11,4 +11,18 @@ function slac_blog_demo_install() {
   $blog_file_export_settings = variable_get('uuid_features_file_node_types', array());
   $blog_file_export_settings['blog'] = 'blog';
   variable_set('uuid_features_file_node_types', $blog_file_export_settings);
+
+  $values = array(
+    'bundle' => 'share_block',
+    'field_share_options' => array(
+      LANGUAGE_NONE => array(
+        array('value' => 'facebook'),
+        array('value' => 'twitter'),
+        array('value' => 'googleplus'),
+      ),
+    ),
+    'uuid' => '9de2f28e-8f63-45e9-a9c9-5fcb943b16a5',
+  );
+  $share_fpp = fieldable_panels_panes_create($values);
+  fieldable_panels_panes_save($share_fpp);
 }
