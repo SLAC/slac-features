@@ -668,6 +668,23 @@ h2
   .view-blog-page
     .views-row
       margin-bottom: 49px   
+
+
+
+table
+  > .content &
+    .page-basic &
+
+      margin-bottom: 25px
+      thead
+        text-transform: uppercase
+        th
+          background-color: $menu_bg
+          font-weight: bold
+      td, th
+        border: 1px solid $menu_bg
+        padding: 6px
+
          
 article.node-blog
   .submitted
@@ -688,16 +705,7 @@ article.node-blog
       &:hover:after
         display: inline-block
 
-  table
-    margin-bottom: 25px
-    thead
-      text-transform: uppercase
-      th
-        background-color: $menu_bg
-        font-weight: bold
-    td, th
-      border: 1px solid $menu_bg
-      padding: 6px
+
 
 
   &.view-mode-full

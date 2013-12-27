@@ -775,6 +775,17 @@ ul.tabs, .action-links {
 @media (min-width: 690px) {
   .view-blog-page .views-row {
     margin-bottom: 49px; } }
+.page-basic > .content table {
+  margin-bottom: 25px; }
+  .page-basic > .content table thead {
+    text-transform: uppercase; }
+    .page-basic > .content table thead th {
+      background-color: #ebebdf;
+      font-weight: bold; }
+  .page-basic > .content table td, .page-basic > .content table th {
+    border: 1px solid #ebebdf;
+    padding: 6px; }
+
 article.node-blog .submitted {
   font-style: italic;
   color: #878787; }
@@ -791,16 +802,6 @@ article.node-blog .submitted {
       content: ""; }
     article.node-blog .submitted a:hover:after {
       display: inline-block; }
-article.node-blog table {
-  margin-bottom: 25px; }
-  article.node-blog table thead {
-    text-transform: uppercase; }
-    article.node-blog table thead th {
-      background-color: #ebebdf;
-      font-weight: bold; }
-  article.node-blog table td, article.node-blog table th {
-    border: 1px solid #ebebdf;
-    padding: 6px; }
 article.node-blog.view-mode-full header {
   margin-bottom: 25px; }
   article.node-blog.view-mode-full header h2 {
