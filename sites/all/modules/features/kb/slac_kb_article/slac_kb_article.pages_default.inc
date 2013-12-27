@@ -205,6 +205,7 @@ function slac_kb_article_default_page_manager_handlers() {
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
+      'style' => 'greybackground',
     );
     $pane->css = array();
     $pane->extras = array();
@@ -409,6 +410,7 @@ function slac_kb_article_default_page_manager_pages() {
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
+      'style' => 'greybackground',
     );
     $pane->css = array();
     $pane->extras = array();
