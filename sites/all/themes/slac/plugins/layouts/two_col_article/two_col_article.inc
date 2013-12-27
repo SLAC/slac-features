@@ -15,6 +15,7 @@ $plugin = array(
     'left' => t('Left Column'),
     'left_title' => t('Left Column Title'),
     'left_author' => t('Left Column Author'),
+    'social_media' => t('Social Media'),
     'right' => t('Right Column')
   ),
 );

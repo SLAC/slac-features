@@ -93,6 +93,30 @@ html
 
 .general-left-title
   //margin-bottom: 25px
+  .sub-header
+    margin-top: 5px
+  .author-details
+    font-style: italic
+    color: $grey-87  
+    +fontsize-rem(14px)  
+    > div
+      display: inline
+      > p 
+        display: inline
+  
+  &.social_media_exist
+    .social-media-content
+
+  &.author_exist
+    .author-details
+ 
+  
+  &.author_exist
+    &.social_media_exist
+      .author-details
+        +span-columns(10,12)
+      .social-media-content       
+        +span-columns(2 omega,12)
 
 .page-basic
   > .content
@@ -242,7 +266,7 @@ ul.tabs, .action-links,
   +span-columns(2 omega,4)
 
 
-.mob-icon, .user-icons a
+.mob-icon, .user-icons a, .social-media-content a
   width: 22px
   height: 20px
   position: relative
@@ -289,7 +313,37 @@ ul.tabs, .action-links,
       +fontsize-rem(21px)       
 
 
+  
+  
+  &.share-facebook
+    &:before 
+      content: '\e604'  
       
+  &.share-twitter 
+    &:before 
+      content: '\e610'
+      
+  &.share-googleplus      
+    &:before 
+      content: '\e603' 
+      
+.social-media-content 
+  @extend .clearfix
+  .share-block-wrapper
+    float: right
+    @extend .clearfix
+    > div
+      float: left
+      margin-left: 10px
+  a  
+    +fontsize-rem(21px) 
+    color: $grey-9
+    margin: 0
+    width: 21px
+    height: 22px    
+    &:hover
+      color: $red
+  
 //Site name
 //-----------------------------------
 .pane-page-site-name
@@ -725,9 +779,7 @@ article.node-blog
 
   &.view-mode-full
     header 
-      margin-bottom: 25px
-      h2
-        +fontsize-rem(20px)
+      display: none
 
     .submitted
       margin-top: 5px

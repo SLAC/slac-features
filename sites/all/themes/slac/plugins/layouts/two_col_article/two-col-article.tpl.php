@@ -16,13 +16,24 @@
 ?>
 <div class="panel-display general-two-col article_panel_layout" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
   <?php if ($content['left_title']): ?>
-    <div class="panel-panel general-left-title">
+    <div class="panel-panel general-left-title <?php if ($content['social_media']){ print 'social_media_exist';}; ?> <?php if ($content['left_author']){ print 'author_exist';}; ?>">
       <div class="inside"><?php print $content['left_title']; ?>
-        <?php if ($content['left_author']): ?>
-          <div class="author-details">
-            <?php print $content['left_author']; ?>
+      
+        <?php if ($content['left_author'] || $content['social_media']) : ?>
+          <div class="sub-header">
+            <?php if ($content['left_author']): ?>
+              <div class="author-details">
+                <?php print $content['left_author']; ?>
+              </div>
+            <?php endif ?>
+        
+            <?php if ($content['social_media']): ?>
+              <div class="social-media-content">
+                <?php print $content['social_media']; ?>
+              </div>
+            <?php endif ?> 
           </div>
-        <?php endif ?>
+        <?php endif ?>         
       </div>
     </div>
   <?php endif ?>
