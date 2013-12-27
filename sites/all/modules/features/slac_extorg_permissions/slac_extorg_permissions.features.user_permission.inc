@@ -104,6 +104,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'access contextual links',
     'roles' => array(
       'administrator' => 'administrator',
+      'site owner' => 'site owner',
     ),
     'module' => 'contextual',
   );
@@ -491,6 +492,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'administer nodes',
     'roles' => array(
       'administrator' => 'administrator',
+      'site owner' => 'site owner',
     ),
     'module' => 'node',
   );
@@ -500,6 +502,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'administer page manager',
     'roles' => array(
       'administrator' => 'administrator',
+      'site owner' => 'site owner',
     ),
     'module' => 'page_manager',
   );
@@ -2282,6 +2285,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'use page manager',
     'roles' => array(
       'administrator' => 'administrator',
+      'site owner' => 'site owner',
     ),
     'module' => 'page_manager',
   );
