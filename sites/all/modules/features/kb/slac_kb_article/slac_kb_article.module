@@ -14,3 +14,15 @@ function slac_kb_article_ctools_plugin_directory($module, $plugin) {
     return 'plugins/' . $plugin;
   }
 }
+
+//Add more view modes for Media formatting.
+function slac_kb_article_entity_info_alter(&$entity_info) {
+  $entity_info['file']['view modes']['crop_crop_kb_article_landscape'] = array(
+    'label' => t('Crop KB Article Landscape'),
+    'custom settings' => TRUE,
+  );
+  $entity_info['file']['view modes']['crop_slac_kb_article_image_details'] = array(
+    'label' => t('KB Article Image Details'),
+    'custom settings' => TRUE,
+  );
+}

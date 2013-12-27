@@ -55,58 +55,78 @@ function slac_kb_article_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-kb_article-field_image'
-  $field_instances['node-kb_article-field_image'] = array(
+  // Exported field_instance: 'node-kb_article-field_kb_article_media'
+  $field_instances['node-kb_article-field_kb_article_media'] = array(
     'bundle' => 'kb_article',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Please upload or select any media such as images or videos you would like to include in the article.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'module' => 'image',
+        'label' => 'hidden',
+        'module' => 'mediafield',
         'settings' => array(
-          'image_link' => '',
-          'image_style' => '',
+          'file_view_mode' => 'slac_kb_article_image_details',
         ),
-        'type' => 'image',
-        'weight' => 2,
+        'type' => 'media',
+        'weight' => 1,
       ),
       'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
+        'label' => 'hidden',
+        'module' => 'mediafield',
+        'settings' => array(
+          'file_view_mode' => 'crop_crop_kb_article_landscape',
+        ),
+        'type' => 'media',
         'weight' => 0,
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_image',
-    'label' => 'Image',
+    'field_name' => 'field_kb_article_media',
+    'label' => 'Media',
     'required' => 0,
     'settings' => array(
-      'alt_field' => 0,
-      'default_image' => 0,
       'epsacrop' => array(
         'styles' => array(
-          'epsa_crop' => 0,
+          'crop_landscape' => 0,
+          'crop_news_landscape' => 0,
+          'crop_portrait' => 0,
+          'crop_slac_projects' => 0,
+          'crop_slac_sidebar_block' => 0,
+          'crop_square' => 0,
+          'mini_slideshow_image_style' => 0,
+          'slac_blog_image' => 0,
+          'slac_blog_image_details' => 0,
+          'slac_news_image_details' => 0,
+          'slideshow_image_description_bottom' => 0,
         ),
       ),
-      'file_directory' => '',
-      'file_extensions' => 'png gif jpg jpeg',
-      'max_filesize' => '',
-      'max_resolution' => '',
-      'min_resolution' => '',
-      'title_field' => 0,
+      'file_extensions' => 'jpg jpeg gif png txt doc docx xls xlsx pdf ppt pptx pps ppsx odt ods odp mp3 mov mp4 m4a m4v mpeg avi ogg oga ogv wmv ico',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'image',
+      'module' => 'media',
       'settings' => array(
-        'preview_image_style' => 'thumbnail',
+        'allowed_schemes' => array(
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          0 => 0,
+          'audio' => 0,
+          'document' => 0,
+          'image' => 'image',
+          'video' => 0,
+        ),
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 0,
+          'media_default--media_browser_my_files' => 0,
+          'media_internet' => 0,
+          'upload' => 0,
+        ),
         'progress_indicator' => 'throbber',
       ),
-      'type' => 'image_image',
-      'weight' => 5,
+      'type' => 'media_generic',
+      'weight' => 6,
     ),
   );
 
@@ -119,10 +139,9 @@ function slac_kb_article_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 3,
+        'type' => 'hidden',
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -153,8 +172,9 @@ function slac_kb_article_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Body');
-  t('Image');
   t('KB Categories');
+  t('Media');
+  t('Please upload or select any media such as images or videos you would like to include in the article.');
 
   return $field_instances;
 }

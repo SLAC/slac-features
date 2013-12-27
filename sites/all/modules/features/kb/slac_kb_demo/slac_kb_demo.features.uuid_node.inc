@@ -11,7 +11,6 @@ function slac_kb_demo_uuid_features_default_content() {
   $nodes = array();
 
   $nodes[] = array(
-  'uid' => 1,
   'title' => 'Man-made Material Shows Surprisingly Magnetic Personality',
   'log' => '',
   'status' => 1,
@@ -38,11 +37,19 @@ function slac_kb_demo_uuid_features_default_content() {
       ),
     ),
   ),
-  'field_image' => array(),
+    'field_kb_article_media' => array(
+      'und' => array(
+        0 => array(
+          'fid' => 5,
+          'title' => NULL,
+          'data' => NULL,
+        ),
+      ),
+    ),
   'field_kb_categories' => array(
     'und' => array(
       0 => array(
-        'tid' => 57,
+        'tid' => 34,
         'uuid' => '2e456207-aeca-43f3-b29c-0da0834feeac',
       ),
     ),
@@ -108,11 +115,10 @@ function slac_kb_demo_uuid_features_default_content() {
   'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
-  'data' => 'b:0;',
   'date' => '2013-07-25 17:37:48 +0300',
+  'author_uuid' => '22fc18de-7fa9-4cd4-8324-107652b69fb2',
 );
   $nodes[] = array(
-  'uid' => 1,
   'title' => 'Bienenstock, Michelson Elected to American Academy of Arts and Sciences ',
   'log' => '',
   'status' => 1,
@@ -139,11 +145,11 @@ function slac_kb_demo_uuid_features_default_content() {
       ),
     ),
   ),
-  'field_image' => array(),
+  'field_kb_article_media' => array(),
   'field_kb_categories' => array(
     'und' => array(
       0 => array(
-        'tid' => 64,
+        'tid' => 36,
         'uuid' => '5441f982-c41e-47f9-a076-ba312679f181',
       ),
     ),
@@ -209,11 +215,10 @@ function slac_kb_demo_uuid_features_default_content() {
   'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
-  'data' => 'b:0;',
   'date' => '2013-07-25 17:47:13 +0300',
+  'author_uuid' => '22fc18de-7fa9-4cd4-8324-107652b69fb2',
 );
   $nodes[] = array(
-  'uid' => 1,
   'title' => 'SLAC Physicists Help Design, Build Cargo X-ray Scanners',
   'log' => '',
   'status' => 1,
@@ -240,11 +245,11 @@ function slac_kb_demo_uuid_features_default_content() {
       ),
     ),
   ),
-  'field_image' => array(),
+  'field_kb_article_media' => array(),
   'field_kb_categories' => array(
     'und' => array(
       0 => array(
-        'tid' => 65,
+        'tid' => 35,
         'uuid' => '35cbc66a-e794-4cac-bb15-e55d40106cfb',
       ),
     ),
@@ -310,11 +315,10 @@ function slac_kb_demo_uuid_features_default_content() {
   'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
-  'data' => 'b:0;',
   'date' => '2013-07-25 17:39:09 +0300',
+  'author_uuid' => '22fc18de-7fa9-4cd4-8324-107652b69fb2',
 );
   $nodes[] = array(
-  'uid' => 1,
   'title' => 'SLAC Study Reveals Active Site of Enzyme Linked to Stuttering',
   'log' => '',
   'status' => 1,
@@ -341,11 +345,11 @@ function slac_kb_demo_uuid_features_default_content() {
       ),
     ),
   ),
-  'field_image' => array(),
+  'field_kb_article_media' => array(),
   'field_kb_categories' => array(
     'und' => array(
       0 => array(
-        'tid' => 64,
+        'tid' => 36,
         'uuid' => '5441f982-c41e-47f9-a076-ba312679f181',
       ),
     ),
@@ -411,11 +415,10 @@ function slac_kb_demo_uuid_features_default_content() {
   'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
-  'data' => 'b:0;',
   'date' => '2013-07-25 17:38:38 +0300',
+  'author_uuid' => '22fc18de-7fa9-4cd4-8324-107652b69fb2',
 );
   $nodes[] = array(
-  'uid' => 1,
   'title' => 'New Test Bed Probes the Origin of Pulses at LCLS',
   'log' => '',
   'status' => 1,
@@ -448,11 +451,19 @@ SLAC in May 2013 opened a new test facility at the Accelerator Structure Test Ar
       ),
     ),
   ),
-  'field_image' => array(),
+  'field_kb_article_media' => array(
+    'und' => array(
+      0 => array(
+        'fid' => 1,
+        'title' => NULL,
+        'data' => NULL,
+      ),
+    ),
+  ),
   'field_kb_categories' => array(
     'und' => array(
       0 => array(
-        'tid' => 56,
+        'tid' => 41,
         'uuid' => 'af009c65-8760-454b-a942-c2424ed3c1c8',
       ),
     ),
@@ -518,11 +529,10 @@ SLAC in May 2013 opened a new test facility at the Accelerator Structure Test Ar
   'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
-  'data' => 'b:0;',
   'date' => '2013-07-31 11:45:47 +0300',
+  'author_uuid' => '22fc18de-7fa9-4cd4-8324-107652b69fb2',
 );
   $nodes[] = array(
-  'uid' => 1,
   'title' => 'New Program Broadens the Reach of LCLS Crystallography Experiments',
   'log' => '',
   'status' => 1,
@@ -558,11 +568,11 @@ Twenty-eight crystal screening slots are already scheduled for October 2013 thro
       ),
     ),
   ),
-  'field_image' => array(),
+  'field_kb_article_media' => array(),
   'field_kb_categories' => array(
     'und' => array(
       0 => array(
-        'tid' => 58,
+        'tid' => 33,
         'uuid' => '0d53e215-e34f-4097-a835-0870eaa81a0c',
       ),
     ),
@@ -628,11 +638,10 @@ Twenty-eight crystal screening slots are already scheduled for October 2013 thro
   'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
-  'data' => 'b:0;',
   'date' => '2013-07-25 17:37:07 +0300',
+  'author_uuid' => '22fc18de-7fa9-4cd4-8324-107652b69fb2',
 );
   $nodes[] = array(
-  'uid' => 1,
   'title' => 'SLAC X-rays Resurrect 200-year-old Opera',
   'log' => '',
   'status' => 1,
@@ -677,11 +686,11 @@ A visiting scholar at Stanford from Germany heard about how SLAC scientists unco
       ),
     ),
   ),
-  'field_image' => array(),
+  'field_kb_article_media' => array(),
   'field_kb_categories' => array(
     'und' => array(
       0 => array(
-        'tid' => 54,
+        'tid' => 39,
         'uuid' => '8efc6df4-8289-4403-a87e-540e0d355e31',
       ),
     ),
@@ -747,11 +756,10 @@ A visiting scholar at Stanford from Germany heard about how SLAC scientists unco
   'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
-  'data' => 'b:0;',
   'date' => '2013-07-31 11:58:25 +0300',
+  'author_uuid' => '22fc18de-7fa9-4cd4-8324-107652b69fb2',
 );
   $nodes[] = array(
-  'uid' => 1,
   'title' => 'X-ray Laser Brings Gold Exploration to the Nanoscale',
   'log' => '',
   'status' => 1,
@@ -778,11 +786,19 @@ A visiting scholar at Stanford from Germany heard about how SLAC scientists unco
       ),
     ),
   ),
-  'field_image' => array(),
+  'field_kb_article_media' => array(
+    'und' => array(
+      0 => array(
+        'fid' => 2,
+        'title' => NULL,
+        'data' => NULL,
+      ),
+    ),
+  ),
   'field_kb_categories' => array(
     'und' => array(
       0 => array(
-        'tid' => 59,
+        'tid' => 37,
         'uuid' => '8007cf90-674c-4ff0-a0f2-25a0466cabec',
       ),
     ),
@@ -848,11 +864,10 @@ A visiting scholar at Stanford from Germany heard about how SLAC scientists unco
   'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
-  'data' => 'b:0;',
   'date' => '2013-07-25 17:38:12 +0300',
+  'author_uuid' => '22fc18de-7fa9-4cd4-8324-107652b69fb2',
 );
   $nodes[] = array(
-  'uid' => 1,
   'title' => 'X-ray Laser Pulses in Two Colors',
   'log' => '',
   'status' => 1,
@@ -883,11 +898,11 @@ Vestibulum tincidunt malesuada tellus. Ut ultrices ultrices enim. Curabitur sit 
       ),
     ),
   ),
-  'field_image' => array(),
+  'field_kb_article_media' => array(),
   'field_kb_categories' => array(
     'und' => array(
       0 => array(
-        'tid' => 62,
+        'tid' => 38,
         'uuid' => '8d607e80-fa1f-4fba-b812-35b84cf02f42',
       ),
     ),
@@ -953,11 +968,10 @@ Vestibulum tincidunt malesuada tellus. Ut ultrices ultrices enim. Curabitur sit 
   'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
-  'data' => 'b:0;',
   'date' => '2013-07-31 11:43:01 +0300',
+  'author_uuid' => '22fc18de-7fa9-4cd4-8324-107652b69fb2',
 );
   $nodes[] = array(
-  'uid' => 1,
   'title' => 'A New Tool to Split X-ray Laser Pulses',
   'log' => '',
   'status' => 1,
@@ -984,11 +998,19 @@ Vestibulum tincidunt malesuada tellus. Ut ultrices ultrices enim. Curabitur sit 
       ),
     ),
   ),
-  'field_image' => array(),
+    'field_kb_article_media' => array(
+      'und' => array(
+        0 => array(
+          'fid' => 6,
+          'title' => NULL,
+          'data' => NULL,
+        ),
+      ),
+    ),
   'field_kb_categories' => array(
     'und' => array(
       0 => array(
-        'tid' => 61,
+        'tid' => 32,
         'uuid' => '0c8a1df9-c687-4ded-b8eb-dcea6e4b0c9f',
       ),
     ),
@@ -1054,11 +1076,10 @@ Vestibulum tincidunt malesuada tellus. Ut ultrices ultrices enim. Curabitur sit 
   'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
-  'data' => 'b:0;',
   'date' => '2013-07-31 11:44:54 +0300',
+  'author_uuid' => '22fc18de-7fa9-4cd4-8324-107652b69fb2',
 );
   $nodes[] = array(
-  'uid' => 1,
   'title' => 'Printing Innovations Provide 10-fold Improvement in Organic Electronics',
   'log' => '',
   'status' => 1,
@@ -1088,11 +1109,19 @@ Organic electronics have great promise for a variety of applications, but even t
       ),
     ),
   ),
-  'field_image' => array(),
+  'field_kb_article_media' => array(
+    'und' => array(
+      0 => array(
+        'fid' => 3,
+        'title' => NULL,
+        'data' => NULL,
+      ),
+    ),
+  ),
   'field_kb_categories' => array(
     'und' => array(
       0 => array(
-        'tid' => 60,
+        'tid' => 42,
         'uuid' => 'e4f02dd2-5fea-4f78-9932-78de63198263',
       ),
     ),
@@ -1158,11 +1187,10 @@ Organic electronics have great promise for a variety of applications, but even t
   'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
-  'data' => 'b:0;',
   'date' => '2013-07-31 11:59:13 +0300',
+  'author_uuid' => '22fc18de-7fa9-4cd4-8324-107652b69fb2',
 );
   $nodes[] = array(
-  'uid' => 1,
   'title' => 'Harold Hwang Wins Top Korean Award',
   'log' => '',
   'status' => 1,
@@ -1192,11 +1220,19 @@ Nulla ut felis in purus aliquam imperdiet. Maecenas aliquet mollis lectus. Vivam
       ),
     ),
   ),
-  'field_image' => array(),
+  'field_kb_article_media' => array(
+    'und' => array(
+      0 => array(
+        'fid' => 5,
+        'title' => NULL,
+        'data' => NULL,
+      ),
+    ),
+  ),
   'field_kb_categories' => array(
     'und' => array(
       0 => array(
-        'tid' => 63,
+        'tid' => 40,
         'uuid' => '9090165b-26d9-4584-8960-0556e596c3dc',
       ),
     ),
@@ -1262,8 +1298,8 @@ Nulla ut felis in purus aliquam imperdiet. Maecenas aliquet mollis lectus. Vivam
   'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
-  'data' => 'b:0;',
   'date' => '2013-07-31 11:41:51 +0300',
+  'author_uuid' => '22fc18de-7fa9-4cd4-8324-107652b69fb2',
 );
   return $nodes;
 }
