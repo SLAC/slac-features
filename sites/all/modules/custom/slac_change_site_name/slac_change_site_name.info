@@ -1,0 +1,5 @@
+name = SLAC Change Site Name
+description = "Allow site name change."
+package = SLAC
+core = 7.x
+dependencies[] = admin_menu
