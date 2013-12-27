@@ -95,6 +95,7 @@ html
   //margin-bottom: 25px
   .sub-header
     margin-top: 5px
+    @extend .clearfix
   .author-details
     font-style: italic
     color: $grey-87  
@@ -114,9 +115,31 @@ html
   &.author_exist
     &.social_media_exist
       .author-details
-        +span-columns(10,12)
+        +span-columns(4,7)
       .social-media-content       
-        +span-columns(2 omega,12)
+        +span-columns(3 omega,7)
+
++at-breakpoint($tablet)
+  .general-left-title
+    &.author_exist
+      &.social_media_exist
+        .author-details
+          +span-columns(8,12)
+          margin-top: 3px
+        .social-media-content       
+          +span-columns(4 omega,12)
+
++at-breakpoint($small-desktop)
+  .general-left-title
+    &.author_exist
+      &.social_media_exist
+        .author-details
+          +span-columns(9,12)
+
+        .social-media-content       
+          +span-columns(3 omega,12)
+
+
 
 .page-basic
   > .content
