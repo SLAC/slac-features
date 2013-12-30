@@ -84,30 +84,32 @@ a[href*='mailto:'] {
   font-style: normal;
   text-indent: 0; }
 
-.basic-format-text, article.node-blog.view-mode-full .field-type-text-with-summary, article.node-blog.view-mode-full .blog-wrapper, .service-body {
+.basic-format-text, article.node-blog.view-mode-full .field-type-text-with-summary, article.node-blog.view-mode-full .blog-wrapper, .service-body, .node-slac-sc-catalog-item {
   font-size: 14px;
   font-size: 0.875rem; }
-  .basic-format-text h2, article.node-blog.view-mode-full .field-type-text-with-summary h2, article.node-blog.view-mode-full .blog-wrapper h2, .service-body h2 {
+  .basic-format-text h2, article.node-blog.view-mode-full .field-type-text-with-summary h2, article.node-blog.view-mode-full .blog-wrapper h2, .service-body h2, .node-slac-sc-catalog-item h2 {
     font-size: 16px;
     font-size: 1rem;
     margin-bottom: 10px;
     margin-top: 15px; }
-  .basic-format-text h3, article.node-blog.view-mode-full .field-type-text-with-summary h3, article.node-blog.view-mode-full .blog-wrapper h3, .service-body h3 {
+  .basic-format-text h3, article.node-blog.view-mode-full .field-type-text-with-summary h3, article.node-blog.view-mode-full .blog-wrapper h3, .service-body h3, .node-slac-sc-catalog-item h3 {
     font-size: 14px;
     font-size: 0.875rem;
     font-weight: bold; }
-  .basic-format-text p, article.node-blog.view-mode-full .field-type-text-with-summary p, article.node-blog.view-mode-full .blog-wrapper p, .service-body p {
+  .basic-format-text p, article.node-blog.view-mode-full .field-type-text-with-summary p, article.node-blog.view-mode-full .blog-wrapper p, .service-body p, .node-slac-sc-catalog-item p {
     margin-bottom: 5px;
     line-height: 20px; }
-  .basic-format-text ul, article.node-blog.view-mode-full .field-type-text-with-summary ul, article.node-blog.view-mode-full .blog-wrapper ul, .service-body ul, .basic-format-text ol, article.node-blog.view-mode-full .field-type-text-with-summary ol, article.node-blog.view-mode-full .blog-wrapper ol, .service-body ol {
+  .basic-format-text ul, article.node-blog.view-mode-full .field-type-text-with-summary ul, article.node-blog.view-mode-full .blog-wrapper ul, .service-body ul, .node-slac-sc-catalog-item ul, .basic-format-text ol, article.node-blog.view-mode-full .field-type-text-with-summary ol, article.node-blog.view-mode-full .blog-wrapper ol, .service-body ol, .node-slac-sc-catalog-item ol {
     list-style-type: disc;
     padding-left: 20px;
     margin-bottom: 10px; }
-    .basic-format-text ul li, article.node-blog.view-mode-full .field-type-text-with-summary ul li, article.node-blog.view-mode-full .blog-wrapper ul li, .service-body ul li, .basic-format-text ol li, article.node-blog.view-mode-full .field-type-text-with-summary ol li, article.node-blog.view-mode-full .blog-wrapper ol li, .service-body ol li {
+    .basic-format-text ul.links, article.node-blog.view-mode-full .field-type-text-with-summary ul.links, article.node-blog.view-mode-full .blog-wrapper ul.links, .service-body ul.links, .node-slac-sc-catalog-item ul.links, .basic-format-text ol.links, article.node-blog.view-mode-full .field-type-text-with-summary ol.links, article.node-blog.view-mode-full .blog-wrapper ol.links, .service-body ol.links, .node-slac-sc-catalog-item ol.links {
+      padding-left: 0; }
+    .basic-format-text ul li, article.node-blog.view-mode-full .field-type-text-with-summary ul li, article.node-blog.view-mode-full .blog-wrapper ul li, .service-body ul li, .node-slac-sc-catalog-item ul li, .basic-format-text ol li, article.node-blog.view-mode-full .field-type-text-with-summary ol li, article.node-blog.view-mode-full .blog-wrapper ol li, .service-body ol li, .node-slac-sc-catalog-item ol li {
       line-height: 20px;
       margin-bottom: 5px; }
 
-.basic-intro-text-format, .service-overview {
+.basic-intro-text-format, .service-overview, .service-description {
   margin-bottom: 15px; }
 
 @font-face {
