@@ -289,7 +289,7 @@ ul.tabs, .action-links,
   +span-columns(2 omega,4)
 
 
-.mob-icon, .user-icons a, .social-media-content a
+.mob-icon, .user-icons a, .share-block-wrapper a
   width: 22px
   height: 20px
   position: relative
@@ -352,12 +352,20 @@ ul.tabs, .action-links,
       
 .social-media-content 
   @extend .clearfix
-  .share-block-wrapper
-    float: right
-    @extend .clearfix
-    > div
-      float: left
-      margin-left: 10px
+  text-align: right
+
+  > div
+    display: inline-block
+
+  
+.share-block-wrapper
+
+  @extend .clearfix
+  > div
+    float: left
+    margin-left: 10px
+    &:first-child
+      margin-left: 0
   a  
     +fontsize-rem(21px) 
     color: $grey-9
