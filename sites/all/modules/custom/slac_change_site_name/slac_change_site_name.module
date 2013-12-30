@@ -1,12 +1,24 @@
 <?php
 
 /**
+ * Implements hook_permission().
+ */
+function slac_change_site_name_permission() {
+  return array(
+    'administer site name' => array(
+      'title' => t('Administer site name'),
+      'description' => t('Change site name.'),
+    ),
+  );
+}
+
+/**
  * Implements hook_menu().
  */
 function slac_change_site_name_menu() {
 	$items['change-site-name'] = array(
 	  'page callback' => 'slac_change_site_name_create_form',
-	  'access arguments' => array('access content'),
+	  'access arguments' => array('administer site name'),
 	  'type' => MENU_CALLBACK,
 	);
 	return $items;
@@ -50,7 +62,7 @@ function slac_change_site_name_form_submit(&$form, &$form_state) {
  */
 function slac_change_site_name_admin_menu_output_alter(&$content) {
   
-  if (user_access('administer site configuration')) {
+  if (user_access('administer site name')) {
     $content["menu"]['change-site-name'] = array(
       '#title' => t('Site Name'),
       '#href' => 'change-site-name',
