@@ -78,6 +78,7 @@ function slac_kb_article_views_default_views() {
 
   /* Display: KB Articles */
   $handler = $view->new_display('panel_pane', 'KB Articles', 'panel_pane_1');
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['defaults']['empty'] = FALSE;
   /* No results behavior: Global: Text area */
   $handler->display->display_options['empty']['area']['id'] = 'area';
@@ -154,6 +155,8 @@ function slac_kb_article_views_default_views() {
   $handler = $view->new_display('panel_pane', 'Knowledge Base Articles', 'panel_pane_3');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Knowledge Base Articles ';
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'kb-articles';
   $handler->display->display_options['defaults']['query'] = FALSE;
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['query']['options']['distinct'] = TRUE;

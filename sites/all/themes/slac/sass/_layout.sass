@@ -1227,7 +1227,7 @@ table.sticky-table
         
 //+++++++++++++++++++++++EXT ORG Profile
 //News landing page
-.news-landing
+.news-landing, .kb-articles
   h2
     +fontsize-rem(18px)
     margin-bottom: 4px  
@@ -1241,7 +1241,7 @@ table.sticky-table
       line-height: 20px
       
       
-  .news-image 
+  .news-image, .article-image 
     margin-bottom: 10px 
 
   .field-name-field-slac-news-source a
@@ -1263,24 +1263,23 @@ table.sticky-table
     +fontsize-rem(12px)
     display: block
     margin-bottom: 7px
-    
-  .news-content
+
   
 +at-breakpoint($less-than-480)   
-  .news-landing
+  .news-landing, .kb-articles
   
     article
       position: relative
       padding: 0  15px
   
-    .news-image
+    .news-image, .article-image 
       max-width: 150px
       position: absolute
       top: 2px
       left: 15px
       margin-bottom: 0
       
-    .news-content
+    .news-content, .article-content 
       padding-left: 170px
 
 //Research projects

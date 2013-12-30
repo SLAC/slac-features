@@ -1216,32 +1216,32 @@ table.sticky-table {
   .node-type-list dt a:hover {
     background-color: rgba(39, 108, 189, 0.8); }
 
-.news-landing h2 {
+.news-landing h2, .kb-articles h2 {
   font-size: 18px;
   font-size: 1.125rem;
   margin-bottom: 4px; }
-  .news-landing h2 a {
+  .news-landing h2 a, .kb-articles h2 a {
     color: #871628; }
-.news-landing .field-name-body {
+.news-landing .field-name-body, .kb-articles .field-name-body {
   margin-bottom: 5px; }
-  .news-landing .field-name-body p {
+  .news-landing .field-name-body p, .kb-articles .field-name-body p {
     color: #555555;
     font-size: 12px;
     font-size: 0.75rem;
     line-height: 20px; }
-.news-landing .news-image {
+.news-landing .news-image, .news-landing .article-image, .kb-articles .news-image, .kb-articles .article-image {
   margin-bottom: 10px; }
-.news-landing .field-name-field-slac-news-source a {
+.news-landing .field-name-field-slac-news-source a, .kb-articles .field-name-field-slac-news-source a {
   color: #777777;
   font-size: 12px;
   font-size: 0.75rem;
   font-style: italic; }
-.news-landing .views-row {
+.news-landing .views-row, .kb-articles .views-row {
   border-bottom: 2px solid #e0decd;
   padding-bottom: 20px;
   margin-bottom: 20px;
   min-height: 155px; }
-.news-landing time {
+.news-landing time, .kb-articles time {
   color: #555555;
   font-size: 12px;
   font-size: 0.75rem;
@@ -1249,16 +1249,16 @@ table.sticky-table {
   margin-bottom: 7px; }
 
 @media (min-width: 480px) {
-  .news-landing article {
+  .news-landing article, .kb-articles article {
     position: relative;
     padding: 0 15px; }
-  .news-landing .news-image {
+  .news-landing .news-image, .news-landing .article-image, .kb-articles .news-image, .kb-articles .article-image {
     max-width: 150px;
     position: absolute;
     top: 2px;
     left: 15px;
     margin-bottom: 0; }
-  .news-landing .news-content {
+  .news-landing .news-content, .news-landing .article-content, .kb-articles .news-content, .kb-articles .article-content {
     padding-left: 170px; } }
 .projects-blocks-wrapper .project-title a {
   position: absolute;
