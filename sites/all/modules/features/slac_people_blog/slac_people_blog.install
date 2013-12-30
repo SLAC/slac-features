@@ -5,7 +5,7 @@
  */
 function slac_people_blog_install() {
   $blog_node = (object) array(
-    'title' => t('Blog'),
+    'title' => t('Blog Posts'),
     'type' => 'landing_page',
     'language' => 'und',
     'name' => 'admin',
