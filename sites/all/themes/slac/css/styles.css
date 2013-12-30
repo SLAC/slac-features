@@ -1357,6 +1357,9 @@ table.sticky-table {
 ul.news-archive-class li .item-list {
   margin-left: 10px; }
 
+.pane-node-field-slac-news-media, .pane-node-field-kb-article-media {
+  margin-bottom: 25px; }
+
 .article_panel_layout .author {
   border-right: 1px solid #878787;
   margin-right: 1px;
@@ -1368,8 +1371,6 @@ ul.news-archive-class li .item-list {
   font-style: italic;
   color: #878787;
   line-height: 1; }
-.article_panel_layout .pane-node-field-slac-news-media {
-  margin-bottom: 25px; }
 .article_panel_layout .pane-node-body {
   font-size: 14px;
   font-size: 0.875rem; }
