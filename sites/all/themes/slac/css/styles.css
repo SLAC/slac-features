@@ -1252,14 +1252,14 @@ table.sticky-table {
   .news-landing article, .kb-articles article {
     position: relative;
     padding: 0 15px; }
+    .news-landing article.image_exist .news-content, .news-landing article.image_exist .article-content, .kb-articles article.image_exist .news-content, .kb-articles article.image_exist .article-content {
+      padding-left: 170px; }
   .news-landing .news-image, .news-landing .article-image, .kb-articles .news-image, .kb-articles .article-image {
     max-width: 150px;
     position: absolute;
     top: 2px;
     left: 15px;
-    margin-bottom: 0; }
-  .news-landing .news-content, .news-landing .article-content, .kb-articles .news-content, .kb-articles .article-content {
-    padding-left: 170px; } }
+    margin-bottom: 0; } }
 .projects-blocks-wrapper .project-title a {
   position: absolute;
   top: 0;

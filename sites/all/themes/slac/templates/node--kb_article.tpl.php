@@ -7,7 +7,7 @@
  * @see https://drupal.org/node/1728164
  */
 ?>
-<article class="node-<?php print $node->nid; ?> <?php print $classes; ?>"<?php print $attributes; ?>>
+<article class="node-<?php print $node->nid; ?> <?php print $classes; ?> <?php if (isset($content['field_kb_article_media'])) { print 'image_exist';} ?>"<?php print $attributes; ?>>
   <?php if ($title_prefix || $title_suffix || $display_submitted || $unpublished || !$page && $title): ?>
     <?php if (isset($content['field_kb_article_media'])): ?>
         <div class="article-image">
