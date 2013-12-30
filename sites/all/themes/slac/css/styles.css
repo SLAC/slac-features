@@ -84,6 +84,32 @@ a[href*='mailto:'] {
   font-style: normal;
   text-indent: 0; }
 
+.basic-format-text, article.node-blog.view-mode-full .field-type-text-with-summary, article.node-blog.view-mode-full .blog-wrapper, .service-body {
+  font-size: 14px;
+  font-size: 0.875rem; }
+  .basic-format-text h2, article.node-blog.view-mode-full .field-type-text-with-summary h2, article.node-blog.view-mode-full .blog-wrapper h2, .service-body h2 {
+    font-size: 16px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    margin-top: 15px; }
+  .basic-format-text h3, article.node-blog.view-mode-full .field-type-text-with-summary h3, article.node-blog.view-mode-full .blog-wrapper h3, .service-body h3 {
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: bold; }
+  .basic-format-text p, article.node-blog.view-mode-full .field-type-text-with-summary p, article.node-blog.view-mode-full .blog-wrapper p, .service-body p {
+    margin-bottom: 5px;
+    line-height: 20px; }
+  .basic-format-text ul, article.node-blog.view-mode-full .field-type-text-with-summary ul, article.node-blog.view-mode-full .blog-wrapper ul, .service-body ul, .basic-format-text ol, article.node-blog.view-mode-full .field-type-text-with-summary ol, article.node-blog.view-mode-full .blog-wrapper ol, .service-body ol {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 10px; }
+    .basic-format-text ul li, article.node-blog.view-mode-full .field-type-text-with-summary ul li, article.node-blog.view-mode-full .blog-wrapper ul li, .service-body ul li, .basic-format-text ol li, article.node-blog.view-mode-full .field-type-text-with-summary ol li, article.node-blog.view-mode-full .blog-wrapper ol li, .service-body ol li {
+      line-height: 20px;
+      margin-bottom: 5px; }
+
+.basic-intro-text-format, .service-overview {
+  margin-bottom: 15px; }
+
 @font-face {
   font-family: "slac";
   src: url('../fonts/slac.eot');
@@ -881,30 +907,8 @@ article.node-blog.view-mode-full .submitted {
   margin-top: 5px;
   font-size: 14px;
   font-size: 0.875rem; }
-article.node-blog.view-mode-full .blog-wrapper {
-  font-size: 14px;
-  font-size: 0.875rem; }
-  article.node-blog.view-mode-full .blog-wrapper h2 {
-    font-size: 16px;
-    font-size: 1rem;
-    margin-bottom: 10px;
-    margin-top: 15px; }
-  article.node-blog.view-mode-full .blog-wrapper h3 {
-    font-size: 14px;
-    font-size: 0.875rem;
-    font-weight: bold; }
 article.node-blog.view-mode-full .field-name-field-slac-blog-image {
   margin-bottom: 25px; }
-article.node-blog.view-mode-full .field-type-text-with-summary p {
-  margin-bottom: 5px;
-  line-height: 20px; }
-article.node-blog.view-mode-full .field-type-text-with-summary ul, article.node-blog.view-mode-full .field-type-text-with-summary ol {
-  list-style-type: disc;
-  padding-left: 20px;
-  margin-bottom: 10px; }
-  article.node-blog.view-mode-full .field-type-text-with-summary ul li, article.node-blog.view-mode-full .field-type-text-with-summary ol li {
-    line-height: 20px;
-    margin-bottom: 5px; }
 article.node-blog.node-teaser {
   background-color: #f1f1f1;
   font-size: 14px;
