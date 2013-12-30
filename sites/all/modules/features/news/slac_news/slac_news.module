@@ -13,3 +13,12 @@ function slac_news_entity_info_alter(&$entity_info) {
     'custom settings' => TRUE,
   );
 }
+
+/**
+ * Implements hook_node_view().
+ */
+function slac_news_node_view($node, $view_mode, $langcode) {
+  if ($node->type == 'slac_news' && $view_mode == 'full') {
+    menu_set_active_item(drupal_get_normal_path("news"));
+  }
+}
