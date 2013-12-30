@@ -53,6 +53,7 @@ dependencies[] = panelizer
 dependencies[] = profile2
 dependencies[] = views_bulk_operations
 dependencies[] = admin_views
+dependencies[] = entitycache
 
 ;Development modules
 dependencies[] = devel
@@ -63,8 +64,6 @@ dependencies[] = features
 dependencies[] = uuid
 dependencies[] = uuid_features
 dependencies[] = strongarm
-
-
 
 ;FAQ
 dependencies[] = entity_token
