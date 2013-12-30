@@ -573,7 +573,7 @@ function slac_service_catalog_default_page_manager_pages() {
   $pages['service_catalog_view_support_queue'] = $page;
 
   $page = new stdClass();
-  $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
+  $page->disabled = TRUE; /* Edit this to true to make a default page disabled initially */
   $page->api_version = 1;
   $page->name = 'slac_sc_catalog_landing';
   $page->task = 'page';
