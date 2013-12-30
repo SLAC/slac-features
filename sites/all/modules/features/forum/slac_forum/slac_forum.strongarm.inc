@@ -138,7 +138,7 @@ function slac_forum_strongarm() {
   $strongarm->value = array(
     'blog' => 'blog',
     'event' => 'event',
-    'salc_faq' => 'salc_faq',
+    'slac_faq' => 'slac_faq',
     'slac_news' => 'slac_news',
     'slac_wiki_page' => 'slac_wiki_page',
     'panel' => 'panel',
@@ -267,7 +267,7 @@ function slac_forum_strongarm() {
   $strongarm->value = array(
     'blog' => 'blog',
     'event' => 'event',
-    'salc_faq' => 'salc_faq',
+    'slac_faq' => 'slac_faq',
     'slac_news' => 'slac_news',
     'slac_wiki_page' => 'slac_wiki_page',
     'panel' => 'panel',
