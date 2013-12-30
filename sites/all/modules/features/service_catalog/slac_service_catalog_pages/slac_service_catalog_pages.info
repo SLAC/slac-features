@@ -1,0 +1,5 @@
+name = SLAC Service Catalog Pages
+core = 7.x
+package = SLAC
+dependencies[] = panelizer
+dependencies[] = slac_service_catalog
