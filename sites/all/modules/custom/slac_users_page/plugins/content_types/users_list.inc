@@ -58,7 +58,7 @@ function slac_users_page_users_list_content_type_render($subtype, $conf, $panel_
         'header' => $header,
         'rows' => $results_to_display,
         'attributes' => array(
-          //'width' => '100%',
+          'width' => '50%',
           'class' => array('upeople-list-table')
         )
       )
