@@ -1,0 +1,6 @@
+name = SLAC People Page
+description = Provides a landing page with the list of the users on the site.
+core = 7.x
+package = "SLAC"
+
+dependencies[] = landing_page

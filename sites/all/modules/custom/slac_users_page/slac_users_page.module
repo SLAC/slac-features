@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * Implements hook_permission().
+ */
+function slac_users_page_permission() {
+  return array(
+    'view people list' => array(
+      'title' => t('View people list'),
+      'description' => t('View page/block with users'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_ctools_plugin_directory().
+ */
+function slac_users_page_ctools_plugin_directory($owner, $plugin) {
+  if ($owner === 'ctools') {
+    return 'plugins/' . $plugin;
+  }
+}
