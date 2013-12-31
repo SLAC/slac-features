@@ -32,16 +32,19 @@ function slac_users_page_install() {
  */
 function _slac_users_page_install__panels_display() {
   $panels_display = array(
-    'layout' => 'two_col_extorg',
+    'layout' => 'onecol',
     'layout_settings' => array(),
     'panel_settings' => array(
-      'style_settings' => array (
+      'style_settings' => array(
         'default' => NULL,
         'center' => NULL,
         'left' => NULL,
         'right' => NULL,
       ),
     ),
+    'title' => '',
+    'hide_title' => 0,
+    'title_pane' => 0,
   );
   drupal_write_record('panels_display', $panels_display);
   return $panels_display;
@@ -82,7 +85,7 @@ function _slac_users_page_install__panes($did) {
   $panels_panes = array(
     array(
       'did' => $did,
-      'panel' => 'left',
+      'panel' => 'middle',
       'type' => 'users_list',
       'subtype' => 'users_list',
       'shown' => 1,
