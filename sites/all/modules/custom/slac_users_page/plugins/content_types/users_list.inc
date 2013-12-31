@@ -41,7 +41,6 @@ function slac_users_page_users_list_content_type_render($subtype, $conf, $panel_
       $account = user_load($uid);
       $account_view = user_view($account, 'full');
       $rows[$uid]['name_email']['data'] = l(format_username($account), 'user/' . $uid);
-      $rows[$uid]['name_email']['data'] .= '<div>' . $account->mail . '</div>';
       $rows[$uid]['info']['data'] = drupal_render($account_view);
     }
   }
@@ -59,7 +58,7 @@ function slac_users_page_users_list_content_type_render($subtype, $conf, $panel_
         'header' => $header,
         'rows' => $results_to_display,
         'attributes' => array(
-          'width' => '100%',
+          //'width' => '100%',
           'class' => array('upeople-list-table')
         )
       )
