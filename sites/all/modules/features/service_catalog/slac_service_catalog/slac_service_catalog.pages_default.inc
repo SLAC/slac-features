@@ -583,7 +583,7 @@ function slac_service_catalog_default_page_manager_pages() {
   $pages['service_catalog_view_support_queue'] = $page;
 
   $page = new stdClass();
-  $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
+  $page->disabled = TRUE; /* Edit this to true to make a default page disabled initially */
   $page->api_version = 1;
   $page->name = 'slac_sc_catalog_landing';
   $page->task = 'page';
@@ -612,7 +612,7 @@ function slac_service_catalog_default_page_manager_pages() {
   );
   $page->default_handlers = array();
   $handler = new stdClass();
-  $handler->disabled = TRUE; /* Edit this to true to make a default handler disabled initially */
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
   $handler->api_version = 1;
   $handler->name = 'page_slac_sc_catalog_landing_panel_context';
   $handler->task = 'page';
