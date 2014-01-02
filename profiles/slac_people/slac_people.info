@@ -89,6 +89,7 @@ dependencies[] = slac_people_slideshow
 dependencies[] = pp_demo
 dependencies[] = diff
 dependencies[] = slac_style_guide
+dependencies[] = slac_change_site_name
 
 ; Features
 dependencies[] = default_site_template
