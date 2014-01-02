@@ -21,7 +21,8 @@ stylesheets[all][] = two_col_extorg.css
 stylesheets[all][] = slideshow_description_bottom.css
 stylesheets[all][] = field_slideshow.css
 stylesheets[all][] = slac_mini_slideshow.css
-
+stylesheets[all][] = calendar_multiday.css
+stylesheets[all][] = date_views.css
 
 ;scripts[] = js/jquery.placeholder.js
 scripts[] = js/script.js

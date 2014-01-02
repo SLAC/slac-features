@@ -78,7 +78,7 @@ a[href*='mailto:'] {
   .views-field-field-prf-bio-tp:after, .views-responsive-grid.views-columns-2 .views-row:after, .blog-tags ul:after, .connect-with-me .views-row:after, ul.blog-archive-class > li ul:after, div .color-box:after, .icons:after {
     clear: both; }
 
-.slac-font, .mobile-main-menu .main-menu ul li a:after, .mob-icon:before, .user-icons a:before, .share-block-wrapper a:before, .social-icon-block > div a:after, .footer-seccond ul li a:after, article.node-blog.node-teaser header h2 a:after, .profile-info-brief .views-more-link:after, .profile-info-full .profile-maxlist-more a:before, .more-link-template a:after, .last-three-news .more-link a:after, .event-calendar-block .more-link a:after, .event-block a.icon:after, .connect-with-me .views-row > div a:after, .pane-bundle-slideshow-description-bottom .field-slideshow-controls a:after, .pane-bundle-slac-mini-slideshow .field-slideshow-controls a:after {
+.slac-font, .mobile-main-menu .main-menu ul li a:after, .mob-icon:before, .user-icons a:before, .share-block-wrapper a:before, .social-icon-block > div a:after, .footer-seccond ul li a:after, .event-calendar-page .pager li a:before, article.node-blog.node-teaser header h2 a:after, .profile-info-brief .views-more-link:after, .profile-info-full .profile-maxlist-more a:before, .more-link-template a:after, .last-three-news .more-link a:after, .event-calendar-block .more-link a:after, .event-block a.icon:after, .connect-with-me .views-row > div a:after, .pane-bundle-slideshow-description-bottom .field-slideshow-controls a:after, .pane-bundle-slac-mini-slideshow .field-slideshow-controls a:after {
   font-family: "slac";
   font-weight: normal;
   font-style: normal;
@@ -286,21 +286,26 @@ a {
 .content .general-right .panel-pane ul li {
   margin-bottom: 5px; }
 
+h1, h2, h3 {
+  font-weight: bold; }
+
 h1 {
   font-size: 28px;
-  font-size: 1.75rem;
-  font-weight: bold; }
+  font-size: 1.75rem; }
 
 h2 {
   font-size: 28px;
-  font-size: 1.75rem;
-  font-weight: bold; }
+  font-size: 1.75rem; }
   .general-left-title h2 {
     font-size: 20px;
     font-size: 1.25rem; }
     .general-left-title h2.pane-title {
       font-size: 28px;
       font-size: 1.75rem; }
+
+h3 {
+  font-size: 18px;
+  font-size: 1.125rem; }
 
 html {
   font-family: Arial, Helvetica, sans-serif;
@@ -814,6 +819,85 @@ ul.tabs, .action-links {
       .pager li a:hover {
         background-color: #871628;
         color: white; }
+  .event-calendar-page .pager {
+    margin-top: 0; }
+    .event-calendar-page .pager li {
+      height: 50px;
+      width: 27px;
+      top: 0;
+      position: absolute;
+      margin: 0;
+      display: block;
+      background-color: transparent;
+      line-height: inherit; }
+      .event-calendar-page .pager li a {
+        display: block;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        text-indent: -999px;
+        color: #2e2e2e;
+        position: absolute;
+        top: 0;
+        left: 0;
+        line-height: 1; }
+        .event-calendar-page .pager li a:hover {
+          color: #871628;
+          background: none; }
+        .event-calendar-page .pager li a:before {
+          position: absolute;
+          font-size: 50px;
+          font-size: 3.125rem;
+          top: 45%;
+          left: 0;
+          margin-top: -25px; }
+      .event-calendar-page .pager li.date-prev {
+        left: 0; }
+        .event-calendar-page .pager li.date-prev a:before {
+          content: "\e609"; }
+      .event-calendar-page .pager li.date-next {
+        right: 0; }
+        .event-calendar-page .pager li.date-next a:before {
+          content: "\3d"; }
+
+.event-calendar-page .date-nav-wrapper {
+  text-align: center; }
+.event-calendar-page .date-nav {
+  position: relative;
+  display: inline-block;
+  padding: 0 60px; }
+  .event-calendar-page .date-nav .date-heading {
+    text-align: center; }
+  .event-calendar-page .date-nav h3 {
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 50px; }
+  .event-calendar-page .date-nav .pager {
+    width: 100%; }
+.event-calendar-page .legend-item-wrapper > div {
+  display: inline-block;
+  vertical-align: middle; }
+
+.calendar-calendar tr {
+  background-color: white; }
+.calendar-calendar td {
+  width: 14.28571%; }
+  .with-week .calendar-calendar td {
+    width: 12.85714%; }
+    .with-week .calendar-calendar td:first-child {
+      width: 10%; }
+.calendar-calendar .month-view .full {
+  width: 100%; }
+  .calendar-calendar .month-view .full td.single-day .calendar-empty,
+  .calendar-calendar .month-view .full td.single-day.empty,
+  .calendar-calendar .month-view .full td.date-box.empty {
+    background: #f1f1f1; }
+  .calendar-calendar .month-view .full td.single-day {
+    border-top: 0px; }
+  .calendar-calendar .month-view .full tr td.multi-day, .calendar-calendar .month-view .full tr td.single-day {
+    border-top: 0px; }
+  .calendar-calendar .month-view .full tr td.multi-day, .calendar-calendar .month-view .full tr td.date-box {
+    border-bottom: 0px; }
 
 .feed-icon {
   display: none; }
