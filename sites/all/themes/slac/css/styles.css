@@ -899,6 +899,48 @@ ul.tabs, .action-links {
   .calendar-calendar .month-view .full tr td.multi-day, .calendar-calendar .month-view .full tr td.date-box {
     border-bottom: 0px; }
 
+.view-id-faq li {
+  border-bottom: 1px solid #f3f1eb;
+  margin-bottom: 10px;
+  padding-bottom: 10px; }
+  .view-id-faq li.inactive .views-field-title:before {
+    content: "+";
+    margin-top: -9px; }
+  .view-id-faq li:last-child {
+    border-bottom: 0;
+    margin-bottom: 0;
+    padding-bottom: 0; }
+.view-id-faq .views-field-title {
+  cursor: pointer;
+  color: #871628;
+  font-weight: bold;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  padding-left: 15px; }
+  .view-id-faq .views-field-title:hover {
+    text-decoration: none; }
+  .view-id-faq .views-field-title:before {
+    content: "-";
+    width: 10px;
+    height: 10px;
+    left: 0;
+    top: 50%;
+    line-height: 1;
+    position: absolute;
+    margin-top: -11px; }
+.view-id-faq .views-field-field-slac-faq-answer {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 20px;
+  padding-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 5px; }
+
 .feed-icon {
   display: none; }
 

@@ -693,6 +693,7 @@ ul.tabs, .action-links,
 
 
 //Event calendar page
+//-----------------------------------
 .event-calendar-page 
   .date-nav-wrapper
     text-align: center
@@ -756,6 +757,55 @@ ul.tabs, .action-links,
           &.date-box
             border-bottom: 0px
             
+
+//Frequently Asked Questions
+//-----------------------------------
+.view-id-faq
+  li
+    &.inactive
+      .views-field-title
+        &:before
+          content: '+'     
+          margin-top: -9px
+    
+    border-bottom: 1px solid $bg-col-1
+    margin-bottom: 10px
+    padding-bottom: 10px
+    &:last-child
+      border-bottom: 0
+      margin-bottom: 0
+      padding-bottom: 0
+    
+  .views-field-title
+    cursor: pointer
+    color: $red
+    font-weight: bold
+    +no-select
+    position: relative
+    padding-left: 15px
+    &:hover
+      text-decoration: none
+      
+    &:before
+      content: '-'
+      width: 10px
+      height: 10px
+      left: 0
+      top: 50%
+      line-height: 1
+      position: absolute
+      margin-top: -11px
+      
+      
+      
+    
+  .views-field-field-slac-faq-answer
+    +fontsize-rem(14px)
+    line-height: 20px
+    padding-left: 20px
+    margin-top: 10px
+    margin-bottom: 5px
+
 
 
 //RSS Feed
