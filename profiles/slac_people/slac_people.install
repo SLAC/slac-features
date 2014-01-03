@@ -319,6 +319,8 @@ function slac_people_install() {
   variable_set('admin_theme', 'seven');
   variable_set('node_admin_theme', '1');
   variable_set('install_profile', 'slac_people');
+
+  slac_profiles_shared_place_system_blocks_to_regions();
 }
 
 function _slac_people_filter_dependencies($dependency) {
