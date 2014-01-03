@@ -27,6 +27,7 @@ function slac_faq_menu_default_menu_links() {
     'has_children' => 0,
     'expanded' => 0,
     'weight' => 8,
+    'customized' => 1,
   );
   // Exported menu link: menu-faq:admin/content/faq
   $menu_links['menu-faq:admin/content/faq'] = array(
