@@ -15,6 +15,7 @@ function slac_news_pages_install() {
         'alias' => 'news',
         'pathauto' => 0,
       ),
+      'title_pane_class' => 'custom-class',
     ),
     (object) array(
       'title' => t('News Articles'),
@@ -47,7 +48,11 @@ function slac_news_pages_install() {
 
     _slac_news_pages_install__panelizer_entity($node, $panels_display['did']);
 
-    _slac_news_pages_install__panes($panels_display['did']);
+    $title_pane_class = '';
+    if (isset($node->title_pane_class)) {
+      $title_pane_class = $node->title_pane_class;
+    }
+    _slac_news_pages_install__panes($panels_display['did'], $title_pane_class);
 
     switch ($node->path['alias']) {
       case 'news':
@@ -124,7 +129,7 @@ function _slac_news_pages_install__panelizer_entity($node, $did) {
 /**
  * Create panel panes.
  */
-function _slac_news_pages_install__panes($did) {
+function _slac_news_pages_install__panes($did, $title_class = '') {
   $panels_panes = array(
     array(
       'did' => $did,
@@ -137,7 +142,7 @@ function _slac_news_pages_install__panes($did) {
         'link' => 0,
         'markup' => 'h2',
         'id' => '',
-        'class' => '',
+        'class' => $title_class,
         'context' => 'panelizer',
         'override_title' => 1,
         'override_title_text' => '',
