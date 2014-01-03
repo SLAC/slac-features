@@ -115,7 +115,7 @@ function _slac_service_catalog_pages_install__panes($did) {
         'link' => 0,
         'markup' => 'h2',
         'id' => '',
-        'class' => '',
+        'class' => 'pane-title',
         'context' => 'panelizer',
         'override_title' => 1,
         'override_title_text' => '',
