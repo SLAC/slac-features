@@ -1,5 +1,7 @@
 <?php
 
+$time_start = microtime(true);
+
 // Rebuild slac_ext_org profile.
 
 $commands = array(
@@ -13,7 +15,7 @@ $commands = array(
   ),
   array(
     'description' => 'Admin login ',
-    'command' => 'drush uli'
+    'command' => 'drush --uri=http://slac-features.wearepropeople.md uli'
   ),
 );
 
@@ -24,3 +26,6 @@ foreach ($commands as $command) {
 
 print 'Site has been rebuilt';
 print '<pre>' . implode("\n", $command_output) . '</pre>';
+
+$time_end = microtime(true);
+print '<br/>Execution time: ' . $time_end - $time_start;
