@@ -14,6 +14,7 @@ function slac_service_catalog_pages_install() {
       'alias' => 'service-catalog',
       'pathauto' => 0,
     ),
+    'title_pane_class' => 'pane-title'
   );
 
   node_save($node);
