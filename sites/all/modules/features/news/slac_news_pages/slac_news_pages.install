@@ -15,7 +15,7 @@ function slac_news_pages_install() {
         'alias' => 'news',
         'pathauto' => 0,
       ),
-      'title_pane_class' => 'custom-class',
+      'title_pane_class' => 'pane-title'
     ),
     (object) array(
       'title' => t('News Articles'),
@@ -27,6 +27,7 @@ function slac_news_pages_install() {
         'alias' => 'news/news-article',
         'pathauto' => 0,
       ),
+      'title_pane_class' => 'pane-title'
     ),
     (object) array(
       'title' => t('Press Releases'),
@@ -38,6 +39,7 @@ function slac_news_pages_install() {
         'alias' => 'news/press-release',
         'pathauto' => 0,
       ),
+      'title_pane_class' => 'pane-title'
     ),
   );
 
