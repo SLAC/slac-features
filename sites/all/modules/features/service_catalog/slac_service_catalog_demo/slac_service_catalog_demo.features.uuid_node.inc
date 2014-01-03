@@ -29,30 +29,30 @@ function slac_service_catalog_demo_uuid_features_default_content() {
   'body' => array(
     'und' => array(
       0 => array(
-        'value' => '<div class="field field-name-field-service-overview field-type-text-long field-label-hidden" style="margin-bottom: 20px; font-family: \'Source Sans Pro\', Arial, Helvetica, sans-serif; font-size: 14px; line-height: 19.59375px; background-color: rgb(251, 251, 249);">
+        'value' => '<div class="field field-name-field-service-overview field-type-text-long field-label-hidden">
 	<div class="field-items">
 		<div class="field-item even">
-			<p style="margin-top: 0px;">Our goal is to provide superior client support while helping our partners maximize their IT investment. We work closely with Computer Resource Consulting (CRC) Desktop Support to provide comprehensive, responsive technology assistance for your entire organization.</p>
+			<p>Our goal is to provide superior client support while helping our partners maximize their IT investment. We work closely with Computer Resource Consulting (CRC) Desktop Support to provide comprehensive, responsive technology assistance for your entire organization.</p>
 		</div>
 	</div>
 </div>
-<div class="field field-name-body field-type-text-with-summary field-label-hidden" style="margin-bottom: 20px; font-family: \'Source Sans Pro\', Arial, Helvetica, sans-serif; font-size: 14px; line-height: 19.59375px; background-color: rgb(251, 251, 249);">
+<div class="field field-name-body field-type-text-with-summary field-label-hidden">
 	<div class="field-items">
 		<div class="field-item even">
-			<h2 style="margin-top: 0px; margin-bottom: 12px; font-family: inherit; font-weight: normal; line-height: 1.2em; color: rgb(130, 0, 0); text-rendering: optimizelegibility; font-size: 20px; letter-spacing: 0.01em; border-bottom-width: medium; border-bottom-style: none;">Features and benefits</h2>
-			<ul style="margin-top: 0px; margin-bottom: 10px; margin-left: 25px;">
-				<li style="line-height: 20px; list-style-type: square; list-style-image: url(https://itservices.stanford.edu/sites/all/themes/stanford_wilbur/images/bullet.gif); margin-bottom: 0.25em;">Campus infrastructure integration</li>
-				<li style="line-height: 20px; list-style-type: square; list-style-image: url(https://itservices.stanford.edu/sites/all/themes/stanford_wilbur/images/bullet.gif); margin-bottom: 0.25em;">Regular and scheduled maintenance</li>
-				<li style="line-height: 20px; list-style-type: square; list-style-image: url(https://itservices.stanford.edu/sites/all/themes/stanford_wilbur/images/bullet.gif); margin-bottom: 0.25em;">Prioritized HelpSU problem resolution</li>
-				<li style="line-height: 20px; list-style-type: square; list-style-image: url(https://itservices.stanford.edu/sites/all/themes/stanford_wilbur/images/bullet.gif); margin-bottom: 0.25em;">Security auditing and system hardening</li>
-				<li style="line-height: 20px; list-style-type: square; list-style-image: url(https://itservices.stanford.edu/sites/all/themes/stanford_wilbur/images/bullet.gif); margin-bottom: 0.25em;">User and workgroup management</li>
+			<h2>Features and benefits</h2>
+			<ul>
+				<li>Campus infrastructure integration</li>
+				<li>Regular and scheduled maintenance</li>
+				<li>Prioritized HelpSU problem resolution</li>
+				<li>Security auditing and system hardening</li>
+				<li>User and workgroup management</li>
 			</ul>
-			<h2 style="margin-top: 1.4em; margin-bottom: 12px; font-family: inherit; font-weight: normal; line-height: 1.2em; color: rgb(130, 0, 0); text-rendering: optimizelegibility; font-size: 20px; letter-spacing: 0.01em; border-bottom-width: medium; border-bottom-style: none;">Getting started</h2>
-			<p style="margin-top: 0px;">To learn more about contract server support, please contact&nbsp;<a href="https://stanfordwho.stanford.edu/SWApp/auth/lookup?search=Noah%20Abrahamson" style="color: rgb(130, 114, 82); border-bottom-style: dotted; border-bottom-width: 1px; border-bottom-color: rgb(130, 114, 82);">Noah Abrahamson</a>&nbsp;or&nbsp;<a href="http://helpsu.stanford.edu/" style="color: rgb(130, 114, 82); border-bottom-style: dotted; border-bottom-width: 1px; border-bottom-color: rgb(130, 114, 82);">submit a HelpSU request</a>.</p>
-			<h2 style="margin-top: 1.4em; margin-bottom: 12px; font-family: inherit; font-weight: normal; line-height: 1.2em; color: rgb(130, 0, 0); text-rendering: optimizelegibility; font-size: 20px; letter-spacing: 0.01em; border-bottom-width: medium; border-bottom-style: none;">Learn more</h2>
-			<ul style="margin-top: 0px; margin-bottom: 10px; margin-left: 25px;">
-				<li style="line-height: 20px; list-style-type: square; list-style-image: url(https://itservices.stanford.edu/sites/all/themes/stanford_wilbur/images/bullet.gif); margin-bottom: 0.25em;"><a href="https://itservices.stanford.edu/service/contract-support/server" style="color: rgb(130, 114, 82); border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(130, 114, 82);">Server Group (CRC)</a></li>
-				<li style="line-height: 20px; list-style-type: square; list-style-image: url(https://itservices.stanford.edu/sites/all/themes/stanford_wilbur/images/bullet.gif); margin-bottom: 0.25em;"><a href="https://itservices.stanford.edu/service/server-support/businessdocuments" style="color: rgb(130, 114, 82); border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(130, 114, 82);">Business Documents for Contract Support &mdash; Server Support</a></li>
+			<h2>Getting started</h2>
+			<p>To learn more about contract server support, please contact&nbsp;<a href="https://stanfordwho.stanford.edu/SWApp/auth/lookup?search=Noah%20Abrahamson">Noah Abrahamson</a>&nbsp;or&nbsp;<a href="http://helpsu.stanford.edu/">submit a HelpSU request</a>.</p>
+			<h2>Learn more</h2>
+			<ul>
+				<li><a href="https://itservices.stanford.edu/service/contract-support/server">Server Group (CRC)</a></li>
+				<li><a href="https://itservices.stanford.edu/service/server-support/businessdocuments">Business Documents for Contract Support &mdash; Server Support</a></li>
 			</ul>
 		</div>
 	</div>
@@ -61,27 +61,27 @@ function slac_service_catalog_demo_uuid_features_default_content() {
 ',
         'summary' => '',
         'format' => 'full_html',
-        'safe_value' => '<div class="field field-name-field-service-overview field-type-text-long field-label-hidden" style="margin-bottom: 20px; font-family: \'Source Sans Pro\', Arial, Helvetica, sans-serif; font-size: 14px; line-height: 19.59375px; background-color: rgb(251, 251, 249);">
+        'safe_value' => '<div class="field field-name-field-service-overview field-type-text-long field-label-hidden">
 <div class="field-items">
 <div class="field-item even">
-<p style="margin-top: 0px;">Our goal is to provide superior client support while helping our partners maximize their IT investment. We work closely with Computer Resource Consulting (CRC) Desktop Support to provide comprehensive, responsive technology assistance for your entire organization.</p>
+<p>Our goal is to provide superior client support while helping our partners maximize their IT investment. We work closely with Computer Resource Consulting (CRC) Desktop Support to provide comprehensive, responsive technology assistance for your entire organization.</p>
 </div>
 </div>
 </div>
-<div class="field field-name-body field-type-text-with-summary field-label-hidden" style="margin-bottom: 20px; font-family: \'Source Sans Pro\', Arial, Helvetica, sans-serif; font-size: 14px; line-height: 19.59375px; background-color: rgb(251, 251, 249);">
+<div class="field field-name-body field-type-text-with-summary field-label-hidden">
 <div class="field-items">
 <div class="field-item even">
-<h2 style="margin-top: 0px; margin-bottom: 12px; font-family: inherit; font-weight: normal; line-height: 1.2em; color: rgb(130, 0, 0); text-rendering: optimizelegibility; font-size: 20px; letter-spacing: 0.01em; border-bottom-width: medium; border-bottom-style: none;">Features and benefits</h2>
-<ul style="margin-top: 0px; margin-bottom: 10px; margin-left: 25px;"><li style="line-height: 20px; list-style-type: square; list-style-image: url(https://itservices.stanford.edu/sites/all/themes/stanford_wilbur/images/bullet.gif); margin-bottom: 0.25em;">Campus infrastructure integration</li>
-<li style="line-height: 20px; list-style-type: square; list-style-image: url(https://itservices.stanford.edu/sites/all/themes/stanford_wilbur/images/bullet.gif); margin-bottom: 0.25em;">Regular and scheduled maintenance</li>
-<li style="line-height: 20px; list-style-type: square; list-style-image: url(https://itservices.stanford.edu/sites/all/themes/stanford_wilbur/images/bullet.gif); margin-bottom: 0.25em;">Prioritized HelpSU problem resolution</li>
-<li style="line-height: 20px; list-style-type: square; list-style-image: url(https://itservices.stanford.edu/sites/all/themes/stanford_wilbur/images/bullet.gif); margin-bottom: 0.25em;">Security auditing and system hardening</li>
-<li style="line-height: 20px; list-style-type: square; list-style-image: url(https://itservices.stanford.edu/sites/all/themes/stanford_wilbur/images/bullet.gif); margin-bottom: 0.25em;">User and workgroup management</li>
-</ul><h2 style="margin-top: 1.4em; margin-bottom: 12px; font-family: inherit; font-weight: normal; line-height: 1.2em; color: rgb(130, 0, 0); text-rendering: optimizelegibility; font-size: 20px; letter-spacing: 0.01em; border-bottom-width: medium; border-bottom-style: none;">Getting started</h2>
-<p style="margin-top: 0px;">To learn more about contract server support, please contact <a href="https://stanfordwho.stanford.edu/SWApp/auth/lookup?search=Noah%20Abrahamson" style="color: rgb(130, 114, 82); border-bottom-style: dotted; border-bottom-width: 1px; border-bottom-color: rgb(130, 114, 82);">Noah Abrahamson</a> or <a href="http://helpsu.stanford.edu/" style="color: rgb(130, 114, 82); border-bottom-style: dotted; border-bottom-width: 1px; border-bottom-color: rgb(130, 114, 82);">submit a HelpSU request</a>.</p>
-<h2 style="margin-top: 1.4em; margin-bottom: 12px; font-family: inherit; font-weight: normal; line-height: 1.2em; color: rgb(130, 0, 0); text-rendering: optimizelegibility; font-size: 20px; letter-spacing: 0.01em; border-bottom-width: medium; border-bottom-style: none;">Learn more</h2>
-<ul style="margin-top: 0px; margin-bottom: 10px; margin-left: 25px;"><li style="line-height: 20px; list-style-type: square; list-style-image: url(https://itservices.stanford.edu/sites/all/themes/stanford_wilbur/images/bullet.gif); margin-bottom: 0.25em;"><a href="https://itservices.stanford.edu/service/contract-support/server" style="color: rgb(130, 114, 82); border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(130, 114, 82);">Server Group (CRC)</a></li>
-<li style="line-height: 20px; list-style-type: square; list-style-image: url(https://itservices.stanford.edu/sites/all/themes/stanford_wilbur/images/bullet.gif); margin-bottom: 0.25em;"><a href="https://itservices.stanford.edu/service/server-support/businessdocuments" style="color: rgb(130, 114, 82); border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(130, 114, 82);">Business Documents for Contract Support — Server Support</a></li>
+<h2>Features and benefits</h2>
+<ul><li>Campus infrastructure integration</li>
+<li>Regular and scheduled maintenance</li>
+<li>Prioritized HelpSU problem resolution</li>
+<li>Security auditing and system hardening</li>
+<li>User and workgroup management</li>
+</ul><h2>Getting started</h2>
+<p>To learn more about contract server support, please contact <a href="https://stanfordwho.stanford.edu/SWApp/auth/lookup?search=Noah%20Abrahamson">Noah Abrahamson</a> or <a href="http://helpsu.stanford.edu/">submit a HelpSU request</a>.</p>
+<h2>Learn more</h2>
+<ul><li><a href="https://itservices.stanford.edu/service/contract-support/server">Server Group (CRC)</a></li>
+<li><a href="https://itservices.stanford.edu/service/server-support/businessdocuments">Business Documents for Contract Support — Server Support</a></li>
 </ul></div>
 </div>
 </div>
@@ -239,29 +239,29 @@ function slac_service_catalog_demo_uuid_features_default_content() {
   'body' => array(
     'und' => array(
       0 => array(
-        'value' => '<div class="field field-name-field-service-overview field-type-text-long field-label-hidden" style="margin-bottom: 20px;">
+        'value' => '<div class="field field-name-field-service-overview field-type-text-long field-label-hidden">
 	<div class="field-items">
 		<div class="field-item even">
-			<p style="margin-top: 0px;">OnCall Services is a great way for departments to supplement existing support staff during vacations and other leaves, or to handle special projects. For small groups that don&rsquo;t need full-time support, we can offer scheduled or pre-arranged occasional support in your office. For faculty, staff, and students, OnCall Services offers a cost-effective way to get expert computer assistance from highly knowledgeable technical staff who understand Stanford&rsquo;s unique computing environment.</p>
+			<p>OnCall Services is a great way for departments to supplement existing support staff during vacations and other leaves, or to handle special projects. For small groups that don&rsquo;t need full-time support, we can offer scheduled or pre-arranged occasional support in your office. For faculty, staff, and students, OnCall Services offers a cost-effective way to get expert computer assistance from highly knowledgeable technical staff who understand Stanford&rsquo;s unique computing environment.</p>
 		</div>
 	</div>
 </div>
-<div class="field field-name-body field-type-text-with-summary field-label-hidden" style="margin-bottom: 20px;">
+<div class="field field-name-body field-type-text-with-summary field-label-hidden">
 	<div class="field-items">
 		<div class="field-item even">
-			<h2 style="margin-top: 0px; margin-bottom: 12px; font-family: \'Source Sans Pro\', Arial, Helvetica, sans-serif; font-weight: normal; line-height: 1.2em; color: rgb(130, 0, 0); text-rendering: optimizelegibility; font-size: 20px; border-bottom-width: medium; border-bottom-style: none; background-color: rgb(251, 251, 249);">Features</h2>
-			<p style="margin-top: 0px; font-family: \'Source Sans Pro\', Arial, Helvetica, sans-serif; font-size: 14px; line-height: 19.59375px; background-color: rgb(251, 251, 249);">We offer a wide range of services, including:</p>
-			<ul style="margin-top: 0px; margin-bottom: 10px; margin-left: 25px; font-family: \'Source Sans Pro\', Arial, Helvetica, sans-serif; font-size: 14px; line-height: 19.59375px; background-color: rgb(251, 251, 249);">
-				<li style="line-height: 20px; list-style-type: square; list-style-image: url(https://itservices.stanford.edu/sites/all/themes/stanford_wilbur/images/bullet.gif); margin-bottom: 0.25em;">Diagnose and troubleshoot almost any computer problem</li>
-				<li style="line-height: 20px; list-style-type: square; list-style-image: url(https://itservices.stanford.edu/sites/all/themes/stanford_wilbur/images/bullet.gif); margin-bottom: 0.25em;">Proactive system security checkups and updates</li>
-				<li style="line-height: 20px; list-style-type: square; list-style-image: url(https://itservices.stanford.edu/sites/all/themes/stanford_wilbur/images/bullet.gif); margin-bottom: 0.25em;">Setup and installation of new machines</li>
-				<li style="line-height: 20px; list-style-type: square; list-style-image: url(https://itservices.stanford.edu/sites/all/themes/stanford_wilbur/images/bullet.gif); margin-bottom: 0.25em;">Install and upgrade Mac and Windows operating systems</li>
-				<li style="line-height: 20px; list-style-type: square; list-style-image: url(https://itservices.stanford.edu/sites/all/themes/stanford_wilbur/images/bullet.gif); margin-bottom: 0.25em;">Install and troubleshoot Stanford-supported applications or licensed third-party applications (you supply the license)</li>
-				<li style="line-height: 20px; list-style-type: square; list-style-image: url(https://itservices.stanford.edu/sites/all/themes/stanford_wilbur/images/bullet.gif); margin-bottom: 0.25em;">Add peripherals such as printers or scanners</li>
-				<li style="line-height: 20px; list-style-type: square; list-style-image: url(https://itservices.stanford.edu/sites/all/themes/stanford_wilbur/images/bullet.gif); margin-bottom: 0.25em;">Help protect and backup important data</li>
-				<li style="line-height: 20px; list-style-type: square; list-style-image: url(https://itservices.stanford.edu/sites/all/themes/stanford_wilbur/images/bullet.gif); margin-bottom: 0.25em;">Remove prying spyware and contain virus outbreaks</li>
-				<li style="line-height: 20px; list-style-type: square; list-style-image: url(https://itservices.stanford.edu/sites/all/themes/stanford_wilbur/images/bullet.gif); margin-bottom: 0.25em;">PDA setup and configuration</li>
-				<li style="line-height: 20px; list-style-type: square; list-style-image: url(https://itservices.stanford.edu/sites/all/themes/stanford_wilbur/images/bullet.gif); margin-bottom: 0.25em;">Project work, such as computer upgrades or departmental moves</li>
+			<h2>Features</h2>
+			<p>We offer a wide range of services, including:</p>
+			<ul>
+				<li>Diagnose and troubleshoot almost any computer problem</li>
+				<li>Proactive system security checkups and updates</li>
+				<li>Setup and installation of new machines</li>
+				<li>Install and upgrade Mac and Windows operating systems</li>
+				<li>Install and troubleshoot Stanford-supported applications or licensed third-party applications (you supply the license)</li>
+				<li>Add peripherals such as printers or scanners</li>
+				<li>Help protect and backup important data</li>
+				<li>Remove prying spyware and contain virus outbreaks</li>
+				<li>PDA setup and configuration</li>
+				<li>Project work, such as computer upgrades or departmental moves</li>
 				<li>&nbsp;</li>
 			</ul>
 		</div>
@@ -271,28 +271,28 @@ function slac_service_catalog_demo_uuid_features_default_content() {
 ',
         'summary' => '',
         'format' => 'full_html',
-        'safe_value' => '<div class="field field-name-field-service-overview field-type-text-long field-label-hidden" style="margin-bottom: 20px;">
+        'safe_value' => '<div class="field field-name-field-service-overview field-type-text-long field-label-hidden">
 <div class="field-items">
 <div class="field-item even">
-<p style="margin-top: 0px;">OnCall Services is a great way for departments to supplement existing support staff during vacations and other leaves, or to handle special projects. For small groups that don’t need full-time support, we can offer scheduled or pre-arranged occasional support in your office. For faculty, staff, and students, OnCall Services offers a cost-effective way to get expert computer assistance from highly knowledgeable technical staff who understand Stanford’s unique computing environment.</p>
+<p>OnCall Services is a great way for departments to supplement existing support staff during vacations and other leaves, or to handle special projects. For small groups that don’t need full-time support, we can offer scheduled or pre-arranged occasional support in your office. For faculty, staff, and students, OnCall Services offers a cost-effective way to get expert computer assistance from highly knowledgeable technical staff who understand Stanford’s unique computing environment.</p>
 </div>
 </div>
 </div>
-<div class="field field-name-body field-type-text-with-summary field-label-hidden" style="margin-bottom: 20px;">
+<div class="field field-name-body field-type-text-with-summary field-label-hidden">
 <div class="field-items">
 <div class="field-item even">
-<h2 style="margin-top: 0px; margin-bottom: 12px; font-family: \'Source Sans Pro\', Arial, Helvetica, sans-serif; font-weight: normal; line-height: 1.2em; color: rgb(130, 0, 0); text-rendering: optimizelegibility; font-size: 20px; border-bottom-width: medium; border-bottom-style: none; background-color: rgb(251, 251, 249);">Features</h2>
-<p style="margin-top: 0px; font-family: \'Source Sans Pro\', Arial, Helvetica, sans-serif; font-size: 14px; line-height: 19.59375px; background-color: rgb(251, 251, 249);">We offer a wide range of services, including:</p>
-<ul style="margin-top: 0px; margin-bottom: 10px; margin-left: 25px; font-family: \'Source Sans Pro\', Arial, Helvetica, sans-serif; font-size: 14px; line-height: 19.59375px; background-color: rgb(251, 251, 249);"><li style="line-height: 20px; list-style-type: square; list-style-image: url(https://itservices.stanford.edu/sites/all/themes/stanford_wilbur/images/bullet.gif); margin-bottom: 0.25em;">Diagnose and troubleshoot almost any computer problem</li>
-<li style="line-height: 20px; list-style-type: square; list-style-image: url(https://itservices.stanford.edu/sites/all/themes/stanford_wilbur/images/bullet.gif); margin-bottom: 0.25em;">Proactive system security checkups and updates</li>
-<li style="line-height: 20px; list-style-type: square; list-style-image: url(https://itservices.stanford.edu/sites/all/themes/stanford_wilbur/images/bullet.gif); margin-bottom: 0.25em;">Setup and installation of new machines</li>
-<li style="line-height: 20px; list-style-type: square; list-style-image: url(https://itservices.stanford.edu/sites/all/themes/stanford_wilbur/images/bullet.gif); margin-bottom: 0.25em;">Install and upgrade Mac and Windows operating systems</li>
-<li style="line-height: 20px; list-style-type: square; list-style-image: url(https://itservices.stanford.edu/sites/all/themes/stanford_wilbur/images/bullet.gif); margin-bottom: 0.25em;">Install and troubleshoot Stanford-supported applications or licensed third-party applications (you supply the license)</li>
-<li style="line-height: 20px; list-style-type: square; list-style-image: url(https://itservices.stanford.edu/sites/all/themes/stanford_wilbur/images/bullet.gif); margin-bottom: 0.25em;">Add peripherals such as printers or scanners</li>
-<li style="line-height: 20px; list-style-type: square; list-style-image: url(https://itservices.stanford.edu/sites/all/themes/stanford_wilbur/images/bullet.gif); margin-bottom: 0.25em;">Help protect and backup important data</li>
-<li style="line-height: 20px; list-style-type: square; list-style-image: url(https://itservices.stanford.edu/sites/all/themes/stanford_wilbur/images/bullet.gif); margin-bottom: 0.25em;">Remove prying spyware and contain virus outbreaks</li>
-<li style="line-height: 20px; list-style-type: square; list-style-image: url(https://itservices.stanford.edu/sites/all/themes/stanford_wilbur/images/bullet.gif); margin-bottom: 0.25em;">PDA setup and configuration</li>
-<li style="line-height: 20px; list-style-type: square; list-style-image: url(https://itservices.stanford.edu/sites/all/themes/stanford_wilbur/images/bullet.gif); margin-bottom: 0.25em;">Project work, such as computer upgrades or departmental moves</li>
+<h2>Features</h2>
+<p>We offer a wide range of services, including:</p>
+<ul><li>Diagnose and troubleshoot almost any computer problem</li>
+<li>Proactive system security checkups and updates</li>
+<li>Setup and installation of new machines</li>
+<li>Install and upgrade Mac and Windows operating systems</li>
+<li>Install and troubleshoot Stanford-supported applications or licensed third-party applications (you supply the license)</li>
+<li>Add peripherals such as printers or scanners</li>
+<li>Help protect and backup important data</li>
+<li>Remove prying spyware and contain virus outbreaks</li>
+<li>PDA setup and configuration</li>
+<li>Project work, such as computer upgrades or departmental moves</li>
 <li> </li>
 </ul></div>
 </div>
@@ -441,30 +441,30 @@ function slac_service_catalog_demo_uuid_features_default_content() {
   'body' => array(
     'und' => array(
       0 => array(
-        'value' => '<div class="field field-name-field-service-overview field-type-text-long field-label-hidden" style="margin-bottom: 20px; font-family: \'Source Sans Pro\', Arial, Helvetica, sans-serif; font-size: 14px; line-height: 19.59375px; background-color: rgb(251, 251, 249);">
+        'value' => '<div class="field field-name-field-service-overview field-type-text-long field-label-hidden">
 	<div class="field-items">
 		<div class="field-item even">
-			<p style="margin-top: 0px;">A variety of complementary Database Administration-related services such as Oracle Real Application Cluster (RAC) support are also available via Ntirety. The Database Administration service provides reliable, secure, and cost-effective database administration, including maintenance, monitoring, and backup.</p>
-			<p style="margin-top: 0px;">24x7 support is provided for production or critical development databases. In addition to standard, day-to-day administrative and maintenance activities, production or critical development databases are continuously monitored to detect potential problems, proactively addressing problems before they can affect service delivery.</p>
-			<p style="margin-top: 0px;">The Database Administration service is available by subscription and is charged monthly to your department&rsquo;s IT Services bill.</p>
+			<p>A variety of complementary Database Administration-related services such as Oracle Real Application Cluster (RAC) support are also available via Ntirety. The Database Administration service provides reliable, secure, and cost-effective database administration, including maintenance, monitoring, and backup.</p>
+			<p>24x7 support is provided for production or critical development databases. In addition to standard, day-to-day administrative and maintenance activities, production or critical development databases are continuously monitored to detect potential problems, proactively addressing problems before they can affect service delivery.</p>
+			<p>The Database Administration service is available by subscription and is charged monthly to your department&rsquo;s IT Services bill.</p>
 		</div>
 	</div>
 </div>
-<div class="field field-name-body field-type-text-with-summary field-label-hidden" style="margin-bottom: 20px; font-family: \'Source Sans Pro\', Arial, Helvetica, sans-serif; font-size: 14px; line-height: 19.59375px; background-color: rgb(251, 251, 249);">
+<div class="field field-name-body field-type-text-with-summary field-label-hidden">
 	<div class="field-items">
 		<div class="field-item even">
-			<h2 style="margin-top: 0px; margin-bottom: 12px; font-family: inherit; font-weight: normal; line-height: 1.2em; color: rgb(130, 0, 0); text-rendering: optimizelegibility; font-size: 20px; letter-spacing: 0.01em; border-bottom-width: medium; border-bottom-style: none;">Features</h2>
-			<ul style="margin-top: 0px; margin-bottom: 10px; margin-left: 25px;">
-				<li style="line-height: 20px; list-style-type: square; list-style-image: url(https://itservices.stanford.edu/sites/all/themes/stanford_wilbur/images/bullet.gif); margin-bottom: 0.25em;">monitors and tunes production database environments</li>
-				<li style="line-height: 20px; list-style-type: square; list-style-image: url(https://itservices.stanford.edu/sites/all/themes/stanford_wilbur/images/bullet.gif); margin-bottom: 0.25em;">rapidly responds to critical issues</li>
-				<li style="line-height: 20px; list-style-type: square; list-style-image: url(https://itservices.stanford.edu/sites/all/themes/stanford_wilbur/images/bullet.gif); margin-bottom: 0.25em;">provides backup and recovery, prevents database outage</li>
-				<li style="line-height: 20px; list-style-type: square; list-style-image: url(https://itservices.stanford.edu/sites/all/themes/stanford_wilbur/images/bullet.gif); margin-bottom: 0.25em;">works directly with clients to solve database issues</li>
+			<h2>Features</h2>
+			<ul>
+				<li>monitors and tunes production database environments</li>
+				<li>rapidly responds to critical issues</li>
+				<li>provides backup and recovery, prevents database outage</li>
+				<li>works directly with clients to solve database issues</li>
 			</ul>
-			<h2 style="margin-top: 1.4em; margin-bottom: 12px; font-family: inherit; font-weight: normal; line-height: 1.2em; color: rgb(130, 0, 0); text-rendering: optimizelegibility; font-size: 20px; letter-spacing: 0.01em; border-bottom-width: medium; border-bottom-style: none;">Getting started</h2>
-			<p style="margin-top: 0px;">To order the Database Administration service use&nbsp;<a href="http://orderit.stanford.edu/" style="color: rgb(130, 114, 82); border-bottom-style: dotted; border-bottom-width: 1px; border-bottom-color: rgb(130, 114, 82);">OrderIT</a>&nbsp;or submit a&nbsp;<a href="http://helpsu.stanford.edu/?pcat=dba" style="color: rgb(130, 114, 82); border-bottom-style: dotted; border-bottom-width: 1px; border-bottom-color: rgb(130, 114, 82);">HelpSU request</a>&nbsp;under the Request Category: Billable Services and the Request Type: Database Administration Services.</p>
-			<h2 style="margin-top: 1.4em; margin-bottom: 12px; font-family: inherit; font-weight: normal; line-height: 1.2em; color: rgb(130, 0, 0); text-rendering: optimizelegibility; font-size: 20px; letter-spacing: 0.01em; border-bottom-width: medium; border-bottom-style: none;">Learn more</h2>
-			<ul style="margin-top: 0px; margin-bottom: 10px; margin-left: 25px;">
-				<li style="line-height: 20px; list-style-type: square; list-style-image: url(https://itservices.stanford.edu/sites/all/themes/stanford_wilbur/images/bullet.gif); margin-bottom: 0.25em;"><a href="https://itservices.stanford.edu/service/databaseadministration/businessdocuments" style="color: rgb(130, 114, 82); border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(130, 114, 82);">Business Documents for Database Administration</a></li>
+			<h2>Getting started</h2>
+			<p>To order the Database Administration service use&nbsp;<a href="http://orderit.stanford.edu/">OrderIT</a>&nbsp;or submit a&nbsp;<a href="http://helpsu.stanford.edu/?pcat=dba">HelpSU request</a>&nbsp;under the Request Category: Billable Services and the Request Type: Database Administration Services.</p>
+			<h2>Learn more</h2>
+			<ul>
+				<li><a href="https://itservices.stanford.edu/service/databaseadministration/businessdocuments">Business Documents for Database Administration</a></li>
 			</ul>
 		</div>
 	</div>
@@ -473,27 +473,27 @@ function slac_service_catalog_demo_uuid_features_default_content() {
 ',
         'summary' => '',
         'format' => 'full_html',
-        'safe_value' => '<div class="field field-name-field-service-overview field-type-text-long field-label-hidden" style="margin-bottom: 20px; font-family: \'Source Sans Pro\', Arial, Helvetica, sans-serif; font-size: 14px; line-height: 19.59375px; background-color: rgb(251, 251, 249);">
+        'safe_value' => '<div class="field field-name-field-service-overview field-type-text-long field-label-hidden">
 <div class="field-items">
 <div class="field-item even">
-<p style="margin-top: 0px;">A variety of complementary Database Administration-related services such as Oracle Real Application Cluster (RAC) support are also available via Ntirety. The Database Administration service provides reliable, secure, and cost-effective database administration, including maintenance, monitoring, and backup.</p>
-<p style="margin-top: 0px;">24x7 support is provided for production or critical development databases. In addition to standard, day-to-day administrative and maintenance activities, production or critical development databases are continuously monitored to detect potential problems, proactively addressing problems before they can affect service delivery.</p>
-<p style="margin-top: 0px;">The Database Administration service is available by subscription and is charged monthly to your department’s IT Services bill.</p>
+<p>A variety of complementary Database Administration-related services such as Oracle Real Application Cluster (RAC) support are also available via Ntirety. The Database Administration service provides reliable, secure, and cost-effective database administration, including maintenance, monitoring, and backup.</p>
+<p>24x7 support is provided for production or critical development databases. In addition to standard, day-to-day administrative and maintenance activities, production or critical development databases are continuously monitored to detect potential problems, proactively addressing problems before they can affect service delivery.</p>
+<p>The Database Administration service is available by subscription and is charged monthly to your department’s IT Services bill.</p>
 </div>
 </div>
 </div>
-<div class="field field-name-body field-type-text-with-summary field-label-hidden" style="margin-bottom: 20px; font-family: \'Source Sans Pro\', Arial, Helvetica, sans-serif; font-size: 14px; line-height: 19.59375px; background-color: rgb(251, 251, 249);">
+<div class="field field-name-body field-type-text-with-summary field-label-hidden">
 <div class="field-items">
 <div class="field-item even">
-<h2 style="margin-top: 0px; margin-bottom: 12px; font-family: inherit; font-weight: normal; line-height: 1.2em; color: rgb(130, 0, 0); text-rendering: optimizelegibility; font-size: 20px; letter-spacing: 0.01em; border-bottom-width: medium; border-bottom-style: none;">Features</h2>
-<ul style="margin-top: 0px; margin-bottom: 10px; margin-left: 25px;"><li style="line-height: 20px; list-style-type: square; list-style-image: url(https://itservices.stanford.edu/sites/all/themes/stanford_wilbur/images/bullet.gif); margin-bottom: 0.25em;">monitors and tunes production database environments</li>
-<li style="line-height: 20px; list-style-type: square; list-style-image: url(https://itservices.stanford.edu/sites/all/themes/stanford_wilbur/images/bullet.gif); margin-bottom: 0.25em;">rapidly responds to critical issues</li>
-<li style="line-height: 20px; list-style-type: square; list-style-image: url(https://itservices.stanford.edu/sites/all/themes/stanford_wilbur/images/bullet.gif); margin-bottom: 0.25em;">provides backup and recovery, prevents database outage</li>
-<li style="line-height: 20px; list-style-type: square; list-style-image: url(https://itservices.stanford.edu/sites/all/themes/stanford_wilbur/images/bullet.gif); margin-bottom: 0.25em;">works directly with clients to solve database issues</li>
-</ul><h2 style="margin-top: 1.4em; margin-bottom: 12px; font-family: inherit; font-weight: normal; line-height: 1.2em; color: rgb(130, 0, 0); text-rendering: optimizelegibility; font-size: 20px; letter-spacing: 0.01em; border-bottom-width: medium; border-bottom-style: none;">Getting started</h2>
-<p style="margin-top: 0px;">To order the Database Administration service use <a href="http://orderit.stanford.edu/" style="color: rgb(130, 114, 82); border-bottom-style: dotted; border-bottom-width: 1px; border-bottom-color: rgb(130, 114, 82);">OrderIT</a> or submit a <a href="http://helpsu.stanford.edu/?pcat=dba" style="color: rgb(130, 114, 82); border-bottom-style: dotted; border-bottom-width: 1px; border-bottom-color: rgb(130, 114, 82);">HelpSU request</a> under the Request Category: Billable Services and the Request Type: Database Administration Services.</p>
-<h2 style="margin-top: 1.4em; margin-bottom: 12px; font-family: inherit; font-weight: normal; line-height: 1.2em; color: rgb(130, 0, 0); text-rendering: optimizelegibility; font-size: 20px; letter-spacing: 0.01em; border-bottom-width: medium; border-bottom-style: none;">Learn more</h2>
-<ul style="margin-top: 0px; margin-bottom: 10px; margin-left: 25px;"><li style="line-height: 20px; list-style-type: square; list-style-image: url(https://itservices.stanford.edu/sites/all/themes/stanford_wilbur/images/bullet.gif); margin-bottom: 0.25em;"><a href="https://itservices.stanford.edu/service/databaseadministration/businessdocuments" style="color: rgb(130, 114, 82); border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(130, 114, 82);">Business Documents for Database Administration</a></li>
+<h2>Features</h2>
+<ul><li>monitors and tunes production database environments</li>
+<li>rapidly responds to critical issues</li>
+<li>provides backup and recovery, prevents database outage</li>
+<li>works directly with clients to solve database issues</li>
+</ul><h2>Getting started</h2>
+<p>To order the Database Administration service use <a href="http://orderit.stanford.edu/">OrderIT</a> or submit a <a href="http://helpsu.stanford.edu/?pcat=dba">HelpSU request</a> under the Request Category: Billable Services and the Request Type: Database Administration Services.</p>
+<h2>Learn more</h2>
+<ul><li><a href="https://itservices.stanford.edu/service/databaseadministration/businessdocuments">Business Documents for Database Administration</a></li>
 </ul></div>
 </div>
 </div>
@@ -658,47 +658,47 @@ function slac_service_catalog_demo_uuid_features_default_content() {
   'body' => array(
     'und' => array(
       0 => array(
-        'value' => '<h2 style="font-size: large; color: rgb(153, 0, 0); font-family: Arial, Helvetica, sans-serif; line-height: normal;">Computing Resources for Short Term Visitors</h2>
-<p style="font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 12px; line-height: normal;">Visitors of SLAC who are attending conferences, meetings, or short collaborations should review the following computing resources that are available for public use. Visitors staying longer than a few days or those requiring access to SLAC-only resources should register as an Active User with the&nbsp;<a href="http://www.slac.stanford.edu/grp/rd/sluo/SLUO.html#SLUO" style="text-decoration: underline; color: rgb(102, 51, 102);">SLAC Users Organization</a>&nbsp;to become eligible to open a SLAC computer account.<br />
+        'value' => '<h2>Computing Resources for Short Term Visitors</h2>
+<p>Visitors of SLAC who are attending conferences, meetings, or short collaborations should review the following computing resources that are available for public use. Visitors staying longer than a few days or those requiring access to SLAC-only resources should register as an Active User with the&nbsp;<a href="http://www.slac.stanford.edu/grp/rd/sluo/SLUO.html#SLUO">SLAC Users Organization</a>&nbsp;to become eligible to open a SLAC computer account.<br />
 	&nbsp;</p>
-<table border="0" cellpadding="5" cellspacing="0" style="font-size: 1em; font-family: Verdana, Helvetica, Arial, sans-serif; list-style-position: inside;" width="100%">
+<table border="0" cellpadding="5" cellspacing="0" width="100%">
 	<tbody>
-		<tr style="font-size: 1em; list-style-position: inside;">
-			<td style="font-size: 1em; list-style-position: inside;" width="10"><img src="http://www2.slac.stanford.edu/computing/helpdesk/images/arrow2.gif" /></td>
-			<td style="font-size: 1em; list-style-position: inside;" width="200"><a href="http://www2.slac.stanford.edu/comp/net/wireless/visitor_net.htm" style="text-decoration: underline; color: rgb(102, 51, 102);">SLAC Visitor Network</a></td>
-			<td style="font-size: 1em; list-style-position: inside;">:: Information about the public computing network at SLAC</td>
+		<tr>
+			<td width="10"><img src="http://www2.slac.stanford.edu/computing/helpdesk/images/arrow2.gif" /></td>
+			<td width="200"><a href="http://www2.slac.stanford.edu/comp/net/wireless/visitor_net.htm">SLAC Visitor Network</a></td>
+			<td>:: Information about the public computing network at SLAC</td>
 		</tr>
-		<tr style="font-size: 1em; list-style-position: inside;">
-			<td style="font-size: 1em; list-style-position: inside;"><img src="http://www2.slac.stanford.edu/computing/helpdesk/images/arrow2.gif" /></td>
-			<td style="font-size: 1em; list-style-position: inside;"><a href="http://www2.slac.stanford.edu/comp/net/wireless/" style="text-decoration: underline; color: rgb(102, 51, 102);">Wireless Networking</a></td>
-			<td style="font-size: 1em; list-style-position: inside;">:: Wireless ( 802.11b ) network access at SLAC</td>
+		<tr>
+			<td><img src="http://www2.slac.stanford.edu/computing/helpdesk/images/arrow2.gif" /></td>
+			<td><a href="http://www2.slac.stanford.edu/comp/net/wireless/">Wireless Networking</a></td>
+			<td>:: Wireless ( 802.11b ) network access at SLAC</td>
 		</tr>
-		<tr style="font-size: 1em; list-style-position: inside;">
-			<td style="font-size: 1em; list-style-position: inside;"><img src="http://www2.slac.stanford.edu/computing/helpdesk/images/arrow2.gif" /></td>
-			<td style="font-size: 1em; list-style-position: inside;"><a href="http://www2.slac.stanford.edu/computing/helpdesk/visitor/resources.asp" style="text-decoration: underline; color: rgb(102, 51, 102);">Computing Resources</a></td>
-			<td style="font-size: 1em; list-style-position: inside;">:: Computing resources for public use at SLAC</td>
+		<tr>
+			<td><img src="http://www2.slac.stanford.edu/computing/helpdesk/images/arrow2.gif" /></td>
+			<td><a href="http://www2.slac.stanford.edu/computing/helpdesk/visitor/resources.asp">Computing Resources</a></td>
+			<td>:: Computing resources for public use at SLAC</td>
 		</tr>
 	</tbody>
 </table>
-<p style="font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 12px; line-height: normal;">&nbsp;</p>
-<h2 style="font-size: large; color: rgb(153, 0, 0); font-family: Arial, Helvetica, sans-serif; line-height: normal;">Conference Computing Information</h2>
-<p style="font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 12px; line-height: normal;">Organizers of conferences held at SLAC should review the following information regarding the setup of conferences and talks.</p>
-<table border="0" cellpadding="5" cellspacing="0" style="font-size: 1em; font-family: Verdana, Helvetica, Arial, sans-serif; list-style-position: inside;" width="100%">
+<p>&nbsp;</p>
+<h2>Conference Computing Information</h2>
+<p>Organizers of conferences held at SLAC should review the following information regarding the setup of conferences and talks.</p>
+<table border="0" cellpadding="5" cellspacing="0" width="100%">
 	<tbody>
-		<tr style="font-size: 1em; list-style-position: inside;">
-			<td style="font-size: 1em; list-style-position: inside;" width="10"><img src="http://www2.slac.stanford.edu/computing/helpdesk/images/arrow2.gif" /></td>
-			<td style="font-size: 1em; list-style-position: inside;" width="200"><a href="http://www.slac.stanford.edu/grp/pao/slaconly.conference.html" style="text-decoration: underline; color: rgb(102, 51, 102);">Overview</a></td>
-			<td style="font-size: 1em; list-style-position: inside;">:: General conference computing information</td>
+		<tr>
+			<td width="10"><img src="http://www2.slac.stanford.edu/computing/helpdesk/images/arrow2.gif" /></td>
+			<td width="200"><a href="http://www.slac.stanford.edu/grp/pao/slaconly.conference.html">Overview</a></td>
+			<td>:: General conference computing information</td>
 		</tr>
-		<tr style="font-size: 1em; list-style-position: inside;">
-			<td style="font-size: 1em; list-style-position: inside;"><img src="http://www2.slac.stanford.edu/computing/helpdesk/images/arrow2.gif" /></td>
-			<td style="font-size: 1em; list-style-position: inside;"><a href="http://www2.slac.stanford.edu/computing/helpdesk/visitor/confchecklist.asp" style="text-decoration: underline; color: rgb(102, 51, 102);">Checklist</a></td>
-			<td style="font-size: 1em; list-style-position: inside;">:: Issues and caveats</td>
+		<tr>
+			<td><img src="http://www2.slac.stanford.edu/computing/helpdesk/images/arrow2.gif" /></td>
+			<td><a href="http://www2.slac.stanford.edu/computing/helpdesk/visitor/confchecklist.asp">Checklist</a></td>
+			<td>:: Issues and caveats</td>
 		</tr>
-		<tr style="font-size: 1em; list-style-position: inside;">
-			<td style="font-size: 1em; list-style-position: inside;"><img src="http://www2.slac.stanford.edu/computing/helpdesk/images/arrow2.gif" /></td>
-			<td style="font-size: 1em; list-style-position: inside;"><a href="http://www2.slac.stanford.edu/computing/helpdesk/visitor/computingsetup.asp" style="text-decoration: underline; color: rgb(102, 51, 102);">Conference Room Setups</a></td>
-			<td style="font-size: 1em; list-style-position: inside;">:: Conference room layouts and equipment types</td>
+		<tr>
+			<td><img src="http://www2.slac.stanford.edu/computing/helpdesk/images/arrow2.gif" /></td>
+			<td><a href="http://www2.slac.stanford.edu/computing/helpdesk/visitor/computingsetup.asp">Conference Room Setups</a></td>
+			<td>:: Conference room layouts and equipment types</td>
 		</tr>
 	</tbody>
 </table>
@@ -706,30 +706,30 @@ function slac_service_catalog_demo_uuid_features_default_content() {
 ',
         'summary' => '',
         'format' => 'full_html',
-        'safe_value' => '<h2 style="font-size: large; color: rgb(153, 0, 0); font-family: Arial, Helvetica, sans-serif; line-height: normal;">Computing Resources for Short Term Visitors</h2>
-<p style="font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 12px; line-height: normal;">Visitors of SLAC who are attending conferences, meetings, or short collaborations should review the following computing resources that are available for public use. Visitors staying longer than a few days or those requiring access to SLAC-only resources should register as an Active User with the <a href="http://www.slac.stanford.edu/grp/rd/sluo/SLUO.html#SLUO" style="text-decoration: underline; color: rgb(102, 51, 102);">SLAC Users Organization</a> to become eligible to open a SLAC computer account.<br />
+        'safe_value' => '<h2>Computing Resources for Short Term Visitors</h2>
+<p>Visitors of SLAC who are attending conferences, meetings, or short collaborations should review the following computing resources that are available for public use. Visitors staying longer than a few days or those requiring access to SLAC-only resources should register as an Active User with the <a href="http://www.slac.stanford.edu/grp/rd/sluo/SLUO.html#SLUO">SLAC Users Organization</a> to become eligible to open a SLAC computer account.<br />
 	 </p>
-<table border="0" cellpadding="5" cellspacing="0" style="font-size: 1em; font-family: Verdana, Helvetica, Arial, sans-serif; list-style-position: inside;" width="100%"><tbody><tr style="font-size: 1em; list-style-position: inside;"><td style="font-size: 1em; list-style-position: inside;" width="10"><img src="http://www2.slac.stanford.edu/computing/helpdesk/images/arrow2.gif" /></td>
-<td style="font-size: 1em; list-style-position: inside;" width="200"><a href="http://www2.slac.stanford.edu/comp/net/wireless/visitor_net.htm" style="text-decoration: underline; color: rgb(102, 51, 102);">SLAC Visitor Network</a></td>
-<td style="font-size: 1em; list-style-position: inside;">:: Information about the public computing network at SLAC</td>
-</tr><tr style="font-size: 1em; list-style-position: inside;"><td style="font-size: 1em; list-style-position: inside;"><img src="http://www2.slac.stanford.edu/computing/helpdesk/images/arrow2.gif" /></td>
-<td style="font-size: 1em; list-style-position: inside;"><a href="http://www2.slac.stanford.edu/comp/net/wireless/" style="text-decoration: underline; color: rgb(102, 51, 102);">Wireless Networking</a></td>
-<td style="font-size: 1em; list-style-position: inside;">:: Wireless ( 802.11b ) network access at SLAC</td>
-</tr><tr style="font-size: 1em; list-style-position: inside;"><td style="font-size: 1em; list-style-position: inside;"><img src="http://www2.slac.stanford.edu/computing/helpdesk/images/arrow2.gif" /></td>
-<td style="font-size: 1em; list-style-position: inside;"><a href="http://www2.slac.stanford.edu/computing/helpdesk/visitor/resources.asp" style="text-decoration: underline; color: rgb(102, 51, 102);">Computing Resources</a></td>
-<td style="font-size: 1em; list-style-position: inside;">:: Computing resources for public use at SLAC</td>
-</tr></tbody></table><p style="font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 12px; line-height: normal;"> </p>
-<h2 style="font-size: large; color: rgb(153, 0, 0); font-family: Arial, Helvetica, sans-serif; line-height: normal;">Conference Computing Information</h2>
-<p style="font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 12px; line-height: normal;">Organizers of conferences held at SLAC should review the following information regarding the setup of conferences and talks.</p>
-<table border="0" cellpadding="5" cellspacing="0" style="font-size: 1em; font-family: Verdana, Helvetica, Arial, sans-serif; list-style-position: inside;" width="100%"><tbody><tr style="font-size: 1em; list-style-position: inside;"><td style="font-size: 1em; list-style-position: inside;" width="10"><img src="http://www2.slac.stanford.edu/computing/helpdesk/images/arrow2.gif" /></td>
-<td style="font-size: 1em; list-style-position: inside;" width="200"><a href="http://www.slac.stanford.edu/grp/pao/slaconly.conference.html" style="text-decoration: underline; color: rgb(102, 51, 102);">Overview</a></td>
-<td style="font-size: 1em; list-style-position: inside;">:: General conference computing information</td>
-</tr><tr style="font-size: 1em; list-style-position: inside;"><td style="font-size: 1em; list-style-position: inside;"><img src="http://www2.slac.stanford.edu/computing/helpdesk/images/arrow2.gif" /></td>
-<td style="font-size: 1em; list-style-position: inside;"><a href="http://www2.slac.stanford.edu/computing/helpdesk/visitor/confchecklist.asp" style="text-decoration: underline; color: rgb(102, 51, 102);">Checklist</a></td>
-<td style="font-size: 1em; list-style-position: inside;">:: Issues and caveats</td>
-</tr><tr style="font-size: 1em; list-style-position: inside;"><td style="font-size: 1em; list-style-position: inside;"><img src="http://www2.slac.stanford.edu/computing/helpdesk/images/arrow2.gif" /></td>
-<td style="font-size: 1em; list-style-position: inside;"><a href="http://www2.slac.stanford.edu/computing/helpdesk/visitor/computingsetup.asp" style="text-decoration: underline; color: rgb(102, 51, 102);">Conference Room Setups</a></td>
-<td style="font-size: 1em; list-style-position: inside;">:: Conference room layouts and equipment types</td>
+<table border="0" cellpadding="5" cellspacing="0" width="100%"><tbody><tr><td width="10"><img src="http://www2.slac.stanford.edu/computing/helpdesk/images/arrow2.gif" /></td>
+<td width="200"><a href="http://www2.slac.stanford.edu/comp/net/wireless/visitor_net.htm">SLAC Visitor Network</a></td>
+<td>:: Information about the public computing network at SLAC</td>
+</tr><tr><td><img src="http://www2.slac.stanford.edu/computing/helpdesk/images/arrow2.gif" /></td>
+<td><a href="http://www2.slac.stanford.edu/comp/net/wireless/">Wireless Networking</a></td>
+<td>:: Wireless ( 802.11b ) network access at SLAC</td>
+</tr><tr><td><img src="http://www2.slac.stanford.edu/computing/helpdesk/images/arrow2.gif" /></td>
+<td><a href="http://www2.slac.stanford.edu/computing/helpdesk/visitor/resources.asp">Computing Resources</a></td>
+<td>:: Computing resources for public use at SLAC</td>
+</tr></tbody></table><p> </p>
+<h2>Conference Computing Information</h2>
+<p>Organizers of conferences held at SLAC should review the following information regarding the setup of conferences and talks.</p>
+<table border="0" cellpadding="5" cellspacing="0" width="100%"><tbody><tr><td width="10"><img src="http://www2.slac.stanford.edu/computing/helpdesk/images/arrow2.gif" /></td>
+<td width="200"><a href="http://www.slac.stanford.edu/grp/pao/slaconly.conference.html">Overview</a></td>
+<td>:: General conference computing information</td>
+</tr><tr><td><img src="http://www2.slac.stanford.edu/computing/helpdesk/images/arrow2.gif" /></td>
+<td><a href="http://www2.slac.stanford.edu/computing/helpdesk/visitor/confchecklist.asp">Checklist</a></td>
+<td>:: Issues and caveats</td>
+</tr><tr><td><img src="http://www2.slac.stanford.edu/computing/helpdesk/images/arrow2.gif" /></td>
+<td><a href="http://www2.slac.stanford.edu/computing/helpdesk/visitor/computingsetup.asp">Conference Room Setups</a></td>
+<td>:: Conference room layouts and equipment types</td>
 </tr></tbody></table><p> </p>
 ',
         'safe_summary' => '',
@@ -880,11 +880,11 @@ function slac_service_catalog_demo_uuid_features_default_content() {
     'und' => array(
       0 => array(
         'value' => '<dl>
-	<dt style="margin-bottom: 0.5em; margin-top: 0.5em; color: rgb(153, 0, 0); font-size: 1.3em; font-weight: bold; font-family: Verdana, Helvetica, Arial, sans-serif; line-height: normal;">Platforms</dt>
-	<dd style="padding-bottom: 6px; font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 12px; line-height: normal;"><a href="http://www2.slac.stanford.edu/comp/slacwide/account/account.html" style="text-decoration: underline; color: rgb(102, 51, 102);">Windows</a>&nbsp;:: Microsoft Windows Accounts.
+	<dt>Platforms</dt>
+	<dd><a href="http://www2.slac.stanford.edu/comp/slacwide/account/account.html">Windows</a>&nbsp;:: Microsoft Windows Accounts.
 		<ul>
 			<li>There are SLAC Windows domain accounts for site-wide centrally maintained Windows applications.</li>
-			<li>There are two types of COLLAB Windows domain accounts: Individual and Group. Currently only SharePoint supports COLLAB domain accounts.&nbsp;Request an account via email to&nbsp;<a href="mailto:windows-admin@slac.stanford.edu" style="text-decoration: underline; color: rgb(102, 51, 102);">windows-admin@slac.stanford.edu</a>
+			<li>There are two types of COLLAB Windows domain accounts: Individual and Group. Currently only SharePoint supports COLLAB domain accounts.&nbsp;Request an account via email to&nbsp;<a href="mailto:windows-admin@slac.stanford.edu">windows-admin@slac.stanford.edu</a>
 				<ul>
 					<li>COLLAB Group accounts are limited to read-only access.</li>
 					<li>COLLAB Individual accounts are allowed read/write access.</li>
@@ -892,72 +892,72 @@ function slac_service_catalog_demo_uuid_features_default_content() {
 			</li>
 		</ul>
 	</dd>
-	<dd style="padding-bottom: 6px; font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 12px; line-height: normal;"><a href="http://www2.slac.stanford.edu/comp/slacwide/account/account.html" style="text-decoration: underline; color: rgb(102, 51, 102);">Unix</a>&nbsp;:: Central Unix</dd>
-	<dd style="padding-bottom: 6px; font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 12px; line-height: normal;"><a href="http://www2.slac.stanford.edu/computing/windows/services/citrix/" style="text-decoration: underline; color: rgb(102, 51, 102);">WTS</a>&nbsp;:: Windows Terminal Server (Citrix)</dd>
-	<dt style="margin-bottom: 0.5em; margin-top: 0.5em; color: rgb(153, 0, 0); font-size: 1.3em; font-weight: bold; font-family: Verdana, Helvetica, Arial, sans-serif; line-height: normal;">Connectivity (Remote Access)</dt>
-	<dd style="padding-bottom: 6px; font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 12px; line-height: normal;"><a href="https://www-internal.slac.stanford.edu/comp/winnt/SLACONLY/pptp/default.htm" style="text-decoration: underline; color: rgb(102, 51, 102);">VPN</a>&nbsp;:: Virtual Private Networking</dd>
-	<dd style="padding-bottom: 6px; font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 12px; line-height: normal;"><a href="http://www2.slac.stanford.edu/computing/windows/services/citrix/xa6/account/default.aspx" style="text-decoration: underline; color: rgb(102, 51, 102);">Citrix</a>&nbsp;:: Citrix Service</dd>
-	<dt style="margin-bottom: 0.5em; margin-top: 0.5em; color: rgb(153, 0, 0); font-size: 1.3em; font-weight: bold; font-family: Verdana, Helvetica, Arial, sans-serif; line-height: normal;">Applications</dt>
-	<dd style="padding-bottom: 6px; font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 12px; line-height: normal;">
-		<p style="margin-top: 0px; margin-bottom: 2px;">Exchange :: Send mail to&nbsp;<a href="mailto:mail-admin@slac.stanford.edu" style="text-decoration: underline; color: rgb(102, 51, 102);">mail-admin@slac.stanford.edu</a></p>
+	<dd><a href="http://www2.slac.stanford.edu/comp/slacwide/account/account.html">Unix</a>&nbsp;:: Central Unix</dd>
+	<dd><a href="http://www2.slac.stanford.edu/computing/windows/services/citrix/">WTS</a>&nbsp;:: Windows Terminal Server (Citrix)</dd>
+	<dt>Connectivity (Remote Access)</dt>
+	<dd><a href="https://www-internal.slac.stanford.edu/comp/winnt/SLACONLY/pptp/default.htm">VPN</a>&nbsp;:: Virtual Private Networking</dd>
+	<dd><a href="http://www2.slac.stanford.edu/computing/windows/services/citrix/xa6/account/default.aspx">Citrix</a>&nbsp;:: Citrix Service</dd>
+	<dt>Applications</dt>
+	<dd>
+		<p>Exchange :: Send mail to&nbsp;<a href="mailto:mail-admin@slac.stanford.edu">mail-admin@slac.stanford.edu</a></p>
 	</dd>
-	<dd style="padding-bottom: 6px; font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 12px; line-height: normal;">
-		<p style="margin-top: 0px; margin-bottom: 2px;">Oracle :: Send mail to&nbsp;<a href="mailto:db-admin@slac.stanford.edu" style="text-decoration: underline; color: rgb(102, 51, 102);">db-admin@slac.stanford.edu</a></p>
+	<dd>
+		<p>Oracle :: Send mail to&nbsp;<a href="mailto:db-admin@slac.stanford.edu">db-admin@slac.stanford.edu</a></p>
 		<dl>
-			<dd style="padding-bottom: 6px;">
-				<p style="margin-top: 0px; margin-bottom: -3px;">Oracle password change&nbsp;<a href="https://oraweb.slac.stanford.edu/pls/slac/change_my_password" style="text-decoration: underline; color: rgb(102, 51, 102);">https://oraweb.slac.stanford.edu/pls/slac/change_my_password</a></p>
+			<dd>
+				<p>Oracle password change&nbsp;<a href="https://oraweb.slac.stanford.edu/pls/slac/change_my_password">https://oraweb.slac.stanford.edu/pls/slac/change_my_password</a></p>
 			</dd>
 		</dl>
 	</dd>
-	<dd style="padding-bottom: 6px; font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 12px; line-height: normal;">
-		<p style="margin-top: 0px; margin-bottom: 0px;">PeopleSoft :: Send mail to&nbsp;<a href="mailto:ps-admin@slac.stanford.edu" style="text-decoration: underline; color: rgb(102, 51, 102);">ps-admin@slac.stanford.edu</a></p>
+	<dd>
+		<p>PeopleSoft :: Send mail to&nbsp;<a href="mailto:ps-admin@slac.stanford.edu">ps-admin@slac.stanford.edu</a></p>
 	</dd>
-	<dt style="margin-bottom: 0.5em; margin-top: 0.5em; color: rgb(153, 0, 0); font-size: 1.3em; font-weight: bold; font-family: Verdana, Helvetica, Arial, sans-serif; line-height: normal;">Stanford University Computer Accounts</dt>
-	<dd style="padding-bottom: 6px; font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 12px; line-height: normal;"><a href="http://www.stanford.edu/dept/as/mais/applications/sunetid/index.html" style="text-decoration: underline; color: rgb(102, 51, 102);">Getting a Stanford University ID (SUNet ID)</a></dd>
-	<dt style="margin-bottom: 0.5em; margin-top: 0.5em; color: rgb(153, 0, 0); font-size: 1.3em; font-weight: bold; font-family: Verdana, Helvetica, Arial, sans-serif; line-height: normal;">Administrative Tasks</dt>
-	<dd style="padding-bottom: 6px; font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 12px; line-height: normal;"><a href="http://www-group.slac.stanford.edu/bsd/sid_entry.htm" style="text-decoration: underline; color: rgb(102, 51, 102);">Getting a SLAC ID number</a>&nbsp;:: Newcomers to SLAC who need to receive an identification badge, a dosimeter, a computer account, a phone, or any other services, must be entered into the SLAC Institutional Database (SID).</dd>
-	<dd style="padding-bottom: 6px; font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 12px; line-height: normal;"><a href="https://www-internal.slac.stanford.edu/database/pages/czarlist.asp" style="text-decoration: underline; color: rgb(102, 51, 102);">Finding your Computer Czar</a>&nbsp;:: List of Computer Czar (People who can authorize comptuer accounts, changes, and deletions.)</dd>
-	<dd style="padding-bottom: 6px; font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 12px; line-height: normal;"><a href="https://www-internal.slac.stanford.edu/comp/admin/pages/account-search.asp" style="text-decoration: underline; color: rgb(102, 51, 102);">Search for accounts</a>&nbsp;:: Find computing accounts for specific users</dd>
-	<dd style="padding-bottom: 6px; font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 12px; line-height: normal;"><a href="https://www-internal.slac.stanford.edu/instdatabase/procedures/computer-accounts/account-delete.htm" style="text-decoration: underline; color: rgb(102, 51, 102);">Closing Accounts</a></dd>
-	<dd style="padding-bottom: 6px; font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 12px; line-height: normal;"><a href="https://www-internal.slac.stanford.edu/instdatabase/procedures/computer-accounts/account-delete.htm" style="text-decoration: underline; color: rgb(102, 51, 102);">Terminating SLAC Employees</a>&nbsp;:: Procedures for computer accounts</dd>
+	<dt>Stanford University Computer Accounts</dt>
+	<dd><a href="http://www.stanford.edu/dept/as/mais/applications/sunetid/index.html">Getting a Stanford University ID (SUNet ID)</a></dd>
+	<dt>Administrative Tasks</dt>
+	<dd><a href="http://www-group.slac.stanford.edu/bsd/sid_entry.htm">Getting a SLAC ID number</a>&nbsp;:: Newcomers to SLAC who need to receive an identification badge, a dosimeter, a computer account, a phone, or any other services, must be entered into the SLAC Institutional Database (SID).</dd>
+	<dd><a href="https://www-internal.slac.stanford.edu/database/pages/czarlist.asp">Finding your Computer Czar</a>&nbsp;:: List of Computer Czar (People who can authorize comptuer accounts, changes, and deletions.)</dd>
+	<dd><a href="https://www-internal.slac.stanford.edu/comp/admin/pages/account-search.asp">Search for accounts</a>&nbsp;:: Find computing accounts for specific users</dd>
+	<dd><a href="https://www-internal.slac.stanford.edu/instdatabase/procedures/computer-accounts/account-delete.htm">Closing Accounts</a></dd>
+	<dd><a href="https://www-internal.slac.stanford.edu/instdatabase/procedures/computer-accounts/account-delete.htm">Terminating SLAC Employees</a>&nbsp;:: Procedures for computer accounts</dd>
 </dl>
 ',
         'summary' => '',
         'format' => 'full_html',
-        'safe_value' => '<dl><dt style="margin-bottom: 0.5em; margin-top: 0.5em; color: rgb(153, 0, 0); font-size: 1.3em; font-weight: bold; font-family: Verdana, Helvetica, Arial, sans-serif; line-height: normal;">Platforms</dt>
-<dd style="padding-bottom: 6px; font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 12px; line-height: normal;"><a href="http://www2.slac.stanford.edu/comp/slacwide/account/account.html" style="text-decoration: underline; color: rgb(102, 51, 102);">Windows</a> :: Microsoft Windows Accounts.
+        'safe_value' => '<dl><dt>Platforms</dt>
+<dd><a href="http://www2.slac.stanford.edu/comp/slacwide/account/account.html">Windows</a> :: Microsoft Windows Accounts.
 <ul><li>There are SLAC Windows domain accounts for site-wide centrally maintained Windows applications.</li>
-<li>There are two types of COLLAB Windows domain accounts: Individual and Group. Currently only SharePoint supports COLLAB domain accounts. Request an account via email to <a href="mailto:windows-admin@slac.stanford.edu" style="text-decoration: underline; color: rgb(102, 51, 102);">windows-admin@slac.stanford.edu</a>
+<li>There are two types of COLLAB Windows domain accounts: Individual and Group. Currently only SharePoint supports COLLAB domain accounts. Request an account via email to <a href="mailto:windows-admin@slac.stanford.edu">windows-admin@slac.stanford.edu</a>
 <ul><li>COLLAB Group accounts are limited to read-only access.</li>
 <li>COLLAB Individual accounts are allowed read/write access.</li>
 </ul></li>
 </ul></dd>
-<dd style="padding-bottom: 6px; font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 12px; line-height: normal;"><a href="http://www2.slac.stanford.edu/comp/slacwide/account/account.html" style="text-decoration: underline; color: rgb(102, 51, 102);">Unix</a> :: Central Unix</dd>
-<dd style="padding-bottom: 6px; font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 12px; line-height: normal;"><a href="http://www2.slac.stanford.edu/computing/windows/services/citrix/" style="text-decoration: underline; color: rgb(102, 51, 102);">WTS</a> :: Windows Terminal Server (Citrix)</dd>
-<dt style="margin-bottom: 0.5em; margin-top: 0.5em; color: rgb(153, 0, 0); font-size: 1.3em; font-weight: bold; font-family: Verdana, Helvetica, Arial, sans-serif; line-height: normal;">Connectivity (Remote Access)</dt>
-<dd style="padding-bottom: 6px; font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 12px; line-height: normal;"><a href="https://www-internal.slac.stanford.edu/comp/winnt/SLACONLY/pptp/default.htm" style="text-decoration: underline; color: rgb(102, 51, 102);">VPN</a> :: Virtual Private Networking</dd>
-<dd style="padding-bottom: 6px; font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 12px; line-height: normal;"><a href="http://www2.slac.stanford.edu/computing/windows/services/citrix/xa6/account/default.aspx" style="text-decoration: underline; color: rgb(102, 51, 102);">Citrix</a> :: Citrix Service</dd>
-<dt style="margin-bottom: 0.5em; margin-top: 0.5em; color: rgb(153, 0, 0); font-size: 1.3em; font-weight: bold; font-family: Verdana, Helvetica, Arial, sans-serif; line-height: normal;">Applications</dt>
-<dd style="padding-bottom: 6px; font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 12px; line-height: normal;">
-<p style="margin-top: 0px; margin-bottom: 2px;">Exchange :: Send mail to <a href="mailto:mail-admin@slac.stanford.edu" style="text-decoration: underline; color: rgb(102, 51, 102);">mail-admin@slac.stanford.edu</a></p>
+<dd><a href="http://www2.slac.stanford.edu/comp/slacwide/account/account.html">Unix</a> :: Central Unix</dd>
+<dd><a href="http://www2.slac.stanford.edu/computing/windows/services/citrix/">WTS</a> :: Windows Terminal Server (Citrix)</dd>
+<dt>Connectivity (Remote Access)</dt>
+<dd><a href="https://www-internal.slac.stanford.edu/comp/winnt/SLACONLY/pptp/default.htm">VPN</a> :: Virtual Private Networking</dd>
+<dd><a href="http://www2.slac.stanford.edu/computing/windows/services/citrix/xa6/account/default.aspx">Citrix</a> :: Citrix Service</dd>
+<dt>Applications</dt>
+<dd>
+<p>Exchange :: Send mail to <a href="mailto:mail-admin@slac.stanford.edu">mail-admin@slac.stanford.edu</a></p>
 </dd>
-<dd style="padding-bottom: 6px; font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 12px; line-height: normal;">
-<p style="margin-top: 0px; margin-bottom: 2px;">Oracle :: Send mail to <a href="mailto:db-admin@slac.stanford.edu" style="text-decoration: underline; color: rgb(102, 51, 102);">db-admin@slac.stanford.edu</a></p>
-<dl><dd style="padding-bottom: 6px;">
-<p style="margin-top: 0px; margin-bottom: -3px;">Oracle password change <a href="https://oraweb.slac.stanford.edu/pls/slac/change_my_password" style="text-decoration: underline; color: rgb(102, 51, 102);">https://oraweb.slac.stanford.edu/pls/slac/change_my_password</a></p>
+<dd>
+<p>Oracle :: Send mail to <a href="mailto:db-admin@slac.stanford.edu">db-admin@slac.stanford.edu</a></p>
+<dl><dd>
+<p>Oracle password change <a href="https://oraweb.slac.stanford.edu/pls/slac/change_my_password">https://oraweb.slac.stanford.edu/pls/slac/change_my_password</a></p>
 </dd>
 </dl></dd>
-<dd style="padding-bottom: 6px; font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 12px; line-height: normal;">
-<p style="margin-top: 0px; margin-bottom: 0px;">PeopleSoft :: Send mail to <a href="mailto:ps-admin@slac.stanford.edu" style="text-decoration: underline; color: rgb(102, 51, 102);">ps-admin@slac.stanford.edu</a></p>
+<dd>
+<p>PeopleSoft :: Send mail to <a href="mailto:ps-admin@slac.stanford.edu">ps-admin@slac.stanford.edu</a></p>
 </dd>
-<dt style="margin-bottom: 0.5em; margin-top: 0.5em; color: rgb(153, 0, 0); font-size: 1.3em; font-weight: bold; font-family: Verdana, Helvetica, Arial, sans-serif; line-height: normal;">Stanford University Computer Accounts</dt>
-<dd style="padding-bottom: 6px; font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 12px; line-height: normal;"><a href="http://www.stanford.edu/dept/as/mais/applications/sunetid/index.html" style="text-decoration: underline; color: rgb(102, 51, 102);">Getting a Stanford University ID (SUNet ID)</a></dd>
-<dt style="margin-bottom: 0.5em; margin-top: 0.5em; color: rgb(153, 0, 0); font-size: 1.3em; font-weight: bold; font-family: Verdana, Helvetica, Arial, sans-serif; line-height: normal;">Administrative Tasks</dt>
-<dd style="padding-bottom: 6px; font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 12px; line-height: normal;"><a href="http://www-group.slac.stanford.edu/bsd/sid_entry.htm" style="text-decoration: underline; color: rgb(102, 51, 102);">Getting a SLAC ID number</a> :: Newcomers to SLAC who need to receive an identification badge, a dosimeter, a computer account, a phone, or any other services, must be entered into the SLAC Institutional Database (SID).</dd>
-<dd style="padding-bottom: 6px; font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 12px; line-height: normal;"><a href="https://www-internal.slac.stanford.edu/database/pages/czarlist.asp" style="text-decoration: underline; color: rgb(102, 51, 102);">Finding your Computer Czar</a> :: List of Computer Czar (People who can authorize comptuer accounts, changes, and deletions.)</dd>
-<dd style="padding-bottom: 6px; font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 12px; line-height: normal;"><a href="https://www-internal.slac.stanford.edu/comp/admin/pages/account-search.asp" style="text-decoration: underline; color: rgb(102, 51, 102);">Search for accounts</a> :: Find computing accounts for specific users</dd>
-<dd style="padding-bottom: 6px; font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 12px; line-height: normal;"><a href="https://www-internal.slac.stanford.edu/instdatabase/procedures/computer-accounts/account-delete.htm" style="text-decoration: underline; color: rgb(102, 51, 102);">Closing Accounts</a></dd>
-<dd style="padding-bottom: 6px; font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 12px; line-height: normal;"><a href="https://www-internal.slac.stanford.edu/instdatabase/procedures/computer-accounts/account-delete.htm" style="text-decoration: underline; color: rgb(102, 51, 102);">Terminating SLAC Employees</a> :: Procedures for computer accounts</dd>
+<dt>Stanford University Computer Accounts</dt>
+<dd><a href="http://www.stanford.edu/dept/as/mais/applications/sunetid/index.html">Getting a Stanford University ID (SUNet ID)</a></dd>
+<dt>Administrative Tasks</dt>
+<dd><a href="http://www-group.slac.stanford.edu/bsd/sid_entry.htm">Getting a SLAC ID number</a> :: Newcomers to SLAC who need to receive an identification badge, a dosimeter, a computer account, a phone, or any other services, must be entered into the SLAC Institutional Database (SID).</dd>
+<dd><a href="https://www-internal.slac.stanford.edu/database/pages/czarlist.asp">Finding your Computer Czar</a> :: List of Computer Czar (People who can authorize comptuer accounts, changes, and deletions.)</dd>
+<dd><a href="https://www-internal.slac.stanford.edu/comp/admin/pages/account-search.asp">Search for accounts</a> :: Find computing accounts for specific users</dd>
+<dd><a href="https://www-internal.slac.stanford.edu/instdatabase/procedures/computer-accounts/account-delete.htm">Closing Accounts</a></dd>
+<dd><a href="https://www-internal.slac.stanford.edu/instdatabase/procedures/computer-accounts/account-delete.htm">Terminating SLAC Employees</a> :: Procedures for computer accounts</dd>
 </dl>',
         'safe_summary' => '',
       ),
@@ -1140,73 +1140,73 @@ WTS :: Windows Terminal Server (Citrix)',
     'und' => array(
       0 => array(
         'value' => '<dl>
-	<dt style="margin-bottom: 0.5em; margin-top: 0.5em; color: rgb(153, 0, 0); font-size: 1.3em; font-family: Verdana, Helvetica, Arial, sans-serif; line-height: normal;">Client Configurations and Forwarding</dt>
+	<dt>Client Configurations and Forwarding</dt>
 </dl>
-<blockquote style="font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 12px; line-height: normal;">
-	<table border="0" id="table6" style="font-size: 1em;" width="100%">
+<blockquote>
+	<table border="0" id="table6" width="100%">
 		<tbody>
-			<tr style="font-size: 1em;">
-				<td style="font-size: 1em;" width="50%"><a href="http://www2.slac.stanford.edu/comp/messaging/Installing/default.htm" style="text-decoration: underline; color: rgb(102, 51, 102);">Install &amp; Configure Pages</a></td>
-				<td style="font-size: 1em;" width="50%"><a href="https://email.slac.stanford.edu/owa" style="text-decoration: underline; color: rgb(102, 51, 102);">Read E-mail via Web Now</a></td>
+			<tr>
+				<td width="50%"><a href="http://www2.slac.stanford.edu/comp/messaging/Installing/default.htm">Install &amp; Configure Pages</a></td>
+				<td width="50%"><a href="https://email.slac.stanford.edu/owa">Read E-mail via Web Now</a></td>
 			</tr>
-			<tr style="font-size: 1em;">
-				<td style="font-size: 1em;" width="50%"><a href="http://www2.slac.stanford.edu/comp/messaging/Reference/exch2007-whattoexpect.htm" style="text-decoration: underline; color: rgb(102, 51, 102);">What to Expect with Exchange 2007</a></td>
-				<td style="font-size: 1em;" width="50%">&nbsp;</td>
+			<tr>
+				<td width="50%"><a href="http://www2.slac.stanford.edu/comp/messaging/Reference/exch2007-whattoexpect.htm">What to Expect with Exchange 2007</a></td>
+				<td width="50%">&nbsp;</td>
 			</tr>
 		</tbody>
 	</table>
 </blockquote>
 <dl>
-	<dt style="margin-bottom: 0.5em; margin-top: 0.5em; color: rgb(153, 0, 0); font-size: 1.3em; font-family: Verdana, Helvetica, Arial, sans-serif; line-height: normal;">Frequently Asked Questions</dt>
+	<dt>Frequently Asked Questions</dt>
 </dl>
-<blockquote style="font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 12px; line-height: normal;">
-	<table border="0" id="table7" style="font-size: 1em;" width="100%">
+<blockquote>
+	<table border="0" id="table7" width="100%">
 		<tbody>
-			<tr style="font-size: 1em;">
-				<td style="font-size: 1em;" width="50%"><a href="http://www2.slac.stanford.edu/comp/messaging/faq/default.htm" style="text-decoration: underline; color: rgb(102, 51, 102);">General FAQ</a></td>
-				<td style="font-size: 1em;" width="50%"><a href="http://www2.slac.stanford.edu/comp/messaging/faq/errroranswer.htm" style="text-decoration: underline; color: rgb(102, 51, 102);">Error Messages &amp; Answers</a></td>
+			<tr>
+				<td width="50%"><a href="http://www2.slac.stanford.edu/comp/messaging/faq/default.htm">General FAQ</a></td>
+				<td width="50%"><a href="http://www2.slac.stanford.edu/comp/messaging/faq/errroranswer.htm">Error Messages &amp; Answers</a></td>
 			</tr>
 		</tbody>
 	</table>
 </blockquote>
 <dl>
-	<dt style="margin-bottom: 0.5em; margin-top: 0.5em; color: rgb(153, 0, 0); font-size: 1.3em; font-family: Verdana, Helvetica, Arial, sans-serif; line-height: normal;">Mailing Lists</dt>
+	<dt>Mailing Lists</dt>
 </dl>
-<blockquote style="font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 12px; line-height: normal;">
-	<table border="0" id="table4" style="font-size: 1em;" width="100%">
+<blockquote>
+	<table border="0" id="table4" width="100%">
 		<tbody>
-			<tr style="font-size: 1em;">
-				<td style="font-size: 1em;" width="33%"><a href="http://www2.slac.stanford.edu/comp/messaging/Reference/mailinglists.htm" style="text-decoration: underline; color: rgb(102, 51, 102);">Description of Mailing Lists at SLAC</a></td>
-				<td style="font-size: 1em;" width="33%"><a href="https://portal.slac.stanford.edu/public/maillist" style="text-decoration: underline; color: rgb(102, 51, 102);">LISTSERV FAQ</a></td>
+			<tr>
+				<td width="33%"><a href="http://www2.slac.stanford.edu/comp/messaging/Reference/mailinglists.htm">Description of Mailing Lists at SLAC</a></td>
+				<td width="33%"><a href="https://portal.slac.stanford.edu/public/maillist">LISTSERV FAQ</a></td>
 			</tr>
-			<tr style="font-size: 1em;">
-				<td style="font-size: 1em;" width="33%"><a href="http://www.slac.stanford.edu/comp/net/email/slaconly/listserv-request.html" style="text-decoration: underline; color: rgb(102, 51, 102);">New List Request Form</a></td>
-				<td style="font-size: 1em;" width="33%">&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</blockquote>
-<dl>
-	<dt style="margin-bottom: 0.5em; margin-top: 0.5em; color: rgb(153, 0, 0); font-size: 1.3em; font-family: Verdana, Helvetica, Arial, sans-serif; line-height: normal;">Getting Help</dt>
-</dl>
-<blockquote style="font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 12px; line-height: normal;">
-	<table border="0" id="table5" style="font-size: 1em;" width="100%">
-		<tbody>
-			<tr style="font-size: 1em;">
-				<td style="font-size: 1em;" width="50%"><a href="mailto:ithelp@slac.stanford.edu" style="text-decoration: underline; color: rgb(102, 51, 102);">Ask Help Desk</a></td>
-				<td style="font-size: 1em;" width="50%">&nbsp;</td>
+			<tr>
+				<td width="33%"><a href="http://www.slac.stanford.edu/comp/net/email/slaconly/listserv-request.html">New List Request Form</a></td>
+				<td width="33%">&nbsp;</td>
 			</tr>
 		</tbody>
 	</table>
 </blockquote>
 <dl>
-	<dt style="margin-bottom: 0.5em; margin-top: 0.5em; color: rgb(153, 0, 0); font-size: 1.3em; font-family: Verdana, Helvetica, Arial, sans-serif; line-height: normal;">Password Changing</dt>
+	<dt>Getting Help</dt>
 </dl>
-<blockquote style="font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 12px; line-height: normal;">
-	<table border="0" id="table8" style="font-size: 1em;" width="100%">
+<blockquote>
+	<table border="0" id="table5" width="100%">
 		<tbody>
-			<tr style="font-size: 1em;">
-				<td style="font-size: 1em;"><a href="https://win-password.slac.stanford.edu/" style="text-decoration: underline; color: rgb(102, 51, 102);">Change Your Windows Password Here</a></td>
+			<tr>
+				<td width="50%"><a href="mailto:ithelp@slac.stanford.edu">Ask Help Desk</a></td>
+				<td width="50%">&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</blockquote>
+<dl>
+	<dt>Password Changing</dt>
+</dl>
+<blockquote>
+	<table border="0" id="table8" width="100%">
+		<tbody>
+			<tr>
+				<td><a href="https://win-password.slac.stanford.edu/">Change Your Windows Password Here</a></td>
 			</tr>
 		</tbody>
 	</table>
@@ -1215,28 +1215,28 @@ WTS :: Windows Terminal Server (Citrix)',
 ',
         'summary' => '',
         'format' => 'full_html',
-        'safe_value' => '<dl><dt style="margin-bottom: 0.5em; margin-top: 0.5em; color: rgb(153, 0, 0); font-size: 1.3em; font-family: Verdana, Helvetica, Arial, sans-serif; line-height: normal;">Client Configurations and Forwarding</dt>
-</dl><blockquote style="font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 12px; line-height: normal;"><table border="0" id="table6" style="font-size: 1em;" width="100%"><tbody><tr style="font-size: 1em;"><td style="font-size: 1em;" width="50%"><a href="http://www2.slac.stanford.edu/comp/messaging/Installing/default.htm" style="text-decoration: underline; color: rgb(102, 51, 102);">Install &amp; Configure Pages</a></td>
-<td style="font-size: 1em;" width="50%"><a href="https://email.slac.stanford.edu/owa" style="text-decoration: underline; color: rgb(102, 51, 102);">Read E-mail via Web Now</a></td>
-</tr><tr style="font-size: 1em;"><td style="font-size: 1em;" width="50%"><a href="http://www2.slac.stanford.edu/comp/messaging/Reference/exch2007-whattoexpect.htm" style="text-decoration: underline; color: rgb(102, 51, 102);">What to Expect with Exchange 2007</a></td>
-<td style="font-size: 1em;" width="50%"> </td>
+        'safe_value' => '<dl><dt>Client Configurations and Forwarding</dt>
+</dl><blockquote><table border="0" id="table6" width="100%"><tbody><tr><td width="50%"><a href="http://www2.slac.stanford.edu/comp/messaging/Installing/default.htm">Install &amp; Configure Pages</a></td>
+<td width="50%"><a href="https://email.slac.stanford.edu/owa">Read E-mail via Web Now</a></td>
+</tr><tr><td width="50%"><a href="http://www2.slac.stanford.edu/comp/messaging/Reference/exch2007-whattoexpect.htm">What to Expect with Exchange 2007</a></td>
+<td width="50%"> </td>
 </tr></tbody></table></blockquote>
-<dl><dt style="margin-bottom: 0.5em; margin-top: 0.5em; color: rgb(153, 0, 0); font-size: 1.3em; font-family: Verdana, Helvetica, Arial, sans-serif; line-height: normal;">Frequently Asked Questions</dt>
-</dl><blockquote style="font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 12px; line-height: normal;"><table border="0" id="table7" style="font-size: 1em;" width="100%"><tbody><tr style="font-size: 1em;"><td style="font-size: 1em;" width="50%"><a href="http://www2.slac.stanford.edu/comp/messaging/faq/default.htm" style="text-decoration: underline; color: rgb(102, 51, 102);">General FAQ</a></td>
-<td style="font-size: 1em;" width="50%"><a href="http://www2.slac.stanford.edu/comp/messaging/faq/errroranswer.htm" style="text-decoration: underline; color: rgb(102, 51, 102);">Error Messages &amp; Answers</a></td>
+<dl><dt>Frequently Asked Questions</dt>
+</dl><blockquote><table border="0" id="table7" width="100%"><tbody><tr><td width="50%"><a href="http://www2.slac.stanford.edu/comp/messaging/faq/default.htm">General FAQ</a></td>
+<td width="50%"><a href="http://www2.slac.stanford.edu/comp/messaging/faq/errroranswer.htm">Error Messages &amp; Answers</a></td>
 </tr></tbody></table></blockquote>
-<dl><dt style="margin-bottom: 0.5em; margin-top: 0.5em; color: rgb(153, 0, 0); font-size: 1.3em; font-family: Verdana, Helvetica, Arial, sans-serif; line-height: normal;">Mailing Lists</dt>
-</dl><blockquote style="font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 12px; line-height: normal;"><table border="0" id="table4" style="font-size: 1em;" width="100%"><tbody><tr style="font-size: 1em;"><td style="font-size: 1em;" width="33%"><a href="http://www2.slac.stanford.edu/comp/messaging/Reference/mailinglists.htm" style="text-decoration: underline; color: rgb(102, 51, 102);">Description of Mailing Lists at SLAC</a></td>
-<td style="font-size: 1em;" width="33%"><a href="https://portal.slac.stanford.edu/public/maillist" style="text-decoration: underline; color: rgb(102, 51, 102);">LISTSERV FAQ</a></td>
-</tr><tr style="font-size: 1em;"><td style="font-size: 1em;" width="33%"><a href="http://www.slac.stanford.edu/comp/net/email/slaconly/listserv-request.html" style="text-decoration: underline; color: rgb(102, 51, 102);">New List Request Form</a></td>
-<td style="font-size: 1em;" width="33%"> </td>
+<dl><dt>Mailing Lists</dt>
+</dl><blockquote><table border="0" id="table4" width="100%"><tbody><tr><td width="33%"><a href="http://www2.slac.stanford.edu/comp/messaging/Reference/mailinglists.htm">Description of Mailing Lists at SLAC</a></td>
+<td width="33%"><a href="https://portal.slac.stanford.edu/public/maillist">LISTSERV FAQ</a></td>
+</tr><tr><td width="33%"><a href="http://www.slac.stanford.edu/comp/net/email/slaconly/listserv-request.html">New List Request Form</a></td>
+<td width="33%"> </td>
 </tr></tbody></table></blockquote>
-<dl><dt style="margin-bottom: 0.5em; margin-top: 0.5em; color: rgb(153, 0, 0); font-size: 1.3em; font-family: Verdana, Helvetica, Arial, sans-serif; line-height: normal;">Getting Help</dt>
-</dl><blockquote style="font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 12px; line-height: normal;"><table border="0" id="table5" style="font-size: 1em;" width="100%"><tbody><tr style="font-size: 1em;"><td style="font-size: 1em;" width="50%"><a href="mailto:ithelp@slac.stanford.edu" style="text-decoration: underline; color: rgb(102, 51, 102);">Ask Help Desk</a></td>
-<td style="font-size: 1em;" width="50%"> </td>
+<dl><dt>Getting Help</dt>
+</dl><blockquote><table border="0" id="table5" width="100%"><tbody><tr><td width="50%"><a href="mailto:ithelp@slac.stanford.edu">Ask Help Desk</a></td>
+<td width="50%"> </td>
 </tr></tbody></table></blockquote>
-<dl><dt style="margin-bottom: 0.5em; margin-top: 0.5em; color: rgb(153, 0, 0); font-size: 1.3em; font-family: Verdana, Helvetica, Arial, sans-serif; line-height: normal;">Password Changing</dt>
-</dl><blockquote style="font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 12px; line-height: normal;"><table border="0" id="table8" style="font-size: 1em;" width="100%"><tbody><tr style="font-size: 1em;"><td style="font-size: 1em;"><a href="https://win-password.slac.stanford.edu/" style="text-decoration: underline; color: rgb(102, 51, 102);">Change Your Windows Password Here</a></td>
+<dl><dt>Password Changing</dt>
+</dl><blockquote><table border="0" id="table8" width="100%"><tbody><tr><td><a href="https://win-password.slac.stanford.edu/">Change Your Windows Password Here</a></td>
 </tr></tbody></table></blockquote>
 <p> </p>
 ',

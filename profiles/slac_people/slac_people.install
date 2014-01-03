@@ -95,6 +95,8 @@ function slac_people_install() {
   variable_set('user_picture_style', 'thumbnail');
 
   variable_set('install_profile', 'slac_people');
+
+  slac_profiles_shared_place_system_blocks_to_regions();
 }
 
 function _slac_people_filter_dependencies($dependency) {

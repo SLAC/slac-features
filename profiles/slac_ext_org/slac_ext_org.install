@@ -105,6 +105,8 @@ function slac_ext_org_install() {
   variable_set('site_name', 'SLAC Extranet Org');
   variable_set('site_name_abbreviation', 'ExtOrg');
   variable_set('site_url_address', '2575 Sand Hill Road, Menlo Park, CA 94025');
+
+  slac_profiles_shared_place_system_blocks_to_regions();
 }
 
 function _slac_ext_org_filter_dependencies($dependency) {
