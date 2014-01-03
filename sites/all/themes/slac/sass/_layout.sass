@@ -34,9 +34,18 @@ h2
     +fontsize-rem(20px)
     &.pane-title
       +fontsize-rem(28px)
-
+  .social-media-content &
+    display: none
+  
+  .pane-bundle-share-block &
+    .general-left &, .general-left-title &
+      display: none    
 h3
   +fontsize-rem(18px)
+
+
+
+
 
 
 html
@@ -553,7 +562,10 @@ ul.tabs, .action-links,
   .social-icon-block
     margin: 0 auto 
 
-
+.pane-bundle-share-block
+  .general-left &
+    margin-bottom: 25px
+  
 
 //Last footer
 //-----------------------------------
@@ -1306,10 +1318,6 @@ span
     @extend .sprites-Microsoft-PowerPoint-icon
 
 
- 
-
-  
-
 +at-breakpoint($less-than-480)          
   .profile-info-full
     .views-row-1
@@ -1591,11 +1599,7 @@ ul.news-archive-class
   margin-bottom: 25px 
 
 .article_panel_layout
-  .pane-node-title
-    //margin-bottom: 25px
-    h2
-      //+fontsize-rem(20px)
-  
+ 
   .author
     border-right: 1px solid $grey-87
     margin-right: 1px
@@ -1608,9 +1612,7 @@ ul.news-archive-class
     font-style: italic
     color: $grey-87
     line-height: 1
-    //margin-bottom: 35px
-    
- 
+
     
   .pane-node-body
     +fontsize-rem(14px)

@@ -302,6 +302,10 @@ h2 {
     .general-left-title h2.pane-title {
       font-size: 28px;
       font-size: 1.75rem; }
+  .social-media-content h2 {
+    display: none; }
+  .general-left .pane-bundle-share-block h2, .general-left-title .pane-bundle-share-block h2 {
+    display: none; }
 
 h3 {
   font-size: 18px;
@@ -756,6 +760,9 @@ ul.tabs, .action-links {
 @media (min-width: 480px) {
   .social-icon-block {
     margin: 0 auto; } }
+.general-left .pane-bundle-share-block {
+  margin-bottom: 25px; }
+
 .footer-seccond {
   background-color: #878787;
   color: white;
