@@ -23,7 +23,7 @@ $plugin = array(
  */
 function slac_users_page_users_list_content_type_render($subtype, $conf, $panel_args) {
   $block = new stdClass();
-  $block->title = t('People list');
+  $block->title = t('');
   $block->content = '';
   $header = array('data' => t('Name'), t('Details'));
   $rows = array();
