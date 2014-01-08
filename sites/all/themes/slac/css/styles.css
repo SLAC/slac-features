@@ -360,8 +360,9 @@ html {
       display: table;
       clear: both; }
 .page-basic > .header {
-  background-color: #871628;
-  padding: 10px 0 7px; }
+  background-color: #871628; }
+  .page-basic > .header .header-wrapper {
+    padding: 10px 0 7px; }
 .page-basic > .content {
   margin: 15px 0; }
   .page-basic > .content input[type='text'], .page-basic > .content input[type='password'], .page-basic > .content textarea, .page-basic > .content select, .page-basic > .content input[type='file'] {
@@ -469,11 +470,9 @@ ul.tabs, .action-links {
 
 .mobile-block {
   max-height: 100%;
-  margin: 7px -13px -7px -13px;
+  margin: 0px -13px -7px -13px;
   background: #ebebdf;
-  padding: 13px;
-  clear: both;
-  border-top: 7px solid #871628; }
+  padding: 13px; }
   .mobile-block.active {
     display: block !important; }
   .mobile-block .main-menu {

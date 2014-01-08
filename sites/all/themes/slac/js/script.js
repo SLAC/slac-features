@@ -71,10 +71,18 @@
           event.stopPropagation();
         });
       });
+      
+      $('.search-icon', context).once('search-icon', function () {
+        $(this).click(function (event) {
+          $(this).toggleClass('active');
+          $mobile_wrapper_search.slideToggle("fast");
+          event.stopPropagation();
+        });
+      });
 
       $close_menu = function () {
-        $('.mobile-main-menu').slideUp("fast");
-        $('.menu-icon, .mobile-main-menu').removeClass('active');
+        $('.mobile-block').slideUp("fast");
+        $('.menu-icon, .mobile-main-menu, .search-icon').removeClass('active');
       };
 
         //Global click to close mobile menu if its clicked

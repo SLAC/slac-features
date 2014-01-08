@@ -77,7 +77,9 @@ html
 
   > .header
     background-color: $red
-    padding: 10px 0 7px
+    //padding: 10px 0 7px
+    .header-wrapper
+      padding: 10px 0 7px
   
   > .content
     margin: 15px 0
@@ -200,11 +202,11 @@ ul.tabs, .action-links,
 
 .mobile-block
   max-height: 100%
-  margin: 7px -13px -7px -13px
+  margin: 0px -13px -7px -13px
   background: $menu_bg
   padding: 13px
-  clear: both
-  border-top: 7px solid $red
+
+  //border-top: 7px solid $red
   //+transition(all 0.5s ease-out)
   &.active
     display: block !important
