@@ -198,7 +198,7 @@ ul.tabs, .action-links,
     &:hover
       background-color: $grey-2e
 
-.mobile-main-menu
+.mobile-block
   max-height: 100%
   margin: 7px -13px -7px -13px
   background: $menu_bg
@@ -284,35 +284,43 @@ ul.tabs, .action-links,
 
 .pane-search-form
   display: none
-  .external-organisation &
+
+  .mobile-search-form &
+    .external-organisation &
     display: block
-   
+
+.header.with_user_search      
+  form 
+    padding-right: 38px
+    position: relative
+    input[type='text']
+      width: 100%
+      +box-shadow(0px 0px 0px 1px #a1a1a1 inset, 0px 0px 0px 0px #000)
+      border: 0 none
+      padding: 5px 6px
+      //padding-right: 38px
+    input[type='submit']
+      position: absolute 
+      top: 0
+      right: 0
+      margin: 0
+      width: 32px
+      padding: 0px 5px
+      line-height: 26px
+      +border-radius(0)
+      background-color: #fff
+      border: 0 none
+      +box-shadow(0px 0px 0px 1px #a1a1a1 inset, 0px 0px 0px 0px #000)   
         
 +at-breakpoint($tablet)  
   .pane-search-form
     display: none
-    .external-organisation &
-      display: inline-block
-      width: 45%
+    .user-search &
+      .external-organisation &
+        display: inline-block !important    
+        width: 45%
       
-      
-      form 
-        padding-right: 38px
-        position: relative
-        input[type='text']
-          width: 100%
-          //+box-shadow(1px 1px 1px 1px $grey-f1)
-          
-          //padding-right: 38px
-        input[type='submit']
-          position: absolute 
-          top: 0
-          right: 0
-          margin: 0
-          width: 32px
-          padding: 5px
-          +border-radius(0)
-          background-color: #fff
+
 
 
 .logo-container
@@ -380,8 +388,10 @@ ul.tabs, .action-links,
       content: '\e61b'
       +fontsize-rem(21px)       
 
-
-  
+  &.search-icon
+    &:before 
+      content: '\e622'
+      +fontsize-rem(20px)   
   
   &.share-facebook
     &:before 

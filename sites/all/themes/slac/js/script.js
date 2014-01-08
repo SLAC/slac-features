@@ -17,17 +17,29 @@
 
   Drupal.behaviors.mobile_header = {
     attach: function (context) {
+      var $search_form;
+      
+       if($('.user-search .pane-search-form')[0]) {
+          $search_form = '<div class="search-icon mob-icon"></div>';
+       }      
+      
       $('.user-search', context).once('user-search', function () {
-       $(this).append('<div class="icon-wrapper"><div class="menu-icon mob-icon"></div><span class="user-icons"></span></div>');
+       $(this).append('<div class="icon-wrapper"><div class="menu-icon mob-icon"></div>'+ $search_form +'<span class="user-icons"></span></div>');
       });
       
       $('.header > .inside', context).once('header-inside', function () {
        $(this).append('<div class="mobile-main-menu mobile-block" style="display: none"></div>');
+       if($('.user-search .pane-search-form')[0]) {
+          $(this).append('<div class="mobile-search-form mobile-block" style="display: none"></div>');
+       }
+       
       });
       
         //Menu cloning
       var $cloned_main_menu = $('div.main-menu').clone(),
         $cloned_header_menu = $('div.header-menu').clone(),
+        $cloned_search_form = $('.user-search .pane-search-form').clone(),
+        $mobile_wrapper_search = $('.mobile-search-form', context),
         $mobile_wrapper = $('.mobile-main-menu', context),
         $mobile_user_menu = $('.pane-system-user-menu ul.menu li a').clone(),
         $icons_wrapper = $('.user-icons', context),
@@ -39,6 +51,11 @@
         $(this).empty();
         $(this).append($cloned_main_menu);
         $(this).append($cloned_header_menu);
+      });
+
+      $mobile_wrapper_search.once('mobile-menu-search', function () {
+        $(this).empty();
+        $(this).append($cloned_search_form);
       });
 
       $icons_wrapper.once('icons-wrapper', function () {

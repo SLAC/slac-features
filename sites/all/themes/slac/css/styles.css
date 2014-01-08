@@ -78,7 +78,7 @@ a[href*='mailto:'] {
   .views-field-field-prf-bio-tp:after, .views-responsive-grid.views-columns-2 .views-row:after, .blog-tags ul:after, .connect-with-me .views-row:after, ul.blog-archive-class > li ul:after, div .color-box:after, .icons:after {
     clear: both; }
 
-.slac-font, .mobile-main-menu .main-menu ul li a:after, .mob-icon:before, .user-icons a:before, .share-block-wrapper a:before, .social-icon-block > div a:after, .footer-seccond ul li a:after, .event-calendar-page .pager li a:before, article.node-blog.node-teaser header h2 a:after, .profile-info-brief .views-more-link:after, .profile-info-full .profile-maxlist-more a:before, .more-link-template a:after, .last-three-news .more-link a:after, .event-calendar-block .more-link a:after, .event-block a.icon:after, .connect-with-me .views-row > div a:after, .pane-bundle-slideshow-description-bottom .field-slideshow-controls a:after, .pane-bundle-slac-mini-slideshow .field-slideshow-controls a:after {
+.slac-font, .mobile-block .main-menu ul li a:after, .mob-icon:before, .user-icons a:before, .share-block-wrapper a:before, .social-icon-block > div a:after, .footer-seccond ul li a:after, .event-calendar-page .pager li a:before, article.node-blog.node-teaser header h2 a:after, .profile-info-brief .views-more-link:after, .profile-info-full .profile-maxlist-more a:before, .more-link-template a:after, .last-three-news .more-link a:after, .event-calendar-block .more-link a:after, .event-block a.icon:after, .connect-with-me .views-row > div a:after, .pane-bundle-slideshow-description-bottom .field-slideshow-controls a:after, .pane-bundle-slac-mini-slideshow .field-slideshow-controls a:after {
   font-family: "slac";
   font-weight: normal;
   font-style: normal;
@@ -467,28 +467,28 @@ ul.tabs, .action-links {
     .links a:hover {
       background-color: #2e2e2e; }
 
-.mobile-main-menu {
+.mobile-block {
   max-height: 100%;
   margin: 7px -13px -7px -13px;
   background: #ebebdf;
   padding: 13px;
   clear: both;
   border-top: 7px solid #871628; }
-  .mobile-main-menu.active {
+  .mobile-block.active {
     display: block !important; }
-  .mobile-main-menu .main-menu {
+  .mobile-block .main-menu {
     background-color: #ebebdf;
     text-transform: uppercase; }
-    .mobile-main-menu .main-menu ul li {
+    .mobile-block .main-menu ul li {
       display: block;
       margin-bottom: 5px; }
-      .mobile-main-menu .main-menu ul li a {
+      .mobile-block .main-menu ul li a {
         display: block;
         padding: 5px 13px;
         color: white;
         background-color: #aaaaaa;
         position: relative; }
-        .mobile-main-menu .main-menu ul li a:after {
+        .mobile-block .main-menu ul li a:after {
           content: "\3d";
           position: absolute;
           font-size: 25px;
@@ -497,22 +497,22 @@ ul.tabs, .action-links {
           top: 50%;
           margin-top: -13px;
           line-height: 1; }
-        .mobile-main-menu .main-menu ul li a.active-trail, .mobile-main-menu .main-menu ul li a.active {
+        .mobile-block .main-menu ul li a.active-trail, .mobile-block .main-menu ul li a.active {
           background-color: #878787; }
-          .mobile-main-menu .main-menu ul li a.active-trail:after, .mobile-main-menu .main-menu ul li a.active:after {
+          .mobile-block .main-menu ul li a.active-trail:after, .mobile-block .main-menu ul li a.active:after {
             content: "\e606"; }
-  .mobile-main-menu .header-menu {
+  .mobile-block .header-menu {
     text-align: center;
     font-size: 0.8125em;
     padding: 10px 0 0 0; }
-    .mobile-main-menu .header-menu ul li {
+    .mobile-block .header-menu ul li {
       display: inline-block;
       margin: 0 6px; }
-      .mobile-main-menu .header-menu ul li a {
+      .mobile-block .header-menu ul li a {
         color: #666666;
         display: block;
         text-decoration: none; }
-        .mobile-main-menu .header-menu ul li a:hover {
+        .mobile-block .header-menu ul li a:hover {
           color: #871628; }
 
 .pane-system-user-menu {
@@ -536,33 +536,44 @@ ul.tabs, .action-links {
 
 .pane-search-form {
   display: none; }
-  .external-organisation .pane-search-form {
+  .mobile-search-form .pane-search-form {
     display: block; }
+
+.header.with_user_search form {
+  padding-right: 38px;
+  position: relative; }
+  .header.with_user_search form input[type='text'] {
+    width: 100%;
+    -webkit-box-shadow: 0px 0px 0px 1px #a1a1a1 inset, 0px 0px 0px 0px black;
+    -moz-box-shadow: 0px 0px 0px 1px #a1a1a1 inset, 0px 0px 0px 0px black;
+    box-shadow: 0px 0px 0px 1px #a1a1a1 inset, 0px 0px 0px 0px black;
+    border: 0 none;
+    padding: 5px 6px; }
+  .header.with_user_search form input[type='submit'] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    width: 32px;
+    padding: 0px 5px;
+    line-height: 26px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+    background-color: white;
+    border: 0 none;
+    -webkit-box-shadow: 0px 0px 0px 1px #a1a1a1 inset, 0px 0px 0px 0px black;
+    -moz-box-shadow: 0px 0px 0px 1px #a1a1a1 inset, 0px 0px 0px 0px black;
+    box-shadow: 0px 0px 0px 1px #a1a1a1 inset, 0px 0px 0px 0px black; }
 
 @media (min-width: 690px) {
   .pane-search-form {
     display: none; }
-    .external-organisation .pane-search-form {
-      display: inline-block;
-      width: 45%; }
-      .external-organisation .pane-search-form form {
-        padding-right: 38px;
-        position: relative; }
-        .external-organisation .pane-search-form form input[type='text'] {
-          width: 100%; }
-        .external-organisation .pane-search-form form input[type='submit'] {
-          position: absolute;
-          top: 0;
-          right: 0;
-          margin: 0;
-          width: 32px;
-          padding: 5px;
-          -webkit-border-radius: 0;
-          -moz-border-radius: 0;
-          -ms-border-radius: 0;
-          -o-border-radius: 0;
-          border-radius: 0;
-          background-color: white; } }
+    .external-organisation .user-search .pane-search-form {
+      display: inline-block !important;
+      width: 45%; } }
 .logo-container {
   width: 30.49404%;
   float: left;
@@ -630,6 +641,10 @@ ul.tabs, .action-links {
     content: "\e61b";
     font-size: 21px;
     font-size: 1.3125rem; }
+  .mob-icon.search-icon:before, .user-icons a.search-icon:before, .share-block-wrapper a.search-icon:before {
+    content: "\e622";
+    font-size: 20px;
+    font-size: 1.25rem; }
   .mob-icon.share-facebook:before, .user-icons a.share-facebook:before, .share-block-wrapper a.share-facebook:before {
     content: "\e604"; }
   .mob-icon.share-twitter:before, .user-icons a.share-twitter:before, .share-block-wrapper a.share-twitter:before {
@@ -1772,7 +1787,7 @@ ul.news-archive-class li .item-list {
     font-size: 2.125em;
     font-weight: bold; }
 
-  .mobile-main-menu {
+  .mobile-block {
     display: none !important; }
 
   .page-basic > .header {
