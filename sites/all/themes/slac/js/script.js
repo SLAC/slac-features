@@ -17,7 +17,7 @@
 
   Drupal.behaviors.mobile_header = {
     attach: function (context) {
-      var $search_form;
+      var $search_form = '';
       
        if($('.user-search .pane-search-form')[0]) {
           $search_form = '<div class="search-icon mob-icon"></div>';
