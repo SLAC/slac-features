@@ -1793,7 +1793,7 @@ ul.news-archive-class li .item-list {
   .mobile-block {
     display: none !important; }
 
-  .page-basic > .header {
+  .page-basic > .header .header-wrapper {
     padding: 15px 0 10px; }
 
   .icon-wrapper {
