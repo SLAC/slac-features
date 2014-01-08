@@ -546,6 +546,11 @@ ul.tabs, .action-links {
     -webkit-box-shadow: 0px 0px 0px 1px #a1a1a1 inset, 0px 0px 0px 0px black;
     -moz-box-shadow: 0px 0px 0px 1px #a1a1a1 inset, 0px 0px 0px 0px black;
     box-shadow: 0px 0px 0px 1px #a1a1a1 inset, 0px 0px 0px 0px black;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
     border: 0 none;
     padding: 5px 6px;
     -webkit-appearance: none; }
