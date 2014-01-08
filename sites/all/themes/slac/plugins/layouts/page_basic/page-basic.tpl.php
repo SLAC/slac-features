@@ -16,10 +16,15 @@
 ?>
 <div class="panel-display page-basic" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
 
-  <div class="panel-panel basic header">
-     <?php if ($content['header']): ?>
-        <div class="inside"><?php print $content['header']; ?></div>
+  <div class="panel-panel basic header <?php if ($content['logo']) { print 'with_logo';} ?> <?php if ($content['user-search']) {print 'with_user_search';} ?>">
+    <div class="inside">  
+     <?php if ($content['logo']): ?>
+        <div class="logo-container"><?php print $content['logo']; ?></div>
       <?php endif ?>
+     <?php if ($content['user-search']): ?>
+        <div class="user-search"><?php print $content['user-search']; ?></div>
+      <?php endif ?>      
+    </div>
   </div>
   <div class="panel-panel basic header-menu">
      <?php if ($content['header-menu']): ?>

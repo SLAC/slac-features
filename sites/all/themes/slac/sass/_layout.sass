@@ -269,8 +269,7 @@ ul.tabs, .action-links,
     list-style-type: none
     @extend .clearfix
     display: inline-block
-    position: relative
-    top: -4px
+
   li
     float: left
     margin-left: 11px
@@ -285,20 +284,56 @@ ul.tabs, .action-links,
 
 .pane-search-form
   display: none
+  .external-organisation &
+    display: block
+   
+        
++at-breakpoint($tablet)  
+  .pane-search-form
+    display: none
+    .external-organisation &
+      display: inline-block
+      width: 45%
+      
+      
+      form 
+        padding-right: 38px
+        position: relative
+        input[type='text']
+          width: 100%
+          //+box-shadow(1px 1px 1px 1px $grey-f1)
+          
+          //padding-right: 38px
+        input[type='submit']
+          position: absolute 
+          top: 0
+          right: 0
+          margin: 0
+          width: 32px
+          padding: 5px
+          +border-radius(0)
+          background-color: #fff
 
-.pane-page-logo
-  +span-columns(2,4)
-.icon-wrapper
-  +span-columns(2 omega,4)
+
+.logo-container
+  +span-columns(4,12)
+.user-search
+  +span-columns(8 omega,12)
   text-align: right
+  
 
 
 
 .pane-system-user-menu
   display: none !important
-  +span-columns(2 omega,4)
-
-
+  //+span-columns(3 omega,8)
+  
++at-breakpoint($tablet) 
+  .pane-system-user-menu
+    min-width: 130px
+    
+  
+  
 .mob-icon, .user-icons a, .share-block-wrapper a
   width: 22px
   height: 20px
@@ -780,9 +815,12 @@ ul.tabs, .action-links,
           content: '+'     
           margin-top: -9px
     
-    border-bottom: 1px solid $bg-col-1
-    margin-bottom: 10px
-    padding-bottom: 10px
+
+    .general-left &
+      border-bottom: 1px solid $bg-col-1
+      margin-bottom: 10px
+      padding-bottom: 10px
+    
     &:last-child
       border-bottom: 0
       margin-bottom: 0

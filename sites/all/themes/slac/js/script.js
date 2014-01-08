@@ -17,17 +17,21 @@
 
   Drupal.behaviors.mobile_header = {
     attach: function (context) {
-      $('.pane-page-logo', context).once('page-logo-mobile', function () {
-        $('<div class="icon-wrapper"><div class="menu-icon mob-icon"></div><span class="user-icons"></span></div><div class="mobile-main-menu mobile-block" style="display: none"></div>').insertAfter(this);
+      $('.user-search', context).once('user-search', function () {
+       $(this).append('<div class="icon-wrapper"><div class="menu-icon mob-icon"></div><span class="user-icons"></span></div>');
       });
-
+      
+      $('.header > .inside', context).once('header-inside', function () {
+       $(this).append('<div class="mobile-main-menu mobile-block" style="display: none"></div>');
+      });
+      
         //Menu cloning
       var $cloned_main_menu = $('div.main-menu').clone(),
         $cloned_header_menu = $('div.header-menu').clone(),
         $mobile_wrapper = $('.mobile-main-menu', context),
         $mobile_user_menu = $('.pane-system-user-menu ul.menu li a').clone(),
         $icons_wrapper = $('.user-icons', context),
-        $pathname = window.location.pathname,
+        //$pathname = window.location.pathname,
         //$icons_wrapper_a = $icons_wrapper.find('a'),
         $close_menu;
 
