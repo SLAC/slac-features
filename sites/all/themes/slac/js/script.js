@@ -42,10 +42,10 @@
         $mobile_wrapper_search = $('.mobile-search-form', context),
         $mobile_wrapper = $('.mobile-main-menu', context),
         $mobile_user_menu = $('.pane-system-user-menu ul.menu li a').clone(),
-        $icons_wrapper = $('.user-icons', context),
+        $icons_wrapper = $('.user-icons', context);
         //$pathname = window.location.pathname,
         //$icons_wrapper_a = $icons_wrapper.find('a'),
-        $close_menu;
+        //$close_menu;
 
       $mobile_wrapper.once('mobile-menu-wrapper', function () {
         $(this).empty();
@@ -80,16 +80,16 @@
         });
       });
 
-      $close_menu = function () {
-        $('.mobile-block').slideUp("fast");
-        $('.menu-icon, .mobile-main-menu, .search-icon').removeClass('active');
-      };
+      //$close_menu = function () {
+        //$('.mobile-block').slideUp("fast");
+        //$('.menu-icon, .mobile-main-menu, .search-icon').removeClass('active');
+      //};
 
         //Global click to close mobile menu if its clicked
-      $(document).click($close_menu);
+      //$(document).click($close_menu);
 
         //Close menu after click event on menu elements was fired
-      $('.user-icons a').click($close_menu);
+      //$('.user-icons a').click($close_menu);
     }
   };
 

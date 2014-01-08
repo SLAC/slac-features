@@ -547,21 +547,25 @@ ul.tabs, .action-links {
     -moz-box-shadow: 0px 0px 0px 1px #a1a1a1 inset, 0px 0px 0px 0px black;
     box-shadow: 0px 0px 0px 1px #a1a1a1 inset, 0px 0px 0px 0px black;
     border: 0 none;
-    padding: 5px 6px; }
+    padding: 5px 6px;
+    -webkit-appearance: none; }
   .header.with_user_search form input[type='submit'] {
     position: absolute;
     top: 0;
     right: 0;
     margin: 0;
+    text-align: center;
+    height: 26px;
     width: 32px;
-    padding: 0px 5px;
-    line-height: 26px;
+    padding: 0;
+    line-height: 1;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     -ms-border-radius: 0;
     -o-border-radius: 0;
     border-radius: 0;
     background-color: white;
+    -webkit-appearance: none;
     border: 0 none;
     -webkit-box-shadow: 0px 0px 0px 1px #a1a1a1 inset, 0px 0px 0px 0px black;
     -moz-box-shadow: 0px 0px 0px 1px #a1a1a1 inset, 0px 0px 0px 0px black;
