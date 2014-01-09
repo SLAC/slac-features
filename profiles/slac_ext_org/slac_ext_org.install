@@ -107,6 +107,13 @@ function slac_ext_org_install() {
   variable_set('site_url_address', '2575 Sand Hill Road, Menlo Park, CA 94025');
 
   slac_profiles_shared_place_system_blocks_to_regions();
+
+  // Enable the slac theme.
+  db_update('system')
+    ->fields(array('status' => 1))
+    ->condition('type', 'theme')
+    ->condition('name', 'slac')
+    ->execute();
 }
 
 function _slac_ext_org_filter_dependencies($dependency) {
