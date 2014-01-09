@@ -1078,7 +1078,8 @@ ul.tabs, .action-links {
   border-bottom-color: white; }
 .page-search .pane-page-content h2 {
   border-bottom: 3px solid #f3f1eb;
-  padding-bottom: 5px; }
+  padding-bottom: 5px;
+  margin-bottom: 20px; }
 
 .general-right {
   font-size: 13px;
@@ -1772,26 +1773,24 @@ form.search-form {
     padding: 0px 28px;
     height: 29px; }
 
-ol.search-results {
-  margin-top: 15px; }
-  ol.search-results li {
-    border-bottom: 1px solid #f3f1eb;
-    margin-bottom: 15px;
-    padding-bottom: 15px; }
-    ol.search-results li:last-child {
-      border-bottom: 0;
-      margin-bottom: 0;
-      padding-bottom: 0; }
-  ol.search-results .search-info {
-    color: #474747;
-    text-align: right; }
-  ol.search-results .search-snippet {
-    font-size: 14px;
-    font-size: 0.875rem;
-    margin: 5px 0; }
-    ol.search-results .search-snippet strong {
-      font-weight: bold;
-      color: #871628; }
+ol.search-results li {
+  border-bottom: 1px solid #f3f1eb;
+  margin-bottom: 15px;
+  padding-bottom: 15px; }
+  ol.search-results li:last-child {
+    border-bottom: 0;
+    margin-bottom: 0;
+    padding-bottom: 0; }
+ol.search-results .search-info {
+  color: #474747;
+  text-align: right; }
+ol.search-results .search-snippet {
+  font-size: 14px;
+  font-size: 0.875rem;
+  margin: 5px 0; }
+  ol.search-results .search-snippet strong {
+    font-weight: bold;
+    color: #871628; }
 
 @media (min-width: 690px) {
   form.search-form {
