@@ -69,12 +69,19 @@
   //-----------------------------------
   .general-left, .panel-col-first, .general-left-title 
     +span-columns(8,12)
-
-        
-        
+    
+  .general-left
+    .reverse &
+      +span-columns(4,12)
+  
+  .general-left-title 
+    .reverse &
+      +span-columns(8 omega,12)
+   
   .general-right, .panel-col-last
     +span-columns(4 omega,12)
- 
+    .reverse &
+      +span-columns(8 omega,12)
 
   .general-right, .general-left
     //padding-top: 47px

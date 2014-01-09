@@ -1913,10 +1913,24 @@ ol.search-results .search-snippet {
     float: left;
     margin-right: 4.25894%; }
 
+  .reverse .general-left {
+    width: 30.49404%;
+    float: left;
+    margin-right: 4.25894%; }
+
+  .reverse .general-left-title {
+    width: 65.24702%;
+    float: right;
+    margin-right: 0; }
+
   .general-right, .panel-col-last {
     width: 30.49404%;
     float: right;
     margin-right: 0; }
+    .reverse .general-right, .reverse .panel-col-last {
+      width: 65.24702%;
+      float: right;
+      margin-right: 0; }
 
   .front .pane-page-content .general-right, .front .pane-page-content .general-left {
     padding-top: 0; }
