@@ -340,6 +340,8 @@ function default_site_template_default_page_manager_handlers() {
       'main-menu' => NULL,
       'footer-first' => NULL,
       'footer-seccond' => NULL,
+      'logo' => NULL,
+      'user-search' => NULL,
     ),
   );
   $display->cache = array();
@@ -466,45 +468,6 @@ function default_site_template_default_page_manager_handlers() {
     $display->panels['footer-seccond'][0] = 'new-6';
     $pane = new stdClass();
     $pane->pid = 'new-7';
-    $pane->panel = 'header';
-    $pane->type = 'page_logo';
-    $pane->subtype = 'page_logo';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-7'] = $pane;
-    $display->panels['header'][0] = 'new-7';
-    $pane = new stdClass();
-    $pane->pid = 'new-8';
-    $pane->panel = 'header';
-    $pane->type = 'block';
-    $pane->subtype = 'system-user-menu';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $display->content['new-8'] = $pane;
-    $display->panels['header'][1] = 'new-8';
-    $pane = new stdClass();
-    $pane->pid = 'new-9';
     $pane->panel = 'header-menu';
     $pane->type = 'block';
     $pane->subtype = 'menu-menu-header-menu';
@@ -522,10 +485,28 @@ function default_site_template_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-9'] = $pane;
-    $display->panels['header-menu'][0] = 'new-9';
+    $display->content['new-7'] = $pane;
+    $display->panels['header-menu'][0] = 'new-7';
     $pane = new stdClass();
-    $pane->pid = 'new-10';
+    $pane->pid = 'new-8';
+    $pane->panel = 'logo';
+    $pane->type = 'page_logo';
+    $pane->subtype = 'page_logo';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-8'] = $pane;
+    $display->panels['logo'][0] = 'new-8';
+    $pane = new stdClass();
+    $pane->pid = 'new-9';
     $pane->panel = 'main-menu';
     $pane->type = 'block';
     $pane->subtype = 'system-main-menu';
@@ -543,10 +524,10 @@ function default_site_template_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-10'] = $pane;
-    $display->panels['main-menu'][0] = 'new-10';
+    $display->content['new-9'] = $pane;
+    $display->panels['main-menu'][0] = 'new-9';
     $pane = new stdClass();
-    $pane->pid = 'new-11';
+    $pane->pid = 'new-10';
     $pane->panel = 'site-title';
     $pane->type = 'site_name_abbreviation';
     $pane->subtype = 'site_name_abbreviation';
@@ -561,10 +542,10 @@ function default_site_template_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-11'] = $pane;
-    $display->panels['site-title'][0] = 'new-11';
+    $display->content['new-10'] = $pane;
+    $display->panels['site-title'][0] = 'new-10';
     $pane = new stdClass();
-    $pane->pid = 'new-12';
+    $pane->pid = 'new-11';
     $pane->panel = 'site-title';
     $pane->type = 'page_site_name';
     $pane->subtype = 'page_site_name';
@@ -579,8 +560,29 @@ function default_site_template_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
+    $display->content['new-11'] = $pane;
+    $display->panels['site-title'][1] = 'new-11';
+    $pane = new stdClass();
+    $pane->pid = 'new-12';
+    $pane->panel = 'user-search';
+    $pane->type = 'block';
+    $pane->subtype = 'system-user-menu';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
     $display->content['new-12'] = $pane;
-    $display->panels['site-title'][1] = 'new-12';
+    $display->panels['user-search'][0] = 'new-12';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
