@@ -514,6 +514,58 @@ ul.tabs, .action-links {
         .mobile-block .header-menu ul li a:hover {
           color: #871628; }
 
+@media (min-width: 690px) {
+  .main-menu {
+    background-color: #ebebdf;
+    padding: 8px 0 0px;
+    text-transform: uppercase; }
+    .main-menu ul {
+      *zoom: 1; }
+      .main-menu ul:before, .main-menu ul:after {
+        content: "";
+        display: table; }
+      .main-menu ul:after {
+        clear: both; }
+      .main-menu ul li {
+        float: left;
+        margin: 0 25px;
+        font-size: 0.875em; }
+        .main-menu ul li:first-child {
+          margin-left: 0; }
+        .main-menu ul li:last-child {
+          margin-right: 0 !important; }
+        .main-menu ul li a {
+          display: block;
+          padding: 0 10px;
+          padding-bottom: 3px; }
+          .main-menu ul li a.active-trail, .main-menu ul li a.active {
+            color: #871628;
+            border-bottom: 2px solid #871628; } }
+@media (min-width: 691px) and (max-width: 893px) {
+  .main-menu.long-menu {
+    background-color: transparent; }
+    .main-menu.long-menu .pane-system-main-menu > ul > li {
+      width: 25%;
+      margin: 0;
+      text-align: center;
+      border-bottom: 1px solid white;
+      border-right: 1px solid white;
+      background-color: #ebebdf; }
+      .main-menu.long-menu .pane-system-main-menu > ul > li:hover {
+        background-color: #f3f1eb; }
+      .main-menu.long-menu .pane-system-main-menu > ul > li:nth-child(4n+4) {
+        border-right: 0; }
+      .main-menu.long-menu .pane-system-main-menu > ul > li > a {
+        padding: 5px 0; }
+        .main-menu.long-menu .pane-system-main-menu > ul > li > a.active-trail, .main-menu.long-menu .pane-system-main-menu > ul > li > a.active {
+          color: #871628;
+          border-bottom: 0 none; } }
+@media (min-width: 894px) {
+  .main-menu.long-menu ul li {
+    margin: 0 12px; } }
+@media (min-width: 1200px) {
+  .main-menu.long-menu ul li {
+    margin: 0 25px; } }
 .pane-system-user-menu {
   text-align: right;
   color: white; }
@@ -1744,31 +1796,6 @@ ul.news-archive-class li .item-list {
     display: block; }
   .page-basic > .content {
     margin: 37px 0; }
-
-  .main-menu {
-    background-color: #ebebdf;
-    padding: 8px 0 0px;
-    text-transform: uppercase; }
-    .main-menu ul {
-      *zoom: 1; }
-      .main-menu ul:before, .main-menu ul:after {
-        content: "";
-        display: table; }
-      .main-menu ul:after {
-        clear: both; }
-      .main-menu ul li {
-        float: left;
-        margin: 0 25px;
-        font-size: 0.875em; }
-        .main-menu ul li:first-child {
-          margin-left: 0; }
-        .main-menu ul li a {
-          display: block;
-          padding: 0 10px;
-          padding-bottom: 3px; }
-          .main-menu ul li a.active-trail, .main-menu ul li a.active {
-            color: #871628;
-            border-bottom: 2px solid #871628; }
 
   .header-menu {
     text-align: right;

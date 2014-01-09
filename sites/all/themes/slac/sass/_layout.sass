@@ -241,6 +241,9 @@ ul.tabs, .action-links,
             &:after
               content: "\e606"
 
+
+
+
               
   //Header menu
   //-----------------------------------
@@ -260,8 +263,70 @@ ul.tabs, .action-links,
           &:hover
             color: $red
            
+           
+
+
++at-breakpoint($tablet)
+  .main-menu
+    background-color: $menu_bg
+    padding: 8px 0 0px
+    text-transform: uppercase
+    ul
+      +clearfix
+      li
+        float: left
+        margin: 0 25px
+        font-size: em(14px)
+        &:first-child
+          margin-left: 0
+        &:last-child
+          margin-right: 0 !important
+        a
+          display: block
+          padding: 0 10px
+          padding-bottom: 3px
+          &.active-trail, &.active
+            color: $red
+            border-bottom: 2px solid $red
+
++at-breakpoint($only-tablet)
+  .main-menu
+    &.long-menu
+      background-color: transparent
+      .pane-system-main-menu
+        > ul
+          > li 
+            width: 25%
+            margin: 0
+            text-align: center
+            border-bottom: 1px solid #fff
+            border-right: 1px solid #fff
+            background-color: $menu_bg
+            &:hover
+              background-color: $bg-col-1
+            &:nth-child(4n+4)
+              border-right: 0
+            > a
+              padding: 5px 0
               
               
+              &.active-trail, &.active
+                color: $red
+                border-bottom: 0 none               
+
++at-breakpoint($small-desktop)
+  .main-menu             
+    &.long-menu
+      ul
+        li 
+          margin: 0 12px
+     
++at-breakpoint($large-desktop)   
+  .main-menu
+    &.long-menu
+      ul
+        li 
+          margin: 0 25px              
 //User menu
 //-----------------------------------
 .pane-system-user-menu

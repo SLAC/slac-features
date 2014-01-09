@@ -17,15 +17,35 @@
 
   Drupal.behaviors.mobile_header = {
     attach: function (context) {
-      var $search_form = '';
-      
+      var $search_form = '',
+          $long_menu = false;
        if($('.user-search .pane-search-form')[0]) {
           $search_form = '<div class="search-icon mob-icon"></div>';
        }      
       
+      
+       if($('.main-menu .pane-system-main-menu')[0]) {
+         var $count_items = $('.main-menu .pane-system-main-menu ul li').length;
+         
+         if($count_items > 5) {
+           $long_menu = true;
+         }
+         
+         if($long_menu) {
+            $('.page-basic > .main-menu', context).once('main-menu-length', function () {
+             $(this).addClass('long-menu')
+            });           
+         }
+       }       
+       
+      
+       
+      
       $('.user-search', context).once('user-search', function () {
        $(this).append('<div class="icon-wrapper"><div class="menu-icon mob-icon"></div>'+ $search_form +'<span class="user-icons"></span></div>');
       });
+      
+      
       
       $('.header > .inside', context).once('header-inside', function () {
        $(this).append('<div class="mobile-main-menu mobile-block" style="display: none"></div>');
