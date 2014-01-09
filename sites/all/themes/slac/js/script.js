@@ -31,8 +31,6 @@
            $long_menu = true;
          }
          
-         console.log($count_items);
-         
          if($long_menu) {
             $('.page-basic > .main-menu', context).once('main-menu-length', function () {
              $(this).addClass('long-menu')
