@@ -1076,6 +1076,9 @@ ul.tabs, .action-links {
   letter-spacing: 0.05em; }
 .pane-page-content .general-right .region-grey-background-style h2.pane-title, .pane-page-content .general-right .region-grey-background-style h2.panel-title {
   border-bottom-color: white; }
+.page-search .pane-page-content h2 {
+  border-bottom: 3px solid #f3f1eb;
+  padding-bottom: 5px; }
 
 .general-right {
   font-size: 13px;
@@ -1745,6 +1748,73 @@ ul.news-archive-class li .item-list {
 .view-service-catalog-item ul li {
   margin-bottom: 0 !important; }
 
+form.search-form {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: inline-block;
+  width: 100%; }
+  form.search-form > div {
+    position: relative; }
+  form.search-form .form-item {
+    padding-right: 110px;
+    display: inline-block;
+    width: 100%; }
+    form.search-form .form-item label {
+      position: absolute;
+      top: -25px;
+      left: 0; }
+  form.search-form input[type="submit"] {
+    position: absolute;
+    top: -2px;
+    right: 0;
+    margin: 0;
+    line-height: 1;
+    padding: 0px 28px;
+    height: 29px; }
+
+ol.search-results {
+  margin-top: 15px; }
+  ol.search-results li {
+    border-bottom: 1px solid #f3f1eb;
+    margin-bottom: 15px;
+    padding-bottom: 15px; }
+    ol.search-results li:last-child {
+      border-bottom: 0;
+      margin-bottom: 0;
+      padding-bottom: 0; }
+  ol.search-results .search-info {
+    color: #474747;
+    text-align: right; }
+  ol.search-results .search-snippet {
+    font-size: 14px;
+    font-size: 0.875rem;
+    margin: 5px 0; }
+    ol.search-results .search-snippet strong {
+      font-weight: bold;
+      color: #871628; }
+
+@media (min-width: 690px) {
+  form.search-form {
+    *zoom: 1; }
+    form.search-form:before, form.search-form:after {
+      content: "";
+      display: table; }
+    form.search-form:after {
+      clear: both; }
+    form.search-form > div {
+      width: 65.24702%;
+      float: left;
+      margin-right: 4.25894%; } }
+@media (min-width: 894px) {
+  form.search-form > div {
+    width: 56.55877%;
+    float: left;
+    margin-right: 4.25894%; } }
+@media (min-width: 1200px) {
+  form.search-form > div {
+    width: 39.18228%;
+    float: left;
+    margin-right: 4.25894%; } }
 @media (min-width: 480px) {
   .views-field-field-prf-contact-photo {
     float: left; }

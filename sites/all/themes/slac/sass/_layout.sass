@@ -980,7 +980,6 @@ h2
     .general-left &, .general-left-title &
       .pane-page-content &  
         border-bottom: 3px solid $bg-col-1
-        //margin-bottom: 49px
         padding-bottom: 5px       
 
         .front &
@@ -1016,8 +1015,10 @@ h2
         //text-transform: uppercase
         //letter-spacing: 0.05em
         
-
-
+  .pane-page-content & 
+    .page-search &
+      border-bottom: 3px solid $bg-col-1
+      padding-bottom: 5px          
 
     
 
@@ -1908,4 +1909,69 @@ ul.news-archive-class
     
     
     
+form.search-form
+  margin-top: 20px
+  margin-bottom: 20px
+  display: inline-block
+  width: 100%
+  > div
+    position: relative
     
+  .form-item
+    padding-right: 110px
+    display: inline-block
+    width: 100%
+    label
+      position: absolute
+      top: -25px
+      left: 0
+    input[type='text']
+      
+  input[type="submit"]
+    position: absolute
+    top: -2px
+    right: 0
+    margin: 0
+    line-height: 1
+    padding: 0px 28px
+    height: 29px
+    
+
+ol.search-results
+  margin-top: 15px
+  li 
+    border-bottom: 1px solid $bg-col-1
+    margin-bottom: 15px
+    padding-bottom: 15px
+    &:last-child
+      border-bottom: 0
+      margin-bottom: 0
+      padding-bottom: 0
+  
+  .search-info
+    color: $grey-47
+    text-align: right
+    
+  .search-snippet
+    +fontsize-rem(14px)
+    margin: 5px 0
+    strong
+      font-weight: bold
+      color: $red
+  
+  
++at-breakpoint($tablet)  
+  form.search-form
+    +clearfix
+    > div
+      +span-columns(8,12)
+
++at-breakpoint($small-desktop)  
+  form.search-form
+    > div
+      +span-columns(7,12)      
+      
++at-breakpoint($large-desktop)  
+  form.search-form
+    > div
+      +span-columns(5,12)        
