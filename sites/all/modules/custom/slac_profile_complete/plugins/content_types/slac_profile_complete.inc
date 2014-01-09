@@ -35,7 +35,13 @@ function slac_profile_complete_check_profile ($profile_type, $profile_label, $pr
   $row_count = $result->rowCount();
 
   if ($row_count === 0) {
-    $message = "<p>You haven't created your " . $profile_label . ' profile yet.  Please <a href="/user/' . $user->uid . '/' . $profile_link . '/edit">create it</a>.</p>';
+    $message = '<p>' .
+    t("You haven't created your @profile-label profile yet.  Please <a href=\"!user-path\">create it</a>.",
+      array(
+        '@profile-label' => $profile_label, 
+        '!user-path' => url('user/' . $user->uid . '/' . $profile_link . '/edit'),
+      )
+    ) . '</p>';
   }
   return $message;
 }
