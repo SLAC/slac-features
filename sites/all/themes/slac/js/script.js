@@ -25,11 +25,13 @@
       
       
        if($('.main-menu .pane-system-main-menu')[0]) {
-         var $count_items = $('.main-menu .pane-system-main-menu ul li').length;
+         var $count_items = $('.main-menu .pane-system-main-menu ul.menu li').length;
          
          if($count_items > 5) {
            $long_menu = true;
          }
+         
+         console.log($count_items);
          
          if($long_menu) {
             $('.page-basic > .main-menu', context).once('main-menu-length', function () {
