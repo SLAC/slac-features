@@ -12,7 +12,6 @@ $plugin = array(
   'theme arguments' => array('id', 'content'),
   'css' => 'page_basic.css',
   'regions' => array(
-    'logo' => t('Logo'),
     'user-search' => t('User controls and search'),
     'header-menu' => t('Header menu'),
     'site-title' => t('Site title'),

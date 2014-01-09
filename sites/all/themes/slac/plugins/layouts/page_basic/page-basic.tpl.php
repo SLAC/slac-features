@@ -16,12 +16,14 @@
 ?>
 <div class="panel-display page-basic" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
 
-  <div class="panel-panel basic header <?php if ($content['logo']) { print 'with_logo';} ?> <?php if ($content['user-search']) {print 'with_user_search';} ?>">
+  <div class="panel-panel basic header <?php if ($content['user-search']) {print 'with_user_search';} ?>">
     <div class="inside">
       <div class="clearfix header-wrapper">
-     <?php if ($content['logo']): ?>
-        <div class="logo-container"><?php print $content['logo']; ?></div>
-      <?php endif ?>
+        <div class="logo-container">
+          <div class="panel-pane pane-page-logo">
+            <a href="/" rel="home" id="logo" title="Home"><img src="/sites/all/themes/slac/logo.svg" alt="Home"></a>
+          </div>             
+        </div>
      <?php if ($content['user-search']): ?>
         <div class="user-search"><?php print $content['user-search']; ?></div>
       <?php endif ?>      
