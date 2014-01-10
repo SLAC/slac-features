@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * Implements hook_install().
+ **/
+function slac_user_profile_install() {
+  // Enabling user_view page.
+  $page = page_manager_cache_load('user_view');
+  $disable = FALSE;
+
+  // Borrowed from page_manager_enable_page.
+  if ($function = ctools_plugin_get_function($page->subtask, 'enable callback')) {
+    $result = $function($page, $disable);
+    menu_rebuild();
+
+    // We want to re-cache this if it's changed so that status is properly
+    // updated on the changed form.
+    if (!empty($page->changed)) {
+      page_manager_set_page_cache($page);
+    }
+  }
+}

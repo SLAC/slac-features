@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Slac Profile Completeness feature.
+ */
+
+include_once 'slac_user_profile.features.inc';

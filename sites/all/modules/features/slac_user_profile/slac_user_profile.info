@@ -1,0 +1,11 @@
+name = Slac User Profile
+description = Custom Pane for my account view that show profile completeness
+core = 7.x
+package = SLAC
+dependencies[] = ctools
+dependencies[] = page_manager
+dependencies[] = slac_profile_complete
+features[ctools][] = page_manager:pages_default:1
+features[features_api][] = api:2
+features[page_manager_handlers][] = user_view_panel_context
+project path = sites/all/modules/features
