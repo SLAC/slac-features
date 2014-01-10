@@ -124,7 +124,7 @@ dependencies[] = slac_user_menu_classes
 ; Profile.
 dependencies[] = pp_profile
 dependencies[] = slac_profile
-dependencies[] = slac_profile_completeness
+dependencies[] = slac_user_profile
 
 ;Landing page content type
 dependencies[] = landing_page
