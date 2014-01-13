@@ -378,9 +378,7 @@ html {
     .page-basic > .content .general-left:after {
       clear: both; }
   .page-basic > .content .general-right {
-    /*margin-top: 40px */ }
-    .front .page-basic > .content .general-right {
-      /*margin-top: 0 */ }
+    margin-top: 40px; }
 .page-basic > .header-menu,
 .page-basic > .main-menu {
   display: none; }
@@ -1982,6 +1980,9 @@ ol.search-results .search-snippet {
       width: 29.49309%;
       float: right;
       margin-right: 0; }
+
+  .page-basic > .content .general-right {
+    margin-top: 0; }
 
   .footer-seccond ul li {
     margin-right: 8%; } }
