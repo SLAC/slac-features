@@ -72,17 +72,19 @@
     
   .general-left
     .reverse &
-      +span-columns(3,12)
+      +span-columns(5,12)
   
   .general-left-title 
     .reverse &
-      +span-columns(9 omega,12)
+      +prefix(5, 12)
+      +reset-columns
+
    
   .general-right, .panel-col-last
   
     +span-columns(4 omega,12)
     .reverse &
-      +span-columns(9 omega,12)
+      +span-columns(7 omega,12)
 
   .general-right, .general-left
     //padding-top: 47px
@@ -92,7 +94,8 @@
         padding-top: 0
         //+reset-columns //Disable frontpage wrapper
 
-                
+
+             
       
       
   .general-right
@@ -101,6 +104,8 @@
       .panel-pane, .panels-ipe-portlet-wrapper
         padding: 0px 22px 13px 22px
         width: 100%
+        .reverse &
+          padding: 0
         &:first-of-type
           /*margin-top: -24px*/
           &.region-grey-background-style, .front &
@@ -110,6 +115,10 @@
         &.region-grey-background-style
           padding-top: 13px
           
+  .panel-pane, .panels-ipe-portlet-wrapper 
+    .general-right &
+      .reverse &
+        padding: 0
 
 
   .pane-page-content

@@ -20,12 +20,12 @@
       <div class="inside"><?php print $content['left_title']; ?></div>
     </div>
   <?php endif ?>
-  <div class="panel-panel general-left <?php if ($content['left_title']){ print 'top_title_exist';}; ?>">
+  <div class="panel-panel general-left ">
      <?php if ($content['left']): ?>
         <div class="inside"><?php print $content['left']; ?></div>
       <?php endif ?>
   </div>
-  <div class="panel-panel general-right">
+  <div class="panel-panel general-right <?php if ($content['left_title']){ print 'top_title_exist';}; ?>">
      <?php if ($content['right']): ?>
         <div class="inside"><?php print $content['right']; ?></div>
       <?php endif ?>

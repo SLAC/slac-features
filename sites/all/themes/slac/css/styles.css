@@ -81,7 +81,7 @@ a[href*='mailto:'] {
   .views-field-field-prf-bio-tp:after, .views-responsive-grid.views-columns-2 .views-row:after, .blog-tags ul:after, .connect-with-me .views-row:after, ul.blog-archive-class > li ul:after, div .color-box:after, .icons:after {
     clear: both; }
 
-.slac-font, .mobile-block .main-menu ul li a:after, .mob-icon:before, .user-icons a:before, .share-block-wrapper a:before, .social-icon-block > div a:after, .footer-seccond ul li a:after, .event-calendar-page .pager li a:before, article.node-blog.node-teaser header h2 a:after, .profile-info-brief .views-more-link:after, .profile-info-full .profile-maxlist-more a:before, .more-link-template a:after, .last-three-news .more-link a:after, .event-calendar-block .more-link a:after, .event-block a.icon:after, .connect-with-me .views-row > div a:after, .pane-bundle-slideshow-description-bottom .field-slideshow-controls a:after, .pane-bundle-slac-mini-slideshow .field-slideshow-controls a:after {
+.slac-font, .mobile-block .main-menu ul li a:after, .mob-icon:before, .user-icons a:before, .share-block-wrapper a:before, .social-icon-block > div a:after, .footer-seccond ul li a:after, .event-calendar-page .pager li a:before, .calendar-page .view-header ul li.first a:after, .calendar-page .view-header ul li.first a:before, .calendar-page .view-header ul li.last a:after, .calendar-page .view-header ul li.last a:before, article.node-blog.node-teaser header h2 a:after, .profile-info-brief .views-more-link:after, .profile-info-full .profile-maxlist-more a:before, .more-link-template a:after, .last-three-news .more-link a:after, .event-calendar-block .more-link a:after, .event-block a.icon:after, .connect-with-me .views-row > div a:after, .pane-bundle-slideshow-description-bottom .field-slideshow-controls a:after, .pane-bundle-slac-mini-slideshow .field-slideshow-controls a:after {
   font-family: "slac";
   font-weight: normal;
   font-style: normal;
@@ -377,8 +377,6 @@ html {
       display: table; }
     .page-basic > .content .general-left:after {
       clear: both; }
-  .page-basic > .content .general-right {
-    margin-top: 40px; }
 .page-basic > .header-menu,
 .page-basic > .main-menu {
   display: none; }
@@ -996,26 +994,78 @@ ul.tabs, .action-links {
   display: inline-block;
   vertical-align: middle; }
 
-.calendar-calendar tr {
-  background-color: white; }
-.calendar-calendar td {
-  width: 14.28571%; }
-  .with-week .calendar-calendar td {
-    width: 12.85714%; }
-    .with-week .calendar-calendar td:first-child {
-      width: 10%; }
-.calendar-calendar .month-view .full {
+.calendar-page .view-header {
+  padding: 15px 15px 0 15px; }
+.calendar-page .view-content, .calendar-page .view-footer li {
+  padding: 15px; }
+.calendar-page .view-header,
+.calendar-page .view-content,
+.calendar-page .view-footer li {
+  background-color: #f3f1eb; }
+.calendar-page .view-content, .calendar-page .view-footer li.first {
+  margin-bottom: 5px; }
+.calendar-page .calendar-empty {
+  display: none; }
+.calendar-page .view-header ul {
+  position: relative;
+  text-transform: uppercase; }
+  .calendar-page .view-header ul li {
+    position: static;
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    font-size: 1rem; }
+    .calendar-page .view-header ul li.first, .calendar-page .view-header ul li.last {
+      position: absolute;
+      font-size: 14px;
+      font-size: 0.875rem;
+      top: 3px; }
+      .calendar-page .view-header ul li.first a, .calendar-page .view-header ul li.last a {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        line-height: 1; }
+        .calendar-page .view-header ul li.first a:after, .calendar-page .view-header ul li.first a:before, .calendar-page .view-header ul li.last a:after, .calendar-page .view-header ul li.last a:before {
+          position: relative;
+          top: 1px; }
+    .calendar-page .view-header ul li.first {
+      left: 0; }
+      .calendar-page .view-header ul li.first a:before {
+        content: "\e628"; }
+    .calendar-page .view-header ul li.last {
+      right: 0; }
+      .calendar-page .view-header ul li.last a:after {
+        content: "\e62b"; }
+.calendar-page table {
+  margin-bottom: 0 !important;
   width: 100%; }
-  .calendar-calendar .month-view .full td.single-day .calendar-empty,
-  .calendar-calendar .month-view .full td.single-day.empty,
-  .calendar-calendar .month-view .full td.date-box.empty {
-    background: #f1f1f1; }
-  .calendar-calendar .month-view .full td.single-day {
-    border-top: 0px; }
-  .calendar-calendar .month-view .full tr td.multi-day, .calendar-calendar .month-view .full tr td.single-day {
-    border-top: 0px; }
-  .calendar-calendar .month-view .full tr td.multi-day, .calendar-calendar .month-view .full tr td.date-box {
-    border-bottom: 0px; }
+  .calendar-page table td,
+  .calendar-page table th {
+    text-align: center;
+    background-color: transparent !important;
+    font-size: 12px;
+    font-size: 0.75rem; }
+  .calendar-page table thead th {
+    border-color: white !important;
+    border-style: solid !important;
+    border-width: 3px 0 !important; }
+  .calendar-page table tbody tr:first-child td {
+    padding-top: 15px !important; }
+  .calendar-page table tbody td {
+    border: 0 none !important;
+    padding: 0 !important; }
+    .calendar-page table tbody td .month {
+      display: inline-block; }
+    .calendar-page table tbody td a {
+      padding: 6px;
+      display: block; }
+      .calendar-page table tbody td a.active {
+        background-color: #871628;
+        color: white;
+        font-weight: bold; }
 
 .view-id-faq li.inactive .views-field-title:before {
   content: "+";
@@ -1932,21 +1982,22 @@ ol.search-results .search-snippet {
     margin-right: 4.25894%; }
 
   .reverse .general-left {
-    width: 21.80579%;
+    width: 39.18228%;
     float: left;
     margin-right: 4.25894%; }
 
   .reverse .general-left-title {
-    width: 73.93526%;
-    float: right;
-    margin-right: 0; }
+    padding-left: 43.44123%;
+    float: none;
+    width: auto;
+    margin-right: auto; }
 
   .general-right, .panel-col-last {
     width: 30.49404%;
     float: right;
     margin-right: 0; }
     .reverse .general-right, .reverse .panel-col-last {
-      width: 73.93526%;
+      width: 56.55877%;
       float: right;
       margin-right: 0; }
 
@@ -1956,12 +2007,17 @@ ol.search-results .search-snippet {
   .content .general-right .panel-pane, .content .general-right .panels-ipe-portlet-wrapper {
     padding: 0px 22px 13px 22px;
     width: 100%; }
+    .reverse .content .general-right .panel-pane, .reverse .content .general-right .panels-ipe-portlet-wrapper {
+      padding: 0; }
     .content .general-right .panel-pane:first-of-type, .content .general-right .panels-ipe-portlet-wrapper:first-of-type {
       /*margin-top: -24px */ }
       .content .general-right .panel-pane:first-of-type.region-grey-background-style, .front .content .general-right .panel-pane:first-of-type, .content .general-right .panels-ipe-portlet-wrapper:first-of-type.region-grey-background-style, .front .content .general-right .panels-ipe-portlet-wrapper:first-of-type {
         /*margin-top: 0 */ }
     .content .general-right .panel-pane.region-grey-background-style, .content .general-right .panels-ipe-portlet-wrapper.region-grey-background-style {
       padding-top: 13px; }
+
+  .reverse .general-right .panel-pane, .reverse .general-right .panels-ipe-portlet-wrapper {
+    padding: 0; }
 
   .footer-seccond {
     *zoom: 1; }
@@ -1991,6 +2047,16 @@ ol.search-results .search-snippet {
       width: 64.74654%;
       float: left;
       margin-right: 5.76037%; }
+    .reverse .general-left, .reverse .panel-col-first, .reverse #user-profile-form, .reverse .general-left-title {
+      width: 30.49404%;
+      float: left;
+      margin-right: 4.25894%; }
+
+  .reverse .general-left-title {
+    padding-left: 34.75298%;
+    float: none;
+    width: auto;
+    margin-right: auto; }
 
   .general-right, .panel-col-last {
     width: 29.49309%;
@@ -2000,9 +2066,10 @@ ol.search-results .search-snippet {
       width: 29.49309%;
       float: right;
       margin-right: 0; }
-
-  .page-basic > .content .general-right {
-    margin-top: 0; }
+    .reverse .general-right, .reverse .panel-col-last {
+      width: 65.24702%;
+      float: right;
+      margin-right: 0; }
 
   .footer-seccond ul li {
     margin-right: 8%; } }

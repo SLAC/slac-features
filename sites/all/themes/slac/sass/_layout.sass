@@ -94,7 +94,7 @@ html
       
       
     .general-right
-      margin-top: 40px
+      //margin-top: 40px
       .front &
         //margin-top: 0
   
@@ -166,6 +166,7 @@ html
 
 .top_title_exist
   margin-top: 25px
+
 
 //System user panel
 //-----------------------------------
@@ -358,7 +359,7 @@ ul.tabs, .action-links,
   display: none
 
   .mobile-search-form &
-    .external-organisation &
+    //.external-organisation &
     display: block
 
 .header.with_user_search      
@@ -624,10 +625,7 @@ ul.tabs, .action-links,
       margin-top: 0px    
     
 
-+at-breakpoint($tablet)  
-  .footer-first
-    .general-right
-      .inside 
+
   
   
   
@@ -865,42 +863,103 @@ ul.tabs, .action-links,
       vertical-align: middle
     
       
-.calendar-calendar 
-  tr 
-    background-color: white
-  td
-    $column_day: 100%/7
-    width: $column_day
-    .with-week &
-      $column_time: 100% - 10
-      $column_divided: $column_time / 7 
-      width: $column_divided
-      
-      &:first-child
 
-        width: 10%
-    
-  .month-view 
-    .full 
-      width: 100%
-      td.single-day .calendar-empty,
-      td.single-day.empty,
-      td.date-box.empty
-        background: $grey-f1
-
-      td.single-day
-        border-top: 0px
-
-      tr 
-        td
-          &.multi-day,
-          &.single-day
-            border-top: 0px
-
-          &.multi-day,
-          &.date-box
-            border-bottom: 0px
             
+.calendar-page   
+
+
+  .view-header
+    padding: 15px 15px 0 15px 
+
+
+
+  .view-content, .view-footer li
+    padding: 15px
+
+  
+  
+  
+  .view-header,
+  .view-content,
+  .view-footer li
+    background-color: $bg-col-1
+     
+  
+  .view-content, .view-footer li.first
+    margin-bottom: 5px
+  
+  .calendar-empty
+    display: none
+  
+  .view-header
+    ul
+      position: relative
+      text-transform: uppercase
+      li
+        position: static
+        display: block
+        text-align: center
+        +fontsize-rem(16px)
+        &.first, &.last
+          position: absolute
+          +fontsize-rem(14px)
+          top: 3px
+          a
+            +no-select
+            line-height: 1
+            
+            &:after, &:before
+              @extend .slac-font
+              position: relative
+              top: 1px      
+              
+        &.first
+          left: 0
+          a
+            &:before
+              content: '\e628'
+
+              
+        &.last
+          right: 0
+          a
+            &:after
+              content: '\e62b'
+                     
+        
+  table 
+    margin-bottom: 0 !important
+    width: 100%
+    td,
+    th 
+      text-align: center
+      background-color: transparent !important    
+      +fontsize-rem(12px)
+    thead
+      th 
+        border-color: #fff !important
+        border-style: solid !important
+        border-width: 3px 0 !important
+       
+    tbody
+      tr 
+        &:first-child
+          td
+            padding-top: 15px !important
+      td
+        border: 0 none !important
+        padding: 0 !important
+        .month
+          display: inline-block
+        a 
+          padding: 6px
+          display: block
+          &.active
+            background-color: $red
+            color: #fff
+            font-weight: bold
+
+
 
 //Frequently Asked Questions
 //-----------------------------------
@@ -1903,8 +1962,7 @@ ul.news-archive-class
   &.views-columns-2    
     .views-row
       @extend .clearfix
-     
-    .views-column
+
 
 +at-breakpoint($less-than-480)
   .views-responsive-grid 
@@ -1949,7 +2007,7 @@ form.search-form
       position: absolute
       top: -25px
       left: 0
-    input[type='text']
+
       
   input[type="submit"]
     position: absolute

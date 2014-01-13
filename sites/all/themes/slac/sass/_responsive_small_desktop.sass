@@ -15,16 +15,29 @@
     .pane-page-content &
       .front &
         +span-columns(6,9)  
+        
+    .reverse &
+      +span-columns(4,12)        
+
+
+  .general-left-title 
+    .reverse &
+      +prefix(4, 12)
+      +reset-columns
+
+        
   .general-right, .panel-col-last
     
     +span-columns(3 omega,9)
     .pane-page-content &
       .front &
         +span-columns(3 omega,9)     
-
+        
+    .reverse &
+      +span-columns(8 omega,12)
 
   .page-basic > .content .general-right   
-    margin-top: 0
+    //margin-top: 0
       
   //Last footer
   //-----------------------------------
