@@ -89,3 +89,4 @@ features_exclude[field][taxonomy_term-event_categories-field_field_slac_event_co
 features_exclude[menu_custom][main-menu] = main-menu
 features_exclude[taxonomy][tags] = tags
 files[] = plugins/views_handler_slac_events_calendar_months_pager.inc
+files[] = plugins/views_handler_slac_events_calendar_footer.inc

@@ -736,6 +736,13 @@ function slac_event_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'node';
   $handler->display->display_options['row_options']['view_mode'] = 'calendar_teaser';
   $handler->display->display_options['row_options']['links'] = FALSE;
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['content'] = 'No events for this date.';
+  $handler->display->display_options['empty']['area']['format'] = 'full_html';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -809,6 +816,12 @@ function slac_event_views_default_views() {
   $handler->display->display_options['header']['calendar_month_pager']['table'] = 'views';
   $handler->display->display_options['header']['calendar_month_pager']['field'] = 'calendar_month_pager';
   $handler->display->display_options['header']['calendar_month_pager']['ui_name'] = 'Months pager';
+  $handler->display->display_options['defaults']['footer'] = FALSE;
+  /* Footer: Global: Calendar footer */
+  $handler->display->display_options['footer']['calendar_footer']['id'] = 'calendar_footer';
+  $handler->display->display_options['footer']['calendar_footer']['table'] = 'views';
+  $handler->display->display_options['footer']['calendar_footer']['field'] = 'calendar_footer';
+  $handler->display->display_options['footer']['calendar_footer']['label'] = 'calendar_footer';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Date: Date (node) */
   $handler->display->display_options['arguments']['date_argument']['id'] = 'date_argument';

@@ -129,6 +129,13 @@ function slac_event_views_data_alter(&$data) {
       'handler' => 'views_handler_slac_events_calendar_months_pager',
     ),
   );
+  $data['views']['calendar_footer'] = array(
+    'title' => t('Calendar footer'),
+    'help' => t('Display Month / Day view links.'),
+    'area' => array(
+      'handler' => 'views_handler_slac_events_calendar_footer',
+    ),
+  );
 }
 
 /**
