@@ -8,7 +8,6 @@ project = slac_event_demo
 dependencies[] = ctools
 dependencies[] = pp_demo
 dependencies[] = slac_event
-dependencies[] = slac_event_pages
 dependencies[] = strongarm
 dependencies[] = uuid
 dependencies[] = uuid_features

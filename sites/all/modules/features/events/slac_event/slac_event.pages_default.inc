@@ -16,7 +16,10 @@ function slac_event_default_page_manager_pages() {
   $page->admin_title = 'Events';
   $page->admin_description = '';
   $page->path = 'events';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array(
     'type' => 'normal',
     'title' => 'Events',
