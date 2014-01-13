@@ -383,8 +383,13 @@ html {
 .page-basic > .main-menu {
   display: none; }
 
+.general-left-title .social_media_exist .author-details {
+  padding-right: 100px; }
+
 .general-left-title .sub-header {
   margin-top: 5px; }
+  .general-left-title .sub-header.social_media_exist {
+    position: relative; }
 .general-left-title .author-details {
   font-style: italic;
   color: #878787;
@@ -717,6 +722,14 @@ ul.tabs, .action-links {
   text-align: right; }
   .social-media-content > div {
     display: inline-block; }
+  .left-title-wrapper .social-media-content {
+    position: absolute;
+    bottom: 8px;
+    right: 0; }
+  .social_media_exist .social-media-content {
+    position: absolute;
+    top: 1px;
+    right: 0; }
 
 .share-block-wrapper > div {
   float: left;
@@ -1081,13 +1094,20 @@ ul.tabs, .action-links {
   border-bottom: 3px solid #f3f1eb;
   padding-bottom: 5px;
   margin-bottom: 20px; }
+.pane-page-content .general-left-title .left-title-wrapper h2 {
+  border-bottom: 0 none;
+  padding-right: 100px;
+  padding-bottom: 0; }
+
+.left-title-wrapper {
+  position: relative;
+  border-bottom: 3px solid #f3f1eb;
+  padding-bottom: 5px; }
 
 .general-right {
   font-size: 13px;
   font-size: 0.8125rem;
   color: #706161; }
-  .general-right a {
-    color: inherit; }
   .content .general-right .panels-ipe-portlet-wrapper {
     margin-bottom: 25px; }
 

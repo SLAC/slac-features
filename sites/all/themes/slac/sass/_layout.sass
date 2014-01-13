@@ -103,11 +103,20 @@ html
   > .main-menu
     display: none
 
+
+.author-details
+  .social_media_exist &
+    .general-left-title &
+      padding-right: 100px
+    
 .general-left-title
   //margin-bottom: 25px
   .sub-header
     margin-top: 5px
     @extend .clearfix
+    &.social_media_exist
+      position: relative
+      
   .author-details
     font-style: italic
     color: $grey-87  
@@ -117,11 +126,7 @@ html
       > p 
         display: inline
   
-  &.social_media_exist
-    .social-media-content
 
-  &.author_exist
-    .author-details
  
   
   &.author_exist
@@ -482,8 +487,17 @@ ul.tabs, .action-links,
 
   > div
     display: inline-block
-
   
+  .left-title-wrapper &
+    position: absolute
+    bottom: 8px 
+    right: 0
+    
+  .social_media_exist &
+    position: absolute
+    top: 1px
+    right: 0
+    
 .share-block-wrapper
 
   @extend .clearfix
@@ -500,6 +514,8 @@ ul.tabs, .action-links,
     height: 22px    
     &:hover
       color: $red
+
+
   
 //Site name
 //-----------------------------------
@@ -1022,11 +1038,18 @@ h2
       margin-bottom: 20px
 
     
+  .left-title-wrapper &
+    .general-left-title &
+      .pane-page-content &  
+        border-bottom: 0 none
+        padding-right: 100px
+        padding-bottom: 0
 
-
-
-
-
+.left-title-wrapper
+  position: relative
+  border-bottom: 3px solid $bg-col-1
+  padding-bottom: 5px 
+  
 
 //Right site blocks
 //-----------------------------------
@@ -1034,7 +1057,7 @@ h2
   +fontsize-rem(13px) 
   color: $text-color-1  
   a
-    color: inherit    
+    //color: inherit    
 
   //only for logged users
   .content &
