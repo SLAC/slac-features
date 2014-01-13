@@ -1,6 +1,6 @@
 <?php
 
-define('SLAC_EVENT_EVENTS_PAGE_URI', 'events-page');
+define('SLAC_EVENT_EVENTS_PAGE_URI', 'events');
 
 /**
  * @file
@@ -110,7 +110,7 @@ function _taxonomy_term_count_nodes($tid, $type = 0) {
  */
 function slac_event_process_calendar_datebox(&$vars) {
   $view = $vars['view'];
-  if ($view->name != 'events_date' || $view->current_display != 'panel_pane_2') {
+  if ($view->name != 'events' || $view->current_display != 'panel_pane_2') {
     return;
   }
   $link = $vars['link'];
@@ -131,6 +131,16 @@ function slac_event_views_data_alter(&$data) {
   );
 }
 
+/**
+ * Implements hook_entity_info_alter().
+ */
+function slac_event_entity_info_alter(&$entity_info) {
+  $entity_info['node']['view modes']['calendar_teaser'] = array(
+    'label' => 'Calendar teaser',
+    'custom settings' => TRUE,
+  );
+}
+
 function _slac_event_get_current_date() {
   $arg = arg(1);
   if (empty($arg)) {
@@ -138,3 +148,31 @@ function _slac_event_get_current_date() {
   }
   return strtotime($arg);
 }
+
+/**
+ * Prepare argument for Event view of main content area (list of events).
+ *
+ * Should either pass url argument or current date in format 2014-01.
+ */
+function _slac_event_get_date_argument_events_main_content() {
+  $arg = arg(1);
+  if (!empty($arg) && (preg_match('/(\d){4}-(\d){2}$/', $arg) || preg_match('/(\d){4}-(\d){2}-(\d){2}$/', $arg))) {
+    return $arg;
+  }
+  return format_date(REQUEST_TIME, 'custom', 'Y-m');
+}
+
+/**
+ * Prepare argument for Event view of mini calendar.
+ *
+ * Should either pass url argument or current date in format 2014-01.
+ */
+function _slac_event_get_date_argument_events_calendar() {
+  $arg = arg(1);
+  if (!empty($arg) && preg_match('/(\d){4}-(\d){2}$/', $arg)) {
+    return $arg;
+  }
+  return format_date(REQUEST_TIME, 'custom', 'Y-m');
+}
+
+

@@ -709,5 +709,112 @@ function slac_event_views_default_views() {
   $handler->display->display_options['header']['area']['format'] = 'filtered_html';
   $export['event_calendar_legend'] = $view;
 
+  $view = new view();
+  $view->name = 'events';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'Events';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['row_plugin'] = 'node';
+  $handler->display->display_options['row_options']['view_mode'] = 'calendar_teaser';
+  $handler->display->display_options['row_options']['links'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Sort criterion: Content: Event date -  start date (field_slac_event_date) */
+  $handler->display->display_options['sorts']['field_slac_event_date_value']['id'] = 'field_slac_event_date_value';
+  $handler->display->display_options['sorts']['field_slac_event_date_value']['table'] = 'field_data_field_slac_event_date';
+  $handler->display->display_options['sorts']['field_slac_event_date_value']['field'] = 'field_slac_event_date_value';
+  /* Contextual filter: Date: Date (node) */
+  $handler->display->display_options['arguments']['date_argument']['id'] = 'date_argument';
+  $handler->display->display_options['arguments']['date_argument']['table'] = 'node';
+  $handler->display->display_options['arguments']['date_argument']['field'] = 'date_argument';
+  $handler->display->display_options['arguments']['date_argument']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['date_argument']['default_argument_type'] = 'php';
+  $handler->display->display_options['arguments']['date_argument']['granularity'] = 'day';
+  $handler->display->display_options['arguments']['date_argument']['date_fields'] = array(
+    'field_data_field_slac_event_date.field_slac_event_date_value' => 'field_data_field_slac_event_date.field_slac_event_date_value',
+  );
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'event' => 'event',
+  );
+
+  /* Display: Main content */
+  $handler = $view->new_display('panel_pane', 'Main content', 'panel_pane_1');
+
+  /* Display: Calendar */
+  $handler = $view->new_display('panel_pane', 'Calendar', 'panel_pane_2');
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'calendar_style';
+  $handler->display->display_options['style_options']['name_size'] = '3';
+  $handler->display->display_options['style_options']['mini'] = '1';
+  $handler->display->display_options['style_options']['with_weekno'] = '0';
+  $handler->display->display_options['style_options']['multiday_theme'] = '1';
+  $handler->display->display_options['style_options']['theme_style'] = '1';
+  $handler->display->display_options['style_options']['max_items'] = '0';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'calendar_entity';
+  $handler->display->display_options['row_options']['colors']['calendar_colors_type'] = array(
+    'article' => '#ffffff',
+    'page' => '#ffffff',
+    'blog' => '#ffffff',
+    'event' => '#ffffff',
+    'kb_article' => '#ffffff',
+    'landing_page' => '#ffffff',
+    'slac_sc_catalog_item' => '#ffffff',
+    'slac_faq' => '#ffffff',
+    'slac_news' => '#ffffff',
+    'support_ticket' => '#ffffff',
+    'webform' => '#ffffff',
+  );
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Months pager */
+  $handler->display->display_options['header']['calendar_month_pager']['id'] = 'calendar_month_pager';
+  $handler->display->display_options['header']['calendar_month_pager']['table'] = 'views';
+  $handler->display->display_options['header']['calendar_month_pager']['field'] = 'calendar_month_pager';
+  $handler->display->display_options['header']['calendar_month_pager']['ui_name'] = 'Months pager';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Date: Date (node) */
+  $handler->display->display_options['arguments']['date_argument']['id'] = 'date_argument';
+  $handler->display->display_options['arguments']['date_argument']['table'] = 'node';
+  $handler->display->display_options['arguments']['date_argument']['field'] = 'date_argument';
+  $handler->display->display_options['arguments']['date_argument']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['date_argument']['default_argument_type'] = 'php';
+  $handler->display->display_options['arguments']['date_argument']['granularity'] = 'day';
+  $handler->display->display_options['arguments']['date_argument']['date_fields'] = array(
+    'field_data_field_slac_event_date.field_slac_event_date_value' => 'field_data_field_slac_event_date.field_slac_event_date_value',
+  );
+  $export['events'] = $view;
+
   return $export;
 }
