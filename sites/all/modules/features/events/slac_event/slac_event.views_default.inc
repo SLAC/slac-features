@@ -736,6 +736,11 @@ function slac_event_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'node';
   $handler->display->display_options['row_options']['view_mode'] = 'calendar_teaser';
   $handler->display->display_options['row_options']['links'] = FALSE;
+  /* Header: Global: Calendar main area title */
+  $handler->display->display_options['header']['calendar_main_area_title']['id'] = 'calendar_main_area_title';
+  $handler->display->display_options['header']['calendar_main_area_title']['table'] = 'views';
+  $handler->display->display_options['header']['calendar_main_area_title']['field'] = 'calendar_main_area_title';
+  $handler->display->display_options['header']['calendar_main_area_title']['label'] = 'calendar_main_area_title';
   /* No results behavior: Global: Text area */
   $handler->display->display_options['empty']['area']['id'] = 'area';
   $handler->display->display_options['empty']['area']['table'] = 'views';
@@ -817,10 +822,11 @@ function slac_event_views_default_views() {
   $handler->display->display_options['header']['calendar_month_pager']['field'] = 'calendar_month_pager';
   $handler->display->display_options['header']['calendar_month_pager']['ui_name'] = 'Months pager';
   $handler->display->display_options['defaults']['footer'] = FALSE;
-  /* Footer: Global: Calendar footer */
+  /* Footer: Calendar footer */
   $handler->display->display_options['footer']['calendar_footer']['id'] = 'calendar_footer';
   $handler->display->display_options['footer']['calendar_footer']['table'] = 'views';
   $handler->display->display_options['footer']['calendar_footer']['field'] = 'calendar_footer';
+  $handler->display->display_options['footer']['calendar_footer']['ui_name'] = 'Calendar footer';
   $handler->display->display_options['footer']['calendar_footer']['label'] = 'calendar_footer';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Date: Date (node) */

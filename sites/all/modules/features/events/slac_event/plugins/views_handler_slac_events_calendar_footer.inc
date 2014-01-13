@@ -1,9 +1,9 @@
 <?php
 
 /**
- * Custom plugin for Header area of views.
+ * Custom plugin for Footer area of views.
  * 
- * Display current month and prev. / next. links for events calendar.
+ * Display calendar footer with Monthly / Daily views links.
  */
 
 class views_handler_slac_events_calendar_footer extends views_handler_area {

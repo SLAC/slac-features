@@ -90,3 +90,4 @@ features_exclude[menu_custom][main-menu] = main-menu
 features_exclude[taxonomy][tags] = tags
 files[] = plugins/views_handler_slac_events_calendar_months_pager.inc
 files[] = plugins/views_handler_slac_events_calendar_footer.inc
+files[] = plugins/views_handler_slac_events_calendar_main_area_title.inc

@@ -136,6 +136,13 @@ function slac_event_views_data_alter(&$data) {
       'handler' => 'views_handler_slac_events_calendar_footer',
     ),
   );
+  $data['views']['calendar_main_area_title'] = array(
+    'title' => t('Calendar main area title'),
+    'help' => t('Display title for a calendar main area.'),
+    'area' => array(
+      'handler' => 'views_handler_slac_events_calendar_main_area_title',
+    ),
+  );
 }
 
 /**
