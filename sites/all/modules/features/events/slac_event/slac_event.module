@@ -1,4 +1,7 @@
 <?php
+
+define('SLAC_EVENT_EVENTS_PAGE_URI', 'events-page');
+
 /**
  * @file
  * Code for the Events Features feature.
@@ -100,4 +103,38 @@ function _taxonomy_term_count_nodes($tid, $type = 0) {
   $count[$type][$tid] = $query->execute()->fetchField();
 
   return $count[$type][$tid];
+}
+
+/**
+ * Preprocess for calendar datebox.
+ */
+function slac_event_process_calendar_datebox(&$vars) {
+  $view = $vars['view'];
+  if ($view->name != 'events_date' || $view->current_display != 'panel_pane_2') {
+    return;
+  }
+  $link = $vars['link'];
+  $vars['link'] = l($vars['link'], SLAC_EVENT_EVENTS_PAGE_URI . '/' . $vars['date']);
+  $vars['day'] = l($vars['day'], SLAC_EVENT_EVENTS_PAGE_URI . '/' . $vars['date']);
+}
+
+/**
+ * Implements hook_views_data_alter().
+ */
+function slac_event_views_data_alter(&$data) {
+  $data['views']['calendar_month_pager'] = array(
+    'title' => t('Calendar months pager'),
+    'help' => t('Allows to scroll back and forward for months.'),
+    'area' => array(
+      'handler' => 'views_handler_slac_events_calendar_months_pager',
+    ),
+  );
+}
+
+function _slac_event_get_current_date() {
+  $arg = arg(1);
+  if (empty($arg)) {
+    return REQUEST_TIME;
+  }
+  return strtotime($arg);
 }
