@@ -395,7 +395,8 @@ function slac_event_default_page_manager_handlers() {
     $pane->configuration = array(
       'admin_title' => 'Add to calendar icon',
       'title' => '',
-      'body' => '<a href="/calendar/ical/%node:nid/calendar.ics">add to calendar</a>',
+      'body' => '<p><a href="/event/%node:nid/calendar.ics">add to calendar</a></p>
+',
       'format' => 'full_html',
       'substitute' => 1,
     );

@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * Implements hook_install().
+ */
+function slac_event_demo_install() {
+  $values = array(
+    'bundle' => 'share_block',
+    'field_share_options' => array(
+      LANGUAGE_NONE => array(
+        array('value' => 'facebook'),
+        array('value' => 'twitter'),
+        array('value' => 'googleplus'),
+      ),
+    ),
+    'uuid' => 'd9c207a3-9ec9-4820-9f21-5539006b9215',
+  );
+  $share_fpp = fieldable_panels_panes_create($values);
+  fieldable_panels_panes_save($share_fpp);
+}
