@@ -121,7 +121,7 @@ function slac_event_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '7',
+          'weight' => '13',
         ),
       ),
       'display' => array(),

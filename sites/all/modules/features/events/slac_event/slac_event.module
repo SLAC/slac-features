@@ -114,9 +114,13 @@ function slac_event_process_calendar_datebox(&$vars) {
   if ($view->name != 'events' || $view->current_display != 'panel_pane_2') {
     return;
   }
+  $link_class = '';
+  if ($vars['date'] == _slac_event_get_date_from_event_node_with_day()) {
+    $link_class = 'active';
+  }
   $link = $vars['link'];
-  $vars['link'] = l($vars['link'], SLAC_EVENT_EVENTS_PAGE_URI . '/' . $vars['date']);
-  $vars['day'] = l($vars['day'], SLAC_EVENT_EVENTS_PAGE_URI . '/' . $vars['date']);
+  $vars['link'] = l($vars['link'], SLAC_EVENT_EVENTS_PAGE_URI . '/' . $vars['date'], array('attributes' => array('class' => $link_class)));
+  $vars['day'] = l($vars['day'], SLAC_EVENT_EVENTS_PAGE_URI . '/' . $vars['date'], array('attributes' => array('class' => $link_class)));
 }
 
 /**
@@ -156,14 +160,6 @@ function slac_event_entity_info_alter(&$entity_info) {
   );
 }
 
-function _slac_event_get_current_date() {
-  $arg = arg(1);
-  if (empty($arg)) {
-    return REQUEST_TIME;
-  }
-  return strtotime($arg);
-}
-
 /**
  * Prepare argument for Event view of main content area (list of events).
  *
@@ -183,14 +179,50 @@ function _slac_event_get_date_argument_events_main_content() {
  * Should either pass url argument or current date in format 2014-01.
  */
 function _slac_event_get_date_argument_events_calendar() {
-  $arg = arg(1);
-  if (!empty($arg) && preg_match('/(\d){4}-(\d){2}$/', $arg)) {
-    return $arg;
+  $arg0 = arg(0);
+  $arg1 = arg(1);
+  if ($arg0 == SLAC_EVENT_EVENTS_PAGE_URI) {
+    if (!empty($arg1) && preg_match('/(\d){4}-(\d){2}$/', $arg1)) {
+      return $arg1;
+    }
+    if (!empty($arg1) && preg_match('/(\d){4}-(\d){2}-(\d){2}$/', $arg1)) {
+      return substr($arg1, 0, 7);
+    }
+    return format_date(REQUEST_TIME, 'custom', 'Y-m');
   }
-  if (!empty($arg) && preg_match('/(\d){4}-(\d){2}-(\d){2}$/', $arg)) {
-    return substr($arg, 0, 7);
+  if ($arg0 == 'node') {
+    $node = node_load($arg1);
+    $node_start_date = $node->field_slac_event_date[LANGUAGE_NONE][0]['value'];
+    return substr($node_start_date, 0, 7);
   }
-  return format_date(REQUEST_TIME, 'custom', 'Y-m');
 }
 
+/**
+ * Return date for Calendar's pager. It can be either arg(1) in case we are on events
+ * page, or date of the event if we are on full node view page.
+ */
+function _slac_event_get_current_date() {
+  $arg0 = arg(0);
+  $arg1 = arg(1);
+  if ($arg0 == SLAC_EVENT_EVENTS_PAGE_URI) {
+    if (empty($arg1)) {
+      return REQUEST_TIME;
+    }
+    return strtotime($arg1);
+  }
+  if ($arg0 == 'node') {
+    $node = node_load($arg1);
+    $node_start_date = $node->field_slac_event_date[LANGUAGE_NONE][0]['value'];
+    return strtotime($node_start_date);
+  }
+}
 
+function _slac_event_get_date_from_event_node_with_day() {
+  $arg0 = arg(0);
+  $arg1 = arg(1);
+  if ($arg0 == 'node') {
+    $node = node_load($arg1);
+    $node_start_date = $node->field_slac_event_date[LANGUAGE_NONE][0]['value'];
+    return substr($node_start_date, 0, 10);
+  }
+}
