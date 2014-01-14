@@ -53,6 +53,7 @@ features[field_instance][] = node-event-field_slac_event_related_links
 features[field_instance][] = node-event-field_slac_event_scientific_area
 features[field_instance][] = node-event-field_slac_event_tags
 features[field_instance][] = taxonomy_term-event_categories-field_field_slac_event_color
+features[image][] = slac_event_full
 features[image][] = slac_event_thumbnail
 features[node][] = event
 features[page_manager_handlers][] = node_view_panel_context_5
