@@ -313,6 +313,10 @@ h2 {
 h3 {
   font-size: 18px;
   font-size: 1.125rem; }
+  .event-listing-item h3 {
+    color: #871628; }
+    .event-listing-item h3 a {
+      color: inherit; }
 
 html {
   font-family: Arial, Helvetica, sans-serif;
@@ -1892,6 +1896,69 @@ ol.search-results .search-snippet {
     width: 39.18228%;
     float: left;
     margin-right: 4.25894%; } }
+.event-listing-item {
+  background-color: #eeeeee;
+  padding: 14px;
+  margin-bottom: 25px; }
+  .event-listing-item figure {
+    margin-bottom: 10px; }
+    .event-listing-item figure a {
+      border: 3px solid white;
+      display: block; }
+    .event-listing-item figure img {
+      display: block; }
+  .event-listing-item .field-name-field-slac-event-date {
+    margin-bottom: 5px; }
+  .event-listing-item h3 {
+    margin-bottom: 10px; }
+  .event-listing-item .field-name-field-location {
+    margin-bottom: 10px; }
+  .event-listing-item .field-name-body {
+    font-size: 12px;
+    font-size: 0.75rem; }
+
+@media (min-width: 385px) {
+  .event-listing-item figure {
+    max-width: 40%;
+    float: left;
+    margin-right: 15px; }
+  .event-listing-item h3 {
+    padding-left: 40%; }
+  .event-listing-item .field-name-field-slac-event-date {
+    clear: left; } }
+@media (min-width: 500px) {
+  .event-listing-item .field-name-field-slac-event-date {
+    clear: none;
+    padding-left: 40%;
+    margin-left: 15px; }
+  .event-listing-item .field-name-body {
+    clear: left; } }
+@media (min-width: 690px) {
+  .event-listing-item figure {
+    max-width: 102px; }
+  .event-listing-item h3 {
+    padding-left: 100px;
+    margin-left: 15px;
+    font-size: 14px;
+    font-size: 0.875rem; }
+  .event-listing-item .field-name-field-slac-event-date, .event-listing-item .field-name-field-location {
+    padding-left: 0;
+    margin-left: 0; }
+  .event-listing-item .field-name-field-slac-event-date {
+    clear: left; }
+  .event-listing-item .field-name-body {
+    clear: none; } }
+@media (min-width: 894px) {
+  .event-listing-item figure {
+    margin-bottom: 0; }
+  .event-listing-item h3 {
+    padding-left: 0;
+    margin-left: 0; }
+  .event-listing-item .field-name-field-slac-event-date {
+    clear: none; }
+  .event-listing-item article {
+    padding-left: 115px;
+    margin-left: 15px; } }
 @media (min-width: 480px) {
   .views-field-field-prf-contact-photo {
     float: left; }

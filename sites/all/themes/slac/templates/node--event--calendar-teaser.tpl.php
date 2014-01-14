@@ -17,11 +17,20 @@
  *
  */
 ?>
-<div class="event contextual-links-region">
-  <a href="<?php print $node_url; ?>"><?php print $title; ?></a>
-  <?php print render($title_suffix); ?>
-  <br/>
-
-  <?php print render($content); ?>
+<div class="event-listing-item contextual-links-region">
+  <?php if (isset($content['field_event_image'])) { ?>
+    <figure><?php print render($content['field_event_image']); ?></figure>
+  <?php } ?>
+  <article>
+    <?php if (isset($title)) { ?>
+      <h3><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h3>
+    <?php }
+    if (isset($content['field_slac_event_date'])) {
+      print render($content['field_slac_event_date']); 
+    } if (isset($content['field_location'])) {
+      print render($content['field_location']);
+    } if (isset($content['body'])) {
+      print render($content['body']);
+    } ?>
+  </article>
 </div>
-<br/>

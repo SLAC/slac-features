@@ -43,7 +43,10 @@ h2
 h3
   +fontsize-rem(18px)
 
-
+  .event-listing-item &
+    color: $red
+    a
+      color: inherit
 
 
 
@@ -2063,3 +2066,95 @@ ol.search-results
   form.search-form
     > div
       +span-columns(5,12)        
+      
+//EVENTS-listing
+.event-listing-item
+  background-color: $grey-e
+  padding: 14px
+  margin-bottom: 25px
+  
+  figure
+    margin-bottom: 10px
+    
+    a
+      border: 3px solid #fff
+      display: block
+    img
+      display: block
+      
+  .field-name-field-slac-event-date
+    margin-bottom: 5px
+    
+  h3
+    margin-bottom: 10px
+    
+  .field-name-field-location
+    margin-bottom: 10px  
+      
+  .field-name-body
+    +fontsize-rem(12px)
+
++at-breakpoint(385px)
+  .event-listing-item
+    figure
+      max-width: 40%
+      float: left
+      margin-right: 15px
+  
+    h3
+      padding-left: 40%
+  
+    .field-name-field-slac-event-date
+      clear: left
+
+
+    
++at-breakpoint(500px)
+  .event-listing-item
+    .field-name-field-slac-event-date
+      clear: none  
+      padding-left: 40%
+      margin-left: 15px
+      
+    .field-name-field-location
+    
+    .field-name-body
+      clear: left
+
++at-breakpoint($tablet)
+  .event-listing-item
+    figure
+      max-width: 102px  
+      
+    h3
+      padding-left: 100px     
+      margin-left: 15px
+      +fontsize-rem(14px)
+      
+    .field-name-field-slac-event-date, .field-name-field-location
+      padding-left: 0
+      margin-left: 0
+    .field-name-field-slac-event-date
+      clear: left
+      
+
+      
+    .field-name-body
+      clear: none
+      
+      
++at-breakpoint($small-desktop)      
+  .event-listing-item
+    
+    
+    figure
+      margin-bottom: 0
+    
+    h3
+      padding-left: 0
+      margin-left: 0
+    .field-name-field-slac-event-date
+      clear: none
+    article
+      padding-left: 115px
+      margin-left: 15px
