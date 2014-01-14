@@ -53,6 +53,9 @@ function slac_event_default_page_manager_handlers() {
       'left' => NULL,
       'left_title' => NULL,
       'right' => NULL,
+      'inner_left' => NULL,
+      'inner_right' => NULL,
+      'inner_title' => NULL,
     ),
   );
   $display->cache = array();
@@ -61,58 +64,21 @@ function slac_event_default_page_manager_handlers() {
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-1';
-    $pane->panel = 'left';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'events-panel_pane_2';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-1'] = $pane;
-    $display->panels['left'][0] = 'new-1';
-    $pane = new stdClass();
-    $pane->pid = 'new-2';
-    $pane->panel = 'left_title';
-    $pane->type = 'page_title';
-    $pane->subtype = 'page_title';
+    $pane->panel = 'inner_left';
+    $pane->type = 'entity_field';
+    $pane->subtype = 'node:field_event_image';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'markup' => 'h1',
-      'class' => '',
-      'id' => '',
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['left_title'][0] = 'new-2';
-    $pane = new stdClass();
-    $pane->pid = 'new-3';
-    $pane->panel = 'right';
-    $pane->type = 'node_title';
-    $pane->subtype = 'node_title';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'link' => 0,
-      'markup' => 'h2',
-      'id' => '',
-      'class' => '',
+      'label' => 'hidden',
+      'formatter' => 'image',
+      'delta_limit' => 0,
+      'delta_offset' => '0',
+      'delta_reversed' => FALSE,
+      'formatter_settings' => array(
+        'image_style' => 'slac_event_full',
+        'image_link' => '',
+      ),
       'context' => 'argument_entity_id:node_1',
       'override_title' => 1,
       'override_title_text' => '',
@@ -125,11 +91,56 @@ function slac_event_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
+    $display->content['new-1'] = $pane;
+    $display->panels['inner_left'][0] = 'new-1';
+    $pane = new stdClass();
+    $pane->pid = 'new-2';
+    $pane->panel = 'inner_left';
+    $pane->type = 'fieldable_panels_pane';
+    $pane->subtype = 'uuid:d9c207a3-9ec9-4820-9f21-5539006b9215';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'view_mode' => 'full',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $display->content['new-2'] = $pane;
+    $display->panels['inner_left'][1] = 'new-2';
+    $pane = new stdClass();
+    $pane->pid = 'new-3';
+    $pane->panel = 'inner_left';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => 'Add to calendar icon',
+      'title' => '',
+      'body' => '<p><a href="/event/%node:nid/calendar.ics">add to calendar</a></p>
+',
+      'format' => 'full_html',
+      'substitute' => 1,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
     $display->content['new-3'] = $pane;
-    $display->panels['right'][0] = 'new-3';
+    $display->panels['inner_left'][2] = 'new-3';
     $pane = new stdClass();
     $pane->pid = 'new-4';
-    $pane->panel = 'right';
+    $pane->panel = 'inner_right';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:body';
     $pane->shown = TRUE;
@@ -151,13 +162,13 @@ function slac_event_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 0;
     $pane->locks = array();
     $display->content['new-4'] = $pane;
-    $display->panels['right'][1] = 'new-4';
+    $display->panels['inner_right'][0] = 'new-4';
     $pane = new stdClass();
     $pane->pid = 'new-5';
-    $pane->panel = 'right';
+    $pane->panel = 'inner_right';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_slac_event_date';
     $pane->shown = TRUE;
@@ -179,13 +190,13 @@ function slac_event_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 1;
     $pane->locks = array();
     $display->content['new-5'] = $pane;
-    $display->panels['right'][2] = 'new-5';
+    $display->panels['inner_right'][1] = 'new-5';
     $pane = new stdClass();
     $pane->pid = 'new-6';
-    $pane->panel = 'right';
+    $pane->panel = 'inner_right';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_location';
     $pane->shown = TRUE;
@@ -207,13 +218,13 @@ function slac_event_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 3;
+    $pane->position = 2;
     $pane->locks = array();
     $display->content['new-6'] = $pane;
-    $display->panels['right'][3] = 'new-6';
+    $display->panels['inner_right'][2] = 'new-6';
     $pane = new stdClass();
     $pane->pid = 'new-7';
-    $pane->panel = 'right';
+    $pane->panel = 'inner_right';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_slac_event_contact';
     $pane->shown = TRUE;
@@ -235,13 +246,13 @@ function slac_event_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 4;
+    $pane->position = 3;
     $pane->locks = array();
     $display->content['new-7'] = $pane;
-    $display->panels['right'][4] = 'new-7';
+    $display->panels['inner_right'][3] = 'new-7';
     $pane = new stdClass();
     $pane->pid = 'new-8';
-    $pane->panel = 'right';
+    $pane->panel = 'inner_right';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_slac_event_audience';
     $pane->shown = TRUE;
@@ -263,13 +274,13 @@ function slac_event_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 5;
+    $pane->position = 4;
     $pane->locks = array();
     $display->content['new-8'] = $pane;
-    $display->panels['right'][5] = 'new-8';
+    $display->panels['inner_right'][4] = 'new-8';
     $pane = new stdClass();
     $pane->pid = 'new-9';
-    $pane->panel = 'right';
+    $pane->panel = 'inner_right';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_slac_event_tags';
     $pane->shown = TRUE;
@@ -302,13 +313,13 @@ function slac_event_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 6;
+    $pane->position = 5;
     $pane->locks = array();
     $display->content['new-9'] = $pane;
-    $display->panels['right'][6] = 'new-9';
+    $display->panels['inner_right'][5] = 'new-9';
     $pane = new stdClass();
     $pane->pid = 'new-10';
-    $pane->panel = 'right';
+    $pane->panel = 'inner_right';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_slac_event_related_links';
     $pane->shown = TRUE;
@@ -330,27 +341,22 @@ function slac_event_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 7;
+    $pane->position = 6;
     $pane->locks = array();
     $display->content['new-10'] = $pane;
-    $display->panels['right'][7] = 'new-10';
+    $display->panels['inner_right'][6] = 'new-10';
     $pane = new stdClass();
     $pane->pid = 'new-11';
-    $pane->panel = 'right';
-    $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_event_image';
+    $pane->panel = 'inner_title';
+    $pane->type = 'node_title';
+    $pane->subtype = 'node_title';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'label' => 'hidden',
-      'formatter' => 'image',
-      'delta_limit' => 0,
-      'delta_offset' => '0',
-      'delta_reversed' => FALSE,
-      'formatter_settings' => array(
-        'image_style' => 'slac_event_full',
-        'image_link' => '',
-      ),
+      'link' => 0,
+      'markup' => 'h3',
+      'id' => '',
+      'class' => '',
       'context' => 'argument_entity_id:node_1',
       'override_title' => 1,
       'override_title_text' => '',
@@ -361,44 +367,41 @@ function slac_event_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 8;
+    $pane->position = 0;
     $pane->locks = array();
     $display->content['new-11'] = $pane;
-    $display->panels['right'][8] = 'new-11';
+    $display->panels['inner_title'][0] = 'new-11';
     $pane = new stdClass();
     $pane->pid = 'new-12';
-    $pane->panel = 'right';
-    $pane->type = 'fieldable_panels_pane';
-    $pane->subtype = 'uuid:d9c207a3-9ec9-4820-9f21-5539006b9215';
+    $pane->panel = 'left';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'events-panel_pane_2';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array(
-      'view_mode' => 'full',
-    );
+    $pane->configuration = array();
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 9;
+    $pane->position = 0;
     $pane->locks = array();
     $display->content['new-12'] = $pane;
-    $display->panels['right'][9] = 'new-12';
+    $display->panels['left'][0] = 'new-12';
     $pane = new stdClass();
     $pane->pid = 'new-13';
-    $pane->panel = 'right';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
+    $pane->panel = 'left_title';
+    $pane->type = 'page_title';
+    $pane->subtype = 'page_title';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'admin_title' => 'Add to calendar icon',
-      'title' => '',
-      'body' => '<p><a href="/event/%node:nid/calendar.ics">add to calendar</a></p>
-',
-      'format' => 'full_html',
-      'substitute' => 1,
+      'markup' => 'h2',
+      'class' => 'pane-title',
+      'id' => '',
+      'override_title' => 1,
+      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -406,12 +409,12 @@ function slac_event_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 10;
+    $pane->position = 0;
     $pane->locks = array();
     $display->content['new-13'] = $pane;
-    $display->panels['right'][10] = 'new-13';
+    $display->panels['left_title'][0] = 'new-13';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-2';
+  $display->title_pane = 'new-13';
   $handler->conf['display'] = $display;
   $export['node_view_panel_context_5'] = $handler;
 
