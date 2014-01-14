@@ -26,8 +26,18 @@
       <?php endif ?>
   </div>
   <div class="panel-panel general-right <?php if ($content['left_title']){ print 'top_title_exist';}; ?>">
-     <?php if ($content['right']): ?>
-        <div class="inside"><?php print $content['right']; ?></div>
+     <?php if ($content['right'] || $content['inner_right']): ?>
+        <div class="inside"><?php print $content['right']; ?>
+          <?php if ($content['inner_right'] && $content['inner_left'] && $content['inner_title']): ?>
+            <div class="event-wrapper">
+                <div class="inner_title"><?php print $content['inner_title']; ?></div>
+                <div class="event-wrapper-inner">
+                    <div class="inner_left"><?php print $content['inner_left']; ?></div>
+                    <div class="inner_right"><?php print $content['inner_right']; ?></div>
+                </div>       
+            </div>  
+          <?php endif ?>
+        </div>
       <?php endif ?>
   </div>
 </div>
