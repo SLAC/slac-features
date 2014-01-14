@@ -76,8 +76,9 @@ function slac_event_default_page_manager_handlers() {
       'delta_offset' => '0',
       'delta_reversed' => FALSE,
       'formatter_settings' => array(
-        'image_style' => 'slac_event_full',
+        'image_style' => 'slac_event_thumbnail',
         'image_link' => '',
+        'text' => 'Download [file:name]',
       ),
       'context' => 'argument_entity_id:node_1',
       'override_title' => 1,

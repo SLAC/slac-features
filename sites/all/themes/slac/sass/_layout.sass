@@ -2155,3 +2155,23 @@ ol.search-results
     article
       padding-left: 115px
       margin-left: 15px
+      
+      
+//EVENT detail+++++++++++++++++++++++++++
+.event-wrapper
+  background-color: $grey-e
+
++at-breakpoint($small-desktop)
+  .event-wrapper
+    padding: 20px
+    
+  .event-wrapper-inner
+    position: relative
+    +clearfix
+    
+    .inner_left
+      +span-columns(4,12)
+      +isolate(9,12)
+    .inner_right
+      
+      +span-columns(8,12)
