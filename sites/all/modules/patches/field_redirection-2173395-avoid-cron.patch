@@ -1,0 +1,17 @@
+diff --git a/sites/all/modules/contrib/field_redirection/field_redirection.module b/sites/all/modules/contrib/field_redirection/field_redirection.module
+index c97bf7a..fe5e1bb 100644
+--- a/sites/all/modules/contrib/field_redirection/field_redirection.module
++++ b/sites/all/modules/contrib/field_redirection/field_redirection.module
+@@ -142,6 +142,12 @@ function field_redirection_field_formatter_view($entity_type, $entity, $field, $
+     return;
+   }
+ 
++  foreach (debug_backtrace() as $backtrace_object) {
++    if ($backtrace_object['function'] == 'drupal_cron_run') {
++      return;
++    }
++  }
++
+   // Make some of the rest of the code simpler.
+   $item = !empty($items[0]) ? $items[0] : array();
+   $response_code = !empty($display['settings']['code']) ? $display['settings']['code'] : 301;
