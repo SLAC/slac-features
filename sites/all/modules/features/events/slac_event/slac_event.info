@@ -79,6 +79,7 @@ features[variable][] = menu_parent_event
 features[variable][] = node_options_event
 features[variable][] = node_preview_event
 features[variable][] = node_submitted_event
+features[variable][] = pathauto_node_event_pattern
 features[variable][] = save_continue_event
 features[views_view][] = calendar
 features[views_view][] = event_calendar_legend
