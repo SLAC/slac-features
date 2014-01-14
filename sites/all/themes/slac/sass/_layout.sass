@@ -866,7 +866,9 @@ ul.tabs, .action-links,
 
             
 .calendar-page   
-
+  color: $grey-47
+  a
+    color: $grey-47
 
   .view-header
     padding: 15px 15px 0 15px 
@@ -907,6 +909,7 @@ ul.tabs, .action-links,
           a
             +no-select
             line-height: 1
+
             
             &:after, &:before
               @extend .slac-font
@@ -935,6 +938,7 @@ ul.tabs, .action-links,
       text-align: center
       background-color: transparent !important    
       +fontsize-rem(12px)
+      color: inherit
     thead
       th 
         border-color: #fff !important

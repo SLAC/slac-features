@@ -994,78 +994,83 @@ ul.tabs, .action-links {
   display: inline-block;
   vertical-align: middle; }
 
-.calendar-page .view-header {
-  padding: 15px 15px 0 15px; }
-.calendar-page .view-content, .calendar-page .view-footer li {
-  padding: 15px; }
-.calendar-page .view-header,
-.calendar-page .view-content,
-.calendar-page .view-footer li {
-  background-color: #f3f1eb; }
-.calendar-page .view-content, .calendar-page .view-footer li.first {
-  margin-bottom: 5px; }
-.calendar-page .calendar-empty {
-  display: none; }
-.calendar-page .view-header ul {
-  position: relative;
-  text-transform: uppercase; }
-  .calendar-page .view-header ul li {
-    position: static;
-    display: block;
-    text-align: center;
-    font-size: 16px;
-    font-size: 1rem; }
-    .calendar-page .view-header ul li.first, .calendar-page .view-header ul li.last {
-      position: absolute;
-      font-size: 14px;
-      font-size: 0.875rem;
-      top: 3px; }
-      .calendar-page .view-header ul li.first a, .calendar-page .view-header ul li.last a {
-        -webkit-touch-callout: none;
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-        line-height: 1; }
-        .calendar-page .view-header ul li.first a:after, .calendar-page .view-header ul li.first a:before, .calendar-page .view-header ul li.last a:after, .calendar-page .view-header ul li.last a:before {
-          position: relative;
-          top: 1px; }
-    .calendar-page .view-header ul li.first {
-      left: 0; }
-      .calendar-page .view-header ul li.first a:before {
-        content: "\e628"; }
-    .calendar-page .view-header ul li.last {
-      right: 0; }
-      .calendar-page .view-header ul li.last a:after {
-        content: "\e62b"; }
-.calendar-page table {
-  margin-bottom: 0 !important;
-  width: 100%; }
-  .calendar-page table td,
-  .calendar-page table th {
-    text-align: center;
-    background-color: transparent !important;
-    font-size: 12px;
-    font-size: 0.75rem; }
-  .calendar-page table thead th {
-    border-color: white !important;
-    border-style: solid !important;
-    border-width: 3px 0 !important; }
-  .calendar-page table tbody tr:first-child td {
-    padding-top: 15px !important; }
-  .calendar-page table tbody td {
-    border: 0 none !important;
-    padding: 0 !important; }
-    .calendar-page table tbody td .month {
-      display: inline-block; }
-    .calendar-page table tbody td a {
-      padding: 6px;
-      display: block; }
-      .calendar-page table tbody td a.active {
-        background-color: #871628;
-        color: white;
-        font-weight: bold; }
+.calendar-page {
+  color: #474747; }
+  .calendar-page a {
+    color: #474747; }
+  .calendar-page .view-header {
+    padding: 15px 15px 0 15px; }
+  .calendar-page .view-content, .calendar-page .view-footer li {
+    padding: 15px; }
+  .calendar-page .view-header,
+  .calendar-page .view-content,
+  .calendar-page .view-footer li {
+    background-color: #f3f1eb; }
+  .calendar-page .view-content, .calendar-page .view-footer li.first {
+    margin-bottom: 5px; }
+  .calendar-page .calendar-empty {
+    display: none; }
+  .calendar-page .view-header ul {
+    position: relative;
+    text-transform: uppercase; }
+    .calendar-page .view-header ul li {
+      position: static;
+      display: block;
+      text-align: center;
+      font-size: 16px;
+      font-size: 1rem; }
+      .calendar-page .view-header ul li.first, .calendar-page .view-header ul li.last {
+        position: absolute;
+        font-size: 14px;
+        font-size: 0.875rem;
+        top: 3px; }
+        .calendar-page .view-header ul li.first a, .calendar-page .view-header ul li.last a {
+          -webkit-touch-callout: none;
+          -webkit-user-select: none;
+          -khtml-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+          line-height: 1; }
+          .calendar-page .view-header ul li.first a:after, .calendar-page .view-header ul li.first a:before, .calendar-page .view-header ul li.last a:after, .calendar-page .view-header ul li.last a:before {
+            position: relative;
+            top: 1px; }
+      .calendar-page .view-header ul li.first {
+        left: 0; }
+        .calendar-page .view-header ul li.first a:before {
+          content: "\e628"; }
+      .calendar-page .view-header ul li.last {
+        right: 0; }
+        .calendar-page .view-header ul li.last a:after {
+          content: "\e62b"; }
+  .calendar-page table {
+    margin-bottom: 0 !important;
+    width: 100%; }
+    .calendar-page table td,
+    .calendar-page table th {
+      text-align: center;
+      background-color: transparent !important;
+      font-size: 12px;
+      font-size: 0.75rem;
+      color: inherit; }
+    .calendar-page table thead th {
+      border-color: white !important;
+      border-style: solid !important;
+      border-width: 3px 0 !important; }
+    .calendar-page table tbody tr:first-child td {
+      padding-top: 15px !important; }
+    .calendar-page table tbody td {
+      border: 0 none !important;
+      padding: 0 !important; }
+      .calendar-page table tbody td .month {
+        display: inline-block; }
+      .calendar-page table tbody td a {
+        padding: 6px;
+        display: block; }
+        .calendar-page table tbody td a.active {
+          background-color: #871628;
+          color: white;
+          font-weight: bold; }
 
 .view-id-faq li.inactive .views-field-title:before {
   content: "+";
