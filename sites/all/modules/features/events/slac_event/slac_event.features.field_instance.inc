@@ -326,16 +326,9 @@ function slac_event_field_default_field_instances() {
     'display' => array(
       'calendar_teaser' => array(
         'label' => 'hidden',
-        'module' => 'date',
-        'settings' => array(
-          'format_type' => 'long',
-          'fromto' => 'both',
-          'multiple_from' => '',
-          'multiple_number' => '',
-          'multiple_to' => '',
-          'show_repeat_rule' => 'show',
-        ),
-        'type' => 'date_default',
+        'module' => 'slac_event',
+        'settings' => array(),
+        'type' => 'calendar_date',
         'weight' => 1,
       ),
       'default' => array(
