@@ -1018,12 +1018,14 @@ ul.tabs, .action-links {
       display: block;
       text-align: center;
       font-size: 16px;
-      font-size: 1rem; }
+      font-size: 1rem;
+      font-weight: bold; }
       .calendar-page .view-header ul li.first, .calendar-page .view-header ul li.last {
         position: absolute;
         font-size: 14px;
         font-size: 0.875rem;
-        top: 3px; }
+        top: 3px;
+        font-weight: normal; }
         .calendar-page .view-header ul li.first a, .calendar-page .view-header ul li.last a {
           -webkit-touch-callout: none;
           -webkit-user-select: none;
