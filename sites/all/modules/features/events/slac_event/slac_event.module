@@ -166,11 +166,12 @@ function slac_event_entity_info_alter(&$entity_info) {
  * Should either pass url argument or current date in format 2014-01.
  */
 function _slac_event_get_date_argument_events_main_content() {
-  $arg = arg(1);
-  if (!empty($arg) && (preg_match('/(\d){4}-(\d){2}$/', $arg) || preg_match('/(\d){4}-(\d){2}-(\d){2}$/', $arg))) {
-    return $arg;
+  $url_date_with_day = _slac_event_get_date_from_url_with_day();
+  if (!empty($url_date_with_day)) {
+    return $url_date_with_day;
   }
-  return format_date(REQUEST_TIME, 'custom', 'Y-m');
+
+  return _slac_event_get_date_from_url_month_only();
 }
 
 /**
@@ -180,20 +181,13 @@ function _slac_event_get_date_argument_events_main_content() {
  */
 function _slac_event_get_date_argument_events_calendar() {
   $arg0 = arg(0);
-  $arg1 = arg(1);
   if ($arg0 == SLAC_EVENT_EVENTS_PAGE_URI) {
-    if (!empty($arg1) && preg_match('/(\d){4}-(\d){2}$/', $arg1)) {
-      return $arg1;
-    }
-    if (!empty($arg1) && preg_match('/(\d){4}-(\d){2}-(\d){2}$/', $arg1)) {
-      return substr($arg1, 0, 7);
-    }
-    return format_date(REQUEST_TIME, 'custom', 'Y-m');
+    $url_date = _slac_event_get_date_argument_events_main_content();
+    return _slac_event_convert_date_with_day_to_date_without_day($url_date);
   }
   if ($arg0 == 'node') {
-    $node = node_load($arg1);
-    $node_start_date = $node->field_slac_event_date[LANGUAGE_NONE][0]['value'];
-    return substr($node_start_date, 0, 7);
+    $node_date = _slac_event_get_date_from_event_node_with_day();
+    return _slac_event_convert_date_with_day_to_date_without_day($node_date);
   }
 }
 
@@ -203,18 +197,17 @@ function _slac_event_get_date_argument_events_calendar() {
  */
 function _slac_event_get_current_date() {
   $arg0 = arg(0);
-  $arg1 = arg(1);
+  $date_string = '';
   if ($arg0 == SLAC_EVENT_EVENTS_PAGE_URI) {
-    if (empty($arg1)) {
-      return REQUEST_TIME;
-    }
-    return strtotime($arg1);
+    $date_string = _slac_event_get_date_argument_events_main_content();
   }
   if ($arg0 == 'node') {
-    $node = node_load($arg1);
-    $node_start_date = $node->field_slac_event_date[LANGUAGE_NONE][0]['value'];
-    return strtotime($node_start_date);
+    $date_string = _slac_event_get_date_from_event_node_with_day();
   }
+  if (empty($date_string)) {
+    return;
+  }
+  return strtotime($date_string);
 }
 
 function _slac_event_get_date_from_event_node_with_day() {
@@ -225,4 +218,29 @@ function _slac_event_get_date_from_event_node_with_day() {
     $node_start_date = $node->field_slac_event_date[LANGUAGE_NONE][0]['value'];
     return substr($node_start_date, 0, 10);
   }
+}
+
+function _slac_event_get_date_from_url_month_only() {
+  $arg0 = arg(0);
+  $arg1 = arg(1);
+  if ($arg0 == SLAC_EVENT_EVENTS_PAGE_URI) {
+    if (!empty($arg1) && preg_match('/(\d){4}-(\d){2}$/', $arg1)) {
+      return $arg1;
+    }
+  }
+  return format_date(REQUEST_TIME, 'custom', 'Y-m');
+}
+
+function _slac_event_get_date_from_url_with_day() {
+  $arg0 = arg(0);
+  $arg1 = arg(1);
+  if ($arg0 == SLAC_EVENT_EVENTS_PAGE_URI) {
+    if (!empty($arg1) && preg_match('/(\d){4}-(\d){2}-(\d){2}$/', $arg1)) {
+      return $arg1;
+    }
+  }
+}
+
+function _slac_event_convert_date_with_day_to_date_without_day($date_string) {
+  return substr($date_string, 0, 7);
 }
