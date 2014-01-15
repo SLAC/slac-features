@@ -212,14 +212,14 @@ function slac_people_permissions_user_default_permissions() {
     'module' => 'profile2',
   );
 
-  // Exported permission: administer site name.
-  $permissions['administer site name'] = array(
-    'name' => 'administer site name',
+  // Exported permission: slac administer configuration.
+  $permissions['slac administer configuration'] = array(
+    'name' => 'slac administer configuration',
     'roles' => array(
       'administrator' => 'administrator',
       'site owner' => 'site owner',
     ),
-    'module' => 'slac_change_site_name',
+    'module' => 'slac_configuration',
   );
 
   // Exported permission: change layouts in place editing.

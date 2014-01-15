@@ -1,0 +1,5 @@
+name = SLAC Configuration Page
+description = "Allow change site configuration without adding permission to access all admin menu."
+package = SLAC
+core = 7.x
+dependencies[] = admin_menu

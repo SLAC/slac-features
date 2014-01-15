@@ -1,0 +1,75 @@
+<?php
+
+/**
+ * Implements hook_permission().
+ */
+function slac_configuration_permission() {
+  return array(
+    'slac administer configuration' => array(
+      'title' => t('SLAC administer configuration'),
+      'description' => t('Change site name and other settings.'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_menu().
+ */
+function slac_configuration_menu() {
+	$items['site-configuration'] = array(
+    'title' => 'Site configuration',
+	  'page callback' => 'drupal_get_form',
+	  'page arguments' => array('slac_configuration_form'),
+	  'access arguments' => array('slac administer configuration'),
+	  'type' => MENU_NORMAL_ITEM,
+	);
+	return $items;
+}
+
+function slac_configuration_form($form, &$form_state) {
+  $form = array();
+
+  $form['help'] = array(
+    '#markup' => t('On this page you can change your site\'s settings.')
+  );
+
+  $form['site_name_abbreviation'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Site Abbreviation'),
+    '#default_value' => variable_get('site_name_abbreviation', ''),
+    '#required' => TRUE,
+  );
+
+  $form['site_name'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Site Name'),
+    '#default_value' => variable_get('site_name', ''),
+    '#required' => TRUE,
+  );
+
+  $form['site_url_address'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Address'),
+    '#default_value' => variable_get('site_url_address', ''),
+    '#required' => TRUE,
+  );
+
+  return system_settings_form($form);
+}
+
+/**
+ * Implements hook_admin_menu_output_alter().
+ */
+function slac_configuration_admin_menu_output_alter(&$content) {
+  if (user_access('slac administer configuration')) {
+    $content['menu']['slac-site-configuration'] = array(
+      '#title' => t('Site Configuration'),
+      '#href' => 'site-configuration',
+      '#weight' => 0,
+    );
+  }
+}
+
+
+
+
