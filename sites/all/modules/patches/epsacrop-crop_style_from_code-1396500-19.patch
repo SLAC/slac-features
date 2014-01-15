@@ -1,0 +1,161 @@
+diff --git a/epsacrop.install b/epsacrop.install
+index 354513a..2b955e3 100644
+--- a/epsacrop.install
++++ b/epsacrop.install
+@@ -7,7 +7,7 @@
+ 
+ /**
+  * Implementation of hook_schema
+- * 
++ *
+  * @access public
+  * @return array
+  */
+@@ -36,7 +36,7 @@ function epsacrop_schema() {
+ 
+ /**
+  * Implementation of hook_requirements.
+- * 
++ *
+  * @access public
+  * @param string $phase
+  * @return array
+@@ -58,7 +58,7 @@ function epsacrop_requirements($phase) {
+       $requirements['epsacrop_jcrop']['value'] = 'Jcrop version : ' . $version;
+       $requirements['epsacrop_jcrop']['severity'] = REQUIREMENT_OK;
+     }
+-    
++
+     if (_epsacrop_is_json2_exists()) {
+       $requirements['epsacrop_json2']['value'] = 'JSON file (json2.js) OK';
+       $requirements['epsacrop_json2']['severity'] = REQUIREMENT_OK;
+@@ -83,7 +83,7 @@ function epsacrop_requirements($phase) {
+ 
+ /**
+  * Implementation of hook_install.
+- * 
++ *
+  * @access public
+  * @return void
+  */
+@@ -97,9 +97,84 @@ function epsacrop_install() {
+ 
+ /**
+  * Implementation of hook_uninstall.
+- * 
++ *
+  * @access public
+  * @return void
+  */
+ function epsacrop_uninstall() {
+ }
++
++/**
++ * Converts all the epsacrop coordenates to a new machine_name format.
++ * Issue related: http://drupal.org/node/1396500
++ */
++function epsacrop_update_7201() {
++
++  // Get all the EPSACROP files
++  $result = db_select('epsacrop_files', 'ef')
++    ->fields('ef', array())
++    ->execute()
++    ->fetchAllKeyed();
++
++  // Get all the EPSACROP image styles
++  $epsacrop_styles = _epsacrop_load_styles();
++
++  foreach ($result as $fid => $coords) {
++
++    // Old coordenates
++    $coords_old = drupal_json_decode(unserialize($coords));
++
++    // New Coordenates
++    $coords_new = array();
++
++    // Find the right coords
++    foreach ($coords_old as $key => $item) {
++      if (!empty($item)) {
++
++        // Iterates each crop coords by image style
++        foreach ($item as $name_old => $data) {
++
++          // Extract the ieid and the isid
++          preg_match("/epsacrop\-([0-9]*)\-([0-9]*)/", $name_old, $matches);
++
++          $ieid = $matches[1];
++          $isid = $matches[2];
++
++          // Find the machine name of the image style by the isid
++          $style_name = '';
++          foreach ($epsacrop_styles as $style) {
++            if ($style['isid'] == $isid) {
++
++              $style_name = $style['name'];
++            }
++          }
++
++          // Rename the object name with the new format
++          if (!empty($style_name)) {
++            $coords_new[$key]['epsacrop-' . $style_name] = $data;
++          }
++        }
++      }
++      else {
++        $coords_new[$key] = NULL;
++      }
++    }
++
++    if (!empty($coords_new)) {
++      // Encode the new coordenates
++      $coords_new = serialize(drupal_json_encode($coords_new));
++
++      // Save the changes
++      $record = array('fid' => $fid, 'coords' => $coords_new);
++      drupal_write_record('epsacrop_files', $record, 'fid');
++    }
++    else {
++      // No coordinates were found, probably because the image styles couldn't
++      // be found based on the id. Remove the coordinates data from the
++      // database.
++      db_delete('epsacrop_files')
++        ->condition('fid', $fid)
++        ->execute();
++    }
++  }
++}
+diff --git a/epsacrop.module b/epsacrop.module
+index 1d36a3f..c1c3ffb 100644
+--- a/epsacrop.module
++++ b/epsacrop.module
+@@ -153,8 +153,9 @@ function epsacrop_dialog($entity_name, $field_name, $bundle, $fid) {
+   foreach ($styles['styles'] as $style_name) {
+     $style = _epsacrop_load_style($style_name);
+     $effect = _epsacrop_get_effect($style);
+-    $id = 'epsacrop-' . $effect['ieid'] . '-' . $effect['isid'];
+-    $out .='<li class="epsacrop-presets-menu-li"><a data-bgcolor="' . $effect['data']['jcrop_settings']['bgcolor'] . '" data-bgopacity="' . $effect['data']['jcrop_settings']['bgopacity'] . '" data-aspect-ratio="' . $effect['data']['jcrop_settings']['aspect_ratio'] . '" id="' . $id . '" href="javascript:Drupal.EPSACrop.crop(\'' . $id . '\');" rel="' . $effect['data']['width'] . 'x' . $effect['data']['height'] . '"' . ($i++ == 0 ? ' class="selected"' : '') . '>' . $style['name'] . '</a></li>';
++    $effect = current($effect);
++    $id = 'epsacrop-' . $style_name;
++    $out .='<li class="epsacrop-presets-menu-li"><a data-bgcolor="' . $effect['data']['jcrop_settings']['bgcolor'] . '" data-bgopacity="' . $effect['data']['jcrop_settings']['bgopacity'] . '" data-aspect-ratio="' . $effect['data']['jcrop_settings']['aspect_ratio'] . '" id="' . $id . '" href="javascript:Drupal.EPSACrop.crop(\'' . $id . '\');" rel="' . $effect['data']['width'] . 'x' . $effect['data']['height'] . '"' . ($i++ == 0 ? ' class="selected"' : '') . '>' . $style_name . '</a></li>';
+   }
+   $out .='</ul>' . "\n";
+   $out .='</div>' . "\n";
+@@ -396,7 +397,8 @@ function epsacrop_crop_image(stdClass $image, $settings) {
+         if (!empty($style)) {
+           $effect = _epsacrop_get_effect($style);
+           if (!empty($effect)) {
+-            $preset = 'epsacrop-' . $effect['ieid'] . '-' . $effect['isid'];
++            $effect = current($effect);
++            $preset = 'epsacrop-' . $style_name;
+             $coord = $coords[$fid][$preset];
+             if (!empty($coord)) {
+               if (image_crop($image, $coord['x'], $coord['y'], $coord['w'], $coord['h'])) {
+@@ -656,7 +658,7 @@ function _epsacrop_get_effect($style) {
+ 
+   foreach ($style['effects'] as $eid => $effect) {
+     if ($effect['module'] == 'epsacrop') {
+-      return $effect;
++      return array($eid => $effect);
+     }
+   }
+   return FALSE;
