@@ -10,16 +10,14 @@
 function slac_faq_menu_default_menu_links() {
   $menu_links = array();
 
-  // Exported menu link: main-menu:faq/all
-  $menu_links['main-menu:faq/all'] = array(
+  // Exported menu link: main-menu:faq
+  $menu_links['main-menu:faq'] = array(
     'menu_name' => 'main-menu',
-    'link_path' => 'faq/all',
-    'router_path' => 'faq/%',
+    'link_path' => 'faq',
+    'router_path' => 'faq',
     'link_title' => 'FAQ',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
+      'attributes' => array(),
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -28,6 +26,7 @@ function slac_faq_menu_default_menu_links() {
     'expanded' => 0,
     'weight' => 8,
     'customized' => 1,
+
   );
   // Exported menu link: menu-faq:admin/content/faq
   $menu_links['menu-faq:admin/content/faq'] = array(

@@ -223,7 +223,7 @@ function slac_kb_article_views_default_views() {
     'kb_categories' => 'kb_categories',
   );
   $handler->display->display_options['arguments']['name']['validate_options']['type'] = 'name';
-  $handler->display->display_options['arguments']['name']['validate']['fail'] = 'empty';
+  $handler->display->display_options['arguments']['name']['validate']['fail'] = 'ignore';
   $handler->display->display_options['arguments']['name']['limit'] = '0';
   $handler->display->display_options['pane_category']['name'] = 'KB Article';
   $handler->display->display_options['pane_category']['weight'] = '0';

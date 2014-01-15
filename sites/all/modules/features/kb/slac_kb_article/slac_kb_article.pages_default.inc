@@ -321,7 +321,7 @@ function slac_kb_article_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'KB Articles';
   $page->admin_description = '';
-  $page->path = 'kb/%term_name';
+  $page->path = 'kb/!term_name';
   $page->access = array();
   $page->menu = array();
   $page->arguments = array(

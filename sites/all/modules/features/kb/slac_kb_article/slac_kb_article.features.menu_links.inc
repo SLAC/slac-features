@@ -10,11 +10,11 @@
 function slac_kb_article_menu_default_menu_links() {
   $menu_links = array();
 
-  // Exported menu link: main-menu:kb/all
-  $menu_links['main-menu:kb/all'] = array(
+  // Exported menu link: main-menu:kb
+  $menu_links['main-menu:kb'] = array(
     'menu_name' => 'main-menu',
-    'link_path' => 'kb/all',
-    'router_path' => 'kb/%',
+    'link_path' => 'kb',
+    'router_path' => 'kb',
     'link_title' => 'Knowledge Base',
     'options' => array(
       'attributes' => array(),
@@ -23,7 +23,6 @@ function slac_kb_article_menu_default_menu_links() {
     'hidden' => 0,
     'external' => 0,
     'has_children' => 0,
-    'expanded' => 0,
     'weight' => 12,
     'customized' => 1,
   );

@@ -15,7 +15,7 @@ function slac_faq_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'FAQ';
   $page->admin_description = 'Displays a list of frequently asked/answered questions.';
-  $page->path = 'faq/%term_name';
+  $page->path = 'faq/!term_name';
   $page->access = array();
   $page->menu = array(
     'type' => 'none',
