@@ -790,7 +790,7 @@ ul.tabs, .action-links {
 .svg .pane-page-logo img {
   display: none; }
   .svg .pane-page-logo img.svg {
-    display: block; }
+    display: inline; }
 
 .site-title {
   margin-bottom: 9px;
@@ -1141,6 +1141,8 @@ ul.tabs, .action-links {
 .front .pane-page-content .general-left .panels-ipe-portlet-wrapper {
   margin-bottom: 36px; }
 
+h2.pane-title i, h2.panel-title i {
+  text-transform: capitalize; }
 .pane-page-content .general-left h2.pane-title, .pane-page-content .general-left-title h2.pane-title, .pane-page-content .general-title h2.pane-title, .pane-page-content .general-left h2.panel-title, .pane-page-content .general-left-title h2.panel-title, .pane-page-content .general-title h2.panel-title {
   border-bottom: 3px solid #f3f1eb;
   padding-bottom: 5px; }
@@ -2066,45 +2068,61 @@ ol.search-results .search-snippet {
       width: 65.24702%;
       float: left;
       margin-right: 4.25894%; } }
-.view-people-listing .attachment {
-  margin-bottom: 25px; }
-.view-people-listing .view-content .views-row {
-  background-color: #f3f3eb;
+.people-page-listing .attachment {
   margin-bottom: 25px;
-  text-align: center;
-  height: 285px; }
-.view-people-listing .views-field-field-prf-contact-photo {
+  font-size: 14px;
+  font-size: 0.875rem;
+  color: #7a6f4f; }
+  .people-page-listing .attachment a {
+    color: inherit; }
+  .people-page-listing .attachment .view-header > div {
+    margin-bottom: 10px;
+    letter-spacing: 0.05em; }
+.people-page-listing > .view-content {
+  color: #333333;
+  font-size: 12px;
+  font-size: 0.75rem; }
+  .people-page-listing > .view-content .views-row {
+    background-color: #f3f3eb;
+    margin-bottom: 25px;
+    text-align: center;
+    height: 285px; }
+  .people-page-listing > .view-content .username {
+    font-weight: bold;
+    font-size: 14px;
+    font-size: 0.875rem; }
+.people-page-listing .views-field-field-prf-contact-photo {
   float: none;
   width: auto;
   border: 0 none;
   margin-right: 0;
   margin-bottom: 0; }
-  .view-people-listing .views-field-field-prf-contact-photo img {
+  .people-page-listing .views-field-field-prf-contact-photo img {
     width: 100%; }
 
 @media (min-width: 480px) and (max-width: 690px) {
-  .view-people-listing .view-content .views-row {
+  .people-page-listing .view-content .views-row {
     width: 47.87053%;
     float: left;
     margin-right: 4.25894%; }
-    .view-people-listing .view-content .views-row:nth-child(2n) {
+    .people-page-listing .view-content .views-row:nth-child(2n) {
       float: right;
       margin-right: 0; } }
 @media (min-width: 691px) and (max-width: 893px) {
-  .view-people-listing .view-content .views-row {
+  .people-page-listing .view-content .views-row {
     width: 30.49404%;
     float: left;
     margin-right: 4.25894%; }
-    .view-people-listing .view-content .views-row:nth-child(3n) {
+    .people-page-listing .view-content .views-row:nth-child(3n) {
       float: right;
       margin-right: 0; } }
 @media (min-width: 894px) {
-  .view-people-listing .view-content .views-row {
+  .people-page-listing .view-content .views-row {
     margin-bottom: 55px;
     width: 21.80579%;
     float: left;
     margin-right: 4.25894%; }
-    .view-people-listing .view-content .views-row:nth-child(4n) {
+    .people-page-listing .view-content .views-row:nth-child(4n) {
       float: right;
       margin-right: 0; } }
 @media (min-width: 480px) {

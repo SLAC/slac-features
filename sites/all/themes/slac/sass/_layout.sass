@@ -573,7 +573,7 @@ ul.tabs, .action-links,
     img
       display: none
       &.svg
-        display: block  
+        display: inline  
     
 
 .site-title
@@ -1077,6 +1077,8 @@ ul.tabs, .action-links,
 //Main heading style
 h2
   &.pane-title, &.panel-title  
+    i 
+      text-transform: capitalize
     .general-left &, .general-left-title &, .general-title &
       .pane-page-content &  
         border-bottom: 3px solid $bg-col-1
@@ -2296,17 +2298,30 @@ ol.search-results
       
       
 //People listing
-.view-people-listing
+.people-page-listing
 
   .attachment
     margin-bottom: 25px
+    +fontsize-rem(14px)
+    color: $people-text-color
+    a
+      color: inherit
+    .view-header
+      > div
+        margin-bottom: 10px
+        letter-spacing: 0.05em
   
-  .view-content
+  > .view-content
+    color: $grey-3
+    +fontsize-rem(12px)
     .views-row
       background-color: $photo-bg
       margin-bottom: 25px
       text-align: center
       height: 285px
+    .username
+      font-weight: bold
+      +fontsize-rem(14px)
 
   .views-field-field-prf-contact-photo
     float: none
@@ -2318,28 +2333,25 @@ ol.search-results
       width: 100%
 
 +at-breakpoint(480px 690px) //Mobile 2
-  .view-people-listing
+  .people-page-listing
     .view-content
       .views-row
         +span-columns(6,12)
         +nth-omega(2n)  
 
 +at-breakpoint($only-tablet) //Mobile 3
-  .view-people-listing
+  .people-page-listing
     .view-content
       .views-row
         +span-columns(4,12)
         +nth-omega(3n)  
 
 
-+at-breakpoint($tablet) 
-  .view-people-listing
-    .view-content
-      .views-row
+
         
 
 +at-breakpoint($small-desktop)
-  .view-people-listing
+  .people-page-listing
     .view-content
       .views-row
         margin-bottom: 55px
