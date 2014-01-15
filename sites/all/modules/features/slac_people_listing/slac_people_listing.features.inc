@@ -40,8 +40,8 @@ function slac_people_listing_image_default_styles() {
         'module' => 'epsacrop',
         'name' => 'epsacrop_crop',
         'data' => array(
-          'width' => 150,
-          'height' => 150,
+          'width' => 200,
+          'height' => 200,
           'anchor' => 'center-center',
           'jcrop_settings' => array(
             'aspect_ratio' => '',
@@ -62,8 +62,8 @@ function slac_people_listing_image_default_styles() {
         'module' => 'image',
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => 150,
-          'height' => 150,
+          'width' => 200,
+          'height' => 200,
         ),
         'weight' => 2,
       ),
