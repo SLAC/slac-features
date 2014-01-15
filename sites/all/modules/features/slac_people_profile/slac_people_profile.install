@@ -31,7 +31,7 @@ function slac_people_profile_install() {
  */
 function _slac_people_profile_install__panels_display() {
   $panels_display = array(
-    'layout' => 'two_col',
+    'layout' => 'two_col_article',
     'layout_settings' => array(),
     'panel_settings' => array(
       'style_settings' => array (
@@ -41,6 +41,7 @@ function _slac_people_profile_install__panels_display() {
         'right' => NULL,
       ),
     ),
+    'title' => 'Profile Overview',
   );
   drupal_write_record('panels_display', $panels_display);
   return $panels_display;
@@ -79,6 +80,29 @@ function _slac_people_profile_install__panes($did) {
   $blog_panels_panes = array(
     array(
       'did' => $did,
+      'panel' => 'left_title',
+      'type' => 'page_title',
+      'subtype' => 'page_title',
+      'shown' => 1,
+      'access' => array(),
+      'configuration' => array(
+        'markup' => 'h2',
+        'class' => '',
+        'id' => '',
+        'override_title' => 1,
+        'override_title_text' => '',
+      ),
+      'cache' => array(),
+      'style' => array(
+        'settings' => NULL,
+      ),
+      'css' => array(),
+      'extras' => array(),
+      'position' => 0,
+      'locks' => array(),
+    ),
+    array(
+      'did' => $did,
       'panel' => 'left',
       'type' => 'views_panes',
       'subtype' => 'profile_user_elements-panel_pane_4',
@@ -89,7 +113,7 @@ function _slac_people_profile_install__panes($did) {
           'uid' => 'simpleuser',
         ),
         'override_title' => 1,
-        'override_title_text' => 'Profile Overview',
+        'override_title_text' => '',
       ),
       'cache' => array(),
       'style' => array(
