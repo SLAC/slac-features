@@ -72,6 +72,7 @@ dependencies[] = panels_ipe
 dependencies[] = panelizer
 
 dependencies[] = paranoia
+dependencies[] = slac_drush
 
 dependencies[] = views
 dependencies[] = views_ui

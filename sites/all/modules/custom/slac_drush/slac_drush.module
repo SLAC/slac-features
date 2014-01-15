@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * Implements hook_drush_get_projects_alter().
+ *
+ * Remove patched modules from "drush ups" command.
+ */
+function slac_drush_drush_get_projects_alter(&$projects) {
+  $patches = scandir(DRUPAL_ROOT . '/sites/all/modules/patches');
+  foreach ($patches as $patch_filename) {
+    if ($patch_filename == '.' || $patch_filename == '..') {
+      continue;
+    }
+    list($module, ) = explode('-', $patch_filename);
+    if (isset($projects[$module])) {
+      unset($projects[$module]);
+    }
+  }
+}

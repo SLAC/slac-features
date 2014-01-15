@@ -71,6 +71,7 @@ dependencies[] = panels_node
 dependencies[] = panels
 
 dependencies[] = paranoia
+dependencies[] = slac_drush
 
 dependencies[] = views
 dependencies[] = views_ui

@@ -1,0 +1,4 @@
+name = SLAC Drush
+description = "Customize drush commands. Alter list of modules for updates to remove patched ones."
+package = SLAC
+core = 7.x
