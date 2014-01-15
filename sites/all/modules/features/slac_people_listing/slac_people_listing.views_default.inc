@@ -68,7 +68,7 @@ function slac_people_listing_views_default_views() {
   $handler->display->display_options['fields']['field_prf_contact_photo']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_prf_contact_photo']['settings'] = array(
     'image_style' => 'people-listing-photo',
-    'image_link' => 'content',
+    'image_link' => '',
   );
   /* Field: User: Name */
   $handler->display->display_options['fields']['name']['id'] = 'name';
@@ -84,7 +84,6 @@ function slac_people_listing_views_default_views() {
   $handler->display->display_options['fields']['field_prf_contact_title']['relationship'] = 'profile';
   $handler->display->display_options['fields']['field_prf_contact_title']['label'] = '';
   $handler->display->display_options['fields']['field_prf_contact_title']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_prf_contact_title']['type'] = 'text_plain';
   /* Field: Profile: Affiliation */
   $handler->display->display_options['fields']['field_prf_contact_affiliation']['id'] = 'field_prf_contact_affiliation';
   $handler->display->display_options['fields']['field_prf_contact_affiliation']['table'] = 'field_data_field_prf_contact_affiliation';
