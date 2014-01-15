@@ -91,7 +91,7 @@ function _slac_people_frontpage_install__panes($did) {
 
   $field_collection_item = entity_create('field_collection_item', array('field_name' => 'field_slideshow_btmdesc_slide'));
   $field_collection_item->field_fcollection_image = array(LANGUAGE_NONE => array(array('fid' => $files[1]->fid)));
-  $field_collection_item->field_fcollection_link = array(LANGUAGE_NONE => array(array('url' => 'http://slac.stanford.edu')));
+  $field_collection_item->field_fcollection_link = array(LANGUAGE_NONE => array(array('url' => 'http://stanford.edu')));
   $field_collection_item->field_fcollection_description = array(LANGUAGE_NONE => array(array('value' => t('Description of the second slide. Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit.'))));
   $field_collection_item->setHostEntity('fieldable_panels_pane', $fieldable_panels_pane);
   entity_save('field_collection_item', $field_collection_item);
