@@ -40,6 +40,11 @@ h2
   .pane-bundle-share-block &
     .general-left &, .general-left-title &
       display: none    
+      
+  .general-content &
+    display: none
+    
+      
 h3
   +fontsize-rem(18px)
 
@@ -559,7 +564,17 @@ ul.tabs, .action-links,
   img
     //width: 158px
     width: 115px
-
+    
+  .no-svg &
+    img.svg
+      display: none
+      
+  .svg &
+    img
+      display: none
+      &.svg
+        display: block  
+    
 
 .site-title
   margin-bottom: 9px
@@ -1062,7 +1077,7 @@ ul.tabs, .action-links,
 //Main heading style
 h2
   &.pane-title, &.panel-title  
-    .general-left &, .general-left-title &
+    .general-left &, .general-left-title &, .general-title &
       .pane-page-content &  
         border-bottom: 3px solid $bg-col-1
         padding-bottom: 5px       
@@ -1092,7 +1107,7 @@ h2
         .pane-page-content &     
           border-bottom-color: #fff        
         
-        
+          
 
     .pane-page-content & 
       
@@ -2278,3 +2293,56 @@ ol.search-results
       
     .inner_right
       +span-columns(8,12)
+      
+      
+//People listing
+.view-people-listing
+
+  .attachment
+    margin-bottom: 25px
+  
+  .view-content
+    .views-row
+      background-color: $photo-bg
+      margin-bottom: 25px
+      text-align: center
+      height: 285px
+
+  .views-field-field-prf-contact-photo
+    float: none
+    width: auto
+    border: 0 none
+    margin-right: 0
+    margin-bottom: 0   
+    img
+      width: 100%
+
++at-breakpoint(480px 690px) //Mobile 2
+  .view-people-listing
+    .view-content
+      .views-row
+        +span-columns(6,12)
+        +nth-omega(2n)  
+
++at-breakpoint($only-tablet) //Mobile 3
+  .view-people-listing
+    .view-content
+      .views-row
+        +span-columns(4,12)
+        +nth-omega(3n)  
+
+
++at-breakpoint($tablet) 
+  .view-people-listing
+    .view-content
+      .views-row
+        
+
++at-breakpoint($small-desktop)
+  .view-people-listing
+    .view-content
+      .views-row
+        margin-bottom: 55px
+        +span-columns(3,12)
+        +nth-omega(4n)
+        
