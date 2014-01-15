@@ -1112,6 +1112,15 @@ h2
         border-bottom: 0 none
         padding-right: 100px
         padding-bottom: 0
+        
+  .event-wrapper-inner &
+    .general-right &
+      .pane-page-content &   
+        border-bottom: 0 none
+        margin-bottom: 1px
+        padding-bottom: 0
+        +fontsize-rem(12px)
+ 
 
 .left-title-wrapper
   position: relative
@@ -1139,6 +1148,10 @@ h2
     &:last-child
       margin-bottom: 0
       //text-align: center
+      
+  .inner_right &
+    margin-bottom: 20px
+      
 
 .region-grey-background-style
   background-color: $bg-col-1
@@ -1827,10 +1840,7 @@ ul.news-archive-class
 
     
   .pane-node-body
-    +fontsize-rem(14px)
-    p 
-      margin-bottom: 5px
-      line-height: 20px
+    @extend .basic-format-text
       
 //Event calendar block 
 .event-calendar-block
@@ -2160,11 +2170,86 @@ ol.search-results
 //EVENT detail+++++++++++++++++++++++++++
 .event-wrapper
   background-color: $grey-e
+  padding: 14px
+  
+  .inner_title
+    margin-bottom: 21px
+  
+    h3
+      +fontsize-rem(20px)
+      color: $grey-3
+    
+  .inner_left
+    margin-bottom: 20px
+  
+  .pane-node-field-event-image
+    margin: 0 -14px 14px -14px
+    img
+      display: block
+
+  .pane-bundle-share-block
+    background-color: $grey-e1
+    margin-bottom: 14px
+  
+  .pane-bundle-share-block, .add-to-calendar
+    padding: 10px !important
+      
+  
+.add-to-calendar
+  background-color: $grey-e1
+
+  a
+    color: $red
+    display: inline-block
+    vertical-align: middle
+    &:before
+      content: '\e627'
+      @extend .slac-font
+      color: $grey-9
+      +fontsize-rem(23px)
+      display: inline-block
+      vertical-align: middle
+      line-height: 1
+      margin-right: 5px
+    &:hover
+      &:before
+        color: $red
+
++at-breakpoint(355px)  
+  .event-wrapper
+    .pane-node-field-event-image
+      border: 3px solid #fff
+      margin-left: 0
+      
+      
+
+
++at-breakpoint(355px 893px)  
+  .event-wrapper
+    .pane-node-field-event-image
+      
+      margin-bottom: 0
+      display: block
+      float: left
+      width: 47.8% !important
+      
+    .pane-bundle-share-block, .add-to-calendar
+      float: right
+      width: 47.8% !important
+      
+    .inner_left
+      +clearfix
+
+
++at-breakpoint($tablet)
+  .event-wrapper
+    padding: 20px 30px
 
 +at-breakpoint($small-desktop)
   .event-wrapper
-    padding: 20px
+    padding: 20px 40px
     
+
   .event-wrapper-inner
     position: relative
     +clearfix
@@ -2172,6 +2257,6 @@ ol.search-results
     .inner_left
       +span-columns(4,12)
       +isolate(9,12)
-    .inner_right
       
+    .inner_right
       +span-columns(8,12)

@@ -81,34 +81,35 @@ a[href*='mailto:'] {
   .views-field-field-prf-bio-tp:after, .views-responsive-grid.views-columns-2 .views-row:after, .blog-tags ul:after, .connect-with-me .views-row:after, ul.blog-archive-class > li ul:after, div .color-box:after, .icons:after {
     clear: both; }
 
-.slac-font, .mobile-block .main-menu ul li a:after, .mob-icon:before, .user-icons a:before, .share-block-wrapper a:before, .social-icon-block > div a:after, .footer-seccond ul li a:after, .event-calendar-page .pager li a:before, .calendar-page .view-header ul li.first a:after, .calendar-page .view-header ul li.first a:before, .calendar-page .view-header ul li.last a:after, .calendar-page .view-header ul li.last a:before, article.node-blog.node-teaser header h2 a:after, .profile-info-brief .views-more-link:after, .profile-info-full .profile-maxlist-more a:before, .more-link-template a:after, .last-three-news .more-link a:after, .event-calendar-block .more-link a:after, .event-block a.icon:after, .connect-with-me .views-row > div a:after, .pane-bundle-slideshow-description-bottom .field-slideshow-controls a:after, .pane-bundle-slac-mini-slideshow .field-slideshow-controls a:after {
+.slac-font, .mobile-block .main-menu ul li a:after, .mob-icon:before, .user-icons a:before, .share-block-wrapper a:before, .social-icon-block > div a:after, .footer-seccond ul li a:after, .event-calendar-page .pager li a:before, .calendar-page .view-header ul li.first a:after, .calendar-page .view-header ul li.first a:before, .calendar-page .view-header ul li.last a:after, .calendar-page .view-header ul li.last a:before, article.node-blog.node-teaser header h2 a:after, .profile-info-brief .views-more-link:after, .profile-info-full .profile-maxlist-more a:before, .more-link-template a:after, .last-three-news .more-link a:after, .event-calendar-block .more-link a:after, .event-block a.icon:after, .add-to-calendar a:before, .connect-with-me .views-row > div a:after, .pane-bundle-slideshow-description-bottom .field-slideshow-controls a:after, .pane-bundle-slac-mini-slideshow .field-slideshow-controls a:after {
   font-family: "slac";
   font-weight: normal;
   font-style: normal;
   text-indent: 0; }
 
-.basic-format-text, article.node-blog.view-mode-full .field-type-text-with-summary, article.node-blog.view-mode-full .blog-wrapper, .service-body, .node-slac-sc-catalog-item {
+.basic-format-text, article.node-blog.view-mode-full .field-type-text-with-summary, article.node-blog.view-mode-full .blog-wrapper, .article_panel_layout .pane-node-body, .service-body, .node-slac-sc-catalog-item {
   font-size: 14px;
   font-size: 0.875rem; }
-  .basic-format-text h2, article.node-blog.view-mode-full .field-type-text-with-summary h2, article.node-blog.view-mode-full .blog-wrapper h2, .service-body h2, .node-slac-sc-catalog-item h2 {
+  .basic-format-text h2, article.node-blog.view-mode-full .field-type-text-with-summary h2, article.node-blog.view-mode-full .blog-wrapper h2, .article_panel_layout .pane-node-body h2, .service-body h2, .node-slac-sc-catalog-item h2 {
     font-size: 16px;
     font-size: 1rem;
     margin-bottom: 10px;
     margin-top: 15px; }
-  .basic-format-text h3, article.node-blog.view-mode-full .field-type-text-with-summary h3, article.node-blog.view-mode-full .blog-wrapper h3, .service-body h3, .node-slac-sc-catalog-item h3 {
+  .basic-format-text h3, article.node-blog.view-mode-full .field-type-text-with-summary h3, article.node-blog.view-mode-full .blog-wrapper h3, .article_panel_layout .pane-node-body h3, .service-body h3, .node-slac-sc-catalog-item h3 {
     font-size: 14px;
     font-size: 0.875rem;
     font-weight: bold; }
-  .basic-format-text p, article.node-blog.view-mode-full .field-type-text-with-summary p, article.node-blog.view-mode-full .blog-wrapper p, .service-body p, .node-slac-sc-catalog-item p {
+  .basic-format-text p, article.node-blog.view-mode-full .field-type-text-with-summary p, article.node-blog.view-mode-full .blog-wrapper p, .article_panel_layout .pane-node-body p, .service-body p, .node-slac-sc-catalog-item p {
     margin-bottom: 5px;
-    line-height: 20px; }
-  .basic-format-text ul, article.node-blog.view-mode-full .field-type-text-with-summary ul, article.node-blog.view-mode-full .blog-wrapper ul, .service-body ul, .node-slac-sc-catalog-item ul, .basic-format-text ol, article.node-blog.view-mode-full .field-type-text-with-summary ol, article.node-blog.view-mode-full .blog-wrapper ol, .service-body ol, .node-slac-sc-catalog-item ol {
+    line-height: 20px;
+    color: #474747; }
+  .basic-format-text ul, article.node-blog.view-mode-full .field-type-text-with-summary ul, article.node-blog.view-mode-full .blog-wrapper ul, .article_panel_layout .pane-node-body ul, .service-body ul, .node-slac-sc-catalog-item ul, .basic-format-text ol, article.node-blog.view-mode-full .field-type-text-with-summary ol, article.node-blog.view-mode-full .blog-wrapper ol, .article_panel_layout .pane-node-body ol, .service-body ol, .node-slac-sc-catalog-item ol {
     list-style-type: disc;
     padding-left: 20px;
     margin-bottom: 10px; }
-    .basic-format-text ul.links, article.node-blog.view-mode-full .field-type-text-with-summary ul.links, article.node-blog.view-mode-full .blog-wrapper ul.links, .service-body ul.links, .node-slac-sc-catalog-item ul.links, .basic-format-text ol.links, article.node-blog.view-mode-full .field-type-text-with-summary ol.links, article.node-blog.view-mode-full .blog-wrapper ol.links, .service-body ol.links, .node-slac-sc-catalog-item ol.links {
+    .basic-format-text ul.links, article.node-blog.view-mode-full .field-type-text-with-summary ul.links, article.node-blog.view-mode-full .blog-wrapper ul.links, .article_panel_layout .pane-node-body ul.links, .service-body ul.links, .node-slac-sc-catalog-item ul.links, .basic-format-text ol.links, article.node-blog.view-mode-full .field-type-text-with-summary ol.links, article.node-blog.view-mode-full .blog-wrapper ol.links, .article_panel_layout .pane-node-body ol.links, .service-body ol.links, .node-slac-sc-catalog-item ol.links {
       padding-left: 0; }
-    .basic-format-text ul li, article.node-blog.view-mode-full .field-type-text-with-summary ul li, article.node-blog.view-mode-full .blog-wrapper ul li, .service-body ul li, .node-slac-sc-catalog-item ul li, .basic-format-text ol li, article.node-blog.view-mode-full .field-type-text-with-summary ol li, article.node-blog.view-mode-full .blog-wrapper ol li, .service-body ol li, .node-slac-sc-catalog-item ol li {
+    .basic-format-text ul li, article.node-blog.view-mode-full .field-type-text-with-summary ul li, article.node-blog.view-mode-full .blog-wrapper ul li, .article_panel_layout .pane-node-body ul li, .service-body ul li, .node-slac-sc-catalog-item ul li, .basic-format-text ol li, article.node-blog.view-mode-full .field-type-text-with-summary ol li, article.node-blog.view-mode-full .blog-wrapper ol li, .article_panel_layout .pane-node-body ol li, .service-body ol li, .node-slac-sc-catalog-item ol li {
       line-height: 20px;
       margin-bottom: 5px; }
 
@@ -1159,6 +1160,12 @@ ul.tabs, .action-links {
   border-bottom: 0 none;
   padding-right: 100px;
   padding-bottom: 0; }
+.pane-page-content .general-right .event-wrapper-inner h2 {
+  border-bottom: 0 none;
+  margin-bottom: 1px;
+  padding-bottom: 0;
+  font-size: 12px;
+  font-size: 0.75rem; }
 
 .left-title-wrapper {
   position: relative;
@@ -1176,6 +1183,8 @@ ul.tabs, .action-links {
   margin-bottom: 36px; }
   .general-right .panel-pane:last-child {
     margin-bottom: 0; }
+.inner_right .panel-pane {
+  margin-bottom: 20px; }
 
 .region-grey-background-style {
   background-color: #f3f1eb;
@@ -1694,12 +1703,6 @@ ul.news-archive-class li .item-list {
   font-style: italic;
   color: #878787;
   line-height: 1; }
-.article_panel_layout .pane-node-body {
-  font-size: 14px;
-  font-size: 0.875rem; }
-  .article_panel_layout .pane-node-body p {
-    margin-bottom: 5px;
-    line-height: 20px; }
 
 .event-calendar-block .view-content {
   margin-bottom: 17px; }
@@ -1960,11 +1963,70 @@ ol.search-results .search-snippet {
     padding-left: 115px;
     margin-left: 15px; } }
 .event-wrapper {
-  background-color: #eeeeee; }
+  background-color: #eeeeee;
+  padding: 14px; }
+  .event-wrapper .inner_title {
+    margin-bottom: 21px; }
+    .event-wrapper .inner_title h3 {
+      font-size: 20px;
+      font-size: 1.25rem;
+      color: #333333; }
+  .event-wrapper .inner_left {
+    margin-bottom: 20px; }
+  .event-wrapper .pane-node-field-event-image {
+    margin: 0 -14px 14px -14px; }
+    .event-wrapper .pane-node-field-event-image img {
+      display: block; }
+  .event-wrapper .pane-bundle-share-block {
+    background-color: #e1e1e1;
+    margin-bottom: 14px; }
+  .event-wrapper .pane-bundle-share-block, .event-wrapper .add-to-calendar {
+    padding: 10px !important; }
 
+.add-to-calendar {
+  background-color: #e1e1e1; }
+  .add-to-calendar a {
+    color: #871628;
+    display: inline-block;
+    vertical-align: middle; }
+    .add-to-calendar a:before {
+      content: "\e627";
+      color: #999999;
+      font-size: 23px;
+      font-size: 1.4375rem;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+      margin-right: 5px; }
+    .add-to-calendar a:hover:before {
+      color: #871628; }
+
+@media (min-width: 355px) {
+  .event-wrapper .pane-node-field-event-image {
+    border: 3px solid white;
+    margin-left: 0; } }
+@media (min-width: 355px) and (max-width: 893px) {
+  .event-wrapper .pane-node-field-event-image {
+    margin-bottom: 0;
+    display: block;
+    float: left;
+    width: 47.8% !important; }
+  .event-wrapper .pane-bundle-share-block, .event-wrapper .add-to-calendar {
+    float: right;
+    width: 47.8% !important; }
+  .event-wrapper .inner_left {
+    *zoom: 1; }
+    .event-wrapper .inner_left:before, .event-wrapper .inner_left:after {
+      content: "";
+      display: table; }
+    .event-wrapper .inner_left:after {
+      clear: both; } }
+@media (min-width: 690px) {
+  .event-wrapper {
+    padding: 20px 30px; } }
 @media (min-width: 894px) {
   .event-wrapper {
-    padding: 20px; }
+    padding: 20px 40px; }
 
   .event-wrapper-inner {
     position: relative;
