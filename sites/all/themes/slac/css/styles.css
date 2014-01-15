@@ -1969,6 +1969,11 @@ ol.search-results .search-snippet {
   .event-listing-item.no-image article {
     padding-left: 0;
     margin-left: 0; } }
+.event-listing-panel .view-header h2 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-size: 1.125rem; }
+
 .event-wrapper {
   background-color: #eeeeee;
   padding: 14px; }
