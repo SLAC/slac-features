@@ -30,7 +30,7 @@ function default_site_template_eo_default_page_manager_handlers() {
     'relationships' => array(),
   );
   $display = new panels_display();
-  $display->layout = 'page_basic';
+  $display->layout = 'page_basic_eo';
   $display->layout_settings = array(
     'items' => array(
       'canvas' => array(

@@ -50,6 +50,11 @@
         <div class="inside"><?php print $content['content']; ?></div>
       <?php endif ?>
   </div>
+  <div class="panel-panel basic footer-first">
+     <?php if ($content['footer-first']): ?>
+        <div class="inside"><?php print $content['footer-first']; ?></div>
+      <?php endif ?>
+  </div>
   <div class="panel-panel basic footer-seccond">
      <?php if ($content['footer-seccond']): ?>
         <div class="inside"><?php print $content['footer-seccond']; ?></div>
