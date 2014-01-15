@@ -789,7 +789,8 @@ ul.tabs, .action-links {
   margin: 10px 0; }
   .external-organisation .site-title .inside > div {
     display: inline-block;
-    vertical-align: baseline; }
+    vertical-align: baseline;
+    word-break: break-all; }
 
 .footer-first {
   background-color: #ebebdf;
