@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the SLAC People Listing feature.
+ */
+
+include_once 'slac_people_listing.features.inc';

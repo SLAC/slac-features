@@ -9,8 +9,11 @@ function _slac_blog_demo_create_profiles($uid) {
 
   switch ($profile_counter) {
     case 0:
-      $profile->field_prf_contact_name = array(LANGUAGE_NONE => array(array('value' => 'John Doe')));
-      $profile->field_prf_contact_title = array(LANGUAGE_NONE => array(array('value' => 'Prof.')));
+      //$profile->field_prf_contact_name = array(LANGUAGE_NONE => array(array('value' => 'John Doe')));
+      $profile->field_prf_contact_fname = array(LANGUAGE_NONE => array(array('value' => 'John')));
+      $profile->field_prf_contact_lname = array(LANGUAGE_NONE => array(array('value' => 'Doe')));
+      $profile->field_prf_contact_title = array(LANGUAGE_NONE => array(array('value' => 'Research Associate')));
+      $profile->field_prf_contact_affiliation = array(LANGUAGE_NONE => array(array('value' => 'LCLS')));
       $profile->field_prf_contact_email = array(LANGUAGE_NONE => array(array('email' => 'john.doe@email.com')));
       $file = (object) array(
         'uri' => 'public://john.doe.jpg',
@@ -39,8 +42,11 @@ function _slac_blog_demo_create_profiles($uid) {
 
       break;
     case 1:
-      $profile->field_prf_contact_name = array(LANGUAGE_NONE => array(array('value' => 'Mauro Capello')));
-      $profile->field_prf_contact_title = array(LANGUAGE_NONE => array(array('value' => 'Ms.')));
+      //$profile->field_prf_contact_name = array(LANGUAGE_NONE => array(array('value' => 'Mauro Capello')));
+      $profile->field_prf_contact_fname = array(LANGUAGE_NONE => array(array('value' => 'Mauro')));
+      $profile->field_prf_contact_lname = array(LANGUAGE_NONE => array(array('value' => 'Capello')));
+      $profile->field_prf_contact_title = array(LANGUAGE_NONE => array(array('value' => 'Senior Staff Scientist')));
+      $profile->field_prf_contact_affiliation = array(LANGUAGE_NONE => array(array('value' => 'PPA')));
       $profile->field_prf_contact_email = array(LANGUAGE_NONE => array(array('email' => 'mauro.capello@email.com')));
       $file = (object) array(
         'uri' => 'public://mauro.capello.jpg',
@@ -68,8 +74,11 @@ function _slac_blog_demo_create_profiles($uid) {
       $profile->field_prf_contact_photo[LANGUAGE_NONE][0] = (array) $file;
       break;
     case 2:
-      $profile->field_prf_contact_name = array(LANGUAGE_NONE => array(array('value' => 'Kami Cropp')));
-      $profile->field_prf_contact_title = array(LANGUAGE_NONE => array(array('value' => 'Bsc.')));
+      //$profile->field_prf_contact_name = array(LANGUAGE_NONE => array(array('value' => 'Kami Cropp')));
+      $profile->field_prf_contact_fname = array(LANGUAGE_NONE => array(array('value' => 'Kami')));
+      $profile->field_prf_contact_lname = array(LANGUAGE_NONE => array(array('value' => 'Cropp')));
+      $profile->field_prf_contact_title = array(LANGUAGE_NONE => array(array('value' => 'Tehnician')));
+      $profile->field_prf_contact_affiliation = array(LANGUAGE_NONE => array(array('value' => 'FACET')));
       $profile->field_prf_contact_email = array(LANGUAGE_NONE => array(array('email' => 'kami.cropp@email.com')));
 
       $file = (object) array(

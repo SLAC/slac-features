@@ -29,7 +29,6 @@ function slac_ext_org_install_task_demo_content() {
       'slac_ext_org_blog',
       'slac_site_404',
       'slac_extorg_permissions',
-      'slac_users_page',
     ),
     $demo_modules
   );

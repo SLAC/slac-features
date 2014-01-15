@@ -126,6 +126,9 @@ dependencies[] = pp_profile
 dependencies[] = slac_profile
 dependencies[] = slac_user_profile
 
+; People listing
+dependencies[] = slac_people_listing
+
 ;Landing page content type
 dependencies[] = landing_page
 
