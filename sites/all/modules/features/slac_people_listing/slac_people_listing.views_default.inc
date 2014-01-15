@@ -123,7 +123,7 @@ function slac_people_listing_views_default_views() {
   /* Display: People Listing */
   $handler = $view->new_display('panel_pane', 'People Listing', 'panel_pane_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'People Listing';
+  $handler->display->display_options['title'] = '<none>';
   $handler->display->display_options['defaults']['query'] = FALSE;
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['query']['options']['distinct'] = TRUE;
