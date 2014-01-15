@@ -26,6 +26,7 @@ function slac_people_listing_default_page_manager_pages() {
       'settings' => array(
         'use_tail' => 0,
       ),
+      'keyword' => 'letter',
     ),
   );
   $page->conf = array(
