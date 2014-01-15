@@ -130,6 +130,7 @@ dependencies[] = slac_user_profile
 dependencies[] = landing_page
 
 ;Configurations
+dependencies[] = slac_configuration
 dependencies[] = slac_configurations
 
 ;Custom modules
