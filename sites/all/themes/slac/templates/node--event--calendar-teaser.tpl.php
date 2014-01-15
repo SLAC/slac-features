@@ -17,7 +17,7 @@
  *
  */
 ?>
-<div class="event-listing-item contextual-links-region">
+<div class="event-listing-item contextual-links-region <?php if(!isset($content['field_event_image'])) {print 'no-image';}?>">
   <?php if (isset($content['field_event_image'])) { ?>
     <figure><?php print render($content['field_event_image']); ?></figure>
   <?php } ?>

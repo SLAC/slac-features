@@ -2083,6 +2083,7 @@ ol.search-results
   background-color: $grey-e
   padding: 14px
   margin-bottom: 25px
+  @extend .clearfix
   
   figure
     margin-bottom: 10px
@@ -2115,10 +2116,15 @@ ol.search-results
   
     h3
       padding-left: 40%
+
   
     .field-name-field-slac-event-date
       clear: left
-
+          
+    &.no-image
+      h3, .field-name-field-slac-event-date
+        padding-left: 0
+        margin-left: 0  
     
 +at-breakpoint(500px)
   .event-listing-item
@@ -2166,8 +2172,17 @@ ol.search-results
     article
       padding-left: 115px
       margin-left: 15px
-      
-      
+
+    &.no-image
+      article
+        padding-left: 0
+        margin-left: 0     
+
+
+
+.event-listing-panel //panel class
+
+        
 //EVENT detail+++++++++++++++++++++++++++
 .event-wrapper
   background-color: $grey-e
