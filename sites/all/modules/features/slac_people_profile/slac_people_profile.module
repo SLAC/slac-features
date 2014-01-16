@@ -8,7 +8,7 @@ function slac_people_profile_views_pre_view($view, $display_id, $args) {
     return;
   }
 
-  $siteowner_username = variable_get('slac_people_profile_siteowner_username', '');
+  $siteowner_username = variable_get('slac_site_owner', '');
   if (empty($siteowner_username)) {
     return;
   }
