@@ -2314,21 +2314,27 @@ ol.search-results
   > .view-content
     color: $grey-3
     +fontsize-rem(12px)
+    text-align: center
+    
     .views-row
       background-color: $photo-bg
       margin-bottom: 25px
-      text-align: center
       height: 285px
+      padding: 20px 30px 0
+      display: inline-block
+      text-align: left
+      
     .username
       font-weight: bold
       +fontsize-rem(14px)
+      
 
   .views-field-field-prf-contact-photo
     float: none
     width: auto
     border: 0 none
     margin-right: 0
-    margin-bottom: 0   
+    margin-bottom: 6px   
     img
       width: 100%
 
@@ -2336,13 +2342,22 @@ ol.search-results
   .people-page-listing
     .view-content
       .views-row
+        padding: 25px 35px 0 
         +span-columns(6,12)
         +nth-omega(2n)  
+
+
++at-breakpoint(580px 690px) 
+  .people-page-listing
+    .view-content
+      .views-row
+        padding: 25px 50px 0 
 
 +at-breakpoint($only-tablet) //Mobile 3
   .people-page-listing
     .view-content
       .views-row
+        padding: 20px 30px 0
         +span-columns(4,12)
         +nth-omega(3n)  
 
@@ -2354,6 +2369,7 @@ ol.search-results
   .people-page-listing
     .view-content
       .views-row
+        padding: 25px 35px 0 
         margin-bottom: 55px
         +span-columns(3,12)
         +nth-omega(4n)

@@ -2081,12 +2081,15 @@ ol.search-results .search-snippet {
 .people-page-listing > .view-content {
   color: #333333;
   font-size: 12px;
-  font-size: 0.75rem; }
+  font-size: 0.75rem;
+  text-align: center; }
   .people-page-listing > .view-content .views-row {
     background-color: #f3f3eb;
     margin-bottom: 25px;
-    text-align: center;
-    height: 285px; }
+    height: 285px;
+    padding: 20px 30px 0;
+    display: inline-block;
+    text-align: left; }
   .people-page-listing > .view-content .username {
     font-weight: bold;
     font-size: 14px;
@@ -2096,20 +2099,25 @@ ol.search-results .search-snippet {
   width: auto;
   border: 0 none;
   margin-right: 0;
-  margin-bottom: 0; }
+  margin-bottom: 6px; }
   .people-page-listing .views-field-field-prf-contact-photo img {
     width: 100%; }
 
 @media (min-width: 480px) and (max-width: 690px) {
   .people-page-listing .view-content .views-row {
+    padding: 25px 35px 0;
     width: 47.87053%;
     float: left;
     margin-right: 4.25894%; }
     .people-page-listing .view-content .views-row:nth-child(2n) {
       float: right;
       margin-right: 0; } }
+@media (min-width: 580px) and (max-width: 690px) {
+  .people-page-listing .view-content .views-row {
+    padding: 25px 50px 0; } }
 @media (min-width: 691px) and (max-width: 893px) {
   .people-page-listing .view-content .views-row {
+    padding: 20px 30px 0;
     width: 30.49404%;
     float: left;
     margin-right: 4.25894%; }
@@ -2118,6 +2126,7 @@ ol.search-results .search-snippet {
       margin-right: 0; } }
 @media (min-width: 894px) {
   .people-page-listing .view-content .views-row {
+    padding: 25px 35px 0;
     margin-bottom: 55px;
     width: 21.80579%;
     float: left;
