@@ -384,7 +384,8 @@ html {
   .page-basic > .content input[type='text'], .page-basic > .content input[type='password'], .page-basic > .content textarea, .page-basic > .content select, .page-basic > .content input[type='file'] {
     width: 100%; }
   .page-basic > .content .general-left {
-    *zoom: 1; }
+    *zoom: 1;
+    margin-bottom: 35px; }
     .page-basic > .content .general-left:before, .page-basic > .content .general-left:after {
       content: "";
       display: table; }
@@ -394,6 +395,9 @@ html {
 .page-basic > .main-menu {
   display: none; }
 
+@media (min-width: 690px) {
+  .page-basic > .content .general-left {
+    margin-bottom: 0; } }
 .general-left-title .social_media_exist .author-details {
   padding-right: 100px; }
 

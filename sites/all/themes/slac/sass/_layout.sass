@@ -98,6 +98,7 @@ html
         
     .general-left
       +clearfix
+      margin-bottom: 35px
 
       
       
@@ -110,7 +111,12 @@ html
   > .header-menu, 
   > .main-menu
     display: none
-
+    
++at-breakpoint($tablet)
+  .page-basic
+    > .content
+      .general-left
+        margin-bottom: 0 
 
 .author-details
   .social_media_exist &
