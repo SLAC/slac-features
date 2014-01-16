@@ -30,7 +30,9 @@ function slac_configuration_form($form, &$form_state) {
   $form = array();
 
   $form['help'] = array(
-    '#markup' => t('On this page you can change your site\'s settings.')
+    '#markup' => t('On this page you can change your site\'s settings.'),
+    '#prefix' =>'<h3 class="form-item">',
+    '#suffix' => '</h3>',    
   );
 
   $form['site_name_abbreviation'] = array(
