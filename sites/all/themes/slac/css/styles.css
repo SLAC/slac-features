@@ -103,6 +103,12 @@ a[href*='mailto:'] {
   .basic-format-text p, article.node-blog.view-mode-full .field-type-text-with-summary p, article.node-blog.view-mode-full .blog-wrapper p, .article_panel_layout .pane-node-body p, .service-body p, .node-slac-sc-catalog-item p {
     margin-bottom: 5px;
     line-height: 20px; }
+    .basic-format-text p img, article.node-blog.view-mode-full .field-type-text-with-summary p img, article.node-blog.view-mode-full .blog-wrapper p img, .article_panel_layout .pane-node-body p img, .service-body p img, .node-slac-sc-catalog-item p img {
+      margin: 15px 0; }
+    .basic-format-text p a, article.node-blog.view-mode-full .field-type-text-with-summary p a, article.node-blog.view-mode-full .blog-wrapper p a, .article_panel_layout .pane-node-body p a, .service-body p a, .node-slac-sc-catalog-item p a {
+      text-decoration: underline; }
+      .basic-format-text p a:hover, article.node-blog.view-mode-full .field-type-text-with-summary p a:hover, article.node-blog.view-mode-full .blog-wrapper p a:hover, .article_panel_layout .pane-node-body p a:hover, .service-body p a:hover, .node-slac-sc-catalog-item p a:hover {
+        text-decoration: none; }
   .basic-format-text ul, article.node-blog.view-mode-full .field-type-text-with-summary ul, article.node-blog.view-mode-full .blog-wrapper ul, .article_panel_layout .pane-node-body ul, .service-body ul, .node-slac-sc-catalog-item ul, .basic-format-text ol, article.node-blog.view-mode-full .field-type-text-with-summary ol, article.node-blog.view-mode-full .blog-wrapper ol, .article_panel_layout .pane-node-body ol, .service-body ol, .node-slac-sc-catalog-item ol {
     list-style-type: disc;
     padding-left: 20px;
@@ -1306,6 +1312,9 @@ article.node-blog.node-teaser {
       margin-right: 10px; }
       article.node-blog.node-teaser .links li a {
         display: block; }
+
+.pane-node-field-slac-blog-image {
+  margin-bottom: 25px; }
 
 @media (min-width: 480px) {
   article.node-blog.node-teaser .field-name-field-slac-blog-image {
