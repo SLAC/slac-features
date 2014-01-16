@@ -2079,14 +2079,18 @@ ol.search-results .search-snippet {
       margin-right: 4.25894%; } }
 .people-page-listing .attachment {
   margin-bottom: 25px;
-  font-size: 14px;
-  font-size: 0.875rem;
+  font-size: 16px;
+  font-size: 1rem;
   color: #7a6f4f; }
   .people-page-listing .attachment a {
-    color: inherit;
-    text-decoration: underline; }
-    .people-page-listing .attachment a:hover {
-      text-decoration: none; }
+    color: inherit; }
+  .people-page-listing .attachment .no-result, .people-page-listing .attachment .result {
+    margin-bottom: 10px;
+    display: inline-block; }
+  .people-page-listing .attachment .no-result, .people-page-listing .attachment .result a {
+    padding: 6px; }
+  .people-page-listing .attachment .result a {
+    background-color: #f3f1eb; }
   .people-page-listing .attachment .view-header > div {
     margin-bottom: 10px;
     letter-spacing: 0.05em; }
@@ -2148,6 +2152,21 @@ ol.search-results .search-snippet {
     .people-page-listing .view-content > .views-row:nth-child(3n) {
       float: right;
       margin-right: 0; } }
+@media (min-width: 690px) {
+  .people-page-listing .attachment {
+    font-size: 14px;
+    font-size: 0.875rem; }
+    .people-page-listing .attachment a {
+      text-decoration: underline; }
+      .people-page-listing .attachment a:hover {
+        text-decoration: none; }
+    .people-page-listing .attachment .no-result, .people-page-listing .attachment .result {
+      margin-bottom: 0;
+      display: inline; }
+    .people-page-listing .attachment .no-result, .people-page-listing .attachment .result a {
+      padding: 0; }
+    .people-page-listing .attachment .result a {
+      background-color: transparent; } }
 @media (min-width: 894px) {
   .people-page-listing .view-content .views-row {
     padding: 25px 35px 0;

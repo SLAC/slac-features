@@ -2306,13 +2306,21 @@ ol.search-results
 
   .attachment
     margin-bottom: 25px
-    +fontsize-rem(14px)
+    +fontsize-rem(16px)
     color: $people-text-color
     a
       color: inherit
-      text-decoration: underline
-      &:hover
-        text-decoration: none
+
+    .no-result, .result
+      margin-bottom: 10px
+      display: inline-block
+      
+    .no-result, .result a
+      padding: 6px    
+      
+    .result a
+      background-color: $bg-col-1      
+      
       
     .view-header
       > div
@@ -2378,6 +2386,8 @@ ol.search-results
       .views-row
         padding: 25px 50px 0 
 
+
+
 +at-breakpoint($only-tablet) //Mobile 3
   .people-page-listing
     .view-content
@@ -2385,6 +2395,26 @@ ol.search-results
         padding: 20px 30px 0
         +span-columns(4,12)
         +nth-omega(3n)  
+
+
++at-breakpoint($tablet)
+  .people-page-listing
+    .attachment
+      +fontsize-rem(14px)
+      a
+        text-decoration: underline
+        &:hover
+          text-decoration: none
+
+      .no-result, .result
+        margin-bottom: 0
+        display: inline
+        
+      .no-result, .result a
+        padding: 0   
+        
+      .result a
+        background-color: transparent   
 
 +at-breakpoint($small-desktop)
   .people-page-listing
