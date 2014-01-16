@@ -11,26 +11,18 @@ function slac_service_catalog_pages_install() {
     'name' => 'admin',
     'uid' => 1,
     'path' => array(
-      'alias' => 'service-catalog',
+      'alias' => 'services',
       'pathauto' => 0,
     ),
-    'title_pane_class' => 'pane-title'
   );
-  
-
 
   node_save($node);
-
-  $title_pane_class = '';
-  if (isset($node->title_pane_class)) {
-    $title_pane_class = $node->title_pane_class;
-  }
 
   $panels_display = _slac_service_catalog_pages_install__panels_display();
 
   _slac_service_catalog_pages_install__panelizer_entity($node, $panels_display['did']);
 
-  _slac_service_catalog_pages_install__panes($panels_display['did'], $title_pane_class);
+  _slac_service_catalog_pages_install__panes($panels_display['did']);
 
   _slac_service_catalog_pages_install__menu_item($node->nid, t('Services'), 'main-menu', 4);
 }
