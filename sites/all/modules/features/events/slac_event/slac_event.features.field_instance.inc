@@ -66,6 +66,13 @@ function slac_event_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 4,
       ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 4,
+      ),
       'ical' => array(
         'label' => 'above',
         'settings' => array(),
@@ -77,6 +84,20 @@ function slac_event_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'search_index' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 4,
+      ),
+      'search_result' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -132,6 +153,16 @@ function slac_event_field_default_field_instances() {
         'type' => 'image',
         'weight' => 9,
       ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 9,
+      ),
       'ical' => array(
         'label' => 'above',
         'settings' => array(),
@@ -143,6 +174,26 @@ function slac_event_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'search_index' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 9,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -230,6 +281,13 @@ function slac_event_field_default_field_instances() {
         'type' => 'location_default',
         'weight' => 8,
       ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'location_cck',
+        'settings' => array(),
+        'type' => 'location_default',
+        'weight' => 8,
+      ),
       'ical' => array(
         'label' => 'above',
         'settings' => array(),
@@ -241,6 +299,20 @@ function slac_event_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'search_index' => array(
+        'label' => 'above',
+        'module' => 'location_cck',
+        'settings' => array(),
+        'type' => 'location_default',
+        'weight' => 8,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'module' => 'location_cck',
+        'settings' => array(),
+        'type' => 'location_default',
+        'weight' => 8,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -285,6 +357,13 @@ function slac_event_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 11,
       ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 11,
+      ),
       'ical' => array(
         'label' => 'above',
         'settings' => array(),
@@ -296,6 +375,20 @@ function slac_event_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'search_index' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 11,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 11,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -343,6 +436,13 @@ function slac_event_field_default_field_instances() {
         'type' => 'taxonomy_term_reference_plain',
         'weight' => 0,
       ),
+      'full' => array(
+        'label' => 'inline',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_plain',
+        'weight' => 0,
+      ),
       'ical' => array(
         'label' => 'above',
         'module' => 'taxonomy',
@@ -355,6 +455,20 @@ function slac_event_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
+        'weight' => 0,
+      ),
+      'search_index' => array(
+        'label' => 'inline',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_plain',
+        'weight' => 0,
+      ),
+      'search_result' => array(
+        'label' => 'inline',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_plain',
         'weight' => 0,
       ),
       'teaser' => array(
@@ -400,6 +514,13 @@ function slac_event_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 10,
       ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 10,
+      ),
       'ical' => array(
         'label' => 'above',
         'settings' => array(),
@@ -411,6 +532,20 @@ function slac_event_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'search_index' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 10,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 10,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -465,6 +600,20 @@ function slac_event_field_default_field_instances() {
         'type' => 'date_default',
         'weight' => 7,
       ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'long',
+          'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+          'show_repeat_rule' => '',
+        ),
+        'type' => 'date_default',
+        'weight' => 7,
+      ),
       'ical' => array(
         'label' => 'above',
         'settings' => array(),
@@ -476,6 +625,34 @@ function slac_event_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'search_index' => array(
+        'label' => 'above',
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'long',
+          'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+          'show_repeat_rule' => '',
+        ),
+        'type' => 'date_default',
+        'weight' => 7,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'long',
+          'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+          'show_repeat_rule' => '',
+        ),
+        'type' => 'date_default',
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -536,6 +713,16 @@ function slac_event_field_default_field_instances() {
         'type' => 'field_redirection',
         'weight' => 6,
       ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'field_redirection',
+        'settings' => array(
+          '404_if_empty' => FALSE,
+          'code' => 301,
+        ),
+        'type' => 'field_redirection',
+        'weight' => 6,
+      ),
       'ical' => array(
         'label' => 'above',
         'settings' => array(),
@@ -547,6 +734,20 @@ function slac_event_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'search_index' => array(
+        'label' => 'hidden',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 6,
+      ),
+      'search_result' => array(
+        'label' => 'hidden',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -608,6 +809,13 @@ function slac_event_field_default_field_instances() {
         'type' => 'text_plain',
         'weight' => 2,
       ),
+      'full' => array(
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_plain',
+        'weight' => 2,
+      ),
       'ical' => array(
         'label' => 'above',
         'settings' => array(),
@@ -619,6 +827,20 @@ function slac_event_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'search_index' => array(
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_plain',
+        'weight' => 2,
+      ),
+      'search_result' => array(
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_plain',
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -666,6 +888,13 @@ function slac_event_field_default_field_instances() {
         'type' => 'link_default',
         'weight' => 12,
       ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 12,
+      ),
       'ical' => array(
         'label' => 'above',
         'settings' => array(),
@@ -677,6 +906,20 @@ function slac_event_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'search_index' => array(
+        'label' => 'above',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 12,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 12,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -738,6 +981,13 @@ function slac_event_field_default_field_instances() {
         'type' => 'text_plain',
         'weight' => 1,
       ),
+      'full' => array(
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_plain',
+        'weight' => 1,
+      ),
       'ical' => array(
         'label' => 'above',
         'settings' => array(),
@@ -749,6 +999,20 @@ function slac_event_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'search_index' => array(
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_plain',
+        'weight' => 1,
+      ),
+      'search_result' => array(
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_plain',
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -796,6 +1060,13 @@ function slac_event_field_default_field_instances() {
         'type' => 'taxonomy_term_reference_link',
         'weight' => 5,
       ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 5,
+      ),
       'ical' => array(
         'label' => 'above',
         'settings' => array(),
@@ -807,6 +1078,20 @@ function slac_event_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'search_index' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 5,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',

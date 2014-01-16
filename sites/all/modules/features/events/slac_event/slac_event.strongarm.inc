@@ -106,12 +106,18 @@ function slac_event_strongarm() {
         'custom_settings' => FALSE,
       ),
       'search_result' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'ical' => array(
         'custom_settings' => TRUE,
       ),
       'token' => array(
+        'custom_settings' => FALSE,
+      ),
+      'calendar_teaser' => array(
+        'custom_settings' => TRUE,
+      ),
+      'diff_standard' => array(
         'custom_settings' => FALSE,
       ),
     ),
