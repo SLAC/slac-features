@@ -2074,7 +2074,10 @@ ol.search-results .search-snippet {
   font-size: 0.875rem;
   color: #7a6f4f; }
   .people-page-listing .attachment a {
-    color: inherit; }
+    color: inherit;
+    text-decoration: underline; }
+    .people-page-listing .attachment a:hover {
+      text-decoration: none; }
   .people-page-listing .attachment .view-header > div {
     margin-bottom: 10px;
     letter-spacing: 0.05em; }
@@ -2089,20 +2092,32 @@ ol.search-results .search-snippet {
     height: 285px;
     padding: 20px 30px 0;
     display: inline-block;
-    text-align: left; }
-  .people-page-listing > .view-content .username {
-    font-weight: bold;
+    text-align: left;
+    position: relative;
+    max-width: 230px; }
+    .people-page-listing > .view-content .views-row:hover {
+      background-color: #b9b7b3;
+      color: #7d7d7d; }
+  .people-page-listing > .view-content h3 {
     font-size: 14px;
     font-size: 0.875rem; }
-.people-page-listing .views-field-field-prf-contact-photo {
-  float: none;
-  width: auto;
-  border: 0 none;
-  margin-right: 0;
+.people-page-listing .url-link a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 9999;
+  text-indent: -9999px; }
+.people-page-listing .profile-photo {
   margin-bottom: 6px; }
-  .people-page-listing .views-field-field-prf-contact-photo img {
-    width: 100%; }
+  .people-page-listing .profile-photo img {
+    max-width: 100%; }
 
+@media (min-width: 480px) {
+  .people-page-listing .view-content > .views-row {
+    max-width: none; } }
 @media (min-width: 480px) and (max-width: 690px) {
   .people-page-listing .view-content .views-row {
     padding: 25px 35px 0;
@@ -2113,15 +2128,15 @@ ol.search-results .search-snippet {
       float: right;
       margin-right: 0; } }
 @media (min-width: 580px) and (max-width: 690px) {
-  .people-page-listing .view-content .views-row {
+  .people-page-listing > .view-content .views-row {
     padding: 25px 50px 0; } }
 @media (min-width: 691px) and (max-width: 893px) {
-  .people-page-listing .view-content .views-row {
+  .people-page-listing .view-content > .views-row {
     padding: 20px 30px 0;
     width: 30.49404%;
     float: left;
     margin-right: 4.25894%; }
-    .people-page-listing .view-content .views-row:nth-child(3n) {
+    .people-page-listing .view-content > .views-row:nth-child(3n) {
       float: right;
       margin-right: 0; } }
 @media (min-width: 894px) {
