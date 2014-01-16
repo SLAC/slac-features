@@ -1,0 +1,25 @@
+<?php
+/**
+ * @file
+ * Drupal needs this blank file.
+ */
+
+/**
+ * Implements hook_entity_insert().
+ */
+function slac_demo_accounts_entity_insert($entity, $type) {
+  if ($type != 'user' || !isset($entity->uuid)) {
+    return;
+  }
+
+  // Users created by this slac_blog_demo module.
+  $account_uuids = array(
+    '8b7ae525-e06d-435f-8a8e-b37e21fe4403',
+    'adeece4d-b3d3-4619-96b5-dd20b87ebc49',
+    'e063835a-d277-44a2-94a1-86ea45e9012b');
+
+  if (in_array($entity->uuid, $account_uuids)) {
+    module_load_include('inc', 'slac_demo_accounts', 'slac_demo_accounts_profiles');
+    _slac_demo_accounts_create_profiles($entity->uid);
+  }
+}

@@ -37,5 +37,6 @@ function slac_ext_org_demo_modules() {
     'slac_event_demo',
     'slac_service_catalog_demo',
     'slac_kb_demo',
+    'slac_demo_accounts',
   );
 }
