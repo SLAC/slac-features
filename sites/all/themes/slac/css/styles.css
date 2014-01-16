@@ -391,13 +391,17 @@ html {
       display: table; }
     .page-basic > .content .general-left:after {
       clear: both; }
+  .page-basic > .content .reverse .general-left {
+    margin-top: 25px; }
 .page-basic > .header-menu,
 .page-basic > .main-menu {
   display: none; }
 
 @media (min-width: 690px) {
   .page-basic > .content .general-left {
-    margin-bottom: 0; } }
+    margin-bottom: 0; }
+  .page-basic > .content .reverse .general-left {
+    margin-top: 0; } }
 .general-left-title .social_media_exist .author-details {
   padding-right: 100px; }
 
