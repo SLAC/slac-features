@@ -9,7 +9,7 @@ print (!empty($options['inline']) ? '<span' : '<div') . ' class="views-summary v
 
 foreach($letters as $letter){
   if(in_array($letter, $existing_letters)){
-    $nav[] = '<span class="result"><a href="' . $urls[$letter] . '"' . 'class="' . $classes . '">' . $letter . '</a>';
+    $nav[] = '<span class="result"><a href="' . $urls[$letter] . '"' . 'class="' . $classes . '">' . $letter . '</a></span>';
   }
   else {
     $nav[] = '<span class="no-result">' . $letter . '</span>';
