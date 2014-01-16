@@ -197,6 +197,8 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'access user profiles',
     'roles' => array(
       'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'user',
   );
@@ -2364,6 +2366,8 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'view any bio profile',
     'roles' => array(
       'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'profile2',
   );
@@ -2383,6 +2387,8 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'view any contact profile',
     'roles' => array(
       'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'profile2',
   );
@@ -2422,6 +2428,8 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'view any social_media profile',
     'roles' => array(
       'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'profile2',
   );
@@ -2496,6 +2504,8 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'view own bio profile',
     'roles' => array(
       'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
       'site owner' => 'site owner',
     ),
     'module' => 'profile2',
@@ -2506,6 +2516,8 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'view own contact profile',
     'roles' => array(
       'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
       'site owner' => 'site owner',
     ),
     'module' => 'profile2',
@@ -2543,6 +2555,8 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'view own social_media profile',
     'roles' => array(
       'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
       'site owner' => 'site owner',
     ),
     'module' => 'profile2',
