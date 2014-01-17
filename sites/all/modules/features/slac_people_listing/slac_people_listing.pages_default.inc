@@ -171,13 +171,17 @@ function slac_people_listing_default_page_manager_pages() {
     'relationships' => array(),
   );
   $display = new panels_display();
-  $display->layout = 'two_col';
+  $display->layout = 'two_col_article';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
       'default' => NULL,
       'left' => NULL,
       'right' => NULL,
+      'left_title' => NULL,
+      'left_author' => NULL,
+      'social_media_1' => NULL,
+      'social_media_2' => NULL,
     ),
   );
   $display->cache = array();
@@ -193,7 +197,7 @@ function slac_people_listing_default_page_manager_pages() {
     $pane->access = array();
     $pane->configuration = array(
       'override_title' => 1,
-      'override_title_text' => 'Profile Overview',
+      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -207,6 +211,30 @@ function slac_people_listing_default_page_manager_pages() {
     $display->panels['left'][0] = 'new-3';
     $pane = new stdClass();
     $pane->pid = 'new-4';
+    $pane->panel = 'left_title';
+    $pane->type = 'page_title';
+    $pane->subtype = 'page_title';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'markup' => 'h2',
+      'class' => 'pane-title',
+      'id' => '',
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-4'] = $pane;
+    $display->panels['left_title'][0] = 'new-4';
+    $pane = new stdClass();
+    $pane->pid = 'new-5';
     $pane->panel = 'right';
     $pane->type = 'views_panes';
     $pane->subtype = 'profile_user_elements_extorg_-panel_pane_1';
@@ -225,9 +253,9 @@ function slac_people_listing_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-4'] = $pane;
-    $display->panels['right'][0] = 'new-4';
-  $display->hide_title = PANELS_TITLE_PANE;
+    $display->content['new-5'] = $pane;
+    $display->panels['right'][0] = 'new-5';
+  $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
