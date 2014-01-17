@@ -1145,7 +1145,7 @@ ul.tabs, .action-links {
   margin-bottom: 5px; }
 
 .feed-icon {
-  display: none; }
+  /*display: none;*/ }
 
 .front .pane-page-content .general-left .panel-pane {
   margin-bottom: 36px; }

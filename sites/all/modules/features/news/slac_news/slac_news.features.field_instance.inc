@@ -17,7 +17,23 @@ function slac_news_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'calendar_teaser' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'trim_length' => 600,
+        ),
+        'type' => 'text_summary_or_trimmed',
+        'weight' => 1,
+      ),
       'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'rss' => array(
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
@@ -61,7 +77,19 @@ function slac_news_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'If the news article is academic in nature, please include any citation information here',
     'display' => array(
+      'calendar_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
+      ),
       'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
+      ),
+      'rss' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -100,7 +128,19 @@ function slac_news_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Optional: if this is a press release or similar, include the contact information here.',
     'display' => array(
+      'calendar_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
+      ),
       'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
+      'rss' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -138,13 +178,25 @@ function slac_news_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Please upload or select any media such as images or videos you would like to include in the article.',
     'display' => array(
-      'default' => array(
-        'label' => 'above',
+      'calendar_teaser' => array(
+        'label' => 'hidden',
         'module' => 'mediafield',
         'settings' => array(
-          'file_view_mode' => 'crop_slac_news_image_details',
+          'file_view_mode' => 'crop_crop_news_landscape',
         ),
         'type' => 'media',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
+      'rss' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 1,
       ),
       'teaser' => array(
@@ -197,7 +249,19 @@ function slac_news_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Please enter where the news article came from, this should be the title of the source as well as the url',
     'display' => array(
+      'calendar_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
       'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
+      ),
+      'rss' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -251,7 +315,19 @@ function slac_news_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Please enter a comma separated list of tags for this article, i.e. Photon, X-ray',
     'display' => array(
+      'calendar_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
       'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
+      'rss' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -290,7 +366,19 @@ function slac_news_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'calendar_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
       'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
+      'rss' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',

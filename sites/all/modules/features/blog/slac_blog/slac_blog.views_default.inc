@@ -71,24 +71,6 @@ function slac_blog_views_default_views() {
   $handler->display->display_options['fields']['picture']['exclude'] = TRUE;
   $handler->display->display_options['fields']['picture']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['picture']['image_style'] = 'profile-image-blog-icon';
-  /* Field: Broken/missing handler */
-  $handler->display->display_options['fields']['field_first_name']['id'] = 'field_first_name';
-  $handler->display->display_options['fields']['field_first_name']['table'] = 'field_data_field_first_name';
-  $handler->display->display_options['fields']['field_first_name']['field'] = 'field_first_name';
-  $handler->display->display_options['fields']['field_first_name']['relationship'] = 'uid';
-  $handler->display->display_options['fields']['field_first_name']['exclude'] = TRUE;
-  /* Field: Broken/missing handler */
-  $handler->display->display_options['fields']['field_last_name']['id'] = 'field_last_name';
-  $handler->display->display_options['fields']['field_last_name']['table'] = 'field_data_field_last_name';
-  $handler->display->display_options['fields']['field_last_name']['field'] = 'field_last_name';
-  $handler->display->display_options['fields']['field_last_name']['relationship'] = 'uid';
-  $handler->display->display_options['fields']['field_last_name']['label'] = '';
-  $handler->display->display_options['fields']['field_last_name']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_last_name']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_last_name']['alter']['text'] = '[field_first_name] [field_last_name]';
-  $handler->display->display_options['fields']['field_last_name']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['field_last_name']['alter']['path'] = 'blog/[uid]';
-  $handler->display->display_options['fields']['field_last_name']['element_label_colon'] = FALSE;
   /* Field: Content: Post date */
   $handler->display->display_options['fields']['created']['id'] = 'created';
   $handler->display->display_options['fields']['created']['table'] = 'node';
@@ -144,6 +126,8 @@ function slac_blog_views_default_views() {
 
   /* Display: Blog Feed */
   $handler = $view->new_display('feed', 'Blog Feed', 'feed_1');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Blog RSS Feed';
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['style_plugin'] = 'rss';
   $handler->display->display_options['row_plugin'] = 'node_rss';
@@ -163,7 +147,7 @@ function slac_blog_views_default_views() {
   $handler->display->display_options['arguments']['uid']['validate']['type'] = 'user';
   $handler->display->display_options['arguments']['uid']['validate_options']['type'] = 'either';
   $handler->display->display_options['arguments']['uid']['validate']['fail'] = 'ignore';
-  $handler->display->display_options['path'] = 'blog-feed';
+  $handler->display->display_options['path'] = 'blog/feed';
   $handler->display->display_options['displays'] = array(
     'page_1' => 'page_1',
     'block_1' => 'block_1',
@@ -173,6 +157,7 @@ function slac_blog_views_default_views() {
     'block_2' => 0,
     'block_3' => 0,
   );
+  $handler->display->display_options['sitename_title'] = 0;
 
   /* Display: User Blog Page */
   $handler = $view->new_display('page', 'User Blog Page', 'page_1');
