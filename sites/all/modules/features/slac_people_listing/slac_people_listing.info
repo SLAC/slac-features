@@ -15,5 +15,7 @@ features[features_api][] = api:2
 features[image][] = people-listing-photo
 features[menu_links][] = main-menu:people/all
 features[page_manager_pages][] = people_listing_page
+features[page_manager_pages][] = user_profile
 features[views_view][] = people_listing
+features[views_view][] = profile_user_elements_extorg_
 features_exclude[dependencies][ctools] = ctools
