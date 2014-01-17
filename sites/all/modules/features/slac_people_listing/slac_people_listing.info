@@ -13,6 +13,7 @@ features[ctools][] = page_manager:pages_default:1
 features[ctools][] = views:views_default:3.0
 features[features_api][] = api:2
 features[image][] = people-listing-photo
+features[image][] = profile_home_user_image_eo
 features[menu_links][] = main-menu:people/all
 features[page_manager_pages][] = people_listing_page
 features[page_manager_pages][] = user_profile

@@ -600,7 +600,7 @@ function slac_people_listing_views_default_views() {
   $handler->display->display_options['fields']['field_prf_contact_photo']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_prf_contact_photo']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_prf_contact_photo']['settings'] = array(
-    'image_style' => 'profile_home_user_image',
+    'image_style' => 'profile_home_user_image_eo',
     'image_link' => '',
   );
   /* Field: User: Name */
