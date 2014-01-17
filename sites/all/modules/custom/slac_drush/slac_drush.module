@@ -1,19 +1,65 @@
 <?php
 
 /**
- * Implements hook_drush_get_projects_alter().
- *
- * Remove patched modules from "drush ups" command.
+ * Implements hook_cron().
  */
-function slac_drush_drush_get_projects_alter(&$projects) {
+function slac_drush_cron() {
+  $patched_modules = variable_get('slac_drush_patched_modules', array());
+  $new_patched_modules = _slac_drush_get_patched_modules_list();
+
+  $modules_to_remove_lock_file = array_diff($patched_modules, $new_patched_modules);
+
+  foreach ($new_patched_modules as $module) {
+    $lock_asured = _slac_drush_make_sure_lock_file($module);
+    if ($lock_asured === FALSE) {
+      unset($new_patched_modules[$module]);
+    }
+  }
+
+  foreach ($modules_to_remove_lock_file as $module) {
+    $lock_file_path = DRUPAL_ROOT . '/' . drupal_get_path('module', $module) . '/.drush-lock-update';
+    if (file_exists($lock_file_path)) {
+      unlink($lock_file_path);
+    }
+  }
+
+  variable_set('slac_drush_patched_modules', $new_patched_modules);
+}
+
+/**
+ * Check if lock file is created. If it is not created we try to create it.
+ * 
+ * @param type $module
+ * @return bool
+ *  TRUE -- file exist or we created it.
+ *  FALSE --
+ */
+function _slac_drush_make_sure_lock_file($module) {
+  $lock_file_path_dir = DRUPAL_ROOT . '/' . drupal_get_path('module', $module);
+  // No need to do anything if lock file is already there.
+  if (file_exists($lock_file_path_dir . '/.drush-lock-update')) {
+    return TRUE;
+  }
+
+  if (is_writable($lock_file_path_dir)) {
+    return file_put_contents($lock_file_path_dir . '/.drush-lock-update', 'Locked by slac_drush module.');
+  }
+
+  return FALSE;
+}
+
+function _slac_drush_get_patched_modules_list() {
+  $modules_list = array();
+
   $patches = scandir(DRUPAL_ROOT . '/sites/all/modules/patches');
   foreach ($patches as $patch_filename) {
     if ($patch_filename == '.' || $patch_filename == '..') {
       continue;
     }
     list($module, ) = explode('-', $patch_filename);
-    if (isset($projects[$module])) {
-      unset($projects[$module]);
-    }
+    $modules_list[$module] = $module;
   }
+
+  return $modules_list;
 }
+
