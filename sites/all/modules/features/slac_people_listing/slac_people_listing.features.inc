@@ -45,7 +45,7 @@ function slac_people_listing_image_default_styles() {
           'anchor' => 'center-center',
           'jcrop_settings' => array(
             'aspect_ratio' => '',
-            'bgcolor' => 'black',
+            'bgcolor' => 'white',
             'bgopacity' => 0.6,
             'fallback' => 0,
           ),
