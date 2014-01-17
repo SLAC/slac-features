@@ -17,6 +17,14 @@ $commands = array(
     'description' => 'Admin login ',
     'command' => 'drush --uri=http://slac-features.wearepropeople.md uli'
   ),
+  array(
+    'description' => 'Create siteowner user account: ',
+    'command' => 'drush user-create siteowner --mail="siteowner@example.com" --password="1"'
+  ),
+  array(
+    'description' => 'Add "site owner" role to siteowner: ',
+    'command' => 'drush user-add-role "site owner" siteowner'
+  ),
 );
 
 $command_output = array();
