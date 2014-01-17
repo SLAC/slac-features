@@ -621,6 +621,14 @@ function slac_event_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'event' => 'event',
   );
+  /* Filter criterion: Content: Event date -  start date (field_slac_event_date) */
+  $handler->display->display_options['filters']['field_slac_event_date_value']['id'] = 'field_slac_event_date_value';
+  $handler->display->display_options['filters']['field_slac_event_date_value']['table'] = 'field_data_field_slac_event_date';
+  $handler->display->display_options['filters']['field_slac_event_date_value']['field'] = 'field_slac_event_date_value';
+  $handler->display->display_options['filters']['field_slac_event_date_value']['operator'] = '>';
+  $handler->display->display_options['filters']['field_slac_event_date_value']['granularity'] = 'second';
+  $handler->display->display_options['filters']['field_slac_event_date_value']['default_date'] = 'now';
+  $handler->display->display_options['filters']['field_slac_event_date_value']['year_range'] = '-0:+3';
   $handler->display->display_options['pane_category']['name'] = 'Calendar';
   $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['allow']['use_pager'] = 0;
