@@ -253,7 +253,8 @@ function slac_profiles_shared_place_system_blocks_to_regions() {
       'status' => 1,
       'weight' => 0,
       'region' => 'content',
-      'pages' => '',
+      'visibility' => 0,
+      'pages' => '*',
       'cache' => -1,
     ),
     array(
@@ -263,7 +264,8 @@ function slac_profiles_shared_place_system_blocks_to_regions() {
       'status' => 1,
       'weight' => 0,
       'region' => 'content',
-      'pages' => '',
+      'visibility' => 0,
+      'pages' => '*',
       'cache' => -1,
     ),
   );
