@@ -100,18 +100,7 @@ function slac_service_catalog_demo_uuid_features_default_content() {
       ),
     ),
   ),
-  'field_slac_sc_eligibility' => array(
-    'und' => array(
-      0 => array(
-        'tid' => 62,
-        'uuid' => '9d88d219-f7e7-4354-b6ce-accadf586640',
-      ),
-      1 => array(
-        'tid' => 60,
-        'uuid' => '00e2fef3-0966-49ed-8f3d-e3f8d1cd46c0',
-      ),
-    ),
-  ),
+  'field_slac_sc_eligibility' => array(),
   'field_slac_sc_requirements' => array(
     'und' => array(
       0 => array(
@@ -147,14 +136,7 @@ function slac_service_catalog_demo_uuid_features_default_content() {
       ),
     ),
   ),
-  'field_slac_sc_category' => array(
-    'und' => array(
-      0 => array(
-        'tid' => 45,
-        'uuid' => 'cf2ef1a1-ee93-434b-a103-a0a123dcc6aa',
-      ),
-    ),
-  ),
+  'field_slac_sc_category' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:Item',
@@ -349,14 +331,7 @@ function slac_service_catalog_demo_uuid_features_default_content() {
       ),
     ),
   ),
-  'field_slac_sc_category' => array(
-    'und' => array(
-      0 => array(
-        'tid' => 48,
-        'uuid' => '04690b24-a63c-403b-a4ee-b0f96929f27b',
-      ),
-    ),
-  ),
+  'field_slac_sc_category' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:Item',
@@ -512,18 +487,7 @@ function slac_service_catalog_demo_uuid_features_default_content() {
       ),
     ),
   ),
-  'field_slac_sc_eligibility' => array(
-    'und' => array(
-      0 => array(
-        'tid' => 62,
-        'uuid' => '9d88d219-f7e7-4354-b6ce-accadf586640',
-      ),
-      1 => array(
-        'tid' => 60,
-        'uuid' => '00e2fef3-0966-49ed-8f3d-e3f8d1cd46c0',
-      ),
-    ),
-  ),
+  'field_slac_sc_eligibility' => array(),
   'field_slac_sc_requirements' => array(),
   'field_slac_sc_support' => array(
     'und' => array(
@@ -566,14 +530,7 @@ function slac_service_catalog_demo_uuid_features_default_content() {
       ),
     ),
   ),
-  'field_slac_sc_category' => array(
-    'und' => array(
-      0 => array(
-        'tid' => 47,
-        'uuid' => 'ac074ab7-4b52-4911-a6b0-3d92f247aa2a',
-      ),
-    ),
-  ),
+  'field_slac_sc_category' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:Item',
@@ -745,18 +702,7 @@ function slac_service_catalog_demo_uuid_features_default_content() {
       ),
     ),
   ),
-  'field_slac_sc_eligibility' => array(
-    'und' => array(
-      0 => array(
-        'tid' => 61,
-        'uuid' => 'db10ac33-21ec-4d40-bee7-1c34780f1b40',
-      ),
-      1 => array(
-        'tid' => 63,
-        'uuid' => 'f3037fca-b840-4394-9c4e-03ea14b6c4bf',
-      ),
-    ),
-  ),
+  'field_slac_sc_eligibility' => array(),
   'field_slac_sc_requirements' => array(
     'und' => array(
       0 => array(
@@ -787,14 +733,7 @@ function slac_service_catalog_demo_uuid_features_default_content() {
       ),
     ),
   ),
-  'field_slac_sc_category' => array(
-    'und' => array(
-      0 => array(
-        'tid' => 46,
-        'uuid' => '83b5b76c-6bd8-4a0c-a580-6aa8b22d9f63',
-      ),
-    ),
-  ),
+  'field_slac_sc_category' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:Item',
@@ -984,26 +923,7 @@ WTS :: Windows Terminal Server (Citrix)',
       ),
     ),
   ),
-  'field_slac_sc_eligibility' => array(
-    'und' => array(
-      0 => array(
-        'tid' => 61,
-        'uuid' => 'db10ac33-21ec-4d40-bee7-1c34780f1b40',
-      ),
-      1 => array(
-        'tid' => 63,
-        'uuid' => 'f3037fca-b840-4394-9c4e-03ea14b6c4bf',
-      ),
-      2 => array(
-        'tid' => 62,
-        'uuid' => '9d88d219-f7e7-4354-b6ce-accadf586640',
-      ),
-      3 => array(
-        'tid' => 60,
-        'uuid' => '00e2fef3-0966-49ed-8f3d-e3f8d1cd46c0',
-      ),
-    ),
-  ),
+  'field_slac_sc_eligibility' => array(),
   'field_slac_sc_requirements' => array(
     'und' => array(
       0 => array(
@@ -1047,14 +967,7 @@ WTS :: Windows Terminal Server (Citrix)',
       ),
     ),
   ),
-  'field_slac_sc_category' => array(
-    'und' => array(
-      0 => array(
-        'tid' => 44,
-        'uuid' => '40e140d3-4f65-481f-a68f-6d3f43161e13',
-      ),
-    ),
-  ),
+  'field_slac_sc_category' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:Item',
@@ -1253,26 +1166,7 @@ WTS :: Windows Terminal Server (Citrix)',
       ),
     ),
   ),
-  'field_slac_sc_eligibility' => array(
-    'und' => array(
-      0 => array(
-        'tid' => 61,
-        'uuid' => 'db10ac33-21ec-4d40-bee7-1c34780f1b40',
-      ),
-      1 => array(
-        'tid' => 63,
-        'uuid' => 'f3037fca-b840-4394-9c4e-03ea14b6c4bf',
-      ),
-      2 => array(
-        'tid' => 62,
-        'uuid' => '9d88d219-f7e7-4354-b6ce-accadf586640',
-      ),
-      3 => array(
-        'tid' => 60,
-        'uuid' => '00e2fef3-0966-49ed-8f3d-e3f8d1cd46c0',
-      ),
-    ),
-  ),
+  'field_slac_sc_eligibility' => array(),
   'field_slac_sc_requirements' => array(),
   'field_slac_sc_support' => array(
     'und' => array(
@@ -1287,14 +1181,7 @@ WTS :: Windows Terminal Server (Citrix)',
   ),
   'field_slac_sc_rate' => array(),
   'field_slac_sc_request_link' => array(),
-  'field_slac_sc_category' => array(
-    'und' => array(
-      0 => array(
-        'tid' => 49,
-        'uuid' => '62a170f8-cfd3-4717-a589-c5f1f7910be7',
-      ),
-    ),
-  ),
+  'field_slac_sc_category' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:Item',
