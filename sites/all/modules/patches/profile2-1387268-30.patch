@@ -1,0 +1,30 @@
+diff --git a/profile2.install b/profile2.install
+index 762b1ff..d72fc62 100644
+--- a/profile2.install
++++ b/profile2.install
+@@ -140,6 +140,10 @@ function profile2_schema() {
+       'type' => array('type'),
+     ),
+   );
++
++  $schema['cache_entity_profile2'] = drupal_get_schema_unprocessed('system', 'cache');
++  $schema['cache_entity_profile2']['description'] = "Cache table used to store profile2 entity records.";
++
+   return $schema;
+ }
+ 
+@@ -204,3 +208,14 @@ function profile2_update_7102() {
+     'not null' => FALSE,
+   ));
+ }
++
++/**
++ * Add the {cache_entity_profile2} table in case entitycache.module is used.
++ */
++function profile2_update_7103() {
++  if (!db_table_exists('cache_entity_profile2')) {
++    $table = drupal_get_schema_unprocessed('system', 'cache');
++    $table['description'] = "Cache table used to store profile2 entity records.";
++    db_create_table('cache_entity_profile2', $table);
++  }
++}

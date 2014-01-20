@@ -422,14 +422,14 @@ function slac_profile_field_default_field_bases() {
       'location_settings' => array(
         'display' => array(
           'hide' => array(
-            'additional' => 0,
+            'additional' => 'additional',
             'city' => 0,
             'coords' => 'coords',
             'country' => 0,
             'country_name' => 0,
             'locpick' => 0,
             'map_link' => 'map_link',
-            'name' => 0,
+            'name' => 'name',
             'postal_code' => 0,
             'province' => 0,
             'province_name' => 0,

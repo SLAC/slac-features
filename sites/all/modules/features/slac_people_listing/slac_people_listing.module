@@ -5,3 +5,43 @@
  */
 
 include_once 'slac_people_listing.features.inc';
+
+/**
+ * Implements hook_views_pre_view().
+ */
+function slac_people_listing_views_pre_view(&$view, &$display_id, &$args) {
+  if ($view->name == 'profile_user_elements_extorg' && $display_id == 'panel_pane_4' && HIDE_MAX_LIST_ITEM) {
+    drupal_add_js(libraries_get_path('hideMaxListItem') . '/hideMaxListItem.js');
+    drupal_add_js(drupal_get_path('module', 'slac_profile') . '/js/slac_profile.js');
+  }
+}
+
+/**
+ * Implements hook_preprocess_field().
+ */
+function slac_people_listing_preprocess_field(&$variables) {
+  if($variables['element']['#field_name'] == 'field_prf_bio_pub'
+    || $variables['element']['#field_name'] == 'field_prf_bio_tp') {
+
+    if (!isset($variables['items'])) {
+      return;
+    }
+    $items = $variables['items'];
+    $item_values = array();
+    foreach (element_children($items) as $key) {
+      foreach ($items[$key]['entity']['field_collection_item'] as $field_info) {
+        if (isset($field_info['field_title_and_url'][0])) {
+          $item_values[$key]['link'] = drupal_render($field_info['field_title_and_url'][0]);
+        }
+        if (isset($field_info['field_title_and_url']['#items'][0]['url'])) {
+          $item_values[$key]['url'] = $field_info['field_title_and_url']['#items'][0]['url'];
+        }
+        if (isset($field_info['field_document_type']['#items'][0]['value'])) {
+          $item_values[$key]['doc_type'] = $field_info['field_document_type']['#items'][0]['value'];
+        }
+      }
+    }
+
+    $variables['field_info'] = $item_values;
+  }
+}

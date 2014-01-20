@@ -192,7 +192,7 @@ function slac_people_listing_default_page_manager_pages() {
     $pane->pid = 'new-3';
     $pane->panel = 'left';
     $pane->type = 'views_panes';
-    $pane->subtype = 'profile_user_elements_extorg_-panel_pane_4';
+    $pane->subtype = 'profile_user_elements_extorg-panel_pane_4';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -237,7 +237,7 @@ function slac_people_listing_default_page_manager_pages() {
     $pane->pid = 'new-5';
     $pane->panel = 'right';
     $pane->type = 'views_panes';
-    $pane->subtype = 'profile_user_elements_extorg_-panel_pane_1';
+    $pane->subtype = 'profile_user_elements_extorg-panel_pane_1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(

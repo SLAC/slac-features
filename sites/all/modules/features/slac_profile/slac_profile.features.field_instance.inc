@@ -686,7 +686,7 @@ function slac_profile_field_default_field_instances() {
     ),
     'entity_type' => 'profile2',
     'field_name' => 'field_prf_contact_location',
-    'label' => 'Office Adderss',
+    'label' => 'Office Address',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -1176,7 +1176,7 @@ function slac_profile_field_default_field_instances() {
   t('Honors and Awards');
   t('Last Name');
   t('LinkedIn');
-  t('Office Adderss');
+  t('Office Address');
   t('Phone');
   t('Photo');
   t('Professional Activities');
