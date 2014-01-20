@@ -25,6 +25,10 @@ $commands = array(
     'description' => 'Add "site owner" role to siteowner: ',
     'command' => 'drush user-add-role "site owner" siteowner'
   ),
+  array(
+    'description' => 'Clear all caches: ',
+    'command' => 'drush cc all'
+  ),
 );
 
 $command_output = array();
