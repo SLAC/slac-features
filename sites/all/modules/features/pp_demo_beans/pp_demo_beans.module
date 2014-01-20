@@ -115,13 +115,17 @@ function pp_demo_beans_preprocess_pp_demo_beans_block_with_brochures(&$vars) {
           if (isset($bb_item['field_brochure_image'][0]['#item']['field_file_image_title_text'][LANGUAGE_NONE][0]['value'])) {
             $image_title = $bb_item['field_brochure_image'][0]['#item']['field_file_image_title_text'][LANGUAGE_NONE][0]['value'];
           }
+          $url = '';
+          if (isset($bb_item['field_brochure_download_link']['#items'][0]['url'])) {
+            $url = $bb_item['field_brochure_download_link']['#items'][0]['url'];
+          }
           $brochure_items[] = array(
             'image' => drupal_render($bb_item['field_brochure_image'][0]),
             'image_alt' => $image_alt,
             'image_title' => $image_title,
             'title' => $bb_item['field_brochure_title'][0]['#markup'],
             'link' => drupal_render($bb_item['field_brochure_download_link'][0]),
-            'url' => $bb_item['field_brochure_download_link']['#items'][0]['url'],
+            'url' => $url,
           );
         }
       }
