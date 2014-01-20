@@ -138,7 +138,12 @@ function user_permission_features_rebuild($module) {
     // Write the updated permissions.
     foreach ($roles as $rid => $role) {
       if (isset($permissions_by_role[$role])) {
-        user_role_change_permissions($rid, $permissions_by_role[$role]);
+        try {
+          user_role_change_permissions($rid, $permissions_by_role[$role]);
+        }
+        catch (Exception $e) {
+          drupal_set_message($e->getMessage(), 'error', FALSE);
+        }
       }
     }
   }
