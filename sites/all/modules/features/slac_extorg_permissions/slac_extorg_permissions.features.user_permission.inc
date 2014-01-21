@@ -533,15 +533,6 @@ function slac_extorg_permissions_user_default_permissions() {
     'module' => 'panelizer',
   );
 
-  // Exported permission: administer panelizer node landing_page content.
-  $permissions['administer panelizer node landing_page content'] = array(
-    'name' => 'administer panelizer node landing_page content',
-    'roles' => array(
-      'site owner' => 'site owner',
-    ),
-    'module' => 'panelizer',
-  );
-
   // Exported permission: administer panelizer node landing_page context.
   $permissions['administer panelizer node landing_page context'] = array(
     'name' => 'administer panelizer node landing_page context',
