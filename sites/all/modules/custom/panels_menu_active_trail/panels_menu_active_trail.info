@@ -1,0 +1,6 @@
+name = "Panels menu active trail"
+description = "Provides the ability to set menu active trail."
+core = "7.x"
+package = "Panels"
+dependencies[] = "panels"
+dependencies[] = "page_manager"

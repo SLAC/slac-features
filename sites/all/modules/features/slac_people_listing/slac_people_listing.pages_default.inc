@@ -169,6 +169,7 @@ function slac_people_listing_default_page_manager_pages() {
     'css' => '',
     'contexts' => array(),
     'relationships' => array(),
+    'panels_menu_active_trail' => 'main-menu:1128',
   );
   $display = new panels_display();
   $display->layout = 'two_col_article';
