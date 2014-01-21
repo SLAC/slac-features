@@ -168,7 +168,8 @@ function _slac_people_simpleuser_install__create_profile($uid) {
   $profile_contact->field_prf_contact_photo[$lang][0] = array(
     'fid' => $file->fid
   );
-  $profile_contact->field_prf_contact_name[$lang][0]['value'] = 'John Doe';
+  $profile_contact->field_prf_contact_fname = array(LANGUAGE_NONE => array(array('value' => 'John')));
+  $profile_contact->field_prf_contact_lname = array(LANGUAGE_NONE => array(array('value' => 'Doe')));
   $profile_contact->field_prf_contact_title[$lang][0]['value'] = 'Senior Staff Scientist';
   $profile_contact->field_prf_contact_affiliation[$lang][0]['value'] = 'FACET';
   $profile_contact->field_prf_contact_rg[$lang][0]['value'] = 'Aliquam pulvinar magna in scelerisque tincidunt.';
