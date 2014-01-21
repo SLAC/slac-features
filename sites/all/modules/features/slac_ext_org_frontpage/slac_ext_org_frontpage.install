@@ -116,7 +116,7 @@ function _slac_ext_org_frontpage_install__panes($did) {
   $mission_fpp = (object) array(
     'title' => t('Mission and Vision'),
     'bundle' => 'slac_sidebar_block',
-    'field_body' => array(
+    'field_sb_body' => array(
       LANGUAGE_NONE => array(
         array(
           'value' => 'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc sed accumsan tellus. Suspendisse et dui vitae diam hendrerit adipiscing? Duis et ante urna. Suspendisse nisi ipsum, porttitor a hendrerit et; bibendum a sapien. Quisque at posuere nisi. In imperdiet sed. Vivamus laoreet eget metus a tincidunt. Morbi ac lorem sed turpis pulvinar gravida. Nunc porttitor arcu malesuada vestibulum pellentesque. Nulla hendrerit enim in blandit facilisis. Nulla porta ullamcorper odio non viverra? Morbi vestibulum sodales euismod!',
@@ -130,7 +130,7 @@ function _slac_ext_org_frontpage_install__panes($did) {
   $research_fpp = (object) array(
     'title' => t('Research Openings'),
     'bundle' => 'slac_sidebar_block',
-    'field_body' => array(
+    'field_sb_body' => array(
       LANGUAGE_NONE => array(
         array(
           'value' => '<p>PPA Leadership Openings</p><ul><li><a href="http://slac.stanford.edu/">Deputy ALD, KIPAC</a></li><li><a href="http://slac.stanford.edu/">Research Fellow - BaBar Collaboration</a></li></ul><p>PostDoc Fellowships</p><ul><li><a href="http://slac.stanford.edu/">Research Associate - Kavli Institute</a></li><li><a href="http://slac.stanford.edu/">Research Fellow - BaBar Collaboration</a></li></ul>',

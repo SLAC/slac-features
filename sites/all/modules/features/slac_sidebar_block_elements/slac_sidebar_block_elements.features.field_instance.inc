@@ -10,8 +10,8 @@
 function slac_sidebar_block_elements_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'fieldable_panels_pane-slac_sidebar_block-field_body'
-  $field_instances['fieldable_panels_pane-slac_sidebar_block-field_body'] = array(
+  // Exported field_instance: 'fieldable_panels_pane-slac_sidebar_block-field_sb_body'
+  $field_instances['fieldable_panels_pane-slac_sidebar_block-field_sb_body'] = array(
     'bundle' => 'slac_sidebar_block',
     'default_value' => NULL,
     'deleted' => 0,
@@ -26,7 +26,7 @@ function slac_sidebar_block_elements_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'fieldable_panels_pane',
-    'field_name' => 'field_body',
+    'field_name' => 'field_sb_body',
     'label' => 'Body',
     'required' => 0,
     'settings' => array(
@@ -44,8 +44,8 @@ function slac_sidebar_block_elements_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'fieldable_panels_pane-slac_sidebar_block-field_image'
-  $field_instances['fieldable_panels_pane-slac_sidebar_block-field_image'] = array(
+  // Exported field_instance: 'fieldable_panels_pane-slac_sidebar_block-field_sb_image'
+  $field_instances['fieldable_panels_pane-slac_sidebar_block-field_sb_image'] = array(
     'bundle' => 'slac_sidebar_block',
     'deleted' => 0,
     'description' => '',
@@ -62,7 +62,7 @@ function slac_sidebar_block_elements_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'fieldable_panels_pane',
-    'field_name' => 'field_image',
+    'field_name' => 'field_sb_image',
     'label' => 'Image',
     'required' => 0,
     'settings' => array(
