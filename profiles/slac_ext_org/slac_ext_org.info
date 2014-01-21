@@ -176,5 +176,5 @@ dependencies[] = slac_service_catalog
 ;dependencies[] = slac_service_catalog_demo
 dependencies[] = slac_service_help
 
-dependencies[] = panels_menu_active_trail
+dependencies[] = cami
 

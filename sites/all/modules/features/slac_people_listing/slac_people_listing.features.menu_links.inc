@@ -17,6 +17,9 @@ function slac_people_listing_menu_default_menu_links() {
     'router_path' => 'people/%',
     'link_title' => 'People',
     'options' => array(
+      'cami' => array(
+        'pages' => 'profile/*',
+      ),
       'attributes' => array(),
     ),
     'module' => 'menu',
