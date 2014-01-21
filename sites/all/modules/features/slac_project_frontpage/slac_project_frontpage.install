@@ -1,0 +1,373 @@
+<?php
+
+/**
+ * Implements hook_install().
+ */
+function slac_project_frontpage_install() {
+  $frontpage_node = (object) array(
+    'title' => t('Frontpage'),
+    'type' => 'landing_page',
+    'language' => 'und',
+    'name' => 'admin',
+    'uid' => 1,
+  );
+  node_save($frontpage_node);
+
+  $panels_display = _slac_project_frontpage_install__panels_display();
+
+  _slac_project_frontpage_install__panelizer_entity($frontpage_node, $panels_display['did']);
+
+  _slac_project_frontpage_install__panes($panels_display['did']);
+
+  variable_set('site_frontpage', 'node/' . $frontpage_node->nid);
+}
+
+/**
+ * Create panels display.
+ */
+function _slac_project_frontpage_install__panels_display() {
+  $panels_display = array(
+    'layout' => 'two_col_extorg',
+    'layout_settings' => array(),
+    'panel_settings' => array(
+      'style_settings' => array (
+        'default' => NULL,
+        'center' => NULL,
+        'left' => NULL,
+        'right' => NULL,
+      ),
+    ),
+  );
+  drupal_write_record('panels_display', $panels_display);
+  return $panels_display;
+}
+
+/**
+ * Create panelized entity.
+ */
+function _slac_project_frontpage_install__panelizer_entity($node, $did) {
+  $panelizer_entity = array(
+    'entity_type' => 'node',
+    'entity_id' => $node->nid,
+    'revision_id' => $node->vid,
+    'name' => NULL,
+    'no_blocks' => 0,
+    'css_id' => '',
+    'css' => '',
+    'pipeline' => 'ipe',
+    'context' => array(),
+    'relationships' => array(),
+    'did' => $did,
+    'view_mode' => 'page_manager',
+    'css_class' => '',
+    'title_element' => 'H2',
+    'link_to_entity' => 1,
+    'extra' => array(),
+  );
+  drupal_write_record('panelizer_entity', $panelizer_entity);
+  return $panelizer_entity;
+}
+
+/**
+ * Create panel panes.
+ */
+function _slac_project_frontpage_install__panes($did) {
+  $slideshow_files = _slac_project_frontpage_install__slideshow_images();
+
+  // Create host entity for field collection (frontpage slideshow).
+  $slideshow_fpp = (object) array(
+    'title' => t('Frontpage slideshow'),
+    'bundle' => 'slideshow_description_bottom',
+  );
+  entity_save('fieldable_panels_pane', $slideshow_fpp);
+
+  $field_collection_item = entity_create('field_collection_item', array('field_name' => 'field_slideshow_btmdesc_slide'));
+  $field_collection_item->field_fcollection_image = array(LANGUAGE_NONE => array(array('fid' => $slideshow_files[0]->fid)));
+  $field_collection_item->field_fcollection_link = array(LANGUAGE_NONE => array(array('url' => 'http://slac.stanford.edu')));
+  $field_collection_item->field_fcollection_description = array(LANGUAGE_NONE => array(array('value' => t('Description of the first slide. Duis autem vel eum. Duis autem vel eum. Duis autem vel eum. Duis autem vel eum.'))));
+  $field_collection_item->setHostEntity('fieldable_panels_pane', $slideshow_fpp);
+  entity_save('field_collection_item', $field_collection_item);
+
+  $field_collection_item = entity_create('field_collection_item', array('field_name' => 'field_slideshow_btmdesc_slide'));
+  $field_collection_item->field_fcollection_image = array(LANGUAGE_NONE => array(array('fid' => $slideshow_files[1]->fid)));
+  $field_collection_item->field_fcollection_link = array(LANGUAGE_NONE => array(array('url' => 'http://slac.stanford.edu')));
+  $field_collection_item->field_fcollection_description = array(LANGUAGE_NONE => array(array('value' => t('Description of the second slide. Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit.'))));
+  $field_collection_item->setHostEntity('fieldable_panels_pane', $slideshow_fpp);
+  entity_save('field_collection_item', $field_collection_item);
+
+  $projects_files = _slac_project_frontpage_install__projects_images();
+
+  // Create host entity for field collection (frontpage projects block).
+  $projects_fpp = (object) array(
+    'title' => t('Research Projects'),
+    'bundle' => 'slac_projects',
+  );
+  entity_save('fieldable_panels_pane', $projects_fpp);
+
+  for ($i = 0; $i <= 5; $i++) {
+    $field_collection_item = entity_create('field_collection_item', array('field_name' => 'field_project_info'));
+    $field_collection_item->field_project_info_image = array(LANGUAGE_NONE => array(array('fid' => $projects_files[$i]->fid)));
+    $field_collection_item->field_project_info_link = array(LANGUAGE_NONE => array(array('url' => 'http://slac.stanford.edu')));
+    $field_collection_item->field_project_info_name = array(LANGUAGE_NONE => array(array('value' => t('Project ') . ($i+1))));
+    $field_collection_item->setHostEntity('fieldable_panels_pane', $projects_fpp);
+    entity_save('field_collection_item', $field_collection_item);
+  }
+
+  $mission_fpp = (object) array(
+    'title' => t('Mission and Vision'),
+    'bundle' => 'slac_sidebar_block',
+    'field_sb_body' => array(
+      LANGUAGE_NONE => array(
+        array(
+          'value' => 'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc sed accumsan tellus. Suspendisse et dui vitae diam hendrerit adipiscing? Duis et ante urna. Suspendisse nisi ipsum, porttitor a hendrerit et; bibendum a sapien. Quisque at posuere nisi. In imperdiet sed. Vivamus laoreet eget metus a tincidunt. Morbi ac lorem sed turpis pulvinar gravida. Nunc porttitor arcu malesuada vestibulum pellentesque. Nulla hendrerit enim in blandit facilisis. Nulla porta ullamcorper odio non viverra? Morbi vestibulum sodales euismod!',
+          'format' => 'full_html',
+        )
+      )
+    ),
+  );
+  entity_save('fieldable_panels_pane', $mission_fpp);
+
+  $research_fpp = (object) array(
+    'title' => t('Research Openings'),
+    'bundle' => 'slac_sidebar_block',
+    'field_sb_body' => array(
+      LANGUAGE_NONE => array(
+        array(
+          'value' => '<p>PPA Leadership Openings</p><ul><li><a href="http://slac.stanford.edu/">Deputy ALD, KIPAC</a></li><li><a href="http://slac.stanford.edu/">Research Fellow - BaBar Collaboration</a></li></ul><p>PostDoc Fellowships</p><ul><li><a href="http://slac.stanford.edu/">Research Associate - Kavli Institute</a></li><li><a href="http://slac.stanford.edu/">Research Fellow - BaBar Collaboration</a></li></ul>',
+          'format' => 'full_html',
+        )
+      )
+    ),
+  );
+  entity_save('fieldable_panels_pane', $research_fpp);
+
+  $gallery_files = _slac_project_frontpage_install__gallery_images();
+
+  // Create host entity for field collection (frontpage Image gallery slideshow).
+  $gallery_fpp = (object) array(
+    'title' => t('Image Gallery'),
+    'bundle' => 'slac_mini_slideshow',
+  );
+  entity_save('fieldable_panels_pane', $gallery_fpp);
+
+  for ($i = 0; $i <= 2; $i++) {
+    $field_collection_item = entity_create('field_collection_item', array('field_name' => 'field_mini_slideshow_slide'));
+    $field_collection_item->field_fcollection_image = array(LANGUAGE_NONE => array(array('fid' => $gallery_files[$i]->fid)));
+    $field_collection_item->field_fcollection_link = array(LANGUAGE_NONE => array(array('url' => 'http://slac.stanford.edu')));
+    $field_collection_item->setHostEntity('fieldable_panels_pane', $gallery_fpp);
+    entity_save('field_collection_item', $field_collection_item);
+  }
+
+  $frontpage_panels_panes = array(
+    array(
+      'did' => $did,
+      'panel' => 'left',
+      'type' => 'fieldable_panels_pane',
+      'subtype' => 'uuid:' . $slideshow_fpp->uuid,
+      'shown' => 1,
+      'access' => array(),
+      'configuration' => array(),
+      'cache' => array(),
+      'style' => array(),
+      'css' => array(),
+      'extras' => array(),
+      'position' => 0,
+      'locks' => array(),
+    ),
+    array(
+      'did' => $did,
+      'panel' => 'left',
+      'type' => 'fieldable_panels_pane',
+      'subtype' => 'uuid:' . $projects_fpp->uuid,
+      'shown' => 1,
+      'access' => array(),
+      'configuration' => array(),
+      'cache' => array(),
+      'style' => array(),
+      'css' => array(),
+      'extras' => array(),
+      'position' => 0,
+      'locks' => array(),
+    ),
+    array(
+      'did' => $did,
+      'panel' => 'left_inner',
+      'type' => 'fieldable_panels_pane',
+      'subtype' => 'uuid:' . $mission_fpp->uuid,
+      'shown' => 1,
+      'access' => array(),
+      'configuration' => array(
+        'view_mode' => 'full',
+      ),
+      'cache' => array(),
+      'style' => array(),
+      'css' => array(),
+      'extras' => array(),
+      'position' => 2,
+      'locks' => array(),
+    ),
+    array(
+      'did' => $did,
+      'panel' => 'right_inner',
+      'type' => 'fieldable_panels_pane',
+      'subtype' => 'uuid:' . $gallery_fpp->uuid,
+      'shown' => 1,
+      'access' => array(),
+      'configuration' => array(
+        'view_mode' => 'full',
+      ),
+      'cache' => array(),
+      'style' => array(
+        'settings' => NULL,
+      ),
+      'css' => array(),
+      'extras' => array(),
+      'position' => 3,
+      'locks' => array(),
+    ),
+    array(
+      'did' => $did,
+      'panel' => 'right',
+      'type' => 'views_panes',
+      'subtype' => 'news-panel_pane_5',
+      'shown' => 1,
+      'access' => array(),
+      'configuration' => array(
+        'override_title' => 0,
+        'override_title_text' => '',
+      ),
+      'cache' => array(),
+      'style' => array(
+        'settings' => NULL,
+      ),
+      'css' => array(),
+      'extras' => array(),
+      'position' => 0,
+      'locks' => array(),
+    ),
+    array(
+      'did' => $did,
+      'panel' => 'right',
+      'type' => 'views_panes',
+      'subtype' => 'calendar-panel_pane_2',
+      'shown' => 1,
+      'access' => array(),
+      'configuration' => array(
+        'items_per_page' => 5,
+        'override_title' => 0,
+        'override_title_text' => '',
+      ),
+      'cache' => array(),
+      'style' => array(
+        'settings' => NULL,
+      ),
+      'css' => array(),
+      'extras' => array(),
+      'position' => 1,
+      'locks' => array(),
+    ),
+    array(
+      'did' => $did,
+      'panel' => 'right',
+      'type' => 'fieldable_panels_pane',
+      'subtype' => 'uuid:' . $research_fpp->uuid,
+      'shown' => 1,
+      'access' => array(),
+      'configuration' => array(
+        'view_mode' => 'full',
+      ),
+      'cache' => array(),
+      'style' => array(
+        'settings' => NULL,
+      ),
+      'css' => array(),
+      'extras' => array(),
+      'position' => 2,
+      'locks' => array(),
+    ),
+  );
+  foreach ($frontpage_panels_panes as $frontpage_panels_pane) {
+    drupal_write_record('panels_pane', $frontpage_panels_pane);
+  }
+}
+
+/**
+ * Create images for slideshow fpp.
+ */
+function _slac_project_frontpage_install__slideshow_images() {
+  global $user;
+  $files = array();
+  $destination_directory = 'public://frontpage_slideshow';
+  file_prepare_directory($destination_directory, FILE_CREATE_DIRECTORY);
+  foreach (array(1, 2) as $i) {
+    $filename =  'slideshow_slide' . $i . '.jpg';
+    $source = DRUPAL_ROOT . '/' . drupal_get_path('module', 'slac_project_frontpage') . '/' . $filename;
+    $destination = $destination_directory . '/' . $filename;
+    $uri = file_unmanaged_copy($source, $destination);
+
+    $file = new stdClass();
+    $file->fid = NULL;
+    $file->uri = $uri;
+    $file->filename = drupal_basename($uri);
+    $file->filemime = file_get_mimetype($file->uri);
+    $file->uid      = $user->uid;
+    $file->status   = FILE_STATUS_PERMANENT;
+    $files[] = file_save($file);
+  }
+
+  return $files;
+}
+
+/**
+ * Create images for projects fpp.
+ */
+function _slac_project_frontpage_install__projects_images() {
+  global $user;
+  $files = array();
+  $destination_directory = 'public://projects_block_images';
+  file_prepare_directory($destination_directory, FILE_CREATE_DIRECTORY);
+  foreach (array(1, 2, 3, 4, 5, 6) as $i) {
+    $filename =  'frontpage_project' . $i . '.jpg';
+    $source = DRUPAL_ROOT . '/' . drupal_get_path('module', 'slac_project_frontpage') . '/projects_block_images/' . $filename;
+    $destination = $destination_directory . '/' . $filename;
+    $uri = file_unmanaged_copy($source, $destination);
+
+    $file = new stdClass();
+    $file->fid = NULL;
+    $file->uri = $uri;
+    $file->filename = drupal_basename($uri);
+    $file->filemime = file_get_mimetype($file->uri);
+    $file->uid      = $user->uid;
+    $file->status   = FILE_STATUS_PERMANENT;
+    $files[] = file_save($file);
+  }
+
+  return $files;
+}
+
+/**
+ * Create images for image gallery fpp.
+ */
+function _slac_project_frontpage_install__gallery_images() {
+  global $user;
+  $files = array();
+  $destination_directory = 'public://image_gallery';
+  file_prepare_directory($destination_directory, FILE_CREATE_DIRECTORY);
+  foreach (array(1, 2, 3) as $i) {
+    $filename =  'slide' . $i . '.jpg';
+    $source = DRUPAL_ROOT . '/' . drupal_get_path('module', 'slac_project_frontpage') . '/image_gallery/' . $filename;
+    $destination = $destination_directory . '/' . $filename;
+    $uri = file_unmanaged_copy($source, $destination);
+
+    $file = new stdClass();
+    $file->fid = NULL;
+    $file->uri = $uri;
+    $file->filename = drupal_basename($uri);
+    $file->filemime = file_get_mimetype($file->uri);
+    $file->uid      = $user->uid;
+    $file->status   = FILE_STATUS_PERMANENT;
+    $files[] = file_save($file);
+  }
+
+  return $files;
+}
