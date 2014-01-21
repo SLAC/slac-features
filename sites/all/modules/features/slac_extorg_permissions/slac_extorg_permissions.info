@@ -107,7 +107,6 @@ features[user_permission][] = administer page manager
 features[user_permission][] = administer pane access
 features[user_permission][] = administer panelizer
 features[user_permission][] = administer panelizer node landing_page choice
-features[user_permission][] = administer panelizer node landing_page content
 features[user_permission][] = administer panelizer node landing_page context
 features[user_permission][] = administer panelizer node landing_page defaults
 features[user_permission][] = administer panelizer node landing_page layout
