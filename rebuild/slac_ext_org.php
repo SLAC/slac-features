@@ -26,6 +26,10 @@ $commands = array(
     'command' => 'drush user-add-role "site owner" siteowner'
   ),
   array(
+    'description' => 'Disable webauth module',
+    'command' => 'drush dis webauth -y'
+  ),
+  array(
     'description' => 'Clear all caches: ',
     'command' => 'drush cc all'
   ),

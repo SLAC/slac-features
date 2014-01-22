@@ -178,3 +178,6 @@ dependencies[] = slac_service_help
 
 dependencies[] = cami
 
+; Authentication
+dependencies[] = webauth
+dependencies[] = slac_webauth_settings

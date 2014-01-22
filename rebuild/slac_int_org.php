@@ -11,6 +11,10 @@ $commands = array(
     'description' => 'Install selected profile: ',
     'command' => 'drush si slac_int_org --db-url=mysql://slac_features:SwHbNJEZ6QRxrlU@localhost/slac_features --account-name=admin --account-pass=618hWVCDmY1n3uf --account-mail=admin@example.com --site-name=SLAC-INT-ORG-' . date(DATE_ATOM) . ' -y'
   ),
+  array(
+    'description' => 'Disable webauth module',
+    'command' => 'drush dis webauth -y'
+  ),
 );
 
 foreach ($commands as $command) {

@@ -121,3 +121,6 @@ dependencies[] = slac_profile_elements
 ;Configurations
 dependencies[] = slac_configurations
 
+; Authentication
+dependencies[] = webauth
+dependencies[] = slac_webauth_settings

@@ -95,3 +95,6 @@ dependencies[] = slac_social_media
 
 dependencies[] = slac_form_building
 
+; Authentication
+dependencies[] = webauth
+dependencies[] = slac_webauth_settings

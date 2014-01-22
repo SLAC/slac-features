@@ -147,3 +147,7 @@ dependencies[] = slac_service_help
 
 dependencies[] = slac_forum
 ;dependencies[] = slac_forum_demo
+
+; Authentication
+dependencies[] = webauth
+dependencies[] = slac_webauth_settings

@@ -1,0 +1,10 @@
+name = SLAC webauth settings
+core = 7.x
+package = Features
+dependencies[] = ctools
+dependencies[] = strongarm
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:2
+features[variable][] = webauth_allow_drupal_login
+features[variable][] = webauth_link_text
+features[variable][] = webauth_restrict_message
