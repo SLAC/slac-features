@@ -30,6 +30,10 @@ $commands = array(
     'command' => 'drush dis webauth -y'
   ),
   array(
+    'description' => 'Enable demo menu module to show dropdown of main menu',
+    'command' => 'drush en slac_menu_demo -y'
+  ),
+  array(
     'description' => 'Clear all caches: ',
     'command' => 'drush cc all'
   ),
