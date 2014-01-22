@@ -7,11 +7,19 @@
 include_once 'slac_demo_main_menu.features.inc';
 
 /**
- * Implements hook_enable().
+ * Implements hook_post_features_enable_feature().
  * 
  * Create page nodes menu links.
  */
-function slac_demo_main_menu_enable() {
+function slac_demo_main_menu_post_features_enable_feature() {
+  // Make sure we create all menu items once.
+  $flag = variable_get('slac_demo_main_menu_post_features_enable_feature', FALSE);
+  if ($flag) {
+    return;
+  }
+
+  variable_set('slac_demo_main_menu_post_features_enable_feature', TRUE);
+
   module_load_include('inc', 'slac_demo_main_menu', 'slac_demo_main_menu.features.uuid_node');
   $nodes = slac_demo_main_menu_uuid_features_default_content();
 
@@ -55,6 +63,7 @@ function _slac_demo_main_menu__create_link($title, $options = array()) {
     'link_title' => $title,
     'router_path' => 'node/%',
     'link_path' => 'node/' . $nid,
+    'customized' => 1,
   ) + $options;
   
   menu_link_save($link);
