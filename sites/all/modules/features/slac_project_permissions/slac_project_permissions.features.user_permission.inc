@@ -943,16 +943,6 @@ function slac_project_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: create slac_news content.
-  $permissions['create slac_news content'] = array(
-    'name' => 'create slac_news content',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'site owner' => 'site owner',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: create slac_sc_catalog_item content.
   $permissions['create slac_sc_catalog_item content'] = array(
     'name' => 'create slac_sc_catalog_item content',
@@ -1115,16 +1105,6 @@ function slac_project_permissions_user_default_permissions() {
   // Exported permission: delete any slac_faq content.
   $permissions['delete any slac_faq content'] = array(
     'name' => 'delete any slac_faq content',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'site owner' => 'site owner',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: delete any slac_news content.
-  $permissions['delete any slac_news content'] = array(
-    'name' => 'delete any slac_news content',
     'roles' => array(
       'administrator' => 'administrator',
       'site owner' => 'site owner',
@@ -1297,15 +1277,6 @@ function slac_project_permissions_user_default_permissions() {
     'name' => 'delete own slac_faq content',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: delete own slac_news content.
-  $permissions['delete own slac_news content'] = array(
-    'name' => 'delete own slac_news content',
-    'roles' => array(
       'site owner' => 'site owner',
     ),
     'module' => 'node',
@@ -1626,16 +1597,6 @@ function slac_project_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: edit any slac_news content.
-  $permissions['edit any slac_news content'] = array(
-    'name' => 'edit any slac_news content',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'site owner' => 'site owner',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: edit any slac_sc_catalog_item content.
   $permissions['edit any slac_sc_catalog_item content'] = array(
     'name' => 'edit any slac_sc_catalog_item content',
@@ -1861,16 +1822,6 @@ function slac_project_permissions_user_default_permissions() {
   // Exported permission: edit own slac_faq content.
   $permissions['edit own slac_faq content'] = array(
     'name' => 'edit own slac_faq content',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'site owner' => 'site owner',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: edit own slac_news content.
-  $permissions['edit own slac_news content'] = array(
-    'name' => 'edit own slac_news content',
     'roles' => array(
       'administrator' => 'administrator',
       'site owner' => 'site owner',
