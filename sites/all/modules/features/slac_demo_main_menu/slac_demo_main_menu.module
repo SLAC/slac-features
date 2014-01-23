@@ -17,6 +17,8 @@ function slac_demo_main_menu_post_features_enable_feature() {
   if ($flag) {
     return;
   }
+  // Collect all paths in order to regenerate url aliases.
+  $paths = array();
 
   variable_set('slac_demo_main_menu_post_features_enable_feature', TRUE);
 
@@ -26,21 +28,21 @@ function slac_demo_main_menu_post_features_enable_feature() {
   // Create top leve node
   $node_top = current($nodes);
   
-  $top_link = _slac_demo_main_menu__create_link($node_top['title'], array('weight' => 3));
+  $top_link = _slac_demo_main_menu__create_link($node_top['title'], array('weight' => 3), $paths);
 
   // Create two second level nodes.
   $node = next($nodes);
   $second_link = _slac_demo_main_menu__create_link($node['title'], array(
     'depth' => 2,
     'plid' => $top_link['mlid'],
-    'p1' => $top_link['mlid']));
+    'p1' => $top_link['mlid']), $paths);
 
   $node = next($nodes);
   $second_link = _slac_demo_main_menu__create_link($node['title'], array(
     'depth' => 2,
     'plid' => $top_link['mlid'],
     'p1' => $top_link['mlid']
-  ));
+  ), $paths);
 
   while ($node = next($nodes)) {
     $link = _slac_demo_main_menu__create_link($node['title'], array(
@@ -48,16 +50,27 @@ function slac_demo_main_menu_post_features_enable_feature() {
       'plid' => $second_link['mlid'],
       'p1' => $top_link['mlid'],
       'p2' => $second_link['mlid']
-    ));
+    ), $paths);
   }
+
+  foreach ($paths as $path) {
+    path_delete(array('source' => $path));
+    
+    $nid = substr($path, strlen('node/'));
+    $node = node_load($nid);
+    pathauto_create_alias('node', 'bulk_update', $path, array('node' => $node));
+  }
+  
 }
 
 function _slac_demo_main_menu__load_page_by_title($title) {
   return db_query('SELECT nid FROM {node} WHERE type = :type AND title = :title', array(':type' => 'page', ':title' => $title))->fetchField();
 }
 
-function _slac_demo_main_menu__create_link($title, $options = array()) {
+function _slac_demo_main_menu__create_link($title, $options = array(), &$paths) {
   $nid = _slac_demo_main_menu__load_page_by_title($title);
+
+  $paths[] = 'node/' . $nid;
   $link = array(
     'menu_name' => 'main-menu',
     'link_title' => $title,
