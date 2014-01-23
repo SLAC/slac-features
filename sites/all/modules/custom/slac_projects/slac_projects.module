@@ -62,6 +62,9 @@ function slac_projects_preprocess_slac_projects_block(&$vars) {
       if (isset($project_info['field_project_info_image'][0])) {
         $item_values[$key]['image'] = drupal_render($project_info['field_project_info_image'][0]);
       }
+      if (isset($project_info['field_project_info_description'][0])) {
+        $item_values[$key]['description'] = drupal_render($project_info['field_project_info_description'][0]);
+      }
       if (isset($project_info['field_project_info_link']['#items'][0]['url'])) {
         $item_values[$key]['link'] = $project_info['field_project_info_link']['#items'][0]['url'];
       }

@@ -10,6 +10,40 @@
 function slac_projects_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'field_collection_item-field_project_info-field_project_info_description'
+  $field_instances['field_collection_item-field_project_info-field_project_info_description'] = array(
+    'bundle' => 'field_project_info',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 3,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_project_info_description',
+    'label' => 'Description',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 1,
+    ),
+  );
+
   // Exported field_instance: 'field_collection_item-field_project_info-field_project_info_image'
   $field_instances['field_collection_item-field_project_info-field_project_info_image'] = array(
     'bundle' => 'field_project_info',
@@ -159,7 +193,7 @@ function slac_projects_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 1,
+      'weight' => 0,
     ),
   );
 
@@ -202,6 +236,7 @@ function slac_projects_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Description');
   t('Image');
   t('Link');
   t('Project info');
