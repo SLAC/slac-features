@@ -58,7 +58,8 @@ function slac_demo_main_menu_post_features_enable_feature() {
     
     $nid = substr($path, strlen('node/'));
     $node = node_load($nid);
-    pathauto_create_alias('node', 'bulk_update', $path, array('node' => $node));
+    module_load_include('inc', 'pathauto');
+    pathauto_create_alias('node', 'bulk_update', $path, array('node' => $node), 'page');
   }
   
 }
