@@ -109,6 +109,7 @@ function _slac_ext_org_frontpage_install__panes($did) {
     $field_collection_item->field_project_info_image = array(LANGUAGE_NONE => array(array('fid' => $projects_files[$i]->fid)));
     $field_collection_item->field_project_info_link = array(LANGUAGE_NONE => array(array('url' => 'http://slac.stanford.edu')));
     $field_collection_item->field_project_info_name = array(LANGUAGE_NONE => array(array('value' => t('Project ') . ($i+1))));
+    $field_collection_item->field_project_info_description = array(LANGUAGE_NONE => array(array('value' => 'Stet clita kasd gubergren, no sea takimata sanctus est. Lorem ipsum dolor sit amet, consetetur sadipscing elitr. ' . ($i+1))));
     $field_collection_item->setHostEntity('fieldable_panels_pane', $projects_fpp);
     entity_save('field_collection_item', $field_collection_item);
   }
