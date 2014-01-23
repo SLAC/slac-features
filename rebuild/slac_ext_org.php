@@ -48,5 +48,5 @@ print 'Site has been rebuilt';
 print '<pre>' . implode("\n", $command_output) . '</pre>';
 
 $time_end = microtime(true);
-$execution_time = $time_end - $time_start;
+$execution_time = round($time_end - $time_start);
 print '<br/>Execution time: ' . $execution_time;
