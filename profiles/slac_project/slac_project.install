@@ -22,7 +22,6 @@ function slac_project_install_task_demo_content() {
   $demo_modules = module_invoke_all('demo_modules');
   $modules = array_merge(
     array(
-      'slac_service_catalog_pages',
       'slac_admin_modules',
       'slac_project_frontpage',
       'slac_ext_org_blog',

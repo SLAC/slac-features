@@ -166,10 +166,6 @@ dependencies[] = slac_faq
 ;dependencies[] = slac_news
 ;dependencies[] = slac_news_demo
 
-dependencies[] = slac_service_catalog
-;dependencies[] = slac_service_catalog_demo
-dependencies[] = slac_service_help
-
 dependencies[] = cami
 
 ; Authentication
