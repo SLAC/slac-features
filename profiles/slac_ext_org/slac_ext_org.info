@@ -96,7 +96,9 @@ dependencies[] = bean
 dependencies[] = bean_wysiwyg
 dependencies[] = pp_demo_beans
 
-
+; Pages
+dependencies[] = menu_block
+dependencies[] = slac_page
 
 ;Blog
 dependencies[] = blog

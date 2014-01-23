@@ -43,7 +43,7 @@ function slac_demo_main_menu_post_features_enable_feature() {
   ));
 
   while ($node = next($nodes)) {
-    $second_link = _slac_demo_main_menu__create_link($node['title'], array(
+    $link = _slac_demo_main_menu__create_link($node['title'], array(
       'depth' => 3,
       'plid' => $second_link['mlid'],
       'p1' => $top_link['mlid'],
