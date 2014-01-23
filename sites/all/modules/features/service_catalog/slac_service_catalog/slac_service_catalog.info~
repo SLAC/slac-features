@@ -10,7 +10,6 @@ dependencies[] = features
 dependencies[] = image
 dependencies[] = menu
 dependencies[] = panels
-dependencies[] = slac_event
 dependencies[] = taxonomy
 dependencies[] = views_content
 dependencies[] = views_responsive_grid

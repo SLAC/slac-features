@@ -228,27 +228,6 @@ function _slac_project_frontpage_install__panes($did) {
     array(
       'did' => $did,
       'panel' => 'right',
-      'type' => 'views_panes',
-      'subtype' => 'calendar-panel_pane_2',
-      'shown' => 1,
-      'access' => array(),
-      'configuration' => array(
-        'items_per_page' => 5,
-        'override_title' => 0,
-        'override_title_text' => '',
-      ),
-      'cache' => array(),
-      'style' => array(
-        'settings' => NULL,
-      ),
-      'css' => array(),
-      'extras' => array(),
-      'position' => 1,
-      'locks' => array(),
-    ),
-    array(
-      'did' => $did,
-      'panel' => 'right',
       'type' => 'fieldable_panels_pane',
       'subtype' => 'uuid:' . $research_fpp->uuid,
       'shown' => 1,
