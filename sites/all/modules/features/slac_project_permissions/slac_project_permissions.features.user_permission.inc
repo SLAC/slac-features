@@ -904,16 +904,6 @@ function slac_project_permissions_user_default_permissions() {
     'module' => 'file_entity',
   );
 
-  // Exported permission: create kb_article content.
-  $permissions['create kb_article content'] = array(
-    'name' => 'create kb_article content',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'site owner' => 'site owner',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: create landing_page content.
   $permissions['create landing_page content'] = array(
     'name' => 'create landing_page content',
@@ -1070,16 +1060,6 @@ function slac_project_permissions_user_default_permissions() {
       'site owner' => 'site owner',
     ),
     'module' => 'file_entity',
-  );
-
-  // Exported permission: delete any kb_article content.
-  $permissions['delete any kb_article content'] = array(
-    'name' => 'delete any kb_article content',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'site owner' => 'site owner',
-    ),
-    'module' => 'node',
   );
 
   // Exported permission: delete any landing_page content.
@@ -1240,16 +1220,6 @@ function slac_project_permissions_user_default_permissions() {
       'site owner' => 'site owner',
     ),
     'module' => 'file_entity',
-  );
-
-  // Exported permission: delete own kb_article content.
-  $permissions['delete own kb_article content'] = array(
-    'name' => 'delete own kb_article content',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'site owner' => 'site owner',
-    ),
-    'module' => 'node',
   );
 
   // Exported permission: delete own landing_page content.
@@ -1557,16 +1527,6 @@ function slac_project_permissions_user_default_permissions() {
     'module' => 'file_entity',
   );
 
-  // Exported permission: edit any kb_article content.
-  $permissions['edit any kb_article content'] = array(
-    'name' => 'edit any kb_article content',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'site owner' => 'site owner',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: edit any landing_page content.
   $permissions['edit any landing_page content'] = array(
     'name' => 'edit any landing_page content',
@@ -1787,16 +1747,6 @@ function slac_project_permissions_user_default_permissions() {
       'site owner' => 'site owner',
     ),
     'module' => 'file_entity',
-  );
-
-  // Exported permission: edit own kb_article content.
-  $permissions['edit own kb_article content'] = array(
-    'name' => 'edit own kb_article content',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'site owner' => 'site owner',
-    ),
-    'module' => 'node',
   );
 
   // Exported permission: edit own landing_page content.

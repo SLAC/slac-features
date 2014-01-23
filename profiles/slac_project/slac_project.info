@@ -163,9 +163,6 @@ dependencies[] = slac_blog
 dependencies[] = slac_faq
 ;dependencies[] = slac_faq_demo
 
-dependencies[] = slac_kb_article
-;dependencies[] = slac_kb_demo
-
 ;dependencies[] = slac_news
 ;dependencies[] = slac_news_demo
 
