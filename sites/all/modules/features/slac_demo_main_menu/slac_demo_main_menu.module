@@ -79,6 +79,7 @@ function _slac_demo_main_menu__create_link($title, $options = array(), &$paths) 
     'router_path' => 'node/%',
     'link_path' => 'node/' . $nid,
     'customized' => 1,
+    'module' => 'menu',
   ) + $options;
   
   menu_link_save($link);
