@@ -53,7 +53,7 @@ function slac_demo_main_menu_post_features_enable_feature() {
     ), $paths);
   }
 
-  menu_cache_clear('main-menu');
+  menu_cache_clear();
   foreach ($paths as $path) {
     path_delete(array('source' => $path));
     

@@ -1,6 +1,7 @@
-name = SLAC demo main menu
+name = SLAC Demo Main menu
 core = 7.x
-package = Features
+package = SLAC Demo
+description = Demo pages that have links in main menu to show several levels of navigation
 dependencies[] = node
 dependencies[] = text
 __drupal_alter_by_ref[][node][page] = page
