@@ -1,0 +1,8 @@
+<?php
+
+/**
+ * Implements hook_uninstall().
+ */
+function slac_demo_main_menu_uninstall() {
+  variable_del('slac_demo_main_menu_post_features_enable_feature');
+}
