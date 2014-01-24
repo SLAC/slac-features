@@ -295,6 +295,11 @@ ul.tabs, .action-links,
   padding: 8px 0
   text-transform: uppercase   
   
++at-breakpoint($small-desktop)
+  .main-menu
+    padding: 8px 0 0
+  
+  
 .sf-accordion-toggle
   span
     display: none
@@ -326,6 +331,16 @@ ul.tabs, .action-links,
     display: none
   .sf-main-menu.sf-horizontal
     display: block !important 
+    > li.menuparent
+      position: relative
+      > ul
+        background-color: $bg-col-1
+        padding: 10px 0 5px
+        position: absolute
+        top: 100%
+        left: 0
+        > li
+          margin: 0 0 5px 0 
 
 ul.sf-menu.sf-accordion 
   display: none
@@ -430,6 +445,23 @@ ul.sf-menu.sf-accordion.sf-expanded
             &.active-trail, &.active
               color: $red
               border-bottom: 0 none               
+
+
+        &.sf-main-menu.sf-horizontal
+          > li.menuparent
+            > ul
+              width: 100% !important
+              > li
+                width: 100%
+                border: 0 none
+                background-color: $bg-col-1
+                a
+                  display: block
+                  padding: 0 5px
+                &:hover
+                  background-color: transparent
+                 
+
 
 +at-breakpoint($small-desktop)
   .main-menu             
