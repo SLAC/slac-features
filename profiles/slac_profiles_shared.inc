@@ -208,17 +208,6 @@ function slac_profiles_shared_filtered_format() {
     ->fields(array('uid' => 1, 'rid' => $admin_role->rid))
     ->execute();
 
-  // Create a Home link in the main menu.
-  $item = array(
-    'link_title' => st('Home'),
-    'link_path' => '<front>',
-    'menu_name' => 'main-menu',
-  );
-  menu_link_save($item);
-
-  // Update the menu router information.
-  menu_rebuild();
-
   // Enable the admin theme.
   db_update('system')
     ->fields(array('status' => 1))
