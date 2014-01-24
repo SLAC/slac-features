@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * Implements hook_views_plugins_alter().
+ */
+function views_feed_pane_views_plugins_alter(&$plugins) {
+  $plugins['display']['feed']['handler'] = 'views_plugin_display_feed_pane';
+  $plugins['display']['feed']['path'] = drupal_get_path('module', 'views_attachment_pane') . '/plugins';
+  $plugins['display']['feed']['file'] = 'views_plugin_display_feed_pane.inc';
+}
+
+/**
+ * Implementation of hook_ctools_plugin_dierctory() to let the system know
+ * where our content_type plugins are.
+ */
+function views_feed_pane_ctools_plugin_directory($owner, $plugin_type) {
+  if ($owner == 'ctools') {
+    return 'plugins/' . $plugin_type;
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function views_feed_pane_theme() {
+  return array(
+    'feed_pane_icon' => array(
+      'variables' => array('url' => NULL, 'image' => 'misc/feed.png'),
+    ),
+  );
+}
+
+function theme_feed_pane_icon($variables) {
+  $image = theme('image', array('path' => $variables['image']));
+  return l($image, $variables['url'], array('html' => TRUE));
+}

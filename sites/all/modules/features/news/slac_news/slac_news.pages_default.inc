@@ -252,6 +252,8 @@ function slac_news_default_page_manager_pages() {
   $page->access = array(
     'logic' => 'and',
     'plugins' => array(),
+    'type' => 'none',
+    'settings' => NULL,
   );
   $page->menu = array();
   $page->arguments = array(

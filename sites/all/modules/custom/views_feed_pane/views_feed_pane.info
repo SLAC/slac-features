@@ -1,0 +1,7 @@
+name = Views feed pane
+description = Provides possibility to display links to views feed displays.
+core = 7.x
+package = Views
+dependencies[] = views
+dependencies[] = ctools
+files[] = plugins/views_plugin_display_feed_pane.inc

@@ -335,6 +335,7 @@ function slac_news_views_default_views() {
     'panel_pane_6' => 0,
   );
   $handler->display->display_options['sitename_title'] = 0;
+  $handler->display->display_options['pane'] = TRUE;
 
   /* Display: Featured News */
   $handler = $view->new_display('panel_pane', 'Featured News', 'panel_pane_3');
