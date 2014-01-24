@@ -81,7 +81,7 @@ a[href*='mailto:'] {
   .views-field-field-prf-bio-tp:after, .views-responsive-grid.views-columns-2 .views-row:after, .event-listing-item:after, .blog-tags ul:after, .connect-with-me .views-row:after, ul.blog-archive-class > li ul:after, div .color-box:after, .icons:after {
     clear: both; }
 
-.slac-font, .mobile-block .main-menu ul li a:after, .mob-icon:before, .user-icons a:before, .share-block-wrapper a:before, .social-icon-block > div a:after, .footer-seccond ul li a:after, .event-calendar-page .pager li a:before, .calendar-page .view-header ul li.first a:after, .calendar-page .view-header ul li.first a:before, .calendar-page .view-header ul li.last a:after, .calendar-page .view-header ul li.last a:before, article.node-blog.node-teaser header h2 a:after, .profile-info-brief .views-more-link:after, .profile-info-full .profile-maxlist-more a:before, .more-link-template a:after, .last-three-news .more-link a:after, .event-calendar-block .more-link a:after, .event-block a.icon:after, .add-to-calendar a:before, .connect-with-me .views-row > div a:after, .pane-bundle-slideshow-description-bottom .field-slideshow-controls a:after, .pane-bundle-slac-mini-slideshow .field-slideshow-controls a:after {
+.slac-font, .mobile-block .main-menu ul li a:after, .sf-accordion-toggle a:before, .sf-accordion a.sf-with-ul:after, .sf-accordion li.sf-expanded a.sf-with-ul:after, .mob-icon:before, .user-icons a:before, .share-block-wrapper a:before, .social-icon-block > div a:after, .footer-seccond ul li a:after, .event-calendar-page .pager li a:before, .calendar-page .view-header ul li.first a:after, .calendar-page .view-header ul li.first a:before, .calendar-page .view-header ul li.last a:after, .calendar-page .view-header ul li.last a:before, article.node-blog.node-teaser header h2 a:after, .profile-info-brief .views-more-link:after, .profile-info-full .profile-maxlist-more a:before, .more-link-template a:after, .last-three-news .more-link a:after, .event-calendar-block .more-link a:after, .event-block a.icon:after, .add-to-calendar a:before, .connect-with-me .views-row > div a:after, .pane-bundle-slideshow-description-bottom .field-slideshow-controls a:after, .pane-bundle-slac-mini-slideshow .field-slideshow-controls a:after {
   font-family: "slac";
   font-weight: normal;
   font-style: normal;
@@ -393,8 +393,7 @@ html {
       clear: both; }
   .page-basic > .content .reverse .general-left {
     margin-top: 25px; }
-.page-basic > .header-menu,
-.page-basic > .main-menu {
+.page-basic > .header-menu {
   display: none; }
 
 @media (min-width: 690px) {
@@ -539,50 +538,135 @@ ul.tabs, .action-links {
         .mobile-block .header-menu ul li a:hover {
           color: #871628; }
 
+.main-menu {
+  background-color: #ebebdf;
+  padding: 8px 0;
+  text-transform: uppercase; }
+
+.sf-accordion-toggle span {
+  display: none; }
+.sf-accordion-toggle a {
+  background-color: transparent;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  padding: 1px 6px;
+  display: inline-block; }
+  .sf-accordion-toggle a:hover {
+    -webkit-box-shadow: 0px 0px 1px 1px #871628;
+    -moz-box-shadow: 0px 0px 1px 1px #871628;
+    box-shadow: 0px 0px 1px 1px #871628; }
+  .sf-accordion-toggle a:before {
+    content: "\e611";
+    color: #871628;
+    font-size: 25px;
+    font-size: 1.5625rem;
+    position: relative;
+    display: inline-block; }
+  .sf-accordion-toggle a.sf-expanded {
+    background-color: #871628;
+    -webkit-box-shadow: 0px 0px 1px 1px #871628;
+    -moz-box-shadow: 0px 0px 1px 1px #871628;
+    box-shadow: 0px 0px 1px 1px #871628; }
+    .sf-accordion-toggle a.sf-expanded:before {
+      color: white; }
+
 @media (min-width: 690px) {
-  .main-menu {
-    background-color: #ebebdf;
-    padding: 8px 0 0px;
-    text-transform: uppercase; }
-    .main-menu ul {
-      *zoom: 1; }
-      .main-menu ul:before, .main-menu ul:after {
-        content: "";
-        display: table; }
-      .main-menu ul:after {
-        clear: both; }
-      .main-menu ul li {
-        float: left;
-        margin: 0 25px;
-        font-size: 0.875em; }
-        .main-menu ul li:first-child {
-          margin-left: 0; }
-        .main-menu ul li:last-child {
-          margin-right: 0 !important; }
-        .main-menu ul li a {
-          display: block;
-          padding: 0 10px;
-          padding-bottom: 3px; }
-          .main-menu ul li a.active-trail, .main-menu ul li a.active {
-            color: #871628;
-            border-bottom: 2px solid #871628; } }
+  .sf-accordion-toggle {
+    display: none; }
+
+  .sf-main-menu.sf-horizontal {
+    display: block !important; } }
+ul.sf-menu.sf-accordion {
+  display: none;
+  position: absolute; }
+
+ul.sf-menu.sf-accordion,
+ul.sf-menu.sf-accordion ul,
+ul.sf-menu.sf-accordion li {
+  float: left;
+  width: 100%; }
+
+ul.sf-menu.sf-accordion ul {
+  margin: 0;
+  padding: 0; }
+
+ul.sf-menu.sf-accordion.sf-expanded,
+ul.sf-menu.sf-accordion li.sf-expanded > ul {
+  left: auto !important;
+  position: relative;
+  top: auto !important; }
+
+.sf-hidden {
+  left: -99999em !important;
+  top: -99999em !important;
+  position: absolute; }
+
+.sf-accordion a.sf-with-ul:after {
+  content: "\e62c";
+  margin-left: 5px;
+  font-size: 14px;
+  font-size: 0.875rem; }
+.sf-accordion li.sf-expanded a.sf-with-ul:after {
+  content: "\e62d"; }
+
+ul.sf-menu.sf-accordion.sf-expanded {
+  padding: 15px 0 5px; }
+  ul.sf-menu.sf-accordion.sf-expanded li {
+    margin-bottom: 5px; }
+  ul.sf-menu.sf-accordion.sf-expanded > li > ul {
+    padding-left: 10px;
+    padding-top: 5px;
+    font-size: 14px;
+    font-size: 0.875rem; }
+    ul.sf-menu.sf-accordion.sf-expanded > li > ul a:after {
+      display: none; }
+
+@media (min-width: 690px) {
+  ul.sf-menu.sf-accordion {
+    display: none !important; }
+
+  .main-menu ul {
+    *zoom: 1; }
+    .main-menu ul:before, .main-menu ul:after {
+      content: "";
+      display: table; }
+    .main-menu ul:after {
+      clear: both; }
+    .main-menu ul li {
+      float: left;
+      margin: 0 25px;
+      font-size: 0.875em; }
+      .main-menu ul li:first-child {
+        margin-left: 0; }
+      .main-menu ul li:last-child {
+        margin-right: 0 !important; }
+      .main-menu ul li a {
+        display: block;
+        padding: 0 10px;
+        padding-bottom: 3px; }
+        .main-menu ul li a.active-trail, .main-menu ul li a.active {
+          color: #871628;
+          border-bottom: 2px solid #871628; } }
 @media (min-width: 691px) and (max-width: 893px) {
   .main-menu.long-menu {
     background-color: transparent; }
-    .main-menu.long-menu .pane-system-main-menu > ul > li {
+    .main-menu.long-menu ul > li {
       width: 25%;
       margin: 0;
       text-align: center;
       border-bottom: 1px solid white;
       border-right: 1px solid white;
       background-color: #ebebdf; }
-      .main-menu.long-menu .pane-system-main-menu > ul > li:hover {
+      .main-menu.long-menu ul > li:hover {
         background-color: #f3f1eb; }
-      .main-menu.long-menu .pane-system-main-menu > ul > li:nth-child(4n+4) {
+      .main-menu.long-menu ul > li:nth-child(4n+4) {
         border-right: 0; }
-      .main-menu.long-menu .pane-system-main-menu > ul > li > a {
+      .main-menu.long-menu ul > li > a {
         padding: 5px 0; }
-        .main-menu.long-menu .pane-system-main-menu > ul > li > a.active-trail, .main-menu.long-menu .pane-system-main-menu > ul > li > a.active {
+        .main-menu.long-menu ul > li > a.active-trail, .main-menu.long-menu ul > li > a.active {
           color: #871628;
           border-bottom: 0 none; } }
 @media (min-width: 894px) {
@@ -708,7 +792,8 @@ ul.tabs, .action-links {
     left: 0;
     line-height: 1; }
   .mob-icon.menu-icon, .user-icons a.menu-icon, .share-block-wrapper a.menu-icon {
-    margin-left: 0; }
+    margin-left: 0;
+    display: none; }
     .mob-icon.menu-icon:before, .user-icons a.menu-icon:before, .share-block-wrapper a.menu-icon:before {
       content: "\e611";
       font-size: 25px;
@@ -1145,7 +1230,7 @@ ul.tabs, .action-links {
   margin-bottom: 5px; }
 
 .feed-icon {
-  /*display: none;*/ }
+  display: none; }
 
 .front .pane-page-content .general-left .panel-pane {
   margin-bottom: 36px; }

@@ -111,8 +111,7 @@ html
         //margin-top: 0
   
   
-  > .header-menu, 
-  > .main-menu
+  > .header-menu
     display: none
     
 +at-breakpoint($tablet)
@@ -289,15 +288,107 @@ ul.tabs, .action-links,
           text-decoration: none
           &:hover
             color: $red
-           
-           
+            
+            
+.main-menu           
+  background-color: $menu_bg
+  padding: 8px 0
+  text-transform: uppercase   
+  
+.sf-accordion-toggle
+  span
+    display: none
+  a
+    background-color: transparent
+    +border-radius(3px)
+    padding: 1px 6px
+    display: inline-block
+        
+    &:hover
+      +box-shadow(0px 0px 1px 1px $red)
+        
+    &:before
+      content: '\e611'
+      color: $red
+      @extend .slac-font
+      +fontsize-rem(25px)
+      position: relative
+      display: inline-block
+      
+    &.sf-expanded
+      background-color:  $red
+      +box-shadow(0px 0px 1px 1px $red)
+      &:before
+        color: #fff
+        
++at-breakpoint($tablet)
+  .sf-accordion-toggle
+    display: none
+  .sf-main-menu.sf-horizontal
+    display: block !important 
 
+ul.sf-menu.sf-accordion 
+  display: none
+  position: absolute    
+    
+ul.sf-menu.sf-accordion,
+ul.sf-menu.sf-accordion ul,
+ul.sf-menu.sf-accordion li 
+  float: left
+  width: 100%
+
+ul.sf-menu.sf-accordion ul 
+  margin: 0
+  padding: 0
+
+ul.sf-menu.sf-accordion.sf-expanded,
+ul.sf-menu.sf-accordion li.sf-expanded > ul 
+  left: auto !important
+  position: relative
+  top: auto !important
+  
+
+.sf-hidden
+  left: -99999em !important
+  top: -99999em !important    
+  position: absolute
+  
+
+a.sf-with-ul
+  .sf-accordion &
+    &:after
+      content: '\e62c'
+      @extend .slac-font
+      margin-left: 5px
+      +fontsize-rem(14px)
+  
+  li.sf-expanded &
+    .sf-accordion &
+      &:after
+        content: '\e62d'
+        @extend .slac-font
+
+
+
+ul.sf-menu.sf-accordion.sf-expanded
+  padding: 15px 0 5px
+  
+  li
+    margin-bottom: 5px
+  > li
+    > ul
+      padding-left: 10px
+      padding-top: 5px
+      +fontsize-rem(14px)
+      a
+        &:after
+          display: none
 
 +at-breakpoint($tablet)
+  ul.sf-menu.sf-accordion
+    display: none !important
+
   .main-menu
-    background-color: $menu_bg
-    padding: 8px 0 0px
-    text-transform: uppercase
     ul
       +clearfix
       li
@@ -320,26 +411,25 @@ ul.tabs, .action-links,
   .main-menu
     &.long-menu
       background-color: transparent
-      .pane-system-main-menu
-        > ul
-          > li 
-            width: 25%
-            margin: 0
-            text-align: center
-            border-bottom: 1px solid #fff
-            border-right: 1px solid #fff
-            background-color: $menu_bg
-            &:hover
-              background-color: $bg-col-1
-            &:nth-child(4n+4)
-              border-right: 0
-            > a
-              padding: 5px 0
-              
-              
-              &.active-trail, &.active
-                color: $red
-                border-bottom: 0 none               
+      ul
+        > li 
+          width: 25%
+          margin: 0
+          text-align: center
+          border-bottom: 1px solid #fff
+          border-right: 1px solid #fff
+          background-color: $menu_bg
+          &:hover
+            background-color: $bg-col-1
+          &:nth-child(4n+4)
+            border-right: 0
+          > a
+            padding: 5px 0
+            
+            
+            &.active-trail, &.active
+              color: $red
+              border-bottom: 0 none               
 
 +at-breakpoint($small-desktop)
   .main-menu             
@@ -468,6 +558,7 @@ ul.tabs, .action-links,
   
   &.menu-icon 
     margin-left: 0
+    display: none
     &:before 
       content: '\e611'
       +fontsize-rem(25px) 
@@ -2438,3 +2529,4 @@ ol.search-results
         +span-columns(3,12)
         +nth-omega(4n)
         
+
