@@ -6,7 +6,6 @@ dependencies[] = features
 dependencies[] = image
 dependencies[] = menu
 dependencies[] = page_manager
-dependencies[] = slac_faq
 dependencies[] = slac_profile
 dependencies[] = views
 dependencies[] = views_content
