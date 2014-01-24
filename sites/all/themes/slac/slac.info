@@ -59,7 +59,4 @@ settings[zen_html5_respond_meta][] = html5
 settings[zen_html5_respond_meta][] = meta
 settings[zen_rebuild_registry]     = 0
 settings[zen_wireframes]           = 0
-
-
-;settings[shortcut_module_link]    = 1
-
+settings[site_logo_path]           = images/stanford_logo.jpg

@@ -1,33 +1,68 @@
 <?php
 /**
  * Implements hook_form_system_theme_settings_alter().
- *
- * @param $form
- *   Nested array of form elements that comprise the form.
- * @param $form_state
- *   A keyed array containing the current state of the form.
  */
-function STARTERKIT_form_system_theme_settings_alter(&$form, &$form_state, $form_id = NULL)  {
+function slac_form_system_theme_settings_alter(&$form, &$form_state, $form_id = NULL)  {
   // Work-around for a core bug affecting admin themes. See issue #943212.
   if (isset($form_id)) {
     return;
   }
+  $key = substr($form['var']['#value'], strlen('theme_'), strlen($form['var']['#value']) - strlen('theme_') - strlen('_settings'));
 
-  // Create the form using Forms API: http://api.drupal.org/api/7
-
-  /* -- Delete this line if you want to use this setting
-  $form['STARTERKIT_example'] = array(
-    '#type'          => 'checkbox',
-    '#title'         => t('STARTERKIT sample setting'),
-    '#default_value' => theme_get_setting('STARTERKIT_example'),
-    '#description'   => t("This option doesn't do anything; it's just an example."),
+  $form['site_logo'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Sites (department) logo'),
   );
-  // */
+  $form['site_logo']['site_logo_path'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Path to site logo'),
+    '#default_value' => theme_get_setting('site_logo_path', $key),
+  );
 
-  // Remove some of the base theme's settings.
-  /* -- Delete this line if you want to turn off this setting.
-  unset($form['themedev']['zen_wireframes']); // We don't need to toggle wireframes on this site.
-  // */
+  $form['site_logo']['site_logo_upload'] = array(
+    '#type' => 'file',
+    '#title' => t('Upload site logo'),
+    '#default_value' => theme_get_setting('site_logo_upload', $key),
+  );
 
-  // We are editing the $form in place, so we don't need to return anything.
+  $form['#validate'][] = 'slac_form_system_theme_settings_validate';
+  $form['#submit'][] = 'slac_form_system_theme_settings_submit';
+}
+
+/**
+ * Custom validate handler.
+ */
+function slac_form_system_theme_settings_validate($form, &$form_state) {
+  // Handle file uploads.
+  $validators = array('file_validate_is_image' => array());
+
+  // Check for a new uploaded logo.
+  $file = file_save_upload('site_logo_upload', $validators);
+  if (isset($file)) {
+    // File upload was attempted.
+    if ($file) {
+      // Put the temporary file in form_values so we can save it on submit.
+      $form_state['values']['site_logo_upload'] = $file;
+    }
+    else {
+      // File upload failed.
+      form_set_error('site_logo_upload', t('The logo could not be uploaded.'));
+    }
+  }
+}
+
+/**
+ * Submit handler for theme settings.
+ */
+function slac_form_system_theme_settings_submit($form, &$form_state) {
+  // Exclude unnecessary elements before saving.
+  form_state_values_clean($form_state);
+
+  $values = &$form_state['values'];
+
+  if ($file = $values['site_logo_upload']) {
+    unset($values['site_logo_upload']);
+    $filename = file_unmanaged_copy($file->uri);
+    $values['site_logo_path'] = $filename;
+  }
 }
