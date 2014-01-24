@@ -898,6 +898,7 @@ function slac_event_views_default_views() {
     'panel_pane_2' => 0,
   );
   $handler->display->display_options['sitename_title'] = 0;
+  $handler->display->display_options['pane'] = TRUE;
   $export['events'] = $view;
 
   $view = new view();
