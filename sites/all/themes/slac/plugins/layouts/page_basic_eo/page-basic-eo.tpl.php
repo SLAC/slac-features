@@ -21,7 +21,7 @@
       <div class="clearfix header-wrapper">
         <div class="logo-container">
           <div class="panel-pane pane-page-logo">
-            <a href="/" rel="home" id="logo" title="Home"><img src="/sites/all/themes/slac/logo.svg" class="svg" alt="SLAC"/><img src="/sites/all/themes/slac/logo.png" alt="SLAC"/></a>
+            <a href="http://slac.stanford.edu" rel="home" id="logo" title="Home"><img src="/sites/all/themes/slac/logo.svg" class="svg" alt="SLAC"/><img src="/sites/all/themes/slac/logo.png" alt="SLAC"/></a>
           </div>             
         </div>
      <?php if ($content['user-search']): ?>
