@@ -34,7 +34,10 @@ function slac_form_system_theme_settings_alter(&$form, &$form_state, $form_id = 
  */
 function slac_form_system_theme_settings_validate($form, &$form_state) {
   // Handle file uploads.
-  $validators = array('file_validate_is_image' => array());
+  $validators = array(
+    'file_validate_is_image' => array(),
+    'file_validate_image_resolution' => array('52x280'),
+  );
 
   // Check for a new uploaded logo.
   $file = file_save_upload('site_logo_upload', $validators);
