@@ -158,6 +158,7 @@ function slac_blog_views_default_views() {
     'block_3' => 0,
   );
   $handler->display->display_options['sitename_title'] = 0;
+  $handler->display->display_options['pane'] = TRUE;
 
   /* Display: User Blog Page */
   $handler = $view->new_display('page', 'User Blog Page', 'page_1');

@@ -112,6 +112,23 @@ function _slac_ext_org_blog_install__panes($did) {
     array(
       'did' => $did,
       'panel' => 'left',
+      'type' => 'views_feed_pane',
+      'subtype' => 'blog_page:feed_1',
+      'shown' => 1,
+      'access' => array(),
+      'configuration' => array(),
+      'cache' => array(),
+      'style' => array(
+        'settings' => NULL,
+      ),
+      'css' => array(),
+      'extras' => array(),
+      'position' => 0,
+      'locks' => array(),
+    ),
+    array(
+      'did' => $did,
+      'panel' => 'left',
       'type' => 'views',
       'subtype' => 'blog_page',
       'shown' => 1,
@@ -138,7 +155,7 @@ function _slac_ext_org_blog_install__panes($did) {
       ),
       'css' => array(),
       'extras' => array(),
-      'position' => 0,
+      'position' => 2,
       'locks' => array(),
     ),
     array(
