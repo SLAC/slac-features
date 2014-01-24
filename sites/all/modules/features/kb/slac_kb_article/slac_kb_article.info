@@ -3,7 +3,6 @@ core = 7.x
 package = SLAC
 php = 5.2.4
 dependencies[] = mediafield
-dependencies[] = slac_faq
 dependencies[] = slac_sidebar_block_elements
 features[ctools][] = page_manager:pages_default:1
 features[ctools][] = strongarm:strongarm:1
