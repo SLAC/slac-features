@@ -534,7 +534,7 @@ function default_site_template_eo_default_page_manager_handlers() {
     $pane->panel = 'site-title';
     $pane->type = 'site_logo';
     $pane->subtype = 'site_logo';
-    $pane->shown = TRUE;
+    $pane->shown = FALSE;
     $pane->access = array();
     $pane->configuration = array();
     $pane->cache = array();
