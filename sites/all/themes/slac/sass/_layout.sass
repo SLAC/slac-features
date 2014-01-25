@@ -993,21 +993,37 @@ ul.tabs, .action-links,
 
 //Main heading style
 h2
+
   &.pane-title, &.panel-title  
+  
+    .pane-menu-tree &
+      .general-left &, .general-left-title &, .general-title &
+        .pane-page-content & 
+          border-bottom: 0 none  
+          color: $red
+          +fontsize-rem(22px)
+          font-weight: normal
+          padding-bottom: 5px
+  
+  
     i 
       text-transform: capitalize
     .general-left &, .general-left-title &, .general-title &
+    
       .pane-page-content &  
         border-bottom: 3px solid $bg-col-1
-        padding-bottom: 5px       
-
+        padding-bottom: 5px   
+        
+ 
+        
         .front &
           color: $h2-color
           border-bottom: 6px solid $border-h2
           font-size: inherit
           margin-bottom: 23px
           padding-bottom: 3px
-        
+    
+ 
 
     .general-right &
       .pane-page-content & 
@@ -2375,3 +2391,23 @@ ol.search-results
         +nth-omega(4n)
         
 
+.pane-menu-tree
+  > div
+    background-color: $grey-f5
+    > ul.menu
+      +fontsize-rem(14px)
+      color: $red
+
+      > li 
+        > ul
+
+          li
+            
+            a 
+              padding-left: 28px
+      a
+        padding: 5px 14px 
+        color: inherit
+        display: block
+        &:hover
+          background-color: #dfdfdf
