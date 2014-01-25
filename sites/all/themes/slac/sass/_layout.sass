@@ -1637,12 +1637,22 @@ table.sticky-table
     top: 0
     left: 0
     width: 100%
-    background-color: rgba(0, 0, 0, 0.3)
+    background-color: rgba(0, 0, 0, 0.45)
     color: #fff
     text-transform: uppercase
     font-weight: bold
     padding: 9px
     
+  .project-description  
+    position: absolute
+    display: none
+    +fontsize-rem(14px)
+    color: #fff
+    top: 35px
+    left: 0
+    padding: 9px
+    a
+      color: inherit
     
   .project-image
     position: static
@@ -1652,6 +1662,28 @@ table.sticky-table
   .project-block-wrapper
     position: relative
     margin-bottom: 2em
+    overflow: hidden 
+    &:after
+      background-color: rgba(0, 0, 0, 0.6)
+      width: 100%
+      height: 100%
+      position: absolute
+      content: ''
+      top: 0
+      left: 0
+      display: none
+    &:hover
+      &:after
+        display: block
+      .project-description
+        display: inline
+        
+      .project-title a, .project-description
+        z-index: 10
+        
+      .project-title a
+        background-color: transparent
+      
       
 +at-breakpoint(321px)  
   .projects-blocks-wrapper
