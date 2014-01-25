@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the SLAC Search Settings feature.
+ */
+
+include_once 'slac_search_settings.features.inc';
