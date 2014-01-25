@@ -231,7 +231,7 @@ function default_site_template_eo_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'superfish_slide_1';
-  $strongarm->value = 'easeInElastic_vertical';
+  $strongarm->value = 'vertical';
   $export['superfish_slide_1'] = $strongarm;
 
   $strongarm = new stdClass();
