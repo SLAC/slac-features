@@ -1,0 +1,260 @@
+.main-menu           
+  background-color: $menu_bg
+  padding: 8px 0
+  text-transform: uppercase   
+  
++at-breakpoint($small-desktop)
+  .main-menu
+    padding: 8px 0 0
+
+.sf-accordion-toggle
+  span
+    display: none
+  a
+    background-color: transparent
+    +border-radius(3px)
+    padding: 1px 6px
+    display: inline-block
+        
+    &:hover
+      +box-shadow(0px 0px 1px 1px $red)
+        
+    &:before
+      content: '\e611'
+      color: $red
+      @extend .slac-font
+      +fontsize-rem(25px)
+      position: relative
+      display: inline-block
+      
+    &.sf-expanded
+      background-color:  $red
+      +box-shadow(0px 0px 1px 1px $red)
+      &:before
+        color: #fff
+
++at-breakpoint($tablet)
+  .sf-accordion-toggle
+    display: none
+  .sf-main-menu.sf-horizontal
+    display: block !important 
+    > li.menuparent
+      position: relative
+      > ul
+        background-color: $menu_bg
+        border-style: solid
+        padding: 10px 0 5px
+        position: absolute
+        top: 100%
+        left: 0
+        z-index: 100
+
+        &.sf-hidden
+          height: 100% !important
+          opacity: 1 !important
+          display: none !important    
+          
+        > li
+          margin: 0 0 5px 0 
+      > a
+        position: relative
+      
+    .sf-sub-indicator
+      text-indent: 999px
+      display: inline-block
+      overflow: hidden
+      position: absolute
+      top: 7px
+  
+      width: 10px
+      height: 10px 
+
+
+      &:after
+        content: '\e61c'
+        +slac-font
+        +fontsize-rem(14px)
+        display: inline-block  
+        position: absolute
+        top: 0
+        left: 0
+        line-height: 1
+
+        
+    
+
+ul.sf-menu.sf-accordion 
+  display: none
+  position: absolute    
+    
+ul.sf-menu.sf-accordion,
+ul.sf-menu.sf-accordion ul,
+ul.sf-menu.sf-accordion li 
+  float: left
+  width: 100%
+
+ul.sf-menu.sf-accordion ul 
+  margin: 0
+  padding: 0
+
+ul.sf-menu.sf-accordion.sf-expanded,
+ul.sf-menu.sf-accordion li.sf-expanded > ul 
+  left: auto !important
+  position: relative
+  top: auto !important
+  
+
+.sf-hidden
+  left: -99999em !important
+  top: -99999em !important    
+  position: absolute
+  
+
+a.sf-with-ul
+  .sf-accordion &
+    &:after
+      content: '\e61c'
+      @extend .slac-font
+      margin-left: 5px
+      +fontsize-rem(16px)
+      position: absolute
+      top: 1px
+      right: -20px
+  
+  li.sf-expanded &
+    .sf-accordion &
+      &:after
+        content: '\e61d'
+        @extend .slac-font
+
+
+
+ul.sf-menu.sf-accordion.sf-expanded
+  padding: 15px 0 5px 21px
+  text-transform: none 
+  color: $red
+  
+  a
+    &.active-trail,
+    &.active
+      text-decoration: underline
+  
+  
+  li
+    margin-bottom: 16px
+    a
+      color: inherit
+      position: relative
+    &.active-trail
+      > a
+        text-decoration: underline
+
+  > li
+    &.menuparent
+      margin-bottom: 14px  
+    > ul
+      +clearfix
+      padding-left: 15px
+      padding-top: 5px
+      +fontsize-rem(14px)
+      > li
+        margin-bottom: 6px
+      a
+        
+        &:after
+          display: none
+
++at-breakpoint($tablet)
+  ul.sf-menu.sf-accordion
+    display: none !important
+
+  .main-menu
+    ul
+      +clearfix
+      li
+        float: left
+        margin: 0 25px 
+        font-size: em(14px)
+        &:first-child
+          margin-left: 0
+        &:last-child
+          margin-right: 0 !important
+        a
+          display: block
+          //padding: 0 10px
+          padding-bottom: 3px
+          &.active-trail, &.active
+            color: $red
+            border-bottom: 2px solid $red
+
++at-breakpoint($only-tablet)
+  .main-menu
+    &.long-menu
+      background-color: transparent
+      ul
+        > li 
+          width: 25%
+          margin: 0
+          text-align: center
+          border-bottom: 1px solid #fff
+          border-right: 1px solid #fff
+          background-color: $menu_bg
+          &:hover
+            background-color: $bg-col-1
+          &:nth-child(4n+4)
+            border-right: 0
+          > a
+            padding: 5px 0
+            
+            
+            &.active-trail, &.active
+              color: $red
+              border-bottom: 0 none               
+
+
+        &.sf-main-menu.sf-horizontal
+          > li.menuparent
+            > ul
+              
+              width: 100% !important
+              > li
+                width: 100%
+                border: 0 none
+                background: transparent
+                a
+                  display: block
+                  padding: 0 5px
+                &:hover
+                  background-color: transparent
+          .sfHover
+            background-color: $bg-col-1
+            > ul
+              background-color: $bg-col-1
+
+
++at-breakpoint($small-desktop)
+  .sf-main-menu.sf-horizontal 
+    > li.menuparent 
+      > ul
+        padding: 10px 10px 0px 10px
+        left: -10px
+        +box-sizing(content-box)
+      &.active-trail 
+        > a
+          color: $red
+          border-bottom: 2px solid $red
+        
+    &.long-menu
+      ul
+        li 
+          margin: 0 25px
+     
+    .sf-sub-indicator
+      top: 2px
+     
++at-breakpoint($large-desktop)   
+  .main-menu
+    &.long-menu
+      ul
+        li 
+          margin: 0 25px  
