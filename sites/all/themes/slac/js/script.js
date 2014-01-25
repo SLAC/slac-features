@@ -48,7 +48,7 @@
       
       
       $('.header > .inside', context).once('header-inside', function () {
-       $(this).append('<div class="mobile-main-menu mobile-block" style="display: none"></div>');
+       //$(this).append('<div class="mobile-main-menu mobile-block" style="display: none"></div>');
        if($('.user-search .pane-search-form')[0]) {
           $(this).append('<div class="mobile-search-form mobile-block" style="display: none"></div>');
        }
@@ -67,11 +67,11 @@
         //$icons_wrapper_a = $icons_wrapper.find('a'),
         //$close_menu;
 
-      $mobile_wrapper.once('mobile-menu-wrapper', function () {
-        $(this).empty();
-        $(this).append($cloned_main_menu);
-        $(this).append($cloned_header_menu);
-      });
+      //$mobile_wrapper.once('mobile-menu-wrapper', function () {
+        //$(this).empty();
+        //$(this).append($cloned_main_menu);
+        //$(this).append($cloned_header_menu);
+      //});
 
       $mobile_wrapper_search.once('mobile-menu-search', function () {
         $(this).empty();

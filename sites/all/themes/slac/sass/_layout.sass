@@ -334,13 +334,47 @@ ul.tabs, .action-links,
     > li.menuparent
       position: relative
       > ul
-        background-color: $bg-col-1
+        background-color: $menu_bg
+        border-style: solid
         padding: 10px 0 5px
         position: absolute
         top: 100%
         left: 0
+        z-index: 100
+
+        &.sf-hidden
+          height: 100% !important
+          opacity: 1 !important
+          display: none !important    
+          
         > li
           margin: 0 0 5px 0 
+      > a
+        position: relative
+      
+    .sf-sub-indicator
+      text-indent: 999px
+      display: inline-block
+      overflow: hidden
+      position: absolute
+      top: 7px
+  
+      width: 10px
+      height: 10px 
+
+
+      &:after
+        content: '\e61c'
+        +slac-font
+        +fontsize-rem(14px)
+        display: inline-block  
+        position: absolute
+        top: 0
+        left: 0
+        line-height: 1
+
+        
+    
 
 ul.sf-menu.sf-accordion 
   display: none
@@ -372,30 +406,54 @@ ul.sf-menu.sf-accordion li.sf-expanded > ul
 a.sf-with-ul
   .sf-accordion &
     &:after
-      content: '\e62c'
+      content: '\e61c'
       @extend .slac-font
       margin-left: 5px
-      +fontsize-rem(14px)
+      +fontsize-rem(16px)
+      position: absolute
+      top: 1px
+      right: -20px
   
   li.sf-expanded &
     .sf-accordion &
       &:after
-        content: '\e62d'
+        content: '\e61d'
         @extend .slac-font
 
 
 
 ul.sf-menu.sf-accordion.sf-expanded
-  padding: 15px 0 5px
+  padding: 15px 0 5px 21px
+  text-transform: none 
+  color: $red
+  
+  a
+    &.active-trail,
+    &.active
+      text-decoration: underline
+  
   
   li
-    margin-bottom: 5px
+    margin-bottom: 16px
+    a
+      color: inherit
+      position: relative
+    &.active-trail
+      > a
+        text-decoration: underline
+
   > li
+    &.menuparent
+      margin-bottom: 14px  
     > ul
-      padding-left: 10px
+      +clearfix
+      padding-left: 15px
       padding-top: 5px
       +fontsize-rem(14px)
+      > li
+        margin-bottom: 6px
       a
+        
         &:after
           display: none
 
@@ -408,7 +466,7 @@ ul.sf-menu.sf-accordion.sf-expanded
       +clearfix
       li
         float: left
-        margin: 0 25px
+        margin: 0 25px 
         font-size: em(14px)
         &:first-child
           margin-left: 0
@@ -416,7 +474,7 @@ ul.sf-menu.sf-accordion.sf-expanded
           margin-right: 0 !important
         a
           display: block
-          padding: 0 10px
+          //padding: 0 10px
           padding-bottom: 3px
           &.active-trail, &.active
             color: $red
@@ -450,25 +508,40 @@ ul.sf-menu.sf-accordion.sf-expanded
         &.sf-main-menu.sf-horizontal
           > li.menuparent
             > ul
+              
               width: 100% !important
               > li
                 width: 100%
                 border: 0 none
-                background-color: $bg-col-1
+                background: transparent
                 a
                   display: block
                   padding: 0 5px
                 &:hover
                   background-color: transparent
-                 
+          .sfHover
+            background-color: $bg-col-1
+            > ul
+              background-color: $bg-col-1
 
 
 +at-breakpoint($small-desktop)
-  .main-menu             
+  .sf-main-menu.sf-horizontal 
+    > li.menuparent 
+      > ul
+        padding: 10px
+        left: -10px
+      &.active-trail 
+        > a
+          border-bottom: 2px solid
+        
     &.long-menu
       ul
         li 
-          margin: 0 12px
+          margin: 0 25px
+     
+    .sf-sub-indicator
+      top: 2px
      
 +at-breakpoint($large-desktop)   
   .main-menu
