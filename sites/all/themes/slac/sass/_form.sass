@@ -10,7 +10,7 @@
   +fontsize-rem(13px)
 
 form
-  &#user-profile-form, &#user-login, &#user-register-form, &#user-pass, &#slac-configuration-form
+  &#user-profile-form, &#user-login, &#user-register-form, &#user-pass, &#slac-configuration-form, &.webform-client-form
     background-color: $form-bg
     border: 3px solid $form-bdr
     padding: 10px
@@ -48,7 +48,7 @@ form
 
 +at-breakpoint($tablet)
   form
-    &#user-profile-form, &#user-login, &#user-register-form, &#user-pass,  &#slac-configuration-form
+    &#user-profile-form, &#user-login, &#user-register-form, &#user-pass,  &#slac-configuration-form,  &.webform-client-form
       padding: 26px 38px 26px 38px
       
 
@@ -80,7 +80,7 @@ input[type='submit'], .button
 
     
     
-input[type='text'], input[type='password'], select, textarea
+input[type='text'], input[type='password'], select, textarea, input[type='email'], input[type='number']
   margin: 0
   border: 1px solid #c3c3c3
   border-bottom-color: $grey-d
