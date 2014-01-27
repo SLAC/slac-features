@@ -226,7 +226,7 @@ function slac_menu_link(array $variables) {
 function slac_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id == 'search_block_form') {
 
-    $form['search_block_form']['#attributes']['placeholder'] = t('Search SLAC');
+    $form['search_block_form']['#attributes']['placeholder'] = t('search SLAC');
     $form['actions']['submit']['#value'] = t('GO'); // Change the text on the submit button
 
   }
