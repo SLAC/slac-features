@@ -61,7 +61,28 @@ form
   &.form-type-password-confirm
     .icon-ask  
       top: 55px
-    
+
+.webform-grid
+  .form-item
+    margin-bottom: 0 !important
+
+
+.webform-container-inline 
+  .form-item
+    display: inline-block !important
+    width: auto
+  
+.webform-component-managed_file
+  input[type='file']
+    margin-bottom: 10px
+
+.webform-component-radios, .webform-component-checkboxes
+  .form-radios, .form-checkboxes
+    margin-top: 10px
+  .form-item
+    margin-bottom: 15px !important
+    label
+      display: inline
       
 input[type='submit'], .button
   border: 1px solid #cecece
@@ -172,9 +193,6 @@ form.node-blog-form
     
     
 +at-breakpoint($tablet)
-
-
-
 
   form.node-blog-form
     div.vertical-tabs

@@ -2939,6 +2939,23 @@ form label {
   .wrapped-with-icon.form-type-password-confirm .icon-ask {
     top: 55px; }
 
+.webform-grid .form-item {
+  margin-bottom: 0 !important; }
+
+.webform-container-inline .form-item {
+  display: inline-block !important;
+  width: auto; }
+
+.webform-component-managed_file input[type='file'] {
+  margin-bottom: 10px; }
+
+.webform-component-radios .form-radios, .webform-component-radios .form-checkboxes, .webform-component-checkboxes .form-radios, .webform-component-checkboxes .form-checkboxes {
+  margin-top: 10px; }
+.webform-component-radios .form-item, .webform-component-checkboxes .form-item {
+  margin-bottom: 15px !important; }
+  .webform-component-radios .form-item label, .webform-component-checkboxes .form-item label {
+    display: inline; }
+
 input[type='submit'], .button {
   border: 1px solid #cecece;
   background-color: #e4e4e4;
