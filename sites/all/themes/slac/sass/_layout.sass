@@ -2399,6 +2399,24 @@ ol.search-results
       color: $red
 
       > li 
+        &.is-expanded, &.is-collapsed
+          > a 
+            &:after   
+              @extend .slac-font
+              color: $grey-7
+              display: inline
+              vertical-align: middle    
+            
+        &.is-expanded
+          > a 
+            &:after
+              content: '\e61c'
+              
+        &.is-collapsed
+          > a 
+            &:after
+              content: '\e61e'
+      
         > ul
 
           li
