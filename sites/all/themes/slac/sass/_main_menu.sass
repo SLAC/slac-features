@@ -172,6 +172,10 @@ ul.sf-menu.sf-accordion.sf-expanded
     ul
       +clearfix
       li
+        &.active-trail
+          > a 
+            color: $red
+            border-bottom: 2px solid $red       
         float: left
         margin: 0 25px 
         font-size: em(14px)
@@ -186,6 +190,9 @@ ul.sf-menu.sf-accordion.sf-expanded
           &.active-trail, &.active
             color: $red
             border-bottom: 2px solid $red
+
+
+
 
 +at-breakpoint($only-tablet)
   .main-menu

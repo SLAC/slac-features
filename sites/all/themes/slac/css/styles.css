@@ -451,6 +451,9 @@ ul.sf-menu.sf-accordion.sf-expanded {
       float: left;
       margin: 0 25px;
       font-size: 0.875em; }
+      .main-menu ul li.active-trail > a {
+        color: #871628;
+        border-bottom: 2px solid #871628; }
       .main-menu ul li:first-child {
         margin-left: 0; }
       .main-menu ul li:last-child {
