@@ -26,7 +26,7 @@ $plugin = array(
  */
 function slac_site_variables_site_name_abbreviation_content_type_render($subtype, $conf, $panel_args) {
   $block = new stdClass();
-  $block->content = filter_xss_admin(variable_get('site_name_abbreviation', ''));
+  $block->content = '<a href="' . url('<front>') . '">' . filter_xss_admin(variable_get('site_name_abbreviation', '')) . '</a>';
 
   return $block;
 }
