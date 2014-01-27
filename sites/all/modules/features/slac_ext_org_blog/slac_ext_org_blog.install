@@ -111,7 +111,7 @@ function _slac_ext_org_blog_install__panes($did) {
     ),
     array(
       'did' => $did,
-      'panel' => 'left',
+      'panel' => 'social_media_1',
       'type' => 'views_feed_pane',
       'subtype' => 'blog_page:feed_1',
       'shown' => 1,

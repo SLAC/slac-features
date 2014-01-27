@@ -232,7 +232,7 @@ function _slac_news_pages_install__panes($did, $options) {
   if (isset($options['feed_pane'])) {
     $panels_panes[] = array(
       'did' => $did,
-      'panel' => 'left',
+      'panel' => 'social_media_1',
       'type' => 'views_feed_pane',
       'subtype' => 'news:feed_1',
       'shown' => 1,
