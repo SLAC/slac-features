@@ -17,7 +17,17 @@
 <div class="panel-display general-two-col reverse article_panel_layout" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
   <?php if ($content['left_title']): ?>
     <div class="panel-panel general-left-title">
-      <div class="inside"><?php print $content['left_title']; ?></div>
+      <div class="inside">
+      <?php if(!$content['social_media']) { print $content['left_title'];} 
+          else { ?>
+          <div class="left-title-wrapper">
+            <?php print $content['left_title'];?>
+          <div class="social-media-content">
+            <?php print $content['social_media']; ?>
+          </div>
+          </div> 
+        <?php } ?>      
+      </div>
     </div>
   <?php endif ?>
   <div class="panel-panel general-left ">
