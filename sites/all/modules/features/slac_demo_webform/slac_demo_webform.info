@@ -1,0 +1,4 @@
+name = SLAC Demo Webform
+core = 7.x
+package = SLAC
+dependencies[] = webform
