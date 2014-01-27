@@ -418,15 +418,15 @@ function default_site_template_eo_default_panels_mini() {
       'admin_title' => 'Social icons',
       'title' => '',
       'body' => '<div class="social-icon-block">
-	<div class="social-icon-facebook"><a href="http://www.facebook.com/" onclick="window.location = \'http://www.facebook.com/sharer/sharer.php?u=\' + encodeURIComponent(window.location); return false">Facebook</a></div>
+	<div class="social-icon-facebook"><a href="http://facebook.com/SLAC.National.Lab">Facebook</a></div>
 
-	<div class="social-icon-twitter"><a href="http://www.twitter.com/" onclick="window.location = \'http://www.twitter.com/intent/tweet?source=\' + encodeURIComponent(window.location) + \'&amp;text=\' +  encodeURIComponent(window.location); return false">Twitter</a></div>
+	<div class="social-icon-twitter"><a href="http://twitter.com//slaclab">Twitter</a></div>
 
-	<div class="social-icon-delicious"><a href="http://delicious.com/" onclick="window.location = \'http://www.delicious.com/save?url=\' + encodeURIComponent(window.location); return false">Delicious</a></div>
+	<div class="social-icon-delicious"><a href="http://delicious.com/">Delicious</a></div>
 
-	<div class="social-icon-googleplus"><a href="http://plus.google.com/" onclick="window.location = \'http://www.reddit.com/submit?url=\' + encodeURIComponent(window.location); return false">Google+</a></div>
+	<div class="social-icon-googleplus"><a href="https://plus.google.com/+SLAC/">Google+</a></div>
 
-	<div class="social-icon-youtube"><a href="http://youtube.com/" onclick="window.location = \'http://www.reddit.com/submit?url=\' + encodeURIComponent(window.location); return false">Youtube</a></div>
+	<div class="social-icon-youtube"><a href="http://youtube.com/slac/">Youtube</a></div>
 </div>
 ',
       'format' => 'full_html',
