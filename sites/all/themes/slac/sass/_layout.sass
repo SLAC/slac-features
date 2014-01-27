@@ -279,7 +279,7 @@ ul.tabs, .action-links,
       &:before
         display: none
 
-.pane-search-form
+.pane-slac-search-redirect, .pane-search-form
   display: none
 
   .mobile-search-form &
@@ -314,7 +314,8 @@ ul.tabs, .action-links,
       +box-shadow(0px 0px 0px 1px #a1a1a1 inset, 0px 0px 0px 0px #000)   
         
 +at-breakpoint($tablet)  
-  .pane-search-form
+  //.pane-search-form
+  .pane-slac-search-redirect, .pane-search-form
     display: none
     .user-search &
       .external-organisation &
