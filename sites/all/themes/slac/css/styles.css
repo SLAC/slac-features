@@ -292,7 +292,7 @@ a[href*='mailto:'] {
 
 @media (min-width: 894px) {
   .main-menu {
-    padding: 8px 0 0; } }
+    padding: 9px 0 0; } }
 .sf-accordion-toggle span {
   display: none; }
 .sf-accordion-toggle a {
@@ -457,7 +457,7 @@ ul.sf-menu.sf-accordion.sf-expanded {
         margin-right: 0 !important; }
       .main-menu ul li a {
         display: block;
-        padding-bottom: 3px; }
+        padding-bottom: 5px; }
         .main-menu ul li a.active-trail, .main-menu ul li a.active {
           color: #871628;
           border-bottom: 2px solid #871628; } }
@@ -511,7 +511,9 @@ ul.sf-menu.sf-accordion.sf-expanded {
     top: 2px; } }
 @media (min-width: 1200px) {
   .main-menu.long-menu ul li {
-    margin: 0 25px; } }
+    margin: 0 33px; }
+    .main-menu.long-menu ul li:first-child {
+      margin-left: 17px; } }
 a {
   color: #222222;
   text-decoration: none; }
