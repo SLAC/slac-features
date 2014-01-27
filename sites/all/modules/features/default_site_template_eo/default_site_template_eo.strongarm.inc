@@ -35,7 +35,7 @@ function default_site_template_eo_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'superfish_delay_1';
-  $strongarm->value = '800';
+  $strongarm->value = '300';
   $export['superfish_delay_1'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -329,7 +329,7 @@ function default_site_template_eo_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'superfish_speed_1';
-  $strongarm->value = 'fast';
+  $strongarm->value = '10';
   $export['superfish_speed_1'] = $strongarm;
 
   $strongarm = new stdClass();
