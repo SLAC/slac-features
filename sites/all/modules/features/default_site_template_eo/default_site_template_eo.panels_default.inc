@@ -422,7 +422,7 @@ function default_site_template_eo_default_panels_mini() {
 
 	<div class="social-icon-twitter"><a href="http://twitter.com//slaclab">Twitter</a></div>
 
-	<div class="social-icon-delicious"><a href="http://delicious.com/">Delicious</a></div>
+	<!-- <div class="social-icon-delicious"><a href="http://delicious.com/">Delicious</a></div> -->
 
 	<div class="social-icon-googleplus"><a href="https://plus.google.com/+SLAC/">Google+</a></div>
 
