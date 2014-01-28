@@ -17,6 +17,12 @@ function slac_kb_article_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'calendar_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'default' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -61,6 +67,12 @@ function slac_kb_article_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Please upload or select any media such as images or videos you would like to include in the article.',
     'display' => array(
+      'calendar_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'default' => array(
         'label' => 'hidden',
         'module' => 'mediafield',
@@ -137,6 +149,12 @@ function slac_kb_article_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'calendar_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'default' => array(
         'label' => 'above',
         'settings' => array(),

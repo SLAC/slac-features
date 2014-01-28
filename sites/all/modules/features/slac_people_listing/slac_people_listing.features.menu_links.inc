@@ -10,8 +10,8 @@
 function slac_people_listing_menu_default_menu_links() {
   $menu_links = array();
 
-  // Exported menu link: main-menu:people/all
-  $menu_links['main-menu:people/all'] = array(
+  // Exported menu link: main-menu_people:people/all
+  $menu_links['main-menu_people:people/all'] = array(
     'menu_name' => 'main-menu',
     'link_path' => 'people/all',
     'router_path' => 'people/%',
@@ -21,6 +21,7 @@ function slac_people_listing_menu_default_menu_links() {
         'pages' => 'profile/*',
       ),
       'attributes' => array(),
+      'identifier' => 'main-menu_people:people/all',
     ),
     'module' => 'menu',
     'hidden' => 0,

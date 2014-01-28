@@ -12,9 +12,10 @@ function slac_faq_default_rules_configuration() {
   $items['rules_slac_faq_close'] = entity_import('rules_config', '{ "rules_slac_faq_close" : {
       "LABEL" : "FAQ Closed",
       "PLUGIN" : "reaction rule",
+      "OWNER" : "rules",
       "TAGS" : [ "FAQ", "SLAC FAQ" ],
       "REQUIRES" : [ "rules" ],
-      "ON" : [ "node_update" ],
+      "ON" : { "node_update" : [] },
       "IF" : [
         { "node_is_of_type" : {
             "node" : [ "node" ],
@@ -37,9 +38,10 @@ function slac_faq_default_rules_configuration() {
   $items['rules_slac_faq_new'] = entity_import('rules_config', '{ "rules_slac_faq_new" : {
       "LABEL" : "FAQ New",
       "PLUGIN" : "reaction rule",
+      "OWNER" : "rules",
       "TAGS" : [ "FAQ", "SLAC", "SLAC FAQ" ],
       "REQUIRES" : [ "rules" ],
-      "ON" : [ "node_insert" ],
+      "ON" : { "node_insert" : [] },
       "IF" : [
         { "node_is_of_type" : {
             "node" : [ "node" ],

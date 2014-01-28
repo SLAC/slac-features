@@ -8,8 +8,34 @@
  * Implements hook_default_page_manager_handlers().
  */
 function slac_people_listing_default_page_manager_handlers() {
-  $export = array();
-
+  $page = new stdClass();
+  $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
+  $page->api_version = 1;
+  $page->name = 'people_listing_page';
+  $page->task = 'page';
+  $page->admin_title = 'People Listing page';
+  $page->admin_description = '';
+  $page->path = 'people/%letter';
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
+  $page->menu = array();
+  $page->arguments = array(
+    'letter' => array(
+      'id' => 1,
+      'identifier' => 'String',
+      'name' => 'string',
+      'settings' => array(
+        'use_tail' => 0,
+      ),
+      'keyword' => 'letter',
+    ),
+  );
+  $page->conf = array(
+    'admin_paths' => FALSE,
+  );
+  $page->default_handlers = array();
   $handler = new stdClass();
   $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
   $handler->api_version = 1;

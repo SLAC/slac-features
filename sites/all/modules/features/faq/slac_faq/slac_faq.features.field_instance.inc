@@ -17,6 +17,12 @@ function slac_faq_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Please enter the long form of the question here including all the details',
     'display' => array(
+      'calendar_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'default' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -62,6 +68,12 @@ function slac_faq_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Answer to the question, this is to be fulfilled by administrative users',
     'display' => array(
+      'calendar_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'text',
@@ -102,6 +114,12 @@ function slac_faq_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Please select the category this question/answer set belongs to',
     'display' => array(
+      'calendar_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'taxonomy',
@@ -143,6 +161,12 @@ function slac_faq_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Please indicate if the FAQ set is open or closed, only open FAQ will appear in the queue',
     'display' => array(
+      'calendar_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'list',

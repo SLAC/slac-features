@@ -322,8 +322,22 @@ function slac_kb_article_default_page_manager_pages() {
   $page->admin_title = 'KB Articles';
   $page->admin_description = '';
   $page->path = 'kb/!term_name';
-  $page->access = array();
-  $page->menu = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
+  $page->menu = array(
+    'type' => 'normal',
+    'title' => 'Knowledge base',
+    'name' => 'main-menu',
+    'weight' => '10',
+    'parent' => array(
+      'type' => 'none',
+      'title' => '',
+      'name' => 'navigation',
+      'weight' => '0',
+    ),
+  );
   $page->arguments = array(
     'term_name' => array(
       'id' => 1,

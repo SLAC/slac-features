@@ -1,7 +1,6 @@
 name = PP Demo wysiwyg Blocks
 core = 7.x
 package = Features
-php = 5.2.4
 version = 7.x-1.0
 project = pp_demo_beans
 dependencies[] = bean_admin_ui

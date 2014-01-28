@@ -16,12 +16,15 @@ function slac_faq_default_page_manager_pages() {
   $page->admin_title = 'FAQ';
   $page->admin_description = 'Displays a list of frequently asked/answered questions.';
   $page->path = 'faq/!term_name';
-  $page->access = array();
-  $page->menu = array(
+  $page->access = array(
     'type' => 'none',
+    'settings' => NULL,
+  );
+  $page->menu = array(
+    'type' => 'normal',
     'title' => 'FAQ',
     'name' => 'main-menu',
-    'weight' => '0',
+    'weight' => '9',
     'parent' => array(
       'type' => 'none',
       'title' => '',

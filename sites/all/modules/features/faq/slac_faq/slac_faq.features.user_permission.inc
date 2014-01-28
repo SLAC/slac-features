@@ -10,10 +10,11 @@
 function slac_faq_user_default_permissions() {
   $permissions = array();
 
-  // Exported permission: create slac_faq content.
+  // Exported permission: 'create slac_faq content'.
   $permissions['create slac_faq content'] = array(
     'name' => 'create slac_faq content',
     'roles' => array(
+      'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'node',

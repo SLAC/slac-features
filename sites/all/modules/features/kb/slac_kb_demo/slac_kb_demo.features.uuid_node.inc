@@ -37,15 +37,15 @@ function slac_kb_demo_uuid_features_default_content() {
       ),
     ),
   ),
-    'field_kb_article_media' => array(
-      'und' => array(
-        0 => array(
-          'fid' => 5,
-          'title' => NULL,
-          'data' => NULL,
-        ),
+  'field_kb_article_media' => array(
+    'und' => array(
+      0 => array(
+        'fid' => 5,
+        'title' => NULL,
+        'data' => NULL,
       ),
     ),
+  ),
   'field_kb_categories' => array(
     'und' => array(
       0 => array(
@@ -116,7 +116,7 @@ function slac_kb_demo_uuid_features_default_content() {
   'name' => 'admin',
   'picture' => 0,
   'date' => '2013-07-25 17:37:48 +0300',
-  'author_uuid' => '22fc18de-7fa9-4cd4-8324-107652b69fb2',
+  'author_uuid' => '8feecd34-79bc-478c-87fa-5646e70fc140',
 );
   $nodes[] = array(
   'title' => 'Bienenstock, Michelson Elected to American Academy of Arts and Sciences ',
@@ -216,7 +216,7 @@ function slac_kb_demo_uuid_features_default_content() {
   'name' => 'admin',
   'picture' => 0,
   'date' => '2013-07-25 17:47:13 +0300',
-  'author_uuid' => '22fc18de-7fa9-4cd4-8324-107652b69fb2',
+  'author_uuid' => '8feecd34-79bc-478c-87fa-5646e70fc140',
 );
   $nodes[] = array(
   'title' => 'SLAC Physicists Help Design, Build Cargo X-ray Scanners',
@@ -316,7 +316,7 @@ function slac_kb_demo_uuid_features_default_content() {
   'name' => 'admin',
   'picture' => 0,
   'date' => '2013-07-25 17:39:09 +0300',
-  'author_uuid' => '22fc18de-7fa9-4cd4-8324-107652b69fb2',
+  'author_uuid' => '8feecd34-79bc-478c-87fa-5646e70fc140',
 );
   $nodes[] = array(
   'title' => 'SLAC Study Reveals Active Site of Enzyme Linked to Stuttering',
@@ -416,7 +416,7 @@ function slac_kb_demo_uuid_features_default_content() {
   'name' => 'admin',
   'picture' => 0,
   'date' => '2013-07-25 17:38:38 +0300',
-  'author_uuid' => '22fc18de-7fa9-4cd4-8324-107652b69fb2',
+  'author_uuid' => '8feecd34-79bc-478c-87fa-5646e70fc140',
 );
   $nodes[] = array(
   'title' => 'New Test Bed Probes the Origin of Pulses at LCLS',
@@ -530,7 +530,7 @@ SLAC in May 2013 opened a new test facility at the Accelerator Structure Test Ar
   'name' => 'admin',
   'picture' => 0,
   'date' => '2013-07-31 11:45:47 +0300',
-  'author_uuid' => '22fc18de-7fa9-4cd4-8324-107652b69fb2',
+  'author_uuid' => '8feecd34-79bc-478c-87fa-5646e70fc140',
 );
   $nodes[] = array(
   'title' => 'New Program Broadens the Reach of LCLS Crystallography Experiments',
@@ -639,7 +639,7 @@ Twenty-eight crystal screening slots are already scheduled for October 2013 thro
   'name' => 'admin',
   'picture' => 0,
   'date' => '2013-07-25 17:37:07 +0300',
-  'author_uuid' => '22fc18de-7fa9-4cd4-8324-107652b69fb2',
+  'author_uuid' => '8feecd34-79bc-478c-87fa-5646e70fc140',
 );
   $nodes[] = array(
   'title' => 'SLAC X-rays Resurrect 200-year-old Opera',
@@ -757,7 +757,7 @@ A visiting scholar at Stanford from Germany heard about how SLAC scientists unco
   'name' => 'admin',
   'picture' => 0,
   'date' => '2013-07-31 11:58:25 +0300',
-  'author_uuid' => '22fc18de-7fa9-4cd4-8324-107652b69fb2',
+  'author_uuid' => '8feecd34-79bc-478c-87fa-5646e70fc140',
 );
   $nodes[] = array(
   'title' => 'X-ray Laser Brings Gold Exploration to the Nanoscale',
@@ -865,7 +865,7 @@ A visiting scholar at Stanford from Germany heard about how SLAC scientists unco
   'name' => 'admin',
   'picture' => 0,
   'date' => '2013-07-25 17:38:12 +0300',
-  'author_uuid' => '22fc18de-7fa9-4cd4-8324-107652b69fb2',
+  'author_uuid' => '8feecd34-79bc-478c-87fa-5646e70fc140',
 );
   $nodes[] = array(
   'title' => 'X-ray Laser Pulses in Two Colors',
@@ -969,7 +969,7 @@ Vestibulum tincidunt malesuada tellus. Ut ultrices ultrices enim. Curabitur sit 
   'name' => 'admin',
   'picture' => 0,
   'date' => '2013-07-31 11:43:01 +0300',
-  'author_uuid' => '22fc18de-7fa9-4cd4-8324-107652b69fb2',
+  'author_uuid' => '8feecd34-79bc-478c-87fa-5646e70fc140',
 );
   $nodes[] = array(
   'title' => 'A New Tool to Split X-ray Laser Pulses',
@@ -998,15 +998,15 @@ Vestibulum tincidunt malesuada tellus. Ut ultrices ultrices enim. Curabitur sit 
       ),
     ),
   ),
-    'field_kb_article_media' => array(
-      'und' => array(
-        0 => array(
-          'fid' => 6,
-          'title' => NULL,
-          'data' => NULL,
-        ),
+  'field_kb_article_media' => array(
+    'und' => array(
+      0 => array(
+        'fid' => 6,
+        'title' => NULL,
+        'data' => NULL,
       ),
     ),
+  ),
   'field_kb_categories' => array(
     'und' => array(
       0 => array(
@@ -1077,7 +1077,7 @@ Vestibulum tincidunt malesuada tellus. Ut ultrices ultrices enim. Curabitur sit 
   'name' => 'admin',
   'picture' => 0,
   'date' => '2013-07-31 11:44:54 +0300',
-  'author_uuid' => '22fc18de-7fa9-4cd4-8324-107652b69fb2',
+  'author_uuid' => '8feecd34-79bc-478c-87fa-5646e70fc140',
 );
   $nodes[] = array(
   'title' => 'Printing Innovations Provide 10-fold Improvement in Organic Electronics',
@@ -1188,7 +1188,7 @@ Organic electronics have great promise for a variety of applications, but even t
   'name' => 'admin',
   'picture' => 0,
   'date' => '2013-07-31 11:59:13 +0300',
-  'author_uuid' => '22fc18de-7fa9-4cd4-8324-107652b69fb2',
+  'author_uuid' => '8feecd34-79bc-478c-87fa-5646e70fc140',
 );
   $nodes[] = array(
   'title' => 'Harold Hwang Wins Top Korean Award',
@@ -1299,7 +1299,7 @@ Nulla ut felis in purus aliquam imperdiet. Maecenas aliquet mollis lectus. Vivam
   'name' => 'admin',
   'picture' => 0,
   'date' => '2013-07-31 11:41:51 +0300',
-  'author_uuid' => '22fc18de-7fa9-4cd4-8324-107652b69fb2',
+  'author_uuid' => '8feecd34-79bc-478c-87fa-5646e70fc140',
 );
   return $nodes;
 }

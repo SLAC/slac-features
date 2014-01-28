@@ -64,7 +64,7 @@ Lounge area and kitchenette',
   'field_slac_faq_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 74,
+        'tid' => 1,
         'uuid' => 'b9236867-2fed-4032-8c59-5a6076d8d2fa',
       ),
     ),
@@ -138,7 +138,7 @@ Lounge area and kitchenette',
   'name' => 'admin',
   'picture' => 0,
   'date' => '2013-12-12 11:18:52 +0200',
-  'author_uuid' => 'bbdf14d3-1287-4d08-8a22-f5390fff5113',
+  'author_uuid' => '8feecd34-79bc-478c-87fa-5646e70fc140',
 );
   $nodes[] = array(
   'title' => 'Where is the recreation center located?',
@@ -168,7 +168,7 @@ Lounge area and kitchenette',
   'field_slac_faq_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 74,
+        'tid' => 1,
         'uuid' => 'b9236867-2fed-4032-8c59-5a6076d8d2fa',
       ),
     ),
@@ -242,7 +242,7 @@ Lounge area and kitchenette',
   'name' => 'admin',
   'picture' => 0,
   'date' => '2013-12-12 11:12:07 +0200',
-  'author_uuid' => 'bbdf14d3-1287-4d08-8a22-f5390fff5113',
+  'author_uuid' => '8feecd34-79bc-478c-87fa-5646e70fc140',
 );
   $nodes[] = array(
   'title' => 'What about Stanford faculty, staff and students?',
@@ -272,7 +272,7 @@ Lounge area and kitchenette',
   'field_slac_faq_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 33,
+        'tid' => 2,
         'uuid' => 'fbf57dca-3b7d-4dba-8987-96e4f276b91f',
       ),
     ),
@@ -346,7 +346,7 @@ Lounge area and kitchenette',
   'name' => 'admin',
   'picture' => 0,
   'date' => '2013-12-12 11:15:47 +0200',
-  'author_uuid' => 'bbdf14d3-1287-4d08-8a22-f5390fff5113',
+  'author_uuid' => '8feecd34-79bc-478c-87fa-5646e70fc140',
 );
   return $nodes;
 }

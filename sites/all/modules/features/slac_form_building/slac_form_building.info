@@ -4,6 +4,7 @@ package = SLAC
 version = 7.x-1.0
 project = slac_form_building
 dependencies[] = botcha
+dependencies[] = ctools
 dependencies[] = slac_webform_botcha
 dependencies[] = webform
 features[ctools][] = strongarm:strongarm:1
