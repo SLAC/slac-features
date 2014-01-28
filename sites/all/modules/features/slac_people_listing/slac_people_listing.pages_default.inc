@@ -92,6 +92,9 @@ function slac_people_listing_default_page_manager_handlers() {
     $pane->configuration = array(
       'override_title' => 1,
       'override_title_text' => '',
+      'context' => array(
+        0 => 'argument_entity_id:user_1',
+      ),
     );
     $pane->cache = array();
     $pane->style = array(
@@ -137,6 +140,9 @@ function slac_people_listing_default_page_manager_handlers() {
     $pane->configuration = array(
       'override_title' => 1,
       'override_title_text' => 'Contact Information',
+      'context' => array(
+        1 => 'argument_entity_id:user_1',
+      ),
     );
     $pane->cache = array();
     $pane->style = array(
