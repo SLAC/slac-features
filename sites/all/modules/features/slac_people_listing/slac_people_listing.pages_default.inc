@@ -199,9 +199,20 @@ function slac_people_listing_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'People Listing page';
   $page->admin_description = '';
-  $page->path = 'people/%letter';
+  $page->path = 'people/!letter';
   $page->access = array();
-  $page->menu = array();
+  $page->menu = array(
+    'type' => 'normal',
+    'title' => 'People',
+    'name' => 'main-menu',
+    'weight' => '13',
+    'parent' => array(
+      'type' => 'none',
+      'title' => '',
+      'name' => 'navigation',
+      'weight' => '0',
+    ),
+  );
   $page->arguments = array(
     'letter' => array(
       'id' => 1,
@@ -262,7 +273,7 @@ function slac_people_listing_default_page_manager_pages() {
     ),
   );
   $display->cache = array();
-  $display->title = 'People Listing: <i>%letter:raw</i>';
+  $display->title = 'People Listing: All';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
@@ -307,7 +318,7 @@ function slac_people_listing_default_page_manager_pages() {
     $pane->locks = array();
     $display->content['new-2'] = $pane;
     $display->panels['title'][0] = 'new-2';
-  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->hide_title = PANELS_TITLE_PANE;
   $display->title_pane = 'new-1';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;

@@ -121,7 +121,7 @@ function slac_people_listing_views_default_views() {
   /* Display: People Listing */
   $handler = $view->new_display('panel_pane', 'People Listing', 'panel_pane_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = '<none>';
+  $handler->display->display_options['title'] = 'People Listing: All';
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'people-page-listing';
   $handler->display->display_options['defaults']['query'] = FALSE;
@@ -203,7 +203,7 @@ function slac_people_listing_views_default_views() {
   $handler->display->display_options['arguments']['field_prf_contact_lname_value']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['field_prf_contact_lname_value']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['arguments']['field_prf_contact_lname_value']['specify_validation'] = TRUE;
-  $handler->display->display_options['arguments']['field_prf_contact_lname_value']['validate']['fail'] = 'access denied';
+  $handler->display->display_options['arguments']['field_prf_contact_lname_value']['validate']['fail'] = 'ignore';
   $handler->display->display_options['arguments']['field_prf_contact_lname_value']['glossary'] = TRUE;
   $handler->display->display_options['arguments']['field_prf_contact_lname_value']['limit'] = '1';
   $handler->display->display_options['arguments']['field_prf_contact_lname_value']['case'] = 'upper';
