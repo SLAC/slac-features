@@ -2,7 +2,6 @@ name = SLAC Event Demo
 description = Provides sample event categories, events, etc.
 core = 7.x
 package = SLAC Demo
-php = 5.2.4
 version = 7.x-1.0
 project = slac_event_demo
 dependencies[] = ctools
