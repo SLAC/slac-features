@@ -17,7 +17,7 @@ function slac_people_listing_default_page_manager_handlers() {
   $handler->task = 'user_view';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
-  $handler->weight = -29;
+  $handler->weight = -50;
   $handler->conf = array(
     'title' => 'User view page',
     'no_blocks' => 0,

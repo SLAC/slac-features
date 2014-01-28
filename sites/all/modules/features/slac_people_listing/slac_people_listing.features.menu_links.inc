@@ -30,7 +30,7 @@ function slac_people_listing_menu_default_menu_links() {
     'weight' => 13,
     'customized' => 1,
   );
-  // Translatables
+
   // Included for use with string extractors like potx.
   t('People');
 
