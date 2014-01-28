@@ -10,9 +10,9 @@
 function slac_service_help_menu_default_menu_links() {
   $menu_links = array();
 
-  // Exported menu link: menu-service-catalog-support:node/add/support-ticket
-  $menu_links['menu-service-catalog-support:node/add/support-ticket'] = array(
-    'menu_name' => 'menu-service-catalog-support',
+  // Exported menu link: menu-services-support:node/add/support-ticket
+  $menu_links['menu-services-support:node/add/support-ticket'] = array(
+    'menu_name' => 'menu-services-support',
     'link_path' => 'node/add/support-ticket',
     'router_path' => 'node/add/support-ticket',
     'link_title' => 'Submit support request',
@@ -28,9 +28,9 @@ function slac_service_help_menu_default_menu_links() {
     'expanded' => 0,
     'weight' => 0,
   );
-  // Exported menu link: menu-service-catalog-support:support
-  $menu_links['menu-service-catalog-support:support'] = array(
-    'menu_name' => 'menu-service-catalog-support',
+  // Exported menu link: menu-services-support:support
+  $menu_links['menu-services-support:support'] = array(
+    'menu_name' => 'menu-services-support',
     'link_path' => 'support',
     'router_path' => 'support',
     'link_title' => 'View support queue',

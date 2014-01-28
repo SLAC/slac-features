@@ -17,6 +17,12 @@ function slac_service_catalog_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'calendar_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'default' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -61,6 +67,12 @@ function slac_service_catalog_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Please choose the category for this service is associated with',
     'display' => array(
+      'calendar_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'taxonomy',
@@ -98,6 +110,12 @@ function slac_service_catalog_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Please check all the groups of people that are eligible for this service',
     'display' => array(
+      'calendar_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'taxonomy',
@@ -135,6 +153,12 @@ function slac_service_catalog_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'If this is not a free service, please enter the rate at this service is offered.',
     'display' => array(
+      'calendar_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'text',
@@ -175,6 +199,12 @@ function slac_service_catalog_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Please enter the link to where this service can be requested, ordered.',
     'display' => array(
+      'calendar_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'link',
@@ -229,6 +259,12 @@ function slac_service_catalog_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Please enter the requirements for this service, you can enter multiple if needed.',
     'display' => array(
+      'calendar_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'text',
@@ -269,6 +305,12 @@ function slac_service_catalog_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Please enter a short service overview that describes what this service offers.',
     'display' => array(
+      'calendar_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'text',
@@ -309,6 +351,12 @@ function slac_service_catalog_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Please enter method and ways in which support are provided to this service. For example, submit a helpline ticket.',
     'display' => array(
+      'calendar_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'text',

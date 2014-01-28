@@ -49,7 +49,7 @@ function slac_service_catalog_views_default_views() {
   $handler->display->display_options['fields']['name']['field'] = 'name';
   $handler->display->display_options['fields']['name']['label'] = '';
   $handler->display->display_options['fields']['name']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['name']['alter']['path'] = 'service-catalog/[name]';
+  $handler->display->display_options['fields']['name']['alter']['path'] = 'services/[name]';
   $handler->display->display_options['fields']['name']['alter']['replace_spaces'] = TRUE;
   $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
@@ -98,7 +98,7 @@ function slac_service_catalog_views_default_views() {
   $handler->display->display_options['filters']['vid']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['filters']['vid']['field'] = 'vid';
   $handler->display->display_options['filters']['vid']['value'] = array(
-    9 => '9',
+    6 => '6',
   );
 
   /* Display: Category A-Z */
@@ -118,7 +118,7 @@ function slac_service_catalog_views_default_views() {
   $handler->display->display_options['fields']['name']['field'] = 'name';
   $handler->display->display_options['fields']['name']['label'] = '';
   $handler->display->display_options['fields']['name']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['name']['alter']['path'] = 'service-catalog/[name]';
+  $handler->display->display_options['fields']['name']['alter']['path'] = 'services/[name]';
   $handler->display->display_options['fields']['name']['alter']['replace_spaces'] = TRUE;
   $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
@@ -169,7 +169,7 @@ function slac_service_catalog_views_default_views() {
   $handler->display->display_options['fields']['name']['field'] = 'name';
   $handler->display->display_options['fields']['name']['label'] = '';
   $handler->display->display_options['fields']['name']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['name']['alter']['path'] = 'service-catalog/[name]';
+  $handler->display->display_options['fields']['name']['alter']['path'] = 'services/[name]';
   $handler->display->display_options['fields']['name']['alter']['replace_spaces'] = TRUE;
   $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
@@ -290,7 +290,7 @@ function slac_service_catalog_views_default_views() {
   /* Display: Catalog item by category */
   $handler = $view->new_display('panel_pane', 'Catalog item by category', 'panel_pane_1');
   $handler->display->display_options['defaults']['css_class'] = FALSE;
-  $handler->display->display_options['css_class'] = 'service-catalog-item';
+  $handler->display->display_options['css_class'] = 'services-item';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['defaults']['style_options'] = FALSE;

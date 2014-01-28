@@ -354,7 +354,7 @@ function slac_service_catalog_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'Service Catalog. Add a new service';
   $page->admin_description = '';
-  $page->path = 'service-catalog/add-new-service';
+  $page->path = 'services/add-new-service';
   $page->access = array(
     'type' => 'none',
     'settings' => NULL,
@@ -389,7 +389,7 @@ function slac_service_catalog_default_page_manager_pages() {
     'contexts' => array(),
     'relationships' => array(),
     'code' => '301',
-    'destination' => 'node/add/slac-sc-catalog-item?destination=service-catalog',
+    'destination' => 'node/add/slac-sc-catalog-item?destination=services',
   );
   $page->default_handlers[$handler->name] = $handler;
   $pages['service_catalog_add_a_new_service'] = $page;
@@ -401,7 +401,7 @@ function slac_service_catalog_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'Service Catalog. Manage self help topics';
   $page->admin_description = '';
-  $page->path = 'service-catalog/manage-self-help-topic';
+  $page->path = 'services/manage-self-help-topic';
   $page->access = array(
     'type' => 'none',
     'settings' => NULL,
@@ -436,7 +436,7 @@ function slac_service_catalog_default_page_manager_pages() {
     'contexts' => array(),
     'relationships' => array(),
     'code' => '301',
-    'destination' => 'admin/structure/taxonomy/slac_sc_catalog_self_help?destination=service-catalog',
+    'destination' => 'admin/structure/taxonomy/slac_sc_catalog_self_help?destination=services',
   );
   $page->default_handlers[$handler->name] = $handler;
   $pages['service_catalog_manage_self_help_topics'] = $page;
@@ -448,7 +448,7 @@ function slac_service_catalog_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'Service Catalog. Manage service category';
   $page->admin_description = '';
-  $page->path = 'service-catalog/manage-service-category';
+  $page->path = 'services/manage-service-category';
   $page->access = array(
     'type' => 'none',
     'settings' => NULL,
@@ -483,7 +483,7 @@ function slac_service_catalog_default_page_manager_pages() {
     'contexts' => array(),
     'relationships' => array(),
     'code' => '301',
-    'destination' => 'admin/structure/taxonomy/slac_sc_catalog_category?destination=service-catalog',
+    'destination' => 'admin/structure/taxonomy/slac_sc_catalog_category?destination=services',
   );
   $page->default_handlers[$handler->name] = $handler;
   $pages['service_catalog_manage_service_category'] = $page;
@@ -495,7 +495,7 @@ function slac_service_catalog_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'Service Catalog. Submit support request';
   $page->admin_description = '';
-  $page->path = 'service-catalog/add-support-request';
+  $page->path = 'services/add-support-request';
   $page->access = array(
     'type' => 'none',
     'settings' => NULL,
@@ -530,7 +530,7 @@ function slac_service_catalog_default_page_manager_pages() {
     'contexts' => array(),
     'relationships' => array(),
     'code' => '301',
-    'destination' => 'node/add/support-ticket&destination=service-catalog',
+    'destination' => 'node/add/support-ticket&destination=services',
   );
   $page->default_handlers[$handler->name] = $handler;
   $pages['service_catalog_submit_support_request'] = $page;
@@ -542,7 +542,7 @@ function slac_service_catalog_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'Service Catalog. View support queue';
   $page->admin_description = '';
-  $page->path = 'service-catalog/support-queue';
+  $page->path = 'services/support-queue';
   $page->access = array(
     'type' => 'none',
     'settings' => NULL,
@@ -581,155 +581,6 @@ function slac_service_catalog_default_page_manager_pages() {
   );
   $page->default_handlers[$handler->name] = $handler;
   $pages['service_catalog_view_support_queue'] = $page;
-
-  $page = new stdClass();
-  $page->disabled = TRUE; /* Edit this to true to make a default page disabled initially */
-  $page->api_version = 1;
-  $page->name = 'slac_sc_catalog_landing';
-  $page->task = 'page';
-  $page->admin_title = 'Service Catalog';
-  $page->admin_description = 'Landing page for the information catalog';
-  $page->path = 'service-catalog';
-  $page->access = array(
-    'type' => 'none',
-    'settings' => NULL,
-  );
-  $page->menu = array(
-    'type' => 'normal',
-    'title' => 'Service',
-    'name' => 'main-menu',
-    'weight' => '4',
-    'parent' => array(
-      'type' => 'none',
-      'title' => '',
-      'name' => 'navigation',
-      'weight' => '0',
-    ),
-  );
-  $page->arguments = array();
-  $page->conf = array(
-    'admin_paths' => FALSE,
-  );
-  $page->default_handlers = array();
-  $handler = new stdClass();
-  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
-  $handler->api_version = 1;
-  $handler->name = 'page_slac_sc_catalog_landing_panel_context';
-  $handler->task = 'page';
-  $handler->subtask = 'slac_sc_catalog_landing';
-  $handler->handler = 'panel_context';
-  $handler->weight = 0;
-  $handler->conf = array(
-    'title' => 'Service Catalog layout',
-    'no_blocks' => 0,
-    'pipeline' => 'standard',
-    'body_classes_to_remove' => '',
-    'body_classes_to_add' => '',
-    'css_id' => '',
-    'css' => '',
-    'contexts' => array(),
-    'relationships' => array(),
-  );
-  $display = new panels_display();
-  $display->layout = 'two_col_article';
-  $display->layout_settings = array();
-  $display->panel_settings = array(
-    'style_settings' => array(
-      'default' => NULL,
-      'center' => NULL,
-      'right' => NULL,
-      'left' => NULL,
-      'left_title' => NULL,
-      'left_author' => NULL,
-    ),
-  );
-  $display->cache = array();
-  $display->title = 'Services';
-  $display->content = array();
-  $display->panels = array();
-    $pane = new stdClass();
-    $pane->pid = 'new-1';
-    $pane->panel = 'left';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'service_catalog_category-panel_pane_1';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-1'] = $pane;
-    $display->panels['left'][0] = 'new-1';
-    $pane = new stdClass();
-    $pane->pid = 'new-2';
-    $pane->panel = 'left_title';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'admin_title' => 'title',
-      'title' => '',
-      'body' => '<h2 class="pane-title">Services</h2>',
-      'format' => 'full_html',
-      'substitute' => TRUE,
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['left_title'][0] = 'new-2';
-    $pane = new stdClass();
-    $pane->pid = 'new-3';
-    $pane->panel = 'right';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'service_catalog_category-panel_pane_4';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['right'][0] = 'new-3';
-    $pane = new stdClass();
-    $pane->pid = 'new-4';
-    $pane->panel = 'right';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'service_catalog_item-panel_pane_3';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $display->content['new-4'] = $pane;
-    $display->panels['right'][1] = 'new-4';
-  $display->hide_title = PANELS_TITLE_NONE;
-  $display->title_pane = '0';
-  $handler->conf['display'] = $display;
-  $page->default_handlers[$handler->name] = $handler;
-  $pages['slac_sc_catalog_landing'] = $page;
 
   return $pages;
 

@@ -14,7 +14,7 @@ function slac_service_help_features_override_default_overrides() {
   // Exported overrides for: page_manager_pages
   $overrides["page_manager_pages.service_catalog_category_listing.default_handlers|page_service_catalog_category_listing_panel_context|conf|display|content|new-1|configuration|override_title"] = 1;
   $overrides["page_manager_pages.service_catalog_category_listing.default_handlers|page_service_catalog_category_listing_panel_context|conf|display|content|new-1|configuration|override_title_text"] = '';
-  $overrides["page_manager_pages.service_catalog_category_listing.default_handlers|page_service_catalog_category_listing_panel_context|conf|display|content|new-1|subtype"] = 'menu-menu-service-catalog-support';
+  $overrides["page_manager_pages.service_catalog_category_listing.default_handlers|page_service_catalog_category_listing_panel_context|conf|display|content|new-1|subtype"] = 'menu-menu-services-support';
   $overrides["page_manager_pages.service_catalog_category_listing.default_handlers|page_service_catalog_category_listing_panel_context|conf|display|content|new-1|type"] = 'block';
   $overrides["page_manager_pages.service_catalog_category_listing.default_handlers|page_service_catalog_category_listing_panel_context|conf|display|content|new-2|configuration|override_title"]["DELETED"] = TRUE;
   $overrides["page_manager_pages.service_catalog_category_listing.default_handlers|page_service_catalog_category_listing_panel_context|conf|display|content|new-2|configuration|override_title_text"]["DELETED"] = TRUE;
@@ -25,7 +25,7 @@ function slac_service_help_features_override_default_overrides() {
   $overrides["page_manager_pages.service_catalog_category_listing.default_handlers|page_service_catalog_category_listing_panel_context|conf|display|content|new-3|configuration|override_title"] = 1;
   $overrides["page_manager_pages.service_catalog_category_listing.default_handlers|page_service_catalog_category_listing_panel_context|conf|display|content|new-3|configuration|override_title_text"] = 'Manage Service Catalog';
   $overrides["page_manager_pages.service_catalog_category_listing.default_handlers|page_service_catalog_category_listing_panel_context|conf|display|content|new-3|position"] = 0;
-  $overrides["page_manager_pages.service_catalog_category_listing.default_handlers|page_service_catalog_category_listing_panel_context|conf|display|content|new-3|subtype"] = 'menu-menu-service-catalog-admin';
+  $overrides["page_manager_pages.service_catalog_category_listing.default_handlers|page_service_catalog_category_listing_panel_context|conf|display|content|new-3|subtype"] = 'menu-menu-services-admin';
   $overrides["page_manager_pages.service_catalog_category_listing.default_handlers|page_service_catalog_category_listing_panel_context|conf|display|content|new-3|type"] = 'block';
   $overrides["page_manager_pages.service_catalog_category_listing.default_handlers|page_service_catalog_category_listing_panel_context|conf|display|content|new-4|position"] = 1;
   $overrides["page_manager_pages.service_catalog_category_listing.default_handlers|page_service_catalog_category_listing_panel_context|conf|display|content|new-4|subtype"] = 'service_catalog_category-panel_pane_4';
@@ -71,13 +71,13 @@ function slac_service_help_features_override_default_overrides() {
   $overrides["page_manager_pages.slac_sc_catalog_landing.default_handlers|page_slac_sc_catalog_landing_panel_context|conf|display|content|new-5"]["DELETED"] = TRUE;
   $overrides["page_manager_pages.slac_sc_catalog_landing.default_handlers|page_slac_sc_catalog_landing_panel_context|conf|display|content|new-6|configuration|override_title_text"] = '';
   $overrides["page_manager_pages.slac_sc_catalog_landing.default_handlers|page_slac_sc_catalog_landing_panel_context|conf|display|content|new-6|panel"] = 'center';
-  $overrides["page_manager_pages.slac_sc_catalog_landing.default_handlers|page_slac_sc_catalog_landing_panel_context|conf|display|content|new-6|subtype"] = 'menu-menu-service-catalog-support';
+  $overrides["page_manager_pages.slac_sc_catalog_landing.default_handlers|page_slac_sc_catalog_landing_panel_context|conf|display|content|new-6|subtype"] = 'menu-menu-services-support';
   $overrides["page_manager_pages.slac_sc_catalog_landing.default_handlers|page_slac_sc_catalog_landing_panel_context|conf|display|content|new-7|panel"] = 'center';
   $overrides["page_manager_pages.slac_sc_catalog_landing.default_handlers|page_slac_sc_catalog_landing_panel_context|conf|display|content|new-7|subtype"] = 'service_catalog_category-panel_pane_1';
   $overrides["page_manager_pages.slac_sc_catalog_landing.default_handlers|page_slac_sc_catalog_landing_panel_context|conf|display|content|new-8|configuration|override_title"] = 1;
   $overrides["page_manager_pages.slac_sc_catalog_landing.default_handlers|page_slac_sc_catalog_landing_panel_context|conf|display|content|new-8|configuration|override_title_text"] = 'Manage Service Catalog';
   $overrides["page_manager_pages.slac_sc_catalog_landing.default_handlers|page_slac_sc_catalog_landing_panel_context|conf|display|content|new-8|position"] = 0;
-  $overrides["page_manager_pages.slac_sc_catalog_landing.default_handlers|page_slac_sc_catalog_landing_panel_context|conf|display|content|new-8|subtype"] = 'menu-menu-service-catalog-admin';
+  $overrides["page_manager_pages.slac_sc_catalog_landing.default_handlers|page_slac_sc_catalog_landing_panel_context|conf|display|content|new-8|subtype"] = 'menu-menu-services-admin';
   $overrides["page_manager_pages.slac_sc_catalog_landing.default_handlers|page_slac_sc_catalog_landing_panel_context|conf|display|content|new-8|type"] = 'block';
   $overrides["page_manager_pages.slac_sc_catalog_landing.default_handlers|page_slac_sc_catalog_landing_panel_context|conf|display|content|new-9"] = (object) array(
       'pid' => 'new-9',

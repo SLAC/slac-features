@@ -10,9 +10,9 @@
 function slac_service_catalog_menu_default_menu_custom() {
   $menus = array();
 
-  // Exported menu: menu-service-catalog-admin.
-  $menus['menu-service-catalog-admin'] = array(
-    'menu_name' => 'menu-service-catalog-admin',
+  // Exported menu: menu-services-admin.
+  $menus['menu-services-admin'] = array(
+    'menu_name' => 'menu-services-admin',
     'title' => 'Service Catalog Admin',
     'description' => 'For managing service catalogs',
   );

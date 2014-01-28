@@ -17,6 +17,12 @@ function slac_service_help_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Please select one of the support category',
     'display' => array(
+      'calendar_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'taxonomy',

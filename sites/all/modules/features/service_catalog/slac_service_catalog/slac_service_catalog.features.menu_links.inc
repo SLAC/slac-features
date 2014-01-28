@@ -10,9 +10,9 @@
 function slac_service_catalog_menu_default_menu_links() {
   $menu_links = array();
 
-  // Exported menu link: menu-service-catalog-admin:admin/structure/taxonomy/slac_sc_catalog_category
-  $menu_links['menu-service-catalog-admin:admin/structure/taxonomy/slac_sc_catalog_category'] = array(
-    'menu_name' => 'menu-service-catalog-admin',
+  // Exported menu link: menu-services-admin:admin/structure/taxonomy/slac_sc_catalog_category
+  $menu_links['menu-services-admin:admin/structure/taxonomy/slac_sc_catalog_category'] = array(
+    'menu_name' => 'menu-services-admin',
     'link_path' => 'admin/structure/taxonomy/slac_sc_catalog_category',
     'router_path' => 'admin/structure/taxonomy/%',
     'link_title' => 'Manage service category',
@@ -28,9 +28,9 @@ function slac_service_catalog_menu_default_menu_links() {
     'expanded' => 0,
     'weight' => 0,
   );
-  // Exported menu link: menu-service-catalog-admin:admin/structure/taxonomy/slac_sc_catalog_self_help
-  $menu_links['menu-service-catalog-admin:admin/structure/taxonomy/slac_sc_catalog_self_help'] = array(
-    'menu_name' => 'menu-service-catalog-admin',
+  // Exported menu link: menu-services-admin:admin/structure/taxonomy/slac_sc_catalog_self_help
+  $menu_links['menu-services-admin:admin/structure/taxonomy/slac_sc_catalog_self_help'] = array(
+    'menu_name' => 'menu-services-admin',
     'link_path' => 'admin/structure/taxonomy/slac_sc_catalog_self_help',
     'router_path' => 'admin/structure/taxonomy/%',
     'link_title' => 'Manage self help topics',
@@ -46,9 +46,9 @@ function slac_service_catalog_menu_default_menu_links() {
     'expanded' => 0,
     'weight' => 0,
   );
-  // Exported menu link: menu-service-catalog-admin:node/add/slac-sc-catalog-item
-  $menu_links['menu-service-catalog-admin:node/add/slac-sc-catalog-item'] = array(
-    'menu_name' => 'menu-service-catalog-admin',
+  // Exported menu link: menu-services-admin:node/add/slac-sc-catalog-item
+  $menu_links['menu-services-admin:node/add/slac-sc-catalog-item'] = array(
+    'menu_name' => 'menu-services-admin',
     'link_path' => 'node/add/slac-sc-catalog-item',
     'router_path' => 'node/add/slac-sc-catalog-item',
     'link_title' => 'Add a new service',
@@ -57,7 +57,7 @@ function slac_service_catalog_menu_default_menu_links() {
         'title' => '',
       ),
       'query' => array(
-        'destination' => 'service-catalog',
+        'destination' => 'services',
       ),
     ),
     'module' => 'menu',

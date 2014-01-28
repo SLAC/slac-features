@@ -11,7 +11,6 @@ function slac_service_catalog_demo_uuid_features_default_content() {
   $nodes = array();
 
   $nodes[] = array(
-  'uid' => 1,
   'title' => 'Enterprise application group',
   'log' => '',
   'status' => 1,
@@ -61,7 +60,7 @@ function slac_service_catalog_demo_uuid_features_default_content() {
 ',
         'summary' => '',
         'format' => 'full_html',
-        'safe_value' => '<div class="field field-name-field-service-overview field-type-text-long field-label-hidden">
+        'safe_value' => ' <div class="field field-name-field-service-overview field-type-text-long field-label-hidden">
 <div class="field-items">
 <div class="field-item even">
 <p>Our goal is to provide superior client support while helping our partners maximize their IT investment. We work closely with Computer Resource Consulting (CRC) Desktop Support to provide comprehensive, responsive technology assistance for your entire organization.</p>
@@ -86,21 +85,23 @@ function slac_service_catalog_demo_uuid_features_default_content() {
 </div>
 </div>
 <p> </p>
-',
-        'safe_summary' => '',
+ ',
+        'safe_summary' => '  ',
       ),
     ),
   ),
-  'field_slac_sc_service_overview' => array(
+  'field_slac_sc_category' => array(),
+  'field_slac_sc_eligibility' => array(),
+  'field_slac_sc_rate' => array(),
+  'field_slac_sc_request_link' => array(
     'und' => array(
       0 => array(
-        'value' => 'The Server Support service provides complete server management, including installation and stabilization, monitoring, security, user management, and integration with the campus infrastructure, for systems running modern Mac OS X Server and Windows Server operating systems.',
-        'format' => NULL,
-        'safe_value' => 'The Server Support service provides complete server management, including installation and stabilization, monitoring, security, user management, and integration with the campus infrastructure, for systems running modern Mac OS X Server and Windows Server operating systems.',
+        'url' => 'http://www.slac.stanford.edu',
+        'title' => NULL,
+        'attributes' => array(),
       ),
     ),
   ),
-  'field_slac_sc_eligibility' => array(),
   'field_slac_sc_requirements' => array(
     'und' => array(
       0 => array(
@@ -115,28 +116,26 @@ function slac_service_catalog_demo_uuid_features_default_content() {
       ),
     ),
   ),
+  'field_slac_sc_service_overview' => array(
+    'und' => array(
+      0 => array(
+        'value' => 'The Server Support service provides complete server management, including installation and stabilization, monitoring, security, user management, and integration with the campus infrastructure, for systems running modern Mac OS X Server and Windows Server operating systems.',
+        'format' => NULL,
+        'safe_value' => 'The Server Support service provides complete server management, including installation and stabilization, monitoring, security, user management, and integration with the campus infrastructure, for systems running modern Mac OS X Server and Windows Server operating systems.',
+      ),
+    ),
+  ),
   'field_slac_sc_support' => array(
     'und' => array(
       0 => array(
         'value' => '<p>Support is provided by SLAC IT services.</p>
 ',
         'format' => 'full_html',
-        'safe_value' => '<p>Support is provided by SLAC IT services.</p>
-',
+        'safe_value' => ' <p>Support is provided by SLAC IT services.</p>
+ ',
       ),
     ),
   ),
-  'field_slac_sc_rate' => array(),
-  'field_slac_sc_request_link' => array(
-    'und' => array(
-      0 => array(
-        'url' => 'http://www.slac.stanford.edu',
-        'title' => NULL,
-        'attributes' => array(),
-      ),
-    ),
-  ),
-  'field_slac_sc_category' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:Item',
@@ -198,12 +197,10 @@ function slac_service_catalog_demo_uuid_features_default_content() {
   'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
-  'data' => 'b:0;',
-  'date' => '2013-08-26 09:49:24 -0700',
-  'author_uuid' => '2f4dc695-a129-4c43-8441-07db6781150a',
+  'date' => '2013-08-26 19:49:24 +0300',
+  'author_uuid' => '8feecd34-79bc-478c-87fa-5646e70fc140',
 );
   $nodes[] = array(
-  'uid' => 1,
   'title' => 'Contract Support',
   'log' => '',
   'status' => 1,
@@ -253,7 +250,7 @@ function slac_service_catalog_demo_uuid_features_default_content() {
 ',
         'summary' => '',
         'format' => 'full_html',
-        'safe_value' => '<div class="field field-name-field-service-overview field-type-text-long field-label-hidden">
+        'safe_value' => ' <div class="field field-name-field-service-overview field-type-text-long field-label-hidden">
 <div class="field-items">
 <div class="field-item even">
 <p>OnCall Services is a great way for departments to supplement existing support staff during vacations and other leaves, or to handle special projects. For small groups that don’t need full-time support, we can offer scheduled or pre-arranged occasional support in your office. For faculty, staff, and students, OnCall Services offers a cost-effective way to get expert computer assistance from highly knowledgeable technical staff who understand Stanford’s unique computing environment.</p>
@@ -280,39 +277,13 @@ function slac_service_catalog_demo_uuid_features_default_content() {
 </div>
 </div>
 <p> </p>
-',
-        'safe_summary' => '',
+ ',
+        'safe_summary' => '  ',
       ),
     ),
   ),
-  'field_slac_sc_service_overview' => array(
-    'und' => array(
-      0 => array(
-        'value' => 'OnCall Services is a great way for departments to supplement existing support staff during vacations and other leaves, or to handle special projects. For small groups that don’t need full-time support, we can offer scheduled or pre-arranged occasional support in your office. For faculty, staff, and students, OnCall Services offers a cost-effective way to get expert computer assistance from highly knowledgeable technical staff who understand Stanford’s unique computing environment.',
-        'format' => NULL,
-        'safe_value' => 'OnCall Services is a great way for departments to supplement existing support staff during vacations and other leaves, or to handle special projects. For small groups that don’t need full-time support, we can offer scheduled or pre-arranged occasional support in your office. For faculty, staff, and students, OnCall Services offers a cost-effective way to get expert computer assistance from highly knowledgeable technical staff who understand Stanford’s unique computing environment.',
-      ),
-    ),
-  ),
+  'field_slac_sc_category' => array(),
   'field_slac_sc_eligibility' => array(),
-  'field_slac_sc_requirements' => array(),
-  'field_slac_sc_support' => array(
-    'und' => array(
-      0 => array(
-        'value' => '<p>If you have questions about how OnCall Services can assist you, please submit a HelpSU request or call or 5-HELP (725-4357).</p>
-',
-        'format' => 'full_html',
-        'safe_value' => '<p>If you have questions about how OnCall Services can assist you, please submit a HelpSU request or call or 5-HELP (725-4357).</p>
-',
-      ),
-      1 => array(
-        'value' => 'Services are available either in your campus office or at our offices on campus. Carry-In services are performed by appointment and need to be arranged in advance.',
-        'format' => 'full_html',
-        'safe_value' => '<p>Services are available either in your campus office or at our offices on campus. Carry-In services are performed by appointment and need to be arranged in advance.</p>
-',
-      ),
-    ),
-  ),
   'field_slac_sc_rate' => array(
     'und' => array(
       0 => array(
@@ -331,7 +302,33 @@ function slac_service_catalog_demo_uuid_features_default_content() {
       ),
     ),
   ),
-  'field_slac_sc_category' => array(),
+  'field_slac_sc_requirements' => array(),
+  'field_slac_sc_service_overview' => array(
+    'und' => array(
+      0 => array(
+        'value' => 'OnCall Services is a great way for departments to supplement existing support staff during vacations and other leaves, or to handle special projects. For small groups that don’t need full-time support, we can offer scheduled or pre-arranged occasional support in your office. For faculty, staff, and students, OnCall Services offers a cost-effective way to get expert computer assistance from highly knowledgeable technical staff who understand Stanford’s unique computing environment.',
+        'format' => NULL,
+        'safe_value' => 'OnCall Services is a great way for departments to supplement existing support staff during vacations and other leaves, or to handle special projects. For small groups that don’t need full-time support, we can offer scheduled or pre-arranged occasional support in your office. For faculty, staff, and students, OnCall Services offers a cost-effective way to get expert computer assistance from highly knowledgeable technical staff who understand Stanford’s unique computing environment.',
+      ),
+    ),
+  ),
+  'field_slac_sc_support' => array(
+    'und' => array(
+      0 => array(
+        'value' => '<p>If you have questions about how OnCall Services can assist you, please submit a HelpSU request or call or 5-HELP (725-4357).</p>
+',
+        'format' => 'full_html',
+        'safe_value' => ' <p>If you have questions about how OnCall Services can assist you, please submit a HelpSU request or call or 5-HELP (725-4357).</p>
+ ',
+      ),
+      1 => array(
+        'value' => 'Services are available either in your campus office or at our offices on campus. Carry-In services are performed by appointment and need to be arranged in advance.',
+        'format' => 'full_html',
+        'safe_value' => ' <p>Services are available either in your campus office or at our offices on campus. Carry-In services are performed by appointment and need to be arranged in advance.</p>
+ ',
+      ),
+    ),
+  ),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:Item',
@@ -393,12 +390,10 @@ function slac_service_catalog_demo_uuid_features_default_content() {
   'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
-  'data' => 'b:0;',
-  'date' => '2013-08-26 09:56:10 -0700',
-  'author_uuid' => '2f4dc695-a129-4c43-8441-07db6781150a',
+  'date' => '2013-08-26 19:56:10 +0300',
+  'author_uuid' => '8feecd34-79bc-478c-87fa-5646e70fc140',
 );
   $nodes[] = array(
-  'uid' => 1,
   'title' => 'MySQL & Oracle',
   'log' => '',
   'status' => 1,
@@ -448,7 +443,7 @@ function slac_service_catalog_demo_uuid_features_default_content() {
 ',
         'summary' => '',
         'format' => 'full_html',
-        'safe_value' => '<div class="field field-name-field-service-overview field-type-text-long field-label-hidden">
+        'safe_value' => ' <div class="field field-name-field-service-overview field-type-text-long field-label-hidden">
 <div class="field-items">
 <div class="field-item even">
 <p>A variety of complementary Database Administration-related services such as Oracle Real Application Cluster (RAC) support are also available via Ntirety. The Database Administration service provides reliable, secure, and cost-effective database administration, including maintenance, monitoring, and backup.</p>
@@ -473,11 +468,32 @@ function slac_service_catalog_demo_uuid_features_default_content() {
 </div>
 </div>
 <p> </p>
-',
-        'safe_summary' => '',
+ ',
+        'safe_summary' => '  ',
       ),
     ),
   ),
+  'field_slac_sc_category' => array(),
+  'field_slac_sc_eligibility' => array(),
+  'field_slac_sc_rate' => array(
+    'und' => array(
+      0 => array(
+        'value' => '$50 per database',
+        'format' => NULL,
+        'safe_value' => '$50 per database',
+      ),
+    ),
+  ),
+  'field_slac_sc_request_link' => array(
+    'und' => array(
+      0 => array(
+        'url' => 'http://www.slac.stanford.edu',
+        'title' => NULL,
+        'attributes' => array(),
+      ),
+    ),
+  ),
+  'field_slac_sc_requirements' => array(),
   'field_slac_sc_service_overview' => array(
     'und' => array(
       0 => array(
@@ -487,8 +503,6 @@ function slac_service_catalog_demo_uuid_features_default_content() {
       ),
     ),
   ),
-  'field_slac_sc_eligibility' => array(),
-  'field_slac_sc_requirements' => array(),
   'field_slac_sc_support' => array(
     'und' => array(
       0 => array(
@@ -512,25 +526,6 @@ function slac_service_catalog_demo_uuid_features_default_content() {
       ),
     ),
   ),
-  'field_slac_sc_rate' => array(
-    'und' => array(
-      0 => array(
-        'value' => '$50 per database',
-        'format' => NULL,
-        'safe_value' => '$50 per database',
-      ),
-    ),
-  ),
-  'field_slac_sc_request_link' => array(
-    'und' => array(
-      0 => array(
-        'url' => 'http://www.slac.stanford.edu',
-        'title' => NULL,
-        'attributes' => array(),
-      ),
-    ),
-  ),
-  'field_slac_sc_category' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:Item',
@@ -592,12 +587,10 @@ function slac_service_catalog_demo_uuid_features_default_content() {
   'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
-  'data' => 'b:0;',
-  'date' => '2013-08-26 09:53:56 -0700',
-  'author_uuid' => '2f4dc695-a129-4c43-8441-07db6781150a',
+  'date' => '2013-08-26 19:53:56 +0300',
+  'author_uuid' => '8feecd34-79bc-478c-87fa-5646e70fc140',
 );
   $nodes[] = array(
-  'uid' => 1,
   'title' => 'Conference computing for visitors',
   'log' => '',
   'status' => 1,
@@ -663,7 +656,7 @@ function slac_service_catalog_demo_uuid_features_default_content() {
 ',
         'summary' => '',
         'format' => 'full_html',
-        'safe_value' => '<h2>Computing Resources for Short Term Visitors</h2>
+        'safe_value' => ' <h2>Computing Resources for Short Term Visitors</h2>
 <p>Visitors of SLAC who are attending conferences, meetings, or short collaborations should review the following computing resources that are available for public use. Visitors staying longer than a few days or those requiring access to SLAC-only resources should register as an Active User with the <a href="http://www.slac.stanford.edu/grp/rd/sluo/SLUO.html#SLUO">SLAC Users Organization</a> to become eligible to open a SLAC computer account.<br />
 	 </p>
 <table border="0" cellpadding="5" cellspacing="0" width="100%"><tbody><tr><td width="10"><img src="http://www2.slac.stanford.edu/computing/helpdesk/images/arrow2.gif" /></td>
@@ -688,8 +681,29 @@ function slac_service_catalog_demo_uuid_features_default_content() {
 <td><a href="http://www2.slac.stanford.edu/computing/helpdesk/visitor/computingsetup.asp">Conference Room Setups</a></td>
 <td>:: Conference room layouts and equipment types</td>
 </tr></tbody></table><p> </p>
-',
-        'safe_summary' => '',
+ ',
+        'safe_summary' => '  ',
+      ),
+    ),
+  ),
+  'field_slac_sc_category' => array(),
+  'field_slac_sc_eligibility' => array(),
+  'field_slac_sc_rate' => array(),
+  'field_slac_sc_request_link' => array(
+    'und' => array(
+      0 => array(
+        'url' => 'http://www.slac.stanford.edu',
+        'title' => NULL,
+        'attributes' => array(),
+      ),
+    ),
+  ),
+  'field_slac_sc_requirements' => array(
+    'und' => array(
+      0 => array(
+        'value' => 'This service is only offered to visitor to the LAB',
+        'format' => NULL,
+        'safe_value' => 'This service is only offered to visitor to the LAB',
       ),
     ),
   ),
@@ -702,38 +716,17 @@ function slac_service_catalog_demo_uuid_features_default_content() {
       ),
     ),
   ),
-  'field_slac_sc_eligibility' => array(),
-  'field_slac_sc_requirements' => array(
-    'und' => array(
-      0 => array(
-        'value' => 'This service is only offered to visitor to the LAB',
-        'format' => NULL,
-        'safe_value' => 'This service is only offered to visitor to the LAB',
-      ),
-    ),
-  ),
   'field_slac_sc_support' => array(
     'und' => array(
       0 => array(
         'value' => '<p>Support is provided by SLAC IT Services</p>
 ',
         'format' => 'full_html',
-        'safe_value' => '<p>Support is provided by SLAC IT Services</p>
-',
+        'safe_value' => ' <p>Support is provided by SLAC IT Services</p>
+ ',
       ),
     ),
   ),
-  'field_slac_sc_rate' => array(),
-  'field_slac_sc_request_link' => array(
-    'und' => array(
-      0 => array(
-        'url' => 'http://www.slac.stanford.edu',
-        'title' => NULL,
-        'attributes' => array(),
-      ),
-    ),
-  ),
-  'field_slac_sc_category' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:Item',
@@ -795,12 +788,10 @@ function slac_service_catalog_demo_uuid_features_default_content() {
   'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
-  'data' => 'b:0;',
-  'date' => '2013-08-26 09:50:54 -0700',
-  'author_uuid' => '2f4dc695-a129-4c43-8441-07db6781150a',
+  'date' => '2013-08-26 19:50:54 +0300',
+  'author_uuid' => '8feecd34-79bc-478c-87fa-5646e70fc140',
 );
   $nodes[] = array(
-  'uid' => 1,
   'title' => 'Computer accounts',
   'log' => '',
   'status' => 1,
@@ -863,7 +854,7 @@ function slac_service_catalog_demo_uuid_features_default_content() {
 ',
         'summary' => '',
         'format' => 'full_html',
-        'safe_value' => '<dl><dt>Platforms</dt>
+        'safe_value' => ' <dl><dt>Platforms</dt>
 <dd><a href="http://www2.slac.stanford.edu/comp/slacwide/account/account.html">Windows</a> :: Microsoft Windows Accounts.
 <ul><li>There are SLAC Windows domain accounts for site-wide centrally maintained Windows applications.</li>
 <li>There are two types of COLLAB Windows domain accounts: Individual and Group. Currently only SharePoint supports COLLAB domain accounts. Request an account via email to <a href="mailto:windows-admin@slac.stanford.edu">windows-admin@slac.stanford.edu</a>
@@ -897,8 +888,42 @@ function slac_service_catalog_demo_uuid_features_default_content() {
 <dd><a href="https://www-internal.slac.stanford.edu/comp/admin/pages/account-search.asp">Search for accounts</a> :: Find computing accounts for specific users</dd>
 <dd><a href="https://www-internal.slac.stanford.edu/instdatabase/procedures/computer-accounts/account-delete.htm">Closing Accounts</a></dd>
 <dd><a href="https://www-internal.slac.stanford.edu/instdatabase/procedures/computer-accounts/account-delete.htm">Terminating SLAC Employees</a> :: Procedures for computer accounts</dd>
-</dl>',
-        'safe_summary' => '',
+</dl> ',
+        'safe_summary' => '  ',
+      ),
+    ),
+  ),
+  'field_slac_sc_category' => array(),
+  'field_slac_sc_eligibility' => array(),
+  'field_slac_sc_rate' => array(
+    'und' => array(
+      0 => array(
+        'value' => 'Free of charge',
+        'format' => NULL,
+        'safe_value' => 'Free of charge',
+      ),
+    ),
+  ),
+  'field_slac_sc_request_link' => array(
+    'und' => array(
+      0 => array(
+        'url' => 'http://www.slac.stanford.edu',
+        'title' => NULL,
+        'attributes' => array(),
+      ),
+    ),
+  ),
+  'field_slac_sc_requirements' => array(
+    'und' => array(
+      0 => array(
+        'value' => 'Must finish ES&H Safety Training',
+        'format' => NULL,
+        'safe_value' => 'Must finish ES&amp;H Safety Training',
+      ),
+      1 => array(
+        'value' => 'Obtain valid security badge',
+        'format' => NULL,
+        'safe_value' => 'Obtain valid security badge',
       ),
     ),
   ),
@@ -923,51 +948,17 @@ WTS :: Windows Terminal Server (Citrix)',
       ),
     ),
   ),
-  'field_slac_sc_eligibility' => array(),
-  'field_slac_sc_requirements' => array(
-    'und' => array(
-      0 => array(
-        'value' => 'Must finish ES&H Safety Training',
-        'format' => NULL,
-        'safe_value' => 'Must finish ES&amp;H Safety Training',
-      ),
-      1 => array(
-        'value' => 'Obtain valid security badge',
-        'format' => NULL,
-        'safe_value' => 'Obtain valid security badge',
-      ),
-    ),
-  ),
   'field_slac_sc_support' => array(
     'und' => array(
       0 => array(
         'value' => '<p>Support is provided by SLAC IT services</p>
 ',
         'format' => 'full_html',
-        'safe_value' => '<p>Support is provided by SLAC IT services</p>
-',
+        'safe_value' => ' <p>Support is provided by SLAC IT services</p>
+ ',
       ),
     ),
   ),
-  'field_slac_sc_rate' => array(
-    'und' => array(
-      0 => array(
-        'value' => 'Free of charge',
-        'format' => NULL,
-        'safe_value' => 'Free of charge',
-      ),
-    ),
-  ),
-  'field_slac_sc_request_link' => array(
-    'und' => array(
-      0 => array(
-        'url' => 'http://www.slac.stanford.edu',
-        'title' => NULL,
-        'attributes' => array(),
-      ),
-    ),
-  ),
-  'field_slac_sc_category' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:Item',
@@ -1029,12 +1020,10 @@ WTS :: Windows Terminal Server (Citrix)',
   'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
-  'data' => 'b:0;',
-  'date' => '2013-08-26 09:43:52 -0700',
-  'author_uuid' => '2f4dc695-a129-4c43-8441-07db6781150a',
+  'date' => '2013-08-26 19:43:52 +0300',
+  'author_uuid' => '8feecd34-79bc-478c-87fa-5646e70fc140',
 );
   $nodes[] = array(
-  'uid' => 1,
   'title' => 'SLAC Email',
   'log' => '',
   'status' => 1,
@@ -1128,7 +1117,7 @@ WTS :: Windows Terminal Server (Citrix)',
 ',
         'summary' => '',
         'format' => 'full_html',
-        'safe_value' => '<dl><dt>Client Configurations and Forwarding</dt>
+        'safe_value' => ' <dl><dt>Client Configurations and Forwarding</dt>
 </dl><blockquote><table border="0" id="table6" width="100%"><tbody><tr><td width="50%"><a href="http://www2.slac.stanford.edu/comp/messaging/Installing/default.htm">Install &amp; Configure Pages</a></td>
 <td width="50%"><a href="https://email.slac.stanford.edu/owa">Read E-mail via Web Now</a></td>
 </tr><tr><td width="50%"><a href="http://www2.slac.stanford.edu/comp/messaging/Reference/exch2007-whattoexpect.htm">What to Expect with Exchange 2007</a></td>
@@ -1152,11 +1141,16 @@ WTS :: Windows Terminal Server (Citrix)',
 </dl><blockquote><table border="0" id="table8" width="100%"><tbody><tr><td><a href="https://win-password.slac.stanford.edu/">Change Your Windows Password Here</a></td>
 </tr></tbody></table></blockquote>
 <p> </p>
-',
-        'safe_summary' => '',
+ ',
+        'safe_summary' => '  ',
       ),
     ),
   ),
+  'field_slac_sc_category' => array(),
+  'field_slac_sc_eligibility' => array(),
+  'field_slac_sc_rate' => array(),
+  'field_slac_sc_request_link' => array(),
+  'field_slac_sc_requirements' => array(),
   'field_slac_sc_service_overview' => array(
     'und' => array(
       0 => array(
@@ -1166,22 +1160,17 @@ WTS :: Windows Terminal Server (Citrix)',
       ),
     ),
   ),
-  'field_slac_sc_eligibility' => array(),
-  'field_slac_sc_requirements' => array(),
   'field_slac_sc_support' => array(
     'und' => array(
       0 => array(
         'value' => '<p>Support is provided by SLAC IT Services</p>
 ',
         'format' => 'full_html',
-        'safe_value' => '<p>Support is provided by SLAC IT Services</p>
-',
+        'safe_value' => ' <p>Support is provided by SLAC IT Services</p>
+ ',
       ),
     ),
   ),
-  'field_slac_sc_rate' => array(),
-  'field_slac_sc_request_link' => array(),
-  'field_slac_sc_category' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:Item',
@@ -1243,9 +1232,8 @@ WTS :: Windows Terminal Server (Citrix)',
   'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
-  'data' => 'b:0;',
-  'date' => '2013-08-26 09:58:12 -0700',
-  'author_uuid' => '2f4dc695-a129-4c43-8441-07db6781150a',
+  'date' => '2013-08-26 19:58:12 +0300',
+  'author_uuid' => '8feecd34-79bc-478c-87fa-5646e70fc140',
 );
   return $nodes;
 }
