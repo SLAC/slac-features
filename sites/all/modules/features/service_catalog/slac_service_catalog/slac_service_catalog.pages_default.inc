@@ -354,10 +354,31 @@ function slac_service_catalog_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'Service Catalog. Add a new service';
   $page->admin_description = '';
-  $page->path = 'services/add-new-service';
+  $page->path = 'node/%node/add-new-service';
   $page->access = array(
     'type' => 'none',
     'settings' => NULL,
+    'plugins' => array(
+      0 => array(
+        'name' => 'node_title',
+        'settings' => array(
+          'title' => 'Services',
+        ),
+        'context' => 'argument_entity_id:node_1',
+        'not' => FALSE,
+      ),
+      1 => array(
+        'name' => 'node_type',
+        'settings' => array(
+          'type' => array(
+            'landing_page' => 'landing_page',
+          ),
+        ),
+        'context' => 'argument_entity_id:node_1',
+        'not' => FALSE,
+      ),
+    ),
+    'logic' => 'and',
   );
   $page->menu = array(
     'type' => 'tab',
@@ -371,7 +392,14 @@ function slac_service_catalog_default_page_manager_pages() {
       'weight' => '0',
     ),
   );
-  $page->arguments = array();
+  $page->arguments = array(
+    'node' => array(
+      'id' => 1,
+      'identifier' => 'Node: ID',
+      'name' => 'entity_id:node',
+      'settings' => array(),
+    ),
+  );
   $page->conf = array(
     'admin_paths' => FALSE,
   );
@@ -390,6 +418,29 @@ function slac_service_catalog_default_page_manager_pages() {
     'relationships' => array(),
     'code' => '301',
     'destination' => 'node/add/slac-sc-catalog-item?destination=services',
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'node_title',
+          'settings' => array(
+            'title' => 'Services',
+          ),
+          'context' => 'argument_entity_id:node_1',
+          'not' => FALSE,
+        ),
+        1 => array(
+          'name' => 'node_type',
+          'settings' => array(
+            'type' => array(
+              'landing_page' => 'landing_page',
+            ),
+          ),
+          'context' => 'argument_entity_id:node_1',
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
   );
   $page->default_handlers[$handler->name] = $handler;
   $pages['service_catalog_add_a_new_service'] = $page;
@@ -401,10 +452,31 @@ function slac_service_catalog_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'Service Catalog. Manage self help topics';
   $page->admin_description = '';
-  $page->path = 'services/manage-self-help-topic';
+  $page->path = 'node/%node/manage-self-help-topic';
   $page->access = array(
     'type' => 'none',
     'settings' => NULL,
+    'plugins' => array(
+      0 => array(
+        'name' => 'node_title',
+        'settings' => array(
+          'title' => 'Services',
+        ),
+        'context' => 'argument_entity_id:node_1',
+        'not' => FALSE,
+      ),
+      1 => array(
+        'name' => 'node_type',
+        'settings' => array(
+          'type' => array(
+            'landing_page' => 'landing_page',
+          ),
+        ),
+        'context' => 'argument_entity_id:node_1',
+        'not' => FALSE,
+      ),
+    ),
+    'logic' => 'and',
   );
   $page->menu = array(
     'type' => 'tab',
@@ -418,7 +490,14 @@ function slac_service_catalog_default_page_manager_pages() {
       'weight' => '0',
     ),
   );
-  $page->arguments = array();
+  $page->arguments = array(
+    'node' => array(
+      'id' => 1,
+      'identifier' => 'Node: ID',
+      'name' => 'entity_id:node',
+      'settings' => array(),
+    ),
+  );
   $page->conf = array(
     'admin_paths' => FALSE,
   );
@@ -448,10 +527,31 @@ function slac_service_catalog_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'Service Catalog. Manage service category';
   $page->admin_description = '';
-  $page->path = 'services/manage-service-category';
+  $page->path = 'node/%node/manage-service-category';
   $page->access = array(
     'type' => 'none',
     'settings' => NULL,
+    'plugins' => array(
+      0 => array(
+        'name' => 'node_title',
+        'settings' => array(
+          'title' => 'Services',
+        ),
+        'context' => 'argument_entity_id:node_1',
+        'not' => FALSE,
+      ),
+      1 => array(
+        'name' => 'node_type',
+        'settings' => array(
+          'type' => array(
+            'landing_page' => 'landing_page',
+          ),
+        ),
+        'context' => 'argument_entity_id:node_1',
+        'not' => FALSE,
+      ),
+    ),
+    'logic' => 'and',
   );
   $page->menu = array(
     'type' => 'tab',
@@ -465,7 +565,14 @@ function slac_service_catalog_default_page_manager_pages() {
       'weight' => '0',
     ),
   );
-  $page->arguments = array();
+  $page->arguments = array(
+    'node' => array(
+      'id' => 1,
+      'identifier' => 'Node: ID',
+      'name' => 'entity_id:node',
+      'settings' => array(),
+    ),
+  );
   $page->conf = array(
     'admin_paths' => FALSE,
   );
@@ -495,10 +602,31 @@ function slac_service_catalog_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'Service Catalog. Submit support request';
   $page->admin_description = '';
-  $page->path = 'services/add-support-request';
+  $page->path = 'node/%node/add-support-request';
   $page->access = array(
     'type' => 'none',
     'settings' => NULL,
+    'plugins' => array(
+      0 => array(
+        'name' => 'node_title',
+        'settings' => array(
+          'title' => 'Services',
+        ),
+        'context' => 'argument_entity_id:node_1',
+        'not' => FALSE,
+      ),
+      1 => array(
+        'name' => 'node_type',
+        'settings' => array(
+          'type' => array(
+            'landing_page' => 'landing_page',
+          ),
+        ),
+        'context' => 'argument_entity_id:node_1',
+        'not' => FALSE,
+      ),
+    ),
+    'logic' => 'and',
   );
   $page->menu = array(
     'type' => 'tab',
@@ -512,7 +640,14 @@ function slac_service_catalog_default_page_manager_pages() {
       'weight' => '0',
     ),
   );
-  $page->arguments = array();
+  $page->arguments = array(
+    'node' => array(
+      'id' => 1,
+      'identifier' => 'Node: ID',
+      'name' => 'entity_id:node',
+      'settings' => array(),
+    ),
+  );
   $page->conf = array(
     'admin_paths' => FALSE,
   );
@@ -542,10 +677,31 @@ function slac_service_catalog_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'Service Catalog. View support queue';
   $page->admin_description = '';
-  $page->path = 'services/support-queue';
+  $page->path = 'node/%node/support-queue';
   $page->access = array(
     'type' => 'none',
     'settings' => NULL,
+    'plugins' => array(
+      0 => array(
+        'name' => 'node_title',
+        'settings' => array(
+          'title' => 'Services',
+        ),
+        'context' => 'argument_entity_id:node_1',
+        'not' => FALSE,
+      ),
+      1 => array(
+        'name' => 'node_type',
+        'settings' => array(
+          'type' => array(
+            'landing_page' => 'landing_page',
+          ),
+        ),
+        'context' => 'argument_entity_id:node_1',
+        'not' => FALSE,
+      ),
+    ),
+    'logic' => 'and',
   );
   $page->menu = array(
     'type' => 'tab',
@@ -559,7 +715,14 @@ function slac_service_catalog_default_page_manager_pages() {
       'weight' => '0',
     ),
   );
-  $page->arguments = array();
+  $page->arguments = array(
+    'node' => array(
+      'id' => 1,
+      'identifier' => 'Node: ID',
+      'name' => 'entity_id:node',
+      'settings' => array(),
+    ),
+  );
   $page->conf = array(
     'admin_paths' => FALSE,
   );
