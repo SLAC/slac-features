@@ -1,0 +1,22 @@
+diff --git a/sites/all/modules/contrib/profile2/profile2.module b/sites/all/modules/contrib/profile2/profile2.module
+index e384cde..e726f93 100644
+--- a/sites/all/modules/contrib/profile2/profile2.module
++++ b/sites/all/modules/contrib/profile2/profile2.module
+@@ -42,10 +42,13 @@ function profile2_entity_info() {
+   );
+ 
+   // Add bundle info but bypass entity_load() as we cannot use it here.
+-  $types = db_select('profile_type', 'p')
+-    ->fields('p')
+-    ->execute()
+-    ->fetchAllAssoc('type');
++  $types = array();
++  if (db_table_exists('profile_type')) {
++    $types = db_select('profile_type', 'p')
++      ->fields('p')
++      ->execute()
++      ->fetchAllAssoc('type');
++  }
+ 
+   foreach ($types as $type => $info) {
+     $return['profile2']['bundles'][$type] = array(
