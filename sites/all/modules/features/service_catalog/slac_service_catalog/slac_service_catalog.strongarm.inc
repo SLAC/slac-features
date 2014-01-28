@@ -134,7 +134,7 @@ function slac_service_catalog_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_taxonomy_term_kb_categories_pattern';
-  $strongarm->value = '';
+  $strongarm->value = 'services/category/[node:title]';
   $export['pathauto_taxonomy_term_kb_categories_pattern'] = $strongarm;
 
   return $export;
