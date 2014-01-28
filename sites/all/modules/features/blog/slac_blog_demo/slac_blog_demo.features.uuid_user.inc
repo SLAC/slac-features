@@ -29,24 +29,6 @@ function slac_blog_demo_uuid_features_default_users() {
   'roles' => array(
     2 => 'authenticated user',
   ),
-  'field_first_name' => array(
-    'und' => array(
-      0 => array(
-        'value' => 'Megan Erin',
-        'format' => NULL,
-        'safe_value' => 'Megan Erin',
-      ),
-    ),
-  ),
-  'field_last_name' => array(
-    'und' => array(
-      0 => array(
-        'value' => 'Miller',
-        'format' => NULL,
-        'safe_value' => 'Miller',
-      ),
-    ),
-  ),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:UserAccount',
@@ -63,7 +45,7 @@ function slac_blog_demo_uuid_features_default_users() {
       'type' => 'rel',
     ),
   ),
-  'date' => '2013-11-09 02:16:44 -0800',
+  'date' => '2013-11-09 12:16:44 +0200',
 );
   $users[] = array(
   'name' => 'usertest2',
@@ -84,24 +66,6 @@ function slac_blog_demo_uuid_features_default_users() {
   'roles' => array(
     2 => 'authenticated user',
   ),
-  'field_first_name' => array(
-    'und' => array(
-      0 => array(
-        'value' => 'Cynthia',
-        'format' => NULL,
-        'safe_value' => 'Cynthia',
-      ),
-    ),
-  ),
-  'field_last_name' => array(
-    'und' => array(
-      0 => array(
-        'value' => 'Mijares',
-        'format' => NULL,
-        'safe_value' => 'Mijares',
-      ),
-    ),
-  ),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:UserAccount',
@@ -118,7 +82,7 @@ function slac_blog_demo_uuid_features_default_users() {
       'type' => 'rel',
     ),
   ),
-  'date' => '2013-11-09 02:18:58 -0800',
+  'date' => '2013-11-09 12:18:58 +0200',
 );
   $users[] = array(
   'name' => 'usertest3',
@@ -139,24 +103,6 @@ function slac_blog_demo_uuid_features_default_users() {
   'roles' => array(
     2 => 'authenticated user',
   ),
-  'field_first_name' => array(
-    'und' => array(
-      0 => array(
-        'value' => 'John',
-        'format' => NULL,
-        'safe_value' => 'John',
-      ),
-    ),
-  ),
-  'field_last_name' => array(
-    'und' => array(
-      0 => array(
-        'value' => 'Bickar',
-        'format' => NULL,
-        'safe_value' => 'Bickar',
-      ),
-    ),
-  ),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:UserAccount',
@@ -173,7 +119,7 @@ function slac_blog_demo_uuid_features_default_users() {
       'type' => 'rel',
     ),
   ),
-  'date' => '2013-11-09 02:19:30 -0800',
+  'date' => '2013-11-09 12:19:30 +0200',
 );
   return $users;
 }
