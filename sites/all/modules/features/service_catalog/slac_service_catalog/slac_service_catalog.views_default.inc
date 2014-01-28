@@ -98,7 +98,7 @@ function slac_service_catalog_views_default_views() {
   $handler->display->display_options['filters']['vid']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['filters']['vid']['field'] = 'vid';
   $handler->display->display_options['filters']['vid']['value'] = array(
-    6 => '6',
+    10 => '10',
   );
 
   /* Display: Category A-Z */
