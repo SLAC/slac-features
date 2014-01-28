@@ -2,7 +2,6 @@ name = SLAC Mini Slideshow
 description = Provides mini slideshow functionality.
 core = 7.x
 package = SLAC
-php = 5.2.4
 dependencies[] = features
 dependencies[] = field_collection
 dependencies[] = field_slideshow

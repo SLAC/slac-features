@@ -2,7 +2,6 @@ name = SLAC People Slideshow
 description = Module direct download files or images.
 core = 7.x
 package = PP
-php = 5.2.4
 dependencies[] = color_field
 dependencies[] = features
 dependencies[] = field_collection

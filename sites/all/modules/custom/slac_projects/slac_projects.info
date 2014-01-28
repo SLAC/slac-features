@@ -2,7 +2,6 @@ name = SLAC Projects
 description = Provide new bundle for FPP
 core = 7.x
 package = SLAC
-php = 5.2.4
 dependencies[] = features
 dependencies[] = field_collection
 dependencies[] = fieldable_panels_panes

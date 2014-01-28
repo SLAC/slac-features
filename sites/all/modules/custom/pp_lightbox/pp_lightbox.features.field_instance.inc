@@ -17,7 +17,19 @@ function pp_lightbox_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Image description to be shown in the lightbox.',
     'display' => array(
+      'crop_crop_kb_article_landscape' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'crop_crop_landscape' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'crop_crop_news_landscape' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -42,6 +54,12 @@ function pp_lightbox_field_default_field_instances() {
         'weight' => 0,
       ),
       'crop_news_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'crop_slac_kb_article_image_details' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',

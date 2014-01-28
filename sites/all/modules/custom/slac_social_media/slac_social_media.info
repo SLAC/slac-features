@@ -1,8 +1,7 @@
 name = SLAC Social Media
 description = Provide new bundle for FPP to add social media
-package = SLAC
 core = 7.x
-
+package = SLAC
 dependencies[] = ctools
 dependencies[] = features
 dependencies[] = fieldable_panels_panes
