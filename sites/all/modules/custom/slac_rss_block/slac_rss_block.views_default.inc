@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * slac_rss.views_default.inc
+ * slac_rss_block.views_default.inc
  */
 
 /**
