@@ -194,7 +194,6 @@ features[user_permission][] = delete own video files
 features[user_permission][] = delete own webform content
 features[user_permission][] = delete own webform submissions
 features[user_permission][] = delete revisions
-features[user_permission][] = administer taxonomy
 features[user_permission][] = display drupal links
 features[user_permission][] = download any audio files
 features[user_permission][] = download any document files

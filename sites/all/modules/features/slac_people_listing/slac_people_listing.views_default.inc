@@ -194,6 +194,7 @@ function slac_people_listing_views_default_views() {
   $handler->display->display_options['arguments']['field_prf_contact_lname_value']['field'] = 'field_prf_contact_lname_value';
   $handler->display->display_options['arguments']['field_prf_contact_lname_value']['relationship'] = 'profile';
   $handler->display->display_options['arguments']['field_prf_contact_lname_value']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['field_prf_contact_lname_value']['exception']['title'] = 'People Listing: All';
   $handler->display->display_options['arguments']['field_prf_contact_lname_value']['title_enable'] = TRUE;
   $handler->display->display_options['arguments']['field_prf_contact_lname_value']['title'] = 'People Listing: %1';
   $handler->display->display_options['arguments']['field_prf_contact_lname_value']['default_argument_type'] = 'raw';
@@ -202,7 +203,7 @@ function slac_people_listing_views_default_views() {
   $handler->display->display_options['arguments']['field_prf_contact_lname_value']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['field_prf_contact_lname_value']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['arguments']['field_prf_contact_lname_value']['specify_validation'] = TRUE;
-  $handler->display->display_options['arguments']['field_prf_contact_lname_value']['validate']['fail'] = 'empty';
+  $handler->display->display_options['arguments']['field_prf_contact_lname_value']['validate']['fail'] = 'access denied';
   $handler->display->display_options['arguments']['field_prf_contact_lname_value']['glossary'] = TRUE;
   $handler->display->display_options['arguments']['field_prf_contact_lname_value']['limit'] = '1';
   $handler->display->display_options['arguments']['field_prf_contact_lname_value']['case'] = 'upper';
@@ -314,6 +315,20 @@ function slac_people_listing_views_default_views() {
   $handler->display->display_options['fields']['pid']['id'] = 'pid';
   $handler->display->display_options['fields']['pid']['table'] = 'profile';
   $handler->display->display_options['fields']['pid']['field'] = 'pid';
+  /* Contextual filter: User: Uid */
+  $handler->display->display_options['arguments']['uid']['id'] = 'uid';
+  $handler->display->display_options['arguments']['uid']['table'] = 'users';
+  $handler->display->display_options['arguments']['uid']['field'] = 'uid';
+  $handler->display->display_options['arguments']['uid']['relationship'] = 'user';
+  $handler->display->display_options['arguments']['uid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['uid']['default_argument_type'] = 'user';
+  $handler->display->display_options['arguments']['uid']['default_argument_options']['user'] = FALSE;
+  $handler->display->display_options['arguments']['uid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['uid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['uid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['uid']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['uid']['validate']['type'] = 'user';
+  $handler->display->display_options['arguments']['uid']['validate']['fail'] = 'access denied';
   /* Filter criterion: Profile: User uid */
   $handler->display->display_options['filters']['user']['id'] = 'user';
   $handler->display->display_options['filters']['user']['table'] = 'profile';
@@ -411,20 +426,6 @@ function slac_people_listing_views_default_views() {
   $handler->display->display_options['fields']['field_prf_contact_website']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_prf_contact_website']['multi_type'] = 'ul';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: User: Name */
-  $handler->display->display_options['arguments']['name']['id'] = 'name';
-  $handler->display->display_options['arguments']['name']['table'] = 'users';
-  $handler->display->display_options['arguments']['name']['field'] = 'name';
-  $handler->display->display_options['arguments']['name']['relationship'] = 'user';
-  $handler->display->display_options['arguments']['name']['default_action'] = 'default';
-  $handler->display->display_options['arguments']['name']['default_argument_type'] = 'raw';
-  $handler->display->display_options['arguments']['name']['default_argument_options']['index'] = '1';
-  $handler->display->display_options['arguments']['name']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['name']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['name']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['name']['specify_validation'] = TRUE;
-  $handler->display->display_options['arguments']['name']['validate']['fail'] = 'access denied';
-  $handler->display->display_options['arguments']['name']['limit'] = '0';
   /* Contextual filter: Profile: Type */
   $handler->display->display_options['arguments']['type']['id'] = 'type';
   $handler->display->display_options['arguments']['type']['table'] = 'profile';
@@ -436,6 +437,20 @@ function slac_people_listing_views_default_views() {
   $handler->display->display_options['arguments']['type']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['type']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['arguments']['type']['limit'] = '0';
+  /* Contextual filter: User: Uid */
+  $handler->display->display_options['arguments']['uid']['id'] = 'uid';
+  $handler->display->display_options['arguments']['uid']['table'] = 'users';
+  $handler->display->display_options['arguments']['uid']['field'] = 'uid';
+  $handler->display->display_options['arguments']['uid']['relationship'] = 'user';
+  $handler->display->display_options['arguments']['uid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['uid']['default_argument_type'] = 'user';
+  $handler->display->display_options['arguments']['uid']['default_argument_options']['user'] = FALSE;
+  $handler->display->display_options['arguments']['uid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['uid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['uid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['uid']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['uid']['validate']['type'] = 'user';
+  $handler->display->display_options['arguments']['uid']['validate']['fail'] = 'access denied';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   $handler->display->display_options['pane_category']['name'] = 'Profile element';
@@ -536,22 +551,20 @@ function slac_people_listing_views_default_views() {
   $handler->display->display_options['fields']['uid']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['uid']['link_to_user'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: User: Name */
-  $handler->display->display_options['arguments']['name']['id'] = 'name';
-  $handler->display->display_options['arguments']['name']['table'] = 'users';
-  $handler->display->display_options['arguments']['name']['field'] = 'name';
-  $handler->display->display_options['arguments']['name']['relationship'] = 'user';
-  $handler->display->display_options['arguments']['name']['default_action'] = 'default';
-  $handler->display->display_options['arguments']['name']['default_argument_type'] = 'raw';
-  $handler->display->display_options['arguments']['name']['default_argument_options']['index'] = '1';
-  $handler->display->display_options['arguments']['name']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['name']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['name']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['name']['specify_validation'] = TRUE;
-  $handler->display->display_options['arguments']['name']['validate']['type'] = 'user';
-  $handler->display->display_options['arguments']['name']['validate_options']['type'] = 'name';
-  $handler->display->display_options['arguments']['name']['validate']['fail'] = 'access denied';
-  $handler->display->display_options['arguments']['name']['limit'] = '0';
+  /* Contextual filter: User: Uid */
+  $handler->display->display_options['arguments']['uid']['id'] = 'uid';
+  $handler->display->display_options['arguments']['uid']['table'] = 'users';
+  $handler->display->display_options['arguments']['uid']['field'] = 'uid';
+  $handler->display->display_options['arguments']['uid']['relationship'] = 'user';
+  $handler->display->display_options['arguments']['uid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['uid']['default_argument_type'] = 'user';
+  $handler->display->display_options['arguments']['uid']['default_argument_options']['user'] = FALSE;
+  $handler->display->display_options['arguments']['uid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['uid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['uid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['uid']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['uid']['validate']['type'] = 'user';
+  $handler->display->display_options['arguments']['uid']['validate']['fail'] = 'access denied';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: User: Name */
@@ -780,21 +793,6 @@ function slac_people_listing_views_default_views() {
   $handler->display->display_options['sorts']['type']['table'] = 'profile';
   $handler->display->display_options['sorts']['type']['field'] = 'type';
   $handler->display->display_options['sorts']['type']['order'] = 'DESC';
-  $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: User: Name */
-  $handler->display->display_options['arguments']['name']['id'] = 'name';
-  $handler->display->display_options['arguments']['name']['table'] = 'users';
-  $handler->display->display_options['arguments']['name']['field'] = 'name';
-  $handler->display->display_options['arguments']['name']['relationship'] = 'user';
-  $handler->display->display_options['arguments']['name']['default_action'] = 'default';
-  $handler->display->display_options['arguments']['name']['default_argument_type'] = 'raw';
-  $handler->display->display_options['arguments']['name']['default_argument_options']['index'] = '1';
-  $handler->display->display_options['arguments']['name']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['name']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['name']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['name']['specify_validation'] = TRUE;
-  $handler->display->display_options['arguments']['name']['validate']['fail'] = 'access denied';
-  $handler->display->display_options['arguments']['name']['limit'] = '0';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Profile: Type */

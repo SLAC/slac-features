@@ -197,6 +197,8 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'access user profiles',
     'roles' => array(
       'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
       'site owner' => 'site owner',
     ),
     'module' => 'user',
@@ -1361,16 +1363,6 @@ function slac_extorg_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: administer taxonomy.
-  $permissions['administer taxonomy'] = array(
-    'name' => 'administer taxonomy',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'site owner' => 'site owner',
-    ),
-    'module' => 'taxonomy',
-  );
-
   // Exported permission: display drupal links.
   $permissions['display drupal links'] = array(
     'name' => 'display drupal links',
@@ -2189,8 +2181,6 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'view any bio profile',
     'roles' => array(
       'administrator' => 'administrator',
-      'anonymous user' => 'anonymous user',
-      'authenticated user' => 'authenticated user',
     ),
     'module' => 'profile2',
   );
@@ -2210,8 +2200,6 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'view any contact profile',
     'roles' => array(
       'administrator' => 'administrator',
-      'anonymous user' => 'anonymous user',
-      'authenticated user' => 'authenticated user',
     ),
     'module' => 'profile2',
   );
@@ -2251,8 +2239,6 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'view any social_media profile',
     'roles' => array(
       'administrator' => 'administrator',
-      'anonymous user' => 'anonymous user',
-      'authenticated user' => 'authenticated user',
     ),
     'module' => 'profile2',
   );
@@ -2327,7 +2313,6 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'view own bio profile',
     'roles' => array(
       'administrator' => 'administrator',
-      'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
       'site owner' => 'site owner',
     ),
@@ -2339,7 +2324,6 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'view own contact profile',
     'roles' => array(
       'administrator' => 'administrator',
-      'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
       'site owner' => 'site owner',
     ),
@@ -2378,7 +2362,6 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'view own social_media profile',
     'roles' => array(
       'administrator' => 'administrator',
-      'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
       'site owner' => 'site owner',
     ),

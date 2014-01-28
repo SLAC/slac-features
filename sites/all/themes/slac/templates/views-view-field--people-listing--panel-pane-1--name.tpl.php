@@ -1,6 +1,6 @@
 <?php
 
-$link = drupal_get_path_alias('profile/' . $row->users_name);
+$link = drupal_get_path_alias('user/' . $row->uid);
 
 ?>
 
