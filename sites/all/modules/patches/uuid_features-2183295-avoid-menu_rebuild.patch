@@ -1,0 +1,63 @@
+diff --git a/sites/all/modules/contrib/uuid_features/includes/uuid_node.features.inc b/sites/all/modules/contrib/uuid_features/includes/uuid_node.features.inc
+index 869d71b..f3ab9c0 100755
+--- a/sites/all/modules/contrib/uuid_features/includes/uuid_node.features.inc
++++ b/sites/all/modules/contrib/uuid_features/includes/uuid_node.features.inc
+@@ -142,6 +142,9 @@ function uuid_node_features_rebuild($module) {
+   // Import the terms first.
+   uuid_term_features_rebuild($module);
+ 
++  variable_set('menu_rebuild_needed', FALSE);
++  lock_acquire('menu_rebuild');
++
+   $nodes = module_invoke($module, 'uuid_features_default_content');
+   if (!empty($nodes)) {
+     module_load_include('inc', 'node', 'node.pages');
+@@ -189,4 +192,5 @@ function uuid_node_features_rebuild($module) {
+       node_save($node);
+     }
+   }
++  lock_release('menu_rebuild');
+ }
+diff --git a/sites/all/modules/contrib/uuid_features/includes/uuid_term.features.inc b/sites/all/modules/contrib/uuid_features/includes/uuid_term.features.inc
+index 1f59713..16f3845 100644
+--- a/sites/all/modules/contrib/uuid_features/includes/uuid_term.features.inc
++++ b/sites/all/modules/contrib/uuid_features/includes/uuid_term.features.inc
+@@ -136,6 +136,9 @@ function uuid_term_features_revert($module) {
+  * Rebuilds terms based on UUID from code defaults.
+  */
+ function uuid_term_features_rebuild($module) {
++  variable_set('menu_rebuild_needed', FALSE);
++  lock_acquire('menu_rebuild');
++
+   // Import the vocabularies first.
+   taxonomy_features_rebuild($module);
+   field_features_rebuild($module);
+@@ -168,5 +171,7 @@ function uuid_term_features_rebuild($module) {
+       }
+     }
+   }
++
++  lock_release('menu_rebuild');
+ }
+ 
+diff --git a/sites/all/modules/contrib/uuid_features/includes/uuid_user.features.inc b/sites/all/modules/contrib/uuid_features/includes/uuid_user.features.inc
+index 1e0be5a..29809f3 100755
+--- a/sites/all/modules/contrib/uuid_features/includes/uuid_user.features.inc
++++ b/sites/all/modules/contrib/uuid_features/includes/uuid_user.features.inc
+@@ -103,6 +103,9 @@ function uuid_user_features_revert($module) {
+  * Rebuilds users based on UUID from code defaults.
+  */
+ function uuid_user_features_rebuild($module) {
++  variable_set('menu_rebuild_needed', FALSE);
++  lock_acquire('menu_rebuild');
++
+   $users = module_invoke($module, 'uuid_features_default_users');
+   if (!empty($users)) {
+     module_load_include('inc', 'user', 'user.pages');
+@@ -131,4 +134,6 @@ function uuid_user_features_rebuild($module) {
+       unset($existing);
+     }
+   }
++
++  lock_release('menu_rebuild');
+ }

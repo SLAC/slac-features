@@ -103,6 +103,9 @@ function uuid_user_features_revert($module) {
  * Rebuilds users based on UUID from code defaults.
  */
 function uuid_user_features_rebuild($module) {
+  variable_set('menu_rebuild_needed', FALSE);
+  lock_acquire('menu_rebuild');
+
   $users = module_invoke($module, 'uuid_features_default_users');
   if (!empty($users)) {
     module_load_include('inc', 'user', 'user.pages');
@@ -131,4 +134,6 @@ function uuid_user_features_rebuild($module) {
       unset($existing);
     }
   }
+
+  lock_release('menu_rebuild');
 }

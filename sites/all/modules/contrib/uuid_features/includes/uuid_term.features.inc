@@ -136,6 +136,9 @@ function uuid_term_features_revert($module) {
  * Rebuilds terms based on UUID from code defaults.
  */
 function uuid_term_features_rebuild($module) {
+  variable_set('menu_rebuild_needed', FALSE);
+  lock_acquire('menu_rebuild');
+
   // Import the vocabularies first.
   taxonomy_features_rebuild($module);
   field_features_rebuild($module);
@@ -168,5 +171,7 @@ function uuid_term_features_rebuild($module) {
       }
     }
   }
+
+  lock_release('menu_rebuild');
 }
 
