@@ -17,6 +17,7 @@ function slac_news_demo_uuid_features_default_terms() {
     'weight' => 0,
     'uuid' => '0ce6dd19-dde1-4daa-ae83-1879947970ac',
     'vocabulary_machine_name' => 'slac_news_tags',
+    'metatags' => array(),
   );
   $terms[] = array(
     'name' => 'laser',
@@ -25,6 +26,7 @@ function slac_news_demo_uuid_features_default_terms() {
     'weight' => 0,
     'uuid' => '98be32f4-4f1a-4cbc-98be-01c4fc935bf8',
     'vocabulary_machine_name' => 'slac_news_tags',
+    'metatags' => array(),
   );
   $terms[] = array(
     'name' => 'cells',
@@ -33,6 +35,7 @@ function slac_news_demo_uuid_features_default_terms() {
     'weight' => 0,
     'uuid' => 'aaa4a1c8-fb65-4eeb-9bfe-909031f5e18b',
     'vocabulary_machine_name' => 'slac_news_tags',
+    'metatags' => array(),
   );
   $terms[] = array(
     'name' => 'stanford',
@@ -41,6 +44,7 @@ function slac_news_demo_uuid_features_default_terms() {
     'weight' => 0,
     'uuid' => 'dad41187-6745-43bc-b95a-7851a7b2c825',
     'vocabulary_machine_name' => 'slac_news_tags',
+    'metatags' => array(),
   );
   return $terms;
 }

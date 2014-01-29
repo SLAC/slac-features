@@ -24,4 +24,5 @@ features[uuid_term][] = 0ce6dd19-dde1-4daa-ae83-1879947970ac
 features[uuid_term][] = 98be32f4-4f1a-4cbc-98be-01c4fc935bf8
 features[uuid_term][] = aaa4a1c8-fb65-4eeb-9bfe-909031f5e18b
 features[uuid_term][] = dad41187-6745-43bc-b95a-7851a7b2c825
+features[uuid_user][] = 7588442f-2b14-42b8-b4f2-cb90accaad0d
 no autodetect = 1
