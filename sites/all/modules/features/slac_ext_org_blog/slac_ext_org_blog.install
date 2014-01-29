@@ -219,10 +219,11 @@ function _slac_ext_org_blog_install__menu_item($nid) {
     'expanded' => 0,
   );
   $exists = db_query(
-    "SELECT mlid from {menu_links} WHERE link_title=:link_title AND link_path=:link_path",
+    "SELECT mlid from {menu_links} WHERE link_title=:link_title AND link_path=:link_path AND menu_name=:menu_name",
     array(
       ':link_title' => $item['link_title'],
-      ':link_path' => $item['link_path']
+      ':link_path' => $item['link_path'],
+      ':menu_name' => 'main-menu'
     )
   )->fetchField();
 
