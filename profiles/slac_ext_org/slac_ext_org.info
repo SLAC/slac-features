@@ -140,6 +140,9 @@ dependencies[] = slac_people_listing
 ;Landing page content type
 dependencies[] = landing_page
 
+; Panelized basic page settings
+dependencies[] = slac_basic_page_settings
+
 ;Configurations
 dependencies[] = slac_configuration
 dependencies[] = slac_configurations
