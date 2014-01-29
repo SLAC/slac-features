@@ -2065,7 +2065,8 @@ ul.news-archive-class li .item-list {
 .view-service-catalog-item .views-field-field-slac-sc-support,
 .view-service-catalog-item .views-field-field-slac-sc-request-link,
 .view-service-catalog-item .views-field-field-slac-sc-rate,
-.view-service-catalog-item .views-field-field-slac-sc-requirements {
+.view-service-catalog-item .views-field-field-slac-sc-requirements,
+.view-service-catalog-item .views-field-field-slac-sc-eligibility {
   margin-bottom: 25px; }
 .view-service-catalog-item .view-content .views-row {
   margin-bottom: 5px; }
