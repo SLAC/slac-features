@@ -35,10 +35,12 @@ function slac_service_catalog_demo_uuid_features_default_content() {
 		</div>
 	</div>
 </div>
+
 <div class="field field-name-body field-type-text-with-summary field-label-hidden">
 	<div class="field-items">
 		<div class="field-item even">
 			<h2>Features and benefits</h2>
+
 			<ul>
 				<li>Campus infrastructure integration</li>
 				<li>Regular and scheduled maintenance</li>
@@ -46,9 +48,13 @@ function slac_service_catalog_demo_uuid_features_default_content() {
 				<li>Security auditing and system hardening</li>
 				<li>User and workgroup management</li>
 			</ul>
+
 			<h2>Getting started</h2>
+
 			<p>To learn more about contract server support, please contact&nbsp;<a href="https://stanfordwho.stanford.edu/SWApp/auth/lookup?search=Noah%20Abrahamson">Noah Abrahamson</a>&nbsp;or&nbsp;<a href="http://helpsu.stanford.edu/">submit a HelpSU request</a>.</p>
+
 			<h2>Learn more</h2>
+
 			<ul>
 				<li><a href="https://itservices.stanford.edu/service/contract-support/server">Server Group (CRC)</a></li>
 				<li><a href="https://itservices.stanford.edu/service/server-support/businessdocuments">Business Documents for Contract Support &mdash; Server Support</a></li>
@@ -56,6 +62,7 @@ function slac_service_catalog_demo_uuid_features_default_content() {
 		</div>
 	</div>
 </div>
+
 <p>&nbsp;</p>
 ',
         'summary' => '',
@@ -90,7 +97,14 @@ function slac_service_catalog_demo_uuid_features_default_content() {
       ),
     ),
   ),
-  'field_slac_sc_category' => array(),
+  'field_slac_sc_category' => array(
+    'und' => array(
+      0 => array(
+        'tid' => 65,
+        'uuid' => 'cf2ef1a1-ee93-434b-a103-a0a123dcc6aa',
+      ),
+    ),
+  ),
   'field_slac_sc_eligibility' => array(),
   'field_slac_sc_rate' => array(),
   'field_slac_sc_request_link' => array(
@@ -136,6 +150,7 @@ function slac_service_catalog_demo_uuid_features_default_content() {
       ),
     ),
   ),
+  'metatags' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:Item',
@@ -197,8 +212,8 @@ function slac_service_catalog_demo_uuid_features_default_content() {
   'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
-  'date' => '2013-08-26 19:49:24 +0300',
-  'author_uuid' => '8feecd34-79bc-478c-87fa-5646e70fc140',
+  'date' => '2013-08-26 10:49:24 -0600',
+  'author_uuid' => '5abe7ee7-9114-4d87-bb73-7b2b7ee23b78',
 );
   $nodes[] = array(
   'title' => 'Contract Support',
@@ -225,11 +240,14 @@ function slac_service_catalog_demo_uuid_features_default_content() {
 		</div>
 	</div>
 </div>
+
 <div class="field field-name-body field-type-text-with-summary field-label-hidden">
 	<div class="field-items">
 		<div class="field-item even">
 			<h2>Features</h2>
+
 			<p>We offer a wide range of services, including:</p>
+
 			<ul>
 				<li>Diagnose and troubleshoot almost any computer problem</li>
 				<li>Proactive system security checkups and updates</li>
@@ -246,6 +264,7 @@ function slac_service_catalog_demo_uuid_features_default_content() {
 		</div>
 	</div>
 </div>
+
 <p>&nbsp;</p>
 ',
         'summary' => '',
@@ -282,8 +301,30 @@ function slac_service_catalog_demo_uuid_features_default_content() {
       ),
     ),
   ),
-  'field_slac_sc_category' => array(),
-  'field_slac_sc_eligibility' => array(),
+  'field_slac_sc_category' => array(
+    'und' => array(
+      0 => array(
+        'tid' => 65,
+        'uuid' => 'cf2ef1a1-ee93-434b-a103-a0a123dcc6aa',
+      ),
+    ),
+  ),
+  'field_slac_sc_eligibility' => array(
+    'und' => array(
+      0 => array(
+        'tid' => 67,
+        'uuid' => 'db10ac33-21ec-4d40-bee7-1c34780f1b40',
+      ),
+      1 => array(
+        'tid' => 70,
+        'uuid' => 'f3037fca-b840-4394-9c4e-03ea14b6c4bf',
+      ),
+      2 => array(
+        'tid' => 47,
+        'uuid' => '00e2fef3-0966-49ed-8f3d-e3f8d1cd46c0',
+      ),
+    ),
+  ),
   'field_slac_sc_rate' => array(
     'und' => array(
       0 => array(
@@ -322,13 +363,15 @@ function slac_service_catalog_demo_uuid_features_default_content() {
  ',
       ),
       1 => array(
-        'value' => 'Services are available either in your campus office or at our offices on campus. Carry-In services are performed by appointment and need to be arranged in advance.',
+        'value' => '<p>Services are available either in your campus office or at our offices on campus. Carry-In services are performed by appointment and need to be arranged in advance.</p>
+',
         'format' => 'full_html',
         'safe_value' => ' <p>Services are available either in your campus office or at our offices on campus. Carry-In services are performed by appointment and need to be arranged in advance.</p>
  ',
       ),
     ),
   ),
+  'metatags' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:Item',
@@ -390,8 +433,8 @@ function slac_service_catalog_demo_uuid_features_default_content() {
   'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
-  'date' => '2013-08-26 19:56:10 +0300',
-  'author_uuid' => '8feecd34-79bc-478c-87fa-5646e70fc140',
+  'date' => '2013-08-26 10:56:10 -0600',
+  'author_uuid' => '5abe7ee7-9114-4d87-bb73-7b2b7ee23b78',
 );
   $nodes[] = array(
   'title' => 'MySQL & Oracle',
@@ -415,30 +458,39 @@ function slac_service_catalog_demo_uuid_features_default_content() {
 	<div class="field-items">
 		<div class="field-item even">
 			<p>A variety of complementary Database Administration-related services such as Oracle Real Application Cluster (RAC) support are also available via Ntirety. The Database Administration service provides reliable, secure, and cost-effective database administration, including maintenance, monitoring, and backup.</p>
+
 			<p>24x7 support is provided for production or critical development databases. In addition to standard, day-to-day administrative and maintenance activities, production or critical development databases are continuously monitored to detect potential problems, proactively addressing problems before they can affect service delivery.</p>
+
 			<p>The Database Administration service is available by subscription and is charged monthly to your department&rsquo;s IT Services bill.</p>
 		</div>
 	</div>
 </div>
+
 <div class="field field-name-body field-type-text-with-summary field-label-hidden">
 	<div class="field-items">
 		<div class="field-item even">
 			<h2>Features</h2>
+
 			<ul>
 				<li>monitors and tunes production database environments</li>
 				<li>rapidly responds to critical issues</li>
 				<li>provides backup and recovery, prevents database outage</li>
 				<li>works directly with clients to solve database issues</li>
 			</ul>
+
 			<h2>Getting started</h2>
+
 			<p>To order the Database Administration service use&nbsp;<a href="http://orderit.stanford.edu/">OrderIT</a>&nbsp;or submit a&nbsp;<a href="http://helpsu.stanford.edu/?pcat=dba">HelpSU request</a>&nbsp;under the Request Category: Billable Services and the Request Type: Database Administration Services.</p>
+
 			<h2>Learn more</h2>
+
 			<ul>
 				<li><a href="https://itservices.stanford.edu/service/databaseadministration/businessdocuments">Business Documents for Database Administration</a></li>
 			</ul>
 		</div>
 	</div>
 </div>
+
 <p>&nbsp;</p>
 ',
         'summary' => '',
@@ -473,8 +525,26 @@ function slac_service_catalog_demo_uuid_features_default_content() {
       ),
     ),
   ),
-  'field_slac_sc_category' => array(),
-  'field_slac_sc_eligibility' => array(),
+  'field_slac_sc_category' => array(
+    'und' => array(
+      0 => array(
+        'tid' => 60,
+        'uuid' => 'ac074ab7-4b52-4911-a6b0-3d92f247aa2a',
+      ),
+    ),
+  ),
+  'field_slac_sc_eligibility' => array(
+    'und' => array(
+      0 => array(
+        'tid' => 70,
+        'uuid' => 'f3037fca-b840-4394-9c4e-03ea14b6c4bf',
+      ),
+      1 => array(
+        'tid' => 57,
+        'uuid' => '9d88d219-f7e7-4354-b6ce-accadf586640',
+      ),
+    ),
+  ),
   'field_slac_sc_rate' => array(
     'und' => array(
       0 => array(
@@ -526,6 +596,7 @@ function slac_service_catalog_demo_uuid_features_default_content() {
       ),
     ),
   ),
+  'metatags' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:Item',
@@ -587,8 +658,8 @@ function slac_service_catalog_demo_uuid_features_default_content() {
   'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
-  'date' => '2013-08-26 19:53:56 +0300',
-  'author_uuid' => '8feecd34-79bc-478c-87fa-5646e70fc140',
+  'date' => '2013-08-26 10:53:56 -0600',
+  'author_uuid' => '5abe7ee7-9114-4d87-bb73-7b2b7ee23b78',
 );
   $nodes[] = array(
   'title' => 'Conference computing for visitors',
@@ -609,55 +680,62 @@ function slac_service_catalog_demo_uuid_features_default_content() {
     'und' => array(
       0 => array(
         'value' => '<h2>Computing Resources for Short Term Visitors</h2>
-<p>Visitors of SLAC who are attending conferences, meetings, or short collaborations should review the following computing resources that are available for public use. Visitors staying longer than a few days or those requiring access to SLAC-only resources should register as an Active User with the&nbsp;<a href="http://www.slac.stanford.edu/grp/rd/sluo/SLUO.html#SLUO">SLAC Users Organization</a>&nbsp;to become eligible to open a SLAC computer account.<br />
+
+<p>Visitors of SLAC who are attending conferences, meetings, or short collaborations should review the following computing resources that are available for public use. Visitors staying longer than a few days or those requiring access to SLAC-only resources should register as an Active User with the&nbsp;<a href="http://www.slac.stanford.edu/grp/rd/sluo/SLUO.html#SLUO">SLAC Users Organization</a>&nbsp;to become eligible to open a SLAC computer account.<br>
 	&nbsp;</p>
+
 <table border="0" cellpadding="5" cellspacing="0" width="100%">
 	<tbody>
 		<tr>
-			<td width="10"><img src="http://www2.slac.stanford.edu/computing/helpdesk/images/arrow2.gif" /></td>
+			<td width="10"><img src="http://www2.slac.stanford.edu/computing/helpdesk/images/arrow2.gif"></td>
 			<td width="200"><a href="http://www2.slac.stanford.edu/comp/net/wireless/visitor_net.htm">SLAC Visitor Network</a></td>
 			<td>:: Information about the public computing network at SLAC</td>
 		</tr>
 		<tr>
-			<td><img src="http://www2.slac.stanford.edu/computing/helpdesk/images/arrow2.gif" /></td>
+			<td><img src="http://www2.slac.stanford.edu/computing/helpdesk/images/arrow2.gif"></td>
 			<td><a href="http://www2.slac.stanford.edu/comp/net/wireless/">Wireless Networking</a></td>
 			<td>:: Wireless ( 802.11b ) network access at SLAC</td>
 		</tr>
 		<tr>
-			<td><img src="http://www2.slac.stanford.edu/computing/helpdesk/images/arrow2.gif" /></td>
+			<td><img src="http://www2.slac.stanford.edu/computing/helpdesk/images/arrow2.gif"></td>
 			<td><a href="http://www2.slac.stanford.edu/computing/helpdesk/visitor/resources.asp">Computing Resources</a></td>
 			<td>:: Computing resources for public use at SLAC</td>
 		</tr>
 	</tbody>
 </table>
+
 <p>&nbsp;</p>
+
 <h2>Conference Computing Information</h2>
+
 <p>Organizers of conferences held at SLAC should review the following information regarding the setup of conferences and talks.</p>
+
 <table border="0" cellpadding="5" cellspacing="0" width="100%">
 	<tbody>
 		<tr>
-			<td width="10"><img src="http://www2.slac.stanford.edu/computing/helpdesk/images/arrow2.gif" /></td>
+			<td width="10"><img src="http://www2.slac.stanford.edu/computing/helpdesk/images/arrow2.gif"></td>
 			<td width="200"><a href="http://www.slac.stanford.edu/grp/pao/slaconly.conference.html">Overview</a></td>
 			<td>:: General conference computing information</td>
 		</tr>
 		<tr>
-			<td><img src="http://www2.slac.stanford.edu/computing/helpdesk/images/arrow2.gif" /></td>
+			<td><img src="http://www2.slac.stanford.edu/computing/helpdesk/images/arrow2.gif"></td>
 			<td><a href="http://www2.slac.stanford.edu/computing/helpdesk/visitor/confchecklist.asp">Checklist</a></td>
 			<td>:: Issues and caveats</td>
 		</tr>
 		<tr>
-			<td><img src="http://www2.slac.stanford.edu/computing/helpdesk/images/arrow2.gif" /></td>
+			<td><img src="http://www2.slac.stanford.edu/computing/helpdesk/images/arrow2.gif"></td>
 			<td><a href="http://www2.slac.stanford.edu/computing/helpdesk/visitor/computingsetup.asp">Conference Room Setups</a></td>
 			<td>:: Conference room layouts and equipment types</td>
 		</tr>
 	</tbody>
 </table>
+
 <p>&nbsp;</p>
 ',
         'summary' => '',
         'format' => 'full_html',
         'safe_value' => ' <h2>Computing Resources for Short Term Visitors</h2>
-<p>Visitors of SLAC who are attending conferences, meetings, or short collaborations should review the following computing resources that are available for public use. Visitors staying longer than a few days or those requiring access to SLAC-only resources should register as an Active User with the <a href="http://www.slac.stanford.edu/grp/rd/sluo/SLUO.html#SLUO">SLAC Users Organization</a> to become eligible to open a SLAC computer account.<br />
+<p>Visitors of SLAC who are attending conferences, meetings, or short collaborations should review the following computing resources that are available for public use. Visitors staying longer than a few days or those requiring access to SLAC-only resources should register as an Active User with the <a href="http://www.slac.stanford.edu/grp/rd/sluo/SLUO.html#SLUO">SLAC Users Organization</a> to become eligible to open a SLAC computer account.<br /><br />
 	 </p>
 <table border="0" cellpadding="5" cellspacing="0" width="100%"><tbody><tr><td width="10"><img src="http://www2.slac.stanford.edu/computing/helpdesk/images/arrow2.gif" /></td>
 <td width="200"><a href="http://www2.slac.stanford.edu/comp/net/wireless/visitor_net.htm">SLAC Visitor Network</a></td>
@@ -686,8 +764,34 @@ function slac_service_catalog_demo_uuid_features_default_content() {
       ),
     ),
   ),
-  'field_slac_sc_category' => array(),
-  'field_slac_sc_eligibility' => array(),
+  'field_slac_sc_category' => array(
+    'und' => array(
+      0 => array(
+        'tid' => 56,
+        'uuid' => '83b5b76c-6bd8-4a0c-a580-6aa8b22d9f63',
+      ),
+    ),
+  ),
+  'field_slac_sc_eligibility' => array(
+    'und' => array(
+      0 => array(
+        'tid' => 67,
+        'uuid' => 'db10ac33-21ec-4d40-bee7-1c34780f1b40',
+      ),
+      1 => array(
+        'tid' => 70,
+        'uuid' => 'f3037fca-b840-4394-9c4e-03ea14b6c4bf',
+      ),
+      2 => array(
+        'tid' => 57,
+        'uuid' => '9d88d219-f7e7-4354-b6ce-accadf586640',
+      ),
+      3 => array(
+        'tid' => 47,
+        'uuid' => '00e2fef3-0966-49ed-8f3d-e3f8d1cd46c0',
+      ),
+    ),
+  ),
   'field_slac_sc_rate' => array(),
   'field_slac_sc_request_link' => array(
     'und' => array(
@@ -727,6 +831,7 @@ function slac_service_catalog_demo_uuid_features_default_content() {
       ),
     ),
   ),
+  'metatags' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:Item',
@@ -788,8 +893,8 @@ function slac_service_catalog_demo_uuid_features_default_content() {
   'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
-  'date' => '2013-08-26 19:50:54 +0300',
-  'author_uuid' => '8feecd34-79bc-478c-87fa-5646e70fc140',
+  'date' => '2013-08-26 10:50:54 -0600',
+  'author_uuid' => '5abe7ee7-9114-4d87-bb73-7b2b7ee23b78',
 );
   $nodes[] = array(
   'title' => 'Computer accounts',
@@ -833,6 +938,7 @@ function slac_service_catalog_demo_uuid_features_default_content() {
 	</dd>
 	<dd>
 		<p>Oracle :: Send mail to&nbsp;<a href="mailto:db-admin@slac.stanford.edu">db-admin@slac.stanford.edu</a></p>
+
 		<dl>
 			<dd>
 				<p>Oracle password change&nbsp;<a href="https://oraweb.slac.stanford.edu/pls/slac/change_my_password">https://oraweb.slac.stanford.edu/pls/slac/change_my_password</a></p>
@@ -893,8 +999,30 @@ function slac_service_catalog_demo_uuid_features_default_content() {
       ),
     ),
   ),
-  'field_slac_sc_category' => array(),
-  'field_slac_sc_eligibility' => array(),
+  'field_slac_sc_category' => array(
+    'und' => array(
+      0 => array(
+        'tid' => 52,
+        'uuid' => '40e140d3-4f65-481f-a68f-6d3f43161e13',
+      ),
+    ),
+  ),
+  'field_slac_sc_eligibility' => array(
+    'und' => array(
+      0 => array(
+        'tid' => 67,
+        'uuid' => 'db10ac33-21ec-4d40-bee7-1c34780f1b40',
+      ),
+      1 => array(
+        'tid' => 57,
+        'uuid' => '9d88d219-f7e7-4354-b6ce-accadf586640',
+      ),
+      2 => array(
+        'tid' => 47,
+        'uuid' => '00e2fef3-0966-49ed-8f3d-e3f8d1cd46c0',
+      ),
+    ),
+  ),
   'field_slac_sc_rate' => array(
     'und' => array(
       0 => array(
@@ -959,6 +1087,7 @@ WTS :: Windows Terminal Server (Citrix)',
       ),
     ),
   ),
+  'metatags' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:Item',
@@ -1020,8 +1149,8 @@ WTS :: Windows Terminal Server (Citrix)',
   'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
-  'date' => '2013-08-26 19:43:52 +0300',
-  'author_uuid' => '8feecd34-79bc-478c-87fa-5646e70fc140',
+  'date' => '2013-08-26 10:43:52 -0600',
+  'author_uuid' => '5abe7ee7-9114-4d87-bb73-7b2b7ee23b78',
 );
   $nodes[] = array(
   'title' => 'SLAC Email',
@@ -1044,6 +1173,7 @@ WTS :: Windows Terminal Server (Citrix)',
         'value' => '<dl>
 	<dt>Client Configurations and Forwarding</dt>
 </dl>
+
 <blockquote>
 	<table border="0" id="table6" width="100%">
 		<tbody>
@@ -1058,9 +1188,11 @@ WTS :: Windows Terminal Server (Citrix)',
 		</tbody>
 	</table>
 </blockquote>
+
 <dl>
 	<dt>Frequently Asked Questions</dt>
 </dl>
+
 <blockquote>
 	<table border="0" id="table7" width="100%">
 		<tbody>
@@ -1071,9 +1203,11 @@ WTS :: Windows Terminal Server (Citrix)',
 		</tbody>
 	</table>
 </blockquote>
+
 <dl>
 	<dt>Mailing Lists</dt>
 </dl>
+
 <blockquote>
 	<table border="0" id="table4" width="100%">
 		<tbody>
@@ -1088,9 +1222,11 @@ WTS :: Windows Terminal Server (Citrix)',
 		</tbody>
 	</table>
 </blockquote>
+
 <dl>
 	<dt>Getting Help</dt>
 </dl>
+
 <blockquote>
 	<table border="0" id="table5" width="100%">
 		<tbody>
@@ -1101,9 +1237,11 @@ WTS :: Windows Terminal Server (Citrix)',
 		</tbody>
 	</table>
 </blockquote>
+
 <dl>
 	<dt>Password Changing</dt>
 </dl>
+
 <blockquote>
 	<table border="0" id="table8" width="100%">
 		<tbody>
@@ -1113,6 +1251,7 @@ WTS :: Windows Terminal Server (Citrix)',
 		</tbody>
 	</table>
 </blockquote>
+
 <p>&nbsp;</p>
 ',
         'summary' => '',
@@ -1146,8 +1285,30 @@ WTS :: Windows Terminal Server (Citrix)',
       ),
     ),
   ),
-  'field_slac_sc_category' => array(),
-  'field_slac_sc_eligibility' => array(),
+  'field_slac_sc_category' => array(
+    'und' => array(
+      0 => array(
+        'tid' => 54,
+        'uuid' => '62a170f8-cfd3-4717-a589-c5f1f7910be7',
+      ),
+    ),
+  ),
+  'field_slac_sc_eligibility' => array(
+    'und' => array(
+      0 => array(
+        'tid' => 67,
+        'uuid' => 'db10ac33-21ec-4d40-bee7-1c34780f1b40',
+      ),
+      1 => array(
+        'tid' => 57,
+        'uuid' => '9d88d219-f7e7-4354-b6ce-accadf586640',
+      ),
+      2 => array(
+        'tid' => 47,
+        'uuid' => '00e2fef3-0966-49ed-8f3d-e3f8d1cd46c0',
+      ),
+    ),
+  ),
   'field_slac_sc_rate' => array(),
   'field_slac_sc_request_link' => array(),
   'field_slac_sc_requirements' => array(),
@@ -1171,6 +1332,7 @@ WTS :: Windows Terminal Server (Citrix)',
       ),
     ),
   ),
+  'metatags' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:Item',
@@ -1232,8 +1394,8 @@ WTS :: Windows Terminal Server (Citrix)',
   'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
-  'date' => '2013-08-26 19:58:12 +0300',
-  'author_uuid' => '8feecd34-79bc-478c-87fa-5646e70fc140',
+  'date' => '2013-08-26 10:58:12 -0600',
+  'author_uuid' => '5abe7ee7-9114-4d87-bb73-7b2b7ee23b78',
 );
   return $nodes;
 }
