@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the SLAC Basic Page Settings feature.
+ */
+
+include_once 'slac_basic_page_settings.features.inc';
