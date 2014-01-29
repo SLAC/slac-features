@@ -549,7 +549,6 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'administer panelizer node landing_page context',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
     ),
     'module' => 'panelizer',
   );
@@ -568,7 +567,6 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'administer panelizer node landing_page layout',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
     ),
     'module' => 'panelizer',
   );
@@ -578,7 +576,6 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'administer panelizer node landing_page overview',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
     ),
     'module' => 'panelizer',
   );
@@ -606,7 +603,6 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'administer panelizer node page content',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
     ),
     'module' => 'panelizer',
   );
@@ -634,7 +630,6 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'administer panelizer node page layout',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
     ),
     'module' => 'panelizer',
   );
@@ -644,7 +639,6 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'administer panelizer node page overview',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
     ),
     'module' => 'panelizer',
   );
