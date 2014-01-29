@@ -377,6 +377,17 @@ function slac_service_catalog_default_page_manager_pages() {
         'context' => 'argument_entity_id:node_1',
         'not' => FALSE,
       ),
+      2 => array(
+        'name' => 'role',
+        'settings' => array(
+          'rids' => array(
+            0 => 4,
+            1 => 3,
+          ),
+        ),
+        'context' => 'logged-in-user',
+        'not' => FALSE,
+      ),
     ),
     'logic' => 'and',
   );
@@ -475,6 +486,17 @@ function slac_service_catalog_default_page_manager_pages() {
         'context' => 'argument_entity_id:node_1',
         'not' => FALSE,
       ),
+      2 => array(
+        'name' => 'role',
+        'settings' => array(
+          'rids' => array(
+            0 => 4,
+            1 => 3,
+          ),
+        ),
+        'context' => 'logged-in-user',
+        'not' => FALSE,
+      ),
     ),
     'logic' => 'and',
   );
@@ -548,6 +570,17 @@ function slac_service_catalog_default_page_manager_pages() {
           ),
         ),
         'context' => 'argument_entity_id:node_1',
+        'not' => FALSE,
+      ),
+      2 => array(
+        'name' => 'role',
+        'settings' => array(
+          'rids' => array(
+            0 => 4,
+            1 => 3,
+          ),
+        ),
+        'context' => 'logged-in-user',
         'not' => FALSE,
       ),
     ),
@@ -625,6 +658,18 @@ function slac_service_catalog_default_page_manager_pages() {
         'context' => 'argument_entity_id:node_1',
         'not' => FALSE,
       ),
+      2 => array(
+        'name' => 'role',
+        'settings' => array(
+          'rids' => array(
+            0 => 2,
+            1 => 4,
+            2 => 3,
+          ),
+        ),
+        'context' => 'logged-in-user',
+        'not' => FALSE,
+      ),
     ),
     'logic' => 'and',
   );
@@ -698,6 +743,17 @@ function slac_service_catalog_default_page_manager_pages() {
           ),
         ),
         'context' => 'argument_entity_id:node_1',
+        'not' => FALSE,
+      ),
+      2 => array(
+        'name' => 'role',
+        'settings' => array(
+          'rids' => array(
+            0 => 4,
+            1 => 3,
+          ),
+        ),
+        'context' => 'logged-in-user',
         'not' => FALSE,
       ),
     ),
