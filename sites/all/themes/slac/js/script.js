@@ -19,7 +19,7 @@
     attach: function (context) {
       var $search_form = '',
           $long_menu = false;
-       if($('.user-search .pane-search-form')[0]) {
+       if($('.user-search .pane-slac-search-redirect')[0]) {
           $search_form = '<div class="search-icon mob-icon"></div>';
        }      
       
@@ -49,7 +49,7 @@
       
       $('.header > .inside', context).once('header-inside', function () {
        //$(this).append('<div class="mobile-main-menu mobile-block" style="display: none"></div>');
-       if($('.user-search .pane-search-form')[0]) {
+       if($('.user-search .pane-slac-search-redirect')[0]) {
           $(this).append('<div class="mobile-search-form mobile-block" style="display: none"></div>');
        }
        
@@ -58,7 +58,7 @@
         //Menu cloning
       var $cloned_main_menu = $('div.main-menu').clone(),
         $cloned_header_menu = $('div.header-menu').clone(),
-        $cloned_search_form = $('.user-search .pane-search-form').clone(),
+        $cloned_search_form = $('.user-search .pane-slac-search-redirect').clone(),
         $mobile_wrapper_search = $('.mobile-search-form', context),
         $mobile_wrapper = $('.mobile-main-menu', context),
         $mobile_user_menu = $('.pane-system-user-menu ul.menu li a').clone(),
