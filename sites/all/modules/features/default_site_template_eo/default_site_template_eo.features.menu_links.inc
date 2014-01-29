@@ -10,160 +10,96 @@
 function default_site_template_eo_menu_default_menu_links() {
   $menu_links = array();
 
-  // Exported menu link: menu-footer-menu:http://slac-www.wearepropeople.md/content/safety-slac
-  $menu_links['menu-footer-menu:https://www6.slac.stanford.edu/general/safety.aspx'] = array(
-    'menu_name' => 'menu-footer-menu',
-    'link_path' => 'https://www6.slac.stanford.edu/general/safety.aspx',
-    'router_path' => '',
-    'link_title' => 'Safety',
+  // Exported menu link: menu-footer-menu-1_about:node/11
+  $menu_links['menu-footer-menu-1_about:node/11'] = array(
+    'menu_name' => 'menu-footer-menu-1',
+    'link_path' => 'node/11',
+    'router_path' => 'node/%',
+    'link_title' => 'About',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
+      'cami' => array(
+        'pages' => '',
       ),
+      'attributes' => array(),
+      'identifier' => 'menu-footer-menu-1_about:node/11',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -47,
-  );
-  // Exported menu link: menu-footer-menu:http://slac-www.wearepropeople.md/general/careers.aspx
-  $menu_links['menu-footer-menu:https://www6.slac.stanford.edu/general/careers.aspx'] = array(
-    'menu_name' => 'menu-footer-menu',
-    'link_path' => 'https://www6.slac.stanford.edu/general/careers.aspx',
-    'router_path' => '',
-    'link_title' => 'Careers',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
     'weight' => -50,
+    'customized' => 1,
   );
-  // Exported menu link: menu-footer-menu:http://slac-www.wearepropeople.md/general/feedback.aspx
-  $menu_links['menu-footer-menu:https://www6.slac.stanford.edu/general/feedback.aspx'] = array(
-    'menu_name' => 'menu-footer-menu',
-    'link_path' => 'https://www6.slac.stanford.edu/general/feedback.aspx',
-    'router_path' => '',
-    'link_title' => 'Site Feedback',
+  // Exported menu link: menu-footer-menu-1_blog:node/28
+  $menu_links['menu-footer-menu-1_blog:node/28'] = array(
+    'menu_name' => 'menu-footer-menu-1',
+    'link_path' => 'node/28',
+    'router_path' => 'node/%',
+    'link_title' => 'Blog',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
+      'cami' => array(
+        'pages' => '',
       ),
+      'attributes' => array(),
+      'identifier' => 'menu-footer-menu-1_blog:node/28',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -48,
-  );
-  // Exported menu link: menu-footer-menu:http://slac-www.wearepropeople.md/general/privacy.aspx
-  $menu_links['menu-footer-menu:https://www6.slac.stanford.edu/general/privacy.aspx'] = array(
-    'menu_name' => 'menu-footer-menu',
-    'link_path' => 'https://www6.slac.stanford.edu/general/privacy.aspx',
-    'router_path' => '',
-    'link_title' => 'Privacy Policy',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 1,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -46,
-  );
-  // Exported menu link: menu-footer-menu:http://slac-www.wearepropeople.md/general/site-index.aspx
-  $menu_links['menu-footer-menu:https://www6.slac.stanford.edu/general/site-index.aspx'] = array(
-    'menu_name' => 'menu-footer-menu',
-    'link_path' => 'https://www6.slac.stanford.edu/general/site-index.aspx',
-    'router_path' => '',
-    'link_title' => 'Site Index',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
     'weight' => -49,
+    'customized' => 1,
   );
-  // Exported menu link: menu-footer-menu-1:https://www6.slac.stanford.edu/news
-  $menu_links['menu-footer-menu-1:https://www6.slac.stanford.edu/news'] = array(
+  // Exported menu link: menu-footer-menu-1_faq:faq
+  $menu_links['menu-footer-menu-1_faq:faq'] = array(
     'menu_name' => 'menu-footer-menu-1',
-    'link_path' => 'https://www6.slac.stanford.edu/news',
-    'router_path' => '',
-    'link_title' => 'SLAC News',
+    'link_path' => 'faq',
+    'router_path' => 'faq',
+    'link_title' => 'Faq',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
+      'cami' => array(
+        'pages' => '',
       ),
+      'attributes' => array(),
+      'identifier' => 'menu-footer-menu-1_faq:faq',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => 0,
+    'weight' => -47,
+    'customized' => 1,
   );
-  // Exported menu link: menu-footer-menu-1:https://www6.slac.stanford.edu/research
-  $menu_links['menu-footer-menu-1:https://www6.slac.stanford.edu/research'] = array(
+  // Exported menu link: menu-footer-menu-1_news:node/45
+  $menu_links['menu-footer-menu-1_news:node/45'] = array(
     'menu_name' => 'menu-footer-menu-1',
-    'link_path' => 'https://www6.slac.stanford.edu/research',
-    'router_path' => '',
-    'link_title' => 'Research',
+    'link_path' => 'node/45',
+    'router_path' => 'node/%',
+    'link_title' => 'News',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
+      'cami' => array(
+        'pages' => '',
       ),
+      'attributes' => array(),
+      'identifier' => 'menu-footer-menu-1_news:node/45',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => 0,
-  );
-  // Exported menu link: menu-footer-menu-1:https://www6.slac.stanford.edu/visiting-slac
-  $menu_links['menu-footer-menu-1:https://www6.slac.stanford.edu/visiting-slac'] = array(
-    'menu_name' => 'menu-footer-menu-1',
-    'link_path' => 'https://www6.slac.stanford.edu/visiting-slac',
-    'router_path' => '',
-    'link_title' => 'Visiting SLAC',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 1,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
+    'weight' => -48,
+    'customized' => 1,
   );
   // Translatables
   // Included for use with string extractors like potx.
-  t('Careers');
-  t('Privacy Policy');
-  t('Safety');
-  t('Site Feedback');
-  t('Site Index');
-  t('Research');
-  t('SLAC News');
-  t('Visiting SLAC');
+  t('About');
+  t('Blog');
+  t('Faq');
+  t('News');
 
 
   return $menu_links;
