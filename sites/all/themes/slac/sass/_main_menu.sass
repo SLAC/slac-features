@@ -43,31 +43,37 @@
       > ul
         background-color: $menu_bg
         border-style: solid
-        padding: 10px 0 5px
+        //padding: 10px 0 5px
+        margin-top: 2px 
         position: absolute
+        text-transform: none
         top: 100%
         left: 0
         z-index: 100
-
+        color: $red
         &.sf-hidden
           height: 100% !important
           opacity: 1 !important
           display: none !important    
           
         > li
-          margin: 0 0 5px 0 
+          margin: 0 
+          float: none
+          a
+            color: inherit
+            padding: 5px 10px
+           
       > a
         position: relative
       
+      &.active-trail
+        > ul
+          margin-top: 0px 
+        
+      
+      
     .sf-sub-indicator
-      text-indent: 999px
-      display: inline-block
-      overflow: hidden
-      position: absolute
-      top: 7px
-  
-      width: 10px
-      height: 10px 
+      display: none
 
 
       &:after
@@ -186,7 +192,7 @@ ul.sf-menu.sf-accordion.sf-expanded
         a
           display: block
           //padding: 0 10px
-          padding-bottom: 5px
+          padding-bottom: 4px
           &.active-trail, &.active
             color: $red
             border-bottom: 2px solid $red
@@ -194,8 +200,12 @@ ul.sf-menu.sf-accordion.sf-expanded
         ul
           .active-trail
             a
+              background-color: #fff
+              display: block
               border: 0 none
-
+          li
+            a:hover
+              background-color: #fff
 
 +at-breakpoint($only-tablet)
   .main-menu
@@ -234,8 +244,8 @@ ul.sf-menu.sf-accordion.sf-expanded
                 border: 0 none
                 background: transparent
                 a
-                  display: block
-                  padding: 0 5px
+
+                  padding: 7px 10px
                 &:hover
                   background-color: transparent
           .sfHover
@@ -248,21 +258,20 @@ ul.sf-menu.sf-accordion.sf-expanded
   .sf-main-menu.sf-horizontal 
     > li.menuparent 
       > ul
-        padding: 10px 10px 0px 10px
+        //padding: 10px 10px 0px 10px
         left: -10px
-        +box-sizing(content-box)
+        //+box-sizing(content-box)
       &.active-trail 
         > a
           color: $red
           border-bottom: 2px solid $red
-        
+          
     &.long-menu
       ul
         li 
           margin: 0 25px
      
-    .sf-sub-indicator
-      top: 2px
+
      
 +at-breakpoint($large-desktop)   
   .main-menu
