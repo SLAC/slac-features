@@ -1988,13 +1988,14 @@ ul.news-archive-class
 .service-body, .node-slac-sc-catalog-item
   @extend .basic-format-text
   
-.view-service-catalog-item
+.services-sidebar
     
   .views-label
     font-weight: bold
-  ul li 
-    //margin-bottom: 0 !important
-
+    margin-bottom: 5px
+    text-transform: uppercase
+    display: inline-block
+    
   .views-field-field-slac-sc-request-link
     
     a
@@ -2005,26 +2006,20 @@ ul.news-archive-class
       &:hover
         +box-shadow(0 0 4px 1px #fff inset, 0 0 0 1px $red)
         text-shadow: 1px 1px 1px #000
-  
-  .views-field-field-slac-sc-support, 
-  .views-field-field-slac-sc-request-link,
-  .views-field-field-slac-sc-rate,
-  .views-field-field-slac-sc-requirements,
-  .views-field-field-slac-sc-eligibility
-    margin-bottom: 25px
+
   
   .view-content
-    .views-row
-      margin-bottom: 5px
-  
-    .views-label
-      margin-bottom: 5px
-      text-transform: uppercase
-      display: inline-block
+    .views-field
+      margin-bottom: 25px
+
     ul
       list-style-type: disc
       margin-left: 15px
-      
+
+.a-z-filter
+  .view-content
+    .views-row
+      margin-bottom: 5px
     
     
 form.search-form

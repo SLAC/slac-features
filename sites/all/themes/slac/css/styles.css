@@ -2046,9 +2046,12 @@ ul.news-archive-class li .item-list {
     width: 47.87053%;
     float: right;
     margin-right: 0; } }
-.view-service-catalog-item .views-label {
-  font-weight: bold; }
-.view-service-catalog-item .views-field-field-slac-sc-request-link a {
+.services-sidebar .views-label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  display: inline-block; }
+.services-sidebar .views-field-field-slac-sc-request-link a {
   padding: 6px 12px;
   color: white;
   background-color: #871628;
@@ -2057,26 +2060,19 @@ ul.news-archive-class li .item-list {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   border-radius: 5px; }
-  .view-service-catalog-item .views-field-field-slac-sc-request-link a:hover {
+  .services-sidebar .views-field-field-slac-sc-request-link a:hover {
     -webkit-box-shadow: 0 0 4px 1px white inset, 0 0 0 1px #871628;
     -moz-box-shadow: 0 0 4px 1px white inset, 0 0 0 1px #871628;
     box-shadow: 0 0 4px 1px white inset, 0 0 0 1px #871628;
     text-shadow: 1px 1px 1px black; }
-.view-service-catalog-item .views-field-field-slac-sc-support,
-.view-service-catalog-item .views-field-field-slac-sc-request-link,
-.view-service-catalog-item .views-field-field-slac-sc-rate,
-.view-service-catalog-item .views-field-field-slac-sc-requirements,
-.view-service-catalog-item .views-field-field-slac-sc-eligibility {
+.services-sidebar .view-content .views-field {
   margin-bottom: 25px; }
-.view-service-catalog-item .view-content .views-row {
-  margin-bottom: 5px; }
-.view-service-catalog-item .view-content .views-label {
-  margin-bottom: 5px;
-  text-transform: uppercase;
-  display: inline-block; }
-.view-service-catalog-item .view-content ul {
+.services-sidebar .view-content ul {
   list-style-type: disc;
   margin-left: 15px; }
+
+.a-z-filter .view-content .views-row {
+  margin-bottom: 5px; }
 
 form.search-form {
   margin-top: 20px;
