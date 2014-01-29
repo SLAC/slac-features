@@ -463,7 +463,9 @@ ul.sf-menu.sf-accordion.sf-expanded {
         padding-bottom: 5px; }
         .main-menu ul li a.active-trail, .main-menu ul li a.active {
           color: #871628;
-          border-bottom: 2px solid #871628; } }
+          border-bottom: 2px solid #871628; }
+      .main-menu ul li ul .active-trail a {
+        border: 0 none; } }
 @media (min-width: 691px) and (max-width: 893px) {
   .main-menu.long-menu {
     background-color: transparent; }
