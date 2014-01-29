@@ -2396,7 +2396,7 @@ ol.search-results .search-snippet {
       padding: 5px 14px;
       color: inherit;
       display: block; }
-      .pane-menu-tree > div > ul.menu a:hover {
+      .pane-menu-tree > div > ul.menu a:hover, .pane-menu-tree > div > ul.menu a.active {
         background-color: #dfdfdf; }
 
 @media (min-width: 480px) {
