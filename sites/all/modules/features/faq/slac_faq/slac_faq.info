@@ -15,7 +15,6 @@ dependencies[] = options
 dependencies[] = page_manager
 dependencies[] = panels
 dependencies[] = rules
-dependencies[] = slac_event
 dependencies[] = strongarm
 dependencies[] = taxonomy
 dependencies[] = text
