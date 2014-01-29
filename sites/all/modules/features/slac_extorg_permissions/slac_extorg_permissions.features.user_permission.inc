@@ -454,6 +454,15 @@ function slac_extorg_permissions_user_default_permissions() {
     'module' => 'menu_trail_by_path',
   );
 
+  // Exported permission: 'administer meta tags'.
+  $permissions['administer meta tags'] = array(
+    'name' => 'administer meta tags',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
   // Exported permission: 'administer mini panels'.
   $permissions['administer mini panels'] = array(
     'name' => 'administer mini panels',
@@ -1772,6 +1781,16 @@ function slac_extorg_permissions_user_default_permissions() {
       'site owner' => 'site owner',
     ),
     'module' => 'fieldable_panels_panes',
+  );
+
+  // Exported permission: 'edit meta tags'.
+  $permissions['edit meta tags'] = array(
+    'name' => 'edit meta tags',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'site owner' => 'site owner',
+    ),
+    'module' => 'metatag',
   );
 
   // Exported permission: 'edit own article content'.

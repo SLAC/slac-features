@@ -57,6 +57,7 @@ dependencies[] = admin_views
 dependencies[] = entitycache
 dependencies[] = superfish
 dependencies[] = views_feed_pane
+dependencies[] = metatag
 
 ;Development modules
 dependencies[] = devel
