@@ -221,7 +221,7 @@ function slac_service_catalog_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_slac_sc_request_link',
-    'label' => 'Request link',
+    'label' => 'Request Service link',
     'required' => 0,
     'settings' => array(
       'attributes' => array(
@@ -497,7 +497,7 @@ function slac_service_catalog_field_default_field_instances() {
   t('Please enter the requirements for this service, you can enter multiple if needed.');
   t('Please enter the url of the self help article, it can be both on the site or on an external site');
   t('Rate');
-  t('Request link');
+  t('Request Service link');
   t('Requirements');
   t('Service Category');
   t('Service Overview');
