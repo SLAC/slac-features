@@ -62,4 +62,3 @@ features[variable][] = node_submitted_slac_faq
 features[variable][] = pathauto_node_slac_faq_pattern
 features[views_view][] = faq
 no autodetect = 1
-
