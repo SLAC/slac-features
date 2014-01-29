@@ -364,8 +364,10 @@ function slac_service_catalog_views_default_views() {
 
   /* Display: Item data */
   $handler = $view->new_display('panel_pane', 'Item data', 'panel_pane_2');
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'services-sidebar';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Request link */
+  /* Field: Content: Request Service link */
   $handler->display->display_options['fields']['field_slac_sc_request_link']['id'] = 'field_slac_sc_request_link';
   $handler->display->display_options['fields']['field_slac_sc_request_link']['table'] = 'field_data_field_slac_sc_request_link';
   $handler->display->display_options['fields']['field_slac_sc_request_link']['field'] = 'field_slac_sc_request_link';
@@ -426,6 +428,8 @@ function slac_service_catalog_views_default_views() {
   $handler = $view->new_display('panel_pane', 'Category items A-Z', 'panel_pane_3');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'A-Z';
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'a-z-filter';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';

@@ -53,6 +53,7 @@ function slac_service_catalog_image_default_styles() {
         'weight' => 1,
       ),
     ),
+    'label' => 'slac_sc_service_catalog',
   );
 
   return $styles;
