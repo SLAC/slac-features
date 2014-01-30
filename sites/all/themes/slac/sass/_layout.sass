@@ -1906,6 +1906,21 @@ ul.news-archive-class
   p 
     +fontsize-rem(13px)
     line-height: 18px
+    
+  .field-name-field-sb-image
+    float: left
+    max-width: 70px
+  
+  .field-name-field-subtitle
+    padding-left: 85px
+    position: relative
+    top: -3px
+    +fontsize-rem(14px)
+    font-weight: bold
+    margin-bottom: 5px 
+  
+  .field-name-field-sb-body
+    clear: both
 
 .pane-bundle-slac-mini-slideshow
   
@@ -1916,6 +1931,16 @@ ul.news-archive-class
     position: relative
 
 +at-breakpoint($less-than-480) 
+  .pane-bundle-slac-sidebar-block
+    .field-name-field-sb-image
+      float: none
+
+    .field-name-field-subtitle
+      padding-left: 0
+      top: 0
+
+    .field-name-field-sb-body
+      clear: none
 
   .inner_col
     +clearfix
@@ -1928,6 +1953,18 @@ ul.news-archive-class
 
     
 +at-breakpoint($tablet)     
+  .pane-bundle-slac-sidebar-block
+    .field-name-field-sb-image
+      float: left
+
+    .field-name-field-subtitle
+      padding-left: 85px
+      top: -3px
+
+    .field-name-field-sb-body
+      clear: both
+      
+      
   .inner_col
     .inner_left,
     .inner_right
