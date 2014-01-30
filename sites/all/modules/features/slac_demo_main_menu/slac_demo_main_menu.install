@@ -125,6 +125,10 @@ function slac_demo_main_menu_install() {
     'language' => 'und',
     'name' => 'admin',
     'uid' => 1,
+    'path' => array(
+      'alias' => 'vision-mission',
+      'pathauto' => 0,
+    ),
   );
 
   node_save($node);
