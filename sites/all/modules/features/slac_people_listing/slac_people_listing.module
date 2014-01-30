@@ -17,15 +17,6 @@ function slac_people_listing_views_pre_view(&$view, &$display_id, &$args) {
 }
 
 /**
- * Implements hook_user_view().
- */
-function slac_people_listing_user_view($account, $view_mode, $langcode) {
-  if ($account && $view_mode == 'full') {
-    menu_set_active_item(drupal_get_normal_path("people/all"));
-  }
-}
-
-/**
  * Implements hook_preprocess_field().
  */
 function slac_people_listing_preprocess_field(&$variables) {

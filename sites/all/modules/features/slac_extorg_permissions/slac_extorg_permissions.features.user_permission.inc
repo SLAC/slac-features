@@ -1607,6 +1607,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'edit any bio profile',
     'roles' => array(
       'administrator' => 'administrator',
+      'site owner' => 'site owner',
     ),
     'module' => 'profile2',
   );
@@ -1636,6 +1637,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'edit any contact profile',
     'roles' => array(
       'administrator' => 'administrator',
+      'site owner' => 'site owner',
     ),
     'module' => 'profile2',
   );
@@ -1765,6 +1767,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'edit any social_media profile',
     'roles' => array(
       'administrator' => 'administrator',
+      'site owner' => 'site owner',
     ),
     'module' => 'profile2',
   );
@@ -2323,6 +2326,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'view any bio profile',
     'roles' => array(
       'administrator' => 'administrator',
+      'site owner' => 'site owner',
     ),
     'module' => 'profile2',
   );
@@ -2342,6 +2346,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'view any contact profile',
     'roles' => array(
       'administrator' => 'administrator',
+      'site owner' => 'site owner',
     ),
     'module' => 'profile2',
   );
@@ -2381,6 +2386,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'view any social_media profile',
     'roles' => array(
       'administrator' => 'administrator',
+      'site owner' => 'site owner',
     ),
     'module' => 'profile2',
   );
