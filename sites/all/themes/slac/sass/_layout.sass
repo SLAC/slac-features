@@ -2389,12 +2389,19 @@ ol.search-results
 
 +at-breakpoint($tablet)
   .people-page-listing
+    .browse-all
+      a
+        text-decoration: none
+        &:hover
+          text-decoration: underline  
+  
     .attachment
       +fontsize-rem(14px)
-      a
-        text-decoration: underline
-        &:hover
-          text-decoration: none
+      .view-content     
+        a
+          text-decoration: underline
+          &:hover
+            text-decoration: none
 
       .no-result, .result
         margin-bottom: 0
