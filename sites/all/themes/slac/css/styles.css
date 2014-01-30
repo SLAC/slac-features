@@ -2951,7 +2951,7 @@ ul.blog-archive-class {
     .no-rgba .pane-bundle-slac-mini-slideshow .field-slideshow-controls a:hover {
       background: url('../images/fall_back_70perc_grey.png') repeat 0 0; }
 
-.description_block, form#user-profile-form div.password-suggestions, form#user-profile-form .wrapped-with-icon .description, form#user-login div.password-suggestions, form#user-login .wrapped-with-icon .description, form#user-register-form div.password-suggestions, form#user-register-form .wrapped-with-icon .description, form#user-pass div.password-suggestions, form#user-pass .wrapped-with-icon .description, form#slac-configuration-form div.password-suggestions, form#slac-configuration-form .wrapped-with-icon .description, form.webform-client-form div.password-suggestions, form.webform-client-form .wrapped-with-icon .description, form.node-blog-form .description {
+.description_block, form#user-profile-form div.password-suggestions, form#user-profile-form .wrapped-with-icon .description, form#user-login div.password-suggestions, form#user-login .wrapped-with-icon .description, form#user-register-form div.password-suggestions, form#user-register-form .wrapped-with-icon .description, form#user-pass div.password-suggestions, form#user-pass .wrapped-with-icon .description, form#slac-configuration-form div.password-suggestions, form#slac-configuration-form .wrapped-with-icon .description, form.webform-client-form div.password-suggestions, form.webform-client-form .wrapped-with-icon .description, form.node-form div.password-suggestions, form.node-form .wrapped-with-icon .description, form.node-blog-form .description {
   background-color: #ebebdf;
   padding: 16px;
   margin: 10px 0;
@@ -2969,22 +2969,22 @@ ul.blog-archive-class {
   font-size: 13px;
   font-size: 0.8125rem; }
 
-form#user-profile-form, form#user-login, form#user-register-form, form#user-pass, form#slac-configuration-form, form.webform-client-form {
+form#user-profile-form, form#user-login, form#user-register-form, form#user-pass, form#slac-configuration-form, form.webform-client-form, form.node-form {
   background-color: #f6f6f6;
   border: 3px solid #ececec;
   padding: 10px; }
-  form#user-profile-form .confirm-parent, form#user-profile-form .password-parent, form#user-login .confirm-parent, form#user-login .password-parent, form#user-register-form .confirm-parent, form#user-register-form .password-parent, form#user-pass .confirm-parent, form#user-pass .password-parent, form#slac-configuration-form .confirm-parent, form#slac-configuration-form .password-parent, form.webform-client-form .confirm-parent, form.webform-client-form .password-parent {
+  form#user-profile-form .confirm-parent, form#user-profile-form .password-parent, form#user-login .confirm-parent, form#user-login .password-parent, form#user-register-form .confirm-parent, form#user-register-form .password-parent, form#user-pass .confirm-parent, form#user-pass .password-parent, form#slac-configuration-form .confirm-parent, form#slac-configuration-form .password-parent, form.webform-client-form .confirm-parent, form.webform-client-form .password-parent, form.node-form .confirm-parent, form.node-form .password-parent {
     width: 100%; }
-  form#user-profile-form .password-strength, form#user-profile-form div.password-confirm, form#user-login .password-strength, form#user-login div.password-confirm, form#user-register-form .password-strength, form#user-register-form div.password-confirm, form#user-pass .password-strength, form#user-pass div.password-confirm, form#slac-configuration-form .password-strength, form#slac-configuration-form div.password-confirm, form.webform-client-form .password-strength, form.webform-client-form div.password-confirm {
+  form#user-profile-form .password-strength, form#user-profile-form div.password-confirm, form#user-login .password-strength, form#user-login div.password-confirm, form#user-register-form .password-strength, form#user-register-form div.password-confirm, form#user-pass .password-strength, form#user-pass div.password-confirm, form#slac-configuration-form .password-strength, form#slac-configuration-form div.password-confirm, form.webform-client-form .password-strength, form.webform-client-form div.password-confirm, form.node-form .password-strength, form.node-form div.password-confirm {
     width: auto;
     float: none;
     display: block;
     margin: 0 0 10px 0; }
-  form#user-profile-form .form-item, form#user-login .form-item, form#user-register-form .form-item, form#user-pass .form-item, form#slac-configuration-form .form-item, form.webform-client-form .form-item {
+  form#user-profile-form .form-item, form#user-login .form-item, form#user-register-form .form-item, form#user-pass .form-item, form#slac-configuration-form .form-item, form.webform-client-form .form-item, form.node-form .form-item {
     margin-bottom: 35px; }
-  form#user-profile-form > div, form#user-login > div, form#user-register-form > div, form#user-pass > div, form#slac-configuration-form > div, form.webform-client-form > div {
+  form#user-profile-form > div, form#user-login > div, form#user-register-form > div, form#user-pass > div, form#slac-configuration-form > div, form.webform-client-form > div, form.node-form > div {
     max-width: 360px; }
-  form#user-profile-form legend, form#user-login legend, form#user-register-form legend, form#user-pass legend, form#slac-configuration-form legend, form.webform-client-form legend {
+  form#user-profile-form legend, form#user-login legend, form#user-register-form legend, form#user-pass legend, form#slac-configuration-form legend, form.webform-client-form legend, form.node-form legend {
     display: none; }
 form label {
   color: #474747;
@@ -2994,7 +2994,7 @@ form label {
   display: block; }
 
 @media (min-width: 690px) {
-  form#user-profile-form, form#user-login, form#user-register-form, form#user-pass, form#slac-configuration-form, form.webform-client-form {
+  form#user-profile-form, form#user-login, form#user-register-form, form#user-pass, form#slac-configuration-form, form.webform-client-form, form.node-form {
     padding: 26px 38px 26px 38px; } }
 .wrapped-with-icon {
   position: relative;
