@@ -1,0 +1,19 @@
+diff --git a/includes/common.inc b/includes/common.inc
+index 3b4bf58..519c710 100644
+--- a/includes/common.inc
++++ b/includes/common.inc
+@@ -7054,6 +7054,14 @@ function _drupal_schema_initialize(&$schema, $module, $remove_descriptions = TRU
+  */
+ function drupal_schema_fields_sql($table, $prefix = NULL) {
+   $schema = drupal_get_schema($table);
++  /**
++   * Panelizer triggers entity_get_info() during enabling modules. During that
++   * call module's schema is not deployed yet so this function fails. This check
++   * is to avoid php warning that is displayed in Aegir provision.
++   */
++  if (!isset($schema['fields']) || empty($schema['fields'])) {
++    return;
++  }
+   $fields = array_keys($schema['fields']);
+   if ($prefix) {
+     $columns = array();
