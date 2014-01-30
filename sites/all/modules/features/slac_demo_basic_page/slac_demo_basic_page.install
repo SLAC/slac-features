@@ -176,7 +176,7 @@ function slac_demo_basic_page_install() {
  */
 function _slac_demo_basic_page_install__panels_display() {
   $panels_display = array(
-    'layout' => 'threecol_25_50_25',
+    'layout' => 'two_col_events',
     'layout_settings' => array(),
     'panel_settings' => array(
       'style_settings' => array (
@@ -282,7 +282,7 @@ function _slac_demo_basic_page_install__panes($did) {
     ),
     array(
       'did' => $did,
-      'panel' => 'middle',
+      'panel' => 'left_title',
       'type' => 'page_title',
       'subtype' => 'page_title',
       'shown' => 1,
@@ -305,7 +305,7 @@ function _slac_demo_basic_page_install__panes($did) {
     ),
     array(
       'did' => $did,
-      'panel' => 'middle',
+      'panel' => 'right',
       'type' => 'entity_field',
       'subtype' => 'node:body',
       'shown' => 1,
