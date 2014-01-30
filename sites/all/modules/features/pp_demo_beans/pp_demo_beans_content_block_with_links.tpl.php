@@ -49,7 +49,7 @@
           overflow: hidden;
           margin-top: 0;
           float: right;
-          width: 15%;
+          width: 135px;
         ">
         <ul>
           <?php foreach($links_list as $link_from_list): ?>

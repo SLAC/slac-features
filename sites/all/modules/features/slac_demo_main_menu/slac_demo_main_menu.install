@@ -6,3 +6,359 @@
 function slac_demo_main_menu_uninstall() {
   variable_del('slac_demo_main_menu_post_features_enable_feature');
 }
+
+/**
+ * Implements hook_install().
+ */
+function slac_demo_main_menu_install() {
+  $bean_our_vision = bean_create(array('type' => 'content_block_with_links'));
+  $bean_our_vision->label = 'Our Vision';
+  $bean_our_vision->title = 'Our Vision';
+  $bean_our_vision->delta = 'bean-our-vision';
+  $bean_our_vision->field_content_block_body = array(
+    LANGUAGE_NONE => array(
+      array(
+        'value' => 'Sed enim ipsum, commodo vel faucibus sed, faucibus vitae risus! Donec convallis, justo ac faucibus pharetra, metus tortor scelerisque purus, vel placerat risus metus quis diam! Phasellus vulputate dictum purus id scelerisque. Nullam adipiscing volutpat neque ac lacinia! Nam in dapibus urna volutpat.',
+        'format' => 'full_html',
+      )
+    ),
+  );
+  $bean_our_vision->field_content_block_link = array(
+    LANGUAGE_NONE => array(
+      array(
+        'url' => 'https://www6.slac.stanford.edu/about/vision-and-mission.aspx',
+        'title' => 'Our Vision and Mission',
+      )
+    ),
+  );
+  $bean_our_vision->field_content_block_background = array(
+    LANGUAGE_NONE => array(
+      array(
+        'value' => 'shaded',
+      )
+    ),
+  );
+  $bean_our_vision->field_list_of_links = array(
+    LANGUAGE_NONE => array(
+      array(
+        'url' => 'http://slac.stanford.com',
+        'title' => 'Sample link 1',
+      ),
+      array(
+        'url' => 'http://slac.stanford.com',
+        'title' => 'Sample link 2',
+      ),
+      array(
+        'url' => 'http://slac.stanford.com',
+        'title' => 'Sample link 3',
+      ),
+      array(
+        'url' => 'http://slac.stanford.com',
+        'title' => 'Sample link 4',
+      ),
+      array(
+        'url' => 'http://slac.stanford.com',
+        'title' => 'Sample link 5',
+      ),
+    ),
+  );
+  $bean_our_vision->save();
+
+  $bean_our_mission = bean_create(array('type' => 'content_block'));
+  $bean_our_mission->label = 'Our Mission';
+  $bean_our_mission->title = 'Our Mission';
+  $bean_our_mission->field_content_block_body = array(
+    LANGUAGE_NONE => array(
+      array(
+        'value' => '<p>Proin et sollicitudin neque, nec hendrerit sem. Ut at feugiat ante. Maecenas ac semper felis! Phasellus egestas justo ac orci placerat'
+                    . 'aliquam eu ac nunc. Nullam vestibulum metus tempus mauris luctus dictum. Aliquam lobortis, massa non convallis molestie, nulla justo tincidunt dui,'
+                    . 'sed commodo amet. Proin et sollicitudin neque, nec hendrerit sem. Ut at feugiat ante. Maecenas ac semper felis! Phasellus egestas justo ac orci placerat '
+                    . 'aliquam eu ac nunc. Nullam vestibulum metus tempus mauris luctus dictum. Aliquam lobortis, massa non convallis molestie, nulla justo tincidunt dui,'
+                    . 'sed commodo amet. Proin et sollicitudin neque, nec hendrerit sem. Ut at feugiat ante. Maecenas ac semper felis! Phasellus egestas justo ac orci placerat'
+                    . 'aliquam eu ac nunc. Nullam vestibulum metus tempus mauris luctus dictum. Aliquam lobortis, massa non convallis molestie, nulla justo tincidunt dui,'
+                    . 'sed commodo amet. Proin et sollicitudin neque, nec hendrerit sem. Ut at feugiat ante. Maecenas ac semper felis! Phasellus egestas justo ac orci placerat'
+                    . 'aliquam eu ac nunc. Nullam vestibulum metus tempus mauris luctus dictum. Aliquam lobortis, massa non convallis molestie, nulla justo tincidunt dui, sed'
+                    . 'commodo amet. Proin et sollicitudin neque, nec hendrerit sem. Ut at feugiat ante. Maecenas ac semper felis! Phasellus egestas justo ac orci placerat '
+                    . 'aliquam eu ac nunc. Nullam vestibulum metus tempus mauris luctus dictum. Aliquam lobortis, massa non convallis molestie, nulla justo tincidunt dui, sed'
+                    . 'commodo amet. Proin et sollicitudin neque, nec hendrerit sem. Ut at feugiat ante. Maecenas ac semper felis! Phasellus egestas justo ac orci placerat '
+                    . 'aliquam eu ac nunc. Nullam vestibulum metus tempus mauris luctus dictum. Aliquam lobortis, massa non convallis molestie, nulla justo tincidunt dui, sed'
+                    . 'commodo amet.</p> ',
+        'format' => 'full_html',
+      )
+    ),
+  );
+  $bean_our_mission->field_content_block_link = array(
+    LANGUAGE_NONE => array(
+      array(
+        'url' => 'https://www6.slac.stanford.edu/about/vision-and-mission.aspx',
+        'title' => 'Our Vision and Mission',
+      )
+    ),
+  );
+  $bean_our_mission->field_content_block_background = array(
+    LANGUAGE_NONE => array(
+      array(
+        'value' => 'shaded',
+      )
+    ),
+  );
+  /*$bean_our_mission->field_content_block_image = array(
+    LANGUAGE_NONE => array(
+      'fid' => 2,
+    ),
+  );*/
+  $bean_our_mission->save();
+
+  $node = (object) array(
+    'title' => t('Vision and Mission'),
+    'type' => 'page',
+    'body' => array(
+      LANGUAGE_NONE => array(
+        array(
+          'value' => '<p>SLAC is one of 10 national laboratories under the stewardship of the U.S. Department of Energy Office of Science.</p>'
+            . '[block_insert]' . $bean_our_vision->bid . '[/block_insert]<p>&nbsp;</p>'
+            . '[block_insert]' . $bean_our_mission->bid . '[/block_insert]<p>&nbsp;</p>',
+          'format' => 'full_html',
+        ),
+      ),
+    ),
+    'language' => 'und',
+    'name' => 'admin',
+    'uid' => 1,
+  );
+
+  node_save($node);
+
+  $panels_display = _slac_demo_main_menu_install__panels_display();
+
+  _slac_demo_main_menu_install__panelizer_entity($node, $panels_display['did']);
+
+  _slac_demo_main_menu_install__panes($panels_display['did']);
+
+  //_slac_demo_main_menu_install__menu_item($node->nid, t('Vision and Mission'), 'main-menu', 3);
+}
+
+/**
+ * Create panels display.
+ */
+function _slac_demo_main_menu_install__panels_display() {
+  $panels_display = array(
+    'layout' => 'threecol_25_50_25',
+    'layout_settings' => array(),
+    'panel_settings' => array(
+      'style_settings' => array (
+        'default' => NULL,
+        'left' => NULL,
+        'left_title' => NULL,
+        'right' => NULL,
+        'social_media' => NULL,
+        'inner_left' => NULL,
+        'inner_right' => NULL,
+        'inner_title' => NULL,
+        'top' => NULL,
+        'middle' => NULL,
+        'bottom' => NULL,
+      ),
+    ),
+  );
+  drupal_write_record('panels_display', $panels_display);
+  return $panels_display;
+}
+
+/**
+ * Create panelized entity.
+ */
+function _slac_demo_main_menu_install__panelizer_entity($node, $did) {
+  $panelizer_entity = array(
+    'entity_type' => 'node',
+    'entity_id' => $node->nid,
+    'revision_id' => $node->vid,
+    'name' => NULL,
+    'no_blocks' => 0,
+    'css_id' => '',
+    'css' => '',
+    'pipeline' => 'ipe',
+    'context' => array(),
+    'relationships' => array(),
+    'did' => $did,
+    'view_mode' => 'page_manager',
+    'css_class' => '',
+    'title_element' => 'H2',
+    'link_to_entity' => 1,
+    'extra' => array(),
+  );
+  drupal_write_record('panelizer_entity', $panelizer_entity);
+  return $panelizer_entity;
+}
+
+/**
+ * Create panel panes.
+ */
+function _slac_demo_main_menu_install__panes($did) {
+
+  $our_values = (object) array(
+    'title' => t('Our Values'),
+    'bundle' => 'slac_sidebar_block',
+    'field_sb_body' => array(
+      LANGUAGE_NONE => array(
+        array(
+          'value' => '<div class="content-block-body">'
+	                   . '<p><span style="font-size: small"><a href="http://slac.stanford.com"><strong>One Lab</strong></a> &ndash; Taking action based on what is best for the lab and the scientific community, guided by our mission</span></p>'
+                     . '<p><span style="font-size: small"><a href="http://slac.stanford.com"><strong>Excellence</strong></a> &ndash; Performing with distinction, delivering high-value research and operations</span></p>'
+                     . '<p><span style="font-size: small"><a href="http://slac.stanford.com"><strong>Safety</strong></a> &ndash; Maintaining the health and safety of our staff and visitors, and the protection of our environment</span></p>'
+                     . '<p><span style="font-size: small"><a href="http://slac.stanford.com"><strong>Diversity</strong></a> &ndash; Encouraging a respectful and professional work environment that values diversity of every kind as central to our success</span></p>'
+                     . '<p><span style="font-size: small"><a href="http://slac.stanford.com"><strong>Communication</strong></a> &ndash; Fostering an open environment for individual and organizational communication</span></p>'
+                     . '<p><span style="font-size: small"><a href="http://slac.stanford.com"><strong>Play to Win</strong></a> &ndash; Striving to be the best in everything we do, and delivering on our commitments to our collaborators and to our customers</span></p>'
+                     . '</div>',
+          'format' => 'full_html',
+        )
+      )
+    ),
+  );
+  entity_save('fieldable_panels_pane', $our_values);
+
+  $frontpage_panels_panes = array(
+    array(
+      'did' => $did,
+      'panel' => 'left',
+      'type' => 'menu_tree',
+      'subtype' => 'main-menu',
+      'shown' => 1,
+      'access' => array(),
+      'configuration' => array(
+        'menu_name' => 'main-menu',
+        'parent_mlid' => 'main-menu:0',
+        'title_link' => 0,
+        'admin_title' => '',
+        'level' => 2,
+        'follow' => 0,
+        'depth' => 0,
+        'expanded' => 0,
+        'sort' => 0,
+        'override_title' => 0,
+        'override_title_text' => '',
+      ),
+      'cache' => array(),
+      'style' => array(
+        'settings' => NULL,
+      ),
+      'css' => array(),
+      'extras' => array(),
+      'position' => 0,
+      'locks' => array(),
+    ),
+    array(
+      'did' => $did,
+      'panel' => 'middle',
+      'type' => 'page_title',
+      'subtype' => 'page_title',
+      'shown' => 1,
+      'access' => array(),
+      'configuration' => array(
+        'markup' => 'h2',
+        'class' => 'pane-title',
+        'id' => '',
+        'override_title' => 0,
+        'override_title_text' => '',
+      ),
+      'cache' => array(),
+      'style' => array(
+        'settings' => NULL,
+      ),
+      'css' => array(),
+      'extras' => array(),
+      'position' => 0,
+      'locks' => array(),
+    ),
+    array(
+      'did' => $did,
+      'panel' => 'middle',
+      'type' => 'entity_field',
+      'subtype' => 'node:body',
+      'shown' => 1,
+      'access' => array(),
+      'configuration' => array(
+        'label' => 'hidden',
+        'formatter' => 'text_default',
+        'delta_limit' => 0,
+        'delta_offset' => 0,
+        'delta_reversed' => FALSE,
+        'formatter_settings' => array(),
+        'context' => 'panelizer',
+      ),
+      'cache' => array(),
+      'style' => array(
+        'settings' => NULL,
+      ),
+      'css' => array(),
+      'extras' => array(),
+      'position' => 1,
+      'locks' => array(),
+    ),
+    array(
+      'did' => $did,
+      'panel' => 'right',
+      'type' => 'fieldable_panels_pane',
+      'subtype' => 'uuid:' . $our_values->uuid,
+      'shown' => 1,
+      'access' => array(),
+      'configuration' => array(
+        'view_mode' => 'full',
+      ),
+      'cache' => array(),
+      'style' => array(
+        'settings' => NULL,
+      ),
+      'css' => array(),
+      'extras' => array(),
+      'position' => 0,
+      'locks' => array(),
+    ),
+  );
+  foreach ($frontpage_panels_panes as $frontpage_panels_pane) {
+    drupal_write_record('panels_pane', $frontpage_panels_pane);
+  }
+}
+
+/**
+ * Create menu item.
+ */
+function _slac_demo_main_menu_install__menu_item($nid, $link_title, $menu_name, $weight = 0) {
+  if (!is_numeric($nid)) {
+    return;
+  }
+
+  $parent_path = drupal_get_normal_path('about');
+  $parent_mlid = db_select('menu_links' , 'ml')
+    ->condition('ml.link_path' , $parent_path)
+    ->condition('ml.menu_name' , $menu_name)
+    ->fields('ml' , array('mlid'))
+    ->execute()
+    ->fetchField();
+
+  $parent = is_numeric($parent_mlid) ? $parent_mlid : 0;
+
+  $item = array(
+    'menu_name' => $menu_name,
+    'link_path' => 'node/' . $nid,
+    'router_path' => 'node/%',
+    'link_title' => $link_title,
+    'module' => 'menu',
+    'plid' => $parent,
+    'weight' => $weight,
+    'expanded' => 0,
+  );
+  $exists = db_query(
+    "SELECT mlid from {menu_links} WHERE link_title=:link_title AND link_path=:link_path AND menu_name=:menu_name",
+    array(
+      ':link_title' => $item['link_title'],
+      ':link_path' => $item['link_path'],
+      ':menu_name' => $menu_name
+    )
+  )->fetchField();
+
+  // Save the record if the data does not exist
+  if(!$exists) {
+    menu_link_save($item);
+  }
+}
