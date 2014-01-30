@@ -1,0 +1,6 @@
+name = SLAC Demo Basic Page
+core = 7.x
+package = SLAC
+dependencies[] = panelizer
+dependencies[] = slac_basic_page_settings
+dependencies[] = slac_demo_main_menu
