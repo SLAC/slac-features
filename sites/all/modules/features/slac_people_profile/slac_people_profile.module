@@ -5,7 +5,7 @@
  */
 function slac_people_profile_init() {
   $siteowner_username = variable_get('slac_site_owner', '');
-  if (empty($siteowner_username)) {
+  if (empty($siteowner_username) && user_is_logged_in()) {
     drupal_set_message(t('Siteowner is not set for this site.'), 'error');
   }
 }
