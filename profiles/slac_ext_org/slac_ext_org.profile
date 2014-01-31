@@ -40,6 +40,7 @@ function slac_ext_org_demo_modules() {
     'slac_demo_accounts',
     'slac_demo_main_menu',
     'slac_demo_webform',
+    'slac_demo_support_tickets',
   );
 }
 

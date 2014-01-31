@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the SLAC Demo Support Tickets feature.
+ */
+
+include_once 'slac_demo_support_tickets.features.inc';
