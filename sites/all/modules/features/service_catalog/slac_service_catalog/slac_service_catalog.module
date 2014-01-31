@@ -5,12 +5,3 @@
  */
 
 include_once 'slac_service_catalog.features.inc';
-
-/**
- * Implements hook_ctools_plugin_directory().
- */
-function slac_service_catalog_ctools_plugin_directory($module, $plugin) {
-  if ($module == 'ctools' && $plugin == 'access') {
-    return 'ctools_access_plugin';
-  }
-}

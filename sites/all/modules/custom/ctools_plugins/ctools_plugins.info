@@ -1,0 +1,4 @@
+name = CTools plugins
+description = Custom plugins for ctools.
+core = 7.x
+package = Chaos tool suite
