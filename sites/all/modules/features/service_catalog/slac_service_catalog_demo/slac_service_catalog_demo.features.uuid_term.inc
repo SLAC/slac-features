@@ -49,7 +49,7 @@ function slac_service_catalog_demo_uuid_features_default_terms() {
     'field_sc_catalog_item_extlink' => array(
       'und' => array(
         0 => array(
-          'url' => 'service/mysql-oracle',
+          'url' => 'services/service/mysql-oracle',
           'title' => NULL,
           'attributes' => array(),
         ),
@@ -95,7 +95,7 @@ function slac_service_catalog_demo_uuid_features_default_terms() {
     'field_sc_catalog_item_extlink' => array(
       'und' => array(
         0 => array(
-          'url' => 'service/slac-email',
+          'url' => 'services/service/slac-email',
           'title' => NULL,
           'attributes' => array(),
         ),
@@ -212,7 +212,7 @@ function slac_service_catalog_demo_uuid_features_default_terms() {
     'field_sc_catalog_item_extlink' => array(
       'und' => array(
         0 => array(
-          'url' => 'service/computer-accounts',
+          'url' => 'services/service/computer-accounts',
           'title' => NULL,
           'attributes' => array(),
         ),
