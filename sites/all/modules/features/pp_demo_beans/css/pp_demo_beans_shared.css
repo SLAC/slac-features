@@ -1,3 +1,25 @@
-.pp_demo-beans-image-text-link {
-  border: solid 10px red;
+.box-about .subtitle {
+  display: none; }
+.box-about article {
+  font-size: 13px;
 }
+.box-about > div.shaded {
+  background-color: whitesmoke;
+  padding: 20px; }
+.box-about > div > ul {
+  background-color: #dfdfdf;
+  width: 147px;
+  padding: 14px;
+  font-size: 12px;
+  float: right;
+  margin: 0 0 15px 20px; }
+  .box-about > div > ul li {
+    margin-left: 10px;
+    margin-bottom: 3px !important; }
+    .box-about > div > ul li a {
+      color: #871628; }
+
+.link-reference {
+  clear: right; }
+  .link-reference a {
+    color: #871628; }

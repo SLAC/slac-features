@@ -14,7 +14,7 @@
         <div class="subtitle"><?php print $subtitle; ?></div>
       <?php endif; ?>
       <?php if (isset($image)): ?>
-        <div class="image"><?php print $image; ?></div>
+        <figure><?php print $image; ?></figure>
       <?php endif; // if ($image) ?>
       <article><?php print $body; ?></article>
   </div>

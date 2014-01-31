@@ -16,16 +16,21 @@
     <?php endif; ?>
     
     <?php if ($image): ?>
+      
       <?php 
         $non_image_position = 'right'; 
         if ($image_position == 'right') {
           $non_image_position = 'left'; 
         } 
       ?>
-        <?php if ($link): ?><a class="positition-<?php print $image_position; ?>" href="<?php print $link_url; ?>"><?php print $image; ?></a>
-        <?php else: ?>
-          <figure><?php print $image; ?></figure>
-        <?php endif; ?>
+      <figure class="positition-<?php print $image_position; ?>">
+        <?php 
+          if ($link){ 
+            ?><a  href="<?php print $link_url; ?>"><?php print $image; ?></a><?php 
+        } else {
+          print $image;
+        }?>
+      </figure>
     <?php endif; // if ($image) ?>
 
     <article><?php print $body; ?></article>

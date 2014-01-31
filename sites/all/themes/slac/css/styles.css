@@ -2483,33 +2483,6 @@ ol.search-results .search-snippet {
   font-size: 20px;
   font-size: 1.25rem; }
 
-.box-about .subtitle {
-  display: none; }
-.box-about article {
-  font-size: 13px;
-  font-size: 0.8125rem; }
-.box-about > div.shaded {
-  background-color: whitesmoke;
-  padding: 20px; }
-.box-about > div > ul {
-  background-color: #dfdfdf;
-  width: 147px;
-  padding: 14px;
-  font-size: 12px;
-  font-size: 0.75rem;
-  float: right;
-  margin: 0 0 15px 20px; }
-  .box-about > div > ul li {
-    margin-left: 10px;
-    margin-bottom: 3px !important; }
-    .box-about > div > ul li a {
-      color: #871628; }
-
-.link-reference {
-  clear: right; }
-  .link-reference a {
-    color: #871628; }
-
 @media (min-width: 480px) {
   .views-field-field-prf-contact-photo {
     float: left; }
