@@ -1,3 +1,12 @@
+<?php
+  $css_file = DRUPAL_ROOT . '/' . drupal_get_path('module', 'pp_demo_beans') . '/css/pp_demo_beans_shared.css';
+  if (file_exists($css_file)):
+?>
+  <style type="text/css">
+    <?php print file_get_contents($css_file); ?>
+  </style>
+<?php endif; ?>
+
 <div class="pp_demo-beans-image-text-link box-about box-type-3">
   <?php if ($title): ?><h2><?php print $title; ?></h2><? endif; ?>
 
