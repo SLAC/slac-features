@@ -137,6 +137,37 @@ function slac_demo_basic_page_install() {
   $bean_our_mission2->field_image_position = array(LANGUAGE_NONE => array(array('value' => 'left')));
   $bean_our_mission2->save();
 
+  // Efficient Design.
+  $bean_efficient_design = bean_create(array('type' => 'content_block_large_image'));
+  $bean_efficient_design->label = 'Efficient Design';
+  $bean_efficient_design->title = 'Efficient Design';
+  $bean_efficient_design->field_content_block_body = array(
+    LANGUAGE_NONE => array(
+      array(
+        'value' => '<p>Proin et sollicitudin neque, nec hendrerit sem. Ut at feugiat ante. Maecenas ac semper felis! Phasellus egestas justo ac orci placerat'
+          . 'aliquam eu ac nunc. Nullam vestibulum metus tempus mauris luctus dictum. Aliquam lobortis, massa non convallis molestie, nulla justo tincidunt dui,'
+          . 'sed commodo amet. Proin et sollicitudin neque, nec hendrerit sem. Ut at feugiat ante. Maecenas ac semper felis! Phasellus egestas justo ac orci placerat '
+          . 'aliquam eu ac nunc. Nullam vestibulum metus tempus mauris luctus dictum. Aliquam lobortis, massa non convallis molestie, nulla justo tincidunt dui,'
+          . 'sed commodo amet. Proin et sollicitudin neque, nec hendrerit sem. Ut at feugiat ante. Maecenas ac semper felis! Phasellus egestas justo ac orci placerat'
+          . 'aliquam eu ac nunc. Nullam vestibulum metus tempus mauris luctus dictum. Aliquam lobortis, massa non convallis molestie, nulla justo tincidunt dui,'
+          . 'sed commodo amet. Proin et sollicitudin neque, nec hendrerit sem. Ut at feugiat ante. Maecenas ac semper felis! Phasellus egestas justo ac orci placerat'
+          . 'aliquam eu ac nunc. Nullam vestibulum metus tempus mauris luctus dictum. Aliquam lobortis, massa non convallis molestie, nulla justo tincidunt dui, sed'
+          . 'commodo amet. Proin et sollicitudin neque, nec hendrerit sem. Ut at feugiat ante. Maecenas ac semper felis! Phasellus egestas justo ac orci placerat '
+          . 'commodo amet.</p> ',
+        'format' => 'full_html',
+      )
+    ),
+  );
+  $bean_efficient_design->field_content_block_background = array(
+    LANGUAGE_NONE => array(
+      array(
+        'value' => 'shaded',
+      )
+    ),
+  );
+  $bean_efficient_design->field_content_block_image = array(LANGUAGE_NONE => array(array('fid' => $images[2]->fid)));
+  $bean_efficient_design->save();
+
   $node = (object) array(
     'title' => t('Vision and Mission'),
     'type' => 'page',
@@ -146,7 +177,8 @@ function slac_demo_basic_page_install() {
           'value' => '<p>SLAC is one of 10 national laboratories under the stewardship of the U.S. Department of Energy Office of Science.</p>'
             . '[block_insert]' . $bean_our_vision->bid . '[/block_insert]<p>&nbsp;</p>'
             . '[block_insert]' . $bean_our_mission->bid . '[/block_insert]<p>&nbsp;</p>'
-            . '[block_insert]' . $bean_our_mission2->bid . '[/block_insert]<p>&nbsp;</p>',
+            . '[block_insert]' . $bean_our_mission2->bid . '[/block_insert]<p>&nbsp;</p>'
+            . '[block_insert]' . $bean_efficient_design->bid . '[/block_insert]<p>&nbsp;</p>',
           'format' => 'full_html',
         ),
       ),
@@ -404,7 +436,7 @@ function _slac_demo_basic_page_install__images() {
   $files = array();
   $destination_directory = 'public://demo_beans';
   file_prepare_directory($destination_directory, FILE_CREATE_DIRECTORY);
-  foreach (array(1, 2) as $i) {
+  foreach (array(1, 2, 3) as $i) {
     $filename =  'image' . $i . '.jpg';
     $source = DRUPAL_ROOT . '/' . drupal_get_path('module', 'slac_demo_basic_page') . '/images/' . $filename;
     $destination = $destination_directory . '/' . $filename;
