@@ -42,3 +42,53 @@ function slac_ext_org_demo_modules() {
     'slac_demo_webform',
   );
 }
+
+/**
+ * Uncomment to allow secondary logo.
+ */
+/**
+  * Can't use module_exists() as we need to include file from theme.
+  */
+//if ($path_to_slac_theme = drupal_get_path('theme', 'slac')) {
+//  $file = DRUPAL_ROOT . '/' . drupal_get_path('theme', 'slac') . '/theme-settings.php';
+//  require_once $file;
+//}
+
+/**
+ * Alter slac_configuration_form form.
+ */
+function slac_ext_org_form_slac_configuration_form_alter(&$form, &$form_state) {
+  $form['site_name_abbreviation'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Site Abbreviation'),
+    '#default_value' => variable_get('site_name_abbreviation', ''),
+    '#required' => TRUE,
+  );
+
+  $form['site_url_address'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Address'),
+    '#default_value' => variable_get('site_url_address', ''),
+    '#required' => TRUE,
+  );
+//  if (function_exists('slac_form_system_theme_settings_alter')) {
+//    $form['var'] = array(
+//      '#value' => 'theme_slac_settings',
+//    );
+//    slac_form_system_theme_settings_alter($form, $form_state);
+//    $form['#submit'][] = 'slac_configuration_form_theme_submit';
+//  }
+}
+
+
+/**
+ * Uncomment to allow secondary logo.
+ *
+ * Submit handler to save theme variable.
+ */
+//function slac_configuration_form_theme_submit($form, &$form_state) {
+//  $theme_settings_key = $form['var']['#value'];
+//  $theme_settings = variable_get($theme_settings_key);
+//  $theme_settings['site_logo_path'] = $form_state['values']['site_logo_path'];
+//  variable_set($theme_settings_key, $theme_settings);
+//}

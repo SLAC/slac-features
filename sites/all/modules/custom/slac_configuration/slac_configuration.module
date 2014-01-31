@@ -1,14 +1,6 @@
 <?php
 
 /**
- * Can't use module_exists() as we need to include file from theme.
- */
-if ($path_to_slac_theme = drupal_get_path('theme', 'slac')) {
-  $file = DRUPAL_ROOT . '/' . drupal_get_path('theme', 'slac') . '/theme-settings.php';
-  require_once $file;
-}
-
-/**
  * Implements hook_permission().
  */
 function slac_configuration_permission() {
@@ -43,13 +35,6 @@ function slac_configuration_form($form, &$form_state) {
     '#suffix' => '</h3>',    
   );
 
-  $form['site_name_abbreviation'] = array(
-    '#type' => 'textfield',
-    '#title' => t('Site Abbreviation'),
-    '#default_value' => variable_get('site_name_abbreviation', ''),
-    '#required' => TRUE,
-  );
-
   $form['site_name'] = array(
     '#type' => 'textfield',
     '#title' => t('Site Name'),
@@ -57,33 +42,9 @@ function slac_configuration_form($form, &$form_state) {
     '#required' => TRUE,
   );
 
-  $form['site_url_address'] = array(
-    '#type' => 'textfield',
-    '#title' => t('Address'),
-    '#default_value' => variable_get('site_url_address', ''),
-    '#required' => TRUE,
-  );
-
-  if (function_exists('slac_form_system_theme_settings_alter')) {
-    $form['var'] = array(
-      '#value' => 'theme_slac_settings',
-    );
-    slac_form_system_theme_settings_alter($form, $form_state);
-    $form['#submit'][] = 'slac_configuration_form_theme_submit';
-  }
-
   return system_settings_form($form);
 }
 
-/**
- * Submit handler to save theme variable.
- */
-function slac_configuration_form_theme_submit($form, &$form_state) {
-  $theme_settings_key = $form['var']['#value'];
-  $theme_settings = variable_get($theme_settings_key);
-  $theme_settings['site_logo_path'] = $form_state['values']['site_logo_path'];
-  variable_set($theme_settings_key, $theme_settings);
-}
 
 /**
  * Implements hook_admin_menu_output_alter().
