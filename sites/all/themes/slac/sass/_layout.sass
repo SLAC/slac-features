@@ -1026,7 +1026,7 @@ h2
     
  
 
-    .general-right &
+    .general-right &, .right-sidebar &
       .pane-page-content & 
         color: $grey-4
         +fontsize-rem(14px)
@@ -1043,8 +1043,10 @@ h2
         .pane-page-content &     
           border-bottom-color: #fff        
         
-          
-
+    .right-sidebar &      
+      .pane-page-content & 
+        border-bottom-color: #fff 
+        
     .pane-page-content & 
       
       .front &
@@ -1103,7 +1105,10 @@ h2
       
   .inner_right &
     margin-bottom: 20px
-      
+
+  .right-sidebar &
+    background-color: $bg-col-1
+    padding: 13px 22px   
 
 .region-grey-background-style
   background-color: $bg-col-1
@@ -2498,3 +2503,58 @@ ol.search-results
         display: block
         &:hover, &.active
           background-color: #dfdfdf
+
++at-breakpoint($tablet)
+  .right-sidebar
+    +span-columns(7 omega,12)
+
++at-breakpoint($small-desktop)
+  .right-sidebar
+    +span-columns(8 omega,12)  
+
++at-breakpoint($large-desktop)    
+  .right-sidebar
+    +span-columns(7 omega,36)  
+    
+
+
+
+
+h2
+  .pane-node-body &
+    .article_panel_layout.with-right-sidebar &
+      +fontsize-rem(20px) 
+        
+.box-about
+  > h2
+  
+  .subtitle
+    display: none
+  
+  article
+    +fontsize-rem(13px)
+
+    
+  > div
+    &.shaded
+      background-color: $grey-f5
+      padding: 20px
+      
+    > ul
+      background-color: #dfdfdf
+      width: 147px
+      padding: 14px
+      +fontsize-rem(12px)
+      float: right
+      margin: 0 0 15px 20px
+      li 
+        margin-left: 10px
+        margin-bottom: 3px !important
+        a 
+          color: $red
+        
+    
+.link-reference
+  clear: right
+  a
+    color: $red
