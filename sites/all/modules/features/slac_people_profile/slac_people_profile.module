@@ -1,6 +1,16 @@
 <?php
 
 /**
+ * Implements hook_init().
+ */
+function slac_people_profile_init() {
+  $siteowner_username = variable_get('slac_site_owner', '');
+  if (empty($siteowner_username)) {
+    drupal_set_message(t('Siteowner is not set for this site.'), 'error');
+  }
+}
+
+/**
  * Implements hook_views_pre_view().
  */
 function slac_people_profile_views_pre_view($view, $display_id, $args) {
