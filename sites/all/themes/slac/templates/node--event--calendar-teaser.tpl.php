@@ -32,5 +32,6 @@
     } if (isset($content['body'])) {
       print render($content['body']);
     } ?>
+    <?php print render($title_suffix); ?>
   </article>
 </div>
