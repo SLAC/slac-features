@@ -81,7 +81,7 @@ a[href*='mailto:'] {
   .views-field-field-prf-bio-tp:after, .views-responsive-grid.views-columns-2 .views-row:after, .event-listing-item:after, .blog-tags ul:after, .connect-with-me .views-row:after, ul.blog-archive-class > li ul:after, div .color-box:after, .icons:after {
     clear: both; }
 
-.slac-font, .sf-accordion-toggle a:before, .sf-accordion a.sf-with-ul:after, .sf-accordion li.sf-expanded a.sf-with-ul:after, .mob-icon:before, .user-icons a:before, .share-block-wrapper a:before, .social-icon-block > div a:after, .footer-seccond ul li a:after, .event-calendar-page .pager li a:before, .calendar-page .view-header ul li.first a:after, .calendar-page .view-header ul li.first a:before, .calendar-page .view-header ul li.last a:after, .calendar-page .view-header ul li.last a:before, article.node-blog.node-teaser header h2 a:after, .profile-info-brief .views-more-link:after, .profile-info-full .profile-maxlist-more a:before, .more-link-template a:after, .last-three-news .more-link a:after, .event-calendar-block .more-link a:after, .event-block a.icon:after, .add-to-calendar a:before, .pane-menu-tree > div > ul.menu > li.is-expanded > a:after, .pane-menu-tree > div > ul.menu > li.is-collapsed > a:after, .connect-with-me .views-row > div a:after, .pane-bundle-slideshow-description-bottom .field-slideshow-controls a:after, .pane-bundle-slac-mini-slideshow .field-slideshow-controls a:after {
+.slac-font, .sf-accordion-toggle a:before, .sf-accordion a.sf-with-ul:after, .sf-accordion li.sf-expanded a.sf-with-ul:after, .mob-icon:before, .user-icons a:before, .share-block-wrapper a:before, .social-icon-block > div a:after, .footer-seccond ul li a:after, .event-calendar-page .pager li a:before, .calendar-page .view-header ul li.first a:after, .calendar-page .view-header ul li.first a:before, .calendar-page .view-header ul li.last a:after, .calendar-page .view-header ul li.last a:before, article.node-blog.node-teaser header h2 a:after, .profile-info-brief .views-more-link:after, .profile-info-full .profile-maxlist-more a:before, .more-link-template a:after, .last-three-news .more-link a:after, .event-calendar-block .more-link a:after, .event-block a.icon:after, .add-to-calendar a:before, .connect-with-me .views-row > div a:after, .pane-bundle-slideshow-description-bottom .field-slideshow-controls a:after, .pane-bundle-slac-mini-slideshow .field-slideshow-controls a:after {
   font-family: "slac";
   font-weight: normal;
   font-style: normal;
@@ -334,7 +334,6 @@ a[href*='mailto:'] {
       .sf-main-menu.sf-horizontal > li.menuparent > ul {
         background-color: #ebebdf;
         border-style: solid;
-        margin-top: 2px;
         position: absolute;
         text-transform: none;
         top: 100%;
@@ -455,21 +454,27 @@ ul.sf-menu.sf-accordion.sf-expanded {
       font-size: 0.875em; }
       .main-menu ul li.active-trail > a {
         color: #871628;
-        border-bottom: 2px solid #871628; }
+        -webkit-box-shadow: 0px -2px 0px 0px #871628 inset;
+        -moz-box-shadow: 0px -2px 0px 0px #871628 inset;
+        box-shadow: 0px -2px 0px 0px #871628 inset; }
       .main-menu ul li:first-child {
         margin-left: 0; }
       .main-menu ul li:last-child {
         margin-right: 0 !important; }
       .main-menu ul li a {
         display: block;
-        padding-bottom: 4px; }
+        padding-bottom: 6px; }
         .main-menu ul li a.active-trail, .main-menu ul li a.active {
           color: #871628;
-          border-bottom: 2px solid #871628; }
+          -webkit-box-shadow: 0px -2px 0px 0px #871628 inset;
+          -moz-box-shadow: 0px -2px 0px 0px #871628 inset;
+          box-shadow: 0px -2px 0px 0px #871628 inset; }
       .main-menu ul li ul .active-trail a {
         background-color: white;
         display: block;
-        border: 0 none; }
+        -webkit-box-shadow: 0px 0px 0px 0px #871628;
+        -moz-box-shadow: 0px 0px 0px 0px #871628;
+        box-shadow: 0px 0px 0px 0px #871628; }
       .main-menu ul li ul li a:hover {
         background-color: white; } }
 @media (min-width: 691px) and (max-width: 893px) {
@@ -492,7 +497,9 @@ ul.sf-menu.sf-accordion.sf-expanded {
           color: #871628;
           border-bottom: 0 none; }
       .main-menu.long-menu ul > li.active-trail a {
-        border-bottom: 0 none; }
+        -webkit-box-shadow: 0 0 0 0 black;
+        -moz-box-shadow: 0 0 0 0 black;
+        box-shadow: 0 0 0 0 black; }
     .main-menu.long-menu ul.sf-main-menu.sf-horizontal > li.menuparent > ul {
       width: 100% !important; }
       .main-menu.long-menu ul.sf-main-menu.sf-horizontal > li.menuparent > ul > li {
@@ -512,7 +519,9 @@ ul.sf-menu.sf-accordion.sf-expanded {
     left: -10px; }
   .sf-main-menu.sf-horizontal > li.menuparent.active-trail > a {
     color: #871628;
-    border-bottom: 2px solid #871628; }
+    -webkit-box-shadow: 0px -2px 0px 0px #871628 inset;
+    -moz-box-shadow: 0px -2px 0px 0px #871628 inset;
+    box-shadow: 0px -2px 0px 0px #871628 inset; }
   .sf-main-menu.sf-horizontal.long-menu ul li {
     margin: 0 25px; } }
 @media (min-width: 1200px) {
@@ -2426,14 +2435,6 @@ ol.search-results .search-snippet {
     font-size: 14px;
     font-size: 0.875rem;
     color: #871628; }
-    .pane-menu-tree > div > ul.menu > li.is-expanded > a:after, .pane-menu-tree > div > ul.menu > li.is-collapsed > a:after {
-      color: #777777;
-      display: inline;
-      vertical-align: middle; }
-    .pane-menu-tree > div > ul.menu > li.is-expanded > a:after {
-      content: "\e61c"; }
-    .pane-menu-tree > div > ul.menu > li.is-collapsed > a:after {
-      content: "\e61e"; }
     .pane-menu-tree > div > ul.menu > li > ul {
       font-size: 12px;
       font-size: 0.75rem; }

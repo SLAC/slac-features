@@ -43,8 +43,6 @@
       > ul
         background-color: $menu_bg
         border-style: solid
-        //padding: 10px 0 5px
-        margin-top: 2px 
         position: absolute
         text-transform: none
         top: 100%
@@ -181,7 +179,7 @@ ul.sf-menu.sf-accordion.sf-expanded
         &.active-trail
           > a 
             color: $red
-            border-bottom: 2px solid $red       
+            +box-shadow(0px -2px 0px 0px $red inset )     
         float: left
         margin: 0 25px 
         font-size: em(14px)
@@ -192,17 +190,17 @@ ul.sf-menu.sf-accordion.sf-expanded
         a
           display: block
           //padding: 0 10px
-          padding-bottom: 4px
+          padding-bottom: 6px
           &.active-trail, &.active
             color: $red
-            border-bottom: 2px solid $red
+            +box-shadow(0px -2px 0px 0px $red inset )
 
         ul
           .active-trail
             a
               background-color: #fff
               display: block
-              border: 0 none
+              +box-shadow(0px 0px 0px 0px $red  )
           li
             a:hover
               background-color: #fff
@@ -232,7 +230,7 @@ ul.sf-menu.sf-accordion.sf-expanded
               border-bottom: 0 none               
           &.active-trail
             a
-              border-bottom: 0 none 
+              +box-shadow(0 0 0 0 #000)
 
         &.sf-main-menu.sf-horizontal
           > li.menuparent
@@ -264,7 +262,8 @@ ul.sf-menu.sf-accordion.sf-expanded
       &.active-trail 
         > a
           color: $red
-          border-bottom: 2px solid $red
+          +box-shadow(0px -2px 0px 0px $red inset )
+          //border-bottom: 2px solid $red
           
     &.long-menu
       ul
