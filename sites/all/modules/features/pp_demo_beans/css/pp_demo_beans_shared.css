@@ -1,8 +1,8 @@
 .box-about .subtitle {
   display: none; }
 .box-about article {
-  font-size: 13px; 
-}
+  font-size: 13px;
+  font-size: 0.8125rem; }
 .box-about > div.shaded {
   background-color: whitesmoke;
   padding: 20px; }
@@ -11,6 +11,7 @@
   width: 147px;
   padding: 14px;
   font-size: 12px;
+  font-size: 0.75rem;
   float: right;
   margin: 0 0 15px 20px; }
   .box-about > div > ul li {
@@ -18,8 +19,24 @@
     margin-bottom: 3px !important; }
     .box-about > div > ul li a {
       color: #871628; }
+.box-about figure {
+  border: 2px solid white;
+  width: 84px;
+  margin: 0; }
+  .box-about figure img {
+    display: block; }
+  .box-about figure.large-image {
+    width: 100%;
+    margin-bottom: 10px; }
+  .box-about figure.positition-right {
+    float: right;
+    margin: 0 0 20px 27px; }
+  .box-about figure.positition-left {
+    float: left;
+    margin: 0 27px 20px 0; }
 
 .link-reference {
-  clear: right; }
+  clear: right;
+  margin-top: 20px; }
   .link-reference a {
     color: #871628; }
