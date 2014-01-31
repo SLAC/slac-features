@@ -1,7 +1,7 @@
 .box-about .subtitle {
   display: none; }
 .box-about article {
-  font-size: 13px;
+  font-size: 13px; 
 }
 .box-about > div.shaded {
   background-color: whitesmoke;
