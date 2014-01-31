@@ -330,7 +330,7 @@ function _slac_demo_basic_page_install__panes($did) {
     ),
     array(
       'did' => $did,
-      'panel' => 'right',
+      'panel' => 'right_sidebar',
       'type' => 'fieldable_panels_pane',
       'subtype' => 'uuid:' . $our_values->uuid,
       'shown' => 1,
@@ -344,7 +344,7 @@ function _slac_demo_basic_page_install__panes($did) {
       ),
       'css' => array(),
       'extras' => array(),
-      'position' => 1,
+      'position' => 0,
       'locks' => array(),
     ),
   );
