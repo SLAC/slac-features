@@ -16,7 +16,6 @@ dependencies[] = field_redirection
 dependencies[] = link
 dependencies[] = location_cck
 dependencies[] = media
-dependencies[] = node_export
 dependencies[] = options
 dependencies[] = page_manager
 dependencies[] = strongarm

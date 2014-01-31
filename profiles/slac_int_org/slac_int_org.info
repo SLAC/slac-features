@@ -91,7 +91,6 @@ dependencies[] = mediafield
 ;Events
 dependencies[] = better_exposed_filters
 dependencies[] = field_redirection
-dependencies[] = node_export
 
 dependencies[] = pp_demo
 

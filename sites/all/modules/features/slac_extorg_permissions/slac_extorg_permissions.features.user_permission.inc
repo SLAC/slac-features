@@ -2104,24 +2104,6 @@ function slac_extorg_permissions_user_default_permissions() {
     'module' => 'epsacrop',
   );
 
-  // Exported permission: 'export nodes'.
-  $permissions['export nodes'] = array(
-    'name' => 'export nodes',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'node_export',
-  );
-
-  // Exported permission: 'export own nodes'.
-  $permissions['export own nodes'] = array(
-    'name' => 'export own nodes',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'node_export',
-  );
-
   // Exported permission: 'flush caches'.
   $permissions['flush caches'] = array(
     'name' => 'flush caches',
@@ -2212,15 +2194,6 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'use PHP for tracking visibility',
     'roles' => array(),
     'module' => 'googleanalytics',
-  );
-
-  // Exported permission: 'use PHP to import nodes'.
-  $permissions['use PHP to import nodes'] = array(
-    'name' => 'use PHP to import nodes',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'node_export',
   );
 
   // Exported permission: 'use block insert'.
