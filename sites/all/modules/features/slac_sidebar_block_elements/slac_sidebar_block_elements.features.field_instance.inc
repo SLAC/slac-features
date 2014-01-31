@@ -74,7 +74,7 @@ function slac_sidebar_block_elements_field_default_field_instances() {
           'crop_news_landscape' => 0,
           'crop_portrait' => 0,
           'crop_slac_projects' => 0,
-          'crop_slac_sidebar_block' => 0,
+          'crop_slac_sidebar_block' => 'crop_slac_sidebar_block',
           'crop_square' => 0,
           'slac_blog_image' => 0,
           'slac_blog_image_details' => 0,
