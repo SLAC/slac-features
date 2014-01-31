@@ -541,9 +541,12 @@ function slac_profile_elements_views_default_views() {
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '[field_prf_contact_fname] [field_prf_contact_lname]';
+  $handler->display->display_options['fields']['nothing']['alter']['trim_whitespace'] = TRUE;
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['nothing']['element_wrapper_type'] = 'div';
   $handler->display->display_options['fields']['nothing']['element_wrapper_class'] = 'profile-name';
+  $handler->display->display_options['fields']['nothing']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['nothing']['hide_alter_empty'] = TRUE;
   /* Field: Profile: Affiliation */
   $handler->display->display_options['fields']['field_prf_contact_affiliation']['id'] = 'field_prf_contact_affiliation';
   $handler->display->display_options['fields']['field_prf_contact_affiliation']['table'] = 'field_data_field_prf_contact_affiliation';

@@ -7,7 +7,7 @@
 /**
  * Implements hook_views_api().
  */
-function slac_profile_elements_views_api() {
+function slac_profile_elements_views_api($module = NULL, $api = NULL) {
   return array("api" => "3.0");
 }
 
@@ -37,6 +37,7 @@ function slac_profile_elements_image_default_styles() {
         'weight' => 2,
       ),
     ),
+    'label' => 'profile_home_blog_image',
   );
 
   // Exported image style: profile_home_user_image.
@@ -59,6 +60,7 @@ function slac_profile_elements_image_default_styles() {
         'weight' => 2,
       ),
     ),
+    'label' => 'profile_home_user_image',
   );
 
   return $styles;

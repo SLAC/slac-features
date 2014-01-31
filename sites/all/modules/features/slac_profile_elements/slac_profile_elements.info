@@ -2,7 +2,6 @@ name = SLAC Profile Elements
 description = Provides elements used for user profile page.
 core = 7.x
 package = SLAC
-php = 5.2.4
 dependencies[] = image
 dependencies[] = slac_blog
 dependencies[] = textformatter
