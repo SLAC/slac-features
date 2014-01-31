@@ -13,6 +13,7 @@ function slac_sidebar_block_elements_image_default_styles() {
   // Exported image style: crop_slac_sidebar_block.
   $styles['crop_slac_sidebar_block'] = array(
     'name' => 'crop_slac_sidebar_block',
+    'label' => 'crop_slac_sidebar_block',
     'effects' => array(
       1 => array(
         'label' => 'EPSA Image Crop',
@@ -30,7 +31,7 @@ function slac_sidebar_block_elements_image_default_styles() {
             'aspect_ratio' => '',
             'bgcolor' => 'black',
             'bgopacity' => 0.6,
-            'fallback' => 0,
+            'fallback' => 1,
           ),
         ),
         'weight' => 1,
