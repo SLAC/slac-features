@@ -17,6 +17,7 @@ function slac_faq_uuid_features_default_terms() {
     'weight' => 0,
     'uuid' => 'b9236867-2fed-4032-8c59-5a6076d8d2fa',
     'vocabulary_machine_name' => 'slac_faq_category',
+    'metatags' => array(),
   );
   $terms[] = array(
     'name' => 'General feedback',
@@ -25,6 +26,7 @@ function slac_faq_uuid_features_default_terms() {
     'weight' => 0,
     'uuid' => 'fbf57dca-3b7d-4dba-8987-96e4f276b91f',
     'vocabulary_machine_name' => 'slac_faq_category',
+    'metatags' => array(),
   );
   return $terms;
 }

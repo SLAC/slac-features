@@ -368,6 +368,11 @@ function slac_faq_views_default_views() {
   $handler->display->display_options['fields']['field_slac_faq_answer']['field'] = 'field_slac_faq_answer';
   $handler->display->display_options['fields']['field_slac_faq_answer']['label'] = '';
   $handler->display->display_options['fields']['field_slac_faq_answer']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Title */
+  $handler->display->display_options['sorts']['title']['id'] = 'title';
+  $handler->display->display_options['sorts']['title']['table'] = 'node';
+  $handler->display->display_options['sorts']['title']['field'] = 'title';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Taxonomy term: Name */
   $handler->display->display_options['arguments']['name']['id'] = 'name';
