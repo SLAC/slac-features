@@ -3135,17 +3135,21 @@ form.node-blog-form .filter-help {
     padding-left: 0; }
 
 @media (min-width: 690px) {
-  form.node-blog-form div.vertical-tabs {
-    margin: 1em 0 1em 15em; }
-  form.node-blog-form ul.vertical-tabs-list {
-    margin: -1px 0 -1px -15em;
-    width: 15em;
+  form.node-blog-form div.vertical-tabs, form.node-form div.vertical-tabs {
+    margin: 0 0 20px 0; }
+  form.node-blog-form ul.vertical-tabs-list, form.node-form ul.vertical-tabs-list {
+    margin: 0 0 10px 0;
+    width: auto;
+    float: none;
     border-bottom: 0 none; }
-    form.node-blog-form ul.vertical-tabs-list li {
+    form.node-blog-form ul.vertical-tabs-list li, form.node-form ul.vertical-tabs-list li {
       border: 1px solid #cccccc; }
-  form.node-blog-form .filter-help {
+  form.node-blog-form .filter-help, form.node-form .filter-help {
     float: right;
     padding: 0; } }
+.form-type-checkbox input, .form-type-checkbox label {
+  display: inline; }
+
 .style-guide ins {
   text-decoration: none; }
 .style-guide pre {

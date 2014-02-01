@@ -26,6 +26,8 @@ stylesheets[all][] = calendar_multiday.css
 stylesheets[all][] = date_views.css
 stylesheets[all][] = superfish.css
 
+
+
 ;scripts[] = js/jquery.placeholder.js
 scripts[] = js/script.js
 scripts[] = js/placeholders.min.js

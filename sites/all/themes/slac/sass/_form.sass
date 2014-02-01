@@ -194,19 +194,27 @@ form.node-blog-form
     
 +at-breakpoint($tablet)
 
-  form.node-blog-form
-    div.vertical-tabs
-      margin: 1em 0 1em 15em
-      
-    ul.vertical-tabs-list
-      margin: -1px 0 -1px -15em  
-      width: 15em
-      //border-top: 1px solid #ccc
-      border-bottom: 0 none
-      
-      li 
-        border: 1px solid #ccc
-        
-    .filter-help
-      float: right
-      padding: 0
+  form
+    &.node-blog-form,
+    &.node-form
+    
+      div.vertical-tabs
+        margin: 0 0 20px 0
+
+      ul.vertical-tabs-list
+        margin: 0 0 10px 0
+        width: auto
+        float: none
+        //border-top: 1px solid #ccc
+        border-bottom: 0 none
+
+        li 
+          border: 1px solid #ccc
+
+      .filter-help
+        float: right
+        padding: 0
+
+.form-type-checkbox        
+  input, label 
+    display: inline
