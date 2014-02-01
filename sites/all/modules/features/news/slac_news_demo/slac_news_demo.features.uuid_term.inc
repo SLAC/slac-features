@@ -20,6 +20,33 @@ function slac_news_demo_uuid_features_default_terms() {
     'metatags' => array(),
   );
   $terms[] = array(
+    'name' => 'green living',
+    'description' => NULL,
+    'format' => NULL,
+    'weight' => 0,
+    'uuid' => '1aa88d95-a2ea-4001-978d-fcacdf96213e',
+    'vocabulary_machine_name' => 'slac_news_tags',
+    'metatags' => array(),
+  );
+  $terms[] = array(
+    'name' => 'social phobia',
+    'description' => NULL,
+    'format' => NULL,
+    'weight' => 0,
+    'uuid' => '4538f295-cc43-4d99-ba1d-6a7f23e86663',
+    'vocabulary_machine_name' => 'slac_news_tags',
+    'metatags' => array(),
+  );
+  $terms[] = array(
+    'name' => 'antiviral drug',
+    'description' => NULL,
+    'format' => NULL,
+    'weight' => 0,
+    'uuid' => '971c94e1-0a7e-474c-96ca-9e1a4da2d6a5',
+    'vocabulary_machine_name' => 'slac_news_tags',
+    'metatags' => array(),
+  );
+  $terms[] = array(
     'name' => 'laser',
     'description' => NULL,
     'format' => NULL,
