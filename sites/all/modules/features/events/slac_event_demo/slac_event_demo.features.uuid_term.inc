@@ -17,6 +17,7 @@ function slac_event_demo_uuid_features_default_terms() {
     'weight' => 0,
     'uuid' => '887e35db-2734-405e-a001-daad4a60daa7',
     'vocabulary_machine_name' => 'events_tags',
+    'metatags' => array(),
   );
   $terms[] = array(
     'name' => 'Accelerator and Instrumentation Seminars',
@@ -32,6 +33,7 @@ function slac_event_demo_uuid_features_default_terms() {
         ),
       ),
     ),
+    'metatags' => array(),
   );
   $terms[] = array(
     'name' => 'Particle Physics',
@@ -40,6 +42,7 @@ function slac_event_demo_uuid_features_default_terms() {
     'weight' => 0,
     'uuid' => '9914b3dc-1371-45c4-970d-93a26ca5fba9',
     'vocabulary_machine_name' => 'events_tags',
+    'metatags' => array(),
   );
   $terms[] = array(
     'name' => 'Cosmology Seminars',
@@ -55,6 +58,7 @@ function slac_event_demo_uuid_features_default_terms() {
         ),
       ),
     ),
+    'metatags' => array(),
   );
   $terms[] = array(
     'name' => 'SLAC Public Lectures',
@@ -70,6 +74,7 @@ function slac_event_demo_uuid_features_default_terms() {
         ),
       ),
     ),
+    'metatags' => array(),
   );
   return $terms;
 }
