@@ -125,6 +125,16 @@ function slac_news_demo_uuid_features_default_content() {
       ),
     ),
   ),
+  'field_slac_news_date' => array(
+    'und' => array(
+      0 => array(
+        'value' => '2013-12-02 00:00:00',
+        'timezone' => 'Europe/Helsinki',
+        'timezone_db' => 'Europe/Helsinki',
+        'date_type' => 'datetime',
+      ),
+    ),
+  ),
   'metatags' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
@@ -325,6 +335,16 @@ function slac_news_demo_uuid_features_default_content() {
       ),
     ),
   ),
+  'field_slac_news_date' => array(
+    'und' => array(
+      0 => array(
+        'value' => '2014-02-02 00:00:00',
+        'timezone' => 'Europe/Helsinki',
+        'timezone_db' => 'Europe/Helsinki',
+        'date_type' => 'datetime',
+      ),
+    ),
+  ),
   'metatags' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
@@ -501,6 +521,16 @@ function slac_news_demo_uuid_features_default_content() {
       0 => array(
         'tid' => 28,
         'uuid' => '05339b25-6cf8-4e75-b4ea-f91d490f5b04',
+      ),
+    ),
+  ),
+  'field_slac_news_date' => array(
+    'und' => array(
+      0 => array(
+        'value' => '2013-11-12 00:00:00',
+        'timezone' => 'Europe/Helsinki',
+        'timezone_db' => 'Europe/Helsinki',
+        'date_type' => 'datetime',
       ),
     ),
   ),
@@ -723,6 +753,16 @@ afreeberg@slac.stanford.edu',
       ),
     ),
   ),
+  'field_slac_news_date' => array(
+    'und' => array(
+      0 => array(
+        'value' => '2014-01-05 00:00:00',
+        'timezone' => 'Europe/Helsinki',
+        'timezone_db' => 'Europe/Helsinki',
+        'date_type' => 'datetime',
+      ),
+    ),
+  ),
   'metatags' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
@@ -893,6 +933,16 @@ afreeberg@slac.stanford.edu',
       0 => array(
         'tid' => 28,
         'uuid' => '05339b25-6cf8-4e75-b4ea-f91d490f5b04',
+      ),
+    ),
+  ),
+  'field_slac_news_date' => array(
+    'und' => array(
+      0 => array(
+        'value' => '2012-01-09 00:00:00',
+        'timezone' => 'Europe/Helsinki',
+        'timezone_db' => 'Europe/Helsinki',
+        'date_type' => 'datetime',
       ),
     ),
   ),
@@ -1083,6 +1133,16 @@ afreeberg@slac.stanford.edu',
       0 => array(
         'tid' => 29,
         'uuid' => '47c46adc-4bf5-41cc-91a2-96c057b16297',
+      ),
+    ),
+  ),
+  'field_slac_news_date' => array(
+    'und' => array(
+      0 => array(
+        'value' => '2013-08-02 00:00:00',
+        'timezone' => 'Europe/Helsinki',
+        'timezone_db' => 'Europe/Helsinki',
+        'date_type' => 'datetime',
       ),
     ),
   ),
@@ -1277,6 +1337,16 @@ afreeberg@slac.stanford.edu',
       ),
     ),
   ),
+  'field_slac_news_date' => array(
+    'und' => array(
+      0 => array(
+        'value' => '2013-05-02 00:00:00',
+        'timezone' => 'Europe/Helsinki',
+        'timezone_db' => 'Europe/Helsinki',
+        'date_type' => 'datetime',
+      ),
+    ),
+  ),
   'metatags' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
@@ -1461,6 +1531,16 @@ afreeberg@slac.stanford.edu',
       ),
     ),
   ),
+  'field_slac_news_date' => array(
+    'und' => array(
+      0 => array(
+        'value' => '2014-01-23 00:00:00',
+        'timezone' => 'Europe/Helsinki',
+        'timezone_db' => 'Europe/Helsinki',
+        'date_type' => 'datetime',
+      ),
+    ),
+  ),
   'metatags' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
@@ -1638,6 +1718,16 @@ Sebastien Boutet, SLAC National Accelerator Laboratory: sboutet@slac.stanford.ed
       ),
     ),
   ),
+  'field_slac_news_date' => array(
+    'und' => array(
+      0 => array(
+        'value' => '2013-09-07 00:00:00',
+        'timezone' => 'Europe/Helsinki',
+        'timezone_db' => 'Europe/Helsinki',
+        'date_type' => 'datetime',
+      ),
+    ),
+  ),
   'metatags' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
@@ -1803,6 +1893,16 @@ Sebastien Boutet, SLAC National Accelerator Laboratory: sboutet@slac.stanford.ed
       0 => array(
         'tid' => 29,
         'uuid' => '47c46adc-4bf5-41cc-91a2-96c057b16297',
+      ),
+    ),
+  ),
+  'field_slac_news_date' => array(
+    'und' => array(
+      0 => array(
+        'value' => '2014-01-22 00:00:00',
+        'timezone' => 'Europe/Helsinki',
+        'timezone_db' => 'Europe/Helsinki',
+        'date_type' => 'datetime',
       ),
     ),
   ),
@@ -1995,6 +2095,16 @@ Sebastien Boutet, SLAC National Accelerator Laboratory: sboutet@slac.stanford.ed
       0 => array(
         'tid' => 29,
         'uuid' => '47c46adc-4bf5-41cc-91a2-96c057b16297',
+      ),
+    ),
+  ),
+  'field_slac_news_date' => array(
+    'und' => array(
+      0 => array(
+        'value' => '2013-10-05 00:00:00',
+        'timezone' => 'Europe/Helsinki',
+        'timezone_db' => 'Europe/Helsinki',
+        'date_type' => 'datetime',
       ),
     ),
   ),
@@ -2197,6 +2307,16 @@ Sebastien Boutet, SLAC National Accelerator Laboratory: sboutet@slac.stanford.ed
       0 => array(
         'tid' => 29,
         'uuid' => '47c46adc-4bf5-41cc-91a2-96c057b16297',
+      ),
+    ),
+  ),
+  'field_slac_news_date' => array(
+    'und' => array(
+      0 => array(
+        'value' => '2013-04-07 00:00:00',
+        'timezone' => 'Europe/Helsinki',
+        'timezone_db' => 'Europe/Helsinki',
+        'date_type' => 'datetime',
       ),
     ),
   ),

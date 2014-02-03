@@ -73,6 +73,7 @@ function slac_news_image_default_styles() {
         'weight' => 2,
       ),
     ),
+    'label' => 'crop_news_landscape',
   );
 
   // Exported image style: slac_news_image_details.
@@ -116,6 +117,7 @@ function slac_news_image_default_styles() {
         'weight' => 2,
       ),
     ),
+    'label' => 'slac_news_image_details',
   );
 
   return $styles;
