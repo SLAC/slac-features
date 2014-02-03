@@ -36,83 +36,70 @@ function news_archive_menu_content_type_render(&$subtype, $conf, $panel_args, $c
  * @return rendered list with items
  */
 function slac_news_archive_create_list() {
-
   $menu = array();
-  $menu_item = menu_get_item();
 
-  //set default value for years and months
-  $years = date('Y');
-  $months = date('m');
+  // Set default value for years and months.
+  list($current_year, $current_month) = _slac_news_archive_get_current_yearmonth();
 
-  // set values for years and months by the current page arguments
-  if ($menu_item['original_map'][0] == 'node') {
-    $years = date('Y', $menu_item['page_arguments'][0]->created);
-    $months = date('m', $menu_item['page_arguments'][0]->created);
+  $year_counters = _slac_news_archive_years();
+  if (empty($year_counters)) {
+    return '';
   }
-  elseif ($menu_item['original_map'][0] == 'news') {
-    if (isset($menu_item['page_arguments'][1])) {
-      if (is_numeric($menu_item['page_arguments'][1])) {
-        $years = $menu_item['page_arguments'][1];
-      }
-      elseif (isset($menu_item['page_arguments'][1]->data)) {
-        if (is_numeric($menu_item['page_arguments'][1]->data)) {
-          $years = $menu_item['page_arguments'][1]->data;
-        }
-      }
+
+  // Create the years items.
+  foreach ($year_counters as $value) {
+    $children = array();
+    $year_attributes = array();
+
+    // Check if the year item should has subitems
+    if ($current_year == $value->years) {
+      // add the classes for the current active year item
+      $year_attributes = array('attributes' => array('class' => array('active-item', 'active-year')));
+
+      $children = _slac_news_archive_get_year_children($current_year, $current_month);
     }
+
+    $year_link_title = $value->years . ' (' . $value->nid_count . ')';
+    $menu[] = array(
+      'data' => l($year_link_title, 'news/archive/' . $value->years, $year_attributes),
+      'children' => ($children) ? $children : '',
+    );
   }
-
-  if (_slac_news_archive_years()) {
-    // create the years items
-    foreach (_slac_news_archive_years() as $value) {
-      $children = array();
-      $year_attributes = array();
-
-      // the inactive year items display the count of nodes
-      $year_count = ' (' . $value->nid_count . ')';
-
-      //check if the year item should has subitems
-      if ($years == $value->years) {
-
-        // create the months items
-        foreach (_slac_news_archive_months($value->years) as $value_months) {
-          $month_attributes = array();
-          $year_count = '';
-
-          $months = isset($menu_item['page_arguments'][2]) ? $menu_item['page_arguments'][2] : 0;
-          if (is_numeric(arg(1))) {
-            $node_type = isset(node_load(arg(1))->type) ? node_load(arg(1))->type : '';
-            $months = ($node_type == 'slac_news') ? date('m', node_load(arg(1))->created) : 0;
-          }
-
-          // add the classes for the current active month item
-          if ($months == $value_months->months_numeric) {
-            $month_attributes = array('attributes' => array('class' => array('active-item', 'active-month')));
-          }
-
-          // add the classes for the current active year item
-          $year_attributes = array('attributes' => array('class' => array('active-item', 'active-year')));
-
-          $children[] = array(
-            'data' => l(
-                $value_months->months . ' (' . $value_months->nid_count . ')', 'news/archive/' . $value->years . '/' . $value_months->months_numeric, $month_attributes),
-          );
-        }
-      }
-      $menu[] = array(
-        'data' => l($value->years . $year_count, 'news/archive/' . $value->years, $year_attributes),
-        'children' => ($children) ? $children : '',
-      );
-    }
-  }
-  $type = 'ul';
   $attributes = array(
     'id' => 'news-archive',
     'class' => 'news-archive-class',
   );
-  $data = theme('item_list', array('items' => $menu, 'type' => $type, 'attributes' => $attributes));
+  $data = theme('item_list', array('items' => $menu, 'type' => 'ul', 'attributes' => $attributes));
 
   return $data;
+}
+
+/**
+ * Create the months items.
+ *
+ * @param type $current_year
+ * @param type $current_month
+ * @return type
+ */
+function _slac_news_archive_get_year_children($current_year, $current_month) {
+  $children = array();
+  foreach (_slac_news_archive_months($current_year) as $value_months) {
+    $month_attributes = array();
+
+    // add the classes for the current active month item
+    if ($current_month == $value_months->months) {
+      $month_attributes = array('attributes' => array('class' => array('active-item', 'active-month')));
+    }
+
+    $month_names = date_month_names_untranslated();
+    $children[] = array(
+      'data' => l(
+        $month_names[$value_months->months] . ' (' . $value_months->nid_count . ')',
+        'news/archive/' . $current_year . '/' . sprintf('%02s', $value_months->months),
+        $month_attributes),
+    );
+  }
+  return $children;
 }
 
 /**
@@ -120,13 +107,12 @@ function slac_news_archive_create_list() {
  * @return type list of years and index of the counted nodes
  */
 function _slac_news_archive_years() {
-  $query = db_select('node', 'n')
-      ->condition('n.status', 1, '=')
-      ->condition('n.type', 'slac_news', '=')
-      ->groupBy('years')
-      ->orderBy('years', 'DESC');
-  $query->addExpression('COUNT(nid)', 'nid_count');
-  $query->addExpression('FROM_UNIXTIME(created,\'%Y\')', 'years');
+  $query = _slac_news_archive_count_query();
+
+  $query->groupBy('years');
+  $query->orderBy('years', 'DESC');
+  $query->addExpression('COUNT(n.nid)', 'nid_count');
+  $query->addExpression('YEAR(f.field_slac_news_date_value)', 'years');
   return $query->execute()->fetchAll();
 }
 
@@ -136,15 +122,54 @@ function _slac_news_archive_years() {
  * @return type list of months and index of the counted nodes
  */
 function _slac_news_archive_months($year = NULL) {
-  $query = db_select('node', 'n')
-      ->condition('n.status', 1, '=')
-      ->condition('n.type', 'slac_news', '=')
-      ->fields('n', array('created'))
-      ->groupBy('months')
-      ->orderBy('months_numeric', 'DESC');
-  $query->where('FROM_UNIXTIME(created,\'%Y\') = :year', array(':year' => $year));
+  $query = _slac_news_archive_count_query();
+
   $query->addExpression('COUNT(nid)', 'nid_count');
-  $query->addExpression('FROM_UNIXTIME(created,\'%M\')', 'months');
-  $query->addExpression('FROM_UNIXTIME(created,\'%m\')', 'months_numeric');
+  $query->addExpression('MONTH(f.field_slac_news_date_value)', 'months');
+  $query->where('YEAR(f.field_slac_news_date_value) = :year', array(':year' => $year));
+  $query->groupBy('months');
+  $query->orderBy('months', 'ASC');
   return $query->execute()->fetchAll();
+}
+
+function _slac_news_archive_count_query() {
+  $query = db_select('node', 'n');
+  $query->condition('n.status', 1, '=');
+  $query->condition('n.type', 'slac_news', '=');
+  $query->join('field_data_field_slac_news_date', 'f', 'n.nid = f.entity_id');
+
+  return $query;
+}
+
+/**
+ * Return currently selected pair year-month.
+ *
+ * Can be:
+ * - current year for /news
+ * - specified year (year plus month) in argument for /news/archive/YYYY/MM
+ * - node's date field /node/X
+ */
+function _slac_news_archive_get_current_yearmonth() {
+  $arg0 = arg(0);
+  $arg1 = arg(1);
+  $arg2 = arg(2);
+  $arg3 = arg(3);
+
+  if ($arg0 == 'news' && $arg1 == 'archive') {
+    return array($arg2, $arg3);
+  }
+
+  $node = node_load($arg1);
+  if (empty($node) || $node->type != 'slac_news' || !isset($node->field_slac_news_date[LANGUAGE_NONE][0]['value'])) {
+    return array(date('Y', REQUEST_TIME), 0);
+  }
+
+  // Anonymous function used for readibility (return value early).
+  $date_value = $node->field_slac_news_date[LANGUAGE_NONE][0]['value'];
+  $date = strtotime($date_value);
+
+  return array(
+    $date->format('Y'),
+    $date->format('m'),
+  );
 }
