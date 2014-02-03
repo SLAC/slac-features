@@ -11,6 +11,65 @@ function slac_faq_default_page_manager_pages() {
   $page = new stdClass();
   $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
   $page->api_version = 1;
+  $page->name = 'add_new_faq';
+  $page->task = 'page';
+  $page->admin_title = 'Add new question';
+  $page->admin_description = '';
+  $page->path = 'faq/new-question';
+  $page->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'role',
+        'settings' => array(
+          'rids' => array(
+            0 => 4,
+            1 => 3,
+          ),
+        ),
+        'context' => 'logged-in-user',
+        'not' => FALSE,
+      ),
+    ),
+    'logic' => 'and',
+  );
+  $page->menu = array(
+    'type' => 'action',
+    'title' => 'Add new question',
+    'name' => 'navigation',
+    'weight' => '0',
+    'parent' => array(
+      'type' => 'tab',
+      'title' => 'faq',
+      'name' => 'main-menu',
+      'weight' => '0',
+    ),
+  );
+  $page->arguments = array();
+  $page->conf = array(
+    'admin_paths' => FALSE,
+  );
+  $page->default_handlers = array();
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_add_new_faq_http_response';
+  $handler->task = 'page';
+  $handler->subtask = 'add_new_faq';
+  $handler->handler = 'http_response';
+  $handler->weight = 0;
+  $handler->conf = array(
+    'title' => 'HTTP response code',
+    'contexts' => array(),
+    'relationships' => array(),
+    'code' => '301',
+    'destination' => 'node/add/slac-faq',
+  );
+  $page->default_handlers[$handler->name] = $handler;
+  $pages['add_new_faq'] = $page;
+
+  $page = new stdClass();
+  $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
+  $page->api_version = 1;
   $page->name = 'faq';
   $page->task = 'page';
   $page->admin_title = 'FAQ';
@@ -34,13 +93,10 @@ function slac_faq_default_page_manager_pages() {
   );
   $page->arguments = array(
     'term_name' => array(
-      'id' => 1,
-      'identifier' => 'Term name',
-      'name' => 'string',
-      'settings' => array(
-        'use_tail' => 0,
-      ),
-      'keyword' => 'term_name',
+      'id' => '',
+      'identifier' => '',
+      'argument' => '',
+      'settings' => array(),
     ),
   );
   $page->conf = array(
@@ -77,6 +133,8 @@ function slac_faq_default_page_manager_pages() {
       'left' => NULL,
       'left_title' => NULL,
       'left_author' => NULL,
+      'social_media_1' => NULL,
+      'social_media_2' => NULL,
     ),
   );
   $display->cache = array();
@@ -182,8 +240,8 @@ function slac_faq_default_page_manager_pages() {
     $pane->locks = array();
     $display->content['new-5'] = $pane;
     $display->panels['right'][1] = 'new-5';
-  $display->hide_title = PANELS_TITLE_NONE;
-  $display->title_pane = '0';
+  $display->hide_title = PANELS_TITLE_PANE;
+  $display->title_pane = 'new-3';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['faq'] = $page;
