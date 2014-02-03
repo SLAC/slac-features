@@ -14,4 +14,3 @@
     <span class="field-content"><?php print $field_slac_faq_answer[0]['value']; ?></span>
   </div>
 </div>
-
