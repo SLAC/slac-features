@@ -23,8 +23,8 @@ function slac_faq_preprocess_node(&$vars) {
   if ($vars['type'] == 'slac_faq' && isset($vars['field_slac_faq_answer'][0]['value'])) {
     $vars['answer'] = $vars['field_slac_faq_answer'][0]['value'];
   }
-  elseif ($vars['type'] == 'slac_faq' && isset($vars[LANGUAGE_NONE]['field_slac_faq_answer'][0]['value'])) {
-    $vars['answer'] = $vars[LANGUAGE_NONE]['field_slac_faq_answer'][0]['value'];
+  elseif ($vars['type'] == 'slac_faq' && isset($vars['field_slac_faq_answer'][LANGUAGE_NONE][0]['value'])) {
+    $vars['answer'] = $vars['field_slac_faq_answer'][LANGUAGE_NONE][0]['value'];
   }
 }
 
