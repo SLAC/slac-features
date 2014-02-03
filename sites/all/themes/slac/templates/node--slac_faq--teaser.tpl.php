@@ -11,6 +11,6 @@
   </div>
   <?php print render($title_suffix); ?>
   <div class="views-field-field-slac-faq-answer">
-    <span class="field-content"><?php print $field_slac_faq_answer[0]['value']; ?></span>
+    <span class="field-content"><?php print $answer; ?></span>
   </div>
 </div>
