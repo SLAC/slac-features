@@ -545,27 +545,23 @@ function slac_news_views_default_views() {
   $handler->display->display_options['fields']['field_slac_news_tags']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_slac_news_tags']['delta_offset'] = '0';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Created year */
-  $handler->display->display_options['arguments']['created_year']['id'] = 'created_year';
-  $handler->display->display_options['arguments']['created_year']['table'] = 'node';
-  $handler->display->display_options['arguments']['created_year']['field'] = 'created_year';
-  $handler->display->display_options['arguments']['created_year']['title_enable'] = TRUE;
-  $handler->display->display_options['arguments']['created_year']['title'] = 'News Archive %1';
-  $handler->display->display_options['arguments']['created_year']['default_argument_type'] = 'raw';
-  $handler->display->display_options['arguments']['created_year']['default_argument_options']['index'] = '2';
-  $handler->display->display_options['arguments']['created_year']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['created_year']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['created_year']['summary_options']['items_per_page'] = '25';
-  /* Contextual filter: Content: Created month */
-  $handler->display->display_options['arguments']['created_month']['id'] = 'created_month';
-  $handler->display->display_options['arguments']['created_month']['table'] = 'node';
-  $handler->display->display_options['arguments']['created_month']['field'] = 'created_month';
-  $handler->display->display_options['arguments']['created_month']['title_enable'] = TRUE;
-  $handler->display->display_options['arguments']['created_month']['title'] = 'News Archive: %1 %2';
-  $handler->display->display_options['arguments']['created_month']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['created_month']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['created_month']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['created_month']['summary_options']['items_per_page'] = '25';
+  /* Contextual filter: Content: Date (field_slac_news_date) */
+  $handler->display->display_options['arguments']['field_slac_news_date_value']['id'] = 'field_slac_news_date_value';
+  $handler->display->display_options['arguments']['field_slac_news_date_value']['table'] = 'field_data_field_slac_news_date';
+  $handler->display->display_options['arguments']['field_slac_news_date_value']['field'] = 'field_slac_news_date_value';
+  $handler->display->display_options['arguments']['field_slac_news_date_value']['title_enable'] = TRUE;
+  $handler->display->display_options['arguments']['field_slac_news_date_value']['title'] = 'News Archive: %1';
+  $handler->display->display_options['arguments']['field_slac_news_date_value']['default_argument_type'] = 'date';
+  $handler->display->display_options['arguments']['field_slac_news_date_value']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_slac_news_date_value']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_slac_news_date_value']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_slac_news_date_value']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['field_slac_news_date_value']['validate']['type'] = 'php';
+  $handler->display->display_options['arguments']['field_slac_news_date_value']['validate_options']['code'] = 'if (function_exists(\'_ctools_plugins_context_year_month_title\')) {
+  $handler->validated_title = _ctools_plugins_context_year_month_title($argument);
+}
+return TRUE;';
+  $handler->display->display_options['arguments']['field_slac_news_date_value']['year_range'] = '-10:+3';
   $handler->display->display_options['pane_category']['name'] = 'News';
   $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['allow']['use_pager'] = 0;
@@ -578,21 +574,13 @@ function slac_news_views_default_views() {
   $handler->display->display_options['allow']['exposed_form'] = 0;
   $handler->display->display_options['allow']['fields_override'] = 0;
   $handler->display->display_options['argument_input'] = array(
-    'created_year' => array(
-      'type' => 'panel',
-      'context' => 'entity:comment.author',
+    'field_slac_news_date_value' => array(
+      'type' => 'context',
+      'context' => 'year_month.year_month',
       'context_optional' => 0,
       'panel' => '0',
       'fixed' => '',
-      'label' => 'Content: Created year',
-    ),
-    'created_month' => array(
-      'type' => 'panel',
-      'context' => 'entity:comment.author',
-      'context_optional' => 0,
-      'panel' => '1',
-      'fixed' => '',
-      'label' => 'Content: Created month',
+      'label' => 'Content: Date (field_slac_news_date)',
     ),
   );
   $handler->display->display_options['inherit_panels_path'] = '0';

@@ -8,3 +8,20 @@ function ctools_plugins_ctools_plugin_directory($module, $plugin) {
     return 'plugins/' . $plugin;
   }
 }
+
+/**
+ * Create a title "YYYY Full-month"
+ *
+ * @param string $argument
+ *   Can be either year "2014" or year and month "2014-02".
+ * @return type
+ */
+function _ctools_plugins_context_year_month_title($argument) {
+  list($year, $month) = explode('-', $argument . '-');
+  if (empty($month)) {
+    return $year;
+  }
+
+  $month_names = date_month_names_untranslated();
+  return $year . ' ' . $month_names[$month];
+}

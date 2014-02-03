@@ -308,7 +308,16 @@ function slac_news_default_page_manager_pages() {
     'body_classes_to_add' => '',
     'css_id' => '',
     'css' => '',
-    'contexts' => array(),
+    'contexts' => array(
+      0 => array(
+        'identifier' => 'Year/Month',
+        'keyword' => 'year_month',
+        'name' => 'year_month',
+        'id' => 1,
+        'year' => '2',
+        'month' => '3',
+      ),
+    ),
     'relationships' => array(),
     'access' => array(
       'logic' => 'and',
@@ -359,6 +368,9 @@ else {return FALSE;}
     $pane->access = array();
     $pane->configuration = array(
       'items_per_page' => '10',
+      'context' => array(
+        0 => 'context_year_month_1',
+      ),
     );
     $pane->cache = array();
     $pane->style = array(
