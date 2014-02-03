@@ -85,11 +85,11 @@ function slac_news_views_default_views() {
   $handler->display->display_options['fields']['field_slac_news_tags']['field'] = 'field_slac_news_tags';
   $handler->display->display_options['fields']['field_slac_news_tags']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_slac_news_tags']['delta_offset'] = '0';
-  /* Sort criterion: Content: Post date */
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'node';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
-  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Sort criterion: Content: Date (field_slac_news_date) */
+  $handler->display->display_options['sorts']['field_slac_news_date_value']['id'] = 'field_slac_news_date_value';
+  $handler->display->display_options['sorts']['field_slac_news_date_value']['table'] = 'field_data_field_slac_news_date';
+  $handler->display->display_options['sorts']['field_slac_news_date_value']['field'] = 'field_slac_news_date_value';
+  $handler->display->display_options['sorts']['field_slac_news_date_value']['order'] = 'DESC';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -436,14 +436,20 @@ function slac_news_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Post date */
-  $handler->display->display_options['fields']['created']['id'] = 'created';
-  $handler->display->display_options['fields']['created']['table'] = 'node';
-  $handler->display->display_options['fields']['created']['field'] = 'created';
-  $handler->display->display_options['fields']['created']['label'] = '';
-  $handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['created']['date_format'] = 'custom';
-  $handler->display->display_options['fields']['created']['custom_date_format'] = 'm/d/Y';
+  /* Field: Content: Date */
+  $handler->display->display_options['fields']['field_slac_news_date']['id'] = 'field_slac_news_date';
+  $handler->display->display_options['fields']['field_slac_news_date']['table'] = 'field_data_field_slac_news_date';
+  $handler->display->display_options['fields']['field_slac_news_date']['field'] = 'field_slac_news_date';
+  $handler->display->display_options['fields']['field_slac_news_date']['label'] = '';
+  $handler->display->display_options['fields']['field_slac_news_date']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_slac_news_date']['settings'] = array(
+    'format_type' => 'short',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'show_repeat_rule' => 'show',
+  );
   $handler->display->display_options['pane_category']['name'] = 'News';
   $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['allow']['use_pager'] = 0;

@@ -54,6 +54,8 @@ function slac_news_default_page_manager_handlers() {
       'right' => NULL,
       'left_title' => NULL,
       'left_author' => NULL,
+      'social_media_1' => NULL,
+      'social_media_2' => NULL,
     ),
   );
   $display->cache = array();
@@ -142,12 +144,24 @@ function slac_news_default_page_manager_handlers() {
     $pane = new stdClass();
     $pane->pid = 'new-4';
     $pane->panel = 'left_author';
-    $pane->type = 'node_created';
-    $pane->subtype = 'node_created';
+    $pane->type = 'entity_field';
+    $pane->subtype = 'node:field_slac_news_date';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'format' => 'month_day_year',
+      'label' => 'hidden',
+      'formatter' => 'date_default',
+      'delta_limit' => 0,
+      'delta_offset' => '0',
+      'delta_reversed' => FALSE,
+      'formatter_settings' => array(
+        'format_type' => 'slac_news_node_date',
+        'multiple_number' => '',
+        'multiple_from' => '',
+        'multiple_to' => '',
+        'fromto' => 'both',
+        'show_repeat_rule' => 'show',
+      ),
       'context' => 'argument_entity_id:node_1',
       'override_title' => 1,
       'override_title_text' => '',

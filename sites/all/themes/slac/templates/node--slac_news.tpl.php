@@ -17,7 +17,7 @@
       <div class="news-content">
       <?php if ($display_submitted): ?>
         <?php print $user_picture; ?>
-        <?php print $submitted; ?>
+        <?php print render($content['field_slac_news_date']); ?>
       <?php endif; ?>
       <?php print render($title_prefix); ?>
       <?php if (!$page && $title): ?>
