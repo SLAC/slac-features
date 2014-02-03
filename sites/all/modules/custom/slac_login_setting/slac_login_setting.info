@@ -1,0 +1,4 @@
+name = SLAC Log in settings
+description = Removes create new account and request new password tabs from log in page.
+core = 7.x
+package = SLAC

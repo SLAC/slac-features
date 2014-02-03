@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * Implements hook_menu_alter().
+ */
+
+//Removes the "Create new account" and "Request new password" tabs on login page.
+function slac_login_setting_menu_alter(&$items) {
+
+$items['user/password']['access callback'] = FALSE;
+$items['user/register']['access callback'] = FALSE;
+
+}
