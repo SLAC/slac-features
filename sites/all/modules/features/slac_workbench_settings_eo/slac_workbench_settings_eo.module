@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the SLAC Workbench Settings EO feature.
+ */
+
+include_once 'slac_workbench_settings_eo.features.inc';

@@ -15,6 +15,8 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'access administration menu',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'admin_menu',
@@ -25,6 +27,8 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'access administration pages',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'system',
@@ -94,6 +98,8 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'access content overview',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'node',
@@ -204,6 +210,17 @@ function slac_extorg_permissions_user_default_permissions() {
     'module' => 'user',
   );
 
+  // Exported permission: 'access workbench'.
+  $permissions['access workbench'] = array(
+    'name' => 'access workbench',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'site owner' => 'site owner',
+    ),
+    'module' => 'workbench',
+  );
+
   // Exported permission: 'add media from remote sources'.
   $permissions['add media from remote sources'] = array(
     'name' => 'add media from remote sources',
@@ -211,6 +228,15 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'media_internet',
+  );
+
+  // Exported permission: 'administer BOTCHA settings'.
+  $permissions['administer BOTCHA settings'] = array(
+    'name' => 'administer BOTCHA settings',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'botcha',
   );
 
   // Exported permission: 'administer actions'.
@@ -278,6 +304,15 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'block',
+  );
+
+  // Exported permission: 'administer cami'.
+  $permissions['administer cami'] = array(
+    'name' => 'administer cami',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'cami',
   );
 
   // Exported permission: 'administer comments'.
@@ -445,6 +480,15 @@ function slac_extorg_permissions_user_default_permissions() {
     'module' => 'menu',
   );
 
+  // Exported permission: 'administer menu attributes'.
+  $permissions['administer menu attributes'] = array(
+    'name' => 'administer menu attributes',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'menu_attributes',
+  );
+
   // Exported permission: 'administer menu_trail_by_path'.
   $permissions['administer menu_trail_by_path'] = array(
     'name' => 'administer menu_trail_by_path',
@@ -504,6 +548,8 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'administer nodes',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'node',
@@ -537,6 +583,34 @@ function slac_extorg_permissions_user_default_permissions() {
     'module' => 'panelizer',
   );
 
+  // Exported permission: 'administer panelizer node article defaults'.
+  $permissions['administer panelizer node article defaults'] = array(
+    'name' => 'administer panelizer node article defaults',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node blog defaults'.
+  $permissions['administer panelizer node blog defaults'] = array(
+    'name' => 'administer panelizer node blog defaults',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node event defaults'.
+  $permissions['administer panelizer node event defaults'] = array(
+    'name' => 'administer panelizer node event defaults',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node kb_article defaults'.
+  $permissions['administer panelizer node kb_article defaults'] = array(
+    'name' => 'administer panelizer node kb_article defaults',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
   // Exported permission: 'administer panelizer node landing_page choice'.
   $permissions['administer panelizer node landing_page choice'] = array(
     'name' => 'administer panelizer node landing_page choice',
@@ -544,111 +618,129 @@ function slac_extorg_permissions_user_default_permissions() {
     'module' => 'panelizer',
   );
 
+  // Exported permission: 'administer panelizer node landing_page content'.
+  $permissions['administer panelizer node landing_page content'] = array(
+    'name' => 'administer panelizer node landing_page content',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
   // Exported permission: 'administer panelizer node landing_page context'.
   $permissions['administer panelizer node landing_page context'] = array(
     'name' => 'administer panelizer node landing_page context',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
+    'roles' => array(),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer node landing_page defaults'.
   $permissions['administer panelizer node landing_page defaults'] = array(
     'name' => 'administer panelizer node landing_page defaults',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
+    'roles' => array(),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer node landing_page layout'.
   $permissions['administer panelizer node landing_page layout'] = array(
     'name' => 'administer panelizer node landing_page layout',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
+    'roles' => array(),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer node landing_page overview'.
   $permissions['administer panelizer node landing_page overview'] = array(
     'name' => 'administer panelizer node landing_page overview',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
+    'roles' => array(),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer node landing_page settings'.
   $permissions['administer panelizer node landing_page settings'] = array(
     'name' => 'administer panelizer node landing_page settings',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
+    'roles' => array(),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer node page choice'.
   $permissions['administer panelizer node page choice'] = array(
     'name' => 'administer panelizer node page choice',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
+    'roles' => array(),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer node page content'.
   $permissions['administer panelizer node page content'] = array(
     'name' => 'administer panelizer node page content',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
+    'roles' => array(),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer node page context'.
   $permissions['administer panelizer node page context'] = array(
     'name' => 'administer panelizer node page context',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
+    'roles' => array(),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer node page defaults'.
   $permissions['administer panelizer node page defaults'] = array(
     'name' => 'administer panelizer node page defaults',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
+    'roles' => array(),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer node page layout'.
   $permissions['administer panelizer node page layout'] = array(
     'name' => 'administer panelizer node page layout',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
+    'roles' => array(),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer node page overview'.
   $permissions['administer panelizer node page overview'] = array(
     'name' => 'administer panelizer node page overview',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
+    'roles' => array(),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer node page settings'.
   $permissions['administer panelizer node page settings'] = array(
     'name' => 'administer panelizer node page settings',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node slac_faq defaults'.
+  $permissions['administer panelizer node slac_faq defaults'] = array(
+    'name' => 'administer panelizer node slac_faq defaults',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node slac_news defaults'.
+  $permissions['administer panelizer node slac_news defaults'] = array(
+    'name' => 'administer panelizer node slac_news defaults',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node slac_sc_catalog_item defaults'.
+  $permissions['administer panelizer node slac_sc_catalog_item defaults'] = array(
+    'name' => 'administer panelizer node slac_sc_catalog_item defaults',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node support_ticket defaults'.
+  $permissions['administer panelizer node support_ticket defaults'] = array(
+    'name' => 'administer panelizer node support_ticket defaults',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node webform defaults'.
+  $permissions['administer panelizer node webform defaults'] = array(
+    'name' => 'administer panelizer node webform defaults',
+    'roles' => array(),
     'module' => 'panelizer',
   );
 
@@ -735,11 +827,21 @@ function slac_extorg_permissions_user_default_permissions() {
     'module' => 'system',
   );
 
+  // Exported permission: 'administer superfish'.
+  $permissions['administer superfish'] = array(
+    'name' => 'administer superfish',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'superfish',
+  );
+
   // Exported permission: 'administer taxonomy'.
   $permissions['administer taxonomy'] = array(
     'name' => 'administer taxonomy',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'taxonomy',
@@ -791,6 +893,27 @@ function slac_extorg_permissions_user_default_permissions() {
     'module' => 'views',
   );
 
+  // Exported permission: 'administer workbench'.
+  $permissions['administer workbench'] = array(
+    'name' => 'administer workbench',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'site owner' => 'site owner',
+    ),
+    'module' => 'workbench',
+  );
+
+  // Exported permission: 'administer workbench moderation'.
+  $permissions['administer workbench moderation'] = array(
+    'name' => 'administer workbench moderation',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'site owner' => 'site owner',
+    ),
+    'module' => 'workbench_moderation',
+  );
+
   // Exported permission: 'block IP addresses'.
   $permissions['block IP addresses'] = array(
     'name' => 'block IP addresses',
@@ -832,6 +955,17 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'bypass rules access',
     'roles' => array(),
     'module' => 'rules',
+  );
+
+  // Exported permission: 'bypass workbench moderation'.
+  $permissions['bypass workbench moderation'] = array(
+    'name' => 'bypass workbench moderation',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'site owner' => 'site owner',
+    ),
+    'module' => 'workbench_moderation',
   );
 
   // Exported permission: 'cancel account'.
@@ -906,6 +1040,8 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'create article content',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'node',
@@ -916,6 +1052,8 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'create blog content',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'node',
@@ -926,6 +1064,8 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'create event content',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'node',
@@ -944,6 +1084,15 @@ function slac_extorg_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'site owner' => 'site owner',
+    ),
+    'module' => 'fieldable_panels_panes',
+  );
+
+  // Exported permission: 'create fieldable share_block'.
+  $permissions['create fieldable share_block'] = array(
+    'name' => 'create fieldable share_block',
+    'roles' => array(
+      'administrator' => 'administrator',
     ),
     'module' => 'fieldable_panels_panes',
   );
@@ -993,6 +1142,8 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'create files',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'file_entity',
@@ -1003,6 +1154,8 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'create kb_article content',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'node',
@@ -1013,6 +1166,8 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'create landing_page content',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'node',
@@ -1032,6 +1187,8 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'create page content',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'node',
@@ -1042,6 +1199,8 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'create slac_news content',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'node',
@@ -1052,6 +1211,8 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'create slac_sc_catalog_item content',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'node',
@@ -1072,6 +1233,8 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'create webform content',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'node',
@@ -1101,6 +1264,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'delete any audio files',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'file_entity',
@@ -1161,6 +1325,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'delete any document files',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'file_entity',
@@ -1181,6 +1346,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'delete any image files',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'file_entity',
@@ -1251,6 +1417,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'delete any video files',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'file_entity',
@@ -1272,6 +1439,15 @@ function slac_extorg_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'site owner' => 'site owner',
+    ),
+    'module' => 'fieldable_panels_panes',
+  );
+
+  // Exported permission: 'delete fieldable share_block'.
+  $permissions['delete fieldable share_block'] = array(
+    'name' => 'delete fieldable share_block',
+    'roles' => array(
+      'administrator' => 'administrator',
     ),
     'module' => 'fieldable_panels_panes',
   );
@@ -1331,6 +1507,8 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'delete own audio files',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'file_entity',
@@ -1351,6 +1529,8 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'delete own document files',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'file_entity',
@@ -1371,6 +1551,8 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'delete own image files',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'file_entity',
@@ -1440,6 +1622,8 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'delete own video files',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'file_entity',
@@ -1470,9 +1654,126 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'delete revisions',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'node',
+  );
+
+  // Exported permission: 'delete terms in blog_categories'.
+  $permissions['delete terms in blog_categories'] = array(
+    'name' => 'delete terms in blog_categories',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+    ),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'delete terms in event_categories'.
+  $permissions['delete terms in event_categories'] = array(
+    'name' => 'delete terms in event_categories',
+    'roles' => array(
+      'editor' => 'editor',
+    ),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'delete terms in events_tags'.
+  $permissions['delete terms in events_tags'] = array(
+    'name' => 'delete terms in events_tags',
+    'roles' => array(
+      'editor' => 'editor',
+    ),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'delete terms in kb_categories'.
+  $permissions['delete terms in kb_categories'] = array(
+    'name' => 'delete terms in kb_categories',
+    'roles' => array(
+      'editor' => 'editor',
+    ),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'delete terms in news_types'.
+  $permissions['delete terms in news_types'] = array(
+    'name' => 'delete terms in news_types',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+    ),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'delete terms in slac_blog_tags'.
+  $permissions['delete terms in slac_blog_tags'] = array(
+    'name' => 'delete terms in slac_blog_tags',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+    ),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'delete terms in slac_faq_category'.
+  $permissions['delete terms in slac_faq_category'] = array(
+    'name' => 'delete terms in slac_faq_category',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+    ),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'delete terms in slac_news_tags'.
+  $permissions['delete terms in slac_news_tags'] = array(
+    'name' => 'delete terms in slac_news_tags',
+    'roles' => array(
+      'editor' => 'editor',
+    ),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'delete terms in slac_sc_catalog_category'.
+  $permissions['delete terms in slac_sc_catalog_category'] = array(
+    'name' => 'delete terms in slac_sc_catalog_category',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+    ),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'delete terms in slac_sc_catalog_eligibility'.
+  $permissions['delete terms in slac_sc_catalog_eligibility'] = array(
+    'name' => 'delete terms in slac_sc_catalog_eligibility',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+    ),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'delete terms in slac_sc_catalog_self_help'.
+  $permissions['delete terms in slac_sc_catalog_self_help'] = array(
+    'name' => 'delete terms in slac_sc_catalog_self_help',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+    ),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'delete terms in tags'.
+  $permissions['delete terms in tags'] = array(
+    'name' => 'delete terms in tags',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+    ),
+    'module' => 'taxonomy',
   );
 
   // Exported permission: 'display drupal links'.
@@ -1489,6 +1790,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'download any audio files',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'file_entity',
@@ -1499,6 +1801,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'download any document files',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'file_entity',
@@ -1509,6 +1812,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'download any image files',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'file_entity',
@@ -1519,6 +1823,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'download any video files',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'file_entity',
@@ -1538,6 +1843,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'download own audio files',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'file_entity',
@@ -1548,6 +1854,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'download own document files',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'file_entity',
@@ -1558,6 +1865,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'download own image files',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'file_entity',
@@ -1568,6 +1876,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'download own video files',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'file_entity',
@@ -1587,6 +1896,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'edit any article content',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'node',
@@ -1597,6 +1907,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'edit any audio files',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'file_entity',
@@ -1627,6 +1938,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'edit any blog content',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'node',
@@ -1677,6 +1989,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'edit any document files',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'file_entity',
@@ -1687,6 +2000,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'edit any event content',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'node',
@@ -1697,6 +2011,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'edit any image files',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'file_entity',
@@ -1707,6 +2022,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'edit any kb_article content',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'node',
@@ -1717,6 +2033,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'edit any landing_page content',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'node',
@@ -1727,6 +2044,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'edit any page content',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'node',
@@ -1737,6 +2055,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'edit any slac_faq content',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'node',
@@ -1747,6 +2066,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'edit any slac_news content',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'node',
@@ -1757,6 +2077,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'edit any slac_sc_catalog_item content',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'node',
@@ -1777,6 +2098,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'edit any video files',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'file_entity',
@@ -1787,6 +2109,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'edit any webform content',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'node',
@@ -1815,6 +2138,15 @@ function slac_extorg_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'site owner' => 'site owner',
+    ),
+    'module' => 'fieldable_panels_panes',
+  );
+
+  // Exported permission: 'edit fieldable share_block'.
+  $permissions['edit fieldable share_block'] = array(
+    'name' => 'edit fieldable share_block',
+    'roles' => array(
+      'administrator' => 'administrator',
     ),
     'module' => 'fieldable_panels_panes',
   );
@@ -1874,6 +2206,8 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'edit own article content',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'node',
@@ -1884,6 +2218,8 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'edit own audio files',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'file_entity',
@@ -1904,6 +2240,8 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'edit own blog content',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'node',
@@ -1933,6 +2271,8 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'edit own document files',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'file_entity',
@@ -1943,6 +2283,8 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'edit own event content',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'node',
@@ -1960,6 +2302,8 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'edit own image files',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'file_entity',
@@ -1970,6 +2314,8 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'edit own kb_article content',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'node',
@@ -1980,6 +2326,8 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'edit own landing_page content',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'node',
@@ -1990,6 +2338,8 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'edit own page content',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'node',
@@ -2000,6 +2350,8 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'edit own slac_faq content',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'node',
@@ -2010,6 +2362,8 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'edit own slac_news content',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'node',
@@ -2020,6 +2374,8 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'edit own slac_sc_catalog_item content',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'node',
@@ -2040,6 +2396,8 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'edit own video files',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'file_entity',
@@ -2050,6 +2408,8 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'edit own webform content',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'node',
@@ -2063,6 +2423,122 @@ function slac_extorg_permissions_user_default_permissions() {
       'site owner' => 'site owner',
     ),
     'module' => 'webform',
+  );
+
+  // Exported permission: 'edit terms in blog_categories'.
+  $permissions['edit terms in blog_categories'] = array(
+    'name' => 'edit terms in blog_categories',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+    ),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'edit terms in event_categories'.
+  $permissions['edit terms in event_categories'] = array(
+    'name' => 'edit terms in event_categories',
+    'roles' => array(
+      'editor' => 'editor',
+    ),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'edit terms in events_tags'.
+  $permissions['edit terms in events_tags'] = array(
+    'name' => 'edit terms in events_tags',
+    'roles' => array(
+      'editor' => 'editor',
+    ),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'edit terms in kb_categories'.
+  $permissions['edit terms in kb_categories'] = array(
+    'name' => 'edit terms in kb_categories',
+    'roles' => array(
+      'editor' => 'editor',
+    ),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'edit terms in news_types'.
+  $permissions['edit terms in news_types'] = array(
+    'name' => 'edit terms in news_types',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+    ),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'edit terms in slac_blog_tags'.
+  $permissions['edit terms in slac_blog_tags'] = array(
+    'name' => 'edit terms in slac_blog_tags',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+    ),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'edit terms in slac_faq_category'.
+  $permissions['edit terms in slac_faq_category'] = array(
+    'name' => 'edit terms in slac_faq_category',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+    ),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'edit terms in slac_news_tags'.
+  $permissions['edit terms in slac_news_tags'] = array(
+    'name' => 'edit terms in slac_news_tags',
+    'roles' => array(
+      'editor' => 'editor',
+    ),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'edit terms in slac_sc_catalog_category'.
+  $permissions['edit terms in slac_sc_catalog_category'] = array(
+    'name' => 'edit terms in slac_sc_catalog_category',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+    ),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'edit terms in slac_sc_catalog_eligibility'.
+  $permissions['edit terms in slac_sc_catalog_eligibility'] = array(
+    'name' => 'edit terms in slac_sc_catalog_eligibility',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+    ),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'edit terms in slac_sc_catalog_self_help'.
+  $permissions['edit terms in slac_sc_catalog_self_help'] = array(
+    'name' => 'edit terms in slac_sc_catalog_self_help',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+    ),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'edit terms in tags'.
+  $permissions['edit terms in tags'] = array(
+    'name' => 'edit terms in tags',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+    ),
+    'module' => 'taxonomy',
   );
 
   // Exported permission: 'epsacrop administer available crops'.
@@ -2114,6 +2590,15 @@ function slac_extorg_permissions_user_default_permissions() {
     'module' => 'admin_menu',
   );
 
+  // Exported permission: 'generate features'.
+  $permissions['generate features'] = array(
+    'name' => 'generate features',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'features',
+  );
+
   // Exported permission: 'manage features'.
   $permissions['manage features'] = array(
     'name' => 'manage features',
@@ -2121,6 +2606,17 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'features',
+  );
+
+  // Exported permission: 'moderate content from draft to published'.
+  $permissions['moderate content from draft to published'] = array(
+    'name' => 'moderate content from draft to published',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'site owner' => 'site owner',
+    ),
+    'module' => 'workbench_moderation',
   );
 
   // Exported permission: 'notify of path changes'.
@@ -2156,6 +2652,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'revert revisions',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'node',
@@ -2170,6 +2667,15 @@ function slac_extorg_permissions_user_default_permissions() {
     'module' => 'user',
   );
 
+  // Exported permission: 'skip BOTCHA'.
+  $permissions['skip BOTCHA'] = array(
+    'name' => 'skip BOTCHA',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'botcha',
+  );
+
   // Exported permission: 'skip comment approval'.
   $permissions['skip comment approval'] = array(
     'name' => 'skip comment approval',
@@ -2178,6 +2684,15 @@ function slac_extorg_permissions_user_default_permissions() {
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'comment',
+  );
+
+  // Exported permission: 'slac administer configuration'.
+  $permissions['slac administer configuration'] = array(
+    'name' => 'slac administer configuration',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'slac_configuration',
   );
 
   // Exported permission: 'submit latitude/longitude'.
@@ -2201,6 +2716,8 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'use block insert',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'bean_wysiwyg',
@@ -2278,9 +2795,41 @@ function slac_extorg_permissions_user_default_permissions() {
   $permissions['use text format full_html'] = array(
     'name' => 'use text format full_html',
     'roles' => array(
+      'author' => 'author',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'filter',
+  );
+
+  // Exported permission: 'use workbench_moderation my drafts tab'.
+  $permissions['use workbench_moderation my drafts tab'] = array(
+    'name' => 'use workbench_moderation my drafts tab',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'site owner' => 'site owner',
+    ),
+    'module' => 'workbench_moderation',
+  );
+
+  // Exported permission: 'use workbench_moderation needs review tab'.
+  $permissions['use workbench_moderation needs review tab'] = array(
+    'name' => 'use workbench_moderation needs review tab',
+    'roles' => array(),
+    'module' => 'workbench_moderation',
+  );
+
+  // Exported permission: 'view all unpublished content'.
+  $permissions['view all unpublished content'] = array(
+    'name' => 'view all unpublished content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'site owner' => 'site owner',
+    ),
+    'module' => 'workbench_moderation',
   );
 
   // Exported permission: 'view any bio profile'.
@@ -2409,6 +2958,28 @@ function slac_extorg_permissions_user_default_permissions() {
     'module' => 'location',
   );
 
+  // Exported permission: 'view moderation history'.
+  $permissions['view moderation history'] = array(
+    'name' => 'view moderation history',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'site owner' => 'site owner',
+    ),
+    'module' => 'workbench_moderation',
+  );
+
+  // Exported permission: 'view moderation messages'.
+  $permissions['view moderation messages'] = array(
+    'name' => 'view moderation messages',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'site owner' => 'site owner',
+    ),
+    'module' => 'workbench_moderation',
+  );
+
   // Exported permission: 'view node location table'.
   $permissions['view node location table'] = array(
     'name' => 'view node location table',
@@ -2452,6 +3023,8 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'view own files',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'file_entity',
@@ -2462,6 +3035,8 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'view own private files',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'file_entity',
@@ -2483,6 +3058,8 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'view own unpublished content',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'node',
@@ -2505,6 +3082,17 @@ function slac_extorg_permissions_user_default_permissions() {
       'site owner' => 'site owner',
     ),
     'module' => 'file_entity',
+  );
+
+  // Exported permission: 'view revisions'.
+  $permissions['view revisions'] = array(
+    'name' => 'view revisions',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'site owner' => 'site owner',
+    ),
+    'module' => 'node',
   );
 
   // Exported permission: 'view the administration theme'.

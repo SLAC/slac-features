@@ -103,9 +103,6 @@ function slac_news_strongarm() {
       'token' => array(
         'custom_settings' => FALSE,
       ),
-      'calendar_teaser' => array(
-        'custom_settings' => TRUE,
-      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -140,7 +137,8 @@ function slac_news_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'node_options_slac_news';
   $strongarm->value = array(
-    0 => 'status',
+    0 => 'moderation',
+    1 => 'revision',
   );
   $export['node_options_slac_news'] = $strongarm;
 

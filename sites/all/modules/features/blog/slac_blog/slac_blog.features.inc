@@ -49,6 +49,7 @@ function slac_blog_image_default_styles() {
         'weight' => 1,
       ),
     ),
+    'label' => 'blog_thumbnail',
   );
 
   // Exported image style: profile-image-blog-icon.
@@ -71,6 +72,7 @@ function slac_blog_image_default_styles() {
         'weight' => 1,
       ),
     ),
+    'label' => 'profile-image-blog-icon',
   );
 
   // Exported image style: slac_blog_image.
@@ -114,6 +116,7 @@ function slac_blog_image_default_styles() {
         'weight' => -9,
       ),
     ),
+    'label' => 'slac_blog_image',
   );
 
   // Exported image style: slac_blog_image_details.
@@ -157,6 +160,7 @@ function slac_blog_image_default_styles() {
         'weight' => 2,
       ),
     ),
+    'label' => 'slac_blog_image_details',
   );
 
   return $styles;

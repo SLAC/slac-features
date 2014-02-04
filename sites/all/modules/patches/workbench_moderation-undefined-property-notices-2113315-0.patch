@@ -1,0 +1,13 @@
+diff --git a/workbench_moderation.module b/workbench_moderation.module
+index 5947275..1002794 100644
+--- a/workbench_moderation.module
++++ b/workbench_moderation.module
+@@ -332,7 +332,7 @@ function workbench_moderation_view_tab_title($node) {
+   if (!workbench_moderation_node_type_moderated($node->type)) {
+     return t('View');
+   }
+-
++  workbench_moderation_node_data($node);
+   // Is there a published revision?
+   $state = $node->workbench_moderation;
+   if (!empty($state['published'])) {

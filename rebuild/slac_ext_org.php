@@ -11,7 +11,7 @@ $commands = array(
   ),
   array(
     'description' => 'Install selected profile: ',
-    'command' => 'drush si slac_ext_org --db-url=mysql://slac_features:SwHbNJEZ6QRxrlU@localhost/slac_features --account-name=admin --account-pass=618hWVCDmY1n3uf --account-mail=admin@example.com --site-name=SLAC-EXT-ORG-' . date(DATE_ATOM) . ' -y'
+    'command' => 'drush si slac_ext_org --db-url=mysql://root:andrei@localhost/features --account-name=admin --account-pass=123 --account-mail=admin@example.com --site-name=SLAC-EXT-ORG-' . date(DATE_ATOM) . ' -y'
   ),
   array(
     'description' => 'Admin login ',
@@ -24,6 +24,22 @@ $commands = array(
   array(
     'description' => 'Add "site owner" role to siteowner: ',
     'command' => 'drush user-add-role "site owner" siteowner'
+  ),
+  array(
+    'description' => 'Create author user account: ',
+    'command' => 'drush user-create author --mail="author@example.com" --password="1"'
+  ),
+  array(
+    'description' => 'Add "author" role to author: ',
+    'command' => 'drush user-add-role "author" author'
+  ),
+  array(
+    'description' => 'Create editor user editor: ',
+    'command' => 'drush user-create editor --mail="editor@example.com" --password="1"'
+  ),
+  array(
+    'description' => 'Add "editor" role to editor: ',
+    'command' => 'drush user-add-role "editor" editor'
   ),
   array(
     'description' => 'Disable webauth module',
