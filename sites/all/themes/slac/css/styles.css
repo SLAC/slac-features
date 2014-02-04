@@ -1932,7 +1932,7 @@ ul.news-archive-class li .item-list {
   margin-right: 1px;
   padding-right: 5px;
   margin-right: 7px; }
-.article_panel_layout .pane-node-created, .article_panel_layout .author {
+.article_panel_layout .pane-node-created, .article_panel_layout .author, .article_panel_layout .field-name-field-slac-news-date {
   display: inline-block;
   font-size: 14px;
   font-size: 0.875rem;
