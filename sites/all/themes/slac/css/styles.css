@@ -1779,7 +1779,7 @@ table.sticky-table {
     border-bottom: 0;
     padding-bottom: 0;
     margin-bottom: 0; }
-.news-landing time, .kb-articles time {
+.news-landing time, .news-landing .field-name-field-slac-news-date, .kb-articles time, .kb-articles .field-name-field-slac-news-date {
   color: #555555;
   font-size: 12px;
   font-size: 0.75rem;
