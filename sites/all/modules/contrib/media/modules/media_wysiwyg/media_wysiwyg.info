@@ -4,9 +4,10 @@ package = Media
 core = 7.x
 
 dependencies[] = media
-dependencies[] = wysiwyg
 
+test_dependencies[] = ckeditor
 test_dependencies[] = token
+test_dependencies[] = wysiwyg
 
 files[] = media_wysiwyg.test
 files[] = tests/media_wysiwyg.file_usage.test
@@ -14,9 +15,9 @@ files[] = tests/media_wysiwyg.macro.test
 
 configure = admin/config/media/browser
 
-; Information added by Drupal.org packaging script on 2013-12-10
-version = "7.x-2.0-alpha3+32-dev"
+; Information added by Drupal.org packaging script on 2014-01-29
+version = "7.x-2.0-alpha3+40-dev"
 core = "7.x"
 project = "media"
-datestamp = "1386702823"
+datestamp = "1391019805"
 

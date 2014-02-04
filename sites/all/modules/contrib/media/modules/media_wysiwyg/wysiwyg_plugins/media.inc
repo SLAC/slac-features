@@ -22,8 +22,8 @@ function media_wysiwyg_media_plugin() {
   $plugins['media'] = array(
     'title' => variable_get('media_wysiwyg_wysiwyg_title', t('Media browser')),
     'vendor url' => 'http://drupal.org/project/media',
-    'icon path' => drupal_get_path('module', 'media_wysiwyg') . '/images',
-    'icon file' => 'wysiwyg-media.gif',
+    'icon path' => drupal_get_path('module', 'media_wysiwyg') . '/wysiwyg_plugins/media_ckeditor/images',
+    'icon file' => 'icon.gif',
     'icon title' => variable_get('media_wysiwyg_wysiwyg_icon_title', t('Add media')),
     // @todo: move this to the plugin directory for the wysiwyg plugin.
     'js path' => drupal_get_path('module', 'media_wysiwyg') . '/js',
@@ -41,33 +41,4 @@ function media_wysiwyg_media_plugin() {
   );
 
   return $plugins;
-}
-
-/**
- * Prepares the page to be able to launch the media browser.
- *
- * Defines default variables.
- */
-function media_wysiwyg_include_browser_js() {
-  static $included;
-  if ($included) {
-    return;
-  }
-  $included = TRUE;
-  module_load_include('inc', 'media', 'includes/media.browser');
-  $javascript = media_browser_js();
-  foreach ($javascript as $key => $definitions) {
-    foreach ($definitions as $definition) {
-      $function = 'drupal_add_' . $key;
-      // Since the arguments to pass are variable, use call_user_func_array().
-      // This will not handle all potential drupal_add_*() functions directly
-      // but covers the js and library needed here, which are unlikely to be
-      // expanded since this function is only a workaround for a wysiwyg
-      // limitation.
-      call_user_func_array($function, $definition);
-    }
-  }
-  // Add wysiwyg-specific settings.
-  $settings = array('wysiwyg_allowed_attributes' => variable_get('media_wysiwyg_wysiwyg_allowed_attributes', _media_wysiwyg_wysiwyg_allowed_attributes_default()));
-  drupal_add_js(array('media' => $settings), 'setting');
 }

@@ -159,6 +159,35 @@ function media_wysiwyg_filter_info() {
 }
 
 /**
+ * Prepares the page to be able to launch the media browser.
+ *
+ * Defines default variables.
+ */
+function media_wysiwyg_include_browser_js() {
+  static $included;
+  if ($included) {
+    return;
+  }
+  $included = TRUE;
+  module_load_include('inc', 'media', 'includes/media.browser');
+  $javascript = media_browser_js();
+  foreach ($javascript as $key => $definitions) {
+    foreach ($definitions as $definition) {
+      $function = 'drupal_add_' . $key;
+      // Since the arguments to pass are variable, use call_user_func_array().
+      // This will not handle all potential drupal_add_*() functions directly
+      // but covers the js and library needed here, which are unlikely to be
+      // expanded since this function is only a workaround for a wysiwyg
+      // limitation.
+      call_user_func_array($function, $definition);
+    }
+  }
+  // Add wysiwyg-specific settings.
+  $settings = array('wysiwyg_allowed_attributes' => variable_get('media_wysiwyg_wysiwyg_allowed_attributes', _media_wysiwyg_wysiwyg_allowed_attributes_default()));
+  drupal_add_js(array('media' => $settings), 'setting');
+}
+
+/**
  * Implements hook_wysiwyg_include_directory().
  */
 function media_wysiwyg_wysiwyg_include_directory($type) {

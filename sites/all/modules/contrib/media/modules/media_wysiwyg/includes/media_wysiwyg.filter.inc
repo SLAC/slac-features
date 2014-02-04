@@ -166,18 +166,18 @@ function media_wysiwyg_token_to_markup($match, $wysiwyg = FALSE) {
   if ($wysiwyg) {
     $settings['wysiwyg'] = $wysiwyg;
     // If sending markup to a WYSIWYG, we need to pass the file infomation so
-    // that a inline macro can be generated when the WYSIWYG is detached.
-    // The WYSIWYG plugin is expecting this information in the format of a
-    // urlencoded JSON string stored in the data-file_info attribute of the
-    // element.
+    // that an inline macro can be generated when the WYSIWYG is detached.
+    // The WYSIWYG plugin is expecting this information in the
+    // Drupal.settings.mediaDataMap variable.
     $element = media_wysiwyg_get_file_without_label($file, $tag_info['view_mode'], $settings);
-    $data = drupal_json_encode(array(
+    $data = array(
       'type' => 'media',
-      'fid' => $file->fid,
+      'fid'  => $file->fid,
       'view_mode' => $tag_info['view_mode'],
       'link_text' => $tag_info['link_text'],
-    ));
-    $element['#attributes']['data-file_info'] = urlencode($data);
+    );
+    drupal_add_js(array('mediaDataMap' => array($file->fid => $data)), 'setting');
+    $element['#attributes']['data-fid'] = $file->fid;
     $element['#attributes']['class'][] = 'media-element';
   }
   else {

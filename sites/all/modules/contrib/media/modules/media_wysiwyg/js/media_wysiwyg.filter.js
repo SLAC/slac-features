@@ -15,64 +15,132 @@
      */
     replaceTokenWithPlaceholder: function(content) {
       Drupal.media.filter.ensure_tagmap()
-      var tagmap = Drupal.settings.tagmap,
-        matches = content.match(/\[\[.*?\]\]/g),
-        media_definition;
+      var matches = content.match(/\[\[.*?"type":"media".*?\]\]/g);
 
       if (matches) {
-        for (var macro in tagmap) {
-          // We cant use indexOf because of IE.
-          var index = $.inArray(macro, matches);
-          if (index !== -1) {
-            var media_json = macro.replace('[[', '').replace(']]', '');
+        for (var i = 0; i < matches.length; i++) {
+          var match = matches[i];
 
-            // Make sure that the media JSON is valid.
-            try {
-              media_definition = JSON.parse(media_json);
-            }
-            catch (err) {
-              media_definition = null;
-            }
-            if (media_definition) {
-              // Apply attributes.
-              var element = Drupal.media.filter.create_element(tagmap[macro], media_definition);
-              var markup = Drupal.media.filter.outerHTML(element);
+          // Check if the macro exists in the tagmap. This ensures backwards
+          // compatibility with existing media and is moderately more efficient
+          // than re-building the element.
+          var media = Drupal.settings.tagmap[match];
+          var media_json = match.replace('[[', '').replace(']]', '');
 
-              content = content.replace(macro, markup);
-            }
+          // Ensure that the media JSON is valid.
+          try {
+            var media_definition = JSON.parse(media_json);
           }
+          catch (err) {
+            // @todo: error logging.
+            // Content should be returned to prevent an empty editor.
+            return content;
+          }
+
+          // Re-build the media if the macro has changed from the tagmap.
+          if (!media && media_definition.fid) {
+            Drupal.media.filter.ensureSourceMap();
+            var source = Drupal.settings.mediaSourceMap[media_definition.fid];
+            media = document.createElement(source.tagName);
+            media.src = source.src;
+          }
+
+          // Apply attributes.
+          var element = Drupal.media.filter.create_element(media, media_definition);
+          var markup  = Drupal.media.filter.outerHTML(element);
+
+          // Use split and join to replace all instances of macro with markup.
+          content = content.split(match).join(markup);
         }
       }
+
       return content;
     },
 
     /**
-     * Replaces the placeholders for html editing with the media tokens to store.
-     * @param content
+     * Replaces media elements with tokens.
+     *
+     * @param content (string)
+     *   The markup within the wysiwyg instance.
      */
     replacePlaceholderWithToken: function(content) {
       Drupal.media.filter.ensure_tagmap();
-      // Convert all xhtml markup to html for reliable matching/replacing.
-      content = content.replace(/[\s]\/\>/g, '>');
 
-      // Re-build the macros in case any element has changed in the editor.
-      $('.media-element', content).each(function(i, element) {
-        var markup = Drupal.media.filter.outerHTML($(element));
-          macro = Drupal.media.filter.create_macro($(element));
+      // Rewrite the tagmap in case any of the macros have changed.
+      Drupal.settings.tagmap = {};
 
-        // Store the macro => html for more efficient rendering in
-        // replaceTokenWithPlaceholder().
-        Drupal.settings.tagmap[macro] = markup;
-        // Replace the media element with its macro.
-        content = content.replace(markup, macro);
-      });
+      // Wrap the content to be able to use replaceWith() and html().
+      content = $('<div>').append(content);
+      var media = $('.media-element', content);
 
-      return content;
+      if (media.length) {
+        // Replace all media elements with their respective macros.
+        media.replaceWith(function() {
+          var el = $(this),
+            macro = Drupal.media.filter.create_macro(el);
+
+          // Store the markup for more efficient rendering later.
+          // @see replaceTokenWidthPlaceholder()
+          Drupal.settings.tagmap[macro] = Drupal.media.filter.outerHTML(el);
+
+          return macro;
+        });
+      }
+
+      return content.html();
     },
 
     /**
-     * Serializes file information as a url-encoded JSON object and stores it as a
-     * data attribute on the html element.
+     * Returns alt and title field values for use as html attributes. Ensures
+     * changes made via the media popup persist into the macro as title/alt
+     * attributes.
+     *
+     * @param options (array)
+     *   Options passed through a popup form submission.
+     */
+    parseAttributeFields: function(options) {
+      var attributes = [];
+
+      for (field in options) {
+        if (field.match('image_alt')) {
+          attributes['alt'] = options[field];
+        }
+
+        if (field.match('image_title')) {
+          attributes['title'] = options[field];
+        }
+      }
+
+      return attributes;
+    },
+
+    /**
+     * Ensures changes made to fielded attributes persist set to the field(s).
+     *
+     * @param file_info (object)
+     *   A json decoded object of the file being inserted/updated.
+     */
+    syncAttributesToFields: function(file_info) {
+      // If the title attribute has changed, ensure the title field is updated.
+      var titleAttr  = file_info.attributes.title || false;
+      var titleField = file_info.fields['field_file_image_title_text[und][0][value]'] || false;
+      if (titleAttr !== titleField) {
+        file_info.fields['field_file_image_title_text[und][0][value]'] = titleAttr;
+      }
+
+      // If the alt attribute has changed, ensure the alt field is updated.
+      var altAttr  = file_info.attributes.alt || false;
+      var altField = file_info.fields['field_file_image_alt_text[und][0][value]'] || false;
+      if (altAttr !== altField) {
+        file_info.fields['field_file_image_alt_text[und][0][value]'] = altAttr;
+      }
+
+      return file_info;
+    },
+
+    /**
+     * Serializes file information as a url-encoded JSON object and stores it
+     * as a data attribute on the html element.
      *
      * @param html (string)
      *    A html element to be used to represent the inserted media element.
@@ -80,12 +148,18 @@
      *    A object containing the media file information (fid, view_mode, etc).
      */
     create_element: function (html, info) {
-      if ($('<div></div>').append(html).text().length === html.length) {
-        // Element is not an html tag. Surround it in a span element
-        // so we can pass the file attributes.
+      if ($('<div>').append(html).text().length === html.length) {
+        // Element is not an html tag. Surround it in a span element so we can
+        // pass the file attributes.
         html = '<span>' + html + '</span>';
       }
       var element = $(html);
+
+      // Parse out link wrappers. They will be re-applied when the image is
+      // rendered on the front-end.
+      if (element.is('a')) {
+        element = element.children();
+      }
 
       // Move attributes from the file info array to the placeholder element.
       if (info.attributes) {
@@ -95,17 +169,28 @@
           }
         });
         delete(info.attributes);
+
+        // Store information to rebuild the element later, if necessary.
+        Drupal.media.filter.ensureSourceMap();
+        Drupal.settings.mediaSourceMap[info.fid] = {
+          tagName: element[0].tagName,
+          src: element[0].src
+        }
       }
 
-      // Important to url-encode the file information as it is being stored in an
-      // html data attribute.
       info.type = info.type || "media";
-      element.attr('data-file_info', encodeURI(JSON.stringify(info)));
 
-      // Adding media-element class so we can find markup element later.
+      // Store the data in the data map.
+      Drupal.media.filter.ensureDataMap();
+      Drupal.settings.mediaDataMap[info.fid] = info;
+
+      // Store the fid in the DOM to retrieve the data from the info map.
+      element.attr('data-fid', info.fid);
+
+      // Add media-element class so we can find markup element later.
       var classes = ['media-element'];
 
-      if(info.view_mode){
+      if (info.view_mode) {
         classes.push('file-' + info.view_mode.replace(/_/g, '-'));
       }
       element.addClass(classes.join(' '));
@@ -131,33 +216,31 @@
      * Extract the file info from a WYSIWYG placeholder element as JSON.
      *
      * @param element (jQuery object)
-     *    A media element with attached serialized file info.
+     *    A media element with associated file info via a file id (fid).
      */
     extract_file_info: function (element) {
-      var file_json = $.data(element, 'file_info') || element.data('file_info'),
-        file_info,
-        value;
+      var fid, file_info, value;
 
-      try {
-        file_info = JSON.parse(decodeURIComponent(file_json));
-      }
-      catch (err) {
-        file_info = null;
-      }
+      if (fid = element.data('fid')) {
+        Drupal.media.filter.ensureDataMap();
 
-      if (file_info) {
-        file_info.attributes = {};
+        if (file_info = Drupal.settings.mediaDataMap[fid]) {
+          file_info.attributes = {};
 
-        // Extract whitelisted attributes.
-        $.each(Drupal.settings.media.wysiwyg_allowed_attributes, function(i, a) {
-          if (value = element.attr(a)) {
-            file_info.attributes[a] = value;
-          }
-        });
-        delete(file_info.attributes['data-file_info']);
+          $.each(Drupal.settings.media.wysiwyg_allowed_attributes, function(i, a) {
+            if (value = element.attr(a)) {
+              // Replace &quot; by \" to avoid error with JSON format.
+              if (typeof value == 'string') {
+                value = value.replace('&quot;', '\\"');
+              }
+
+              file_info.attributes[a] = value;
+            }
+          });
+        }
       }
 
-      return file_info;
+      return Drupal.media.filter.syncAttributesToFields(file_info);
     },
 
     /**
@@ -186,15 +269,27 @@
 
       // Store macro/markup in the tagmap.
       Drupal.media.filter.ensure_tagmap();
-      var i = 1;
-      for (var key in Drupal.settings.tagmap) {
-        i++;
-      }
       Drupal.settings.tagmap[macro] = markup;
 
       // Return the html code to insert in an editor and use it with
       // replacePlaceholderWithToken()
       return markup;
+    },
+
+    /**
+     * Ensures the src tracking has been initialized and returns it.
+     */
+    ensureSourceMap: function() {
+      Drupal.settings.mediaSourceMap = Drupal.settings.mediaSourceMap || {};
+      return Drupal.settings.mediaSourceMap;
+    },
+
+    /**
+     * Ensures the data tracking has been initialized and returns it.
+     */
+    ensureDataMap: function() {
+      Drupal.settings.mediaDataMap = Drupal.settings.mediaDataMap || {};
+      return Drupal.settings.mediaDataMap;
     },
 
     /**
@@ -205,4 +300,5 @@
       return Drupal.settings.tagmap;
     }
   }
+
 })(jQuery);

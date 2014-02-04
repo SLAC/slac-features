@@ -76,7 +76,7 @@ function media_migrate_file_types_upgrade_file_types($form, &$form_state) {
 
   $form['submit'] = array(
     '#type' => 'submit',
-    '#value' => t('Start migraton'),
+    '#value' => t('Start migration'),
   );
 
   return $form;

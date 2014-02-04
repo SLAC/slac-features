@@ -905,7 +905,7 @@ function media_update_7209() {
   drupal_load('module', 'media_migrate_file_types');
 
   if (_media_migrate_file_types_get_migratable_file_types()) {
-    module_enable('media_migrate_file_types');
+    module_enable(array('media_migrate_file_types'));
   }
 }
 
