@@ -1,3 +1,23 @@
+//EXTENSIONS
+@mixin hover-and-active
+  position: relative
+  color: $red
+  
+  &:after, &:before
+    content: ''
+    +box-shadow(0px -2px 0px 0px $red inset )
+    position: absolute
+    bottom: 0
+    width: 100% 
+    height: 2px
+  
+  &:after
+    left: -2px
+
+  &:before
+    right: -2px
+  
+
 .main-menu           
   background-color: $menu_bg
   padding: 8px 0
@@ -67,22 +87,13 @@
       &.active-trail
         > ul
           margin-top: 0px 
-        
+
+    > li > a:hover, > li.sfHover > a
+      +hover-and-active
       
       
     .sf-sub-indicator
       display: none
-
-
-      &:after
-        content: '\e61c'
-        +slac-font
-        +fontsize-rem(14px)
-        display: inline-block  
-        position: absolute
-        top: 0
-        left: 0
-        line-height: 1
 
         
     
@@ -179,10 +190,10 @@ ul.sf-menu.sf-accordion.sf-expanded
       a 
         color: $grey-4c
       li
-        &.active-trail
+        &.active-trail, &.sfHover
           > a 
-            color: $red
-            +box-shadow(0px -2px 0px 0px $red inset )     
+            //color: $red
+            //+box-shadow(0px -2px 0px 0px $red inset )     
         float: left
         margin: 0 25px 
         font-size: em(14px)
@@ -195,8 +206,7 @@ ul.sf-menu.sf-accordion.sf-expanded
           //padding: 0 10px
           padding-bottom: 6px
           &.active-trail, &.active
-            color: $red
-            +box-shadow(0px -2px 0px 0px $red inset )
+            +hover-and-active
 
         ul
           .active-trail
@@ -206,7 +216,8 @@ ul.sf-menu.sf-accordion.sf-expanded
               +box-shadow(0px 0px 0px 0px $red  )
           li
             a:hover
-              background-color: #fff
+              background-color: $hover-submenu
+              text-decoration: underline
 
 +at-breakpoint($only-tablet)
   .main-menu
@@ -221,7 +232,7 @@ ul.sf-menu.sf-accordion.sf-expanded
           border-right: 1px solid #fff
           background-color: $menu_bg
           &:hover
-            background-color: $bg-col-1
+            background-color: $bg-col-1 
           &:nth-child(4n+4)
             border-right: 0
           > a
@@ -230,10 +241,16 @@ ul.sf-menu.sf-accordion.sf-expanded
             
             &.active-trail, &.active
               color: $red
-              border-bottom: 0 none               
+              border-bottom: 0 none   
+            &:after, &:before
+              left: 0 !important
+              right: 0 !important  
+              
           &.active-trail
             a
-              +box-shadow(0 0 0 0 #000)
+              &:after, &:before
+                left: 0
+                right: 0
 
         &.sf-main-menu.sf-horizontal
           > li.menuparent
@@ -264,8 +281,8 @@ ul.sf-menu.sf-accordion.sf-expanded
         //+box-sizing(content-box)
       &.active-trail 
         > a
-          color: $red
-          +box-shadow(0px -2px 0px 0px $red inset )
+          //color: $red
+          //+box-shadow(0px -2px 0px 0px $red inset )
           //border-bottom: 2px solid $red
           
     &.long-menu
