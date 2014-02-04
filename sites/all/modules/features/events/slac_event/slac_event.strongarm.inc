@@ -197,7 +197,7 @@ function slac_event_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'node_options_event';
   $strongarm->value = array(
-    0 => 'promote',
+    0 => 'status',
     1 => 'moderation',
     2 => 'revision',
   );

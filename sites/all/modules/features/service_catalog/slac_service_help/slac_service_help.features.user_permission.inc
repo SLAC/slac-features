@@ -14,8 +14,8 @@ function slac_service_help_user_default_permissions() {
   $permissions['access Internal tickets'] = array(
     'name' => 'access Internal tickets',
     'roles' => array(
+      'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
-      'editor' => 'editor',
     ),
     'module' => 'support',
   );
@@ -43,7 +43,6 @@ function slac_service_help_user_default_permissions() {
     'name' => 'can assign tickets to any user',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
     ),
     'module' => 'support',
   );
@@ -53,7 +52,6 @@ function slac_service_help_user_default_permissions() {
     'name' => 'can assign tickets to self',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
     ),
     'module' => 'support',
   );
@@ -63,7 +61,6 @@ function slac_service_help_user_default_permissions() {
     'name' => 'can select client',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
     ),
     'module' => 'support',
   );
@@ -73,7 +70,6 @@ function slac_service_help_user_default_permissions() {
     'name' => 'can select priority',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
     ),
     'module' => 'support',
   );
@@ -83,7 +79,6 @@ function slac_service_help_user_default_permissions() {
     'name' => 'can select state',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
     ),
     'module' => 'support',
   );
@@ -93,7 +88,6 @@ function slac_service_help_user_default_permissions() {
     'name' => 'can subscribe other users to notifications',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
     ),
     'module' => 'support',
   );
@@ -111,6 +105,7 @@ function slac_service_help_user_default_permissions() {
   $permissions['create support_ticket content'] = array(
     'name' => 'create support_ticket content',
     'roles' => array(
+      'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'node',
@@ -130,7 +125,6 @@ function slac_service_help_user_default_permissions() {
     'name' => 'delete own support_ticket content',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
     ),
     'module' => 'node',
   );
@@ -149,7 +143,6 @@ function slac_service_help_user_default_permissions() {
     'name' => 'edit any support_ticket content',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
     ),
     'module' => 'node',
   );
@@ -158,8 +151,7 @@ function slac_service_help_user_default_permissions() {
   $permissions['edit own support_ticket content'] = array(
     'name' => 'edit own support_ticket content',
     'roles' => array(
-      'author' => 'author',
-      'editor' => 'editor',
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -169,7 +161,6 @@ function slac_service_help_user_default_permissions() {
     'name' => 'move ticket',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
     ),
     'module' => 'support',
   );
@@ -179,7 +170,6 @@ function slac_service_help_user_default_permissions() {
     'name' => 'view other users tickets',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
     ),
     'module' => 'support',
   );

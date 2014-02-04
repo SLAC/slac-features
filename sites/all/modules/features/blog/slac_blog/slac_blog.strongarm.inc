@@ -132,8 +132,9 @@ function slac_blog_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'node_options_blog';
   $strongarm->value = array(
-    0 => 'moderation',
-    1 => 'revision',
+    0 => 'status',
+    1 => 'moderation',
+    2 => 'revision',
   );
   $export['node_options_blog'] = $strongarm;
 
