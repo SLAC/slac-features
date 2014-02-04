@@ -50,6 +50,7 @@ function slac_event_image_default_styles() {
         'weight' => 1,
       ),
     ),
+    'label' => 'slac_event_thumbnail',
   );
 
   return $styles;
