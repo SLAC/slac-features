@@ -166,7 +166,7 @@ function _slac_news_archive_get_current_yearmonth() {
 
   // Anonymous function used for readibility (return value early).
   $date_value = $node->field_slac_news_date[LANGUAGE_NONE][0]['value'];
-  $date = strtotime($date_value);
+  $date = date_create($date_value);
 
   return array(
     $date->format('Y'),
