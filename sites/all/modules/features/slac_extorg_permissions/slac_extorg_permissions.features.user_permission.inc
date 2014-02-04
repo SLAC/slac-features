@@ -583,34 +583,6 @@ function slac_extorg_permissions_user_default_permissions() {
     'module' => 'panelizer',
   );
 
-  // Exported permission: 'administer panelizer node article defaults'.
-  $permissions['administer panelizer node article defaults'] = array(
-    'name' => 'administer panelizer node article defaults',
-    'roles' => array(),
-    'module' => 'panelizer',
-  );
-
-  // Exported permission: 'administer panelizer node blog defaults'.
-  $permissions['administer panelizer node blog defaults'] = array(
-    'name' => 'administer panelizer node blog defaults',
-    'roles' => array(),
-    'module' => 'panelizer',
-  );
-
-  // Exported permission: 'administer panelizer node event defaults'.
-  $permissions['administer panelizer node event defaults'] = array(
-    'name' => 'administer panelizer node event defaults',
-    'roles' => array(),
-    'module' => 'panelizer',
-  );
-
-  // Exported permission: 'administer panelizer node kb_article defaults'.
-  $permissions['administer panelizer node kb_article defaults'] = array(
-    'name' => 'administer panelizer node kb_article defaults',
-    'roles' => array(),
-    'module' => 'panelizer',
-  );
-
   // Exported permission: 'administer panelizer node landing_page choice'.
   $permissions['administer panelizer node landing_page choice'] = array(
     'name' => 'administer panelizer node landing_page choice',
@@ -705,41 +677,6 @@ function slac_extorg_permissions_user_default_permissions() {
   // Exported permission: 'administer panelizer node page settings'.
   $permissions['administer panelizer node page settings'] = array(
     'name' => 'administer panelizer node page settings',
-    'roles' => array(),
-    'module' => 'panelizer',
-  );
-
-  // Exported permission: 'administer panelizer node slac_faq defaults'.
-  $permissions['administer panelizer node slac_faq defaults'] = array(
-    'name' => 'administer panelizer node slac_faq defaults',
-    'roles' => array(),
-    'module' => 'panelizer',
-  );
-
-  // Exported permission: 'administer panelizer node slac_news defaults'.
-  $permissions['administer panelizer node slac_news defaults'] = array(
-    'name' => 'administer panelizer node slac_news defaults',
-    'roles' => array(),
-    'module' => 'panelizer',
-  );
-
-  // Exported permission: 'administer panelizer node slac_sc_catalog_item defaults'.
-  $permissions['administer panelizer node slac_sc_catalog_item defaults'] = array(
-    'name' => 'administer panelizer node slac_sc_catalog_item defaults',
-    'roles' => array(),
-    'module' => 'panelizer',
-  );
-
-  // Exported permission: 'administer panelizer node support_ticket defaults'.
-  $permissions['administer panelizer node support_ticket defaults'] = array(
-    'name' => 'administer panelizer node support_ticket defaults',
-    'roles' => array(),
-    'module' => 'panelizer',
-  );
-
-  // Exported permission: 'administer panelizer node webform defaults'.
-  $permissions['administer panelizer node webform defaults'] = array(
-    'name' => 'administer panelizer node webform defaults',
     'roles' => array(),
     'module' => 'panelizer',
   );
@@ -1691,9 +1628,7 @@ function slac_extorg_permissions_user_default_permissions() {
   // Exported permission: 'delete terms in kb_categories'.
   $permissions['delete terms in kb_categories'] = array(
     'name' => 'delete terms in kb_categories',
-    'roles' => array(
-      'editor' => 'editor',
-    ),
+    'roles' => array(),
     'module' => 'taxonomy',
   );
 
@@ -1730,9 +1665,7 @@ function slac_extorg_permissions_user_default_permissions() {
   // Exported permission: 'delete terms in slac_news_tags'.
   $permissions['delete terms in slac_news_tags'] = array(
     'name' => 'delete terms in slac_news_tags',
-    'roles' => array(
-      'editor' => 'editor',
-    ),
+    'roles' => array(),
     'module' => 'taxonomy',
   );
 
@@ -2456,9 +2389,7 @@ function slac_extorg_permissions_user_default_permissions() {
   // Exported permission: 'edit terms in kb_categories'.
   $permissions['edit terms in kb_categories'] = array(
     'name' => 'edit terms in kb_categories',
-    'roles' => array(
-      'editor' => 'editor',
-    ),
+    'roles' => array(),
     'module' => 'taxonomy',
   );
 
@@ -2495,9 +2426,7 @@ function slac_extorg_permissions_user_default_permissions() {
   // Exported permission: 'edit terms in slac_news_tags'.
   $permissions['edit terms in slac_news_tags'] = array(
     'name' => 'edit terms in slac_news_tags',
-    'roles' => array(
-      'editor' => 'editor',
-    ),
+    'roles' => array(),
     'module' => 'taxonomy',
   );
 
@@ -2608,9 +2537,32 @@ function slac_extorg_permissions_user_default_permissions() {
     'module' => 'features',
   );
 
-  // Exported permission: 'moderate content from draft to published'.
-  $permissions['moderate content from draft to published'] = array(
-    'name' => 'moderate content from draft to published',
+  // Exported permission: 'moderate content from draft to needs_review'.
+  $permissions['moderate content from draft to needs_review'] = array(
+    'name' => 'moderate content from draft to needs_review',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'site owner' => 'site owner',
+    ),
+    'module' => 'workbench_moderation',
+  );
+
+  // Exported permission: 'moderate content from needs_review to draft'.
+  $permissions['moderate content from needs_review to draft'] = array(
+    'name' => 'moderate content from needs_review to draft',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'site owner' => 'site owner',
+    ),
+    'module' => 'workbench_moderation',
+  );
+
+  // Exported permission: 'moderate content from needs_review to published'.
+  $permissions['moderate content from needs_review to published'] = array(
+    'name' => 'moderate content from needs_review to published',
     'roles' => array(
       'administrator' => 'administrator',
       'editor' => 'editor',
