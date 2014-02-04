@@ -70,6 +70,7 @@ function slac_kb_article_image_default_styles() {
         'weight' => 2,
       ),
     ),
+    'label' => 'crop_kb_article_landscape',
   );
 
   // Exported image style: slac_kb_article_image_details.
@@ -113,6 +114,7 @@ function slac_kb_article_image_default_styles() {
         'weight' => 2,
       ),
     ),
+    'label' => 'slac_kb_article_image_details',
   );
 
   return $styles;
