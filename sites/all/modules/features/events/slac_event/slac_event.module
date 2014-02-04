@@ -161,6 +161,16 @@ function slac_event_entity_info_alter(&$entity_info) {
 }
 
 /**
+ * Implements hook_views_pre_render().
+ */
+function slac_event_views_pre_render(&$view) {
+  $url_date_with_day = _slac_event_get_date_from_url_with_day();
+  if ($view->name == 'events' && $view->current_display == 'panel_pane_1' && !$url_date_with_day) {
+    $view->empty['area']->options['content'] = t('No events planned for this month.');
+  }
+}
+
+/**
  * Prepare argument for Event view of main content area (list of events).
  *
  * Should either pass url argument or current date in format 2014-01.
