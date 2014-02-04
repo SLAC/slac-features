@@ -442,12 +442,15 @@ ul.sf-menu.sf-accordion.sf-expanded {
     display: none !important; }
 
   .main-menu ul {
-    *zoom: 1; }
+    *zoom: 1;
+    color: #4c4c4c; }
     .main-menu ul:before, .main-menu ul:after {
       content: "";
       display: table; }
     .main-menu ul:after {
       clear: both; }
+    .main-menu ul a {
+      color: #4c4c4c; }
     .main-menu ul li {
       float: left;
       margin: 0 25px;
@@ -1732,7 +1735,10 @@ table.sticky-table {
     padding: 6px; }
 
 .site-title {
-  position: relative; }
+  position: relative;
+  color: #353535; }
+  .site-title a {
+    color: inherit; }
 
 .node-type-list dt, .node-type-list dd {
   margin-bottom: 10px; }
