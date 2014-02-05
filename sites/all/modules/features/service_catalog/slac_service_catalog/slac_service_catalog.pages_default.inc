@@ -751,7 +751,7 @@ function slac_service_catalog_default_page_manager_pages() {
     'contexts' => array(),
     'relationships' => array(),
     'code' => '301',
-    'destination' => 'node/add/support-ticket&destination=services',
+    'destination' => 'node/add/support-ticket?destination=services',
   );
   $page->default_handlers[$handler->name] = $handler;
   $pages['service_catalog_submit_support_request'] = $page;
