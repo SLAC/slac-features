@@ -9,7 +9,7 @@
 <div class="pp_demo-beans-image-text-link box-about box-type-2">
   <?php if ($title): ?>
     <h2><?php print $title; ?></h2>
-  <? endif; ?>
+  <?php endif; ?>
   <div class="<?php if ($shaded){print 'shaded';} ?> <?php if ($subtitle) {print 'with_subtitle';}?> <?php if (isset($links_list)) {print 'with_lists';} ?>">
     <?php if ($subtitle): ?>
       <div class="subtitle"><?php print $subtitle; ?></div>
