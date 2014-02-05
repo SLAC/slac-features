@@ -472,7 +472,8 @@ ul.sf-menu.sf-accordion.sf-expanded {
     .main-menu ul li {
       float: left;
       margin: 0 25px;
-      font-size: 0.875em; }
+      font-size: 14px;
+      font-size: 0.875rem; }
       .main-menu ul li:first-child {
         margin-left: 0; }
       .main-menu ul li:last-child {
