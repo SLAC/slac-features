@@ -6,3 +6,51 @@
 
 include_once 'slac_service_catalog.features.inc';
 
+/**
+ * Implements hook_ctools_block_content_type_pre_render().
+ *
+ * Set different current path.
+ */
+function slac_service_catalog_ctools_block_content_type_pre_render($subtype, $conf) {
+  $arg0 = arg(0);
+  if ($arg0 != 'support' || $subtype != 'superfish-1') {
+    return;
+  }
+  $current_path = &drupal_static(__FUNCTION__);
+  $current_path = current_path();
+
+  $nid = _slac_service_catalog_get_services_node_nid();
+  menu_set_active_item('node/' . $nid);
+}
+
+/**
+ * Implements hook_ctools_block_content_type_post_render().
+ *
+ * Restore previous path.
+ */
+function slac_service_catalog_ctools_block_content_type_post_render($subtype, $conf) {
+  $current_path = &drupal_static('slac_service_catalog_ctools_block_content_type_pre_render');
+  if (empty($current_path) || $subtype != 'superfish-1') {
+    return;
+  }
+  
+  menu_set_active_item($current_path);
+  $current_path = '';
+}
+
+/**
+ * Get nid of the Services node.
+ */
+function _slac_service_catalog_get_services_node_nid() {
+  $query = new EntityFieldQuery();
+  $service_node = $query
+      ->entityCondition('entity_type', 'node')
+      ->entityCondition('bundle', 'landing_page')
+      ->propertyCondition('title', 'Services')
+      ->range(0, 1)
+      ->execute();
+
+  $service_node = reset($service_node['node']);
+
+  return $service_node->nid;
+}

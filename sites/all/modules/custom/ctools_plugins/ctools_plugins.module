@@ -25,3 +25,23 @@ function _ctools_plugins_context_year_month_title($argument) {
   $month_names = date_month_names_untranslated();
   return $year . ' ' . $month_names[$month];
 }
+
+/**
+ * Implements hook_ctools_plugin_post_alter().
+ */
+function ctools_plugins_ctools_plugin_post_alter(&$plugin, &$info) {
+  if (isset($plugin['title']) && $plugin['title'] == 'Block') {
+    $plugin['render callback'] = 'ctools_plugins_ctools_block_content_type_render';
+  }
+}
+
+/**
+ * Custom render callback for building blocks as panes.
+ */
+function ctools_plugins_ctools_block_content_type_render($subtype, $conf) {
+  module_invoke_all('ctools_block_content_type_pre_render', $subtype, $conf);
+  $block = ctools_block_content_type_render($subtype, $conf);
+  module_invoke_all('ctools_block_content_type_post_render', $subtype, $conf);
+
+  return $block;
+}
