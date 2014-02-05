@@ -416,6 +416,8 @@ function slac_service_catalog_default_page_manager_pages() {
           'rids' => array(
             0 => 4,
             1 => 3,
+            2 => 5,
+            3 => 6,
           ),
         ),
         'context' => 'logged-in-user',
@@ -525,6 +527,8 @@ function slac_service_catalog_default_page_manager_pages() {
           'rids' => array(
             0 => 4,
             1 => 3,
+            1 => 5,
+            1 => 6,
           ),
         ),
         'context' => 'logged-in-user',
@@ -611,6 +615,8 @@ function slac_service_catalog_default_page_manager_pages() {
           'rids' => array(
             0 => 4,
             1 => 3,
+            2 => 5,
+            3 => 6,
           ),
         ),
         'context' => 'logged-in-user',
@@ -698,6 +704,8 @@ function slac_service_catalog_default_page_manager_pages() {
             0 => 2,
             1 => 4,
             2 => 3,
+            3 => 5,
+            4 => 6,
           ),
         ),
         'context' => 'logged-in-user',
@@ -784,6 +792,8 @@ function slac_service_catalog_default_page_manager_pages() {
           'rids' => array(
             0 => 4,
             1 => 3,
+            2 => 5,
+            3 => 6,
           ),
         ),
         'context' => 'logged-in-user',

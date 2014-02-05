@@ -272,6 +272,8 @@ function slac_news_default_page_manager_pages() {
           'rids' => array(
             0 => 4,
             1 => 3,
+            2 => 5,
+            3 => 6,
           ),
         ),
         'context' => 'logged-in-user',
