@@ -1,5 +1,7 @@
 <?php
 
+$time_start = microtime(true);
+
 // Rebuild slac_project profile.
 
 $commands = array(
@@ -12,13 +14,47 @@ $commands = array(
     'command' => 'drush si slac_project --db-url=mysql://slac_features:SwHbNJEZ6QRxrlU@localhost/slac_features --account-name=admin --account-pass=618hWVCDmY1n3uf --account-mail=admin@example.com --site-name=SLAC-PROJECT-' . date(DATE_ATOM) . ' -y'
   ),
   array(
+    'description' => 'Create siteowner user account: ',
+    'command' => 'drush user-create siteowner --mail="siteowner@example.com" --password="1"'
+  ),
+  array(
+    'description' => 'Add "site owner" role to siteowner: ',
+    'command' => 'drush user-add-role "site owner" siteowner'
+  ),
+  array(
+    'description' => 'Create author user account: ',
+    'command' => 'drush user-create author --mail="author@example.com" --password="1"'
+  ),
+  array(
+    'description' => 'Add "author" role to author: ',
+    'command' => 'drush user-add-role "author" author'
+  ),
+  array(
+    'description' => 'Create editor user editor: ',
+    'command' => 'drush user-create editor --mail="editor@example.com" --password="1"'
+  ),
+  array(
+    'description' => 'Add "editor" role to editor: ',
+    'command' => 'drush user-add-role "editor" editor'
+  ),
+  array(
     'description' => 'Disable webauth module',
     'command' => 'drush dis webauth -y'
   ),
+  array(
+    'description' => 'Clear all caches: ',
+    'command' => 'drush cc all'
+  ),
 );
 
+$command_output = array();
 foreach ($commands as $command) {
   exec($command['command'], $command_output);
 }
 
 print 'Site has been rebuilt';
+print '<pre>' . implode("\n", $command_output) . '</pre>';
+
+$time_end = microtime(true);
+$execution_time = round($time_end - $time_start);
+print '<br/>Execution time: ' . $execution_time;
