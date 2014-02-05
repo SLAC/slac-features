@@ -65,7 +65,7 @@ function slac_profiles_shared_filtered_format() {
   }
 
   // Default "Basic page" to not be promoted and have comments disabled.
-  variable_set('node_options_page', array('status'));
+  variable_set('node_options_page', array('status', 'revision', 'moderation'));
   variable_set('comment_page', COMMENT_NODE_HIDDEN);
 
   // Don't display date and author information for "Basic page" nodes by default.

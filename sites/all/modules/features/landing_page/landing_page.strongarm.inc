@@ -99,8 +99,6 @@ function landing_page_strongarm() {
   $strongarm->name = 'node_options_landing_page';
   $strongarm->value = array(
     0 => 'status',
-    1 => 'moderation',
-    2 => 'revision',
   );
   $export['node_options_landing_page'] = $strongarm;
 
