@@ -390,9 +390,9 @@ function slac_service_catalog_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-slac_sc_catalog_category-field_slac_sc_category_logo'
-  $field_instances['taxonomy_term-slac_sc_catalog_category-field_slac_sc_category_logo'] = array(
-    'bundle' => 'slac_sc_catalog_category',
+  // Exported field_instance: 'taxonomy_term-slac_sc_category-field_slac_sc_category_logo'
+  $field_instances['taxonomy_term-slac_sc_category-field_slac_sc_category_logo'] = array(
+    'bundle' => 'slac_sc_category',
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -434,9 +434,9 @@ function slac_service_catalog_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-slac_sc_catalog_self_help-field_sc_catalog_item_extlink'
-  $field_instances['taxonomy_term-slac_sc_catalog_self_help-field_sc_catalog_item_extlink'] = array(
-    'bundle' => 'slac_sc_catalog_self_help',
+  // Exported field_instance: 'taxonomy_term-slac_sc_self_help-field_sc_catalog_item_extlink'
+  $field_instances['taxonomy_term-slac_sc_self_help-field_sc_catalog_item_extlink'] = array(
+    'bundle' => 'slac_sc_self_help',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => 'Please enter the url of the self help article, it can be both on the site or on an external site',

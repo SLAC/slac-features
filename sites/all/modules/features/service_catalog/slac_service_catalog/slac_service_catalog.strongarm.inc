@@ -128,23 +128,23 @@ function slac_service_catalog_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_taxonomy_term_slac_sc_catalog_category_pattern';
+  $strongarm->name = 'pathauto_taxonomy_term_slac_sc_category_pattern';
   $strongarm->value = 'services/category/[term:name]';
-  $export['pathauto_taxonomy_term_slac_sc_catalog_category_pattern'] = $strongarm;
+  $export['pathauto_taxonomy_term_slac_sc_category_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_taxonomy_term_slac_sc_catalog_eligibility_pattern';
+  $strongarm->name = 'pathauto_taxonomy_term_slac_sc_eligibility_pattern';
   $strongarm->value = 'services/eligibility/[term:name]';
-  $export['pathauto_taxonomy_term_slac_sc_catalog_eligibility_pattern'] = $strongarm;
+  $export['pathauto_taxonomy_term_slac_sc_eligibility_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_taxonomy_term_slac_sc_catalog_self_help_pattern';
+  $strongarm->name = 'pathauto_taxonomy_term_slac_sc_self_help_pattern';
   $strongarm->value = 'services/self-help/[term:name]';
-  $export['pathauto_taxonomy_term_slac_sc_catalog_self_help_pattern'] = $strongarm;
+  $export['pathauto_taxonomy_term_slac_sc_self_help_pattern'] = $strongarm;
 
   return $export;
 }

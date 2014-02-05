@@ -1662,9 +1662,9 @@ function slac_extorg_permissions_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
-  // Exported permission: 'delete terms in slac_sc_catalog_category'.
-  $permissions['delete terms in slac_sc_catalog_category'] = array(
-    'name' => 'delete terms in slac_sc_catalog_category',
+  // Exported permission: 'delete terms in slac_sc_category'.
+  $permissions['delete terms in slac_sc_category'] = array(
+    'name' => 'delete terms in slac_sc_category',
     'roles' => array(
       'administrator' => 'administrator',
       'editor' => 'editor',
@@ -1672,9 +1672,9 @@ function slac_extorg_permissions_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
-  // Exported permission: 'delete terms in slac_sc_catalog_eligibility'.
-  $permissions['delete terms in slac_sc_catalog_eligibility'] = array(
-    'name' => 'delete terms in slac_sc_catalog_eligibility',
+  // Exported permission: 'delete terms in slac_sc_eligibility'.
+  $permissions['delete terms in slac_sc_eligibility'] = array(
+    'name' => 'delete terms in slac_sc_eligibility',
     'roles' => array(
       'administrator' => 'administrator',
       'editor' => 'editor',
@@ -1682,9 +1682,9 @@ function slac_extorg_permissions_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
-  // Exported permission: 'delete terms in slac_sc_catalog_self_help'.
-  $permissions['delete terms in slac_sc_catalog_self_help'] = array(
-    'name' => 'delete terms in slac_sc_catalog_self_help',
+  // Exported permission: 'delete terms in slac_sc_self_help'.
+  $permissions['delete terms in slac_sc_self_help'] = array(
+    'name' => 'delete terms in slac_sc_self_help',
     'roles' => array(
       'administrator' => 'administrator',
       'editor' => 'editor',
@@ -2416,9 +2416,9 @@ function slac_extorg_permissions_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
-  // Exported permission: 'edit terms in slac_sc_catalog_category'.
-  $permissions['edit terms in slac_sc_catalog_category'] = array(
-    'name' => 'edit terms in slac_sc_catalog_category',
+  // Exported permission: 'edit terms in slac_sc_category'.
+  $permissions['edit terms in slac_sc_category'] = array(
+    'name' => 'edit terms in slac_sc_category',
     'roles' => array(
       'administrator' => 'administrator',
       'editor' => 'editor',
@@ -2426,9 +2426,9 @@ function slac_extorg_permissions_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
-  // Exported permission: 'edit terms in slac_sc_catalog_eligibility'.
-  $permissions['edit terms in slac_sc_catalog_eligibility'] = array(
-    'name' => 'edit terms in slac_sc_catalog_eligibility',
+  // Exported permission: 'edit terms in slac_sc_eligibility'.
+  $permissions['edit terms in slac_sc_eligibility'] = array(
+    'name' => 'edit terms in slac_sc_eligibility',
     'roles' => array(
       'administrator' => 'administrator',
       'editor' => 'editor',
@@ -2436,9 +2436,9 @@ function slac_extorg_permissions_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
-  // Exported permission: 'edit terms in slac_sc_catalog_self_help'.
-  $permissions['edit terms in slac_sc_catalog_self_help'] = array(
-    'name' => 'edit terms in slac_sc_catalog_self_help',
+  // Exported permission: 'edit terms in slac_sc_self_help'.
+  $permissions['edit terms in slac_sc_self_help'] = array(
+    'name' => 'edit terms in slac_sc_self_help',
     'roles' => array(
       'administrator' => 'administrator',
       'editor' => 'editor',

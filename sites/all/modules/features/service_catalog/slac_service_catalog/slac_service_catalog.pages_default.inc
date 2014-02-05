@@ -234,7 +234,7 @@ function slac_service_catalog_default_page_manager_handlers() {
           'name' => 'term_vocabulary',
           'settings' => array(
             'machine_name' => array(
-              'slac_sc_catalog_category' => 'slac_sc_catalog_category',
+              'slac_sc_category' => 'slac_sc_category',
             ),
           ),
           'context' => 'argument_term_1',
@@ -574,7 +574,7 @@ function slac_service_catalog_default_page_manager_pages() {
     'contexts' => array(),
     'relationships' => array(),
     'code' => '301',
-    'destination' => 'admin/structure/taxonomy/slac_sc_catalog_self_help?destination=services',
+    'destination' => 'admin/structure/taxonomy/slac_sc_self_help?destination=services',
   );
   $page->default_handlers[$handler->name] = $handler;
   $pages['service_catalog_manage_self_help_topics'] = $page;
@@ -662,7 +662,7 @@ function slac_service_catalog_default_page_manager_pages() {
     'contexts' => array(),
     'relationships' => array(),
     'code' => '301',
-    'destination' => 'admin/structure/taxonomy/slac_sc_catalog_category?destination=services',
+    'destination' => 'admin/structure/taxonomy/slac_sc_category?destination=services',
   );
   $page->default_handlers[$handler->name] = $handler;
   $pages['service_catalog_manage_service_category'] = $page;

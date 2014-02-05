@@ -81,7 +81,7 @@ function slac_service_catalog_views_default_views() {
   $handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';
   $handler->display->display_options['filters']['machine_name']['field'] = 'machine_name';
   $handler->display->display_options['filters']['machine_name']['value'] = array(
-    'slac_sc_catalog_category' => 'slac_sc_catalog_category',
+    'slac_sc_category' => 'slac_sc_category',
   );
 
   /* Display: Category listing */
@@ -196,7 +196,7 @@ function slac_service_catalog_views_default_views() {
   $handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';
   $handler->display->display_options['filters']['machine_name']['field'] = 'machine_name';
   $handler->display->display_options['filters']['machine_name']['value'] = array(
-    'slac_sc_catalog_self_help' => 'slac_sc_catalog_self_help',
+    'slac_sc_self_help' => 'slac_sc_self_help',
   );
   $export['service_catalog_category'] = $view;
 

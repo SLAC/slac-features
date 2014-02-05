@@ -10,10 +10,10 @@
 function slac_service_catalog_menu_default_menu_links() {
   $menu_links = array();
 
-  // Exported menu link: menu-services-admin:admin/structure/taxonomy/slac_sc_catalog_category
-  $menu_links['menu-services-admin:admin/structure/taxonomy/slac_sc_catalog_category'] = array(
+  // Exported menu link: menu-services-admin:admin/structure/taxonomy/slac_sc_category
+  $menu_links['menu-services-admin:admin/structure/taxonomy/slac_sc_category'] = array(
     'menu_name' => 'menu-services-admin',
-    'link_path' => 'admin/structure/taxonomy/slac_sc_catalog_category',
+    'link_path' => 'admin/structure/taxonomy/slac_sc_category',
     'router_path' => 'admin/structure/taxonomy/%',
     'link_title' => 'Manage service category',
     'options' => array(
@@ -28,10 +28,10 @@ function slac_service_catalog_menu_default_menu_links() {
     'expanded' => 0,
     'weight' => 0,
   );
-  // Exported menu link: menu-services-admin:admin/structure/taxonomy/slac_sc_catalog_self_help
-  $menu_links['menu-services-admin:admin/structure/taxonomy/slac_sc_catalog_self_help'] = array(
+  // Exported menu link: menu-services-admin:admin/structure/taxonomy/slac_sc_self_help
+  $menu_links['menu-services-admin:admin/structure/taxonomy/slac_sc_self_help'] = array(
     'menu_name' => 'menu-services-admin',
-    'link_path' => 'admin/structure/taxonomy/slac_sc_catalog_self_help',
+    'link_path' => 'admin/structure/taxonomy/slac_sc_self_help',
     'router_path' => 'admin/structure/taxonomy/%',
     'link_title' => 'Manage self help topics',
     'options' => array(

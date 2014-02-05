@@ -43,9 +43,9 @@ function slac_kb_article_views_default_views() {
     'events_tags' => 0,
     'slac_faq_category' => 0,
     'news_types' => 0,
-    'slac_sc_catalog_category' => 0,
-    'slac_sc_catalog_eligibility' => 0,
-    'slac_sc_catalog_self_help' => 0,
+    'slac_sc_category' => 0,
+    'slac_sc_eligibility' => 0,
+    'slac_sc_self_help' => 0,
     'tags' => 0,
   );
   /* Field: Content: Title */
@@ -118,9 +118,9 @@ function slac_kb_article_views_default_views() {
     'events_tags' => 0,
     'slac_faq_category' => 0,
     'news_types' => 0,
-    'slac_sc_catalog_category' => 0,
-    'slac_sc_catalog_eligibility' => 0,
-    'slac_sc_catalog_self_help' => 0,
+    'slac_sc_category' => 0,
+    'slac_sc_eligibility' => 0,
+    'slac_sc_self_help' => 0,
     'tags' => 0,
   );
   $handler->display->display_options['defaults']['arguments'] = FALSE;
@@ -187,9 +187,9 @@ function slac_kb_article_views_default_views() {
     'events_tags' => 0,
     'slac_faq_category' => 0,
     'news_types' => 0,
-    'slac_sc_catalog_category' => 0,
-    'slac_sc_catalog_eligibility' => 0,
-    'slac_sc_catalog_self_help' => 0,
+    'slac_sc_category' => 0,
+    'slac_sc_eligibility' => 0,
+    'slac_sc_self_help' => 0,
     'tags' => 0,
   );
   /* Relationship: Taxonomy term: Content using KB Categories */

@@ -71,7 +71,7 @@ function slac_service_catalog_field_default_field_bases() {
     'settings' => array(
       'allowed_values' => array(
         0 => array(
-          'vocabulary' => 'slac_sc_catalog_category',
+          'vocabulary' => 'slac_sc_category',
           'parent' => 0,
         ),
       ),
@@ -141,7 +141,7 @@ function slac_service_catalog_field_default_field_bases() {
     'settings' => array(
       'allowed_values' => array(
         0 => array(
-          'vocabulary' => 'slac_sc_catalog_eligibility',
+          'vocabulary' => 'slac_sc_eligibility',
           'parent' => 0,
         ),
       ),

@@ -9,9 +9,9 @@
  */
 function slac_service_catalog_taxonomy_default_vocabularies() {
   return array(
-    'slac_sc_catalog_category' => array(
-      'name' => 'Service Catalog category',
-      'machine_name' => 'slac_sc_catalog_category',
+    'slac_sc_category' => array(
+      'name' => 'Service category',
+      'machine_name' => 'slac_sc_category',
       'description' => 'Designates primary service catalog categories',
       'hierarchy' => 0,
       'module' => 'taxonomy',
@@ -32,9 +32,9 @@ function slac_service_catalog_taxonomy_default_vocabularies() {
         ),
       ),
     ),
-    'slac_sc_catalog_eligibility' => array(
-      'name' => 'Service Catalog eligibility',
-      'machine_name' => 'slac_sc_catalog_eligibility',
+    'slac_sc_eligibility' => array(
+      'name' => 'Service eligibility',
+      'machine_name' => 'slac_sc_eligibility',
       'description' => 'Define a list of eligibility requirements for the service offered',
       'hierarchy' => 0,
       'module' => 'taxonomy',
@@ -55,9 +55,9 @@ function slac_service_catalog_taxonomy_default_vocabularies() {
         ),
       ),
     ),
-    'slac_sc_catalog_self_help' => array(
-      'name' => 'Service Catalog Self Help',
-      'machine_name' => 'slac_sc_catalog_self_help',
+    'slac_sc_self_help' => array(
+      'name' => 'Service Self Help',
+      'machine_name' => 'slac_sc_self_help',
       'description' => 'Self help topics',
       'hierarchy' => 0,
       'module' => 'taxonomy',
