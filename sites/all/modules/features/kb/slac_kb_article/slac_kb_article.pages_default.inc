@@ -328,8 +328,10 @@ function slac_kb_article_default_page_manager_pages() {
         'name' => 'role',
         'settings' => array(
           'rids' => array(
-            0 => 4,
-            1 => 3,
+            0 => 6,
+            1 => 5,
+            2 => 3,
+            3 => 4,
           ),
         ),
         'context' => 'logged-in-user',
