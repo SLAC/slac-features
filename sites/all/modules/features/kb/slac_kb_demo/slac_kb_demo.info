@@ -11,7 +11,6 @@ dependencies[] = uuid_features
 __drupal_alter_by_ref[][node][kb_article] = kb_article
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:2
-features[taxonomy][] = kb_categories
 features[uuid_node][] = 0f0dea2a-700f-48d0-b247-7bf3fc37637e
 features[uuid_node][] = 3587a58a-79d5-42e6-9a65-e96ca2f22bca
 features[uuid_node][] = 35f1d889-3183-4a63-94d8-01b3d10ec377

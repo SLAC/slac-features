@@ -15,7 +15,6 @@ dependencies[] = uuid_features
 __drupal_alter_by_ref[][node][slac_news] = slac_news
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:2
-features[taxonomy][] = slac_news_tags
 features[uuid_node][] = 2cca6331-8a1b-0b97-b003-2f69ec11e8ca
 features[uuid_node][] = 2cca6331-8a1b-4b97-b003-2f69ec11e8ca
 features[uuid_node][] = 2cca6331-8a7b-4b97-b003-2f69ec11e8ca
