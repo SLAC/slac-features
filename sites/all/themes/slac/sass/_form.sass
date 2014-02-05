@@ -10,7 +10,7 @@
   +fontsize-rem(13px)
 
 form
-  &#user-profile-form, &#user-login, &#user-register-form, &#user-pass, &#slac-configuration-form, &.webform-client-form, &.node-form
+  &#user-profile-form, &#user-login, &#user-register-form, &#user-pass, &#slac-configuration-form, &.webform-client-form, &.node-form, &.comment-form
     background-color: $form-bg
     border: 3px solid $form-bdr
     padding: 10px
@@ -41,14 +41,31 @@ form
     +fontsize-rem(14px)
     margin: 0 0 3px 0 
     display: block
-
-  
     
-
+    
+  &.comment-form
+    > div
+      max-width: none
+      
+    .container-inline  
+      label
+        display: block
+      .form-type-select
+        display: inline-block
+    
+    .field-type-file
+      input[type='file'], input[type='submit']
+        margin-bottom: 15px
+        
+    .filter-wrapper
+      padding-top: 0 
+      
+      .form-item, .filter-guidelines
+        padding-left: 0
 
 +at-breakpoint($tablet)
   form
-    &#user-profile-form, &#user-login, &#user-register-form, &#user-pass,  &#slac-configuration-form,  &.webform-client-form, &.node-form
+    &#user-profile-form, &#user-login, &#user-register-form, &#user-pass,  &#slac-configuration-form,  &.webform-client-form, &.node-form, &.comment-form 
       padding: 26px 38px 26px 38px
       
 

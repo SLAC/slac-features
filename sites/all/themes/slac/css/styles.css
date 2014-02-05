@@ -87,35 +87,35 @@ a[href*='mailto:'] {
   font-style: normal;
   text-indent: 0; }
 
-.basic-format-text, article.node-blog.view-mode-full .field-type-text-with-summary, article.node-blog.view-mode-full .blog-wrapper, .article_panel_layout .pane-node-body, .service-body, .node-slac-sc-catalog-item {
+.basic-format-text, article.node-blog.view-mode-full .field-type-text-with-summary, article.node-blog.view-mode-full .blog-wrapper, .article_panel_layout .pane-node-body, .service-body, .node-slac-sc-catalog-item, .node-support-ticket .field-type-text-with-summary {
   font-size: 14px;
   font-size: 0.875rem;
   color: #474747; }
-  .basic-format-text h2, article.node-blog.view-mode-full .field-type-text-with-summary h2, article.node-blog.view-mode-full .blog-wrapper h2, .article_panel_layout .pane-node-body h2, .service-body h2, .node-slac-sc-catalog-item h2 {
+  .basic-format-text h2, article.node-blog.view-mode-full .field-type-text-with-summary h2, article.node-blog.view-mode-full .blog-wrapper h2, .article_panel_layout .pane-node-body h2, .service-body h2, .node-slac-sc-catalog-item h2, .node-support-ticket .field-type-text-with-summary h2 {
     font-size: 16px;
     font-size: 1rem;
     margin-bottom: 10px;
     margin-top: 15px; }
-  .basic-format-text h3, article.node-blog.view-mode-full .field-type-text-with-summary h3, article.node-blog.view-mode-full .blog-wrapper h3, .article_panel_layout .pane-node-body h3, .service-body h3, .node-slac-sc-catalog-item h3 {
+  .basic-format-text h3, article.node-blog.view-mode-full .field-type-text-with-summary h3, article.node-blog.view-mode-full .blog-wrapper h3, .article_panel_layout .pane-node-body h3, .service-body h3, .node-slac-sc-catalog-item h3, .node-support-ticket .field-type-text-with-summary h3 {
     font-size: 14px;
     font-size: 0.875rem;
     font-weight: bold; }
-  .basic-format-text p, article.node-blog.view-mode-full .field-type-text-with-summary p, article.node-blog.view-mode-full .blog-wrapper p, .article_panel_layout .pane-node-body p, .service-body p, .node-slac-sc-catalog-item p {
+  .basic-format-text p, article.node-blog.view-mode-full .field-type-text-with-summary p, article.node-blog.view-mode-full .blog-wrapper p, .article_panel_layout .pane-node-body p, .service-body p, .node-slac-sc-catalog-item p, .node-support-ticket .field-type-text-with-summary p {
     margin-bottom: 5px;
     line-height: 20px; }
-    .basic-format-text p img, article.node-blog.view-mode-full .field-type-text-with-summary p img, article.node-blog.view-mode-full .blog-wrapper p img, .article_panel_layout .pane-node-body p img, .service-body p img, .node-slac-sc-catalog-item p img {
+    .basic-format-text p img, article.node-blog.view-mode-full .field-type-text-with-summary p img, article.node-blog.view-mode-full .blog-wrapper p img, .article_panel_layout .pane-node-body p img, .service-body p img, .node-slac-sc-catalog-item p img, .node-support-ticket .field-type-text-with-summary p img {
       margin: 15px 0; }
-    .basic-format-text p a, article.node-blog.view-mode-full .field-type-text-with-summary p a, article.node-blog.view-mode-full .blog-wrapper p a, .article_panel_layout .pane-node-body p a, .service-body p a, .node-slac-sc-catalog-item p a {
+    .basic-format-text p a, article.node-blog.view-mode-full .field-type-text-with-summary p a, article.node-blog.view-mode-full .blog-wrapper p a, .article_panel_layout .pane-node-body p a, .service-body p a, .node-slac-sc-catalog-item p a, .node-support-ticket .field-type-text-with-summary p a {
       text-decoration: underline; }
-      .basic-format-text p a:hover, article.node-blog.view-mode-full .field-type-text-with-summary p a:hover, article.node-blog.view-mode-full .blog-wrapper p a:hover, .article_panel_layout .pane-node-body p a:hover, .service-body p a:hover, .node-slac-sc-catalog-item p a:hover {
+      .basic-format-text p a:hover, article.node-blog.view-mode-full .field-type-text-with-summary p a:hover, article.node-blog.view-mode-full .blog-wrapper p a:hover, .article_panel_layout .pane-node-body p a:hover, .service-body p a:hover, .node-slac-sc-catalog-item p a:hover, .node-support-ticket .field-type-text-with-summary p a:hover {
         text-decoration: none; }
-  .basic-format-text ul, article.node-blog.view-mode-full .field-type-text-with-summary ul, article.node-blog.view-mode-full .blog-wrapper ul, .article_panel_layout .pane-node-body ul, .service-body ul, .node-slac-sc-catalog-item ul, .basic-format-text ol, article.node-blog.view-mode-full .field-type-text-with-summary ol, article.node-blog.view-mode-full .blog-wrapper ol, .article_panel_layout .pane-node-body ol, .service-body ol, .node-slac-sc-catalog-item ol {
+  .basic-format-text ul, article.node-blog.view-mode-full .field-type-text-with-summary ul, article.node-blog.view-mode-full .blog-wrapper ul, .article_panel_layout .pane-node-body ul, .service-body ul, .node-slac-sc-catalog-item ul, .node-support-ticket .field-type-text-with-summary ul, .basic-format-text ol, article.node-blog.view-mode-full .field-type-text-with-summary ol, article.node-blog.view-mode-full .blog-wrapper ol, .article_panel_layout .pane-node-body ol, .service-body ol, .node-slac-sc-catalog-item ol, .node-support-ticket .field-type-text-with-summary ol {
     list-style-type: disc;
     padding-left: 20px;
     margin-bottom: 10px; }
-    .basic-format-text ul.links, article.node-blog.view-mode-full .field-type-text-with-summary ul.links, article.node-blog.view-mode-full .blog-wrapper ul.links, .article_panel_layout .pane-node-body ul.links, .service-body ul.links, .node-slac-sc-catalog-item ul.links, .basic-format-text ol.links, article.node-blog.view-mode-full .field-type-text-with-summary ol.links, article.node-blog.view-mode-full .blog-wrapper ol.links, .article_panel_layout .pane-node-body ol.links, .service-body ol.links, .node-slac-sc-catalog-item ol.links {
+    .basic-format-text ul.links, article.node-blog.view-mode-full .field-type-text-with-summary ul.links, article.node-blog.view-mode-full .blog-wrapper ul.links, .article_panel_layout .pane-node-body ul.links, .service-body ul.links, .node-slac-sc-catalog-item ul.links, .node-support-ticket .field-type-text-with-summary ul.links, .basic-format-text ol.links, article.node-blog.view-mode-full .field-type-text-with-summary ol.links, article.node-blog.view-mode-full .blog-wrapper ol.links, .article_panel_layout .pane-node-body ol.links, .service-body ol.links, .node-slac-sc-catalog-item ol.links, .node-support-ticket .field-type-text-with-summary ol.links {
       padding-left: 0; }
-    .basic-format-text ul li, article.node-blog.view-mode-full .field-type-text-with-summary ul li, article.node-blog.view-mode-full .blog-wrapper ul li, .article_panel_layout .pane-node-body ul li, .service-body ul li, .node-slac-sc-catalog-item ul li, .basic-format-text ol li, article.node-blog.view-mode-full .field-type-text-with-summary ol li, article.node-blog.view-mode-full .blog-wrapper ol li, .article_panel_layout .pane-node-body ol li, .service-body ol li, .node-slac-sc-catalog-item ol li {
+    .basic-format-text ul li, article.node-blog.view-mode-full .field-type-text-with-summary ul li, article.node-blog.view-mode-full .blog-wrapper ul li, .article_panel_layout .pane-node-body ul li, .service-body ul li, .node-slac-sc-catalog-item ul li, .node-support-ticket .field-type-text-with-summary ul li, .basic-format-text ol li, article.node-blog.view-mode-full .field-type-text-with-summary ol li, article.node-blog.view-mode-full .blog-wrapper ol li, .article_panel_layout .pane-node-body ol li, .service-body ol li, .node-slac-sc-catalog-item ol li, .node-support-ticket .field-type-text-with-summary ol li {
       line-height: 20px;
       margin-bottom: 5px; }
 
@@ -2494,6 +2494,20 @@ ol.search-results .search-snippet {
   font-size: 20px;
   font-size: 1.25rem; }
 
+.node-support-ticket .submitted {
+  font-style: italic;
+  color: #878787;
+  font-size: 12px;
+  font-size: 0.75rem;
+  margin-bottom: 10px; }
+.node-support-ticket .field-type-text-with-summary {
+  margin-bottom: 10px; }
+.node-support-ticket .field-name-field-support-category > div {
+  display: inline-block;
+  vertical-align: bottom; }
+.node-support-ticket section h2 {
+  margin-bottom: 10px; }
+
 @media (min-width: 480px) {
   .views-field-field-prf-contact-photo {
     float: left; }
@@ -2993,7 +3007,7 @@ ul.blog-archive-class {
     .no-rgba .pane-bundle-slac-mini-slideshow .field-slideshow-controls a:hover {
       background: url('../images/fall_back_70perc_grey.png') repeat 0 0; }
 
-.description_block, form#user-profile-form div.password-suggestions, form#user-profile-form .wrapped-with-icon .description, form#user-login div.password-suggestions, form#user-login .wrapped-with-icon .description, form#user-register-form div.password-suggestions, form#user-register-form .wrapped-with-icon .description, form#user-pass div.password-suggestions, form#user-pass .wrapped-with-icon .description, form#slac-configuration-form div.password-suggestions, form#slac-configuration-form .wrapped-with-icon .description, form.webform-client-form div.password-suggestions, form.webform-client-form .wrapped-with-icon .description, form.node-form div.password-suggestions, form.node-form .wrapped-with-icon .description, form.node-blog-form .description {
+.description_block, form#user-profile-form div.password-suggestions, form#user-profile-form .wrapped-with-icon .description, form#user-login div.password-suggestions, form#user-login .wrapped-with-icon .description, form#user-register-form div.password-suggestions, form#user-register-form .wrapped-with-icon .description, form#user-pass div.password-suggestions, form#user-pass .wrapped-with-icon .description, form#slac-configuration-form div.password-suggestions, form#slac-configuration-form .wrapped-with-icon .description, form.webform-client-form div.password-suggestions, form.webform-client-form .wrapped-with-icon .description, form.node-form div.password-suggestions, form.node-form .wrapped-with-icon .description, form.comment-form div.password-suggestions, form.comment-form .wrapped-with-icon .description, form.node-blog-form .description {
   background-color: #ebebdf;
   padding: 16px;
   margin: 10px 0;
@@ -3011,22 +3025,22 @@ ul.blog-archive-class {
   font-size: 13px;
   font-size: 0.8125rem; }
 
-form#user-profile-form, form#user-login, form#user-register-form, form#user-pass, form#slac-configuration-form, form.webform-client-form, form.node-form {
+form#user-profile-form, form#user-login, form#user-register-form, form#user-pass, form#slac-configuration-form, form.webform-client-form, form.node-form, form.comment-form {
   background-color: #f6f6f6;
   border: 3px solid #ececec;
   padding: 10px; }
-  form#user-profile-form .confirm-parent, form#user-profile-form .password-parent, form#user-login .confirm-parent, form#user-login .password-parent, form#user-register-form .confirm-parent, form#user-register-form .password-parent, form#user-pass .confirm-parent, form#user-pass .password-parent, form#slac-configuration-form .confirm-parent, form#slac-configuration-form .password-parent, form.webform-client-form .confirm-parent, form.webform-client-form .password-parent, form.node-form .confirm-parent, form.node-form .password-parent {
+  form#user-profile-form .confirm-parent, form#user-profile-form .password-parent, form#user-login .confirm-parent, form#user-login .password-parent, form#user-register-form .confirm-parent, form#user-register-form .password-parent, form#user-pass .confirm-parent, form#user-pass .password-parent, form#slac-configuration-form .confirm-parent, form#slac-configuration-form .password-parent, form.webform-client-form .confirm-parent, form.webform-client-form .password-parent, form.node-form .confirm-parent, form.node-form .password-parent, form.comment-form .confirm-parent, form.comment-form .password-parent {
     width: 100%; }
-  form#user-profile-form .password-strength, form#user-profile-form div.password-confirm, form#user-login .password-strength, form#user-login div.password-confirm, form#user-register-form .password-strength, form#user-register-form div.password-confirm, form#user-pass .password-strength, form#user-pass div.password-confirm, form#slac-configuration-form .password-strength, form#slac-configuration-form div.password-confirm, form.webform-client-form .password-strength, form.webform-client-form div.password-confirm, form.node-form .password-strength, form.node-form div.password-confirm {
+  form#user-profile-form .password-strength, form#user-profile-form div.password-confirm, form#user-login .password-strength, form#user-login div.password-confirm, form#user-register-form .password-strength, form#user-register-form div.password-confirm, form#user-pass .password-strength, form#user-pass div.password-confirm, form#slac-configuration-form .password-strength, form#slac-configuration-form div.password-confirm, form.webform-client-form .password-strength, form.webform-client-form div.password-confirm, form.node-form .password-strength, form.node-form div.password-confirm, form.comment-form .password-strength, form.comment-form div.password-confirm {
     width: auto;
     float: none;
     display: block;
     margin: 0 0 10px 0; }
-  form#user-profile-form .form-item, form#user-login .form-item, form#user-register-form .form-item, form#user-pass .form-item, form#slac-configuration-form .form-item, form.webform-client-form .form-item, form.node-form .form-item {
+  form#user-profile-form .form-item, form#user-login .form-item, form#user-register-form .form-item, form#user-pass .form-item, form#slac-configuration-form .form-item, form.webform-client-form .form-item, form.node-form .form-item, form.comment-form .form-item {
     margin-bottom: 35px; }
-  form#user-profile-form > div, form#user-login > div, form#user-register-form > div, form#user-pass > div, form#slac-configuration-form > div, form.webform-client-form > div, form.node-form > div {
+  form#user-profile-form > div, form#user-login > div, form#user-register-form > div, form#user-pass > div, form#slac-configuration-form > div, form.webform-client-form > div, form.node-form > div, form.comment-form > div {
     max-width: 360px; }
-  form#user-profile-form legend, form#user-login legend, form#user-register-form legend, form#user-pass legend, form#slac-configuration-form legend, form.webform-client-form legend, form.node-form legend {
+  form#user-profile-form legend, form#user-login legend, form#user-register-form legend, form#user-pass legend, form#slac-configuration-form legend, form.webform-client-form legend, form.node-form legend, form.comment-form legend {
     display: none; }
 form label {
   color: #474747;
@@ -3034,9 +3048,21 @@ form label {
   font-size: 0.875rem;
   margin: 0 0 3px 0;
   display: block; }
+form.comment-form > div {
+  max-width: none; }
+form.comment-form .container-inline label {
+  display: block; }
+form.comment-form .container-inline .form-type-select {
+  display: inline-block; }
+form.comment-form .field-type-file input[type='file'], form.comment-form .field-type-file input[type='submit'] {
+  margin-bottom: 15px; }
+form.comment-form .filter-wrapper {
+  padding-top: 0; }
+  form.comment-form .filter-wrapper .form-item, form.comment-form .filter-wrapper .filter-guidelines {
+    padding-left: 0; }
 
 @media (min-width: 690px) {
-  form#user-profile-form, form#user-login, form#user-register-form, form#user-pass, form#slac-configuration-form, form.webform-client-form, form.node-form {
+  form#user-profile-form, form#user-login, form#user-register-form, form#user-pass, form#slac-configuration-form, form.webform-client-form, form.node-form, form.comment-form {
     padding: 26px 38px 26px 38px; } }
 .wrapped-with-icon {
   position: relative;
