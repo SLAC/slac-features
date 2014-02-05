@@ -31,10 +31,10 @@ function default_site_template_eo_menu_default_menu_links() {
     'weight' => -50,
     'customized' => 1,
   );
-  // Exported menu link: menu-footer-menu-1_blog:node/28
-  $menu_links['menu-footer-menu-1_blog:node/28'] = array(
+  // Exported menu link: menu-footer-menu-1_blog:node/40
+  $menu_links['menu-footer-menu-1_blog:node/40'] = array(
     'menu_name' => 'menu-footer-menu-1',
-    'link_path' => 'node/28',
+    'link_path' => 'node/40',
     'router_path' => 'node/%',
     'link_title' => 'Blog',
     'options' => array(
@@ -42,7 +42,7 @@ function default_site_template_eo_menu_default_menu_links() {
         'pages' => '',
       ),
       'attributes' => array(),
-      'identifier' => 'menu-footer-menu-1_blog:node/28',
+      'identifier' => 'menu-footer-menu-1_blog:node/40',
     ),
     'module' => 'menu',
     'hidden' => 0,
