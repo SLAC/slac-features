@@ -10,10 +10,10 @@
 function default_site_template_eo_menu_default_menu_links() {
   $menu_links = array();
 
-  // Exported menu link: menu-footer-menu-1_about:node/11
-  $menu_links['menu-footer-menu-1_about:node/11'] = array(
+  // Exported menu link: menu-footer-menu-1_about:node/17
+  $menu_links['menu-footer-menu-1_about:node/17'] = array(
     'menu_name' => 'menu-footer-menu-1',
-    'link_path' => 'node/11',
+    'link_path' => 'node/17',
     'router_path' => 'node/%',
     'link_title' => 'About',
     'options' => array(
@@ -21,7 +21,7 @@ function default_site_template_eo_menu_default_menu_links() {
         'pages' => '',
       ),
       'attributes' => array(),
-      'identifier' => 'menu-footer-menu-1_about:node/11',
+      'identifier' => 'menu-footer-menu-1_about:node/17',
     ),
     'module' => 'menu',
     'hidden' => 0,
