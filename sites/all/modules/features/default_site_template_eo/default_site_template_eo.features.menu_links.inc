@@ -73,10 +73,10 @@ function default_site_template_eo_menu_default_menu_links() {
     'weight' => -47,
     'customized' => 1,
   );
-  // Exported menu link: menu-footer-menu-1_news:node/45
-  $menu_links['menu-footer-menu-1_news:node/45'] = array(
+  // Exported menu link: menu-footer-menu-1_news:node/57
+  $menu_links['menu-footer-menu-1_news:node/57'] = array(
     'menu_name' => 'menu-footer-menu-1',
-    'link_path' => 'node/45',
+    'link_path' => 'node/57',
     'router_path' => 'node/%',
     'link_title' => 'News',
     'options' => array(
@@ -84,7 +84,7 @@ function default_site_template_eo_menu_default_menu_links() {
         'pages' => '',
       ),
       'attributes' => array(),
-      'identifier' => 'menu-footer-menu-1_news:node/45',
+      'identifier' => 'menu-footer-menu-1_news:node/57',
     ),
     'module' => 'menu',
     'hidden' => 0,
