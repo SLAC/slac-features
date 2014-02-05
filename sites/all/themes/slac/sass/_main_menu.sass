@@ -91,6 +91,8 @@
     > li > a:hover, > li.sfHover > a
       +hover-and-active
       
+    > li.active-trail > a
+      +hover-and-active
       
     .sf-sub-indicator
       display: none
@@ -211,9 +213,12 @@ ul.sf-menu.sf-accordion.sf-expanded
         ul
           .active-trail
             a
-              background-color: #fff
+              //background-color: #fff 
               display: block
-              +box-shadow(0px 0px 0px 0px $red  )
+              text-decoration: underline
+              &:before, &:after
+                display: none
+              
           li
             a:hover
               background-color: $hover-submenu
