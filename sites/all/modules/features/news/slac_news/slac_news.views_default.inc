@@ -79,12 +79,6 @@ function slac_news_views_default_views() {
   $handler->display->display_options['fields']['field_slac_news_source']['field'] = 'field_slac_news_source';
   $handler->display->display_options['fields']['field_slac_news_source']['label'] = 'Source';
   $handler->display->display_options['fields']['field_slac_news_source']['click_sort_column'] = 'url';
-  /* Field: Content: Tags */
-  $handler->display->display_options['fields']['field_slac_news_tags']['id'] = 'field_slac_news_tags';
-  $handler->display->display_options['fields']['field_slac_news_tags']['table'] = 'field_data_field_slac_news_tags';
-  $handler->display->display_options['fields']['field_slac_news_tags']['field'] = 'field_slac_news_tags';
-  $handler->display->display_options['fields']['field_slac_news_tags']['type'] = 'taxonomy_term_reference_plain';
-  $handler->display->display_options['fields']['field_slac_news_tags']['delta_offset'] = '0';
   /* Sort criterion: Content: Date (field_slac_news_date) */
   $handler->display->display_options['sorts']['field_slac_news_date_value']['id'] = 'field_slac_news_date_value';
   $handler->display->display_options['sorts']['field_slac_news_date_value']['table'] = 'field_data_field_slac_news_date';
@@ -170,13 +164,6 @@ function slac_news_views_default_views() {
   $handler->display->display_options['fields']['field_slac_news_contact']['table'] = 'field_data_field_slac_news_contact';
   $handler->display->display_options['fields']['field_slac_news_contact']['field'] = 'field_slac_news_contact';
   $handler->display->display_options['fields']['field_slac_news_contact']['exclude'] = TRUE;
-  /* Field: Content: Tags */
-  $handler->display->display_options['fields']['field_slac_news_tags']['id'] = 'field_slac_news_tags';
-  $handler->display->display_options['fields']['field_slac_news_tags']['table'] = 'field_data_field_slac_news_tags';
-  $handler->display->display_options['fields']['field_slac_news_tags']['field'] = 'field_slac_news_tags';
-  $handler->display->display_options['fields']['field_slac_news_tags']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_slac_news_tags']['type'] = 'taxonomy_term_reference_plain';
-  $handler->display->display_options['fields']['field_slac_news_tags']['delta_offset'] = '0';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: News type (field_slac_news_type) */
   $handler->display->display_options['arguments']['field_slac_news_type_tid']['id'] = 'field_slac_news_type_tid';

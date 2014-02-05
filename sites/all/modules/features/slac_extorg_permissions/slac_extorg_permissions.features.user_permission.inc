@@ -1662,13 +1662,6 @@ function slac_extorg_permissions_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
-  // Exported permission: 'delete terms in slac_news_tags'.
-  $permissions['delete terms in slac_news_tags'] = array(
-    'name' => 'delete terms in slac_news_tags',
-    'roles' => array(),
-    'module' => 'taxonomy',
-  );
-
   // Exported permission: 'delete terms in slac_sc_catalog_category'.
   $permissions['delete terms in slac_sc_catalog_category'] = array(
     'name' => 'delete terms in slac_sc_catalog_category',
@@ -2420,13 +2413,6 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'editor' => 'editor',
     ),
-    'module' => 'taxonomy',
-  );
-
-  // Exported permission: 'edit terms in slac_news_tags'.
-  $permissions['edit terms in slac_news_tags'] = array(
-    'name' => 'edit terms in slac_news_tags',
-    'roles' => array(),
     'module' => 'taxonomy',
   );
 

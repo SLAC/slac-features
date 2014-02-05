@@ -47,7 +47,6 @@ function slac_kb_article_views_default_views() {
     'slac_sc_catalog_eligibility' => 0,
     'slac_sc_catalog_self_help' => 0,
     'tags' => 0,
-    'slac_news_tags' => 0,
   );
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -123,7 +122,6 @@ function slac_kb_article_views_default_views() {
     'slac_sc_catalog_eligibility' => 0,
     'slac_sc_catalog_self_help' => 0,
     'tags' => 0,
-    'slac_news_tags' => 0,
   );
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Taxonomy term: Name */
@@ -193,7 +191,6 @@ function slac_kb_article_views_default_views() {
     'slac_sc_catalog_eligibility' => 0,
     'slac_sc_catalog_self_help' => 0,
     'tags' => 0,
-    'slac_news_tags' => 0,
   );
   /* Relationship: Taxonomy term: Content using KB Categories */
   $handler->display->display_options['relationships']['reverse_field_kb_categories_node']['id'] = 'reverse_field_kb_categories_node';
