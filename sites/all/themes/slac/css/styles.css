@@ -1083,7 +1083,7 @@ ul.tabs, .action-links {
       content: "\e603"; }
     .social-icon-block > div.social-icon-youtube a:after {
       content: "\e600"; }
-    .social-icon-block > div.social-icon-delicious a:after {
+    .social-icon-block > div.social-icon-flickr a:after {
       content: "\e601"; }
 
 @media (min-width: 480px) {
