@@ -119,6 +119,7 @@ dependencies[] = pp_lightbox
 
 ; Forms
 dependencies[] = slac_webform_botcha
+dependencies[] = slac_search_redirect
 
 ; RSS
 dependencies[] = slac_rss_block
