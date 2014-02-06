@@ -40,7 +40,6 @@ dependencies[] = pathauto
 dependencies[] = pp_crop
 dependencies[] = profile2
 dependencies[] = rules
-dependencies[] = search
 dependencies[] = slac_admin_modules
 dependencies[] = system
 dependencies[] = taxonomy

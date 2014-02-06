@@ -55,6 +55,9 @@ dependencies[] = profile2
 dependencies[] = views_bulk_operations
 dependencies[] = admin_views
 dependencies[] = entitycache
+dependencies[] = superfish
+dependencies[] = views_feed_pane
+dependencies[] = metatag
 
 ;Development modules
 dependencies[] = devel
@@ -95,8 +98,6 @@ dependencies[] = bean
 dependencies[] = bean_wysiwyg
 dependencies[] = pp_demo_beans
 
-
-
 ;Blog
 dependencies[] = blog
 
@@ -107,7 +108,7 @@ dependencies[] = field_redirection
 dependencies[] = pp_demo
 
 ; Service catalog
-dependencies[] = support
+; dependencies[] = support
 
 ; Lightbox
 dependencies[] = pp_lightbox
