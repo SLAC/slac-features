@@ -12,7 +12,6 @@ dependencies[] = page_manager
 dependencies[] = pathauto
 dependencies[] = rdf
 dependencies[] = slac_blog_archive
-dependencies[] = slac_event
 dependencies[] = strongarm
 dependencies[] = taxonomy
 dependencies[] = views_content
