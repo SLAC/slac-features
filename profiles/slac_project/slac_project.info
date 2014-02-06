@@ -98,6 +98,10 @@ dependencies[] = bean
 dependencies[] = bean_wysiwyg
 dependencies[] = pp_demo_beans
 
+; Pages
+dependencies[] = menu_block
+dependencies[] = slac_page
+
 ;Blog
 dependencies[] = blog
 
@@ -133,6 +137,9 @@ dependencies[] = slac_user_profile
 
 ;Landing page content type
 dependencies[] = landing_page
+
+; Panelized basic page settings
+dependencies[] = slac_basic_page_settings
 
 ;Configurations
 dependencies[] = slac_configuration

@@ -27,6 +27,8 @@ function slac_project_install_task_demo_content() {
       'slac_ext_org_blog',
       'slac_site_404',
       'slac_project_permissions',
+      'slac_demo_main_menu',
+      'slac_demo_basic_page',
     ),
     $demo_modules
   );
