@@ -1,0 +1,22 @@
+<?php
+/**
+ * @file
+ * Code for the Default Site Template feature.
+ */
+
+include_once 'default_site_template_project.features.inc';
+
+/**
+ * Implements hook_ctools_plugin_post_alter().
+ */
+function default_site_template_project_ctools_plugin_post_alter(&$plugin, &$info) {
+  if (isset($plugin['name']) && $plugin['name'] == 'page_site_name') {
+    $plugin['render callback'] = 'default_site_template_project_ctools_page_site_name_content_type_render';
+  }
+}
+
+function default_site_template_project_ctools_page_site_name_content_type_render($subtype, $conf, $panel_args) {
+  $block = ctools_page_site_name_content_type_render($subtype, $conf, $panel_args);
+  $block->content = '<a href="' . url('<front>') . '">' . $block->content . '</a>';
+  return $block;
+}

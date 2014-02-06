@@ -125,7 +125,7 @@ dependencies[] = slac_search_redirect
 dependencies[] = slac_rss_block
 
 ;Features
-dependencies[] = default_site_template_eo
+dependencies[] = default_site_template_project
 dependencies[] = slac_user_menu_classes
 
 ; Profile.
