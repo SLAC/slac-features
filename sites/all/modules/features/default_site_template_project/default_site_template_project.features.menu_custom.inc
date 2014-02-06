@@ -16,10 +16,10 @@ function default_site_template_project_menu_default_menu_custom() {
     'title' => 'Footer menu',
     'description' => '',
   );
-  // Exported menu: menu-footer-menu-1.
-  $menus['menu-footer-menu-1'] = array(
-    'menu_name' => 'menu-footer-menu-1',
-    'title' => 'Footer Menu 1',
+  // Exported menu: menu-footer-menu-project.
+  $menus['menu-footer-menu-project'] = array(
+    'menu_name' => 'menu-footer-menu-project',
+    'title' => 'Footer Menu Project',
     'description' => '',
   );
   // Exported menu: menu-header-menu.
@@ -30,7 +30,7 @@ function default_site_template_project_menu_default_menu_custom() {
   );
   // Translatables
   // Included for use with string extractors like potx.
-  t('Footer Menu 1');
+  t('Footer Menu Project');
   t('Footer menu');
   t('Header menu');
 

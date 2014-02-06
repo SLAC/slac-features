@@ -372,7 +372,7 @@ function default_site_template_project_default_panels_mini() {
     $pane->pid = 'new-7';
     $pane->panel = 'left';
     $pane->type = 'block';
-    $pane->subtype = 'menu-menu-footer-menu-1';
+    $pane->subtype = 'menu-menu-footer-menu-project';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
