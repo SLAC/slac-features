@@ -1360,7 +1360,7 @@ h2.pane-title i, h2.panel-title i {
   border-bottom: 3px solid #f3f1eb;
   padding-bottom: 5px; }
   .front .pane-page-content .general-left h2.pane-title, .front .pane-page-content .general-left-title h2.pane-title, .front .pane-page-content .general-title h2.pane-title, .front .pane-page-content .general-left h2.panel-title, .front .pane-page-content .general-left-title h2.panel-title, .front .pane-page-content .general-title h2.panel-title {
-    color: #626263;
+    color: #626262;
     border-bottom: 6px solid #e7ebe6;
     font-size: inherit;
     margin-bottom: 23px;
@@ -1984,7 +1984,7 @@ ul.news-archive-class li .item-list {
     top: 0;
     left: 0;
     font-family: Georgia, "Times New Roman", Times, serif;
-    color: #626263;
+    color: #626262;
     line-height: 1; }
     .touch .event-block .date {
       font-family: Arial, Helvetica, sans-serif; }
@@ -2006,7 +2006,7 @@ ul.news-archive-class li .item-list {
     font-size: 11px;
     font-size: 0.6875rem; }
   .event-block .event {
-    color: #626263;
+    color: #626262;
     padding-right: 25px;
     margin-bottom: 10px;
     line-height: 16px; }
@@ -2019,7 +2019,7 @@ ul.news-archive-class li .item-list {
       top: 0;
       font-size: 15px;
       font-size: 0.9375rem;
-      color: #626263; }
+      color: #626262; }
       .event-block a.icon:after {
         content: "\e61f"; }
 
@@ -2045,6 +2045,25 @@ ul.news-archive-class li .item-list {
   font-size: 0.875rem;
   font-weight: bold;
   margin-bottom: 5px; }
+.general-right .pane-bundle-slac-sidebar-block .field-item {
+  padding-left: 10px; }
+.general-right .pane-bundle-slac-sidebar-block p {
+  color: #626262;
+  font-size: 12px;
+  font-size: 0.75rem;
+  margin-bottom: 2px;
+  font-weight: bold; }
+.general-right .pane-bundle-slac-sidebar-block ul {
+  list-style-type: disc;
+  padding-left: 30px;
+  font-size: 12px;
+  font-size: 0.75rem;
+  margin-bottom: 12px; }
+  .general-right .pane-bundle-slac-sidebar-block ul li {
+    color: #871628;
+    margin-bottom: 7px !important; }
+    .general-right .pane-bundle-slac-sidebar-block ul li a {
+      color: inherit; }
 
 .pane-bundle-slac-mini-slideshow > div {
   text-align: center;
