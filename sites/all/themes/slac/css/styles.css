@@ -1759,8 +1759,6 @@ table.sticky-table {
 .site-title {
   position: relative;
   color: #353535; }
-  .site-title a {
-    color: inherit; }
 
 .node-type-list dt, .node-type-list dd {
   margin-bottom: 10px; }
