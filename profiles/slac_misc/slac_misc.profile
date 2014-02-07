@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Enables modules and site configuration for a standard site installation.
+ * Enables modules and site configuration for a minimal site installation.
  */
 
 /**
@@ -17,8 +17,43 @@ function slac_misc_form_install_configure_form_alter(&$form, $form_state) {
 }
 
 /**
-* Implements hook_paranoia_hide_modules().
-*/
+ * Implements hook_paranoia_hide_modules().
+ */
 function slac_misc_paranoia_hide_modules() {
   return array('update' => 'Core');
 }
+
+/**
+ * Implementation of hook_demo_modules.
+ * Returns an array with the list of modules with demo content.
+ *
+ * @return array of modules with demo content
+ */
+function slac_misc_demo_modules() {
+  return array(
+    'slac_blog_demo',
+    'slac_faq_demo',
+    'slac_demo_accounts',
+    'slac_demo_main_menu',
+  );
+}
+
+/**
+ * Alter slac_configuration_form form.
+ */
+function slac_misc_form_slac_configuration_form_alter(&$form, &$form_state) {
+  $form['site_name_abbreviation'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Site Abbreviation'),
+    '#default_value' => variable_get('site_name_abbreviation', ''),
+    '#required' => TRUE,
+  );
+
+  $form['site_url_address'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Address'),
+    '#default_value' => variable_get('site_url_address', ''),
+    '#required' => TRUE,
+  );
+}
+
