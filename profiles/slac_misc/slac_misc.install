@@ -76,24 +76,39 @@ function slac_misc_install() {
   $file = DRUPAL_ROOT . '/profiles/slac_profiles_shared.inc';
   require_once $file;
 
-  slac_profiles_shared_filtered_format();
-
-
-  // Enable some standard blocks.
-  theme_enable(array('seven', 'slac'));
-  variable_set('admin_theme', 'seven');
-  variable_set('node_admin_theme', '1');
-  variable_set('theme_default', 'slac');
-
-
-  // Enable user picture support and set the default to a square thumbnail option.
-  variable_set('user_pictures', '1');
-  variable_set('user_picture_dimensions', '1024x1024');
-  variable_set('user_picture_file_size', '800');
-  variable_set('user_picture_style', 'thumbnail');
-
   variable_set('install_profile', 'slac_misc');
 
+  slac_profiles_shared_filtered_format();
+
+  // Create a Test authenticated user
+  $account = new stdClass();
+  $account->is_new = TRUE;
+  $edit = array(
+    'name' => 'auth_user',
+    'mail' => 'test_user@slac.stanford.edu',
+    'pass' => 'sl@ckers',
+    'status' => 1,
+    'roles' => array(
+      2 => TRUE,
+    ),
+  );
+  user_save($account, $edit);
+
+  variable_set('install_profile', 'slac_misc');
+  variable_set('distribution_name', 'SLAC Projects');
+
+  variable_set('site_name', 'SLAC Projects');
+  variable_set('site_name_abbreviation', 'Misc');
+  variable_set('site_url_address', '2575 Sand Hill Road, Menlo Park, CA 94025');
+
+  slac_profiles_shared_place_system_blocks_to_regions();
+
+  // Enable the slac theme.
+  db_update('system')
+    ->fields(array('status' => 1))
+    ->condition('type', 'theme')
+    ->condition('name', 'slac')
+    ->execute();
 }
 
 function _slac_misc_filter_dependencies($dependency) {
