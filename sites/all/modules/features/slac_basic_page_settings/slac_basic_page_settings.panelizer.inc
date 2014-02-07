@@ -42,6 +42,7 @@ function slac_basic_page_settings_panelizer_defaults() {
       'inner_left' => NULL,
       'inner_right' => NULL,
       'inner_title' => NULL,
+      'right_sidebar' => NULL,
     ),
   );
   $display->cache = array();
@@ -58,7 +59,7 @@ function slac_basic_page_settings_panelizer_defaults() {
     $pane->configuration = array(
       'menu_name' => 'main-menu',
       'parent_mlid' => 'main-menu:0',
-      'title_link' => 0,
+      'title_link' => 1,
       'admin_title' => '',
       'level' => '2',
       'follow' => 0,

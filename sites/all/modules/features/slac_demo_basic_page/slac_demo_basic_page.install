@@ -220,6 +220,7 @@ function _slac_demo_basic_page_install__panels_display() {
         'inner_left' => NULL,
         'inner_right' => NULL,
         'inner_title' => NULL,
+        'right_sidebar' => NULL,
         'top' => NULL,
         'middle' => NULL,
         'bottom' => NULL,
@@ -293,7 +294,7 @@ function _slac_demo_basic_page_install__panes($did) {
       'configuration' => array(
         'menu_name' => 'main-menu',
         'parent_mlid' => 'main-menu:0',
-        'title_link' => 0,
+        'title_link' => 1,
         'admin_title' => '',
         'level' => 2,
         'follow' => 0,
