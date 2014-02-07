@@ -2062,6 +2062,8 @@ ul.news-archive-class li .item-list {
     margin-bottom: 7px !important; }
     .general-right .pane-bundle-slac-sidebar-block ul li a {
       color: inherit; }
+      .general-right .pane-bundle-slac-sidebar-block ul li a:hover {
+        text-decoration: underline; }
 
 .pane-bundle-slac-mini-slideshow > div {
   text-align: center;
