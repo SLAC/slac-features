@@ -26,6 +26,14 @@ if ($postition = strpos($currdir, 'sites')) {
 // assume provisioned sites will be
 $base_url = 'http://'.$_SERVER['HTTP_HOST']; // THIS IS IMPORTANT
 
+// localtest
+// for subdirectory, not working for remote
+//if ($position = strpos($_SERVER['SCRIPT_NAME'], 'sites')) {
+//  $base_url .= substr($_SERVER['SCRIPT_NAME'], 0, $position);
+//}
+
+$base_url = rtrim($base_url, "/\//");
+
 // in case cookie is not there
 if (!isset($_COOKIE['webauth_at'])) {
   // setcookie('webauth_at', md5(rand()), time() + 36000, '/');

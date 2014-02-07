@@ -6,38 +6,10 @@
  */
 
 /**
- * Implements hook_requirements().
- */
-function webauth_requirements($phase) {
-  $requirements = array();
-  
-//   $directory = file_directory_path() .'/webauth';
-//   if ($phase == 'install' && !file_check_directory($directory, TRUE)) {
-//     $requirements['webauth']['severity'] = REQUIREMENT_ERROR;
-//     $requirements['webauth']['description'] = t('The Webauth protected directory does not exist in your site Drupal directory and it could not be created.  Please check !file_system settings.', array('!file_system' => l('file system', 'admin/config/media/file-system')));
-//   }
-  return $requirements;
-}
-
-/**
- * Implements hook_field_schema()
- */
-function webauth_field_schema() {
-
-}
-/**
- * Implements hook_schema().
- */
-function webauth_schema() {
-
-}
-
-/**
  * Implements hook_install().
  */
 function webauth_install() {
   //We will store the webauth directory in 'files' - we could do it in private - but will
-  //that mess up our htaccess.  It shouldn't but I haven't tried to find out.
   $directory = drupal_realpath(file_default_scheme() . '://webauth');
   drupal_set_message('Creating directory ' . $directory);
   if (!is_dir($directory) && !drupal_mkdir($directory, NULL, TRUE)) {
@@ -68,4 +40,10 @@ function webauth_install() {
  */
 function webauth_uninstall() {
   //We should clean up after ourselves
+  $directory = drupal_realpath(file_default_scheme() . '://webauth');
+  if (is_dir($directory)) {
+    if (drupal_unlink($directory . "/.htaccess") && drupal_unlink($directory . "/login.php")) {
+      @drupal_rmdir($directory);
+    }
+  }
 }

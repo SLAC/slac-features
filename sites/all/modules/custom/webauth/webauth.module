@@ -43,41 +43,33 @@ function webauth_help($path, $arg) {
 }
 
 /**
- *  Implements hook_boot().
+ * Implements hook_user_logout
  */
-function webauth_boot() {
-  global $user, $base_url;
-
-  // pass through authentication, user have cookie, just go through and populate the session with webauth info
-  if ($user->uid == 0) {
-    if (isset($_COOKIE['webauth_at'])) {
-      header("Location: " . $base_url . '/' . conf_path() . '/files/webauth/login.php');
-    }
-    // For internal site types, user are required to be authenticated to gain access
-    // If this is set to true, we will always redirect user to authenticate if they don't have
-    // the credentials
-    $internal = variable_get('slac_site_internal', FALSE);
-    if ($internal) {
-      if(!isset($_COOKIE['webauth_at']) ||
-        !isset($_SESSION['wa_data']['wa_token_expiration']) ||
-        $_SESSION['wa_data']['wa_token_expiration'] < REQUEST_TIME) {
-        header("Location: " . $base_url . '/' . conf_path() . '/files/webauth/login.php');
-      }
-    }
-  }
+function webauth_user_logout($account) {
+	// setting a log out cookie
+	setcookie('webauth_logged_out', TRUE, 0, '/');
 }
 
 /**
  * Implements hook_init().
  */
 function webauth_init() {
-  global $user;
+  global $user, $base_url;
 
   // Displaying a custom message for 403
   $access_denied_page = variable_get('site_403', '');
   if ($access_denied_page != 'webauth/403') {
     variable_set('site_403', 'webauth/403');
   }
+  
+  // pass through authentication, user have cookie, just go through and populate the session with webauth info
+  if ($user->uid == 0) {
+  	// skip the auto authentication
+    if (isset($_COOKIE['webauth_at']) && !isset($_COOKIE['webauth_logged_out'])) {
+      header("Location: " . $base_url . '/' . conf_path() . '/files/webauth/login.php');
+    }
+  }
+  
   // Pages for logged in users should not be cached
   if ($user->uid > 0) {
     header("Cache-Control: no-store, no-cache, must-revalidate");
@@ -86,23 +78,23 @@ function webauth_init() {
   // the user is logged in as a WebAuth user and:
   // either the user no longer has a webauth_at cookie
   // @todo: or the user's token has expired, or is not there
-//  if ($user->uid > 0) {
-//    $authmap = db_query("SELECT * FROM {authmap} WHERE uid = :uid and module = :module", array(':uid' => $user->uid, ':module' => 'webauth'))->fetchField();
-//    if (!empty($authmap)) {
-//      // user no longer has a webauth_at cookie
-//      if (!isset($_COOKIE['webauth_at']) ||
-//        !isset($_SESSION['wa_data']['wa_token_expiration']) ||
-//        $_SESSION['wa_data']['wa_token_expiration'] < REQUEST_TIME) {
-//        session_destroy();
-//        session_start();
-//        // Only variables can be passed by reference workaround.
-//        $null = NULL;
-//        user_module_invoke('user/logout', $null, $user);
-//        // Load the anonymous user
-//        $user = drupal_anonymous_user();
-//      }
-//    }
-//  }
+  if ($user->uid > 0) {
+    $authmap = db_query("SELECT * FROM {authmap} WHERE uid = :uid and module = :module", array(':uid' => $user->uid, ':module' => 'webauth'))->fetchField();
+    if (!empty($authmap)) {
+      // user no longer has a webauth_at cookie
+      if (!isset($_COOKIE['webauth_at']) ||
+        !isset($_SESSION['wa_data']['wa_token_expiration']) ||
+        $_SESSION['wa_data']['wa_token_expiration'] < REQUEST_TIME) {
+        session_destroy();
+        session_start();
+        // Only variables can be passed by reference workaround.
+        $null = NULL;
+        user_module_invoke('user/logout', $null, $user);
+        // Load the anonymous user
+        $user = drupal_anonymous_user();
+      }
+    }
+  }
 }
 
 /**
@@ -136,21 +128,14 @@ function webauth_theme() {
  * @param unknown_type $form_id
  */
 function webauth_form_alter(&$form, $form_state, $form_id) {
-  
-  global $user, $conf;
-
   if ($form_id == 'user_login_block' || $form_id == 'user_login') {
-
-    if (isset($form_state['weblogin']['server'])) {
-      $form['#validate'] = array('webauth_auth');
-    }
-    drupal_session_start();
     $form['webauth_link'] = array(
-        '#prefix' => '<div id="webauth-link">',  // make it themable
+        '#prefix' => '<div id="webauth-link">',
         '#markup' => _webauth_get_login_link(),
         '#suffix' => '</div>',
         '#weight' => -10
     );
+
     $allow_local = variable_get('webauth_allow_drupal_login', TRUE);
     if (!$allow_local) {
       unset($form['name']);
@@ -175,24 +160,6 @@ function webauth_form_alter(&$form, $form_state, $form_id) {
 
   $form['webauth.return_to'] = array('#type' => 'hidden', '#value' => url('user', array('absolute' => TRUE, 'query' => user_login_destination())));
 }
-
-/**
- * Login form _validate hook
- */
-function webauth_login_validate($form, &$form_state) {
-  $return_to = $form_state['values']['webauth.return_to'];
-  if (empty($return_to)) {
-    $return_to = url('', array('absolute' => TRUE));
-  }
-
-  webauth_begin($return_to, $form_state['values']);
-}
-
-function webauth_begin($return_to, $form_state) {
-  drupal_goto('files/webauth/login.php');
-  //TODO Get the destinations sorted
-}
-
 
 /**
  * Check if user is authenticated through webauth
@@ -268,7 +235,6 @@ function _webauth_user_sync($wa_username) {
   // 2. We will also sync the user roles in this function
   $loaded_user = user_load_by_name($wa_username);
   if (!empty($loaded_user)) {
-    // @todo:sync the user roles
     return $loaded_user;
   }
 
@@ -283,7 +249,6 @@ function _webauth_user_sync($wa_username) {
     'access' => REQUEST_TIME,
   );
 
-  // @todo:sync the user roles
   $account = user_save(null, $edit);
 
   // Set the authmap
