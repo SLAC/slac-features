@@ -3,6 +3,9 @@
 /**
  * @file
  * Tweaks public facing file URLs to fit the SLAC AFS file storage scheme.
+ *
+ * This is needed because otherwise, we'll have URLs like this:
+ * https://test-ext-org.slac.stanford.edu//afs/slac.stanford.edu/g/web/drupal/123/files/myfile.png
  */
 
 /**
@@ -20,6 +23,6 @@ class SlacPublicStreamWrapper extends DrupalPublicStreamWrapper {
    */
   function getExternalUrl() {
     $path = str_replace('\\', '/', $this->getTarget());
-    return $GLOBALS['base_url'] . '/files/' . drupal_encode_path($path);
+    return $GLOBALS['base_url'] . '/' . conf_path() . '/files/' . drupal_encode_path($path);
   }
 }
