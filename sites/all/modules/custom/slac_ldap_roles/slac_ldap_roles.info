@@ -1,0 +1,7 @@
+name = SLAC LDAP Roles
+description = Map and sync LDAP groups to user roles in Drupal
+core = 7.x
+package = SLAC
+version = 7.x-1.0
+
+dependencies[] = libraries

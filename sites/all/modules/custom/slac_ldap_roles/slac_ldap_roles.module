@@ -1,0 +1,278 @@
+<?php
+/**
+ * @file
+ * Code for the SLAC LDAP Roles module
+ */
+define('GLOBAL_ADMIN_GROUP', 'drupal-aegir-suadmins');
+
+/**
+ * Implements hook_menu
+ */
+function slac_ldap_roles_menu() {
+  $items['admin/config/services/ldap'] = array(
+    'title' => 'LDAP Role synchronization',
+    'description' => 'Manage LDAP role synchronization',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('slac_ldap_roles_config'),
+    'access arguments' => array('administer site configuration'),
+    'type' => MENU_NORMAL_ITEM,
+  );
+
+  return $items;
+}
+
+/**
+ * Implements hook_init
+ */
+function slac_ldap_roles_init() {
+  // check to see if the library is installed
+  $info = libraries_detect('slac_ldap_roles');
+  if (!$info['installed']) {
+   if (user_access('administer site configuration')) {
+     $message = strip_tags($info['error message']);
+     $message .= "It should live under sites/all/libraries/slac_ldap_roles/adLDAP.php";
+     drupal_set_message($message, 'warning', FALSE);
+   }
+  }
+}
+
+/**
+ * Implements hook_user_login
+ */
+function slac_ldap_roles_user_login(&$edit, $account) {
+  slac_ldap_roles_sync($account);
+}
+
+/**
+ * Sync current user's role to LDAP role
+ * @params  stdClass $account     A user account object
+ */
+function slac_ldap_roles_sync($account) {
+
+  // mapping is for role -> groups
+  $default_mapping = array(
+    'author' => 'drupal-0-author',
+    'site_member' => 'drupal-0-site_member',
+    'editor' => 'drupal-0-editor',
+    'manager' => 'drupal-0-manager',
+    'administrator' => 'drupal-0-administrator',
+  );
+
+  $mapping = variable_get('slac_role_mapping', $default_mapping);
+
+  $roles = array();
+
+  $config = slac_ldap_roles_get_config();
+  $adldap = slac_ldap_roles_init_server($config);
+  if (empty($adldap)) {
+    return;
+  }
+
+  // list all of the user's groups
+  $groups = $adldap->user()->groups($account->name);
+
+  // @test
+  // $groups[] = 'drupal-0-editor';
+
+  if (!empty($groups)) {
+    // grant admin permission on any site
+    if (in_array(GLOBAL_ADMIN_GROUP, $groups)) {
+      slac_ldap_roles_user_role_sync($account, array('administrator'));
+      $adldap->close();
+      return;
+    }
+
+    // go through the rest of the groups, find groups matching this site and role
+    for ($i = 0; $i<count($groups); $i++) {
+      if (in_array($groups[$i], $mapping)) {
+        $roles[] = _slac_ldap_roles_get($mapping, $groups[$i]);
+      }
+    }
+  }
+
+  // sync the roles we found from the site/group to the user
+  // if no roles found, just revert back to authenticated user
+  slac_ldap_roles_user_role_sync($account, $roles);
+  $adldap->close();
+
+}
+
+/**
+ * Return the role name given a group
+ */
+function _slac_ldap_roles_get($mapping, $group) {
+  foreach ($mapping as $role => $_group) {
+    if ($_group == $group) {
+      return $role;
+    }
+  }
+}
+
+/**
+ * Implements hook_libraries_info
+ */
+function slac_ldap_roles_libraries_info() {
+  $libraries['slac_ldap_roles'] = array(
+    'name' => 'ADLDAP library',
+    'vendor url' => 'http://adldap.sourceforge.net/',
+    'download url' => 'http://adldap.sourceforge.net/download.php',
+    'version arguments' => array(
+      'file' => 'adLDAP.php',
+      'pattern' => '@Version\s+([0-9a-zA-Z\.-]+)@',
+      'lines' => 4,
+    ),
+    'files' => array(
+      'php' => array(
+        'adLDAP.php',
+      ),
+    ),
+  );
+  return $libraries;
+}
+
+/**
+ *  Get configuration settings
+ */
+function slac_ldap_roles_get_config() {
+
+  $config = array(
+    'base_dn' => variable_get('slac_ldap_base_dn', 'DC=win,DC=slac,DC=stanford,DC=edu'),
+    'domain_controllers' => variable_get('slac_ldap_domain_controllers', 'ldap04.win.slac.stanford.edu'),
+    'admin_username' => variable_get('slac_ldap_admin_username', 'aegir-service'),
+    'admin_password' => variable_get('slac_ldap_admin_password', ''),
+  );
+
+  if (variable_get('slac_ldap_account_suffix', '@win.slac.stanford.edu') != '') {
+    $config['account_suffix'] = variable_get('slac_ldap_account_suffix', '@win.slac.stanford.edu');
+  }
+  return $config;
+}
+
+/**
+ *  * instantiate a adldap server object for us to use
+ * @param array $config
+ *        base_dn
+ *        account_suffix
+ *        domain_controllers
+ *        admin_username
+ *        admin_password
+ * @return adLdap adldap
+ */
+function slac_ldap_roles_init_server($config = array()) {
+  $library = libraries_load('slac_ldap_roles');
+  if (empty($library['loaded'])) {
+    return;
+  }
+  if (empty($config)) {
+    return;
+  }
+  try {
+    $adldap = new adLDAP($config);
+  }
+  catch (adLDAPException $e) {
+    // watchdog the exception
+    watchdog('slac_ldap_roles', 'Unable to create ADLDAP connection', array(), WATCHDOG_ERROR);
+    return;
+  }
+  return $adldap;
+}
+
+/**
+ * Synchronize any roles to the user account in accordance to their web_auth groups
+ *
+ * @param $account      An drupal user account object
+ * @param $roles        An array of role (names) to sync with
+ */
+function slac_ldap_roles_user_role_sync($account, $roles = array()) {
+
+  // default role for user is always auth user
+  $user_roles = array(
+    2 => 'authenticated user',
+  );
+
+  $site_roles = _slac_ldap_roles_roles_load_all();
+  foreach ($roles as $role) {
+    if (array_key_exists($role, $site_roles)) {
+      // $roles[$rid] = $name
+      $user_roles[$site_roles[$role]] = $role;
+    }
+  }
+
+  $edit['roles'] = $user_roles;
+  user_save($account, $edit);
+
+}
+
+/**
+ * Fetch all user roles
+ * @return array $data
+ */
+function _slac_ldap_roles_roles_load_all() {
+  $data = array();
+  $results = db_select('role', 'r')
+    ->fields('r')
+    ->execute();
+
+  foreach ($results as $result) {
+    $data[$result->name] = $result->rid;
+  }
+  return $data;
+}
+
+/**
+ * Configuration form for the ADLDAP setting
+ * @return mixed
+ */
+function slac_ldap_roles_config() {
+
+  $form['ldap'] = array(
+    '#type' => 'fieldset',
+    '#collapsible' => TRUE,
+    '#title' => t('Server information'),
+  );
+
+  $form['ldap']['slac_ldap_base_dn'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Base DN'),
+    '#default_value' => variable_get('slac_ldap_base_dn', 'DC=win,DC=slac,DC=stanford,DC=edu'),
+    '#required' => TRUE,
+  );
+
+  $form['ldap']['slac_ldap_account_suffix'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Account Suffix'),
+    '#default_value' => variable_get('slac_ldap_account_suffix', '@win.slac.stanford.edu'),
+  );
+
+  // this is an array configuration
+  // we might change this later
+  $form['ldap']['slac_ldap_domain_controllers'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Domains'),
+    '#default_value' => variable_get('slac_ldap_domain_controllers', 'ldap04.win.slac.stanford.edu'),
+    '#required' => TRUE,
+  );
+
+  $form['credentials'] = array(
+    '#type' => 'fieldset',
+    '#collapsible' => TRUE,
+    '#title' => t('User credentials'),
+  );
+
+  $form['credentials']['slac_ldap_admin_username'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Username'),
+    '#default_value' => variable_get('slac_ldap_admin_username', 'aegir-service'),
+    '#required' => TRUE,
+  );
+
+  $form['credentials']['slac_ldap_admin_password'] = array(
+    '#type' => 'password',
+    '#title' => t('Password'),
+    '#default_value' => variable_get('slac_ldap_admin_password', ''),
+    '#required' => TRUE,
+  );
+
+  //@todo a test button?
+  return system_settings_form($form);
+}

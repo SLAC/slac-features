@@ -192,6 +192,7 @@ dependencies[] = cami
 dependencies[] = webauth
 dependencies[] = slac_webauth_settings
 dependencies[] = slac_login_setting
+dependencies[] = slac_ldap_roles
 
 ; Moderation
 dependencies[] = workbench

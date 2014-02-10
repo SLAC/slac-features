@@ -46,6 +46,10 @@ $commands = array(
     'command' => 'drush dis webauth -y'
   ),
   array(
+    'description' => 'Disable slac_ldap_roles module',
+    'command' => 'drush dis slac_ldap_roles -y'
+  ),
+  array(
     'description' => 'Enable demo menu module to show dropdown of main menu',
     'command' => 'drush en slac_menu_demo -y'
   ),
