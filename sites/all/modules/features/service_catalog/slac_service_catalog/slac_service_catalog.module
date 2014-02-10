@@ -42,13 +42,15 @@ function slac_service_catalog_ctools_block_content_type_post_render($subtype, $c
  * Preprocess function.
  */
 function slac_service_catalog_preprocess_taxonomy_term(&$vars) {
-  $contextual_links = array(
-    '#type' => 'contextual_links',
-    '#contextual_links' => array(
-      'taxonomy' => array('taxonomy/term', array($vars['tid'])),
-    ),
-  );
-  $vars['title_suffix']['contextual_links'] = $contextual_links;
+  if($vars['vocabulary_machine_name'] == 'slac_sc_category') {
+    $contextual_links = array(
+      '#type' => 'contextual_links',
+      '#contextual_links' => array(
+        'taxonomy' => array('taxonomy/term', array($vars['tid'])),
+      ),
+    );
+    $vars['title_suffix']['contextual_links'] = $contextual_links;
+  }
 }
 
 /**
@@ -57,9 +59,7 @@ function slac_service_catalog_preprocess_taxonomy_term(&$vars) {
 function slac_service_catalog_contextual_links_view_alter(&$element, &$items) {
   if (isset($element['#contextual_links']['taxonomy'][0])) {
     $taxonomy = $element['#contextual_links']['taxonomy'];
-    if ($taxonomy[0] == 'taxonomy/term'
-      && isset($taxonomy[1][0])
-      && user_access('administer taxonomy')) {
+    if ($taxonomy[0] == 'taxonomy/term' && isset($taxonomy[1][0]) && user_access('administer taxonomy')) {
       $url = $taxonomy[0] . '/' . $taxonomy[1][0] . '/edit';
       $element['#links']['edit-term'] = array(
         'title' => t('Edit term'),
