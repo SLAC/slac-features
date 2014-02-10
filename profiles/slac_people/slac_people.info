@@ -103,6 +103,7 @@ dependencies[] = slac_site_variables
 dependencies[] = slac_social_media
 dependencies[] = slac_block_style
 dependencies[] = slac_form_building
+dependencies[] = slac_files_rewrite
 
 ; Blog. Demo content enabled in separate step of installation.
 dependencies[] = slac_blog

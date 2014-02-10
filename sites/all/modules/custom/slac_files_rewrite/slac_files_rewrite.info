@@ -1,0 +1,4 @@
+name = SLAC Files Rewrite
+description = Tweaks the URLs for public files for AFS file storage.
+core = 7.x
+package = SLAC

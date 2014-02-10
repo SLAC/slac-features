@@ -156,6 +156,7 @@ dependencies[] = slac_people_slideshow
 dependencies[] = slac_mini_slideshow
 dependencies[] = slac_style_guide
 dependencies[] = slac_projects
+dependencies[] = slac_files_rewrite
 
 ;Roles
 dependencies[] = slac_extorg_roles
