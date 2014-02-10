@@ -56,11 +56,14 @@ function slac_service_catalog_preprocess_taxonomy_term(&$vars) {
  */
 function slac_service_catalog_contextual_links_view_alter(&$element, &$items) {
   if (isset($element['#contextual_links']['taxonomy'][0])) {
-    if ($element['#contextual_links']['taxonomy'][0] == 'taxonomy/term' && isset($element['#contextual_links']['taxonomy'][1][0])) {
-      $url = $element['#contextual_links']['taxonomy'][0] . '/' . $element['#contextual_links']['taxonomy'][1][0];
+    $taxonomy = $element['#contextual_links']['taxonomy'];
+    if ($taxonomy[0] == 'taxonomy/term'
+      && isset($taxonomy[1][0])
+      && user_access('administer taxonomy')) {
+      $url = $taxonomy[0] . '/' . $taxonomy[1][0] . '/edit';
       $element['#links']['edit-term'] = array(
         'title' => t('Edit term'),
-        'href' => url($url . '/edit', array('absolute' => TRUE, 'query' => array('destination' => current_path()))),
+        'href' => url($url, array('absolute' => TRUE, 'query' => array('destination' => current_path()))),
       );
     }
   }
