@@ -19,10 +19,9 @@ function slac_files_rewrite_stream_wrappers_alter(&$wrappers) {
 
 class SlacPublicStreamWrapper extends DrupalPublicStreamWrapper {
   /**
-   * Return the HTML URI of a public file.
+   * Implements abstract public function getDirectoryPath()
    */
-  function getExternalUrl() {
-    $path = str_replace('\\', '/', $this->getTarget());
-    return $GLOBALS['base_url'] . '/' . conf_path() . '/files/' . drupal_encode_path($path);
+  public function getDirectoryPath() {
+    return conf_path() . '/files';
   }
 }
