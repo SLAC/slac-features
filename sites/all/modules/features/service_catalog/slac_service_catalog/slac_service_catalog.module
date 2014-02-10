@@ -7,6 +7,15 @@
 include_once 'slac_service_catalog.features.inc';
 
 /**
+ * Implements hook_node_view().
+ */
+function slac_service_catalog_node_view($node, $view_mode, $langcode) {
+  if ($node->type == 'support_ticket' && $view_mode == 'full') {
+    menu_set_active_item(drupal_get_normal_path("support"));
+  }
+}
+
+/**
  * Implements hook_ctools_block_content_type_pre_render().
  *
  * Set different current path.
