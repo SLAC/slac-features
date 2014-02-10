@@ -12,22 +12,22 @@
 function slac_ldap_roles_install() {
 
   // mapping is for role -> groups
-  $default_mapping = array(
-    'author' => 'drupal-0-author',
-    'site_member' => 'drupal-0-site_member',
-    'editor' => 'drupal-0-editor',
-    'manager' => 'drupal-0-manager',
-    'administrator' => 'drupal-0-administrator',
-  );
-
-  $mapping = variable_get('slac_role_mapping', $default_mapping);
-  $roles = array_keys($mapping);
-  foreach ($roles as $role) {
-    $user_role = user_role_load_by_name($role);
-    if (empty($user_role)) {
-      $new_role = new stdClass();
-      $new_role->name = $role;
-      user_role_save($new_role);
-    }
-  }
+//  $default_mapping = array(
+//    'author' => 'drupal-0-author',
+//    'site_member' => 'drupal-0-site_member',
+//    'editor' => 'drupal-0-editor',
+//    'manager' => 'drupal-0-manager',
+//    'administrator' => 'drupal-0-administrator',
+//  );
+//
+//  $mapping = variable_get('slac_role_mapping', $default_mapping);
+//  $roles = array_keys($mapping);
+//  foreach ($roles as $role) {
+//    $user_role = user_role_load_by_name($role);
+//    if (empty($user_role)) {
+//      $new_role = new stdClass();
+//      $new_role->name = $role;
+//      user_role_save($new_role);
+//    }
+//  }
 }
