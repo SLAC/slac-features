@@ -39,6 +39,34 @@ function slac_service_catalog_ctools_block_content_type_post_render($subtype, $c
 }
 
 /**
+ * Preprocess function.
+ */
+function slac_service_catalog_preprocess_taxonomy_term(&$vars) {
+  $contextual_links = array(
+    '#type' => 'contextual_links',
+    '#contextual_links' => array(
+      'taxonomy' => array('taxonomy/term', array($vars['tid'])),
+    ),
+  );
+  $vars['title_suffix']['contextual_links'] = $contextual_links;
+}
+
+/**
+ * Implements hook_contextual_links_view_alter().
+ */
+function slac_service_catalog_contextual_links_view_alter(&$element, &$items) {
+  if (isset($element['#contextual_links']['taxonomy'][0])) {
+    if ($element['#contextual_links']['taxonomy'][0] == 'taxonomy/term' && isset($element['#contextual_links']['taxonomy'][1][0])) {
+      $url = $element['#contextual_links']['taxonomy'][0] . '/' . $element['#contextual_links']['taxonomy'][1][0];
+      $element['#links']['edit-term'] = array(
+        'title' => t('Edit term'),
+        'href' => url($url . '/edit', array('absolute' => TRUE, 'query' => array('destination' => current_path()))),
+      );
+    }
+  }
+}
+
+/**
  * Get nid of the Services node.
  */
 function _slac_service_catalog_get_services_node_nid() {
