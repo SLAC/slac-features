@@ -121,7 +121,6 @@ dependencies[] = slac_social_media
 dependencies[] = slac_block_style
 dependencies[] = slac_profile_base
 dependencies[] = slac_style_guid
-dependencies[] = slac_files_rewrite
 
 dependencies[] = slac_faq
 ;dependencies[] = slac_faq_demo

@@ -15,10 +15,6 @@ $commands = array(
     'description' => 'Disable webauth module',
     'command' => 'drush dis webauth -y'
   ),
-  array(
-    'description' => 'Disable slac_files_rewrite module',
-    'command' => 'drush dis slac_files_rewrite -y'
-  ),
 );
 
 foreach ($commands as $command) {

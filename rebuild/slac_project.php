@@ -42,10 +42,6 @@ $commands = array(
     'command' => 'drush dis webauth -y'
   ),
   array(
-    'description' => 'Disable slac_files_rewrite module',
-    'command' => 'drush dis slac_files_rewrite -y'
-  ),
-  array(
     'description' => 'Clear all caches: ',
     'command' => 'drush cc all'
   ),
