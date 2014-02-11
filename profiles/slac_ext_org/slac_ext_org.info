@@ -55,6 +55,7 @@ dependencies[] = profile2
 dependencies[] = views_bulk_operations
 dependencies[] = admin_views
 dependencies[] = entitycache
+dependencies[] = securepages
 dependencies[] = superfish
 dependencies[] = views_feed_pane
 dependencies[] = metatag

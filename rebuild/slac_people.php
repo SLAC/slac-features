@@ -16,6 +16,10 @@ $commands = array(
     'command' => 'drush dis webauth -y'
   ),
   array(
+    'description' => 'Disable securepages module',
+    'command' => 'drush dis securepages -y'
+  ),
+  array(
     'description' => 'Disable slac_ldap_roles module',
     'command' => 'drush dis slac_ldap_roles -y'
   ),
