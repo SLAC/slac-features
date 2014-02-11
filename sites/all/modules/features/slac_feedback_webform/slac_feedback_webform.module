@@ -1,0 +1,54 @@
+<?php
+/**
+ * @file
+ * Code for the SLAC Feedback webform feature.
+ */
+
+include_once 'slac_feedback_webform.features.inc';
+
+/**
+ * Implements hook_post_features_enable_feature().
+ *
+ * Create webform nodes menu links.
+ */
+function slac_feedback_webform_post_features_enable_feature() {
+  // Make sure we create all menu items once.
+  $flag = variable_get('slac_feedback_webform_post_features_enable_feature', FALSE);
+  if ($flag) {
+    return;
+  }
+  // Collect all paths in order to regenerate url aliases.
+  $paths = array();
+
+  variable_set('slac_feedback_webform_post_features_enable_feature', TRUE);
+
+  module_load_include('inc', 'slac_feedback_webform', 'slac_feedback_webform.features.uuid_node');
+  $nodes = slac_feedback_webform_uuid_features_default_content();
+
+  // Create top level node
+  $node_top = current($nodes);
+
+  $top_link = _slac_feedback_webform__create_link($node_top['title'], array('weight' => 10), $paths);
+
+}
+
+function _slac_feedback_webform__load_page_by_title($title) {
+  return db_query('SELECT nid FROM {node} WHERE type = :type AND title = :title', array(':type' => 'webform', ':title' => $title))->fetchField();
+}
+
+function _slac_feedback_webform__create_link($title, $options = array(), &$paths) {
+  $nid = _slac_feedback_webform__load_page_by_title($title);
+
+  $paths[] = 'node/' . $nid;
+  $link = array(
+      'menu_name' => 'main-menu',
+      'link_title' => $title,
+      'router_path' => 'node/%',
+      'link_path' => 'node/' . $nid,
+      'customized' => 1,
+      'module' => 'menu',
+    ) + $options;
+
+  menu_link_save($link);
+  return $link;
+}

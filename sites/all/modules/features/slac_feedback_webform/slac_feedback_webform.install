@@ -1,0 +1,8 @@
+<?php
+
+/**
+ * Implements hook_uninstall().
+ */
+function slac_feedback_webform_uninstall() {
+  variable_del('slac_feedback_webform_post_features_enable_feature');
+}
