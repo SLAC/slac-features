@@ -4,80 +4,38 @@
  * Implements hook_install().
  */
 function slac_news_pages_install() {
-  $nodes = array(
-    (object) array(
-      'title' => t('News and Press Releases'),
-      'type' => 'landing_page',
-      'language' => 'und',
-      'name' => 'admin',
-      'uid' => 1,
-      'path' => array(
-        'alias' => 'news',
-        'pathauto' => 0,
-      ),
-      'title_pane_class' => 'pane-title',
-      'feed_pane' => TRUE,
+  $node = (object) array(
+    'title' => t('News and Press Releases'),
+    'type' => 'landing_page',
+    'language' => 'und',
+    'name' => 'admin',
+    'uid' => 1,
+    'path' => array(
+      'alias' => 'news',
+      'pathauto' => 0,
     ),
-    (object) array(
-      'title' => t('News Articles'),
-      'type' => 'landing_page',
-      'language' => 'und',
-      'name' => 'admin',
-      'uid' => 1,
-      'path' => array(
-        'alias' => 'news/news-article',
-        'pathauto' => 0,
-      ),
-      'title_pane_class' => 'pane-title'
-    ),
-    (object) array(
-      'title' => t('Press Releases'),
-      'type' => 'landing_page',
-      'language' => 'und',
-      'name' => 'admin',
-      'uid' => 1,
-      'path' => array(
-        'alias' => 'news/press-release',
-        'pathauto' => 0,
-      ),
-      'title_pane_class' => 'pane-title'
-    ),
+    'title_pane_class' => 'pane-title',
+    'feed_pane' => TRUE,
   );
 
-  foreach ($nodes as $node) {
-    node_save($node);
+  node_save($node);
 
-    $panels_display = _slac_news_pages_install__panels_display();
+  $panels_display = _slac_news_pages_install__panels_display();
 
-    _slac_news_pages_install__panelizer_entity($node, $panels_display['did']);
+  _slac_news_pages_install__panelizer_entity($node, $panels_display['did']);
 
-    $title_pane_class = '';
-    if (isset($node->title_pane_class)) {
-      $title_pane_class = $node->title_pane_class;
-    }
-    $panes_options = array();
-    foreach (array('title_pane_class', 'feed_pane') as $key) {
-      if (isset($node->{$key})) {
-        $panes_options[$key] = $node->{$key};
-      }
-    }
-    _slac_news_pages_install__panes($panels_display['did'], $panes_options);
-
-    switch ($node->path['alias']) {
-      case 'news':
-        _slac_news_pages_install__menu_item($node->nid, t('News'), 'main-menu', 2);
-        _slac_news_pages_install__menu_item($node->nid, t('All News'), 'menu-news-menu', 1);
-        break;
-      case 'news/news-article':
-        _slac_news_pages_install__menu_item($node->nid, $node->title, 'menu-news-menu', 2);
-        break;
-      case 'news/press-release':
-        _slac_news_pages_install__menu_item($node->nid, $node->title, 'menu-news-menu', 3);
-        break;
-      default:
-        break;
+  $title_pane_class = '';
+  if (isset($node->title_pane_class)) {
+    $title_pane_class = $node->title_pane_class;
+  }
+  $panes_options = array();
+  foreach (array('title_pane_class', 'feed_pane') as $key) {
+    if (isset($node->{$key})) {
+      $panes_options[$key] = $node->{$key};
     }
   }
+  _slac_news_pages_install__panes($panels_display['did'], $panes_options);
+  _slac_news_pages_install__menu_item($node->nid, t('News'), 'main-menu', 2);
 }
 
 /**
@@ -190,8 +148,8 @@ function _slac_news_pages_install__panes($did, $options) {
     array(
       'did' => $did,
       'panel' => 'right',
-      'type' => 'block',
-      'subtype' => 'menu-menu-news-menu',
+      'type' => 'news_type_menu',
+      'subtype' => 'news_type_menu',
       'shown' => 1,
       'access' => array(),
       'configuration' => array(
@@ -205,7 +163,7 @@ function _slac_news_pages_install__panes($did, $options) {
       ),
       'css' => array(),
       'extras' => array(),
-      'position' => 0,
+      'position' => 1,
       'locks' => array(),
     ),
     array(

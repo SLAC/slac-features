@@ -103,6 +103,14 @@ function _slac_news_archive_get_year_children($current_year, $current_month) {
 }
 
 /**
+ * Empty form so we can have the default override title.
+ */
+function slac_news_archive_news_archive_menu_content_type_edit_form($form, &$form_state) {
+  // Does nothing!
+  return $form;
+}
+
+/**
  * Custom query of years items
  * @return type list of years and index of the counted nodes
  */

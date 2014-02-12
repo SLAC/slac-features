@@ -35,6 +35,10 @@ function slac_news_views_default_views() {
     'field_slac_news_source' => 'field_slac_news_source',
   );
   $handler->display->display_options['row_options']['hide_empty'] = TRUE;
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -111,6 +115,14 @@ function slac_news_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'node';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['empty'] = FALSE;
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['content'] = 'No results were found.';
+  $handler->display->display_options['empty']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Media */
   $handler->display->display_options['fields']['field_slac_news_media']['id'] = 'field_slac_news_media';
@@ -303,13 +315,11 @@ function slac_news_views_default_views() {
   $handler->display->display_options['fields']['field_slac_news_source']['label'] = 'Source';
   $handler->display->display_options['fields']['field_slac_news_source']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_slac_news_source']['click_sort_column'] = 'url';
-  /* Field: Content: Tags */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_slac_news_tags']['id'] = 'field_slac_news_tags';
   $handler->display->display_options['fields']['field_slac_news_tags']['table'] = 'field_data_field_slac_news_tags';
   $handler->display->display_options['fields']['field_slac_news_tags']['field'] = 'field_slac_news_tags';
   $handler->display->display_options['fields']['field_slac_news_tags']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_slac_news_tags']['type'] = 'taxonomy_term_reference_plain';
-  $handler->display->display_options['fields']['field_slac_news_tags']['delta_offset'] = '0';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   $handler->display->display_options['path'] = 'news/feed';
   $handler->display->display_options['displays'] = array(
@@ -524,13 +534,11 @@ function slac_news_views_default_views() {
   $handler->display->display_options['fields']['field_slac_news_contact']['table'] = 'field_data_field_slac_news_contact';
   $handler->display->display_options['fields']['field_slac_news_contact']['field'] = 'field_slac_news_contact';
   $handler->display->display_options['fields']['field_slac_news_contact']['exclude'] = TRUE;
-  /* Field: Content: Tags */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_slac_news_tags']['id'] = 'field_slac_news_tags';
   $handler->display->display_options['fields']['field_slac_news_tags']['table'] = 'field_data_field_slac_news_tags';
   $handler->display->display_options['fields']['field_slac_news_tags']['field'] = 'field_slac_news_tags';
   $handler->display->display_options['fields']['field_slac_news_tags']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_slac_news_tags']['type'] = 'taxonomy_term_reference_plain';
-  $handler->display->display_options['fields']['field_slac_news_tags']['delta_offset'] = '0';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Date (field_slac_news_date) */
   $handler->display->display_options['arguments']['field_slac_news_date_value']['id'] = 'field_slac_news_date_value';

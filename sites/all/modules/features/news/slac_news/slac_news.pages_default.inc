@@ -334,6 +334,213 @@ function slac_news_default_page_manager_pages() {
   $page = new stdClass();
   $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
   $page->api_version = 1;
+  $page->name = 'news_by_types';
+  $page->task = 'page';
+  $page->admin_title = 'News by types';
+  $page->admin_description = '';
+  $page->path = 'news/%type';
+  $page->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'context_exists',
+        'settings' => array(
+          'exists' => '1',
+        ),
+        'context' => 'argument_term_1',
+        'not' => FALSE,
+      ),
+    ),
+  );
+  $page->menu = array();
+  $page->arguments = array(
+    'type' => array(
+      'id' => 1,
+      'identifier' => 'Taxonomy term: ID',
+      'name' => 'term',
+      'settings' => array(
+        'input_form' => 'term',
+        'vids' => array(
+          7 => '7',
+          1 => 0,
+          9 => 0,
+          10 => 0,
+          11 => 0,
+          5 => 0,
+          6 => 0,
+          2 => 0,
+          3 => 0,
+          4 => 0,
+          8 => 0,
+        ),
+        'breadcrumb' => 0,
+        'transform' => 1,
+      ),
+    ),
+  );
+  $page->conf = array(
+    'admin_paths' => FALSE,
+  );
+  $page->default_handlers = array();
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_news_by_types_panel_context';
+  $handler->task = 'page';
+  $handler->subtask = 'news_by_types';
+  $handler->handler = 'panel_context';
+  $handler->weight = 0;
+  $handler->conf = array(
+    'title' => 'Panel',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'access' => array(
+      'plugins' => array(),
+    ),
+  );
+  $display = new panels_display();
+  $display->layout = 'two_col_article';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'left' => NULL,
+      'left_title' => NULL,
+      'left_author' => NULL,
+      'social_media_1' => NULL,
+      'social_media_2' => NULL,
+      'right' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '%type:name';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-1';
+    $pane->panel = 'left';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'news-panel_pane_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'items_per_page' => '10',
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-1'] = $pane;
+    $display->panels['left'][0] = 'new-1';
+    $pane = new stdClass();
+    $pane->pid = 'new-2';
+    $pane->panel = 'left_title';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => 'Term name',
+      'title' => '',
+      'body' => '<div class="panel-pane pane-node-title">
+  <h2 class="pane-title">%type:name</h2>
+ </div>
+',
+      'format' => 'full_html',
+      'substitute' => 1,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-2'] = $pane;
+    $display->panels['left_title'][0] = 'new-2';
+    $pane = new stdClass();
+    $pane->pid = 'new-3';
+    $pane->panel = 'right';
+    $pane->type = 'news_type_menu';
+    $pane->subtype = 'news_type_menu';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => 'News By:',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+      'style' => 'greybackground',
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-3'] = $pane;
+    $display->panels['right'][0] = 'new-3';
+    $pane = new stdClass();
+    $pane->pid = 'new-4';
+    $pane->panel = 'right';
+    $pane->type = 'news_archive_menu';
+    $pane->subtype = 'news_archive_menu';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+      'style' => 'greybackground',
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $display->content['new-4'] = $pane;
+    $display->panels['right'][1] = 'new-4';
+    $pane = new stdClass();
+    $pane->pid = 'new-5';
+    $pane->panel = 'social_media_1';
+    $pane->type = 'views_feed_pane';
+    $pane->subtype = 'news:feed_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-5'] = $pane;
+    $display->panels['social_media_1'][0] = 'new-5';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = 'new-2';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
+  $pages['news_by_types'] = $page;
+
+  $page = new stdClass();
+  $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
+  $page->api_version = 1;
   $page->name = 'news_by_year';
   $page->task = 'page';
   $page->admin_title = 'News by year';
@@ -436,7 +643,7 @@ else {return FALSE;}
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-1';
+    $pane->pid = 'new-6';
     $pane->panel = 'left';
     $pane->type = 'views_panes';
     $pane->subtype = 'news-panel_pane_6';
@@ -456,10 +663,10 @@ else {return FALSE;}
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-1'] = $pane;
-    $display->panels['left'][0] = 'new-1';
+    $display->content['new-6'] = $pane;
+    $display->panels['left'][0] = 'new-6';
     $pane = new stdClass();
-    $pane->pid = 'new-2';
+    $pane->pid = 'new-7';
     $pane->panel = 'right';
     $pane->type = 'block';
     $pane->subtype = 'menu-menu-news-menu';
@@ -478,10 +685,10 @@ else {return FALSE;}
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['right'][0] = 'new-2';
+    $display->content['new-7'] = $pane;
+    $display->panels['right'][0] = 'new-7';
     $pane = new stdClass();
-    $pane->pid = 'new-3';
+    $pane->pid = 'new-8';
     $pane->panel = 'right';
     $pane->type = 'news_archive_menu';
     $pane->subtype = 'news_archive_menu';
@@ -497,10 +704,10 @@ else {return FALSE;}
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['right'][1] = 'new-3';
+    $display->content['new-8'] = $pane;
+    $display->panels['right'][1] = 'new-8';
   $display->hide_title = PANELS_TITLE_NONE;
-  $display->title_pane = 'new-1';
+  $display->title_pane = 'new-6';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['news_by_year'] = $page;
