@@ -69,7 +69,7 @@ function slac_news_types_create_list() {
   }
 
   $terms = taxonomy_term_load_multiple(array(), array('vid' => $vid));
-  $sorted_terms = _get_filtered_terms($terms);
+  $sorted_terms = _get_sorted_terms($terms);
   foreach ($sorted_terms as $term) {
     $attributes = array();
     $link_title = $term->name;
@@ -112,22 +112,17 @@ function _get_vid($vocabulary_name) {
 }
 
 /**
- * Sorts and filters terms.
+ * Sorts terms.
  */
-function _get_filtered_terms($terms) {
-  $count_table = array();
+function _get_sorted_terms($terms) {
   $name_table = array();
+  $weight_table = array();
+  dpm($terms);
   foreach ($terms as $tid => $value) {
-    $count = count(taxonomy_select_nodes($tid, FALSE));
-    if ($count > 0) {
-      $name_table[$tid] = $value->name;
-      $count_table[$tid] = $count;
-    }
-    else {
-      unset($terms[$tid]);
-    }
+    $name_table[$tid] = $value->name;
+    $weight_table[$tid] = $value->weight;
   }
-  array_multisort($count_table, SORT_DESC, $name_table, SORT_STRING, $terms);
+  array_multisort($weight_table, SORT_NUMERIC, $name_table, SORT_REGULAR, $terms);
   return $terms;
 }
 
