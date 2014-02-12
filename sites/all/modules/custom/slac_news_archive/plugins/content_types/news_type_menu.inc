@@ -40,7 +40,7 @@ function news_type_menu_content_type_render(&$subtype, $conf, $panel_args, $cont
     '#attached' => array(
       'library' => array(array('contextual', 'contextual-links')),
     ),
-    '#access' => user_access(array('access contextual links', 'administer taxonomy')),
+    '#access' => user_access('administer taxonomy'),
   );
 
   $contextual_links_element = drupal_render($build);
