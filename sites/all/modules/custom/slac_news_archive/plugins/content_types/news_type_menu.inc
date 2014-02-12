@@ -23,9 +23,30 @@ $plugin = array(
 function news_type_menu_content_type_render(&$subtype, $conf, $panel_args, $context) {
   $block = new stdClass();
   $block->module = 'slac_news_types';
-
   $block->title = t('News By');
-  $block->content = slac_news_types_create_list();
+
+  $links = array(
+    'edit-term' => array(
+      'title' => t('Edit News types vocabulary'),
+      'href' => url('admin/structure/taxonomy/news_types', array('absolute' => TRUE, 'query' => array('destination' => current_path()))),
+    ),
+  );
+  $build = array(
+    '#prefix' => '<div class="contextual-links-wrapper">',
+    '#suffix' => '</div>',
+    '#theme' => 'links__contextual',
+    '#links' => $links,
+    '#attributes' => array('class' => array('contextual-links')),
+    '#attached' => array(
+      'library' => array(array('contextual', 'contextual-links')),
+    ),
+    '#access' => user_access(array('access contextual links', 'administer taxonomy')),
+  );
+
+  $contextual_links_element = drupal_render($build);
+  $data = slac_news_types_create_list();
+  $content = $contextual_links_element . $data;
+  $block->content = theme('news_type_menu_theme', array('content' => $content));
 
   return $block;
 }
