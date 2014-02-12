@@ -5,12 +5,3 @@
  */
 
 include_once 'slac_service_help.features.inc';
-
-/*function slac_service_help_block_view_alter(&$data, $block) {
-  dpm(block_custom_block_get($block->bid));
-  //dpm($data);
-}*/
-
-/*function slac_service_help_block_list_alter(&$blocks) {
-  dpm($blocks);
-}*/
