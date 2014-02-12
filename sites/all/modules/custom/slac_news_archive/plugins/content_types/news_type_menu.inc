@@ -117,7 +117,6 @@ function _get_vid($vocabulary_name) {
 function _get_sorted_terms($terms) {
   $name_table = array();
   $weight_table = array();
-  dpm($terms);
   foreach ($terms as $tid => $value) {
     $name_table[$tid] = $value->name;
     $weight_table[$tid] = $value->weight;
