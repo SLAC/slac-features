@@ -19,7 +19,7 @@ function slac_news_entity_info_alter(&$entity_info) {
  */
 function slac_news_node_view($node, $view_mode, $langcode) {
   if ($node->type == 'slac_news' && $view_mode == 'full') {
-    menu_set_active_item(drupal_get_normal_path("news"));
+    menu_set_active_item(drupal_get_normal_path('news'));
   }
 }
 
@@ -30,7 +30,9 @@ function slac_news_node_view($node, $view_mode, $langcode) {
  */
 function slac_news_ctools_block_content_type_pre_render($subtype, $conf) {
   $arg0 = arg(0);
-  if ($arg0 != 'news') {
+  $alias = drupal_get_path_alias(current_path());
+  $alias_array = explode('/', $alias);
+  if ($arg0 != 'news' && $alias_array['0'] != 'news') {
     return;
   }
   $current_path = &drupal_static(__FUNCTION__);
