@@ -9,12 +9,12 @@ include_once 'slac_forum.features.inc';
 /**
  * Implements hook_form_FORM_ID_alter
  */
-function slac_forum_form_forum_node_form_alter(&$form, &$form_state, $form_id) {
+/*function slac_forum_form_forum_node_form_alter(&$form, &$form_state, $form_id) {
   $form['body'][LANGUAGE_NONE][0]['#format'] = 'markdown';
   $form['#attached']['js'] = array(
     drupal_get_path('module', 'slac_forum') . '/slac_forum.js',
   );
-}
+}*/
 
 /**
  * Implements hook_views_default_views_alter().

@@ -60,6 +60,10 @@ dependencies[] = superfish
 dependencies[] = views_feed_pane
 dependencies[] = metatag
 
+; Forums
+dependencies[] = forum
+dependencies[] = advanced_forum
+
 ;Development modules
 dependencies[] = devel
 dependencies[] = devel_generate
@@ -78,8 +82,8 @@ dependencies[] = field_permissions
 
 ;Wiki
 dependencies[] = diff
-;dependencies[] = markdown
-;dependencies[] = bueditor
+dependencies[] = markdown
+dependencies[] = bueditor
 dependencies[] = ajax_markup
 dependencies[] = imce
 
