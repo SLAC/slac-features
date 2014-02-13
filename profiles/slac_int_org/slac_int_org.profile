@@ -17,8 +17,51 @@ function slac_int_org_form_install_configure_form_alter(&$form, $form_state) {
 }
 
 /**
-* Implements hook_paranoia_hide_modules().
-*/
+ * Implements hook_paranoia_hide_modules().
+ */
 function slac_int_org_paranoia_hide_modules() {
   return array('update' => 'Core');
 }
+
+/**
+ * Implementation of hook_demo_modules.
+ * Returns an array with the list of modules with demo content.
+ *
+ * @return array of modules with demo content
+ */
+function slac_int_org_demo_modules() {
+  return array(
+    'slac_blog_demo',
+    'slac_faq_demo',
+    'slac_news_demo',
+    'slac_event_demo',
+    'slac_service_catalog_demo',
+    'slac_kb_demo',
+    'slac_forum_demo',
+    'slac_wiki_demo',
+    'slac_demo_accounts',
+    'slac_demo_main_menu',
+    'slac_demo_webform',
+    'slac_demo_support_tickets',
+  );
+}
+
+/**
+ * Alter slac_configuration_form form.
+ */
+function slac_int_org_form_slac_configuration_form_alter(&$form, &$form_state) {
+  $form['site_name_abbreviation'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Site Abbreviation'),
+    '#default_value' => variable_get('site_name_abbreviation', ''),
+    '#required' => TRUE,
+  );
+
+  $form['site_url_address'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Address'),
+    '#default_value' => variable_get('site_url_address', ''),
+    '#required' => TRUE,
+  );
+}
+
