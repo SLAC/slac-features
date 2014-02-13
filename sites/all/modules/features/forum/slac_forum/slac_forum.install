@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * Implements hook_install().
+ */
+function slac_forum_install() {
+  _slac_forum_install__menu_item(t('Forums'), 'forum', 'main-menu');
+}
+
+/**
+ * Create menu item.
+ */
+function _slac_forum_install__menu_item($link_title, $link_path, $menu_name) {
+  $item = array(
+    'menu_name' => $menu_name,
+    'link_path' => $link_path,
+    'router_path' => $link_path,
+    'link_title' => $link_title,
+    'module' => 'menu',
+    'weight' => 20,
+    'expanded' => 0,
+  );
+  $exists = db_query(
+    "SELECT mlid from {menu_links} WHERE link_title=:link_title AND link_path=:link_path AND menu_name=:menu_name",
+    array(
+      ':link_title' => $link_title,
+      ':link_path' => $link_path,
+      ':menu_name' => $menu_name
+    )
+  )->fetchField();
+
+  // Save the record if the data does not exist
+  if(!$exists) {
+    menu_link_save($item);
+  }
+}
