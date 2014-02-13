@@ -668,8 +668,8 @@ else {return FALSE;}
     $pane = new stdClass();
     $pane->pid = 'new-7';
     $pane->panel = 'right';
-    $pane->type = 'block';
-    $pane->subtype = 'menu-menu-news-menu';
+    $pane->type = 'news_type_menu';
+    $pane->subtype = 'news_type_menu';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
