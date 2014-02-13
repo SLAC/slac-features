@@ -25,10 +25,6 @@ function slac_feedback_webform_uuid_features_default_content() {
   'translate' => 0,
   'uuid' => '53ec4224-2dde-4a1b-8f15-f5c069570bf7',
   'revision_uid' => 1,
-  'path' => array(
-    'alias' => 'contact-us',
-    'pathauto' => 0,
-  ),
   'body' => array(
     'und' => array(
       0 => array(
@@ -39,6 +35,15 @@ function slac_feedback_webform_uuid_features_default_content() {
         'safe_value' => ' <p>We appreciate your feedback and hope to answer any questions you may have as soon as possible.</p>
  ',
         'safe_summary' => '  ',
+      ),
+    ),
+  ),
+  'field_webform_title' => array(
+    'und' => array(
+      0 => array(
+        'value' => 'Contact Us',
+        'format' => NULL,
+        'safe_value' => 'Contact Us',
       ),
     ),
   ),
@@ -99,7 +104,7 @@ function slac_feedback_webform_uuid_features_default_content() {
     ),
   ),
   'webform' => array(
-    'nid' => 1,
+    'nid' => 20,
     'confirmation' => '',
     'confirmation_format' => 'filtered_html',
     'redirect_url' => 'node/3346',
@@ -127,7 +132,7 @@ function slac_feedback_webform_uuid_features_default_content() {
     ),
     'emails' => array(
       2 => array(
-        'nid' => 1,
+        'nid' => 20,
         'eid' => 2,
         'email' => 'webteam@slac.stanford.edu, communications@slac.stanford.edu',
         'subject' => 'SLAC Website Feedback Form',
@@ -148,7 +153,7 @@ The results of this submission may be viewed at:
     ),
     'components' => array(
       1 => array(
-        'nid' => 1,
+        'nid' => 20,
         'cid' => 1,
         'pid' => 0,
         'form_key' => 'your_name',
@@ -176,7 +181,7 @@ The results of this submission may be viewed at:
         'page_num' => 1,
       ),
       6 => array(
-        'nid' => 1,
+        'nid' => 20,
         'cid' => 6,
         'pid' => 0,
         'form_key' => 'your_email',
@@ -199,7 +204,7 @@ The results of this submission may be viewed at:
         'page_num' => 1,
       ),
       3 => array(
-        'nid' => 1,
+        'nid' => 20,
         'cid' => 3,
         'pid' => 0,
         'form_key' => 'your_organization___affiliation',
@@ -227,7 +232,7 @@ The results of this submission may be viewed at:
         'page_num' => 1,
       ),
       4 => array(
-        'nid' => 1,
+        'nid' => 20,
         'cid' => 4,
         'pid' => 0,
         'form_key' => 'topic_of_your_feedback___question',
@@ -260,7 +265,7 @@ Other|Other',
         'page_num' => 1,
       ),
       5 => array(
-        'nid' => 1,
+        'nid' => 20,
         'cid' => 5,
         'pid' => 0,
         'form_key' => 'your_feedback',
@@ -294,8 +299,8 @@ Other|Other',
   'comment_count' => 0,
   'name' => '',
   'picture' => 0,
-  'date' => '2013-07-17 15:02:56 +0300',
-  'author_uuid' => '1a307c64-3ecb-4145-be18-32904db7ada4',
+  'date' => '2013-07-17 06:02:56 -0600',
+  'author_uuid' => 'd2bfc290-2dca-4a18-b666-0510a14e29a9',
 );
   return $nodes;
 }
