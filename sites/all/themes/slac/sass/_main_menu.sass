@@ -23,7 +23,7 @@
   padding: 8px 0
   text-transform: uppercase   
   
-+at-breakpoint($small-desktop)
++at-breakpoint($tablet)
   .main-menu
     padding: 9px 0 0
 
@@ -192,6 +192,7 @@ ul.sf-menu.sf-accordion.sf-expanded
       color: $grey-4c
       a 
         color: $grey-4c
+
       li
         &.active-trail, &.sfHover
           > a 
@@ -206,11 +207,13 @@ ul.sf-menu.sf-accordion.sf-expanded
           margin-right: 0 !important
         a
           display: block
-          //padding: 0 10px
           padding-bottom: 6px
           &.active-trail, &.active
             +hover-and-active
+            
 
+
+          
         ul
           .active-trail
             a
@@ -224,6 +227,12 @@ ul.sf-menu.sf-accordion.sf-expanded
             a:hover
               background-color: $hover-submenu
               text-decoration: underline
+
+  .sf-menu 
+    > li.active-trail 
+      > a
+        +hover-and-active
+
 
 +at-breakpoint($only-tablet)
   .main-menu
