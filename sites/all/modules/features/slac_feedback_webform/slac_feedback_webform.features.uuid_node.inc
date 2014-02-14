@@ -25,25 +25,19 @@ function slac_feedback_webform_uuid_features_default_content() {
   'translate' => 0,
   'uuid' => '53ec4224-2dde-4a1b-8f15-f5c069570bf7',
   'revision_uid' => 1,
+  'path' => array(
+    'alias' => 'contact-us',
+    'pathauto' => 0,
+  ),
   'body' => array(
     'und' => array(
       0 => array(
-        'value' => '<p>We appreciate your feedback and hope to answer any questions you may have as soon as possible.</p>
-',
+        'value' => '<p>We appreciate your feedback and hope to answer any questions you may have as soon as possible.</p>',
         'summary' => '',
         'format' => 'full_html',
         'safe_value' => ' <p>We appreciate your feedback and hope to answer any questions you may have as soon as possible.</p>
  ',
         'safe_summary' => '  ',
-      ),
-    ),
-  ),
-  'field_webform_title' => array(
-    'und' => array(
-      0 => array(
-        'value' => 'Contact Us',
-        'format' => NULL,
-        'safe_value' => 'Contact Us',
       ),
     ),
   ),
