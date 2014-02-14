@@ -372,6 +372,9 @@ function slac_news_default_page_manager_pages() {
           4 => 0,
           8 => 0,
         ),
+        'vocabularies' => array(
+          'news_types' => 'news_types',
+        ),
         'breadcrumb' => 0,
         'transform' => 1,
       ),
