@@ -319,9 +319,7 @@ function slac_intorg_permissions_user_default_permissions() {
   // Exported permission: 'administer bueditor'.
   $permissions['administer bueditor'] = array(
     'name' => 'administer bueditor',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
+    'roles' => array(),
     'module' => 'bueditor',
   );
 
@@ -339,6 +337,8 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'administer comments',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
+      'site owner' => 'site owner',
     ),
     'module' => 'comment',
   );
@@ -449,6 +449,7 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'administer forums',
     'roles' => array(
       'administrator' => 'administrator',
+      'site owner' => 'site owner',
     ),
     'module' => 'forum',
   );
@@ -1458,6 +1459,7 @@ function slac_intorg_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'editor' => 'editor',
+      'site owner' => 'site owner',
     ),
     'module' => 'node',
   );
@@ -1691,7 +1693,9 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'delete own forum content',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
       'editor' => 'editor',
+      'site owner' => 'site owner',
     ),
     'module' => 'node',
   );
@@ -1863,6 +1867,8 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'delete terms in forums',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
+      'site owner' => 'site owner',
     ),
     'module' => 'taxonomy',
   );
@@ -2198,6 +2204,7 @@ function slac_intorg_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'editor' => 'editor',
+      'site owner' => 'site owner',
     ),
     'module' => 'node',
   );
@@ -2706,6 +2713,8 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'edit terms in forums',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
+      'site owner' => 'site owner',
     ),
     'module' => 'taxonomy',
   );
@@ -3291,6 +3300,7 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'view forum statistics',
     'roles' => array(
       'administrator' => 'administrator',
+      'site owner' => 'site owner',
     ),
     'module' => 'advanced_forum',
   );
@@ -3300,6 +3310,7 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'view last edited notice',
     'roles' => array(
       'administrator' => 'administrator',
+      'site owner' => 'site owner',
     ),
     'module' => 'advanced_forum',
   );
