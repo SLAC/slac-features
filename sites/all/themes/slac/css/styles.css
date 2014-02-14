@@ -483,8 +483,7 @@ ul.sf-menu.sf-accordion.sf-expanded {
           .main-menu ul li a.active-trail:before, .main-menu ul li a.active:before {
             right: -2px; }
       .main-menu ul li ul .active-trail a {
-        display: block;
-        text-decoration: underline; }
+        display: block; }
         .main-menu ul li ul .active-trail a:before, .main-menu ul li ul .active-trail a:after {
           display: none; }
       .main-menu ul li ul li a:hover {
