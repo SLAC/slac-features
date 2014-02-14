@@ -26,6 +26,7 @@ function slac_misc_install_task_demo_content() {
       'slac_admin_modules',
       'slac_misc_frontpage',
       'slac_site_404',
+      'slac_misc_permissions',
       'slac_demo_main_menu',
       'slac_demo_basic_page',
       'slac_feedback_webform',

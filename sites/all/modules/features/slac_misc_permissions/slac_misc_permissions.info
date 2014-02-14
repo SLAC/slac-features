@@ -1,0 +1,13 @@
+name = SLAC Misc Permissions
+description = Permissions for the Misc profile
+core = 7.x
+package = SLAC
+dependencies[] = admin_menu
+dependencies[] = features
+dependencies[] = slac_admin_modules
+dependencies[] = system
+features[features_api][] = api:2
+features[user_permission][] = access administration menu
+features[user_permission][] = access administration pages
+features[user_permission][] = administer demo modules
+project path = sites/all/modules/features
