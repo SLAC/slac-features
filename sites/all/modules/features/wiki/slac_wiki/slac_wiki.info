@@ -57,6 +57,7 @@ features[variable][] = node_options_slac_wiki_page
 features[variable][] = node_preview_slac_wiki_page
 features[variable][] = node_submitted_slac_wiki_page
 features[variable][] = pathauto_node_slac_wiki_page_pattern
+features[variable][] = pathauto_taxonomy_term_slac_wiki_tags_pattern
 features[views_view][] = wiki
 features_exclude[dependencies][slac_faq] = slac_faq
 no autodetect = 1
