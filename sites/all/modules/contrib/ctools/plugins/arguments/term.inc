@@ -36,8 +36,10 @@ function ctools_term_context($arg = NULL, $conf = NULL, $empty = FALSE) {
     $vocabularies = $conf['vocabularies'];
   }
   else {
+    $vids = isset($conf['vids']) ? $conf['vids'] : array();
+
     // Convert legacy use of vids to machine names.
-    $vocabularies = _ctools_term_vocabulary_machine_name_convert($conf['vids']);
+    $vocabularies = _ctools_term_vocabulary_machine_name_convert($vids);
   }
 
   if (is_object($arg)) {

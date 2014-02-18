@@ -1,5 +1,5 @@
 diff --git a/plugins/arguments/term.inc b/plugins/arguments/term.inc
-index 868c8aa..c702539 100644
+index 868c8aa..65c87ac 100644
 --- a/plugins/arguments/term.inc
 +++ b/plugins/arguments/term.inc
 @@ -18,6 +18,7 @@ $plugin = array(
@@ -10,7 +10,7 @@ index 868c8aa..c702539 100644
    'placeholder form' => 'ctools_term_ctools_argument_placeholder',
    'breadcrumb' => 'ctools_term_breadcrumb',
  );
-@@ -31,6 +32,14 @@ function ctools_term_context($arg = NULL, $conf = NULL, $empty = FALSE) {
+@@ -31,6 +32,16 @@ function ctools_term_context($arg = NULL, $conf = NULL, $empty = FALSE) {
      return ctools_context_create_empty('entity:taxonomy_term');
    }
  
@@ -18,14 +18,16 @@ index 868c8aa..c702539 100644
 +    $vocabularies = $conf['vocabularies'];
 +  }
 +  else {
++    $vids = isset($conf['vids']) ? $conf['vids'] : array();
++
 +    // Convert legacy use of vids to machine names.
-+    $vocabularies = _ctools_term_vocabulary_machine_name_convert($conf['vids']);
++    $vocabularies = _ctools_term_vocabulary_machine_name_convert($vids);
 +  }
 +
    if (is_object($arg)) {
      $term = $arg;
    }
-@@ -50,12 +59,11 @@ function ctools_term_context($arg = NULL, $conf = NULL, $empty = FALSE) {
+@@ -50,12 +61,11 @@ function ctools_term_context($arg = NULL, $conf = NULL, $empty = FALSE) {
          }
  
          $terms = taxonomy_get_term_by_name($arg);
@@ -42,7 +44,7 @@ index 868c8aa..c702539 100644
                  $term = $potential;
                  // break out of the foreaches AND the case
                  break 3;
-@@ -72,7 +80,7 @@ function ctools_term_context($arg = NULL, $conf = NULL, $empty = FALSE) {
+@@ -72,7 +82,7 @@ function ctools_term_context($arg = NULL, $conf = NULL, $empty = FALSE) {
      }
    }
  
@@ -51,7 +53,7 @@ index 868c8aa..c702539 100644
      return NULL;
    }
  
-@@ -98,13 +106,20 @@ function ctools_term_settings_form(&$form, &$form_state, $conf) {
+@@ -98,13 +108,20 @@ function ctools_term_settings_form(&$form, &$form_state, $conf) {
    $vocabularies = taxonomy_get_vocabularies();
    $options = array();
    foreach ($vocabularies as $vid => $vocab) {
@@ -75,7 +77,7 @@ index 868c8aa..c702539 100644
      '#description' => t('If no vocabularies are checked, terms from all vocabularies will be accepted.'),
    );
  
-@@ -123,6 +138,12 @@ function ctools_term_settings_form(&$form, &$form_state, $conf) {
+@@ -123,6 +140,12 @@ function ctools_term_settings_form(&$form, &$form_state, $conf) {
  //  return $form;
  }
  
@@ -88,7 +90,7 @@ index 868c8aa..c702539 100644
  /**
   * Form fragment to get an argument to convert a placeholder for preview.
   */
-@@ -161,3 +182,20 @@ function ctools_term_breadcrumb($conf, $context) {
+@@ -161,3 +184,20 @@ function ctools_term_breadcrumb($conf, $context) {
    $breadcrumb = array_merge(drupal_get_breadcrumb(), array_reverse($breadcrumb));
    drupal_set_breadcrumb($breadcrumb);
  }
