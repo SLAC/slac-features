@@ -11,13 +11,85 @@ function slac_wiki_default_page_manager_pages() {
   $page = new stdClass();
   $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
   $page->api_version = 1;
+  $page->name = 'add_new_wiki_page';
+  $page->task = 'page';
+  $page->admin_title = 'Add new Wiki page';
+  $page->admin_description = '';
+  $page->path = 'wiki/add-wiki-page';
+  $page->access = array(
+    'logic' => 'and',
+    'plugins' => array(
+      0 => array(
+        'name' => 'role',
+        'settings' => array(
+          'rids' => array(
+            0 => 6,
+            1 => 5,
+            2 => 3,
+            3 => 4,
+          ),
+        ),
+        'context' => 'logged-in-user',
+        'not' => FALSE,
+      ),
+    ),
+  );
+  $page->menu = array(
+    'type' => 'action',
+    'title' => 'Add new Wiki page',
+    'name' => 'navigation',
+    'weight' => '0',
+    'parent' => array(
+      'type' => 'none',
+      'title' => '',
+      'name' => 'navigation',
+      'weight' => '0',
+    ),
+  );
+  $page->arguments = array();
+  $page->conf = array(
+    'admin_paths' => FALSE,
+  );
+  $page->default_handlers = array();
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_add_new_wiki_page_http_response';
+  $handler->task = 'page';
+  $handler->subtask = 'add_new_wiki_page';
+  $handler->handler = 'http_response';
+  $handler->weight = 0;
+  $handler->conf = array(
+    'title' => 'HTTP response code',
+    'contexts' => array(),
+    'relationships' => array(),
+    'code' => '301',
+    'destination' => 'node/add/slac-wiki-page',
+  );
+  $page->default_handlers[$handler->name] = $handler;
+  $pages['add_new_wiki_page'] = $page;
+
+  $page = new stdClass();
+  $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
+  $page->api_version = 1;
   $page->name = 'slac_wiki_search';
   $page->task = 'page';
   $page->admin_title = 'Wiki Search';
   $page->admin_description = 'Wiki search page that allows to find different wiki pages';
   $page->path = 'wiki/search';
   $page->access = array();
-  $page->menu = array();
+  $page->menu = array(
+    'type' => 'normal',
+    'title' => 'Search wiki pages',
+    'name' => 'menu-slac-wiki',
+    'weight' => '3',
+    'parent' => array(
+      'type' => 'none',
+      'title' => '',
+      'name' => 'navigation',
+      'weight' => '0',
+    ),
+  );
   $page->arguments = array();
   $page->conf = array(
     'admin_paths' => FALSE,
@@ -130,7 +202,7 @@ function slac_wiki_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'Wiki A-Z';
   $page->admin_description = 'An a to z listing of all the wiki pages';
-  $page->path = 'wiki/a-z';
+  $page->path = 'wiki';
   $page->access = array(
     'logic' => 'and',
   );
@@ -188,6 +260,31 @@ function slac_wiki_default_page_manager_pages() {
     $pane = new stdClass();
     $pane->pid = 'new-4';
     $pane->panel = 'center';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => 'Wiki pages title',
+      'title' => '',
+      'body' => '<h2 class="pane-title">Wiki pages A-Z</h2>
+',
+      'format' => 'full_html',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-4'] = $pane;
+    $display->panels['center'][0] = 'new-4';
+    $pane = new stdClass();
+    $pane->pid = 'new-5';
+    $pane->panel = 'center';
     $pane->type = 'views';
     $pane->subtype = 'wiki';
     $pane->shown = TRUE;
@@ -214,12 +311,12 @@ function slac_wiki_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-4'] = $pane;
-    $display->panels['center'][0] = 'new-4';
+    $display->content['new-5'] = $pane;
+    $display->panels['center'][1] = 'new-5';
     $pane = new stdClass();
-    $pane->pid = 'new-5';
+    $pane->pid = 'new-6';
     $pane->panel = 'right';
     $pane->type = 'block';
     $pane->subtype = 'menu-menu-slac-wiki';
@@ -237,10 +334,10 @@ function slac_wiki_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-5'] = $pane;
-    $display->panels['right'][0] = 'new-5';
+    $display->content['new-6'] = $pane;
+    $display->panels['right'][0] = 'new-6';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-4';
+  $display->title_pane = 'new-5';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['wiki_a_z'] = $page;
