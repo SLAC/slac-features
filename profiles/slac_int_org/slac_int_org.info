@@ -84,6 +84,7 @@ dependencies[] = field_permissions
 dependencies[] = diff
 dependencies[] = markdown
 dependencies[] = bueditor
+dependencies[] = bueditor_plus
 dependencies[] = ajax_markup
 dependencies[] = imce
 

@@ -151,13 +151,17 @@ function slac_forum_strongarm() {
   $strongarm->name = 'subscriptions_blocked_content_types';
   $strongarm->value = array(
     'blog' => 'blog',
+    'landing_page' => 'landing_page',
     'event' => 'event',
     'slac_faq' => 'slac_faq',
+    'webform' => 'webform',
+    'kb_article' => 'kb_article',
     'slac_news' => 'slac_news',
-    'slac_wiki_page' => 'slac_wiki_page',
-    'panel' => 'panel',
-    'article' => 'article',
     'page' => 'page',
+    'slac_sc_catalog_item' => 'slac_sc_catalog_item',
+    'slac_wiki_page' => 'slac_wiki_page',
+    'support_ticket' => 'support_ticket',
+    'article' => 'article',
   );
   $export['subscriptions_blocked_content_types'] = $strongarm;
 
@@ -208,13 +212,16 @@ function slac_forum_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'subscriptions_omitted_taxa';
   $strongarm->value = array(
-    3 => '3',
     2 => '2',
+    11 => '11',
+    12 => '12',
+    13 => '13',
+    6 => '6',
+    7 => '7',
+    8 => '8',
+    3 => '3',
     4 => '4',
     5 => '5',
-    6 => '6',
-    8 => '8',
-    7 => '7',
     10 => '10',
     9 => '9',
   );
@@ -225,13 +232,16 @@ function slac_forum_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'subscriptions_restricted_taxa';
   $strongarm->value = array(
-    3 => '3',
     2 => '2',
+    11 => '11',
+    12 => '12',
+    13 => '13',
+    6 => '6',
+    7 => '7',
+    8 => '8',
+    3 => '3',
     4 => '4',
     5 => '5',
-    6 => '6',
-    8 => '8',
-    7 => '7',
     10 => '10',
     9 => '9',
   );
@@ -280,13 +290,17 @@ function slac_forum_strongarm() {
   $strongarm->name = 'subscriptions_unlisted_content_types';
   $strongarm->value = array(
     'blog' => 'blog',
+    'landing_page' => 'landing_page',
     'event' => 'event',
     'slac_faq' => 'slac_faq',
+    'webform' => 'webform',
+    'kb_article' => 'kb_article',
     'slac_news' => 'slac_news',
-    'slac_wiki_page' => 'slac_wiki_page',
-    'panel' => 'panel',
-    'article' => 'article',
     'page' => 'page',
+    'slac_sc_catalog_item' => 'slac_sc_catalog_item',
+    'slac_wiki_page' => 'slac_wiki_page',
+    'support_ticket' => 'support_ticket',
+    'article' => 'article',
   );
   $export['subscriptions_unlisted_content_types'] = $strongarm;
 

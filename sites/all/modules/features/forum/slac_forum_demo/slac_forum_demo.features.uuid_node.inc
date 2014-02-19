@@ -50,7 +50,7 @@ Dates and locations:
 All rooms are part of the Knight Management Center, for directions see: directions.
 ',
         'summary' => '',
-        'format' => 'markdown',
+        'format' => 'full_html',
         'safe_value' => '<p>September 9-12, 2013<br />
 Stanford University, California, USA</p>
 <p>Dates and locations:</p>
@@ -167,7 +167,7 @@ Stanford University, California, USA</p>
       0 => array(
         'value' => 'Is there any more esoteric, almost mystical-sounding scientific field than particle physics? To the layperson, the discipline is shrouded in impenetrable particle names like anti-down quarks and neutralinos, and the counterintuitive rules of quantum mechanics. In an effort to make their field more concrete and meaningful to the rest of the world, a group of particle physicists has produced a series of videos on "Why Particle Physics Matters."',
         'summary' => '',
-        'format' => 'markdown',
+        'format' => 'full_html',
         'safe_value' => '<p>Is there any more esoteric, almost mystical-sounding scientific field than particle physics? To the layperson, the discipline is shrouded in impenetrable particle names like anti-down quarks and neutralinos, and the counterintuitive rules of quantum mechanics. In an effort to make their field more concrete and meaningful to the rest of the world, a group of particle physicists has produced a series of videos on "Why Particle Physics Matters."</p>
 ',
         'safe_summary' => '',

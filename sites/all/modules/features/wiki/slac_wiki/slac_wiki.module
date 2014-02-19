@@ -16,7 +16,13 @@ function slac_wiki_form_slac_wiki_page_node_form_alter(&$form, &$form_state, $fo
   );
 }
 
-function slac_wiki_entry_validate($form, &$form_state) {
-  dpm($form_state['values']);
-  form_set_error('aaa', 'bbb');
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function slac_wiki_form_field_ui_field_edit_form_alter(&$form, &$form_state) {
+  if (isset($form['instance']['bundle']['#value']) && $form['instance']['bundle']['#value'] == 'slac_wiki_page') {
+    if (isset($form['instance']['bueditor_profile'])) {
+      $form['instance']['bueditor_profile']['#default_value'] = variable_get('bueditor_plus_profile_id', 0);
+    }
+  }
 }
