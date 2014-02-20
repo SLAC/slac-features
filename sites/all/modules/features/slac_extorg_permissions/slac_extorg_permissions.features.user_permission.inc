@@ -1551,6 +1551,7 @@ function slac_extorg_permissions_user_default_permissions() {
   $permissions['delete own slac_news content'] = array(
     'name' => 'delete own slac_news content',
     'roles' => array(
+      'administrator' => 'administrator',
       'site owner' => 'site owner',
     ),
     'module' => 'node',
@@ -1633,6 +1634,7 @@ function slac_extorg_permissions_user_default_permissions() {
   $permissions['delete terms in event_categories'] = array(
     'name' => 'delete terms in event_categories',
     'roles' => array(
+      'administrator' => 'administrator',
       'editor' => 'editor',
     ),
     'module' => 'taxonomy',
@@ -1642,6 +1644,7 @@ function slac_extorg_permissions_user_default_permissions() {
   $permissions['delete terms in events_tags'] = array(
     'name' => 'delete terms in events_tags',
     'roles' => array(
+      'administrator' => 'administrator',
       'editor' => 'editor',
     ),
     'module' => 'taxonomy',
@@ -1650,7 +1653,9 @@ function slac_extorg_permissions_user_default_permissions() {
   // Exported permission: 'delete terms in kb_categories'.
   $permissions['delete terms in kb_categories'] = array(
     'name' => 'delete terms in kb_categories',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'taxonomy',
   );
 
@@ -2419,6 +2424,7 @@ function slac_extorg_permissions_user_default_permissions() {
   $permissions['edit terms in event_categories'] = array(
     'name' => 'edit terms in event_categories',
     'roles' => array(
+      'administrator' => 'administrator',
       'editor' => 'editor',
     ),
     'module' => 'taxonomy',
@@ -2428,6 +2434,7 @@ function slac_extorg_permissions_user_default_permissions() {
   $permissions['edit terms in events_tags'] = array(
     'name' => 'edit terms in events_tags',
     'roles' => array(
+      'administrator' => 'administrator',
       'editor' => 'editor',
     ),
     'module' => 'taxonomy',
@@ -2436,7 +2443,9 @@ function slac_extorg_permissions_user_default_permissions() {
   // Exported permission: 'edit terms in kb_categories'.
   $permissions['edit terms in kb_categories'] = array(
     'name' => 'edit terms in kb_categories',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'taxonomy',
   );
 
@@ -2789,6 +2798,7 @@ function slac_extorg_permissions_user_default_permissions() {
   $permissions['use text format full_html'] = array(
     'name' => 'use text format full_html',
     'roles' => array(
+      'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
       'site owner' => 'site owner',

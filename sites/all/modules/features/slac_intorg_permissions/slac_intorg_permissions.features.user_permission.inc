@@ -617,6 +617,7 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'administer panelizer',
     'roles' => array(
       'administrator' => 'administrator',
+      'site owner' => 'site owner',
     ),
     'module' => 'panelizer',
   );
@@ -624,98 +625,140 @@ function slac_intorg_permissions_user_default_permissions() {
   // Exported permission: 'administer panelizer node landing_page choice'.
   $permissions['administer panelizer node landing_page choice'] = array(
     'name' => 'administer panelizer node landing_page choice',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'site owner' => 'site owner',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer node landing_page content'.
   $permissions['administer panelizer node landing_page content'] = array(
     'name' => 'administer panelizer node landing_page content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'site owner' => 'site owner',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer node landing_page context'.
   $permissions['administer panelizer node landing_page context'] = array(
     'name' => 'administer panelizer node landing_page context',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'site owner' => 'site owner',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer node landing_page defaults'.
   $permissions['administer panelizer node landing_page defaults'] = array(
     'name' => 'administer panelizer node landing_page defaults',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'site owner' => 'site owner',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer node landing_page layout'.
   $permissions['administer panelizer node landing_page layout'] = array(
     'name' => 'administer panelizer node landing_page layout',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'site owner' => 'site owner',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer node landing_page overview'.
   $permissions['administer panelizer node landing_page overview'] = array(
     'name' => 'administer panelizer node landing_page overview',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'site owner' => 'site owner',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer node landing_page settings'.
   $permissions['administer panelizer node landing_page settings'] = array(
     'name' => 'administer panelizer node landing_page settings',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'site owner' => 'site owner',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer node page choice'.
   $permissions['administer panelizer node page choice'] = array(
     'name' => 'administer panelizer node page choice',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'site owner' => 'site owner',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer node page content'.
   $permissions['administer panelizer node page content'] = array(
     'name' => 'administer panelizer node page content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'site owner' => 'site owner',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer node page context'.
   $permissions['administer panelizer node page context'] = array(
     'name' => 'administer panelizer node page context',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'site owner' => 'site owner',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer node page defaults'.
   $permissions['administer panelizer node page defaults'] = array(
     'name' => 'administer panelizer node page defaults',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'site owner' => 'site owner',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer node page layout'.
   $permissions['administer panelizer node page layout'] = array(
     'name' => 'administer panelizer node page layout',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'site owner' => 'site owner',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer node page overview'.
   $permissions['administer panelizer node page overview'] = array(
     'name' => 'administer panelizer node page overview',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'site owner' => 'site owner',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer node page settings'.
   $permissions['administer panelizer node page settings'] = array(
     'name' => 'administer panelizer node page settings',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'site owner' => 'site owner',
+    ),
     'module' => 'panelizer',
   );
 
@@ -1848,6 +1891,7 @@ function slac_intorg_permissions_user_default_permissions() {
   $permissions['delete terms in event_categories'] = array(
     'name' => 'delete terms in event_categories',
     'roles' => array(
+      'administrator' => 'administrator',
       'editor' => 'editor',
     ),
     'module' => 'taxonomy',
@@ -1857,6 +1901,7 @@ function slac_intorg_permissions_user_default_permissions() {
   $permissions['delete terms in events_tags'] = array(
     'name' => 'delete terms in events_tags',
     'roles' => array(
+      'administrator' => 'administrator',
       'editor' => 'editor',
     ),
     'module' => 'taxonomy',
@@ -1876,7 +1921,9 @@ function slac_intorg_permissions_user_default_permissions() {
   // Exported permission: 'delete terms in kb_categories'.
   $permissions['delete terms in kb_categories'] = array(
     'name' => 'delete terms in kb_categories',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'taxonomy',
   );
 
@@ -2694,6 +2741,7 @@ function slac_intorg_permissions_user_default_permissions() {
   $permissions['edit terms in event_categories'] = array(
     'name' => 'edit terms in event_categories',
     'roles' => array(
+      'administrator' => 'administrator',
       'editor' => 'editor',
     ),
     'module' => 'taxonomy',
@@ -2703,6 +2751,7 @@ function slac_intorg_permissions_user_default_permissions() {
   $permissions['edit terms in events_tags'] = array(
     'name' => 'edit terms in events_tags',
     'roles' => array(
+      'administrator' => 'administrator',
       'editor' => 'editor',
     ),
     'module' => 'taxonomy',
@@ -2722,7 +2771,9 @@ function slac_intorg_permissions_user_default_permissions() {
   // Exported permission: 'edit terms in kb_categories'.
   $permissions['edit terms in kb_categories'] = array(
     'name' => 'edit terms in kb_categories',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'taxonomy',
   );
 
@@ -3131,6 +3182,7 @@ function slac_intorg_permissions_user_default_permissions() {
   $permissions['use text format full_html'] = array(
     'name' => 'use text format full_html',
     'roles' => array(
+      'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
       'site owner' => 'site owner',
