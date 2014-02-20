@@ -1,0 +1,32 @@
+<?php
+
+/**
+ * Implements hook_install().
+ */
+function slac_form_building_install() {
+  $t = get_t();
+  $node_webform = array(
+    'type' => 'webform',
+    'name' => t('Webform'),
+    'base' => 'node_content',
+    'description' => t('Create a new form or questionnaire accessible to users. Submission results and statistics are recorded and accessible to privileged users.'),
+    'has_title' => '1',
+    'title_label' => t('Title'),
+    'help' => '',
+  );
+  $content_type = node_type_set_defaults($node_webform);
+  node_add_body_field($content_type);
+
+  // Check if we create content type or update.
+  $status = node_type_save($content_type);
+
+  // Replacement rule for the messages.
+  $t_args = array('%name' => $content_type->name);
+  if ($status == SAVED_UPDATED) {
+    drupal_set_message($t('The content type %name has been updated.', $t_args));
+  }
+  elseif ($status == SAVED_NEW) {
+    drupal_set_message($t('The content type %name has been added.', $t_args));
+    watchdog('node', 'Added content type %name.', $t_args, WATCHDOG_NOTICE, l($t('view'), 'admin/structure/types'));
+  }
+}

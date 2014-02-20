@@ -14,6 +14,7 @@ dependencies[] = webform
 dependencies[] = strongarm
 dependencies[] = text
 dependencies[] = uuid_features
+dependencies[] = slac_form_building
 __drupal_alter_by_ref[][node][webform] = webform
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:2
