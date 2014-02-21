@@ -22,10 +22,8 @@ function slac_event_field_formatter_view($entity_type, $entity, $field, $instanc
   foreach ($items as $delta => $item) {
     $date_start = $item['value'];
     $date_end = $item['value2'];
-    $timezone_db = $item['timezone_db'];
-    $timezone = $item['timezone'];
 
-    $date_start_timestamp = _get_display_date($date_start, $timezone, $timezone_db);
+    $date_start_timestamp = strtotime($date_start);
 
     // If start and end dates are the same we display only one time.
     if ($date_start == $date_end) {
@@ -34,7 +32,7 @@ function slac_event_field_formatter_view($entity_type, $entity, $field, $instanc
       continue;
     }
 
-    $date_end_timestamp = _get_display_date($date_end, $timezone, $timezone_db);
+    $date_end_timestamp = strtotime($date_end);
 
     $date_start_day = format_date($date_start_timestamp, 'custom', 'l, F j');
     $date_end_day = format_date($date_end_timestamp, 'custom', 'l, F j');

@@ -91,7 +91,7 @@ function slac_news_field_default_field_bases() {
       ),
       'profile2_private' => FALSE,
       'repeat' => 0,
-      'timezone_db' => '',
+      'timezone_db' => 'America/Los_Angeles',
       'todate' => '',
       'tz_handling' => 'none',
     ),

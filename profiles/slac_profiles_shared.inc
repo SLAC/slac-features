@@ -74,6 +74,9 @@ function slac_profiles_shared_filtered_format() {
   // Allow visitor account creation with administrative approval.
   variable_set('user_register', USER_REGISTER_VISITORS_ADMINISTRATIVE_APPROVAL);
 
+  // Set the timezone.
+  variable_set('date_default_timezone', 'America/Los_Angeles');
+
   // Create a default vocabulary named "Tags", enabled for the 'article' content type.
   $description = st('Use tags to group articles on similar topics into categories.');
   $help = st('Enter a comma-separated list of words to describe your content.');

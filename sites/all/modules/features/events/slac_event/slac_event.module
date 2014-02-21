@@ -34,8 +34,6 @@ function slac_event_preprocess_node(&$vars) {
   );
 
   $event_date = $vars['field_slac_event_date'][LANGUAGE_NONE][0]['value'];
-  $timezone_db = $vars['field_slac_event_date'][LANGUAGE_NONE][0]['timezone_db'];
-  $timezone = $vars['field_slac_event_date'][LANGUAGE_NONE][0]['timezone'];
 
   // Explode date value like 2013-12-24T22:00:00
   list($year_month_day, $time) = explode('T', $event_date);
@@ -50,12 +48,12 @@ function slac_event_preprocess_node(&$vars) {
     $vars['add_last_date_html_suffix'] = TRUE;
   }
 
-  $event_date_timestamp = _get_display_date($event_date, $timezone, $timezone_db);
+  $event_date_timestamp = strtotime($event_date);
   $vars['month'] = format_date($event_date_timestamp, 'custom', 'F');
   $vars['day'] = format_date($event_date_timestamp, 'custom', 'j');
 
   $event_date_end = $vars['field_slac_event_date'][LANGUAGE_NONE][0]['value2'];
-  $event_date_end_timestamp = _get_display_date($event_date_end, $timezone, $timezone_db);
+  $event_date_end_timestamp = strtotime($event_date_end);
 
   $vars['period'] = t('All Day');
   if ($event_date != $event_date_end) {
@@ -69,15 +67,6 @@ function slac_event_preprocess_node(&$vars) {
 
   $previous_event_year_month_day = $year_month_day;
   $row_counter++;
-}
-
-/**
- * Returns the date timestamp taking into consideration the timezone.
- */
-function _get_display_date($date, $timezone, $timezone_db) {
-  $date_convert = new DateTime($date, new DateTimeZone($timezone_db));
-  $date_convert->setTimezone(new DateTimeZone($timezone));
-  return $date_convert->getTimestamp();
 }
 
 /**
