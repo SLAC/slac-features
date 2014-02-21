@@ -9,6 +9,13 @@ function slac_demo_basic_page_install() {
   $bean_our_vision = bean_create(array('type' => 'content_block_with_links'));
   $bean_our_vision->label = 'Our Vision';
   $bean_our_vision->title = 'Our Vision';
+  $bean_our_vision->field_content_block_subtitle = array(
+    LANGUAGE_NONE => array(
+      array(
+        'value' => 'Our Vision Subtitle',
+      )
+    )
+  );
   $bean_our_vision->delta = 'bean-our-vision';
   $bean_our_vision->field_content_block_body = array(
     LANGUAGE_NONE => array(
@@ -63,6 +70,14 @@ function slac_demo_basic_page_install() {
   $bean_our_mission = bean_create(array('type' => 'content_block'));
   $bean_our_mission->label = 'Our Mission 1';
   $bean_our_mission->title = 'Our Mission 1';
+  $bean_our_mission->field_content_block_subtitle = 'Our Mission 1 Subtitle';
+  $bean_our_mission->field_content_block_subtitle = array(
+    LANGUAGE_NONE => array(
+      array(
+        'value' => 'Our Mission 1 Subtitle',
+      )
+    )
+  );
   $bean_our_mission->field_content_block_body = array(
     LANGUAGE_NONE => array(
       array(
@@ -101,6 +116,14 @@ function slac_demo_basic_page_install() {
   $bean_our_mission2 = bean_create(array('type' => 'content_block'));
   $bean_our_mission2->label = 'Our Mission 2';
   $bean_our_mission2->title = 'Our Mission 2';
+  $bean_our_mission2->field_content_block_subtitle = 'Our Mission 2 Subtitle';
+  $bean_our_mission2->field_content_block_subtitle = array(
+    LANGUAGE_NONE => array(
+      array(
+        'value' => 'Our Mission 2 Subtitle',
+      )
+    )
+  );
   $bean_our_mission2->field_content_block_body = array(
     LANGUAGE_NONE => array(
       array(
@@ -141,6 +164,14 @@ function slac_demo_basic_page_install() {
   $bean_efficient_design = bean_create(array('type' => 'content_block_large_image'));
   $bean_efficient_design->label = 'Efficient Design';
   $bean_efficient_design->title = 'Efficient Design';
+  $bean_efficient_design->field_content_block_subtitle = 'Efficient Design Subtitle';
+  $bean_efficient_design->field_content_block_subtitle = array(
+    LANGUAGE_NONE => array(
+      array(
+        'value' => 'Efficient Design Subtitle',
+      )
+    )
+  );
   $bean_efficient_design->field_content_block_body = array(
     LANGUAGE_NONE => array(
       array(
