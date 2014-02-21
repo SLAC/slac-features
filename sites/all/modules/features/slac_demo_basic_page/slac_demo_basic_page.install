@@ -183,6 +183,7 @@ function slac_demo_basic_page_install() {
         ),
       ),
     ),
+    'field_bp_image' => array(LANGUAGE_NONE => array(array('fid' => $images[3]->fid))),
     'language' => 'und',
     'name' => 'admin',
     'uid' => 1,
@@ -340,6 +341,36 @@ function _slac_demo_basic_page_install__panes($did) {
       'did' => $did,
       'panel' => 'right',
       'type' => 'entity_field',
+      'subtype' => 'node:field_bp_image',
+      'shown' => 1,
+      'access' => array(),
+      'configuration' => array(
+        'label' => 'hidden',
+        'formatter' => 'image',
+        'delta_limit' => 0,
+        'delta_offset' => 0,
+        'delta_reversed' => FALSE,
+        'formatter_settings' => array(
+          'image_style' => 'basic_page_large_image',
+          'image_link' => '',
+        ),
+        'context' => 'panelizer',
+        'override_title' => 1,
+        'override_title_text' => '',
+      ),
+      'cache' => array(),
+      'style' => array(
+        'settings' => NULL,
+      ),
+      'css' => array(),
+      'extras' => array(),
+      'position' => 0,
+      'locks' => array(),
+    ),
+    array(
+      'did' => $did,
+      'panel' => 'right',
+      'type' => 'entity_field',
       'subtype' => 'node:body',
       'shown' => 1,
       'access' => array(),
@@ -437,7 +468,7 @@ function _slac_demo_basic_page_install__images() {
   $files = array();
   $destination_directory = 'public://demo_beans';
   file_prepare_directory($destination_directory, FILE_CREATE_DIRECTORY);
-  foreach (array(1, 2, 3) as $i) {
+  foreach (array(1, 2, 3, 4) as $i) {
     $filename =  'image' . $i . '.jpg';
     $source = DRUPAL_ROOT . '/' . drupal_get_path('module', 'slac_demo_basic_page') . '/images/' . $filename;
     $destination = $destination_directory . '/' . $filename;
