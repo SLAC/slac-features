@@ -1,5 +1,10 @@
 .box-about .subtitle {
-  display: none; }
+font-size: 15px;
+font-size: 0.9375rem;
+font-style: italic;
+margin-bottom: 10px;
+}
+}
 .box-about article {
   font-size: 13px;
   font-size: 0.8125rem; }
