@@ -102,7 +102,7 @@ function slac_news_field_default_field_bases() {
   // Exported field_base: 'field_slac_news_media'
   $field_bases['field_slac_news_media'] = array(
     'active' => 1,
-    'cardinality' => -1,
+    'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_slac_news_media',
