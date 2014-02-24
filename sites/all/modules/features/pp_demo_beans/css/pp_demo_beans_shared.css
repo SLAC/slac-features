@@ -1,3 +1,13 @@
+.box-about > div:before {
+  content: " ";
+  display: table;
+}
+.box-about > div:after {
+  clear: both;
+  content: " ";
+  display: table;
+}
+
 .box-about .subtitle {
 font-size: 15px;
 font-size: 0.9375rem;
@@ -29,10 +39,14 @@ margin-bottom: 10px;
   width: 84px;
   margin: 0; }
   .box-about figure img {
-    display: block; }
+    display: block;
+max-width: 100%;
+height: auto;    
+     }
   .box-about figure.large-image {
     width: 100%;
-    margin-bottom: 10px; }
+    margin-bottom: 10px; 
+    border: 0 none}
   .box-about figure.positition-right {
     float: right;
     margin: 0 0 20px 27px; }
