@@ -6,6 +6,26 @@
       // content: 'large desktop'  
       
   .general-right, .panel-col-last
-
+        
+    .reverse &
+      +span-columns(9 omega,12)   
+      
     .with-right-sidebar &
-      +span-columns(16,36)
+      +span-columns(19,36)
+
+  .general-left, .panel-col-first, #user-profile-form, .general-left-title 
+    +span-columns(6,9)
+    .pane-page-content &
+      .front &
+        +span-columns(6,9)  
+        
+    .reverse &
+      +span-columns(3,12)  
+
+  .general-left-title 
+    .reverse &
+      +prefix(3, 12)
+      +reset-columns
+      
+    
+   

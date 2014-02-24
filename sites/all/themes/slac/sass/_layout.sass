@@ -4,6 +4,11 @@ a
   text-decoration: none
   &:hover
     color: $red
+
+  .content &
+    color: $red
+    &:hover
+      text-decoration: underline  
   
   &.active, &.active-item  
     li & 
@@ -812,10 +817,10 @@ ul.tabs, .action-links,
 
 
 
-  .view-content, .view-footer li
+  .view-content
+    padding: 5px
+  .view-footer li
     padding: 15px
-
-  
   
   
   .view-header,
@@ -840,10 +845,13 @@ ul.tabs, .action-links,
         text-align: center
         +fontsize-rem(16px)
         font-weight: bold
+        a:hover 
+          text-decoration: none
+        
         &.first, &.last
           position: absolute
           +fontsize-rem(14px)
-          top: 3px
+          top: 2px
           font-weight: normal
           a
             +no-select
@@ -853,7 +861,7 @@ ul.tabs, .action-links,
             &:after, &:before
               @extend .slac-font
               position: relative
-              top: 1px      
+              top: 2px      
               
         &.first
           left: 0
@@ -892,11 +900,12 @@ ul.tabs, .action-links,
       td
         border: 0 none !important
         padding: 0 !important
+        width: auto !important
         .month
           display: inline-block
         a 
           padding: 6px
-          display: block
+          display: inline-block
           &.active
             background-color: $red
             color: #fff
@@ -2056,6 +2065,7 @@ ul.news-archive-class
       &:hover
         +box-shadow(0 0 4px 1px #fff inset, 0 0 0 1px $red)
         text-shadow: 1px 1px 1px #000
+        text-decoration: none
 
   
   .view-content
@@ -2500,7 +2510,7 @@ ol.search-results
 
 +at-breakpoint($small-desktop)
   .right-sidebar
-    +span-columns(8 omega,12)  
+    +span-columns(9 omega,12)  
 
 +at-breakpoint($large-desktop)    
   .right-sidebar
