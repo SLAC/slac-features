@@ -1083,8 +1083,6 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'create landing_page content',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'node',
@@ -1952,7 +1950,6 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'edit any landing_page content',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'node',
@@ -2244,8 +2241,6 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'edit own landing_page content',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
       'site owner' => 'site owner',
     ),
     'module' => 'node',
