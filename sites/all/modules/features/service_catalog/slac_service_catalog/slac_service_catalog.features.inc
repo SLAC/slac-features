@@ -65,7 +65,7 @@ function slac_service_catalog_image_default_styles() {
 function slac_service_catalog_node_info() {
   $items = array(
     'slac_sc_catalog_item' => array(
-      'name' => t('SLAC Catalog item'),
+      'name' => t('Catalog item'),
       'base' => 'node_content',
       'description' => t('A service catalog item.'),
       'has_title' => '1',

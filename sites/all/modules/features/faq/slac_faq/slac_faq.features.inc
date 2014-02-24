@@ -32,7 +32,7 @@ function slac_faq_views_api($module = NULL, $api = NULL) {
 function slac_faq_node_info() {
   $items = array(
     'slac_faq' => array(
-      'name' => t('SLAC FAQ'),
+      'name' => t('FAQ'),
       'base' => 'node_content',
       'description' => t('A set of question and answer commonly asked.'),
       'has_title' => '1',

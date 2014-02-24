@@ -129,7 +129,7 @@ function slac_news_image_default_styles() {
 function slac_news_node_info() {
   $items = array(
     'slac_news' => array(
-      'name' => t('SLAC News'),
+      'name' => t('News'),
       'base' => 'node_content',
       'description' => t('Provide the ability to create news articles, RSS feeds and other features.'),
       'has_title' => '1',
