@@ -36,8 +36,8 @@ function slac_basic_page_settings_image_default_styles() {
         'module' => 'epsacrop',
         'name' => 'epsacrop_crop',
         'data' => array(
-          'width' => 550,
-          'height' => 178,
+          'width' => 755,
+          'height' => 244,
           'anchor' => 'center-center',
           'jcrop_settings' => array(
             'aspect_ratio' => '',
@@ -58,8 +58,8 @@ function slac_basic_page_settings_image_default_styles() {
         'module' => 'image',
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => 550,
-          'height' => 178,
+          'width' => 755,
+          'height' => 244,
         ),
         'weight' => 2,
       ),
