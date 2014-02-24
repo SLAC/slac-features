@@ -65,6 +65,7 @@ function theme_image_style_lightbox($variables) {
   $alt = isset($file->field_file_image_alt_text[LANGUAGE_NONE][0]['value']) ? $file->field_file_image_alt_text[LANGUAGE_NONE][0]['value'] : '';
   $title = isset($file->field_file_image_title_text[LANGUAGE_NONE][0]['value']) ? $file->field_file_image_title_text[LANGUAGE_NONE][0]['value'] : '';
   $description = isset($file->field_file_image_description[LANGUAGE_NONE][0]['value']) ? $file->field_file_image_description[LANGUAGE_NONE][0]['value'] : '';
+  $style_attribute = isset($file->override['attributes']['style']) ? $file->override['attributes']['style'] : '';
 
   $rendered_image = theme('image_style', array(
     'path' => $file->uri,
@@ -73,6 +74,9 @@ function theme_image_style_lightbox($variables) {
     'height' => '',
     'alt' => $alt,
     'title' => $title,
+    'attributes' => array(
+      'style' => $style_attribute,
+    ),
   ));
 
   $style = variable_get('pp_lightbox_style_name', '');
