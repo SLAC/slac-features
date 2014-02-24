@@ -2008,7 +2008,8 @@ ul.news-archive-class li .item-list {
     color: #626262;
     padding-right: 25px;
     margin-bottom: 10px;
-    line-height: 16px; }
+    line-height: 16px;
+    position: relative; }
   .event-block a {
     color: #871628; }
     .event-block a.icon {
