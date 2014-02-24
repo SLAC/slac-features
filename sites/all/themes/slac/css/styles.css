@@ -1285,7 +1285,8 @@ ul.tabs, .action-links {
     .calendar-page table thead th {
       border-color: white !important;
       border-style: solid !important;
-      border-width: 3px 0 !important; }
+      border-width: 3px 0 !important;
+      padding: 6px 0 !important; }
     .calendar-page table tbody tr:first-child td {
       padding-top: 15px !important; }
     .calendar-page table tbody td {
