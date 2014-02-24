@@ -55,6 +55,8 @@ function slac_kb_article_default_page_manager_handlers() {
       'middle' => NULL,
       'left_title' => NULL,
       'left_author' => NULL,
+      'social_media_1' => NULL,
+      'social_media_2' => NULL,
     ),
   );
   $display->cache = array();
@@ -116,17 +118,18 @@ function slac_kb_article_default_page_manager_handlers() {
     $pane = new stdClass();
     $pane->pid = 'new-3';
     $pane->panel = 'left_author';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
+    $pane->type = 'node_author_sp';
+    $pane->subtype = 'node_author_sp';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'admin_title' => 'Article author',
-      'title' => '',
-      'body' => '<p>By %node:author</p>
-',
-      'format' => 'full_html',
-      'substitute' => 1,
+      'link' => 1,
+      'prefix' => 'By',
+      'suffix' => '',
+      'hide_if_anonymous' => 1,
+      'context' => 'argument_entity_id:node_1',
+      'override_title' => 1,
+      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(

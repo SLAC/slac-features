@@ -522,16 +522,18 @@ function slac_blog_default_page_manager_handlers() {
     $pane = new stdClass();
     $pane->pid = 'new-9';
     $pane->panel = 'left_author';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
+    $pane->type = 'node_author_sp';
+    $pane->subtype = 'node_author_sp';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'admin_title' => 'submitted',
-      'title' => '',
-      'body' => 'Submitted by',
-      'format' => 'full_html',
-      'substitute' => 1,
+      'link' => 1,
+      'prefix' => 'Submitted by',
+      'suffix' => '',
+      'hide_if_anonymous' => 1,
+      'context' => 'argument_entity_id:node_1',
+      'override_title' => 1,
+      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -545,29 +547,6 @@ function slac_blog_default_page_manager_handlers() {
     $display->panels['left_author'][0] = 'new-9';
     $pane = new stdClass();
     $pane->pid = 'new-10';
-    $pane->panel = 'left_author';
-    $pane->type = 'node_author';
-    $pane->subtype = 'node_author';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'link' => 0,
-      'context' => 'argument_entity_id:node_1',
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $display->content['new-10'] = $pane;
-    $display->panels['left_author'][1] = 'new-10';
-    $pane = new stdClass();
-    $pane->pid = 'new-11';
     $pane->panel = 'left_author';
     $pane->type = 'node_created';
     $pane->subtype = 'node_created';
@@ -585,12 +564,12 @@ function slac_blog_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-11'] = $pane;
-    $display->panels['left_author'][2] = 'new-11';
+    $display->content['new-10'] = $pane;
+    $display->panels['left_author'][1] = 'new-10';
     $pane = new stdClass();
-    $pane->pid = 'new-12';
+    $pane->pid = 'new-11';
     $pane->panel = 'left_title';
     $pane->type = 'page_title';
     $pane->subtype = 'page_title';
@@ -611,10 +590,10 @@ function slac_blog_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-12'] = $pane;
-    $display->panels['left_title'][0] = 'new-12';
+    $display->content['new-11'] = $pane;
+    $display->panels['left_title'][0] = 'new-11';
     $pane = new stdClass();
-    $pane->pid = 'new-13';
+    $pane->pid = 'new-12';
     $pane->panel = 'right';
     $pane->type = 'blog_archive_menu';
     $pane->subtype = 'blog_archive_menu';
@@ -630,10 +609,10 @@ function slac_blog_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-13'] = $pane;
-    $display->panels['right'][0] = 'new-13';
+    $display->content['new-12'] = $pane;
+    $display->panels['right'][0] = 'new-12';
     $pane = new stdClass();
-    $pane->pid = 'new-14';
+    $pane->pid = 'new-13';
     $pane->panel = 'right';
     $pane->type = 'views_panes';
     $pane->subtype = 'blog_tags-panel_pane_1';
@@ -653,10 +632,10 @@ function slac_blog_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-14'] = $pane;
-    $display->panels['right'][1] = 'new-14';
+    $display->content['new-13'] = $pane;
+    $display->panels['right'][1] = 'new-13';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-12';
+  $display->title_pane = 'new-11';
   $handler->conf['display'] = $display;
   $export['node_view_panel_context_3'] = $handler;
 
@@ -755,7 +734,7 @@ function slac_blog_default_page_manager_handlers() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-15';
+    $pane->pid = 'new-14';
     $pane->panel = 'left';
     $pane->type = 'views';
     $pane->subtype = 'blog_page';
@@ -788,10 +767,10 @@ function slac_blog_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-15'] = $pane;
-    $display->panels['left'][0] = 'new-15';
+    $display->content['new-14'] = $pane;
+    $display->panels['left'][0] = 'new-14';
     $pane = new stdClass();
-    $pane->pid = 'new-16';
+    $pane->pid = 'new-15';
     $pane->panel = 'right';
     $pane->type = 'blog_archive_menu';
     $pane->subtype = 'blog_archive_menu';
@@ -807,10 +786,10 @@ function slac_blog_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-16'] = $pane;
-    $display->panels['right'][0] = 'new-16';
+    $display->content['new-15'] = $pane;
+    $display->panels['right'][0] = 'new-15';
     $pane = new stdClass();
-    $pane->pid = 'new-17';
+    $pane->pid = 'new-16';
     $pane->panel = 'right';
     $pane->type = 'views_panes';
     $pane->subtype = 'blog_tags-panel_pane_1';
@@ -830,10 +809,10 @@ function slac_blog_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-17'] = $pane;
-    $display->panels['right'][1] = 'new-17';
+    $display->content['new-16'] = $pane;
+    $display->panels['right'][1] = 'new-16';
   $display->hide_title = PANELS_TITLE_PANE;
-  $display->title_pane = 'new-15';
+  $display->title_pane = 'new-14';
   $handler->conf['display'] = $display;
   $export['term_view_panel_context_2'] = $handler;
 
