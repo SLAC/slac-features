@@ -588,6 +588,8 @@ h2 {
     display: none; }
   .general-content h2 {
     display: none; }
+  .node-webform h2 {
+    margin-bottom: 25px; }
 
 h3 {
   font-size: 18px;
@@ -3088,6 +3090,8 @@ ul.blog-archive-class {
   font-size: 13px;
   font-size: 0.8125rem; }
 
+.node-webform form.webform-client-form {
+  margin-top: 10px; }
 form#user-profile-form, form#user-login, form#user-register-form, form#user-pass, form#slac-configuration-form, form.webform-client-form, form.node-form, form.comment-form {
   background-color: #f6f6f6;
   border: 3px solid #ececec;
