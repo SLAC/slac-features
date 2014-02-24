@@ -106,9 +106,10 @@ a[href*='mailto:'] {
     .basic-format-text p img, article.node-blog.view-mode-full .field-type-text-with-summary p img, article.node-blog.view-mode-full .blog-wrapper p img, .article_panel_layout .pane-node-body p img, .service-body p img, .node-slac-sc-catalog-item p img, .node-support-ticket .field-type-text-with-summary p img {
       margin: 15px 0; }
     .basic-format-text p a, article.node-blog.view-mode-full .field-type-text-with-summary p a, article.node-blog.view-mode-full .blog-wrapper p a, .article_panel_layout .pane-node-body p a, .service-body p a, .node-slac-sc-catalog-item p a, .node-support-ticket .field-type-text-with-summary p a {
-      text-decoration: underline; }
+      color: #871628;
+      text-decoration: none; }
       .basic-format-text p a:hover, article.node-blog.view-mode-full .field-type-text-with-summary p a:hover, article.node-blog.view-mode-full .blog-wrapper p a:hover, .article_panel_layout .pane-node-body p a:hover, .service-body p a:hover, .node-slac-sc-catalog-item p a:hover, .node-support-ticket .field-type-text-with-summary p a:hover {
-        text-decoration: none; }
+        text-decoration: underline; }
   .basic-format-text ul, article.node-blog.view-mode-full .field-type-text-with-summary ul, article.node-blog.view-mode-full .blog-wrapper ul, .article_panel_layout .pane-node-body ul, .service-body ul, .node-slac-sc-catalog-item ul, .node-support-ticket .field-type-text-with-summary ul, .basic-format-text ol, article.node-blog.view-mode-full .field-type-text-with-summary ol, article.node-blog.view-mode-full .blog-wrapper ol, .article_panel_layout .pane-node-body ol, .service-body ol, .node-slac-sc-catalog-item ol, .node-support-ticket .field-type-text-with-summary ol {
     list-style-type: disc;
     padding-left: 20px;
