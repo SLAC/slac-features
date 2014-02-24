@@ -1160,18 +1160,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'module' => 'bean',
   );
 
-  // Exported permission: 'create article content'.
-  $permissions['create article content'] = array(
-    'name' => 'create article content',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
-      'site owner' => 'site owner',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: 'create blog content'.
   $permissions['create blog content'] = array(
     'name' => 'create blog content',
@@ -1402,16 +1390,6 @@ function slac_intorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'webform',
-  );
-
-  // Exported permission: 'delete any article content'.
-  $permissions['delete any article content'] = array(
-    'name' => 'delete any article content',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'site owner' => 'site owner',
-    ),
-    'module' => 'node',
   );
 
   // Exported permission: 'delete any audio files'.
@@ -1675,16 +1653,6 @@ function slac_intorg_permissions_user_default_permissions() {
       'site owner' => 'site owner',
     ),
     'module' => 'fieldable_panels_panes',
-  );
-
-  // Exported permission: 'delete own article content'.
-  $permissions['delete own article content'] = array(
-    'name' => 'delete own article content',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'site owner' => 'site owner',
-    ),
-    'module' => 'node',
   );
 
   // Exported permission: 'delete own audio files'.
@@ -2130,17 +2098,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'module' => 'webform',
   );
 
-  // Exported permission: 'edit any article content'.
-  $permissions['edit any article content'] = array(
-    'name' => 'edit any article content',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'editor' => 'editor',
-      'site owner' => 'site owner',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: 'edit any audio files'.
   $permissions['edit any audio files'] = array(
     'name' => 'edit any audio files',
@@ -2470,18 +2427,6 @@ function slac_intorg_permissions_user_default_permissions() {
       'site owner' => 'site owner',
     ),
     'module' => 'metatag',
-  );
-
-  // Exported permission: 'edit own article content'.
-  $permissions['edit own article content'] = array(
-    'name' => 'edit own article content',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
-      'site owner' => 'site owner',
-    ),
-    'module' => 'node',
   );
 
   // Exported permission: 'edit own audio files'.
