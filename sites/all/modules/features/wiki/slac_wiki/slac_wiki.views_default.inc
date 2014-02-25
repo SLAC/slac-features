@@ -87,10 +87,14 @@ function slac_wiki_views_default_views() {
 
   /* Display: A-Z */
   $handler = $view->new_display('block', 'A-Z', 'block');
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'wiki-filter';
 
   /* Display: Wiki Search */
   $handler = $view->new_display('panel_pane', 'Wiki Search', 'panel_pane_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'wiki-search';
   $handler->display->display_options['defaults']['use_ajax'] = FALSE;
   $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['defaults']['exposed_form'] = FALSE;

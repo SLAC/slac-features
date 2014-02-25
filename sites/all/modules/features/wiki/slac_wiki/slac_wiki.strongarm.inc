@@ -227,4 +227,3 @@ function slac_wiki_strongarm() {
 
   return $export;
 }
-
