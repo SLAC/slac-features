@@ -232,8 +232,8 @@ function slac_event_demo_uuid_features_default_content() {
   'field_slac_event_date' => array(
     'und' => array(
       0 => array(
-        'value' => '2013-12-28T10:30:00',
-        'value2' => '2013-12-28T20:30:00',
+        'value' => '2014-04-28T10:30:00',
+        'value2' => '2014-04-28T20:30:00',
         'timezone' => 'America/Los_Angeles',
         'timezone_db' => 'America/Los_Angeles',
         'date_type' => 'date',
@@ -579,8 +579,8 @@ function slac_event_demo_uuid_features_default_content() {
   'field_slac_event_date' => array(
     'und' => array(
       0 => array(
-        'value' => '2014-01-15T17:30:00',
-        'value2' => '2014-01-15T19:45:00',
+        'value' => '2014-06-15T17:30:00',
+        'value2' => '2014-06-15T19:45:00',
         'timezone' => 'America/Los_Angeles',
         'timezone_db' => 'America/Los_Angeles',
         'date_type' => 'date',
@@ -744,8 +744,8 @@ function slac_event_demo_uuid_features_default_content() {
   'field_slac_event_date' => array(
     'und' => array(
       0 => array(
-        'value' => '2013-12-27T16:30:00',
-        'value2' => '2013-12-27T21:45:00',
+        'value' => '2014-04-06T16:30:00',
+        'value2' => '2014-04-06T21:45:00',
         'timezone' => 'America/Los_Angeles',
         'timezone_db' => 'America/Los_Angeles',
         'date_type' => 'date',
@@ -909,8 +909,8 @@ function slac_event_demo_uuid_features_default_content() {
   'field_slac_event_date' => array(
     'und' => array(
       0 => array(
-        'value' => '2013-12-29T08:45:00',
-        'value2' => '2013-12-29T20:45:00',
+        'value' => '2014-04-22T08:45:00',
+        'value2' => '2014-04-22T20:45:00',
         'timezone' => 'America/Los_Angeles',
         'timezone_db' => 'America/Los_Angeles',
         'date_type' => 'date',
@@ -1290,8 +1290,8 @@ function slac_event_demo_uuid_features_default_content() {
   'field_slac_event_date' => array(
     'und' => array(
       0 => array(
-        'value' => '2013-12-24T22:00:00',
-        'value2' => '2013-12-24T22:00:00',
+        'value' => '2014-05-15T22:00:00',
+        'value2' => '2014-05-15T22:00:00',
         'timezone' => 'America/Los_Angeles',
         'timezone_db' => 'America/Los_Angeles',
         'date_type' => 'date',
@@ -1443,8 +1443,8 @@ function slac_event_demo_uuid_features_default_content() {
   'field_slac_event_date' => array(
     'und' => array(
       0 => array(
-        'value' => '2013-12-25T11:45:00',
-        'value2' => '2013-12-25T14:30:00',
+        'value' => '2014-05-25T11:45:00',
+        'value2' => '2014-05-25T14:30:00',
         'timezone' => 'America/Los_Angeles',
         'timezone_db' => 'America/Los_Angeles',
         'date_type' => 'date',
@@ -1609,8 +1609,8 @@ function slac_event_demo_uuid_features_default_content() {
   'field_slac_event_date' => array(
     'und' => array(
       0 => array(
-        'value' => '2014-01-22T06:45:00',
-        'value2' => '2014-01-22T14:45:00',
+        'value' => '2014-06-22T06:45:00',
+        'value2' => '2014-06-22T14:45:00',
         'timezone' => 'America/Los_Angeles',
         'timezone_db' => 'America/Los_Angeles',
         'date_type' => 'date',
@@ -1826,8 +1826,8 @@ function slac_event_demo_uuid_features_default_content() {
   'field_slac_event_date' => array(
     'und' => array(
       0 => array(
-        'value' => '2014-01-15T08:15:00',
-        'value2' => '2014-01-15T08:15:00',
+        'value' => '2014-06-15T08:15:00',
+        'value2' => '2014-06-15T08:15:00',
         'timezone' => 'America/Los_Angeles',
         'timezone_db' => 'America/Los_Angeles',
         'date_type' => 'date',
