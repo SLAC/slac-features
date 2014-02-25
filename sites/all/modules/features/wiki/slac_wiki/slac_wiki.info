@@ -37,6 +37,7 @@ features[filter][] = markdown
 features[menu_custom][] = menu-slac-wiki
 features[menu_links][] = menu-slac-wiki_wiki-pages-a-z:wiki
 features[node][] = slac_wiki_page
+features[page_manager_handlers][] = node_view_panel_context_7
 features[page_manager_pages][] = add_new_wiki_page
 features[page_manager_pages][] = slac_wiki_search
 features[page_manager_pages][] = wiki_a_z
