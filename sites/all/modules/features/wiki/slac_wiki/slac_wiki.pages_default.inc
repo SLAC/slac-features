@@ -451,8 +451,8 @@ function slac_wiki_default_page_manager_handlers() {
     $pane->locks = array();
     $display->content['new-10'] = $pane;
     $display->panels['right'][0] = 'new-10';
-  $display->hide_title = PANELS_TITLE_NONE;
-  $display->title_pane = '0';
+  $display->hide_title = PANELS_TITLE_PANE;
+  $display->title_pane = 'new-9';
   $handler->conf['display'] = $display;
   $export['term_view_panel_context_4'] = $handler;
 
@@ -570,13 +570,18 @@ function slac_wiki_default_page_manager_pages() {
     'relationships' => array(),
   );
   $display = new panels_display();
-  $display->layout = 'flexible:slac_wiki_layout';
+  $display->layout = 'two_col_article';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
       'default' => NULL,
       'center' => NULL,
       'right' => NULL,
+      'left' => NULL,
+      'left_title' => NULL,
+      'left_author' => NULL,
+      'social_media_1' => NULL,
+      'social_media_2' => NULL,
     ),
   );
   $display->cache = array();
@@ -585,7 +590,47 @@ function slac_wiki_default_page_manager_pages() {
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-1';
-    $pane->panel = 'center';
+    $pane->panel = 'left';
+    $pane->type = 'block';
+    $pane->subtype = 'views--exp-wiki-panel_pane_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'inherit_path' => 1,
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-1'] = $pane;
+    $display->panels['left'][0] = 'new-1';
+    $pane = new stdClass();
+    $pane->pid = 'new-2';
+    $pane->panel = 'left';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'wiki-panel_pane_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $display->content['new-2'] = $pane;
+    $display->panels['left'][1] = 'new-2';
+    $pane = new stdClass();
+    $pane->pid = 'new-3';
+    $pane->panel = 'left_title';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
     $pane->shown = TRUE;
@@ -605,48 +650,8 @@ function slac_wiki_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-1'] = $pane;
-    $display->panels['center'][0] = 'new-1';
-    $pane = new stdClass();
-    $pane->pid = 'new-2';
-    $pane->panel = 'center';
-    $pane->type = 'block';
-    $pane->subtype = 'views--exp-wiki-panel_pane_1';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'inherit_path' => 1,
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['center'][1] = 'new-2';
-    $pane = new stdClass();
-    $pane->pid = 'new-3';
-    $pane->panel = 'center';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'wiki-panel_pane_1';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 2;
-    $pane->locks = array();
     $display->content['new-3'] = $pane;
-    $display->panels['center'][2] = 'new-3';
+    $display->panels['left_title'][0] = 'new-3';
     $pane = new stdClass();
     $pane->pid = 'new-4';
     $pane->panel = 'right';
@@ -669,7 +674,7 @@ function slac_wiki_default_page_manager_pages() {
     $display->content['new-4'] = $pane;
     $display->panels['right'][0] = 'new-4';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-3';
+  $display->title_pane = 'new-2';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['slac_wiki_search'] = $page;
@@ -722,7 +727,7 @@ function slac_wiki_default_page_manager_pages() {
     'relationships' => array(),
   );
   $display = new panels_display();
-  $display->layout = 'flexible:slac_wiki_layout';
+  $display->layout = 'two_col_article';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -730,6 +735,10 @@ function slac_wiki_default_page_manager_pages() {
       'left' => NULL,
       'right' => NULL,
       'center' => NULL,
+      'left_title' => NULL,
+      'left_author' => NULL,
+      'social_media_1' => NULL,
+      'social_media_2' => NULL,
     ),
   );
   $display->cache = array();
@@ -738,32 +747,7 @@ function slac_wiki_default_page_manager_pages() {
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-5';
-    $pane->panel = 'center';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'admin_title' => 'Wiki pages title',
-      'title' => '',
-      'body' => '<h2 class="pane-title">Wiki pages A-Z</h2>
-',
-      'format' => 'full_html',
-      'substitute' => TRUE,
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-5'] = $pane;
-    $display->panels['center'][0] = 'new-5';
-    $pane = new stdClass();
-    $pane->pid = 'new-6';
-    $pane->panel = 'center';
+    $pane->panel = 'left';
     $pane->type = 'views';
     $pane->subtype = 'wiki';
     $pane->shown = TRUE;
@@ -790,10 +774,35 @@ function slac_wiki_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-5'] = $pane;
+    $display->panels['left'][0] = 'new-5';
+    $pane = new stdClass();
+    $pane->pid = 'new-6';
+    $pane->panel = 'left_title';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => 'Wiki pages title',
+      'title' => '',
+      'body' => '<h2 class="pane-title">Wiki pages A-Z</h2>
+',
+      'format' => 'full_html',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
     $pane->locks = array();
     $display->content['new-6'] = $pane;
-    $display->panels['center'][1] = 'new-6';
+    $display->panels['left_title'][0] = 'new-6';
     $pane = new stdClass();
     $pane->pid = 'new-7';
     $pane->panel = 'right';
@@ -816,7 +825,7 @@ function slac_wiki_default_page_manager_pages() {
     $display->content['new-7'] = $pane;
     $display->panels['right'][0] = 'new-7';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-6';
+  $display->title_pane = 'new-5';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['wiki_a_z'] = $page;
