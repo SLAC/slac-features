@@ -5,7 +5,7 @@
   width: 100%
   border: 0 none
   +box-shadow(1px 1px 1px 1px #cfcfcf)
-  +border-radius(5px) 
+  +border-radius(5px)
   color: $grey-47
   +fontsize-rem(13px)
 
@@ -18,10 +18,10 @@ form
     background-color: $form-bg
     border: 3px solid $form-bdr
     padding: 10px
-      
+
     .confirm-parent, .password-parent
       width: 100%
-      
+
     .password-strength, div.password-confirm
       width: auto
       float: none
@@ -30,57 +30,57 @@ form
 
     div.password-suggestions, .wrapped-with-icon .description
       @extend .description_block
-    
+
     .form-item
       margin-bottom: 35px
 
     > div
-      max-width: 360px    
-    
+      max-width: 360px
+
     legend
       display: none
-    
+
   label
     color: #474747
     +fontsize-rem(14px)
-    margin: 0 0 3px 0 
+    margin: 0 0 3px 0
     display: block
-    
-    
+
+
   &.comment-form
     > div
       max-width: none
-      
-    .container-inline  
+
+    .container-inline
       label
         display: block
       .form-type-select
         display: inline-block
-    
+
     .field-type-file
       input[type='file'], input[type='submit']
         margin-bottom: 15px
-        
+
     .filter-wrapper
-      padding-top: 0 
-      
+      padding-top: 0
+
       .form-item, .filter-guidelines
         padding-left: 0
 
 +at-breakpoint($tablet)
   form
-    &#user-profile-form, &#user-login, &#user-register-form, &#user-pass,  &#slac-configuration-form,  &.webform-client-form, &.node-form, &.comment-form 
+    &#user-profile-form, &#user-login, &#user-register-form, &#user-pass,  &#slac-configuration-form,  &.webform-client-form, &.node-form, &.comment-form
       padding: 26px 38px 26px 38px
-      
+
 
 .wrapped-with-icon
   position: relative
   padding-right: 35px
   .form-item
     margin-bottom: 0 !important
-  
+
   &.form-type-password-confirm
-    .icon-ask  
+    .icon-ask
       top: 55px
 
 .webform-grid
@@ -88,11 +88,11 @@ form
     margin-bottom: 0 !important
 
 
-.webform-container-inline 
+.webform-container-inline
   .form-item
     display: inline-block !important
     width: auto
-  
+
 .webform-component-managed_file
   input[type='file']
     margin-bottom: 10px
@@ -104,7 +104,7 @@ form
     margin-bottom: 15px !important
     label
       display: inline
-      
+
 input[type='submit'], .button
   border: 1px solid #cecece
   background-color: #e4e4e4
@@ -118,10 +118,10 @@ input[type='submit'], .button
   display: inline-block
   &:hover, &:focus
     background-color: $bg-col-1
-    
 
-    
-    
+
+
+
 input[type='text'], input[type='password'], select, textarea, input[type='email'], input[type='number']
   margin: 0
   border: 1px solid #c3c3c3
@@ -131,11 +131,11 @@ input[type='text'], input[type='password'], select, textarea, input[type='email'
   outline: 0 none
   font-family: inherit
   +fontsize-rem(14px)
-  
-  
+
+
 .icon-ask
   position: absolute
-  top: 20px 
+  top: 20px
   right: 0
   background-color: #e4e4e4
   width: 25px
@@ -155,14 +155,14 @@ input[type='text'], input[type='password'], select, textarea, input[type='email'
     margin-left: -5px
     font-weight: bold
     +fontsize-rem(15px)
-    
-  
+
+
 html.js input
   &.form-autocomplete
     background-position: 100% 5px !important
   &.throbbing
     background-position: 100% -15px !important
-    
+
 //Blog add and edit form
 form.node-blog-form
   .description
@@ -171,25 +171,25 @@ form.node-blog-form
   > div
     > div
       margin-bottom: 25px
-  
+
   .filter-guidelines
     clear: none
     padding: 0
-    
-  .filter-wrapper 
+
+  .filter-wrapper
     .form-item
       float: none
       padding: 1.5em 0 .5em 0
-      
+
   .fieldset-wrapper
     label
       display: inline-block
-  
+
     input[type="checkbox"]
       display: inline-block
-        
 
-      
+
+
   .vertical-tabs fieldset.vertical-tabs-pane
     padding: 1em !important
 
@@ -198,27 +198,27 @@ form.node-blog-form
     width: 100%
     border: 0 none
     border-bottom: 1px solid $grey-c
-    
+
     li
       border: 0 none
-    
-  div.vertical-tabs  
+
+  div.vertical-tabs
     margin: 0 0 1em 0
-    
+
   .filter-help
     float: left
     padding: 0
-    a 
+    a
       padding-left: 0
-    
-    
-    
+
+
+
 +at-breakpoint($tablet)
 
   form
     &.node-blog-form,
     &.node-form
-    
+
       div.vertical-tabs
         margin: 0 0 20px 0
 
@@ -229,13 +229,13 @@ form.node-blog-form
         //border-top: 1px solid #ccc
         border-bottom: 0 none
 
-        li 
+        li
           border: 1px solid #ccc
 
       .filter-help
         float: right
         padding: 0
 
-.form-type-checkbox        
-  input, label 
+.form-type-checkbox
+  input, label
     display: inline

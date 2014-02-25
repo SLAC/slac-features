@@ -1,18 +1,18 @@
-@function em($target, $context: $base-font-size) 
+@function em($target, $context: $base-font-size)
   @if $target == 0
-    @return 0 
+    @return 0
   @return $target / $context + 0em
-  
 
-@mixin no-select 
+
+@mixin no-select
   -webkit-touch-callout: none
   -webkit-user-select: none
   -khtml-user-select: none
   -moz-user-select: none
   -ms-user-select: none
   user-select: none
-  
-@mixin opacity($trans) 
+
+@mixin opacity($trans)
   filter: alpha(opactiy=($trans * 100))
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$trans * 100})"
   -moz-opacity: $trans
@@ -32,25 +32,25 @@
   &:-ms-input-placeholder
     color: $color
   &.placeholder
-    color: $color  
-    
+    color: $color
+
 .clearfix
   *zoom: 1
-  &:before, 
+  &:before,
   &:after
     content: ""
     display: table
-  &:after 
-    clear: both 
+  &:after
+    clear: both
 
 =clearfix
   *zoom: 1
-  &:before, 
+  &:before,
   &:after
     content: ""
     display: table
-  &:after 
-    clear: both 
+  &:after
+    clear: both
 
 $base-font-size: 16px
 
@@ -58,9 +58,9 @@ $base-font-size: 16px
   $remSize: $size / $base-font-size
   @return #{$remSize}rem
 
-@mixin fontsize-rem($size)  
-  font-size: $size 
-  font-size: calculateRem($size)  
+@mixin fontsize-rem($size)
+  font-size: $size
+  font-size: calculateRem($size)
 
 
 .slac-font
@@ -75,7 +75,7 @@ $base-font-size: 16px
 
   +fontsize-rem(14px)
   color: $grey-47
-  
+
   h2
     +fontsize-rem(16px)
     margin-bottom: 10px
@@ -90,7 +90,7 @@ $base-font-size: 16px
     img
       margin: 15px 0
 
-        
+
   ul, ol
     list-style-type: disc
     padding-left: 20px
@@ -99,7 +99,7 @@ $base-font-size: 16px
       padding-left: 0
     li
       line-height: 20px
-      margin-bottom: 5px  
+      margin-bottom: 5px
 
 .basic-intro-text-format
   margin-bottom: 15px

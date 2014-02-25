@@ -2,27 +2,27 @@
 @mixin hover-and-active
   position: relative
   color: $red
-  
+
   &:after, &:before
     content: ''
     +box-shadow(0px -2px 0px 0px $red inset )
     position: absolute
     bottom: 0
-    width: 100% 
+    width: 100%
     height: 2px
-  
+
   &:after
     left: -2px
 
   &:before
     right: -2px
-  
 
-.main-menu           
+
+.main-menu
   background-color: $menu_bg
   padding: 8px 0
-  text-transform: uppercase   
-  
+  text-transform: uppercase
+
 +at-breakpoint($tablet)
   .main-menu
     padding: 9px 0 0
@@ -35,10 +35,10 @@
     +border-radius(3px)
     padding: 1px 6px
     display: inline-block
-        
+
     &:hover
       +box-shadow(0px 0px 1px 1px $red)
-        
+
     &:before
       content: '\e611'
       color: $red
@@ -46,7 +46,7 @@
       +fontsize-rem(25px)
       position: relative
       display: inline-block
-      
+
     &.sf-expanded
       background-color:  $red
       +box-shadow(0px 0px 1px 1px $red)
@@ -57,7 +57,7 @@
   .sf-accordion-toggle
     display: none
   .sf-main-menu.sf-horizontal
-    display: block !important 
+    display: block !important
     > li.menuparent
       position: relative
       > ul
@@ -73,60 +73,60 @@
         &.sf-hidden
           height: 100% !important
           opacity: 1 !important
-          display: none !important    
-          
+          display: none !important
+
         > li
-          margin: 0 
+          margin: 0
           float: none
           a
             color: inherit
             padding: 5px 15px
-           
+
       > a
         position: relative
-      
+
       &.active-trail
         > ul
-          margin-top: 0px 
+          margin-top: 0px
 
     > li > a:hover, > li.sfHover > a
       +hover-and-active
-      
+
     > li.active-trail > a
       //+hover-and-active
-      
+
     .sf-sub-indicator
       display: none
 
-        
-    
 
-ul.sf-menu.sf-accordion 
+
+
+ul.sf-menu.sf-accordion
   display: none
-  position: absolute    
-    
+  position: absolute
+
 ul.sf-menu.sf-accordion,
 ul.sf-menu.sf-accordion ul,
-ul.sf-menu.sf-accordion li 
+ul.sf-menu.sf-accordion li
   float: left
   width: 100%
 
-ul.sf-menu.sf-accordion ul 
+ul.sf-menu.sf-accordion ul
   margin: 0
   padding: 0
 
 ul.sf-menu.sf-accordion.sf-expanded,
-ul.sf-menu.sf-accordion li.sf-expanded > ul 
+ul.sf-menu.sf-accordion li.sf-expanded > ul
   left: auto !important
   position: relative
   top: auto !important
-  
+
 
 .sf-hidden
   left: -99999em !important
-  top: -99999em !important    
+  top: -99999em !important
   position: absolute
-  
+
 
 a.sf-with-ul
   .sf-accordion &
@@ -138,7 +138,7 @@ a.sf-with-ul
       position: absolute
       top: 1px
       right: -20px
-  
+
   li.sf-expanded &
     .sf-accordion &
       &:after
@@ -149,15 +149,15 @@ a.sf-with-ul
 
 ul.sf-menu.sf-accordion.sf-expanded
   padding: 15px 0 5px 21px
-  text-transform: none 
+  text-transform: none
   color: $red
-  
+
   a
     &.active-trail,
     &.active
       text-decoration: underline
-  
-  
+
+
   li
     margin-bottom: 16px
     a
@@ -169,7 +169,7 @@ ul.sf-menu.sf-accordion.sf-expanded
 
   > li
     &.menuparent
-      margin-bottom: 14px  
+      margin-bottom: 14px
     > ul
       +clearfix
       padding-left: 15px
@@ -178,7 +178,7 @@ ul.sf-menu.sf-accordion.sf-expanded
       > li
         margin-bottom: 6px
       a
-        
+
         &:after
           display: none
 
@@ -190,16 +190,16 @@ ul.sf-menu.sf-accordion.sf-expanded
     ul
       +clearfix
       color: $grey-4c
-      a 
+      a
         color: $grey-4c
 
       li
         &.active-trail, &.sfHover
-          > a 
+          > a
             //color: $red
-            //+box-shadow(0px -2px 0px 0px $red inset )     
+            //+box-shadow(0px -2px 0px 0px $red inset )
         float: left
-        margin: 0 25px 
+        margin: 0 25px
         +fontsize-rem(14px)
         &:first-child
           margin-left: 0
@@ -210,26 +210,26 @@ ul.sf-menu.sf-accordion.sf-expanded
           padding-bottom: 6px
           &.active-trail, &.active
             +hover-and-active
-            
 
 
-          
+
+
         ul
           .active-trail
             a
-              //background-color: #fff 
+              //background-color: #fff
               display: block
               //text-decoration: underline
               &:before, &:after
                 display: none
-              
+
           li
             a:hover
               background-color: $hover-submenu
               text-decoration: underline
 
-  .sf-menu 
-    > li.active-trail 
+  .sf-menu
+    > li.active-trail
       > a
         +hover-and-active
 
@@ -239,7 +239,7 @@ ul.sf-menu.sf-accordion.sf-expanded
     &.long-menu
       background-color: transparent
       ul
-        > li 
+        > li
           width: 25%
           margin: 0
           text-align: center
@@ -247,20 +247,20 @@ ul.sf-menu.sf-accordion.sf-expanded
           border-right: 1px solid #fff
           background-color: $menu_bg
           &:hover
-            background-color: $bg-col-1 
+            background-color: $bg-col-1
           &:nth-child(4n+4)
             border-right: 0
           > a
             padding: 5px 0
-            
-            
+
+
             &.active-trail, &.active
               color: $red
-              border-bottom: 0 none   
+              border-bottom: 0 none
             &:after, &:before
               left: 0 !important
-              right: 0 !important  
-              
+              right: 0 !important
+
           &.active-trail
             a
               &:after, &:before
@@ -270,7 +270,7 @@ ul.sf-menu.sf-accordion.sf-expanded
         &.sf-main-menu.sf-horizontal
           > li.menuparent
             > ul
-              
+
               width: 100% !important
               > li
                 width: 100%
@@ -288,30 +288,30 @@ ul.sf-menu.sf-accordion.sf-expanded
 
 
 +at-breakpoint($small-desktop)
-  .sf-main-menu.sf-horizontal 
-    > li.menuparent 
+  .sf-main-menu.sf-horizontal
+    > li.menuparent
       > ul
         //padding: 10px 10px 0px 10px
         left: -10px
         //+box-sizing(content-box)
-      &.active-trail 
+      &.active-trail
         > a
           //color: $red
           //+box-shadow(0px -2px 0px 0px $red inset )
           //border-bottom: 2px solid $red
-          
+
     &.long-menu
       ul
-        li 
+        li
           margin: 0 25px
-     
 
-     
-+at-breakpoint($large-desktop)   
+
+
++at-breakpoint($large-desktop)
   .main-menu
     &.long-menu
       ul
-        li 
-          margin: 0 33px  
+        li
+          margin: 0 33px
           &:first-child
             margin-left: 17px

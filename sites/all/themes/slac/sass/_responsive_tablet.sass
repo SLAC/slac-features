@@ -1,7 +1,7 @@
 +at-breakpoint($tablet)
 
   .page-basic
-    > .header-menu, 
+    > .header-menu,
     > .main-menu
       display: block
     > .content
@@ -30,7 +30,7 @@
           text-decoration: none
         &:last-child
           a
-            
+
             border-right: 0
             padding-right: 0
 
@@ -38,7 +38,7 @@
   //-----------------------------------
   .site-title
     // &:after
-      // content: 'tablet'  
+      // content: 'tablet'
     margin: 0 0 9px 0
   //Site name
   //-----------------------------------
@@ -47,10 +47,10 @@
     font-weight: bold
 
 
-  
+
   .mobile-block
     display: none !important
-  
+
   .page-basic
     > .header
       .header-wrapper
@@ -67,29 +67,29 @@
           text-decoration: underline
   //Content
   //-----------------------------------
-  .general-left, .panel-col-first, .general-left-title 
+  .general-left, .panel-col-first, .general-left-title
     +span-columns(8,12)
 
-    
+
   .general-left
     .reverse &
       +span-columns(5,12)
-  
-  .general-left-title 
+
+  .general-left-title
     .reverse &
       +prefix(5, 12)
       +reset-columns
 
-   
+
   .general-right, .panel-col-last
-  
+
     +span-columns(4 omega,12)
     .reverse &
       +span-columns(7 omega,12)
 
   .general-right, .general-left
     //padding-top: 47px
-    
+
     .pane-page-content &
       .front &
         padding-top: 0
@@ -102,9 +102,9 @@
       .content &
         padding: 0px 22px 13px 22px
         width: 100%
-      
 
-      
+
+
   .general-right
     .content &
       .front &
@@ -117,19 +117,19 @@
           /*margin-top: -24px*/
           &.region-grey-background-style, .front &
             /*margin-top: 0*/
-        
-        
+
+
         &.region-grey-background-style
           padding-top: 13px
-          
-  .panel-pane, .panels-ipe-portlet-wrapper 
+
+  .panel-pane, .panels-ipe-portlet-wrapper
     .general-right &
       .reverse &
         padding: 0
 
 
   .pane-page-content
-    .general-left    
+    .general-left
       .inside
         > .panel-pane
           &:last-of-type

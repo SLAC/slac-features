@@ -7,21 +7,21 @@
   max-width: 100% !important
   height: auto !important
   width: auto !important
-  a, img 
+  a, img
     max-width: 100%
     height: auto !important
     width: auto !important
 
 
 
-.region-content ul.field-slideshow-pager 
+.region-content ul.field-slideshow-pager
   list-style-type: none
   padding: 0
   overflow: hidden
 
 
 
-.jcarousel-clip 
+.jcarousel-clip
   overflow: hidden
 
 
@@ -32,12 +32,12 @@
   opacity: 1
 
 
-.field-slideshow-carousel-wrapper .hidden 
+.field-slideshow-carousel-wrapper .hidden
   display: none
   visibility: hidden
 
 
-.field-slideshow-controls .play 
+.field-slideshow-controls .play
   display: none
 
 
@@ -47,13 +47,13 @@
   overflow: hidden
 
 .field-name-field-slideshow-btmdesc-slide
-  .field-slideshow-image 
+  .field-slideshow-image
     img
       display: block
       max-width: 100%
       height: auto
 
-  
+
   .field-slideshow-pager
     display: none
 
@@ -62,25 +62,25 @@
 //Bottom text slider
 //---------------------------------------
 
-        
-          
+
+
 .pane-bundle-slideshow-description-bottom
   margin: 0 -13px
-  
+
   h2.pane-title
     display: none
 
   .field-slideshow-controls
-    a 
+    a
       display: block
-      text-indent: -9000px  
-      overflow: hidden  
+      text-indent: -9000px
+      overflow: hidden
       width: 35px
       height: 70px
       position: absolute
       z-index: 5
-      bottom: 0px  
-      color: #fff    
+      bottom: 0px
+      color: #fff
       &:after
         @extend .slac-font
         top: 50%
@@ -88,22 +88,22 @@
         left: 50%
         position: absolute
         font-size: 45px
-  
+
       &:focus
-        color: $red 
-      
+        color: $red
+
       .no-touch &
         &:hover
-          color: $red      
-      
-      
-      &.prev 
+          color: $red
+
+
+      &.prev
         left: 0
         &:after
           content: '\e609'
           margin-left: -10px
-    
-      &.next 
+
+      &.next
         right: 0
         &:after
           content: '\3d'
@@ -112,9 +112,9 @@
 
   .field-slideshow-body
     padding: 0 35px
-    +fontsize-rem(12px) 
+    +fontsize-rem(12px)
     color: #fff
-    background-color: rgba(0,0,0,.3) 
+    background-color: rgba(0,0,0,.3)
     .no-rgba &
       +background(image-url("fall_back_3perc.png") repeat 0 0)
     height: 70px
@@ -122,9 +122,9 @@
     &:hover
       a
         border-bottom: 1px dotted
-    
+
     a
-      color: inherit    
+      color: inherit
   .field-slideshow-description
     display: inline-block
     vertical-align: middle
@@ -136,12 +136,12 @@
     margin: auto
     &:hover
       .field-slideshow-controls
-        display: block  
+        display: block
 
 
-    .field-slideshow-controls 
+    .field-slideshow-controls
       display: none
-      a 
+      a
         top: 50%
         background-color: rgba(200, 200, 200, 0.5)
         .no-rgba &
@@ -150,20 +150,20 @@
         z-index: 99
         margin-top: -40px
         width: 30px
-        height: 55px        
+        height: 55px
         &:after
           margin-top: -29px
-        
+
         &:hover
           background-color: rgba(200, 200, 200, 0.7)
           .no-rgba &
             +background(image-url("fall_back_70perc_grey.png") repeat 0 0)
-        &.prev 
+        &.prev
           left: 20px
-        &.next 
+        &.next
           right: 20px
-        
-    .field-slideshow-body 
+
+    .field-slideshow-body
       position: absolute
       bottom: 0
       height: auto
@@ -173,10 +173,10 @@
       display: block
       padding: 10px 16px 10px
 
-  
-  
-    .field-slideshow-caption 
-      a 
+
+
+    .field-slideshow-caption
+      a
         color: #fff
         text-decoration: none
         font-size: 17px
@@ -187,31 +187,31 @@
   .pane-bundle-slideshow-description-bottom
     .field-slideshow-body
 
-      +fontsize-rem(12px) 
+      +fontsize-rem(12px)
 
 +at-breakpoint($small-desktop)
   .field-name-field-slideshow-btmdesc-slide
     border: 5px solid #fff
-    
+
   .pane-bundle-slideshow-description-bottom
     .field-slideshow-body
-      +fontsize-rem(14px) 
+      +fontsize-rem(14px)
 
     .field-slideshow-description
       line-height: 20px
-      
-+at-breakpoint($large-desktop)      
+
++at-breakpoint($large-desktop)
   .pane-bundle-slideshow-description-bottom
     .field-slideshow-body
       padding: 20px
       +fontsize-rem(16px)
-      
-      
-      
-.pane-bundle-slac-mini-slideshow       
-  .field-slideshow-controls 
+
+
+
+.pane-bundle-slac-mini-slideshow
+  .field-slideshow-controls
     a
-  
+
       &:after
         @extend .slac-font
         top: 50%
@@ -219,29 +219,29 @@
         left: 50%
         position: absolute
         font-size: 45px
-  
+
       &:focus
-        color: $red 
-      
+        color: $red
+
       .no-touch &
         &:hover
-          color: $red      
-      
-      
-      &.prev 
+          color: $red
+
+
+      &.prev
         left: 10px
         &:after
           content: '\e609'
           margin-left: -10px
-    
-      &.next 
+
+      &.next
         right: 10px
         &:after
           content: '\3d'
           margin-left: -6px
-          
-          
-    a 
+
+
+    a
       top: 50%
       background-color: rgba(200, 200, 200, 0.5)
       .no-rgba &
@@ -250,17 +250,17 @@
       z-index: 99
       margin-top: -30px
       width: 30px
-      height: 55px   
+      height: 55px
       display: block
-      text-indent: -9000px  
-      overflow: hidden  
+      text-indent: -9000px
+      overflow: hidden
       position: absolute
       z-index: 5
-      bottom: 0px  
-      color: #fff        
+      bottom: 0px
+      color: #fff
       &:after
         margin-top: -29px
-      
+
       &:hover
         background-color: rgba(200, 200, 200, 0.7)
         .no-rgba &
