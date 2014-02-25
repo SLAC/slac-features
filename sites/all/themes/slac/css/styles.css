@@ -1675,7 +1675,7 @@ article.node-blog.node-teaser {
       margin-bottom: 17px;
       overflow: visible !important; }
       .profile-info-full .profile-textformatter-list li a {
-        display: inline-block;
+        display: inline;
         vertical-align: middle; }
   .profile-info-full .profile-maxlist-more {
     line-height: inherit;
