@@ -15,7 +15,6 @@ dependencies[] = mediafield
 dependencies[] = options
 dependencies[] = strongarm
 dependencies[] = text
-;stylesheets[all][] = css/pp_demo_beans.css
 datestamp = 1382854652
 features[bean_type][] = block_with_brochures
 features[bean_type][] = content_block
