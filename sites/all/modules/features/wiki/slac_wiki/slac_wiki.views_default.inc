@@ -27,6 +27,7 @@ function slac_wiki_views_default_views() {
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['query']['options']['distinct'] = TRUE;
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
@@ -66,10 +67,6 @@ function slac_wiki_views_default_views() {
   $handler->display->display_options['fields']['title_1']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['title_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title_1']['link_to_node'] = FALSE;
-  /* Sort criterion: Content: Title */
-  $handler->display->display_options['sorts']['title']['id'] = 'title';
-  $handler->display->display_options['sorts']['title']['table'] = 'node';
-  $handler->display->display_options['sorts']['title']['field'] = 'title';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -87,16 +84,16 @@ function slac_wiki_views_default_views() {
 
   /* Display: A-Z */
   $handler = $view->new_display('block', 'A-Z', 'block');
-  $handler->display->display_options['defaults']['css_class'] = FALSE;
-  $handler->display->display_options['css_class'] = 'wiki-filter';
+  $handler->display->display_options['defaults']['query'] = FALSE;
+  $handler->display->display_options['query']['type'] = 'views_query';
 
   /* Display: Wiki Search */
   $handler = $view->new_display('panel_pane', 'Wiki Search', 'panel_pane_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['defaults']['css_class'] = FALSE;
-  $handler->display->display_options['css_class'] = 'wiki-search';
   $handler->display->display_options['defaults']['use_ajax'] = FALSE;
   $handler->display->display_options['use_ajax'] = TRUE;
+  $handler->display->display_options['defaults']['query'] = FALSE;
+  $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['defaults']['exposed_form'] = FALSE;
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Search';
@@ -191,6 +188,45 @@ function slac_wiki_views_default_views() {
   );
   $handler->display->display_options['filters']['field_slac_wiki_tags_tid']['reduce_duplicates'] = TRUE;
   $handler->display->display_options['filters']['field_slac_wiki_tags_tid']['vocabulary'] = 'slac_wiki_tags';
+
+  /* Display: By taxonomy */
+  $handler = $view->new_display('panel_pane', 'By taxonomy', 'panel_pane_2');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'node';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['empty'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Content: Tags (field_slac_wiki_tags) */
+  $handler->display->display_options['relationships']['field_slac_wiki_tags_tid']['id'] = 'field_slac_wiki_tags_tid';
+  $handler->display->display_options['relationships']['field_slac_wiki_tags_tid']['table'] = 'field_data_field_slac_wiki_tags';
+  $handler->display->display_options['relationships']['field_slac_wiki_tags_tid']['field'] = 'field_slac_wiki_tags_tid';
+  $handler->display->display_options['relationships']['field_slac_wiki_tags_tid']['required'] = TRUE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Post date */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Has taxonomy term ID (with depth) */
+  $handler->display->display_options['arguments']['term_node_tid_depth']['id'] = 'term_node_tid_depth';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['table'] = 'node';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['field'] = 'term_node_tid_depth';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['default_argument_type'] = 'taxonomy_tid';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['term_node_tid_depth']['validate']['type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['validate_options']['vocabularies'] = array(
+    'slac_wiki_tags' => 'slac_wiki_tags',
+  );
+  $handler->display->display_options['arguments']['term_node_tid_depth']['depth'] = '0';
   $export['wiki'] = $view;
 
   return $export;

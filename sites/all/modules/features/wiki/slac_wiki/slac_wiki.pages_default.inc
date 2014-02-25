@@ -239,6 +239,27 @@ function slac_wiki_default_page_manager_handlers() {
     $pane = new stdClass();
     $pane->pid = 'new-6';
     $pane->panel = 'right';
+    $pane->type = 'block';
+    $pane->subtype = 'menu-menu-slac-wiki';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-6'] = $pane;
+    $display->panels['right'][0] = 'new-6';
+    $pane = new stdClass();
+    $pane->pid = 'new-7';
+    $pane->panel = 'right';
     $pane->type = 'node_terms';
     $pane->subtype = 'node_terms';
     $pane->shown = TRUE;
@@ -259,14 +280,181 @@ function slac_wiki_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-6'] = $pane;
-    $display->panels['right'][0] = 'new-6';
+    $display->content['new-7'] = $pane;
+    $display->panels['right'][1] = 'new-7';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-5';
   $handler->conf['display'] = $display;
   $export['node_view_panel_context_7'] = $handler;
+
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'term_view_panel_context_4';
+  $handler->task = 'term_view';
+  $handler->subtask = '';
+  $handler->handler = 'panel_context';
+  $handler->weight = 5;
+  $handler->conf = array(
+    'title' => 'Wiki Tags',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'term_vocabulary',
+          'settings' => array(
+            'machine_name' => array(
+              'slac_wiki_tags' => 'slac_wiki_tags',
+            ),
+          ),
+          'context' => 'argument_term_1',
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+  );
+  $display = new panels_display();
+  $display->layout = 'two_col_article';
+  $display->layout_settings = array(
+    'items' => array(
+      'canvas' => array(
+        'type' => 'row',
+        'contains' => 'column',
+        'children' => array(
+          0 => 'main',
+        ),
+        'parent' => NULL,
+      ),
+      'main' => array(
+        'type' => 'column',
+        'width' => 100,
+        'width_type' => '%',
+        'children' => array(
+          0 => 'main-row',
+        ),
+        'parent' => 'canvas',
+      ),
+      'main-row' => array(
+        'type' => 'row',
+        'contains' => 'region',
+        'children' => array(
+          0 => 'center',
+          1 => 'right_side',
+        ),
+        'parent' => 'main',
+      ),
+      'center' => array(
+        'type' => 'region',
+        'title' => 'Center',
+        'width' => '69.91914477328713',
+        'width_type' => '%',
+        'parent' => 'main-row',
+      ),
+      'right_side' => array(
+        'type' => 'region',
+        'title' => 'Right Side',
+        'width' => '30.08085522671287',
+        'width_type' => '%',
+        'parent' => 'main-row',
+        'class' => '',
+      ),
+    ),
+  );
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'center' => NULL,
+      'right_side' => NULL,
+      'left' => NULL,
+      'right' => NULL,
+      'left_title' => NULL,
+      'left_author' => NULL,
+      'social_media_1' => NULL,
+      'social_media_2' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-8';
+    $pane->panel = 'left';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'wiki-panel_pane_2';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-8'] = $pane;
+    $display->panels['left'][0] = 'new-8';
+    $pane = new stdClass();
+    $pane->pid = 'new-9';
+    $pane->panel = 'left_title';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => 'Page title',
+      'title' => '',
+      'body' => '<h2 class="pane-title">Wiki pages tagged with "%term:name"</h2>
+',
+      'format' => 'full_html',
+      'substitute' => 1,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-9'] = $pane;
+    $display->panels['left_title'][0] = 'new-9';
+    $pane = new stdClass();
+    $pane->pid = 'new-10';
+    $pane->panel = 'right';
+    $pane->type = 'block';
+    $pane->subtype = 'menu-menu-slac-wiki';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-10'] = $pane;
+    $display->panels['right'][0] = 'new-10';
+  $display->hide_title = PANELS_TITLE_NONE;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $export['term_view_panel_context_4'] = $handler;
 
   return $export;
 }
