@@ -160,6 +160,27 @@ function slac_event_views_pre_render(&$view) {
 }
 
 /**
+ * Implements hook_views_query_alter().
+ */
+function slac_event_views_query_alter(&$view) {
+  $arg0 = arg(0);
+  $arg1 = arg(1);
+  if ($view->name == 'events' && $view->current_display == 'panel_pane_1') {
+    if ($arg0 == SLAC_EVENT_EVENTS_PAGE_URI && empty($arg1)) {
+      unset($view->query->where['date']);
+      $view->display_handler->options['pager'] = array(
+        'type' => 'some',
+        'options' => array(
+          'type' => 'some',
+          'items_per_page' => 10,
+        ),
+      );
+      $view->display_handler->handlers['header'] = array();
+    }
+  }
+}
+
+/**
  * Prepare argument for Event view of main content area (list of events).
  *
  * Should either pass url argument or current date in format 2014-01.
