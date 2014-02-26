@@ -170,9 +170,11 @@ function slac_event_views_query_alter(&$view) {
       unset($view->query->where['date']);
       $view->display_handler->options['pager'] = array(
         'type' => 'some',
+        'type' => 'some',
         'options' => array(
           'type' => 'some',
           'items_per_page' => 10,
+          'total_pages' => 1,
         ),
       );
       $view->display_handler->handlers['header'] = array();
