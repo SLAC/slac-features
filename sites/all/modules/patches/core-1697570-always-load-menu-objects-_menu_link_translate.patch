@@ -1,0 +1,23 @@
+diff --git a/includes/menu.inc b/includes/menu.inc
+index aef557a..9ada41e 100644
+--- a/includes/menu.inc
++++ b/includes/menu.inc
+@@ -917,13 +917,13 @@ function _menu_link_translate(&$item, $translate = FALSE) {
+       $item['access'] = FALSE;
+       return FALSE;
+     }
++    if (!empty($item['load_functions']) && !_menu_load_objects($item, $map)) {
++      // An error occurred loading an object.
++      $item['access'] = FALSE;
++      return FALSE;
++    }
+     // menu_tree_check_access() may set this ahead of time for links to nodes.
+     if (!isset($item['access'])) {
+-      if (!empty($item['load_functions']) && !_menu_load_objects($item, $map)) {
+-        // An error occurred loading an object.
+-        $item['access'] = FALSE;
+-        return FALSE;
+-      }
+       _menu_check_access($item, $map);
+     }
+     // For performance, don't localize a link the user can't access.
