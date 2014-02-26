@@ -15,6 +15,7 @@ features[field_base][] = field_bp_image
 features[field_instance][] = node-page-field_bp_image
 features[image][] = basic_page_large_image
 features[panelizer_defaults][] = node:page:default
+features[panelizer_defaults][] = node:page:no_left_sidebar
 features[variable][] = diff_enable_revisions_page_node_page
 features[variable][] = diff_show_preview_changes_node_page
 features[variable][] = diff_view_mode_preview_node_page
