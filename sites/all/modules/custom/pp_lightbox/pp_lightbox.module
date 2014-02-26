@@ -16,15 +16,33 @@ function pp_lightbox_media_wysiwyg_token_to_markup_alter(&$element, $tag_info, &
     return;
   }
 
-  // Do not alter output if Lighbox checkbox is not enabled.
-  if (!isset($tag_info['fields']) || !isset($tag_info['fields']['pp_lightbox']) || !$tag_info['fields']['pp_lightbox']) {
+  $add_description = TRUE;
+  if (!isset($tag_info['fields']) || !isset($tag_info['fields']['pp_description']) || !$tag_info['fields']['pp_description']) {
+    $add_description = FALSE;
+  }
+
+  $add_lightbox = FALSE;
+  if (isset($tag_info['fields']) && isset($tag_info['fields']['pp_lightbox']) && $tag_info['fields']['pp_lightbox']) {
+    $add_lightbox = TRUE;
+  }
+
+  if ($add_lightbox == FALSE && $add_description == FALSE) {
     return;
   }
 
   $image_style = substr($tag_info['view_mode'], strlen('crop_'));
   if (isset($element['content']['file'])) {
-    $element['content']['file']['#theme'] = 'image_style_lightbox';
-    $element['content']['file']['#style_name'] = $image_style;
+    if ($add_lightbox && $add_description) {
+      $element['content']['file']['#theme'] = 'image_style_lightbox_description';
+      $element['content']['file']['#style_name'] = $image_style;
+    }
+    elseif ($add_lightbox) {
+      $element['content']['file']['#theme'] = 'image_style_lightbox';
+      $element['content']['file']['#style_name'] = $image_style;
+    }
+    elseif ($add_description) {
+      $element['content']['file']['#theme'] = 'image_style_description';
+    }
   }
 }
 
@@ -53,6 +71,16 @@ function pp_lightbox_theme() {
   return array(
     'image_style_lightbox' => array(
       'variables' => array('style_name' => '', 'file' => NULL),
+    ),
+    'image_style_lightbox_description' => array(
+      'variables' => array('style_name' => '', 'file' => NULL),
+    ),
+    'image_style_description' => array(
+      'variables' => array('style_name' => '', 'file' => NULL),
+    ),
+    'pp_image_style_description' => array(
+      'variables' => array('content' => NULL, 'description' => NULL),
+      'template' => 'pp-image-style-description',
     ),
   );
 }
@@ -132,7 +160,45 @@ function theme_image_style_lightbox($variables) {
   $caption = '<p>' . implode('</p><p>', array_filter(array($title, $description))) . '</p>';
 
   $rendered_image_as_link = l($rendered_image, $image_url, array('attributes' => array('rel' => 'lightbox[inline_image][' . $caption . $rendered_link . ']'), 'html' => TRUE));
+
   return $rendered_image_as_link;
+}
+
+function theme_image_style_lightbox_description($variables) {
+  $image_style = $variables['style_name'];
+  $file = $variables['file'];
+  $description = isset($file->field_file_image_description[LANGUAGE_NONE][0]['value']) ? $file->field_file_image_description[LANGUAGE_NONE][0]['value'] : '';
+
+  $image_style_lightbox = theme('image_style_lightbox', array('style_name' => $image_style, 'file' => $file));
+  $image_style_lightbox_description = theme('pp_image_style_description', array('content' => $image_style_lightbox, 'description' => $description));
+
+  return $image_style_lightbox_description;
+}
+
+function theme_image_style_description($variables) {
+  $image_style = $variables['style_name'];
+  $file = $variables['file'];
+
+  $alt = isset($file->field_file_image_alt_text[LANGUAGE_NONE][0]['value']) ? $file->field_file_image_alt_text[LANGUAGE_NONE][0]['value'] : '';
+  $title = isset($file->field_file_image_title_text[LANGUAGE_NONE][0]['value']) ? $file->field_file_image_title_text[LANGUAGE_NONE][0]['value'] : '';
+  $description = isset($file->field_file_image_description[LANGUAGE_NONE][0]['value']) ? $file->field_file_image_description[LANGUAGE_NONE][0]['value'] : '';
+  $style_attribute = isset($file->override['attributes']['style']) ? $file->override['attributes']['style'] : '';
+
+  $rendered_image = theme('image_style', array(
+    'path' => $file->uri,
+    'style_name' => $image_style,
+    'width' => '',
+    'height' => '',
+    'alt' => $alt,
+    'title' => $title,
+    'attributes' => array(
+      'style' => $style_attribute,
+    ),
+  ));
+
+  $image_style_description = theme('pp_image_style_description', array('content' => $rendered_image, 'description' => $description));
+
+  return $image_style_description;
 }
 
 /**
@@ -156,12 +222,22 @@ function pp_lightbox_form_media_wysiwyg_format_form_alter(&$form, $form_state) {
     '#type' => 'checkbox',
     '#title' => t('Lightbox'),
   );
+  $form['pp_description'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Add image description'),
+    '#description' => t('Add image description in the body.'),
+    '#default_value' => TRUE,
+  );
 
   if (!isset($_GET['fields'])) {
     return;
   }
   $fields = json_decode($_GET['fields']);
+
   if (isset($fields->pp_lightbox)) {
     $form['pp_lightbox']['#default_value'] = $fields->pp_lightbox;
+  }
+  if (isset($fields->pp_description)) {
+    $form['pp_description']['#default_value'] = $fields->pp_description;
   }
 }
