@@ -45,8 +45,8 @@ function slac_basic_page_settings_strongarm() {
       ),
       'default' => array(
         'status' => 0,
-        'default' => 1,
-        'choice' => 1,
+        'default' => 0,
+        'choice' => 0,
       ),
       'teaser' => array(
         'status' => 0,
