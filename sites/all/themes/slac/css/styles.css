@@ -2610,6 +2610,12 @@ ol.search-results .search-snippet {
   margin-top: 10px;
   display: block; }
 
+.forum-table tr.even, .forum-table tr.odd {
+  background: none !important; }
+
+.forum-table-superheader {
+  display: none; }
+
 @media (min-width: 480px) {
   .views-field-field-prf-contact-photo {
     float: left; }
