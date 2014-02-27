@@ -2503,7 +2503,8 @@ ol.search-results .search-snippet {
       color: inherit;
       display: block; }
       .pane-menu-tree > div > ul.menu a:hover, .pane-menu-tree > div > ul.menu a.active {
-        background-color: #dfdfdf; }
+        background-color: #dfdfdf;
+        text-decoration: none; }
 
 @media (min-width: 690px) {
   .right-sidebar {
