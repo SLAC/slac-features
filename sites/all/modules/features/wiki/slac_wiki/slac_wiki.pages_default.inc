@@ -34,7 +34,7 @@ function slac_wiki_default_page_manager_handlers() {
           'name' => 'node_type',
           'settings' => array(
             'type' => array(
-              'slac_wiki_page' => 'slac_wiki_page',
+              'wiki_page' => 'wiki_page',
             ),
           ),
           'context' => 'argument_entity_id:node_1',

@@ -79,7 +79,7 @@ function slac_wiki_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'slac_wiki_page' => 'slac_wiki_page',
+    'wiki_page' => 'wiki_page',
   );
 
   /* Display: A-Z */
@@ -151,7 +151,7 @@ function slac_wiki_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'slac_wiki_page' => 'slac_wiki_page',
+    'wiki_page' => 'wiki_page',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
   /* Filter criterion: Global: Combine fields filter */

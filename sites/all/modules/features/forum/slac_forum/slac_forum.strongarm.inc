@@ -159,7 +159,7 @@ function slac_forum_strongarm() {
     'slac_news' => 'slac_news',
     'page' => 'page',
     'slac_sc_catalog_item' => 'slac_sc_catalog_item',
-    'slac_wiki_page' => 'slac_wiki_page',
+    'wiki_page' => 'wiki_page',
     'support_ticket' => 'support_ticket',
     'article' => 'article',
   );
@@ -298,7 +298,7 @@ function slac_forum_strongarm() {
     'slac_news' => 'slac_news',
     'page' => 'page',
     'slac_sc_catalog_item' => 'slac_sc_catalog_item',
-    'slac_wiki_page' => 'slac_wiki_page',
+    'wiki_page' => 'wiki_page',
     'support_ticket' => 'support_ticket',
     'article' => 'article',
   );

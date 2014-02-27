@@ -9,7 +9,7 @@ include_once 'slac_wiki.features.inc';
 /**
  * Implements hook_form_FORM_ID_alter
  */
-function slac_wiki_form_slac_wiki_page_node_form_alter(&$form, &$form_state, $form_id) {
+function slac_wiki_form_wiki_page_node_form_alter(&$form, &$form_state, $form_id) {
   $form['body'][LANGUAGE_NONE][0]['#format'] = 'markdown';
   $form['#attached']['js'] = array(
   drupal_get_path('module', 'slac_wiki') . '/slac_wiki.js',
@@ -20,7 +20,7 @@ function slac_wiki_form_slac_wiki_page_node_form_alter(&$form, &$form_state, $fo
  * Implements hook_form_FORM_ID_alter().
  */
 function slac_wiki_form_field_ui_field_edit_form_alter(&$form, &$form_state) {
-  if (isset($form['instance']['bundle']['#value']) && $form['instance']['bundle']['#value'] == 'slac_wiki_page') {
+  if (isset($form['instance']['bundle']['#value']) && $form['instance']['bundle']['#value'] == 'wiki_page') {
     if (isset($form['instance']['bueditor_profile'])) {
       $form['instance']['bueditor_profile']['#default_value'] = variable_get('bueditor_plus_profile_id', 0);
     }

@@ -1339,16 +1339,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: 'create slac_wiki_page content'.
-  $permissions['create slac_wiki_page content'] = array(
-    'name' => 'create slac_wiki_page content',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'authenticated user' => 'authenticated user',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: 'create support_ticket content'.
   $permissions['create support_ticket content'] = array(
     'name' => 'create support_ticket content',
@@ -1377,6 +1367,16 @@ function slac_intorg_permissions_user_default_permissions() {
       'author' => 'author',
       'editor' => 'editor',
       'site owner' => 'site owner',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'create wiki_page content'.
+  $permissions['create wiki_page content'] = array(
+    'name' => 'create wiki_page content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'node',
   );
@@ -1554,15 +1554,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: 'delete any slac_wiki_page content'.
-  $permissions['delete any slac_wiki_page content'] = array(
-    'name' => 'delete any slac_wiki_page content',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: 'delete any support_ticket content'.
   $permissions['delete any support_ticket content'] = array(
     'name' => 'delete any support_ticket content',
@@ -1590,6 +1581,15 @@ function slac_intorg_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'site owner' => 'site owner',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete any wiki_page content'.
+  $permissions['delete any wiki_page content'] = array(
+    'name' => 'delete any wiki_page content',
+    'roles' => array(
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -1780,16 +1780,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: 'delete own slac_wiki_page content'.
-  $permissions['delete own slac_wiki_page content'] = array(
-    'name' => 'delete own slac_wiki_page content',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'authenticated user' => 'authenticated user',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: 'delete own support_ticket content'.
   $permissions['delete own support_ticket content'] = array(
     'name' => 'delete own support_ticket content',
@@ -1830,6 +1820,16 @@ function slac_intorg_permissions_user_default_permissions() {
       'site owner' => 'site owner',
     ),
     'module' => 'webform',
+  );
+
+  // Exported permission: 'delete own wiki_page content'.
+  $permissions['delete own wiki_page content'] = array(
+    'name' => 'delete own wiki_page content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'node',
   );
 
   // Exported permission: 'delete revisions'.
@@ -2287,16 +2287,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: 'edit any slac_wiki_page content'.
-  $permissions['edit any slac_wiki_page content'] = array(
-    'name' => 'edit any slac_wiki_page content',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'authenticated user' => 'authenticated user',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: 'edit any social_media profile'.
   $permissions['edit any social_media profile'] = array(
     'name' => 'edit any social_media profile',
@@ -2336,6 +2326,16 @@ function slac_intorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'editor' => 'editor',
       'site owner' => 'site owner',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit any wiki_page content'.
+  $permissions['edit any wiki_page content'] = array(
+    'name' => 'edit any wiki_page content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'node',
   );
@@ -2602,15 +2602,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: 'edit own slac_wiki_page content'.
-  $permissions['edit own slac_wiki_page content'] = array(
-    'name' => 'edit own slac_wiki_page content',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: 'edit own social_media profile'.
   $permissions['edit own social_media profile'] = array(
     'name' => 'edit own social_media profile',
@@ -2665,6 +2656,15 @@ function slac_intorg_permissions_user_default_permissions() {
       'site owner' => 'site owner',
     ),
     'module' => 'webform',
+  );
+
+  // Exported permission: 'edit own wiki_page content'.
+  $permissions['edit own wiki_page content'] = array(
+    'name' => 'edit own wiki_page content',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'node',
   );
 
   // Exported permission: 'edit terms in blog_categories'.

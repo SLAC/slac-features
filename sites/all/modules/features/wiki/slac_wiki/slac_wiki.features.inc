@@ -31,8 +31,8 @@ function slac_wiki_views_api($module = NULL, $api = NULL) {
  */
 function slac_wiki_node_info() {
   $items = array(
-    'slac_wiki_page' => array(
-      'name' => t('SLAC Wiki Page'),
+    'wiki_page' => array(
+      'name' => t('Wiki Page'),
       'base' => 'node_content',
       'description' => t('A editable page that can be changed by any authenticated user. It also retains a list of editing history.'),
       'has_title' => '1',
