@@ -70,6 +70,17 @@ function slac_event_preprocess_node(&$vars) {
 }
 
 /**
+ * Preprocess function for event date and time field.
+ */
+function slac_preprocess_field (&$variables) {
+
+  if (isset($variables['element']['#field_name']) && $variables['element']['#field_name'] == 'field_slac_event_date') {
+
+    $variables['items'][0]['#markup'] .= ' PST';
+  }
+}
+
+/**
  * Count the number of nodes tagged with a term.
  */
 function _taxonomy_term_count_nodes($tid, $type = 0) {
