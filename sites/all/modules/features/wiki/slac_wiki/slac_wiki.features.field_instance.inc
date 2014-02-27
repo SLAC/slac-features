@@ -10,10 +10,10 @@
 function slac_wiki_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-slac_wiki_page-body'
-  $field_instances['node-slac_wiki_page-body'] = array(
+  // Exported field_instance: 'node-wiki_page-body'
+  $field_instances['node-wiki_page-body'] = array(
     'bueditor_profile' => 1,
-    'bundle' => 'slac_wiki_page',
+    'bundle' => 'wiki_page',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -71,9 +71,9 @@ function slac_wiki_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-slac_wiki_page-field_slac_wiki_attachment'
-  $field_instances['node-slac_wiki_page-field_slac_wiki_attachment'] = array(
-    'bundle' => 'slac_wiki_page',
+  // Exported field_instance: 'node-wiki_page-field_slac_wiki_attachment'
+  $field_instances['node-wiki_page-field_slac_wiki_attachment'] = array(
+    'bundle' => 'wiki_page',
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -125,9 +125,9 @@ function slac_wiki_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-slac_wiki_page-field_slac_wiki_tags'
-  $field_instances['node-slac_wiki_page-field_slac_wiki_tags'] = array(
-    'bundle' => 'slac_wiki_page',
+  // Exported field_instance: 'node-wiki_page-field_slac_wiki_tags'
+  $field_instances['node-wiki_page-field_slac_wiki_tags'] = array(
+    'bundle' => 'wiki_page',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
