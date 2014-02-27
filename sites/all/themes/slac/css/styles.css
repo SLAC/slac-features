@@ -564,9 +564,9 @@ a {
   text-decoration: none; }
   a:hover {
     color: #871628; }
-  .content .general-left a {
+  .content .general-left a, .content .general-one-col a {
     color: #871628; }
-    .content .general-left a:hover {
+    .content .general-left a:hover, .content .general-one-col a:hover {
       text-decoration: underline; }
   .content .general-right .panel-pane ul li a.active, .content .general-right .panel-pane ul li a.active-item {
     text-decoration: underline; }
