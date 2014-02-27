@@ -2592,6 +2592,13 @@ ol.search-results .search-snippet {
   .wiki-search li {
     margin-bottom: 20px; }
 
+#imageData #caption {
+  font-weight: normal !important; }
+
+.lightbox-download-link {
+  margin-top: 10px;
+  display: block; }
+
 @media (min-width: 480px) {
   .views-field-field-prf-contact-photo {
     float: left; }
