@@ -3305,6 +3305,8 @@ form.node-blog-form .filter-help {
     padding-left: 0; }
 
 @media (min-width: 690px) {
+  form.node-blog-form > div, form.node-form > div {
+    max-width: none; }
   form.node-blog-form div.vertical-tabs, form.node-form div.vertical-tabs {
     margin: 0 0 20px 0; }
   form.node-blog-form ul.vertical-tabs-list, form.node-form ul.vertical-tabs-list {
