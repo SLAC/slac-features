@@ -87,6 +87,14 @@ a[href*='mailto:'] {
   font-style: normal;
   text-indent: 0; }
 
+.date-and-author, .news-landing time, .news-landing .field-name-field-slac-news-date, .kb-articles time, .kb-articles .field-name-field-slac-news-date, .wiki-search .submitted {
+  color: #555555;
+  font-size: 12px;
+  font-size: 0.75rem;
+  display: block;
+  margin-bottom: 7px;
+  font-style: italic; }
+
 .basic-format-text, article.node-blog.view-mode-full .field-type-text-with-summary, article.node-blog.view-mode-full .blog-wrapper, .article_panel_layout .pane-node-body, .service-body, .node-slac-sc-catalog-item, .node-support-ticket .field-type-text-with-summary {
   font-size: 14px;
   font-size: 0.875rem;
@@ -556,9 +564,9 @@ a {
   text-decoration: none; }
   a:hover {
     color: #871628; }
-  .general-left .content a {
+  .content .general-left a {
     color: #871628; }
-    .general-left .content a:hover {
+    .content .general-left a:hover {
       text-decoration: underline; }
   .content .general-right .panel-pane ul li a.active, .content .general-right .panel-pane ul li a.active-item {
     text-decoration: underline; }
@@ -753,7 +761,7 @@ ul.tabs, .action-links {
   .links a {
     background-color: #aaaaaa;
     padding: 3px 6px;
-    color: white;
+    color: white !important;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     -ms-border-radius: 3px;
@@ -762,7 +770,8 @@ ul.tabs, .action-links {
     display: inline-block;
     margin: 3px 3px 3px 0; }
     .links a:hover {
-      background-color: #2e2e2e; }
+      background-color: #2e2e2e;
+      text-decoration: none !important; }
 
 .mobile-block {
   max-height: 100%;
@@ -1814,12 +1823,6 @@ table.sticky-table {
     border-bottom: 0;
     padding-bottom: 0;
     margin-bottom: 0; }
-.news-landing time, .news-landing .field-name-field-slac-news-date, .kb-articles time, .kb-articles .field-name-field-slac-news-date {
-  color: #555555;
-  font-size: 12px;
-  font-size: 0.75rem;
-  display: block;
-  margin-bottom: 7px; }
 
 @media (min-width: 480px) {
   .news-landing article, .kb-articles article {
@@ -2592,6 +2595,13 @@ ol.search-results .search-snippet {
     margin-bottom: 10px; }
   .wiki-search li {
     margin-bottom: 20px; }
+  .wiki-search header {
+    margin-bottom: 10px; }
+  .wiki-search h2 {
+    font-size: 18px;
+    font-size: 1.125rem; }
+  .wiki-search .field-type-text-with-summary {
+    margin-bottom: 10px; }
 
 #imageData #caption {
   font-weight: normal !important; }

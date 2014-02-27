@@ -196,6 +196,8 @@ function slac_wiki_views_default_views() {
   /* Display: By taxonomy */
   $handler = $view->new_display('panel_pane', 'By taxonomy', 'panel_pane_2');
   $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'wiki-search';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['defaults']['style_options'] = FALSE;

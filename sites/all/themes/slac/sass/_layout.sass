@@ -4,9 +4,10 @@ a
   text-decoration: none
   &:hover
     color: $red
-
-  .content &
-    .general-left &
+    
+  .general-left &
+    .content &
+    
       color: $red
       &:hover
         text-decoration: underline
@@ -227,12 +228,14 @@ ul.tabs, .action-links,
   a
     background-color: $grey-a
     padding: 3px 6px
-    color: #fff
+    color: #fff !important
     +border-radius(3px)
     display: inline-block
     margin: 3px 3px 3px 0
     &:hover
       background-color: $grey-2e
+      text-decoration: none !important
+      
 
 .mobile-block
   max-height: 100%
@@ -1638,10 +1641,7 @@ table.sticky-table
 
 
   time, .field-name-field-slac-news-date
-    color: $grey-5
-    +fontsize-rem(12px)
-    display: block
-    margin-bottom: 7px
+    @extend .date-and-author
 
 
 +at-breakpoint($less-than-480)
@@ -2627,6 +2627,18 @@ h2
 
   li
     margin-bottom: 20px
+
+  header
+    margin-bottom: 10px
+  
+  h2 
+    +fontsize-rem(18px)
+  
+  .submitted
+    @extend .date-and-author
+    
+  .field-type-text-with-summary
+    margin-bottom: 10px  
     
     
 #imageData #caption
