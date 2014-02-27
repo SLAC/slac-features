@@ -1,0 +1,15 @@
+name = Faq_Ask
+description = "Allows an unanswered question 'queue' for the FAQ module."
+dependencies[] = faq
+core = 7.x
+files[] = faq_ask.module
+files[] = faq_ask.test
+files[] = faq_ask.install
+files[] = faq_ask.unanswered.inc
+files[] = faq-ask-unanswered.tpl.php
+; Information added by drupal.org packaging script on 2013-09-30
+version = "7.x-1.0-alpha1+4-dev"
+core = "7.x"
+project = "faq_ask"
+datestamp = "1380577880"
+
