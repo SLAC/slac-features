@@ -2655,3 +2655,25 @@ h2
   
 .forum-table-superheader  
   display: none
+  
+  
+.pp-image-style-description-left, .pp-image-style-description-right
+  margin-bottom: 20px
+  img
+    float: none !important
+    
+
+
+
+.pp-image-style-description-description
+  margin-top: 3px
+  +fontsize-rem(12px) 
+  color: #676767
+  
++at-breakpoint($less-than-480)  
+  .pp-image-style-description-left 
+    float: left  
+    margin-right: 20px
+  .pp-image-style-description-right  
+    float: right   
+    margin-left: 20px  

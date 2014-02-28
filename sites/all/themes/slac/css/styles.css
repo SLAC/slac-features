@@ -2616,6 +2616,25 @@ ol.search-results .search-snippet {
 .forum-table-superheader {
   display: none; }
 
+.pp-image-style-description-left, .pp-image-style-description-right {
+  margin-bottom: 20px; }
+  .pp-image-style-description-left img, .pp-image-style-description-right img {
+    float: none !important; }
+
+.pp-image-style-description-description {
+  margin-top: 3px;
+  font-size: 12px;
+  font-size: 0.75rem;
+  color: #676767; }
+
+@media (min-width: 480px) {
+  .pp-image-style-description-left {
+    float: left;
+    margin-right: 20px; }
+
+  .pp-image-style-description-right {
+    float: right;
+    margin-left: 20px; } }
 @media (min-width: 480px) {
   .views-field-field-prf-contact-photo {
     float: left; }
