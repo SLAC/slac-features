@@ -9,10 +9,10 @@
  */
 function slac_faq_taxonomy_default_vocabularies() {
   return array(
-    'slac_faq_category' => array(
-      'name' => 'FAQ Category',
-      'machine_name' => 'slac_faq_category',
-      'description' => 'Categories used by FAQs',
+    'faq_categories' => array(
+      'name' => 'FAQ Categories',
+      'machine_name' => 'faq_categories',
+      'description' => '',
       'hierarchy' => 0,
       'module' => 'taxonomy',
       'weight' => 0,

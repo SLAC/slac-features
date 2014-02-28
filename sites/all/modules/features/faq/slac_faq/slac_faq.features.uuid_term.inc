@@ -11,21 +11,30 @@ function slac_faq_uuid_features_default_terms() {
   $terms = array();
 
   $terms[] = array(
-    'name' => 'Recreation Center',
+    'name' => 'SLAC',
     'description' => '',
     'format' => 'full_html',
     'weight' => 0,
-    'uuid' => 'b9236867-2fed-4032-8c59-5a6076d8d2fa',
-    'vocabulary_machine_name' => 'slac_faq_category',
+    'uuid' => '92dd70f6-ac28-4707-a6b6-13b2a94d6028',
+    'vocabulary_machine_name' => 'faq_categories',
     'metatags' => array(),
   );
   $terms[] = array(
     'name' => 'General feedback',
     'description' => '',
-    'format' => 'plain_text',
+    'format' => 'full_html',
     'weight' => 0,
-    'uuid' => 'fbf57dca-3b7d-4dba-8987-96e4f276b91f',
-    'vocabulary_machine_name' => 'slac_faq_category',
+    'uuid' => 'd3679f29-c528-4c4f-99ef-6aa7ca35a795',
+    'vocabulary_machine_name' => 'faq_categories',
+    'metatags' => array(),
+  );
+  $terms[] = array(
+    'name' => 'Recreation Center',
+    'description' => '',
+    'format' => 'full_html',
+    'weight' => 0,
+    'uuid' => 'db22e661-78c9-4acd-80df-cb53faaf5717',
+    'vocabulary_machine_name' => 'faq_categories',
     'metatags' => array(),
   );
   return $terms;

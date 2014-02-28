@@ -5,33 +5,3 @@
  */
 
 include_once 'slac_faq.features.inc';
-
-/**
- * Preprocess function.
- */
-function slac_faq_preprocess_views_view(&$vars) {
-  if ($vars['view']->name == 'faq') {
-    drupal_add_js(drupal_get_path('module', 'slac_faq') . '/slac_faq.js');
-  } 
-}
-
-/**
- * Preprocess function.
- */
-function slac_faq_preprocess_node(&$vars) {
-  $answer = '';
-  if ($vars['type'] == 'slac_faq' && isset($vars['field_slac_faq_answer'][0]['value'])) {
-    $vars['answer'] = $vars['field_slac_faq_answer'][0]['value'];
-  }
-  elseif ($vars['type'] == 'slac_faq' && isset($vars['field_slac_faq_answer'][LANGUAGE_NONE][0]['value'])) {
-    $vars['answer'] = $vars['field_slac_faq_answer'][LANGUAGE_NONE][0]['value'];
-  }
-}
-
-/**
- * Implements hook_form_FORM_ID_alter.
- */
-function slac_faq_form_slac_faq_node_form_alter(&$form, &$form_state, $form_id) {
-  $form['title']['#title'] = t('Question');
-  $form['title']['#description'] = t('Please enter your question in the short format here.');
-}
