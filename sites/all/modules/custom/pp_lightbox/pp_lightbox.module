@@ -79,7 +79,7 @@ function pp_lightbox_theme() {
       'variables' => array('style_name' => '', 'file' => NULL),
     ),
     'pp_image_style_description' => array(
-      'variables' => array('content' => NULL, 'description' => NULL),
+      'variables' => array('content' => NULL, 'description' => NULL, 'position' => 'not-justified'),
       'template' => 'pp-image-style-description',
     ),
   );
@@ -168,9 +168,17 @@ function theme_image_style_lightbox_description($variables) {
   $image_style = $variables['style_name'];
   $file = $variables['file'];
   $description = isset($file->field_file_image_description[LANGUAGE_NONE][0]['value']) ? $file->field_file_image_description[LANGUAGE_NONE][0]['value'] : '';
+  $style_attribute = isset($file->override['attributes']['style']) ? $file->override['attributes']['style'] : '';
+
+  $position = 'not-justified';
+  $positions = array('left', 'center', 'right');
+  $float_attribute = preg_match('/float:\s(left|center|right*)\;/', $style_attribute, $float_position);
+  if (isset($float_position['1']) && in_array($float_position['1'], $positions)) {
+    $position = $float_position['1'];
+  }
 
   $image_style_lightbox = theme('image_style_lightbox', array('style_name' => $image_style, 'file' => $file));
-  $image_style_lightbox_description = theme('pp_image_style_description', array('content' => $image_style_lightbox, 'description' => $description));
+  $image_style_lightbox_description = theme('pp_image_style_description', array('content' => $image_style_lightbox, 'description' => $description, 'position' => $position));
 
   return $image_style_lightbox_description;
 }
@@ -184,6 +192,13 @@ function theme_image_style_description($variables) {
   $description = isset($file->field_file_image_description[LANGUAGE_NONE][0]['value']) ? $file->field_file_image_description[LANGUAGE_NONE][0]['value'] : '';
   $style_attribute = isset($file->override['attributes']['style']) ? $file->override['attributes']['style'] : '';
 
+  $position = 'not-justified';
+  $positions = array('left', 'center', 'right');
+  $float_attribute = preg_match('/float:\s(left|center|right*)\;/', $style_attribute, $float_position);
+  if (isset($float_position['1']) && in_array($float_position['1'], $positions)) {
+    $position = $float_position['1'];
+  }
+
   $rendered_image = theme('image_style', array(
     'path' => $file->uri,
     'style_name' => $image_style,
@@ -196,7 +211,7 @@ function theme_image_style_description($variables) {
     ),
   ));
 
-  $image_style_description = theme('pp_image_style_description', array('content' => $rendered_image, 'description' => $description));
+  $image_style_description = theme('pp_image_style_description', array('content' => $rendered_image, 'description' => $description, 'position' => $position));
 
   return $image_style_description;
 }
@@ -241,3 +256,4 @@ function pp_lightbox_form_media_wysiwyg_format_form_alter(&$form, $form_state) {
     $form['pp_description']['#default_value'] = $fields->pp_description;
   }
 }
+
