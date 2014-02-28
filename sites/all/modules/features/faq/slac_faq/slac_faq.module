@@ -5,3 +5,10 @@
  */
 
 include_once 'slac_faq.features.inc';
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function slac_faq_form_faq_node_form_alter(&$form, &$form_state) {
+  dpm($form);
+}
