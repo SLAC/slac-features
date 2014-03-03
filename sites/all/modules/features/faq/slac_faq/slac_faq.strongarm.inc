@@ -204,7 +204,7 @@ function slac_faq_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'faq_ask_vocabularies';
   $strongarm->value = array(
-    11 => '11',
+    5 => '5',
   );
   $export['faq_ask_vocabularies'] = $strongarm;
 
