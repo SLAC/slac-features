@@ -181,7 +181,7 @@ function slac_faq_field_default_field_instances() {
     'bundle' => 'faq',
     'default_value' => array(
       0 => array(
-        'value' => 'open',
+        'value' => 'closed',
       ),
     ),
     'deleted' => 0,
