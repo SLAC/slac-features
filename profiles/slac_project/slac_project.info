@@ -184,3 +184,6 @@ dependencies[] = cami
 dependencies[] = webauth
 dependencies[] = slac_webauth_settings
 dependencies[] = slac_ldap_roles
+
+;Custom ctools plugins
+dependencies[] = ctools_plugins
