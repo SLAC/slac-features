@@ -380,6 +380,24 @@ function slac_intorg_permissions_user_default_permissions() {
     'module' => 'download_file',
   );
 
+  // Exported permission: 'administer faq'.
+  $permissions['administer faq'] = array(
+    'name' => 'administer faq',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'faq',
+  );
+
+  // Exported permission: 'administer faq order'.
+  $permissions['administer faq order'] = array(
+    'name' => 'administer faq order',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'faq',
+  );
+
   // Exported permission: 'administer features'.
   $permissions['administer features'] = array(
     'name' => 'administer features',
@@ -950,6 +968,24 @@ function slac_intorg_permissions_user_default_permissions() {
     'module' => 'workbench_moderation',
   );
 
+  // Exported permission: 'answer question'.
+  $permissions['answer question'] = array(
+    'name' => 'answer question',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'faq_ask',
+  );
+
+  // Exported permission: 'ask question'.
+  $permissions['ask question'] = array(
+    'name' => 'ask question',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'faq_ask',
+  );
+
   // Exported permission: 'block IP addresses'.
   $permissions['block IP addresses'] = array(
     'name' => 'block IP addresses',
@@ -1184,11 +1220,13 @@ function slac_intorg_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: 'create field_slac_faq_status'.
-  $permissions['create field_slac_faq_status'] = array(
-    'name' => 'create field_slac_faq_status',
-    'roles' => array(),
-    'module' => 'field_permissions',
+  // Exported permission: 'create faq content'.
+  $permissions['create faq content'] = array(
+    'name' => 'create faq content',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'node',
   );
 
   // Exported permission: 'create fieldable fieldable_panels_pane'.
@@ -1472,6 +1510,15 @@ function slac_intorg_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'delete any faq content'.
+  $permissions['delete any faq content'] = array(
+    'name' => 'delete any faq content',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: 'delete any forum content'.
   $permissions['delete any forum content'] = array(
     'name' => 'delete any forum content',
@@ -1517,16 +1564,6 @@ function slac_intorg_permissions_user_default_permissions() {
   // Exported permission: 'delete any page content'.
   $permissions['delete any page content'] = array(
     'name' => 'delete any page content',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'site owner' => 'site owner',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'delete any slac_faq content'.
-  $permissions['delete any slac_faq content'] = array(
-    'name' => 'delete any slac_faq content',
     'roles' => array(
       'administrator' => 'administrator',
       'site owner' => 'site owner',
@@ -1697,6 +1734,15 @@ function slac_intorg_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'delete own faq content'.
+  $permissions['delete own faq content'] = array(
+    'name' => 'delete own faq content',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: 'delete own forum content'.
   $permissions['delete own forum content'] = array(
     'name' => 'delete own forum content',
@@ -1744,16 +1790,6 @@ function slac_intorg_permissions_user_default_permissions() {
   // Exported permission: 'delete own page content'.
   $permissions['delete own page content'] = array(
     'name' => 'delete own page content',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'site owner' => 'site owner',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'delete own slac_faq content'.
-  $permissions['delete own slac_faq content'] = array(
-    'name' => 'delete own slac_faq content',
     'roles' => array(
       'administrator' => 'administrator',
       'site owner' => 'site owner',
@@ -1906,16 +1942,6 @@ function slac_intorg_permissions_user_default_permissions() {
   // Exported permission: 'delete terms in slac_blog_tags'.
   $permissions['delete terms in slac_blog_tags'] = array(
     'name' => 'delete terms in slac_blog_tags',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'editor' => 'editor',
-    ),
-    'module' => 'taxonomy',
-  );
-
-  // Exported permission: 'delete terms in slac_faq_category'.
-  $permissions['delete terms in slac_faq_category'] = array(
-    'name' => 'delete terms in slac_faq_category',
     'roles' => array(
       'administrator' => 'administrator',
       'editor' => 'editor',
@@ -2200,6 +2226,15 @@ function slac_intorg_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'edit any faq content'.
+  $permissions['edit any faq content'] = array(
+    'name' => 'edit any faq content',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: 'edit any forum content'.
   $permissions['edit any forum content'] = array(
     'name' => 'edit any forum content',
@@ -2246,17 +2281,6 @@ function slac_intorg_permissions_user_default_permissions() {
   // Exported permission: 'edit any page content'.
   $permissions['edit any page content'] = array(
     'name' => 'edit any page content',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'editor' => 'editor',
-      'site owner' => 'site owner',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'edit any slac_faq content'.
-  $permissions['edit any slac_faq content'] = array(
-    'name' => 'edit any slac_faq content',
     'roles' => array(
       'administrator' => 'administrator',
       'editor' => 'editor',
@@ -2348,13 +2372,6 @@ function slac_intorg_permissions_user_default_permissions() {
       'site owner' => 'site owner',
     ),
     'module' => 'bean',
-  );
-
-  // Exported permission: 'edit field_slac_faq_status'.
-  $permissions['edit field_slac_faq_status'] = array(
-    'name' => 'edit field_slac_faq_status',
-    'roles' => array(),
-    'module' => 'field_permissions',
   );
 
   // Exported permission: 'edit fieldable fieldable_panels_pane'.
@@ -2503,11 +2520,13 @@ function slac_intorg_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: 'edit own field_slac_faq_status'.
-  $permissions['edit own field_slac_faq_status'] = array(
-    'name' => 'edit own field_slac_faq_status',
-    'roles' => array(),
-    'module' => 'field_permissions',
+  // Exported permission: 'edit own faq content'.
+  $permissions['edit own faq content'] = array(
+    'name' => 'edit own faq content',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'node',
   );
 
   // Exported permission: 'edit own forum content'.
@@ -2557,18 +2576,6 @@ function slac_intorg_permissions_user_default_permissions() {
   // Exported permission: 'edit own page content'.
   $permissions['edit own page content'] = array(
     'name' => 'edit own page content',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
-      'site owner' => 'site owner',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'edit own slac_faq content'.
-  $permissions['edit own slac_faq content'] = array(
-    'name' => 'edit own slac_faq content',
     'roles' => array(
       'administrator' => 'administrator',
       'author' => 'author',
@@ -2730,16 +2737,6 @@ function slac_intorg_permissions_user_default_permissions() {
   // Exported permission: 'edit terms in slac_blog_tags'.
   $permissions['edit terms in slac_blog_tags'] = array(
     'name' => 'edit terms in slac_blog_tags',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'editor' => 'editor',
-    ),
-    'module' => 'taxonomy',
-  );
-
-  // Exported permission: 'edit terms in slac_faq_category'.
-  $permissions['edit terms in slac_faq_category'] = array(
-    'name' => 'edit terms in slac_faq_category',
     'roles' => array(
       'administrator' => 'administrator',
       'editor' => 'editor',
@@ -3269,11 +3266,13 @@ function slac_intorg_permissions_user_default_permissions() {
     'module' => 'date_repeat_field',
   );
 
-  // Exported permission: 'view field_slac_faq_status'.
-  $permissions['view field_slac_faq_status'] = array(
-    'name' => 'view field_slac_faq_status',
-    'roles' => array(),
-    'module' => 'field_permissions',
+  // Exported permission: 'view faq page'.
+  $permissions['view faq page'] = array(
+    'name' => 'view faq page',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'faq',
   );
 
   // Exported permission: 'view files'.
@@ -3377,13 +3376,6 @@ function slac_intorg_permissions_user_default_permissions() {
       'site owner' => 'site owner',
     ),
     'module' => 'profile2',
-  );
-
-  // Exported permission: 'view own field_slac_faq_status'.
-  $permissions['view own field_slac_faq_status'] = array(
-    'name' => 'view own field_slac_faq_status',
-    'roles' => array(),
-    'module' => 'field_permissions',
   );
 
   // Exported permission: 'view own files'.
