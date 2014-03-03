@@ -32,7 +32,6 @@ function slac_misc_paranoia_hide_modules() {
 function slac_misc_demo_modules() {
   return array(
     'slac_blog_demo',
-    'slac_faq_demo',
     'slac_demo_accounts',
     'slac_demo_main_menu',
   );
