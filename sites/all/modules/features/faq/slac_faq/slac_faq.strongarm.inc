@@ -330,16 +330,16 @@ function slac_faq_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'detailed_question' => array(
-          'weight' => '2',
+          'weight' => '3',
         ),
         'metatags' => array(
-          'weight' => '6',
+          'weight' => '7',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '5',
+          'weight' => '6',
         ),
       ),
       'display' => array(),

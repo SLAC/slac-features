@@ -57,7 +57,7 @@ function slac_faq_field_default_field_instances() {
         'weight' => 0,
       ),
       'default' => array(
-        'label' => 'hidden',
+        'label' => 'above',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -89,7 +89,7 @@ function slac_faq_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 3,
+      'weight' => 4,
     ),
   );
 
@@ -111,7 +111,7 @@ function slac_faq_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -136,6 +136,46 @@ function slac_faq_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-faq-field_question_details'
+  $field_instances['node-faq-field_question_details'] = array(
+    'bundle' => 'faq',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Longer question text. This will be displayed in all layouts where the answer appears, in addition to the shorter question text.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_question_details',
+    'label' => 'Question details',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 3,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 2,
+    ),
+  );
+
   // Exported field_instance: 'node-faq-field_status'
   $field_instances['node-faq-field_status'] = array(
     'bundle' => 'faq',
@@ -157,7 +197,7 @@ function slac_faq_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -178,7 +218,7 @@ function slac_faq_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
@@ -187,8 +227,10 @@ function slac_faq_field_default_field_instances() {
   t('Body');
   t('Category');
   t('Comment');
+  t('Longer question text. This will be displayed in all layouts where the answer appears, in addition to the shorter question text.');
   t('Please indicate if the FAQ is opened or closed, only open FAQ will appear in the queue.');
   t('Please select the category for this question.');
+  t('Question details');
   t('Status');
 
   return $field_instances;

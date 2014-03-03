@@ -43,11 +43,11 @@ function slac_faq_demo_uuid_features_default_content() {
   'field_faq_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 26,
+        'tid' => 2,
         'uuid' => 'd3679f29-c528-4c4f-99ef-6aa7ca35a795',
       ),
       1 => array(
-        'tid' => 27,
+        'tid' => 3,
         'uuid' => 'db22e661-78c9-4acd-80df-cb53faaf5717',
       ),
     ),
@@ -59,6 +59,7 @@ function slac_faq_demo_uuid_features_default_content() {
       ),
     ),
   ),
+  'field_question_details' => array(),
   'metatags' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
@@ -122,7 +123,7 @@ function slac_faq_demo_uuid_features_default_content() {
   'name' => 'admin',
   'picture' => 0,
   'date' => '2014-02-27 11:23:05 +0200',
-  'author_uuid' => '7a4ec0da-0829-4d8f-8579-48a02591c87b',
+  'author_uuid' => '63fae3c0-f6a4-41cd-ac1c-919f109dfb32',
 );
   $nodes[] = array(
   'title' => 'Where is the recreation center located?',
@@ -157,7 +158,7 @@ function slac_faq_demo_uuid_features_default_content() {
   'field_faq_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 27,
+        'tid' => 3,
         'uuid' => 'db22e661-78c9-4acd-80df-cb53faaf5717',
       ),
     ),
@@ -169,6 +170,7 @@ function slac_faq_demo_uuid_features_default_content() {
       ),
     ),
   ),
+  'field_question_details' => array(),
   'metatags' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
@@ -232,7 +234,7 @@ function slac_faq_demo_uuid_features_default_content() {
   'name' => 'admin',
   'picture' => 0,
   'date' => '2014-02-27 11:23:40 +0200',
-  'author_uuid' => '7a4ec0da-0829-4d8f-8579-48a02591c87b',
+  'author_uuid' => '63fae3c0-f6a4-41cd-ac1c-919f109dfb32',
 );
   $nodes[] = array(
   'title' => 'What equipment and facilities are available in the recreation center?',
@@ -267,7 +269,7 @@ function slac_faq_demo_uuid_features_default_content() {
   'field_faq_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 26,
+        'tid' => 2,
         'uuid' => 'd3679f29-c528-4c4f-99ef-6aa7ca35a795',
       ),
     ),
@@ -279,6 +281,7 @@ function slac_faq_demo_uuid_features_default_content() {
       ),
     ),
   ),
+  'field_question_details' => array(),
   'metatags' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
@@ -342,7 +345,7 @@ function slac_faq_demo_uuid_features_default_content() {
   'name' => 'admin',
   'picture' => 0,
   'date' => '2014-02-27 11:22:07 +0200',
-  'author_uuid' => '7a4ec0da-0829-4d8f-8579-48a02591c87b',
+  'author_uuid' => '63fae3c0-f6a4-41cd-ac1c-919f109dfb32',
 );
   $nodes[] = array(
   'title' => 'What is SLAC?',
@@ -366,13 +369,13 @@ function slac_faq_demo_uuid_features_default_content() {
       0 => array(
         'value' => '<p>SLAC\'s full name is the SLAC National Accelerator Laboratory. SLAC is a US Department of Energy lab operated by Stanford University. SLAC was established in 1962 as a particle physics research center, and is now a multipurpose laboratory for astrophysics, photon science, accelerator and particle physics research. The main accelerator is 2 miles long—the longest linear accelerator in the world—and has been operational since 1966.<br>
 	SLAC is home to two x-ray light source facilities: The Stanford Synchrotron Radiation Lightsource (SSRL) and the Linac Coherent Light Source (LCLS). The SSRL is primarily used for materials science and biology experiments which take advantage of the high-intensity, monochromatic synchrotron radiation emitted by the stored electron beam to study the structure of molecules. In the early 1990s, an independent electron injector was built for this storage ring, allowing it to operate independently of the main linear accelerator.<br>
-	The LCLS is a free electron laser facility that utilizes the last 1/3 of the original linear accelerator at SLAC. The laser uses hard X-rays with wavelengths similar in width to an atom. This enables researchers to take "snapshots" of objects on the nearly atomic level before the samples are destroyed by the intensity of the beam itself.</p>
+	The LCLS is a free electron laser facility that utilizes the last 1/3 of the original linear accelerator at SLAC. The laser uses hard X-rays with wavelengths similar in width to an atom. This enables researchers to take "snapshots" of objects on the nearly atomic level before the samples are destroyed by the intensity of the beam itself. dfhgsdgh</p>
 ',
         'summary' => '',
         'format' => 'full_html',
         'safe_value' => ' <p>SLAC\'s full name is the SLAC National Accelerator Laboratory. SLAC is a US Department of Energy lab operated by Stanford University. SLAC was established in 1962 as a particle physics research center, and is now a multipurpose laboratory for astrophysics, photon science, accelerator and particle physics research. The main accelerator is 2 miles long—the longest linear accelerator in the world—and has been operational since 1966.<br /><br />
 	SLAC is home to two x-ray light source facilities: The Stanford Synchrotron Radiation Lightsource (SSRL) and the Linac Coherent Light Source (LCLS). The SSRL is primarily used for materials science and biology experiments which take advantage of the high-intensity, monochromatic synchrotron radiation emitted by the stored electron beam to study the structure of molecules. In the early 1990s, an independent electron injector was built for this storage ring, allowing it to operate independently of the main linear accelerator.<br /><br />
-	The LCLS is a free electron laser facility that utilizes the last 1/3 of the original linear accelerator at SLAC. The laser uses hard X-rays with wavelengths similar in width to an atom. This enables researchers to take "snapshots" of objects on the nearly atomic level before the samples are destroyed by the intensity of the beam itself.</p>
+	The LCLS is a free electron laser facility that utilizes the last 1/3 of the original linear accelerator at SLAC. The laser uses hard X-rays with wavelengths similar in width to an atom. This enables researchers to take "snapshots" of objects on the nearly atomic level before the samples are destroyed by the intensity of the beam itself. dfhgsdgh</p>
  ',
         'safe_summary' => '  ',
       ),
@@ -381,7 +384,7 @@ function slac_faq_demo_uuid_features_default_content() {
   'field_faq_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 68,
+        'tid' => 1,
         'uuid' => '92dd70f6-ac28-4707-a6b6-13b2a94d6028',
       ),
     ),
@@ -390,6 +393,17 @@ function slac_faq_demo_uuid_features_default_content() {
     'und' => array(
       0 => array(
         'value' => 'open',
+      ),
+    ),
+  ),
+  'field_question_details' => array(
+    'und' => array(
+      0 => array(
+        'value' => '<p>Some details about SLAC.</p>
+',
+        'format' => 'full_html',
+        'safe_value' => ' <p>Some details about SLAC.</p>
+ ',
       ),
     ),
   ),
@@ -456,7 +470,7 @@ function slac_faq_demo_uuid_features_default_content() {
   'name' => 'admin',
   'picture' => 0,
   'date' => '2014-02-27 18:50:48 +0200',
-  'author_uuid' => '7a4ec0da-0829-4d8f-8579-48a02591c87b',
+  'author_uuid' => '63fae3c0-f6a4-41cd-ac1c-919f109dfb32',
 );
   return $nodes;
 }
