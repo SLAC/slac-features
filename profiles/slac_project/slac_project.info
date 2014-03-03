@@ -71,6 +71,8 @@ dependencies[] = uuid_features
 dependencies[] = strongarm
 
 ;FAQ
+dependencies[] = faq
+dependencies[] = faq_ask
 dependencies[] = entity_token
 dependencies[] = rules
 dependencies[] = views_content
