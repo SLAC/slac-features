@@ -331,6 +331,67 @@ function slac_faq_default_page_manager_pages() {
   $page = new stdClass();
   $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
   $page->api_version = 1;
+  $page->name = 'edit_faq_s';
+  $page->task = 'page';
+  $page->admin_title = 'Edit FAQ\'s';
+  $page->admin_description = '';
+  $page->path = 'faq/edit-questions';
+  $page->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'role',
+        'settings' => array(
+          'rids' => array(
+            0 => 6,
+            1 => 5,
+            2 => 3,
+            3 => 4,
+          ),
+        ),
+        'context' => 'logged-in-user',
+        'not' => FALSE,
+      ),
+    ),
+    'logic' => 'and',
+  );
+  $page->menu = array(
+    'type' => 'action',
+    'title' => 'Edit/Answer Questions',
+    'name' => 'navigation',
+    'weight' => '2',
+    'parent' => array(
+      'type' => 'none',
+      'title' => '',
+      'name' => 'navigation',
+      'weight' => '0',
+    ),
+  );
+  $page->arguments = array();
+  $page->conf = array(
+    'admin_paths' => FALSE,
+  );
+  $page->default_handlers = array();
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_edit_faq_s_http_response';
+  $handler->task = 'page';
+  $handler->subtask = 'edit_faq_s';
+  $handler->handler = 'http_response';
+  $handler->weight = 0;
+  $handler->conf = array(
+    'title' => 'HTTP response code',
+    'contexts' => array(),
+    'relationships' => array(),
+    'code' => '301',
+    'destination' => 'admin/config/faq/edit-questions',
+  );
+  $page->default_handlers[$handler->name] = $handler;
+  $pages['edit_faq_s'] = $page;
+
+  $page = new stdClass();
+  $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
+  $page->api_version = 1;
   $page->name = 'faq';
   $page->task = 'page';
   $page->admin_title = 'FAQ';

@@ -26,6 +26,7 @@ features[field_instance][] = node-faq-field_question_details
 features[field_instance][] = node-faq-field_status
 features[page_manager_handlers][] = node_view_panel_context_7
 features[page_manager_pages][] = add_new_faq
+features[page_manager_pages][] = edit_faq_s
 features[page_manager_pages][] = faq
 features[taxonomy][] = faq_categories
 features[uuid_term][] = 92dd70f6-ac28-4707-a6b6-13b2a94d6028
