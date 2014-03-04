@@ -1,0 +1,4 @@
+name = SLAC Search
+description = "Provides search functionality."
+package = SLAC
+core = 7.x

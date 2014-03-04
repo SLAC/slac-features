@@ -550,15 +550,11 @@ function default_site_template_eo_default_page_manager_handlers() {
     $pane = new stdClass();
     $pane->pid = 'new-11';
     $pane->panel = 'user-search';
-    $pane->type = 'slac_search_redirect';
-    $pane->subtype = 'slac_search_redirect';
+    $pane->type = 'search_block';
+    $pane->subtype = 'search_block';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array(
-      'text' => '',
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
+    $pane->configuration = array();
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,

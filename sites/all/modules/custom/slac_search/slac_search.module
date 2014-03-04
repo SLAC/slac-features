@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * Implements hook_ctools_plugin_directory().
+ */
+function slac_search_ctools_plugin_directory($module, $plugin) {
+  if ($module === 'ctools') {
+    return 'plugins/' . $plugin;
+  }
+}
+
+/**
+ * Implements hook_ctools_plugin_api().
+ */
+function slac_search_ctools_plugin_api($module, $api) {
+  if ($module == 'page_manager') {
+    return array('version' => 1);
+  }
+}
+
+
