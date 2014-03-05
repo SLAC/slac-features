@@ -2063,15 +2063,6 @@ function slac_project_permissions_user_default_permissions() {
     'module' => 'bean',
   );
 
-  // Exported permission: 'view date repeats'.
-  $permissions['view date repeats'] = array(
-    'name' => 'view date repeats',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'date_repeat_field',
-  );
-
   // Exported permission: 'view faq page'.
   $permissions['view faq page'] = array(
     'name' => 'view faq page',
