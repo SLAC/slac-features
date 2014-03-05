@@ -299,3 +299,12 @@ function devel_phpinfo() {
   print phpinfo();
   drupal_exit();
 }
+
+/**
+ * Generate information about state of the repo.
+ */
+function devel_git() {
+  $output = array();
+  exec('cd ' . DRUPAL_ROOT . ' && git log --name-status HEAD^..HEAD', $output);
+  return '<h2>' . t('Latest commit:') . '</h2><pre>' . implode("\n", $output) . '</pre>';
+}

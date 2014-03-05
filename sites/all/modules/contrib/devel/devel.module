@@ -204,6 +204,13 @@ function devel_menu() {
     'file path' => drupal_get_path('module', 'system'),
     'menu_name' => 'devel',
   );
+  $items['devel/git'] = array(
+    'title' => 'Git information',
+    'page callback' => 'devel_git',
+    'access arguments' => array('access devel information'),
+    'file' => 'devel.pages.inc',
+    'type' => MENU_CALLBACK
+  );
 
   // Duplicate path in 2 different menus. See http://drupal.org/node/601788.
   $items['devel/settings'] = array(

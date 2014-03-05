@@ -1,0 +1,35 @@
+diff --git a/devel.module b/devel.module
+index 624ac7d..ec2ec99 100644
+--- a/devel.module
++++ b/devel.module
+@@ -208,6 +208,13 @@ function devel_menu() {
+     'file path' => drupal_get_path('module', 'system'),
+     'menu_name' => 'devel',
+   );
++  $items['devel/git'] = array(
++    'title' => 'Git information',
++    'page callback' => 'devel_git',
++    'access arguments' => array('access devel information'),
++    'file' => 'devel.pages.inc',
++    'type' => MENU_CALLBACK
++  );
+ 
+   // Duplicate path in 2 different menus. See http://drupal.org/node/601788.
+   $items['devel/settings'] = array(
+diff --git a/devel.pages.inc b/devel.pages.inc
+index 7a137da..a4c2e0f 100644
+--- a/devel.pages.inc
++++ b/devel.pages.inc
+@@ -296,3 +296,12 @@ function devel_phpinfo() {
+   print phpinfo();
+   drupal_exit();
+ }
++
++/**
++ * Generate information about state of the repo.
++ */
++function devel_git() {
++  $output = array();
++  exec('cd ' . DRUPAL_ROOT . ' && git log --name-status HEAD^..HEAD', $output);
++  return '<h2>' . t('Latest commit:') . '</h2><pre>' . implode("\n", $output) . '</pre>';
++}
