@@ -31,8 +31,12 @@ if ($add_date_html_prefix) {
 }
 ?>
 
+<?php
+  $event_url = (isset($event_link) && $event_link != '') ? $event_link : $node_url;
+?>
+
 <div class="event contextual-links-region">
-  <a href="<?php print $node_url; ?>"><?php print $title; ?></a> - <?php print $period; ?><?php print $location; ?>
+  <a href="<?php print $event_url; ?>"><?php print $title; ?></a> - <?php print $period; ?><?php print $location; ?>
   <a class="icon" href="<?php print $node_url; ?>"></a>
   <?php print render($title_suffix); ?>
 </div>

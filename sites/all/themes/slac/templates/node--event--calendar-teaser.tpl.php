@@ -22,8 +22,15 @@
     <figure><?php print render($content['field_event_image']); ?></figure>
   <?php } ?>
   <article>
+    <?php
+      $event_link = '';
+      if (isset($content['field_slac_event_link'][0]['#element']['url'])) {
+        $event_link = $content['field_slac_event_link'][0]['#element']['url'];
+      }
+      $event_url = ($event_link != '') ? $event_link : $node_url;
+    ?>
     <?php if (isset($title)) { ?>
-      <h3><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h3>
+      <h3><a href="<?php print $event_url; ?>"><?php print $title; ?></a></h3>
     <?php }
     if (isset($content['field_slac_event_date'])) {
       print render($content['field_slac_event_date']); 
