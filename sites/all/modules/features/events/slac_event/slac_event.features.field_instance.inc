@@ -348,7 +348,7 @@ function slac_event_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 6,
       ),
       'default' => array(
         'label' => 'above',
@@ -427,7 +427,7 @@ function slac_event_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 8,
+        'weight' => 11,
       ),
       'default' => array(
         'label' => 'inline',
@@ -505,7 +505,7 @@ function slac_event_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 7,
       ),
       'default' => array(
         'label' => 'above',
@@ -698,10 +698,11 @@ function slac_event_field_default_field_instances() {
     'description' => 'Please enter the link of the event, i.e. https://conf-slac.stanford.edu/ixs-2013/Welcome. User will be REDIRECTED to this page instead of viewing the event on this site.',
     'display' => array(
       'calendar_teaser' => array(
-        'label' => 'above',
+        'label' => 'hidden',
+        'module' => 'link',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 7,
+        'type' => 'link_plain',
+        'weight' => 4,
       ),
       'default' => array(
         'label' => 'hidden',
@@ -800,7 +801,7 @@ function slac_event_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 10,
       ),
       'default' => array(
         'label' => 'inline',
@@ -879,7 +880,7 @@ function slac_event_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 5,
       ),
       'default' => array(
         'label' => 'above',
@@ -972,7 +973,7 @@ function slac_event_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 8,
       ),
       'default' => array(
         'label' => 'inline',
@@ -1051,7 +1052,7 @@ function slac_event_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 9,
       ),
       'default' => array(
         'label' => 'above',
