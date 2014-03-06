@@ -143,6 +143,12 @@ function slac_faq_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Longer question text. This will be displayed in all layouts where the answer appears, in addition to the shorter question text.',
     'display' => array(
+      'calendar_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'text',

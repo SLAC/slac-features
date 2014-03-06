@@ -74,84 +74,6 @@ function slac_faq_views_default_views() {
     'open' => 'open',
   );
 
-  /* Display: Attachment - Questions Top pane */
-  $handler = $view->new_display('attachment', 'Attachment - Questions Top pane', 'attachment_1');
-  $handler->display->display_options['defaults']['use_more'] = FALSE;
-  $handler->display->display_options['defaults']['link_display'] = FALSE;
-  $handler->display->display_options['link_display'] = 'page_1';
-  $handler->display->display_options['defaults']['query'] = FALSE;
-  $handler->display->display_options['query']['type'] = 'views_query';
-  $handler->display->display_options['query']['options']['distinct'] = TRUE;
-  $handler->display->display_options['pager']['type'] = 'none';
-  $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'list';
-  $handler->display->display_options['defaults']['style_options'] = FALSE;
-  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
-  $handler->display->display_options['row_plugin'] = 'fields';
-  $handler->display->display_options['defaults']['row_options'] = FALSE;
-  $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Content: Category (field_faq_category) */
-  $handler->display->display_options['relationships']['field_faq_category_tid']['id'] = 'field_faq_category_tid';
-  $handler->display->display_options['relationships']['field_faq_category_tid']['table'] = 'field_data_field_faq_category';
-  $handler->display->display_options['relationships']['field_faq_category_tid']['field'] = 'field_faq_category_tid';
-  $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Nid */
-  $handler->display->display_options['fields']['nid']['id'] = 'nid';
-  $handler->display->display_options['fields']['nid']['table'] = 'node';
-  $handler->display->display_options['fields']['nid']['field'] = 'nid';
-  $handler->display->display_options['fields']['nid']['label'] = '';
-  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['nid']['hide_alter_empty'] = FALSE;
-  /* Field: Content: Title */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['title']['alter']['path'] = '#question_n[nid]';
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['title']['hide_alter_empty'] = FALSE;
-  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Taxonomy term: Name */
-  $handler->display->display_options['arguments']['name']['id'] = 'name';
-  $handler->display->display_options['arguments']['name']['table'] = 'taxonomy_term_data';
-  $handler->display->display_options['arguments']['name']['field'] = 'name';
-  $handler->display->display_options['arguments']['name']['relationship'] = 'field_faq_category_tid';
-  $handler->display->display_options['arguments']['name']['default_action'] = 'default';
-  $handler->display->display_options['arguments']['name']['default_argument_type'] = 'raw';
-  $handler->display->display_options['arguments']['name']['default_argument_options']['index'] = '1';
-  $handler->display->display_options['arguments']['name']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['name']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['name']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['name']['specify_validation'] = TRUE;
-  $handler->display->display_options['arguments']['name']['validate']['type'] = 'taxonomy_term';
-  $handler->display->display_options['arguments']['name']['validate_options']['vocabularies'] = array(
-    'faq_categories' => 'faq_categories',
-  );
-  $handler->display->display_options['arguments']['name']['validate_options']['type'] = 'name';
-  $handler->display->display_options['arguments']['name']['validate_options']['transform'] = TRUE;
-  $handler->display->display_options['arguments']['name']['validate']['fail'] = 'ignore';
-  $handler->display->display_options['arguments']['name']['limit'] = '0';
-  $handler->display->display_options['arguments']['name']['path_case'] = 'lower';
-  $handler->display->display_options['arguments']['name']['transform_dash'] = TRUE;
-  $handler->display->display_options['displays'] = array(
-    'panel_pane_2' => 'panel_pane_2',
-    'default' => 0,
-    'faq_recent' => 0,
-    'faq_random' => 0,
-    'page' => 0,
-    'page_1' => 0,
-    'page_2' => 0,
-    'page_3' => 0,
-    'panel_pane_1' => 0,
-  );
-  $handler->display->display_options['inherit_exposed_filters'] = TRUE;
-
   /* Display: Faq Categories pane */
   $handler = $view->new_display('panel_pane', 'Faq Categories pane', 'panel_pane_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
@@ -235,6 +157,7 @@ function slac_faq_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
   /* Field: Content: Question details */
   $handler->display->display_options['fields']['field_question_details']['id'] = 'field_question_details';
   $handler->display->display_options['fields']['field_question_details']['table'] = 'field_data_field_question_details';

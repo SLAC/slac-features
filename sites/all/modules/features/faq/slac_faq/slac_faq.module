@@ -6,6 +6,33 @@
 
 include_once 'slac_faq.features.inc';
 
+
+/**
+ * Preprocess function.
+ */
+function slac_faq_preprocess_views_view(&$vars) {
+  if ($vars['view']->name == 'slac_faq') {
+    drupal_add_js(drupal_get_path('module', 'slac_faq') . '/slac_faq.js');
+  	//dpm($vars);
+  } 
+  
+}
+
+/**
+ * Preprocess function.
+ */
+function slac_faq_preprocess_views_view_fields(&$vars) {
+
+  if (isset($vars['fields']['title']->content)) {
+    $vars['faq_title'] = $vars['fields']['title']->content;
+  }
+
+  if (isset($vars['fields']['body']->content)) {
+    $vars['faq_answer'] = $vars['fields']['body']->content;
+  }
+	//dpm($vars);
+}
+
 /**
  * Implements hook_form_FORM_ID_alter().
  */
