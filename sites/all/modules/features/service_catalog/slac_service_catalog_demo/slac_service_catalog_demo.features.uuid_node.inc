@@ -12,12 +12,12 @@ function slac_service_catalog_demo_uuid_features_default_content() {
 
   $nodes[] = array(
   'title' => 'Enterprise application group',
-  'log' => '',
+  'log' => 'Edited by admin.',
   'status' => 1,
   'comment' => 1,
   'promote' => 0,
   'sticky' => 0,
-  'vuuid' => 'f823d367-8481-4c52-b3d7-51cefc6baa15',
+  'vuuid' => 'b3dfbf5e-19a5-41bc-94f8-d2b125eb875e',
   'type' => 'slac_sc_catalog_item',
   'language' => 'und',
   'created' => 1377535764,
@@ -57,7 +57,7 @@ function slac_service_catalog_demo_uuid_features_default_content() {
 
 			<ul>
 				<li><a href="https://itservices.stanford.edu/service/contract-support/server">Server Group (CRC)</a></li>
-				<li><a href="https://itservices.stanford.edu/service/server-support/businessdocuments">Business Documents for Contract Support &mdash; Server Support</a></li>
+				<li><a href="https://itservices.stanford.edu/service/server-support/businessdocuments">Business Documents for Contract Support — Server Support</a></li>
 			</ul>
 		</div>
 	</div>
@@ -65,7 +65,7 @@ function slac_service_catalog_demo_uuid_features_default_content() {
 
 <p>&nbsp;</p>
 ',
-        'summary' => '',
+        'summary' => 'The Server Support service provides complete server management, including installation and stabilization, monitoring, security, user management, and integration with the campus infrastructure, for systems running modern Mac OS X Server and Windows Server operating systems.',
         'format' => 'full_html',
         'safe_value' => ' <div class="field field-name-field-service-overview field-type-text-long field-label-hidden">
 <div class="field-items">
@@ -93,14 +93,15 @@ function slac_service_catalog_demo_uuid_features_default_content() {
 </div>
 <p> </p>
  ',
-        'safe_summary' => '  ',
+        'safe_summary' => ' <p>The Server Support service provides complete server management, including installation and stabilization, monitoring, security, user management, and integration with the campus infrastructure, for systems running modern Mac OS X Server and Windows Server operating systems.</p>
+ ',
       ),
     ),
   ),
   'field_slac_sc_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 65,
+        'tid' => 19,
         'uuid' => 'cf2ef1a1-ee93-434b-a103-a0a123dcc6aa',
       ),
     ),
@@ -208,21 +209,69 @@ function slac_service_catalog_demo_uuid_features_default_content() {
   ),
   'cid' => 0,
   'last_comment_name' => NULL,
-  'last_comment_uid' => 1,
+  'last_comment_uid' => 0,
   'comment_count' => 0,
-  'name' => 'admin',
+  'name' => '',
   'picture' => 0,
-  'date' => '2013-08-26 10:49:24 -0600',
-  'author_uuid' => '5abe7ee7-9114-4d87-bb73-7b2b7ee23b78',
+  'path' => array(
+    'pid' => 26,
+    'source' => 'node/1',
+    'alias' => 'services/service/enterprise-application-group',
+    'language' => 'und',
+  ),
+  'workbench_moderation' => array(
+    'current' => array(
+      'hid' => 156,
+      'vid' => 187,
+      'nid' => 1,
+      'from_state' => 'published',
+      'state' => 'published',
+      'uid' => 1,
+      'stamp' => 1394099383,
+      'published' => 1,
+      'current' => 1,
+      'title' => 'Enterprise application group',
+      'timestamp' => 1394099383,
+    ),
+    'published' => array(
+      'hid' => 156,
+      'vid' => 187,
+      'nid' => 1,
+      'from_state' => 'published',
+      'state' => 'published',
+      'uid' => 1,
+      'stamp' => 1394099383,
+      'published' => 1,
+      'current' => 1,
+      'title' => 'Enterprise application group',
+      'timestamp' => 1394099383,
+    ),
+    'my_revision' => array(
+      'hid' => 156,
+      'vid' => 187,
+      'nid' => 1,
+      'from_state' => 'published',
+      'state' => 'published',
+      'uid' => 1,
+      'stamp' => 1394099383,
+      'published' => 1,
+      'current' => 1,
+      'title' => 'Enterprise application group',
+      'timestamp' => 1394099383,
+    ),
+  ),
+  'pathauto_perform_alias' => FALSE,
+  'date' => '2013-08-26 19:49:24 +0300',
+  'author_uuid' => '8387e0ab-2272-428b-b6f3-790625549a25',
 );
   $nodes[] = array(
   'title' => 'Contract Support',
-  'log' => '',
+  'log' => 'Edited by admin.',
   'status' => 1,
   'comment' => 1,
   'promote' => 0,
   'sticky' => 0,
-  'vuuid' => '00caf1e7-6cb5-4072-8796-fcced531fb7b',
+  'vuuid' => '89ec451c-8822-49bf-b4c9-560f8cee2244',
   'type' => 'slac_sc_catalog_item',
   'language' => 'und',
   'created' => 1377536170,
@@ -236,7 +285,7 @@ function slac_service_catalog_demo_uuid_features_default_content() {
         'value' => '<div class="field field-name-field-service-overview field-type-text-long field-label-hidden">
 	<div class="field-items">
 		<div class="field-item even">
-			<p>OnCall Services is a great way for departments to supplement existing support staff during vacations and other leaves, or to handle special projects. For small groups that don&rsquo;t need full-time support, we can offer scheduled or pre-arranged occasional support in your office. For faculty, staff, and students, OnCall Services offers a cost-effective way to get expert computer assistance from highly knowledgeable technical staff who understand Stanford&rsquo;s unique computing environment.</p>
+			<p>OnCall Services is a great way for departments to supplement existing support staff during vacations and other leaves, or to handle special projects. For small groups that don’t need full-time support, we can offer scheduled or pre-arranged occasional support in your office. For faculty, staff, and students, OnCall Services offers a cost-effective way to get expert computer assistance from highly knowledgeable technical staff who understand Stanford’s unique computing environment.</p>
 		</div>
 	</div>
 </div>
@@ -267,7 +316,7 @@ function slac_service_catalog_demo_uuid_features_default_content() {
 
 <p>&nbsp;</p>
 ',
-        'summary' => '',
+        'summary' => 'OnCall Services is a great way for departments to supplement existing support staff during vacations and other leaves, or to handle special projects. ',
         'format' => 'full_html',
         'safe_value' => ' <div class="field field-name-field-service-overview field-type-text-long field-label-hidden">
 <div class="field-items">
@@ -297,14 +346,15 @@ function slac_service_catalog_demo_uuid_features_default_content() {
 </div>
 <p> </p>
  ',
-        'safe_summary' => '  ',
+        'safe_summary' => ' <p>OnCall Services is a great way for departments to supplement existing support staff during vacations and other leaves, or to handle special projects. </p>
+ ',
       ),
     ),
   ),
   'field_slac_sc_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 65,
+        'tid' => 19,
         'uuid' => 'cf2ef1a1-ee93-434b-a103-a0a123dcc6aa',
       ),
     ),
@@ -312,15 +362,15 @@ function slac_service_catalog_demo_uuid_features_default_content() {
   'field_slac_sc_eligibility' => array(
     'und' => array(
       0 => array(
-        'tid' => 67,
+        'tid' => 21,
         'uuid' => 'db10ac33-21ec-4d40-bee7-1c34780f1b40',
       ),
       1 => array(
-        'tid' => 70,
+        'tid' => 24,
         'uuid' => 'f3037fca-b840-4394-9c4e-03ea14b6c4bf',
       ),
       2 => array(
-        'tid' => 47,
+        'tid' => 1,
         'uuid' => '00e2fef3-0966-49ed-8f3d-e3f8d1cd46c0',
       ),
     ),
@@ -429,21 +479,69 @@ function slac_service_catalog_demo_uuid_features_default_content() {
   ),
   'cid' => 0,
   'last_comment_name' => NULL,
-  'last_comment_uid' => 1,
+  'last_comment_uid' => 0,
   'comment_count' => 0,
-  'name' => 'admin',
+  'name' => '',
   'picture' => 0,
-  'date' => '2013-08-26 10:56:10 -0600',
-  'author_uuid' => '5abe7ee7-9114-4d87-bb73-7b2b7ee23b78',
+  'path' => array(
+    'pid' => 27,
+    'source' => 'node/2',
+    'alias' => 'services/service/contract-support',
+    'language' => 'und',
+  ),
+  'workbench_moderation' => array(
+    'current' => array(
+      'hid' => 152,
+      'vid' => 184,
+      'nid' => 2,
+      'from_state' => 'published',
+      'state' => 'published',
+      'uid' => 1,
+      'stamp' => 1394099218,
+      'published' => 1,
+      'current' => 1,
+      'title' => 'Contract Support',
+      'timestamp' => 1394099218,
+    ),
+    'published' => array(
+      'hid' => 152,
+      'vid' => 184,
+      'nid' => 2,
+      'from_state' => 'published',
+      'state' => 'published',
+      'uid' => 1,
+      'stamp' => 1394099218,
+      'published' => 1,
+      'current' => 1,
+      'title' => 'Contract Support',
+      'timestamp' => 1394099218,
+    ),
+    'my_revision' => array(
+      'hid' => 152,
+      'vid' => 184,
+      'nid' => 2,
+      'from_state' => 'published',
+      'state' => 'published',
+      'uid' => 1,
+      'stamp' => 1394099218,
+      'published' => 1,
+      'current' => 1,
+      'title' => 'Contract Support',
+      'timestamp' => 1394099218,
+    ),
+  ),
+  'pathauto_perform_alias' => FALSE,
+  'date' => '2013-08-26 19:56:10 +0300',
+  'author_uuid' => '8387e0ab-2272-428b-b6f3-790625549a25',
 );
   $nodes[] = array(
   'title' => 'MySQL & Oracle',
-  'log' => '',
+  'log' => 'Edited by admin.',
   'status' => 1,
   'comment' => 1,
   'promote' => 0,
   'sticky' => 0,
-  'vuuid' => '3bf1b2cc-f232-4b57-ac7f-cb4fdcf75c64',
+  'vuuid' => 'bc3952cd-bf55-4273-9af4-9668539aa2d8',
   'type' => 'slac_sc_catalog_item',
   'language' => 'und',
   'created' => 1377536036,
@@ -461,7 +559,7 @@ function slac_service_catalog_demo_uuid_features_default_content() {
 
 			<p>24x7 support is provided for production or critical development databases. In addition to standard, day-to-day administrative and maintenance activities, production or critical development databases are continuously monitored to detect potential problems, proactively addressing problems before they can affect service delivery.</p>
 
-			<p>The Database Administration service is available by subscription and is charged monthly to your department&rsquo;s IT Services bill.</p>
+			<p>The Database Administration service is available by subscription and is charged monthly to your department’s IT Services bill.</p>
 		</div>
 	</div>
 </div>
@@ -493,7 +591,7 @@ function slac_service_catalog_demo_uuid_features_default_content() {
 
 <p>&nbsp;</p>
 ',
-        'summary' => '',
+        'summary' => 'The Database Administration service provides reliable, secure, and cost-effective database administration, including maintenance, monitoring, and backup.',
         'format' => 'full_html',
         'safe_value' => ' <div class="field field-name-field-service-overview field-type-text-long field-label-hidden">
 <div class="field-items">
@@ -521,14 +619,15 @@ function slac_service_catalog_demo_uuid_features_default_content() {
 </div>
 <p> </p>
  ',
-        'safe_summary' => '  ',
+        'safe_summary' => ' <p>The Database Administration service provides reliable, secure, and cost-effective database administration, including maintenance, monitoring, and backup.</p>
+ ',
       ),
     ),
   ),
   'field_slac_sc_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 60,
+        'tid' => 14,
         'uuid' => 'ac074ab7-4b52-4911-a6b0-3d92f247aa2a',
       ),
     ),
@@ -536,11 +635,11 @@ function slac_service_catalog_demo_uuid_features_default_content() {
   'field_slac_sc_eligibility' => array(
     'und' => array(
       0 => array(
-        'tid' => 70,
+        'tid' => 24,
         'uuid' => 'f3037fca-b840-4394-9c4e-03ea14b6c4bf',
       ),
       1 => array(
-        'tid' => 57,
+        'tid' => 11,
         'uuid' => '9d88d219-f7e7-4354-b6ce-accadf586640',
       ),
     ),
@@ -654,21 +753,69 @@ function slac_service_catalog_demo_uuid_features_default_content() {
   ),
   'cid' => 0,
   'last_comment_name' => NULL,
-  'last_comment_uid' => 1,
+  'last_comment_uid' => 0,
   'comment_count' => 0,
-  'name' => 'admin',
+  'name' => '',
   'picture' => 0,
-  'date' => '2013-08-26 10:53:56 -0600',
-  'author_uuid' => '5abe7ee7-9114-4d87-bb73-7b2b7ee23b78',
+  'path' => array(
+    'pid' => 28,
+    'source' => 'node/3',
+    'alias' => 'services/service/mysql-oracle',
+    'language' => 'und',
+  ),
+  'workbench_moderation' => array(
+    'current' => array(
+      'hid' => 155,
+      'vid' => 186,
+      'nid' => 3,
+      'from_state' => 'published',
+      'state' => 'published',
+      'uid' => 1,
+      'stamp' => 1394099346,
+      'published' => 1,
+      'current' => 1,
+      'title' => 'MySQL & Oracle',
+      'timestamp' => 1394099346,
+    ),
+    'published' => array(
+      'hid' => 155,
+      'vid' => 186,
+      'nid' => 3,
+      'from_state' => 'published',
+      'state' => 'published',
+      'uid' => 1,
+      'stamp' => 1394099346,
+      'published' => 1,
+      'current' => 1,
+      'title' => 'MySQL & Oracle',
+      'timestamp' => 1394099346,
+    ),
+    'my_revision' => array(
+      'hid' => 155,
+      'vid' => 186,
+      'nid' => 3,
+      'from_state' => 'published',
+      'state' => 'published',
+      'uid' => 1,
+      'stamp' => 1394099346,
+      'published' => 1,
+      'current' => 1,
+      'title' => 'MySQL & Oracle',
+      'timestamp' => 1394099346,
+    ),
+  ),
+  'pathauto_perform_alias' => FALSE,
+  'date' => '2013-08-26 19:53:56 +0300',
+  'author_uuid' => '8387e0ab-2272-428b-b6f3-790625549a25',
 );
   $nodes[] = array(
   'title' => 'Conference computing for visitors',
-  'log' => '',
+  'log' => 'Edited by admin.',
   'status' => 1,
   'comment' => 1,
   'promote' => 0,
   'sticky' => 0,
-  'vuuid' => 'def6fb0a-cb97-4191-907e-455a79766407',
+  'vuuid' => 'f9a95a47-73ba-4724-9e64-6966f2706a6e',
   'type' => 'slac_sc_catalog_item',
   'language' => 'und',
   'created' => 1377535854,
@@ -732,7 +879,7 @@ function slac_service_catalog_demo_uuid_features_default_content() {
 
 <p>&nbsp;</p>
 ',
-        'summary' => '',
+        'summary' => 'Visitors of SLAC who are attending conferences, meetings, or short collaborations should review the following computing resources that are available for public use. ',
         'format' => 'full_html',
         'safe_value' => ' <h2>Computing Resources for Short Term Visitors</h2>
 <p>Visitors of SLAC who are attending conferences, meetings, or short collaborations should review the following computing resources that are available for public use. Visitors staying longer than a few days or those requiring access to SLAC-only resources should register as an Active User with the <a href="http://www.slac.stanford.edu/grp/rd/sluo/SLUO.html#SLUO">SLAC Users Organization</a> to become eligible to open a SLAC computer account.<br /><br />
@@ -760,14 +907,15 @@ function slac_service_catalog_demo_uuid_features_default_content() {
 <td>:: Conference room layouts and equipment types</td>
 </tr></tbody></table><p> </p>
  ',
-        'safe_summary' => '  ',
+        'safe_summary' => ' <p>Visitors of SLAC who are attending conferences, meetings, or short collaborations should review the following computing resources that are available for public use. </p>
+ ',
       ),
     ),
   ),
   'field_slac_sc_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 56,
+        'tid' => 10,
         'uuid' => '83b5b76c-6bd8-4a0c-a580-6aa8b22d9f63',
       ),
     ),
@@ -775,19 +923,19 @@ function slac_service_catalog_demo_uuid_features_default_content() {
   'field_slac_sc_eligibility' => array(
     'und' => array(
       0 => array(
-        'tid' => 67,
+        'tid' => 21,
         'uuid' => 'db10ac33-21ec-4d40-bee7-1c34780f1b40',
       ),
       1 => array(
-        'tid' => 70,
+        'tid' => 24,
         'uuid' => 'f3037fca-b840-4394-9c4e-03ea14b6c4bf',
       ),
       2 => array(
-        'tid' => 57,
+        'tid' => 11,
         'uuid' => '9d88d219-f7e7-4354-b6ce-accadf586640',
       ),
       3 => array(
-        'tid' => 47,
+        'tid' => 1,
         'uuid' => '00e2fef3-0966-49ed-8f3d-e3f8d1cd46c0',
       ),
     ),
@@ -889,21 +1037,69 @@ function slac_service_catalog_demo_uuid_features_default_content() {
   ),
   'cid' => 0,
   'last_comment_name' => NULL,
-  'last_comment_uid' => 1,
+  'last_comment_uid' => 0,
   'comment_count' => 0,
-  'name' => 'admin',
+  'name' => '',
   'picture' => 0,
-  'date' => '2013-08-26 10:50:54 -0600',
-  'author_uuid' => '5abe7ee7-9114-4d87-bb73-7b2b7ee23b78',
+  'path' => array(
+    'pid' => 29,
+    'source' => 'node/4',
+    'alias' => 'services/service/conference-computing-for-visitors',
+    'language' => 'und',
+  ),
+  'workbench_moderation' => array(
+    'current' => array(
+      'hid' => 158,
+      'vid' => 189,
+      'nid' => 4,
+      'from_state' => 'published',
+      'state' => 'published',
+      'uid' => 1,
+      'stamp' => 1394099902,
+      'published' => 1,
+      'current' => 1,
+      'title' => 'Conference computing for visitors',
+      'timestamp' => 1394099902,
+    ),
+    'published' => array(
+      'hid' => 158,
+      'vid' => 189,
+      'nid' => 4,
+      'from_state' => 'published',
+      'state' => 'published',
+      'uid' => 1,
+      'stamp' => 1394099902,
+      'published' => 1,
+      'current' => 1,
+      'title' => 'Conference computing for visitors',
+      'timestamp' => 1394099902,
+    ),
+    'my_revision' => array(
+      'hid' => 158,
+      'vid' => 189,
+      'nid' => 4,
+      'from_state' => 'published',
+      'state' => 'published',
+      'uid' => 1,
+      'stamp' => 1394099902,
+      'published' => 1,
+      'current' => 1,
+      'title' => 'Conference computing for visitors',
+      'timestamp' => 1394099902,
+    ),
+  ),
+  'pathauto_perform_alias' => FALSE,
+  'date' => '2013-08-26 19:50:54 +0300',
+  'author_uuid' => '8387e0ab-2272-428b-b6f3-790625549a25',
 );
   $nodes[] = array(
   'title' => 'Computer accounts',
-  'log' => '',
+  'log' => 'Edited by admin.',
   'status' => 1,
   'comment' => 1,
   'promote' => 0,
   'sticky' => 0,
-  'vuuid' => '95871dc2-275c-4be7-8a4c-e1979c003b8a',
+  'vuuid' => 'edd67815-3269-48ea-84a0-981ab871bf66',
   'type' => 'slac_sc_catalog_item',
   'language' => 'und',
   'created' => 1377535432,
@@ -958,7 +1154,7 @@ function slac_service_catalog_demo_uuid_features_default_content() {
 	<dd><a href="https://www-internal.slac.stanford.edu/instdatabase/procedures/computer-accounts/account-delete.htm">Terminating SLAC Employees</a>&nbsp;:: Procedures for computer accounts</dd>
 </dl>
 ',
-        'summary' => '',
+        'summary' => 'There are two types of COLLAB Windows domain accounts: Individual and Group. Currently only SharePoint supports COLLAB domain accounts. Request an account via email to windows-admin@slac.stanford.edu',
         'format' => 'full_html',
         'safe_value' => ' <dl><dt>Platforms</dt>
 <dd><a href="http://www2.slac.stanford.edu/comp/slacwide/account/account.html">Windows</a> :: Microsoft Windows Accounts.
@@ -995,14 +1191,15 @@ function slac_service_catalog_demo_uuid_features_default_content() {
 <dd><a href="https://www-internal.slac.stanford.edu/instdatabase/procedures/computer-accounts/account-delete.htm">Closing Accounts</a></dd>
 <dd><a href="https://www-internal.slac.stanford.edu/instdatabase/procedures/computer-accounts/account-delete.htm">Terminating SLAC Employees</a> :: Procedures for computer accounts</dd>
 </dl> ',
-        'safe_summary' => '  ',
+        'safe_summary' => ' <p>There are two types of COLLAB Windows domain accounts: Individual and Group. Currently only SharePoint supports COLLAB domain accounts. Request an account via email to <a href="mailto:windows-admin@slac.stanford.edu">windows-admin@slac.stanford.edu</a></p>
+ ',
       ),
     ),
   ),
   'field_slac_sc_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 52,
+        'tid' => 6,
         'uuid' => '40e140d3-4f65-481f-a68f-6d3f43161e13',
       ),
     ),
@@ -1010,15 +1207,15 @@ function slac_service_catalog_demo_uuid_features_default_content() {
   'field_slac_sc_eligibility' => array(
     'und' => array(
       0 => array(
-        'tid' => 67,
+        'tid' => 21,
         'uuid' => 'db10ac33-21ec-4d40-bee7-1c34780f1b40',
       ),
       1 => array(
-        'tid' => 57,
+        'tid' => 11,
         'uuid' => '9d88d219-f7e7-4354-b6ce-accadf586640',
       ),
       2 => array(
-        'tid' => 47,
+        'tid' => 1,
         'uuid' => '00e2fef3-0966-49ed-8f3d-e3f8d1cd46c0',
       ),
     ),
@@ -1145,21 +1342,69 @@ WTS :: Windows Terminal Server (Citrix)',
   ),
   'cid' => 0,
   'last_comment_name' => NULL,
-  'last_comment_uid' => 1,
+  'last_comment_uid' => 0,
   'comment_count' => 0,
-  'name' => 'admin',
+  'name' => '',
   'picture' => 0,
-  'date' => '2013-08-26 10:43:52 -0600',
-  'author_uuid' => '5abe7ee7-9114-4d87-bb73-7b2b7ee23b78',
+  'path' => array(
+    'pid' => 30,
+    'source' => 'node/5',
+    'alias' => 'services/service/computer-accounts',
+    'language' => 'und',
+  ),
+  'workbench_moderation' => array(
+    'current' => array(
+      'hid' => 157,
+      'vid' => 188,
+      'nid' => 5,
+      'from_state' => 'published',
+      'state' => 'published',
+      'uid' => 1,
+      'stamp' => 1394099799,
+      'published' => 1,
+      'current' => 1,
+      'title' => 'Computer accounts',
+      'timestamp' => 1394099799,
+    ),
+    'published' => array(
+      'hid' => 157,
+      'vid' => 188,
+      'nid' => 5,
+      'from_state' => 'published',
+      'state' => 'published',
+      'uid' => 1,
+      'stamp' => 1394099799,
+      'published' => 1,
+      'current' => 1,
+      'title' => 'Computer accounts',
+      'timestamp' => 1394099799,
+    ),
+    'my_revision' => array(
+      'hid' => 157,
+      'vid' => 188,
+      'nid' => 5,
+      'from_state' => 'published',
+      'state' => 'published',
+      'uid' => 1,
+      'stamp' => 1394099799,
+      'published' => 1,
+      'current' => 1,
+      'title' => 'Computer accounts',
+      'timestamp' => 1394099799,
+    ),
+  ),
+  'pathauto_perform_alias' => FALSE,
+  'date' => '2013-08-26 19:43:52 +0300',
+  'author_uuid' => '8387e0ab-2272-428b-b6f3-790625549a25',
 );
   $nodes[] = array(
   'title' => 'SLAC Email',
-  'log' => '',
+  'log' => 'Edited by admin.',
   'status' => 1,
   'comment' => 1,
   'promote' => 0,
   'sticky' => 0,
-  'vuuid' => '213369af-162a-4749-a726-280e18a5531f',
+  'vuuid' => '9b18f204-b01d-4dc4-b564-1f288c519096',
   'type' => 'slac_sc_catalog_item',
   'language' => 'und',
   'created' => 1377536292,
@@ -1175,7 +1420,7 @@ WTS :: Windows Terminal Server (Citrix)',
 </dl>
 
 <blockquote>
-	<table border="0" id="table6" width="100%">
+	<table id="table6" border="0" width="100%">
 		<tbody>
 			<tr>
 				<td width="50%"><a href="http://www2.slac.stanford.edu/comp/messaging/Installing/default.htm">Install &amp; Configure Pages</a></td>
@@ -1194,7 +1439,7 @@ WTS :: Windows Terminal Server (Citrix)',
 </dl>
 
 <blockquote>
-	<table border="0" id="table7" width="100%">
+	<table id="table7" border="0" width="100%">
 		<tbody>
 			<tr>
 				<td width="50%"><a href="http://www2.slac.stanford.edu/comp/messaging/faq/default.htm">General FAQ</a></td>
@@ -1209,7 +1454,7 @@ WTS :: Windows Terminal Server (Citrix)',
 </dl>
 
 <blockquote>
-	<table border="0" id="table4" width="100%">
+	<table id="table4" border="0" width="100%">
 		<tbody>
 			<tr>
 				<td width="33%"><a href="http://www2.slac.stanford.edu/comp/messaging/Reference/mailinglists.htm">Description of Mailing Lists at SLAC</a></td>
@@ -1228,7 +1473,7 @@ WTS :: Windows Terminal Server (Citrix)',
 </dl>
 
 <blockquote>
-	<table border="0" id="table5" width="100%">
+	<table id="table5" border="0" width="100%">
 		<tbody>
 			<tr>
 				<td width="50%"><a href="mailto:ithelp@slac.stanford.edu">Ask Help Desk</a></td>
@@ -1243,7 +1488,7 @@ WTS :: Windows Terminal Server (Citrix)',
 </dl>
 
 <blockquote>
-	<table border="0" id="table8" width="100%">
+	<table id="table8" border="0" width="100%">
 		<tbody>
 			<tr>
 				<td><a href="https://win-password.slac.stanford.edu/">Change Your Windows Password Here</a></td>
@@ -1254,41 +1499,42 @@ WTS :: Windows Terminal Server (Citrix)',
 
 <p>&nbsp;</p>
 ',
-        'summary' => '',
+        'summary' => 'Email is offered to A-Z.',
         'format' => 'full_html',
         'safe_value' => ' <dl><dt>Client Configurations and Forwarding</dt>
-</dl><blockquote><table border="0" id="table6" width="100%"><tbody><tr><td width="50%"><a href="http://www2.slac.stanford.edu/comp/messaging/Installing/default.htm">Install &amp; Configure Pages</a></td>
+</dl><blockquote><table id="table6" border="0" width="100%"><tbody><tr><td width="50%"><a href="http://www2.slac.stanford.edu/comp/messaging/Installing/default.htm">Install &amp; Configure Pages</a></td>
 <td width="50%"><a href="https://email.slac.stanford.edu/owa">Read E-mail via Web Now</a></td>
 </tr><tr><td width="50%"><a href="http://www2.slac.stanford.edu/comp/messaging/Reference/exch2007-whattoexpect.htm">What to Expect with Exchange 2007</a></td>
 <td width="50%"> </td>
 </tr></tbody></table></blockquote>
 <dl><dt>Frequently Asked Questions</dt>
-</dl><blockquote><table border="0" id="table7" width="100%"><tbody><tr><td width="50%"><a href="http://www2.slac.stanford.edu/comp/messaging/faq/default.htm">General FAQ</a></td>
+</dl><blockquote><table id="table7" border="0" width="100%"><tbody><tr><td width="50%"><a href="http://www2.slac.stanford.edu/comp/messaging/faq/default.htm">General FAQ</a></td>
 <td width="50%"><a href="http://www2.slac.stanford.edu/comp/messaging/faq/errroranswer.htm">Error Messages &amp; Answers</a></td>
 </tr></tbody></table></blockquote>
 <dl><dt>Mailing Lists</dt>
-</dl><blockquote><table border="0" id="table4" width="100%"><tbody><tr><td width="33%"><a href="http://www2.slac.stanford.edu/comp/messaging/Reference/mailinglists.htm">Description of Mailing Lists at SLAC</a></td>
+</dl><blockquote><table id="table4" border="0" width="100%"><tbody><tr><td width="33%"><a href="http://www2.slac.stanford.edu/comp/messaging/Reference/mailinglists.htm">Description of Mailing Lists at SLAC</a></td>
 <td width="33%"><a href="https://portal.slac.stanford.edu/public/maillist">LISTSERV FAQ</a></td>
 </tr><tr><td width="33%"><a href="http://www.slac.stanford.edu/comp/net/email/slaconly/listserv-request.html">New List Request Form</a></td>
 <td width="33%"> </td>
 </tr></tbody></table></blockquote>
 <dl><dt>Getting Help</dt>
-</dl><blockquote><table border="0" id="table5" width="100%"><tbody><tr><td width="50%"><a href="mailto:ithelp@slac.stanford.edu">Ask Help Desk</a></td>
+</dl><blockquote><table id="table5" border="0" width="100%"><tbody><tr><td width="50%"><a href="mailto:ithelp@slac.stanford.edu">Ask Help Desk</a></td>
 <td width="50%"> </td>
 </tr></tbody></table></blockquote>
 <dl><dt>Password Changing</dt>
-</dl><blockquote><table border="0" id="table8" width="100%"><tbody><tr><td><a href="https://win-password.slac.stanford.edu/">Change Your Windows Password Here</a></td>
+</dl><blockquote><table id="table8" border="0" width="100%"><tbody><tr><td><a href="https://win-password.slac.stanford.edu/">Change Your Windows Password Here</a></td>
 </tr></tbody></table></blockquote>
 <p> </p>
  ',
-        'safe_summary' => '  ',
+        'safe_summary' => ' <p>Email is offered to A-Z.</p>
+ ',
       ),
     ),
   ),
   'field_slac_sc_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 54,
+        'tid' => 8,
         'uuid' => '62a170f8-cfd3-4717-a589-c5f1f7910be7',
       ),
     ),
@@ -1296,15 +1542,15 @@ WTS :: Windows Terminal Server (Citrix)',
   'field_slac_sc_eligibility' => array(
     'und' => array(
       0 => array(
-        'tid' => 67,
+        'tid' => 21,
         'uuid' => 'db10ac33-21ec-4d40-bee7-1c34780f1b40',
       ),
       1 => array(
-        'tid' => 57,
+        'tid' => 11,
         'uuid' => '9d88d219-f7e7-4354-b6ce-accadf586640',
       ),
       2 => array(
-        'tid' => 47,
+        'tid' => 1,
         'uuid' => '00e2fef3-0966-49ed-8f3d-e3f8d1cd46c0',
       ),
     ),
@@ -1315,9 +1561,9 @@ WTS :: Windows Terminal Server (Citrix)',
   'field_slac_sc_service_overview' => array(
     'und' => array(
       0 => array(
-        'value' => 'Email is offered to A-Z',
+        'value' => 'Email is offered to A-Z.',
         'format' => NULL,
-        'safe_value' => 'Email is offered to A-Z',
+        'safe_value' => 'Email is offered to A-Z.',
       ),
     ),
   ),
@@ -1390,12 +1636,60 @@ WTS :: Windows Terminal Server (Citrix)',
   ),
   'cid' => 0,
   'last_comment_name' => NULL,
-  'last_comment_uid' => 1,
+  'last_comment_uid' => 0,
   'comment_count' => 0,
-  'name' => 'admin',
+  'name' => '',
   'picture' => 0,
-  'date' => '2013-08-26 10:58:12 -0600',
-  'author_uuid' => '5abe7ee7-9114-4d87-bb73-7b2b7ee23b78',
+  'path' => array(
+    'pid' => 31,
+    'source' => 'node/6',
+    'alias' => 'services/service/slac-email',
+    'language' => 'und',
+  ),
+  'workbench_moderation' => array(
+    'current' => array(
+      'hid' => 154,
+      'vid' => 185,
+      'nid' => 6,
+      'from_state' => 'draft',
+      'state' => 'published',
+      'uid' => 1,
+      'stamp' => 1394099301,
+      'published' => 1,
+      'current' => 1,
+      'title' => 'SLAC Email',
+      'timestamp' => 1394099301,
+    ),
+    'published' => array(
+      'hid' => 154,
+      'vid' => 185,
+      'nid' => 6,
+      'from_state' => 'draft',
+      'state' => 'published',
+      'uid' => 1,
+      'stamp' => 1394099301,
+      'published' => 1,
+      'current' => 1,
+      'title' => 'SLAC Email',
+      'timestamp' => 1394099301,
+    ),
+    'my_revision' => array(
+      'hid' => 154,
+      'vid' => 185,
+      'nid' => 6,
+      'from_state' => 'draft',
+      'state' => 'published',
+      'uid' => 1,
+      'stamp' => 1394099301,
+      'published' => 1,
+      'current' => 1,
+      'title' => 'SLAC Email',
+      'timestamp' => 1394099301,
+    ),
+  ),
+  'pathauto_perform_alias' => FALSE,
+  'date' => '2013-08-26 19:58:12 +0300',
+  'author_uuid' => '8387e0ab-2272-428b-b6f3-790625549a25',
 );
   return $nodes;
 }
