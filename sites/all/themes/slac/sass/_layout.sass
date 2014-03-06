@@ -1,4 +1,10 @@
 
+
+.extentions_normal-link
+  color: $red
+  &:hover
+    text-decoration: underline  
+
 a
   color: #222
   text-decoration: none
@@ -8,9 +14,11 @@ a
   .general-left &, .general-one-col &
     .content &
     
-      color: $red
-      &:hover
-        text-decoration: underline
+      @extend .extentions_normal-link
+
+  .pane-node-field-slac-event-related-links &
+    @extend .extentions_normal-link
+
 
   &.active, &.active-item
     li &

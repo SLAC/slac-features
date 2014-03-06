@@ -558,15 +558,16 @@ ul.sf-menu.sf-accordion.sf-expanded {
     margin: 0 33px; }
     .main-menu.long-menu ul li:first-child {
       margin-left: 17px; } }
+.extentions_normal-link, .content .general-left a, .content .general-one-col a, .pane-node-field-slac-event-related-links a {
+  color: #871628; }
+  .extentions_normal-link:hover, .content .general-left a:hover, .content .general-one-col a:hover, .pane-node-field-slac-event-related-links a:hover {
+    text-decoration: underline; }
+
 a {
   color: #222222;
   text-decoration: none; }
   a:hover {
     color: #871628; }
-  .content .general-left a, .content .general-one-col a {
-    color: #871628; }
-    .content .general-left a:hover, .content .general-one-col a:hover {
-      text-decoration: underline; }
   .content .general-right .panel-pane ul li a.active, .content .general-right .panel-pane ul li a.active-item {
     text-decoration: underline; }
 
