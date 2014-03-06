@@ -298,7 +298,7 @@ ul.tabs, .action-links,
       &:before
         display: none
 
-.pane-slac-search-redirect, .pane-search-form
+.pane-search-block, .pane-search-form
   display: none
 
   .mobile-search-form &
@@ -334,7 +334,7 @@ ul.tabs, .action-links,
 
 +at-breakpoint($tablet)
   //.pane-search-form
-  .pane-slac-search-redirect, .pane-search-form
+  .pane-search-block, .pane-search-form
     display: none
     .user-search &
       .external-organisation &
@@ -2121,6 +2121,67 @@ form.search-form
     padding: 0px 28px
     height: 29px
 
+#slac-search-options
+  width: 100%
+  > div
+    background-color: $grey-e
+    text-align: left
+    padding: 0
+    width: 100%
+    margin: 0 0px 0 0px
+    border: 1px solid #a1a1a1
+    border-top: 0 none
+    > div 
+      padding: 2px 6px 5px
+
+ 
+  .form-type-radio
+    margin-right: 5px
+  
+  .form-radios 
+    > div 
+      display: inline-block
+      vertical-align: middle
+  
+  .form-item label, .form-item input[type='radio']
+    display: inline-block
+    vertical-align: middle
+    
+  .form-radios 
+    label, input[type='radio']
+      margin: 0
+      padding: 0    
+      
+    label
+      color: $red
+      +fontsize-rem(11px)
+    
+    input[type='radio'] 
+      cursor: pointer
+    
+    
++at-breakpoint($tablet)
+  #slac-search-options
+    position: relative
+    margin: 0
+    padding: 0
+    > div
+      display: none
+      position: absolute
+      top: 0 
+      left: 0
+
+      
+
+
+    
+  #slac-search-wrapper
+    //position: relative
+
+
+
++at-breakpoint($mobile-and_tablet)
+  
 
 ol.search-results
 

@@ -813,9 +813,9 @@ ul.tabs, .action-links {
       .pane-system-user-menu li a:before {
         display: none; }
 
-.pane-slac-search-redirect, .pane-search-form {
+.pane-search-block, .pane-search-form {
   display: none; }
-  .mobile-search-form .pane-slac-search-redirect, .mobile-search-form .pane-search-form {
+  .mobile-search-form .pane-search-block, .mobile-search-form .pane-search-form {
     display: block; }
 
 .header.with_user_search form {
@@ -857,9 +857,9 @@ ul.tabs, .action-links {
     box-shadow: 0px 0px 0px 1px #a1a1a1 inset, 0px 0px 0px 0px black; }
 
 @media (min-width: 690px) {
-  .pane-slac-search-redirect, .pane-search-form {
+  .pane-search-block, .pane-search-form {
     display: none; }
-    .external-organisation .user-search .pane-slac-search-redirect, .external-organisation .user-search .pane-search-form {
+    .external-organisation .user-search .pane-search-block, .external-organisation .user-search .pane-search-form {
       display: inline-block !important;
       width: 45%; } }
 .logo-container {
@@ -2187,6 +2187,46 @@ form.search-form {
     padding: 0px 28px;
     height: 29px; }
 
+#slac-search-options {
+  width: 100%; }
+  #slac-search-options > div {
+    background-color: #eeeeee;
+    text-align: left;
+    padding: 0;
+    width: 100%;
+    margin: 0 0px 0 0px;
+    border: 1px solid #a1a1a1;
+    border-top: 0 none; }
+    #slac-search-options > div > div {
+      padding: 2px 6px 5px; }
+  #slac-search-options .form-type-radio {
+    margin-right: 5px; }
+  #slac-search-options .form-radios > div {
+    display: inline-block;
+    vertical-align: middle; }
+  #slac-search-options .form-item label, #slac-search-options .form-item input[type='radio'] {
+    display: inline-block;
+    vertical-align: middle; }
+  #slac-search-options .form-radios label, #slac-search-options .form-radios input[type='radio'] {
+    margin: 0;
+    padding: 0; }
+  #slac-search-options .form-radios label {
+    color: #871628;
+    font-size: 11px;
+    font-size: 0.6875rem; }
+  #slac-search-options .form-radios input[type='radio'] {
+    cursor: pointer; }
+
+@media (min-width: 690px) {
+  #slac-search-options {
+    position: relative;
+    margin: 0;
+    padding: 0; }
+    #slac-search-options > div {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0; } }
 ol.search-results li {
   border-bottom: 1px solid #f3f1eb;
   margin-bottom: 15px;
