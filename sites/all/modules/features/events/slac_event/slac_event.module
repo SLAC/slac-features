@@ -18,6 +18,11 @@ function slac_event_preprocess_node(&$vars) {
     return;
   }
 
+  $vars['event_link'] = '';
+  if (isset($vars['field_slac_event_link']['und'][0]['url'])) {
+    $vars['event_link'] = $vars['field_slac_event_link']['und'][0]['url'];
+  }
+
   $previous_event_year_month_day = &drupal_static(__FUNCTION__ . '-previous_event_year_month_day', '');
   $row_counter = &drupal_static(__FUNCTION__ . '-row_counter', 1);
   if (isset($vars['view']->result)) {
