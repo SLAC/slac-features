@@ -516,7 +516,6 @@ ul.sf-menu.sf-accordion.sf-expanded {
     .main-menu.long-menu ul > li {
       width: 25%;
       margin: 0;
-      text-align: center;
       border-bottom: 1px solid white;
       border-right: 1px solid white;
       background-color: #ebebdf; }
@@ -525,7 +524,7 @@ ul.sf-menu.sf-accordion.sf-expanded {
       .main-menu.long-menu ul > li:nth-child(4n+4) {
         border-right: 0; }
       .main-menu.long-menu ul > li > a {
-        padding: 5px 0; }
+        padding: 5px 10px; }
         .main-menu.long-menu ul > li > a.active-trail, .main-menu.long-menu ul > li > a.active {
           color: #871628;
           border-bottom: 0 none; }
