@@ -17,10 +17,6 @@ $plugin = array(
  * @ingroup themeable
  */
 function theme_slac_block_style_greybackground_style_render_pane($vars) {
-  if (is_array($vars['content']->content) && $vars['content']->type == 'fieldable_panels_pane') {
-    return;
-  }
-
   if (isset($vars['content']->title) && $vars['content']->content) {
     if (is_array($vars['content']->content)) {
       $content = drupal_render($vars['content']->content);

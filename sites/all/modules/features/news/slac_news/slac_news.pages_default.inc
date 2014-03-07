@@ -217,6 +217,7 @@ function slac_news_default_page_manager_handlers() {
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
+      'style' => 'greybackground',
     );
     $pane->css = array();
     $pane->extras = array();

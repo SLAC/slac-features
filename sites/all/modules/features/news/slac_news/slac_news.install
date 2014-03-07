@@ -1,0 +1,41 @@
+<?php
+
+/**
+ * Implements hook_install()
+ */
+function slac_news_install() {
+  // Create share fpp.
+  $share_fpp = (object) array(
+    'title' => t('Share'),
+    'bundle' => 'share_block',
+    'field_share_options' => array(
+      LANGUAGE_NONE => array(
+        array(
+          'value' => 'facebook',
+        ),
+        array(
+          'value' => 'twitter',
+        ),
+        array(
+          'value' => 'googleplus',
+        ),
+        array(
+          'value' => 'reddit',
+        ),
+        array(
+          'value' => 'delicious',
+        ),
+      )
+    ),
+  );
+  entity_save('fieldable_panels_pane', $share_fpp);
+
+  variable_set('slac_news_share_block_fpp_uuid', $share_fpp->uuid);
+}
+
+/**
+ * Implements hook_uninstall()
+ */
+function slac_news_uninstall() {
+  variable_del('slac_news_share_block_fpp_uuid');
+}
