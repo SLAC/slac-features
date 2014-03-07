@@ -1012,6 +1012,7 @@ function slac_event_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'date_ical';
   $handler->display->display_options['style_options']['uses_fields'] = TRUE;
   $handler->display->display_options['style_options']['cal_name'] = '';
+  $handler->display->display_options['style_options']['no_calname'] = TRUE;
   $handler->display->display_options['row_plugin'] = 'date_ical_fields';
   $handler->display->display_options['row_options']['date_field'] = 'field_slac_event_date';
   $handler->display->display_options['row_options']['title_field'] = 'title';
