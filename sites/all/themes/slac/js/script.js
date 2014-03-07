@@ -101,8 +101,6 @@
       });
 
       $('.user-search #search-block-search-form', context).once('focus-effekt', function () {
-
-        
         $(this).hover(
           function () {
              $('.user-search #slac-search-options > div').slideDown('medium');
@@ -111,8 +109,6 @@
             $('.user-search #slac-search-options > div').slideUp('medium');
           }
         );        
-        
-        
       });
       
 

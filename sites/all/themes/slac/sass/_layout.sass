@@ -3,17 +3,17 @@
 .extentions_normal-link
   color: $red
   &:hover
-    text-decoration: underline  
+    text-decoration: underline
 
 a
   color: #222
   text-decoration: none
   &:hover
     color: $red
-    
+
   .general-left &, .general-one-col &
     .content &
-    
+
       @extend .extentions_normal-link
 
   .pane-node-field-slac-event-related-links &
@@ -243,7 +243,7 @@ ul.tabs, .action-links,
     &:hover
       background-color: $grey-2e
       text-decoration: none !important
-      
+
 
 .mobile-block
   max-height: 100%
@@ -2131,35 +2131,35 @@ form.search-form
     margin: 0 0px 0 0px
     border: 1px solid #a1a1a1
     border-top: 0 none
-    > div 
+    > div
       padding: 2px 6px 5px
 
- 
+
   .form-type-radio
     margin-right: 5px
-  
-  .form-radios 
-    > div 
+
+  .form-radios
+    > div
       display: inline-block
       vertical-align: middle
-  
+
   .form-item label, .form-item input[type='radio']
     display: inline-block
     vertical-align: middle
-    
-  .form-radios 
+
+  .form-radios
     label, input[type='radio']
       margin: 0
-      padding: 0    
-      
+      padding: 0
+
     label
       color: $red
       +fontsize-rem(11px)
-    
-    input[type='radio'] 
+
+    input[type='radio']
       cursor: pointer
-    
-    
+
+
 +at-breakpoint($tablet)
   #slac-search-options
     position: relative
@@ -2168,20 +2168,20 @@ form.search-form
     > div
       display: none
       position: absolute
-      top: 0 
+      top: 0
       left: 0
 
-      
 
 
-    
+
+
   #slac-search-wrapper
     //position: relative
 
 
 
 +at-breakpoint($mobile-and_tablet)
-  
+
 
 ol.search-results
 
@@ -2699,50 +2699,50 @@ h2
 
   header
     margin-bottom: 10px
-  
-  h2 
+
+  h2
     +fontsize-rem(18px)
-  
+
   .submitted
     @extend .date-and-author
-    
+
   .field-type-text-with-summary
-    margin-bottom: 10px  
-    
-    
+    margin-bottom: 10px
+
+
 #imageData #caption
   font-weight: normal !important
-  
-.lightbox-download-link  
+
+.lightbox-download-link
   margin-top: 10px
   display: block
 
 
 .forum-table tr.even, .forum-table tr.odd
   background: none !important
-  
-  
-.forum-table-superheader  
+
+
+.forum-table-superheader
   display: none
-  
-  
+
+
 .pp-image-style-description-left, .pp-image-style-description-right
   margin-bottom: 20px
   img
     float: none !important
-    
+
 
 
 
 .pp-image-style-description-description
   margin-top: 3px
-  +fontsize-rem(12px) 
+  +fontsize-rem(12px)
   color: #676767
-  
-+at-breakpoint($less-than-480)  
-  .pp-image-style-description-left 
-    float: left  
+
++at-breakpoint($less-than-480)
+  .pp-image-style-description-left
+    float: left
     margin-right: 20px
-  .pp-image-style-description-right  
-    float: right   
-    margin-left: 20px  
+  .pp-image-style-description-right
+    float: right
+    margin-left: 20px
