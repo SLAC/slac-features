@@ -63,6 +63,7 @@ features[variable][] = node_preview_slac_news
 features[variable][] = node_submitted_slac_news
 features[variable][] = pathauto_node_slac_news_pattern
 features[views_view][] = news
+features[views_view][] = news_tags
 features_exclude[dependencies][slac_event] = slac_event
 features_exclude[dependencies][views] = views
 features_exclude[dependencies][views_content] = views_content
