@@ -83,6 +83,12 @@ function slac_news_views_default_views() {
   $handler->display->display_options['fields']['field_slac_news_source']['field'] = 'field_slac_news_source';
   $handler->display->display_options['fields']['field_slac_news_source']['label'] = 'Source';
   $handler->display->display_options['fields']['field_slac_news_source']['click_sort_column'] = 'url';
+  /* Field: Content: Tags */
+  $handler->display->display_options['fields']['field_slac_news_tags']['id'] = 'field_slac_news_tags';
+  $handler->display->display_options['fields']['field_slac_news_tags']['table'] = 'field_data_field_slac_news_tags';
+  $handler->display->display_options['fields']['field_slac_news_tags']['field'] = 'field_slac_news_tags';
+  $handler->display->display_options['fields']['field_slac_news_tags']['type'] = 'taxonomy_term_reference_plain';
+  $handler->display->display_options['fields']['field_slac_news_tags']['delta_offset'] = '0';
   /* Sort criterion: Content: Date (field_slac_news_date) */
   $handler->display->display_options['sorts']['field_slac_news_date_value']['id'] = 'field_slac_news_date_value';
   $handler->display->display_options['sorts']['field_slac_news_date_value']['table'] = 'field_data_field_slac_news_date';
@@ -176,6 +182,13 @@ function slac_news_views_default_views() {
   $handler->display->display_options['fields']['field_slac_news_contact']['table'] = 'field_data_field_slac_news_contact';
   $handler->display->display_options['fields']['field_slac_news_contact']['field'] = 'field_slac_news_contact';
   $handler->display->display_options['fields']['field_slac_news_contact']['exclude'] = TRUE;
+  /* Field: Content: Tags */
+  $handler->display->display_options['fields']['field_slac_news_tags']['id'] = 'field_slac_news_tags';
+  $handler->display->display_options['fields']['field_slac_news_tags']['table'] = 'field_data_field_slac_news_tags';
+  $handler->display->display_options['fields']['field_slac_news_tags']['field'] = 'field_slac_news_tags';
+  $handler->display->display_options['fields']['field_slac_news_tags']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_slac_news_tags']['type'] = 'taxonomy_term_reference_plain';
+  $handler->display->display_options['fields']['field_slac_news_tags']['delta_offset'] = '0';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: News type (field_slac_news_type) */
   $handler->display->display_options['arguments']['field_slac_news_type_tid']['id'] = 'field_slac_news_type_tid';
@@ -580,6 +593,66 @@ return TRUE;';
   );
   $handler->display->display_options['inherit_panels_path'] = '0';
   $export['news'] = $view;
+
+  $view = new view();
+  $view->name = 'news_tags';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'taxonomy_term_data';
+  $view->human_name = 'News Tags';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['group_by'] = TRUE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '10';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* Relationship: Taxonomy term: Content using Tags */
+  $handler->display->display_options['relationships']['reverse_field_slac_news_tags_node']['id'] = 'reverse_field_slac_news_tags_node';
+  $handler->display->display_options['relationships']['reverse_field_slac_news_tags_node']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['relationships']['reverse_field_slac_news_tags_node']['field'] = 'reverse_field_slac_news_tags_node';
+  $handler->display->display_options['relationships']['reverse_field_slac_news_tags_node']['required'] = TRUE;
+  /* Field: Taxonomy term: Name */
+  $handler->display->display_options['fields']['name']['id'] = 'name';
+  $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['name']['field'] = 'name';
+  $handler->display->display_options['fields']['name']['label'] = '';
+  $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['name']['link_to_taxonomy'] = TRUE;
+  /* Field: COUNT(Taxonomy term: Term ID) */
+  $handler->display->display_options['fields']['tid']['id'] = 'tid';
+  $handler->display->display_options['fields']['tid']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['tid']['field'] = 'tid';
+  $handler->display->display_options['fields']['tid']['group_type'] = 'count';
+  $handler->display->display_options['fields']['tid']['exclude'] = TRUE;
+  /* Sort criterion: COUNT(Content: Tags (field_slac_news_tags)) */
+  $handler->display->display_options['sorts']['field_slac_news_tags_tid']['id'] = 'field_slac_news_tags_tid';
+  $handler->display->display_options['sorts']['field_slac_news_tags_tid']['table'] = 'field_data_field_slac_news_tags';
+  $handler->display->display_options['sorts']['field_slac_news_tags_tid']['field'] = 'field_slac_news_tags_tid';
+  $handler->display->display_options['sorts']['field_slac_news_tags_tid']['relationship'] = 'reverse_field_slac_news_tags_node';
+  $handler->display->display_options['sorts']['field_slac_news_tags_tid']['group_type'] = 'count';
+  $handler->display->display_options['sorts']['field_slac_news_tags_tid']['order'] = 'DESC';
+  /* Filter criterion: STDDEV_POP(Taxonomy vocabulary: Machine name) */
+  $handler->display->display_options['filters']['machine_name']['id'] = 'machine_name';
+  $handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';
+  $handler->display->display_options['filters']['machine_name']['field'] = 'machine_name';
+  $handler->display->display_options['filters']['machine_name']['group_type'] = 'stddev_pop';
+  $handler->display->display_options['filters']['machine_name']['operator'] = 'in';
+
+  /* Display: Content pane */
+  $handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_1');
+  $export['news_tags'] = $view;
 
   return $export;
 }

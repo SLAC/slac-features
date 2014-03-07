@@ -105,6 +105,18 @@ function slac_news_demo_uuid_features_default_content() {
       ),
     ),
   ),
+  'field_slac_news_tags' => array(
+    'und' => array(
+      0 => array(
+        'tid' => 68,
+        'uuid' => '0ce6dd19-dde1-4daa-ae83-1879947970ac',
+      ),
+      1 => array(
+        'tid' => 70,
+        'uuid' => '98be32f4-4f1a-4cbc-98be-01c4fc935bf8',
+      ),
+    ),
+  ),
   'field_slac_news_type' => array(
     'und' => array(
       0 => array(
@@ -303,6 +315,18 @@ function slac_news_demo_uuid_features_default_content() {
       ),
     ),
   ),
+  'field_slac_news_tags' => array(
+    'und' => array(
+      0 => array(
+        'tid' => 68,
+        'uuid' => '0ce6dd19-dde1-4daa-ae83-1879947970ac',
+      ),
+      1 => array(
+        'tid' => 70,
+        'uuid' => '98be32f4-4f1a-4cbc-98be-01c4fc935bf8',
+      ),
+    ),
+  ),
   'field_slac_news_type' => array(
     'und' => array(
       0 => array(
@@ -477,6 +501,18 @@ function slac_news_demo_uuid_features_default_content() {
         'url' => 'http://www.nature.com/nphoton/journal/vaop/ncurrent/pdf/nphoton.2012.180.pdf',
         'title' => 'Nature Photonics',
         'attributes' => array(),
+      ),
+    ),
+  ),
+  'field_slac_news_tags' => array(
+    'und' => array(
+      0 => array(
+        'tid' => 68,
+        'uuid' => '0ce6dd19-dde1-4daa-ae83-1879947970ac',
+      ),
+      1 => array(
+        'tid' => 70,
+        'uuid' => '98be32f4-4f1a-4cbc-98be-01c4fc935bf8',
       ),
     ),
   ),
@@ -697,6 +733,18 @@ afreeberg@slac.stanford.edu',
       ),
     ),
   ),
+  'field_slac_news_tags' => array(
+    'und' => array(
+      0 => array(
+        'tid' => 68,
+        'uuid' => '0ce6dd19-dde1-4daa-ae83-1879947970ac',
+      ),
+      1 => array(
+        'tid' => 70,
+        'uuid' => '98be32f4-4f1a-4cbc-98be-01c4fc935bf8',
+      ),
+    ),
+  ),
   'field_slac_news_type' => array(
     'und' => array(
       0 => array(
@@ -869,6 +917,14 @@ afreeberg@slac.stanford.edu',
         'url' => 'http://www.nature.com/nphoton/journal/vaop/ncurrent/pdf/nphoton.2012.180.pdf',
         'title' => 'Nature Photonics',
         'attributes' => array(),
+      ),
+    ),
+  ),
+  'field_slac_news_tags' => array(
+    'und' => array(
+      0 => array(
+        'tid' => 69,
+        'uuid' => '1aa88d95-a2ea-4001-978d-fcacdf96213e',
       ),
     ),
   ),
@@ -1057,6 +1113,18 @@ afreeberg@slac.stanford.edu',
         'url' => 'http://news.stanford.edu/news/2013/august/disorder-solar-cells-080413.html',
         'title' => 'Stanford Report',
         'attributes' => array(),
+      ),
+    ),
+  ),
+  'field_slac_news_tags' => array(
+    'und' => array(
+      0 => array(
+        'tid' => 72,
+        'uuid' => 'dad41187-6745-43bc-b95a-7851a7b2c825',
+      ),
+      1 => array(
+        'tid' => 71,
+        'uuid' => 'aaa4a1c8-fb65-4eeb-9bfe-909031f5e18b',
       ),
     ),
   ),
@@ -1260,6 +1328,7 @@ afreeberg@slac.stanford.edu',
       ),
     ),
   ),
+  'field_slac_news_tags' => array(),
   'field_slac_news_type' => array(
     'und' => array(
       0 => array(
@@ -1439,6 +1508,18 @@ afreeberg@slac.stanford.edu',
         'url' => 'http://news.stanford.edu/news/2013/august/disorder-solar-cells-080413.html',
         'title' => 'Stanford Report',
         'attributes' => array(),
+      ),
+    ),
+  ),
+  'field_slac_news_tags' => array(
+    'und' => array(
+      0 => array(
+        'tid' => 72,
+        'uuid' => 'dad41187-6745-43bc-b95a-7851a7b2c825',
+      ),
+      1 => array(
+        'tid' => 71,
+        'uuid' => 'aaa4a1c8-fb65-4eeb-9bfe-909031f5e18b',
       ),
     ),
   ),
@@ -1628,6 +1709,7 @@ Sebastien Boutet, SLAC National Accelerator Laboratory: sboutet@slac.stanford.ed
       ),
     ),
   ),
+  'field_slac_news_tags' => array(),
   'field_slac_news_type' => array(
     'und' => array(
       0 => array(
@@ -1795,6 +1877,14 @@ Sebastien Boutet, SLAC National Accelerator Laboratory: sboutet@slac.stanford.ed
         'url' => 'http://news.stanford.edu/news/2013/august/disorder-solar-cells-080413.html',
         'title' => 'Stanford Report',
         'attributes' => array(),
+      ),
+    ),
+  ),
+  'field_slac_news_tags' => array(
+    'und' => array(
+      0 => array(
+        'tid' => 73,
+        'uuid' => '971c94e1-0a7e-474c-96ca-9e1a4da2d6a5',
       ),
     ),
   ),
@@ -1989,6 +2079,14 @@ Sebastien Boutet, SLAC National Accelerator Laboratory: sboutet@slac.stanford.ed
         'url' => 'http://news.stanford.edu/news/2013/august/disorder-solar-cells-080413.html',
         'title' => 'Stanford Report',
         'attributes' => array(),
+      ),
+    ),
+  ),
+  'field_slac_news_tags' => array(
+    'und' => array(
+      0 => array(
+        'tid' => 74,
+        'uuid' => '4538f295-cc43-4d99-ba1d-6a7f23e86663',
       ),
     ),
   ),
@@ -2189,6 +2287,18 @@ Sebastien Boutet, SLAC National Accelerator Laboratory: sboutet@slac.stanford.ed
         'url' => 'http://news.stanford.edu/news/2013/august/disorder-solar-cells-080413.html',
         'title' => 'Stanford Report',
         'attributes' => array(),
+      ),
+    ),
+  ),
+  'field_slac_news_tags' => array(
+    'und' => array(
+      0 => array(
+        'tid' => 72,
+        'uuid' => 'dad41187-6745-43bc-b95a-7851a7b2c825',
+      ),
+      1 => array(
+        'tid' => 71,
+        'uuid' => 'aaa4a1c8-fb65-4eeb-9bfe-909031f5e18b',
       ),
     ),
   ),
