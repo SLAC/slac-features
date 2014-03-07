@@ -3077,7 +3077,8 @@ ul.blog-archive-class {
     .no-rgba .pane-bundle-slideshow-description-bottom .field-slideshow-body {
       background: url('../images/fall_back_3perc.png') repeat 0 0; }
     .pane-bundle-slideshow-description-bottom .field-slideshow-body:hover a {
-      border-bottom: 1px dotted; }
+      border-bottom: 1px dotted;
+      text-decoration: none; }
     .pane-bundle-slideshow-description-bottom .field-slideshow-body a {
       color: inherit; }
   .pane-bundle-slideshow-description-bottom .field-slideshow-description {
