@@ -23,6 +23,12 @@ function slac_share_block_field_default_field_instances() {
       2 => array(
         'value' => 'googleplus',
       ),
+      3 => array(
+        'value' => 'reddit',
+      ),
+      4 => array(
+        'value' => 'delicious',
+      ),
     ),
     'deleted' => 0,
     'description' => '',

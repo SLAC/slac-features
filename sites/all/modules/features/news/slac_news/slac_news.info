@@ -10,6 +10,7 @@ dependencies[] = link
 dependencies[] = mediafield
 dependencies[] = menu
 dependencies[] = page_manager
+dependencies[] = slac_faq
 dependencies[] = slac_news_archive
 dependencies[] = strongarm
 dependencies[] = taxonomy

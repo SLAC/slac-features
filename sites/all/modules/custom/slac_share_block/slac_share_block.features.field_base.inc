@@ -32,7 +32,9 @@ function slac_share_block_field_default_field_bases() {
       'allowed_values' => array(
         'facebook' => 'Facebook',
         'twitter' => 'Twitter',
-        'googleplus' => ' GooglePlus',
+        'googleplus' => 'GooglePlus',
+        'reddit' => 'Reddit',
+        'delicious' => 'Delicious',
       ),
       'allowed_values_function' => '',
       'profile2_private' => FALSE,

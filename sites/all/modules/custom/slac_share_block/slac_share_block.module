@@ -80,6 +80,22 @@ function slac_share_block_preprocess_slac_share_block(&$vars) {
             //'pop_up' => 'javascript:window.open(this.href, \'\', \'height=320, width=640, toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, directories=no, status=no\');return false;',
           );
           break;
+        case 'reddit':
+          $item_values[] = array(
+            'id' => $item['value'],
+            'url' => 'https://reddit.com/submit?url=' . $current_page_url,
+            'title' => $entity['field_share_options'][$key]['#markup'],
+            //'pop_up' => 'javascript:window.open(this.href, \'\', \'height=320, width=640, toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, directories=no, status=no\');return false;',
+          );
+          break;
+        case 'delicious':
+          $item_values[] = array(
+            'id' => $item['value'],
+            'url' => 'https://del.icio.us/post?url=' . $current_page_url,
+            'title' => $entity['field_share_options'][$key]['#markup'],
+            //'pop_up' => 'javascript:window.open(this.href, \'\', \'height=320, width=640, toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, directories=no, status=no\');return false;',
+          );
+          break;
       }
     }
   }
