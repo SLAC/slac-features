@@ -34,8 +34,8 @@ function slac_event_field_formatter_view($entity_type, $entity, $field, $instanc
 
     $date_end_timestamp = strtotime($date_end);
 
-    $date_start_day = format_date($date_start_timestamp, 'custom', 'l, F j');
-    $date_end_day = format_date($date_end_timestamp, 'custom', 'l, F j');
+    $date_start_day = format_date($date_start_timestamp, 'custom', 'l, F j, g:ia');
+    $date_end_day = format_date($date_end_timestamp, 'custom', 'l, F j, g:ia');
 
     // If it is same day but we have different start / end times.
     if ($date_start_day == $date_end_day) {
