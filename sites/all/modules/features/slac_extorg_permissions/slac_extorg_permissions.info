@@ -57,6 +57,10 @@ dependencies[] = views
 dependencies[] = webform
 dependencies[] = workbench
 dependencies[] = workbench_moderation
+<<<<<<< HEAD
+features[user_permission][] = edit terms in slac_sc_category
+>>>>>>> parent of a43bcf0... Issue #10527: Remove news tags vocabulary.
+features[user_permission][] = edit terms in tags
 features[features_api][] = api:2
 features[user_permission][] = access Internal tickets
 features[user_permission][] = access administration menu
@@ -228,10 +232,10 @@ features[user_permission][] = delete terms in events_tags
 features[user_permission][] = delete terms in kb_categories
 features[user_permission][] = delete terms in news_types
 features[user_permission][] = delete terms in slac_blog_tags
+features[user_permission][] = delete terms in slac_news_tags
 features[user_permission][] = delete terms in slac_sc_category
 features[user_permission][] = delete terms in slac_sc_eligibility
 features[user_permission][] = delete terms in slac_sc_self_help
-features[user_permission][] = delete terms in slac_news_tags
 features[user_permission][] = delete terms in tags
 features[user_permission][] = display drupal links
 features[user_permission][] = download any audio files
@@ -299,18 +303,9 @@ features[user_permission][] = edit terms in events_tags
 features[user_permission][] = edit terms in kb_categories
 features[user_permission][] = edit terms in news_types
 features[user_permission][] = edit terms in slac_blog_tags
-<<<<<<< HEAD
-features[user_permission][] = edit terms in slac_sc_category
+features[user_permission][] = edit terms in slac_news_tags
 features[user_permission][] = edit terms in slac_sc_eligibility
 features[user_permission][] = edit terms in slac_sc_self_help
-=======
-features[user_permission][] = edit terms in slac_faq_category
-features[user_permission][] = edit terms in slac_news_tags
-features[user_permission][] = edit terms in slac_sc_catalog_category
-features[user_permission][] = edit terms in slac_sc_catalog_eligibility
-features[user_permission][] = edit terms in slac_sc_catalog_self_help
->>>>>>> parent of a43bcf0... Issue #10527: Remove news tags vocabulary.
-features[user_permission][] = edit terms in tags
 features[user_permission][] = epsacrop administer available crops
 features[user_permission][] = epsacrop create crops
 features[user_permission][] = epsacrop delete all crops
