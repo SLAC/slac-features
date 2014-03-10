@@ -11,7 +11,7 @@ include_once 'slac_news.features.inc';
  */
 function slac_news_default_page_manager_handlers_alter(&$data) {
   if (isset($data['node_view_panel_context_2']->conf['display']->content['new-6']->type)
-    && $data['node_view_panel_context_2']->conf['display']->content['new-6']->type == 'fieldable_panels_pane') {
+    && $data['node_view_panel_context_2']->conf['display']->content['new-6']->subtype == 'uuid:e9300355-de9c-48a2-b58a-5c9784030be9') {
     $share_fpp_uuid = variable_get('slac_news_share_block_fpp_uuid', 0);
     $data['node_view_panel_context_2']->conf['display']->content['new-6']->subtype = 'uuid:' . $share_fpp_uuid;
   }
