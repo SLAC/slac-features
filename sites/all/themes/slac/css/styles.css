@@ -940,6 +940,10 @@ ul.tabs, .action-links {
     content: "\e610"; }
   .mob-icon.share-googleplus:before, .user-icons a.share-googleplus:before, .share-block-wrapper a.share-googleplus:before {
     content: "\e603"; }
+  .mob-icon.share-reddit:before, .user-icons a.share-reddit:before, .share-block-wrapper a.share-reddit:before {
+    content: "\e62e"; }
+  .mob-icon.share-delicious:before, .user-icons a.share-delicious:before, .share-block-wrapper a.share-delicious:before {
+    content: "\e62f"; }
 
 .social-media-content {
   text-align: right; }
