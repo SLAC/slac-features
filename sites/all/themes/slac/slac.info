@@ -38,6 +38,7 @@ plugins[panels][layouts] = plugins/layouts
 
 regions[content]        = Content
 regions[help]           = Help
+regions[sidebar_first]  = Sidebar First
 
 features[] = logo
 features[] = name
