@@ -920,6 +920,40 @@ function slac_profile_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'profile2-contact-field_published'
+  $field_instances['profile2-contact-field_published'] = array(
+    'bundle' => 'contact',
+    'default_value' => array(
+      0 => array(
+        'value' => 1,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'Select whether you would like your profile to be published or private.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 12,
+      ),
+    ),
+    'entity_type' => 'profile2',
+    'field_name' => 'field_published',
+    'label' => 'Published',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 12,
+    ),
+  );
+
   // Exported field_instance: 'profile2-social_media-field_prf_social_facebook'
   $field_instances['profile2-social_media-field_prf_social_facebook'] = array(
     'bundle' => 'social_media',
@@ -1182,8 +1216,10 @@ function slac_profile_field_default_field_instances() {
   t('Professional Activities');
   t('Professional Experience');
   t('Publications');
+  t('Published');
   t('Research Group');
   t('Select the document type icon (will be displayed if a URL is added).');
+  t('Select whether you would like your profile to be published or private.');
   t('Talks and Presentations');
   t('The URL field can contain a link to a document, presentation, article.');
   t('Title');

@@ -11,7 +11,6 @@ function slac_people_listing_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "page_manager" && $api == "pages_default") {
     return array("version" => "1");
   }
-  list($module, $api) = func_get_args();
   if ($module == "strongarm" && $api == "strongarm") {
     return array("version" => "1");
   }
@@ -50,6 +49,7 @@ function slac_people_listing_image_default_styles() {
         'weight' => 2,
       ),
     ),
+    'label' => 'people-listing-photo',
   );
 
   // Exported image style: profile_home_user_image_eo.
@@ -72,6 +72,7 @@ function slac_people_listing_image_default_styles() {
         'weight' => 2,
       ),
     ),
+    'label' => 'profile_home_user_image_eo',
   );
 
   return $styles;

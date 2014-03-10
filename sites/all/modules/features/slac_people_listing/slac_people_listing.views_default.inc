@@ -222,6 +222,14 @@ function slac_people_listing_views_default_views() {
   $handler->display->display_options['filters']['uid_raw_1']['field'] = 'uid_raw';
   $handler->display->display_options['filters']['uid_raw_1']['operator'] = '!=';
   $handler->display->display_options['filters']['uid_raw_1']['value']['value'] = '1';
+  /* Filter criterion: Profile: Published (field_published) */
+  $handler->display->display_options['filters']['field_published_value']['id'] = 'field_published_value';
+  $handler->display->display_options['filters']['field_published_value']['table'] = 'field_data_field_published';
+  $handler->display->display_options['filters']['field_published_value']['field'] = 'field_published_value';
+  $handler->display->display_options['filters']['field_published_value']['relationship'] = 'profile';
+  $handler->display->display_options['filters']['field_published_value']['value'] = array(
+    1 => '1',
+  );
 
   /* Display: Attachment */
   $handler = $view->new_display('attachment', 'Attachment', 'attachment_1');
