@@ -570,6 +570,9 @@ a {
     color: #871628; }
   .content .general-right .panel-pane ul li a.active, .content .general-right .panel-pane ul li a.active-item {
     text-decoration: underline; }
+  .blog-archive-class a.active, .blog-archive-class a.active-item {
+    font-weight: bold;
+    text-decoration: none !important; }
 
 .content .general-right .panel-pane ul li {
   margin-bottom: 5px; }
