@@ -1,9 +1,37 @@
 
 
-.extentions_normal-link
+.extentions_normal-link 
   color: $red
   &:hover
     text-decoration: underline
+
+
+.extentions_normal-link_a
+  a
+    &:hover
+      text-decoration: underline
+      color: $red
+
+
+.extentions_people_link_sidebar
+
+  &:link
+    color: #635c2c
+    text-decoration: none
+  
+  &:visited
+    color: #635c2c
+  
+  
+  &:hover 
+    color: #783333
+    text-decoration: underline
+  
+  
+  &:active
+    color: #9b622f
+    text-decoration: underline
+
 
 a
   color: #222
@@ -33,6 +61,10 @@ a
       font-weight: bold
       text-decoration: none !important
     
+  .profile-textformatter-list &
+    .profile-info-full &
+      @extend .extentions_people_link_sidebar
+
 
 
 li

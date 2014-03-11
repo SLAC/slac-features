@@ -563,6 +563,22 @@ ul.sf-menu.sf-accordion.sf-expanded {
   .extentions_normal-link:hover, .content .general-left a:hover, .content .general-one-col a:hover, .pane-node-field-slac-event-related-links a:hover {
     text-decoration: underline; }
 
+.extentions_normal-link_a a:hover {
+  text-decoration: underline;
+  color: #871628; }
+
+.extentions_people_link_sidebar:link, .profile-info-full .profile-textformatter-list a:link {
+  color: #635c2c;
+  text-decoration: none; }
+.extentions_people_link_sidebar:visited, .profile-info-full .profile-textformatter-list a:visited {
+  color: #635c2c; }
+.extentions_people_link_sidebar:hover, .profile-info-full .profile-textformatter-list a:hover {
+  color: #783333;
+  text-decoration: underline; }
+.extentions_people_link_sidebar:active, .profile-info-full .profile-textformatter-list a:active {
+  color: #9b622f;
+  text-decoration: underline; }
+
 a {
   color: #222222;
   text-decoration: none; }
