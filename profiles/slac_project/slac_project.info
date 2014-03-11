@@ -187,3 +187,9 @@ dependencies[] = slac_ldap_roles
 
 ;Custom ctools plugins
 dependencies[] = ctools_plugins
+
+; Newsletter
+dependencies[] = mailsystem
+dependencies[] = simplenews
+dependencies[] = htmlmail
+dependencies[] = slac_newsletter

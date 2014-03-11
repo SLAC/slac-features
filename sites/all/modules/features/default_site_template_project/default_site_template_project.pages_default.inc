@@ -28,6 +28,31 @@ function default_site_template_project_default_page_manager_handlers() {
     'css' => '',
     'contexts' => array(),
     'relationships' => array(),
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'node_type',
+          'settings' => array(
+            'type' => array(
+              'newsletter' => 'newsletter',
+            ),
+          ),
+          'context' => 'node',
+          'not' => TRUE,
+        ),
+        1 => array(
+          'name' => 'path_visibility',
+          'settings' => array(
+            'visibility_setting' => '0',
+            'paths' => 'newsletter
+newsletter/*',
+          ),
+          'context' => 'empty',
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
   );
   $display = new panels_display();
   $display->layout = 'page_basic_eo';

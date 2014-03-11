@@ -34,5 +34,6 @@ function slac_project_demo_modules() {
     'slac_blog_demo',
     'slac_faq_demo',
     'slac_demo_accounts',
+    'slac_newsletter_demo',
   );
 }
