@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the SLAC Newsletter Demo feature.
+ */
+
+include_once 'slac_newsletter_demo.features.inc';
