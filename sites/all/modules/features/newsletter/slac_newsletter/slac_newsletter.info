@@ -34,6 +34,7 @@ features[page_manager_handlers][] = site_template_panel_context_2
 features[page_manager_pages][] = newsletter
 features[panelizer_defaults][] = node:newsletter:default
 features[taxonomy][] = newsletter
+features[uuid_term][] = d1d5a7fe-8e29-48f9-9a7b-1390b93b7e34
 features[variable][] = additional_settings__active_tab_newsletter
 features[variable][] = comment_anonymous_newsletter
 features[variable][] = comment_default_mode_newsletter

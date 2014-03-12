@@ -1,0 +1,61 @@
+<?php
+
+/**
+ * Implements hook_install().
+ */
+function slac_newsletter_install() {
+  $voc = taxonomy_vocabulary_machine_name_load('newsletter');
+  if (!isset($voc->vid)) {
+    return;
+  }
+
+  $term = new stdClass();
+  $term->name = 'SLAC Newsletter';
+  $term->uuid = 'd1d5a7fe-8e29-48f9-9a7b-1390b93b7e34';
+  $term->vid = $voc->vid;
+  taxonomy_term_save($term);
+
+  $newsletter_category = (object) array(
+    'tid' => $term->tid,
+    'format' => 'html',
+    'priority' => 0,
+    'receipt' => 0,
+    'from_name' => 'SLAC',
+    'email_subject' => '[[simplenews-category:name]] [node:title]',
+    'from_address' => '',
+    'hyperlinks' => 1,
+    'new_account' => 'none',
+    'opt_inout' => 'double',
+    'block' => 1,
+  );
+  simplenews_category_save($newsletter_category);
+
+  variable_set('slac_newsletter_block_id', 'simplenews-' . $term->tid);
+
+  //$term = entity_uuid_load('taxonomy_term', array('d1d5a7fe-8e29-48f9-9a7b-1390b93b7e34'));
+
+  /*if (is_array($term)) {
+    $tid_val = array_keys($term);
+    if (isset($tid_val[0]) && is_numeric($tid_val[0])) {
+      $tid = $tid_val[0];
+    }
+    else {
+      return;
+    }
+
+    $newsletter_category = (object) array(
+      'tid' => $tid,
+      'format' => 'html',
+      'priority' => 0,
+      'receipt' => 0,
+      'from_name' => 'SLAC',
+      'email_subject' => '[[simplenews-category:name]] [node:title]',
+      'from_address' => '',
+      'hyperlinks' => 1,
+      'new_account' => 'none',
+      'opt_inout' => 'double',
+      'block' => 1,
+    );
+    simplenews_category_save($newsletter_category);
+  }*/
+}
