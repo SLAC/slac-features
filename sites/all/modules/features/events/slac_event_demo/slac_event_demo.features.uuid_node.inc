@@ -98,7 +98,6 @@ function slac_event_demo_uuid_features_default_content() {
   'field_slac_event_organization' => array(),
   'field_slac_event_related_links' => array(),
   'field_slac_event_scientific_area' => array(),
-  'field_slac_event_tags' => array(),
   'metatags' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
@@ -252,7 +251,6 @@ function slac_event_demo_uuid_features_default_content() {
   'field_slac_event_organization' => array(),
   'field_slac_event_related_links' => array(),
   'field_slac_event_scientific_area' => array(),
-  'field_slac_event_tags' => array(),
   'metatags' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
@@ -406,7 +404,6 @@ function slac_event_demo_uuid_features_default_content() {
   'field_slac_event_organization' => array(),
   'field_slac_event_related_links' => array(),
   'field_slac_event_scientific_area' => array(),
-  'field_slac_event_tags' => array(),
   'metatags' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
@@ -591,7 +588,6 @@ function slac_event_demo_uuid_features_default_content() {
   'field_slac_event_organization' => array(),
   'field_slac_event_related_links' => array(),
   'field_slac_event_scientific_area' => array(),
-  'field_slac_event_tags' => array(),
   'metatags' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
@@ -764,7 +760,6 @@ function slac_event_demo_uuid_features_default_content() {
   'field_slac_event_organization' => array(),
   'field_slac_event_related_links' => array(),
   'field_slac_event_scientific_area' => array(),
-  'field_slac_event_tags' => array(),
   'metatags' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
@@ -937,14 +932,6 @@ function slac_event_demo_uuid_features_default_content() {
       ),
     ),
   ),
-  'field_slac_event_tags' => array(
-    'und' => array(
-      0 => array(
-        'tid' => 54,
-        'uuid' => '9914b3dc-1371-45c4-970d-93a26ca5fba9',
-      ),
-    ),
-  ),
   'metatags' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
@@ -1098,7 +1085,6 @@ function slac_event_demo_uuid_features_default_content() {
   'field_slac_event_organization' => array(),
   'field_slac_event_related_links' => array(),
   'field_slac_event_scientific_area' => array(),
-  'field_slac_event_tags' => array(),
   'metatags' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
@@ -1302,14 +1288,6 @@ function slac_event_demo_uuid_features_default_content() {
   'field_slac_event_organization' => array(),
   'field_slac_event_related_links' => array(),
   'field_slac_event_scientific_area' => array(),
-  'field_slac_event_tags' => array(
-    'und' => array(
-      0 => array(
-        'tid' => 52,
-        'uuid' => '887e35db-2734-405e-a001-daad4a60daa7',
-      ),
-    ),
-  ),
   'metatags' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
@@ -1463,7 +1441,6 @@ function slac_event_demo_uuid_features_default_content() {
   'field_slac_event_organization' => array(),
   'field_slac_event_related_links' => array(),
   'field_slac_event_scientific_area' => array(),
-  'field_slac_event_tags' => array(),
   'metatags' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
@@ -1629,7 +1606,6 @@ function slac_event_demo_uuid_features_default_content() {
   'field_slac_event_organization' => array(),
   'field_slac_event_related_links' => array(),
   'field_slac_event_scientific_area' => array(),
-  'field_slac_event_tags' => array(),
   'metatags' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
@@ -1838,7 +1814,6 @@ function slac_event_demo_uuid_features_default_content() {
   'field_slac_event_organization' => array(),
   'field_slac_event_related_links' => array(),
   'field_slac_event_scientific_area' => array(),
-  'field_slac_event_tags' => array(),
   'metatags' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(

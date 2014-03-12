@@ -1041,85 +1041,6 @@ function slac_event_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_slac_event_tags'
-  $field_instances['node-event-field_slac_event_tags'] = array(
-    'bundle' => 'event',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Enter comma separated tags (i.e. Photon, X-Ray, Accelerator)',
-    'display' => array(
-      'calendar_teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 9,
-      ),
-      'default' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 5,
-      ),
-      'full' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 5,
-      ),
-      'ical' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'rss' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'search_index' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 5,
-      ),
-      'search_result' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 5,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_slac_event_tags',
-    'label' => 'Tags',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'taxonomy',
-      'settings' => array(
-        'autocomplete_path' => 'taxonomy/autocomplete',
-        'size' => 60,
-      ),
-      'type' => 'taxonomy_autocomplete',
-      'weight' => 11,
-    ),
-  );
-
   // Exported field_instance: 'taxonomy_term-event_categories-field_field_slac_event_color'
   $field_instances['taxonomy_term-event_categories-field_field_slac_event_color'] = array(
     'bundle' => 'event_categories',
@@ -1160,7 +1081,6 @@ function slac_event_field_default_field_instances() {
   t('Comment');
   t('Contact');
   t('Description');
-  t('Enter comma separated tags (i.e. Photon, X-Ray, Accelerator)');
   t('Event Color');
   t('Event Organization');
   t('Event Scientific Area');
@@ -1173,7 +1093,6 @@ function slac_event_field_default_field_instances() {
   t('Please enter the link of the event, i.e. https://conf-slac.stanford.edu/ixs-2013/Welcome. User will be REDIRECTED to this page instead of viewing the event on this site.');
   t('Redirect event link');
   t('Related links');
-  t('Tags');
 
   return $field_instances;
 }

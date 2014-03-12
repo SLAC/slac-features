@@ -11,15 +11,6 @@ function slac_event_demo_uuid_features_default_terms() {
   $terms = array();
 
   $terms[] = array(
-    'name' => 'Photon Science Seminars',
-    'description' => NULL,
-    'format' => NULL,
-    'weight' => 0,
-    'uuid' => '887e35db-2734-405e-a001-daad4a60daa7',
-    'vocabulary_machine_name' => 'events_tags',
-    'metatags' => array(),
-  );
-  $terms[] = array(
     'name' => 'Accelerator and Instrumentation Seminars',
     'description' => '',
     'format' => 'filtered_html',
@@ -33,15 +24,6 @@ function slac_event_demo_uuid_features_default_terms() {
         ),
       ),
     ),
-    'metatags' => array(),
-  );
-  $terms[] = array(
-    'name' => 'Particle Physics',
-    'description' => NULL,
-    'format' => NULL,
-    'weight' => 0,
-    'uuid' => '9914b3dc-1371-45c4-970d-93a26ca5fba9',
-    'vocabulary_machine_name' => 'events_tags',
     'metatags' => array(),
   );
   $terms[] = array(

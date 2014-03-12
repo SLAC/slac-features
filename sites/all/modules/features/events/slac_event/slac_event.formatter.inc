@@ -27,15 +27,15 @@ function slac_event_field_formatter_view($entity_type, $entity, $field, $instanc
 
     // If start and end dates are the same we display only one time.
     if ($date_start == $date_end) {
-      $output = format_date($date_start_timestamp, 'custom', 'l, F j, g:ia');
+      $output = format_date($date_start_timestamp, 'custom', 'l, F j, Y, g:ia');
       $element[$delta] = array('#markup' => $output);
       continue;
     }
 
     $date_end_timestamp = strtotime($date_end);
 
-    $date_start_day = format_date($date_start_timestamp, 'custom', 'l, F j, g:ia');
-    $date_end_day = format_date($date_end_timestamp, 'custom', 'l, F j, g:ia');
+    $date_start_day = format_date($date_start_timestamp, 'custom', 'l, F j, Y, g:ia');
+    $date_end_day = format_date($date_end_timestamp, 'custom', 'l, F j, Y, g:ia');
 
     // If it is same day but we have different start / end times.
     if ($date_start_day == $date_end_day) {
