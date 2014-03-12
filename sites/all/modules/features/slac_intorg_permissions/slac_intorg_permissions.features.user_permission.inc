@@ -1899,16 +1899,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
-  // Exported permission: 'delete terms in events_tags'.
-  $permissions['delete terms in events_tags'] = array(
-    'name' => 'delete terms in events_tags',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'editor' => 'editor',
-    ),
-    'module' => 'taxonomy',
-  );
-
   // Exported permission: 'delete terms in forums'.
   $permissions['delete terms in forums'] = array(
     'name' => 'delete terms in forums',
@@ -2687,16 +2677,6 @@ function slac_intorg_permissions_user_default_permissions() {
   // Exported permission: 'edit terms in event_categories'.
   $permissions['edit terms in event_categories'] = array(
     'name' => 'edit terms in event_categories',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'editor' => 'editor',
-    ),
-    'module' => 'taxonomy',
-  );
-
-  // Exported permission: 'edit terms in events_tags'.
-  $permissions['edit terms in events_tags'] = array(
-    'name' => 'edit terms in events_tags',
     'roles' => array(
       'administrator' => 'administrator',
       'editor' => 'editor',

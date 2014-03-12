@@ -1702,16 +1702,6 @@ function slac_extorg_permissions_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
-  // Exported permission: 'delete terms in events_tags'.
-  $permissions['delete terms in events_tags'] = array(
-    'name' => 'delete terms in events_tags',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'site owner' => 'site owner',
-    ),
-    'module' => 'taxonomy',
-  );
-
   // Exported permission: 'delete terms in kb_categories'.
   $permissions['delete terms in kb_categories'] = array(
     'name' => 'delete terms in kb_categories',
@@ -2507,18 +2497,6 @@ function slac_extorg_permissions_user_default_permissions() {
   // Exported permission: 'edit terms in event_categories'.
   $permissions['edit terms in event_categories'] = array(
     'name' => 'edit terms in event_categories',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
-      'site owner' => 'site owner',
-    ),
-    'module' => 'taxonomy',
-  );
-
-  // Exported permission: 'edit terms in events_tags'.
-  $permissions['edit terms in events_tags'] = array(
-    'name' => 'edit terms in events_tags',
     'roles' => array(
       'administrator' => 'administrator',
       'author' => 'author',
