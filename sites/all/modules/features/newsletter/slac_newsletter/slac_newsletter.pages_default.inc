@@ -61,6 +61,13 @@ newsletter/*',
     'style_settings' => array(
       'default' => NULL,
       'middle' => NULL,
+      'user-search' => NULL,
+      'header-menu' => NULL,
+      'site-title' => NULL,
+      'main-menu' => NULL,
+      'content' => NULL,
+      'footer-first' => NULL,
+      'footer-seccond' => NULL,
     ),
   );
   $display->cache = array();
@@ -69,6 +76,24 @@ newsletter/*',
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-1';
+    $pane->panel = 'content';
+    $pane->type = 'pane_messages';
+    $pane->subtype = 'pane_messages';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-1'] = $pane;
+    $display->panels['content'][0] = 'new-1';
+    $pane = new stdClass();
+    $pane->pid = 'new-2';
     $pane->panel = 'content';
     $pane->type = 'page_content';
     $pane->subtype = 'page_content';
@@ -85,10 +110,10 @@ newsletter/*',
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-1'] = $pane;
-    $display->panels['content'][0] = 'new-1';
+    $display->content['new-2'] = $pane;
+    $display->panels['content'][1] = 'new-2';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
