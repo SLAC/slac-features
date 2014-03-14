@@ -39,7 +39,7 @@ a
   &:hover
     color: $red
 
-  .general-left &, .general-one-col &
+  .general-left &, .general-one-col &, .general-right &
     .content &
 
       @extend .extentions_normal-link
@@ -57,7 +57,7 @@ a
               text-decoration: underline
 
 
-    .blog-archive-class &
+    .blog-archive-class &, .news-archive-class &
       font-weight: bold
       text-decoration: none !important
     
@@ -501,12 +501,12 @@ ul.tabs, .action-links,
       margin-left: 0
   a
     +fontsize-rem(21px)
-    color: $grey-9
+    color: $grey-9 !important
     margin: 0
     width: 21px
     height: 22px
     &:hover
-      color: $red
+      color: $red  !important
 
 
 
@@ -785,6 +785,7 @@ ul.tabs, .action-links,
       &:hover
         background-color: $red
         color: #fff
+        text-decoration: none !important
 
   .event-calendar-page &
     margin-top: 0
@@ -1226,6 +1227,8 @@ article.node-blog
     a
       color: $rose
       position: relative
+      &:hover
+        text-decoration: none
       &:after
         position: absolute
         width: 100%
@@ -1236,6 +1239,7 @@ article.node-blog
         content: ''
       &:hover:after
         display: inline-block
+        
 
 
 
