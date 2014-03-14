@@ -151,6 +151,45 @@ function slac_newsletter_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'htmlmail_debug';
+  $strongarm->value = 0;
+  $export['htmlmail_debug'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'htmlmail_postfilter';
+  $strongarm->value = 'full_html';
+  $export['htmlmail_postfilter'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'htmlmail_theme';
+  $strongarm->value = 'slac';
+  $export['htmlmail_theme'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'mailsystem_theme';
+  $strongarm->value = 'slac';
+  $export['mailsystem_theme'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'mail_system';
+  $strongarm->value = array(
+    'default-system' => 'HTMLMailSystem',
+    'htmlmail' => 'HTMLMailSystem',
+    'simplenews_simplenews_newsletter' => 'HTMLMailSystem',
+  );
+  $export['mail_system'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_newsletter';
   $strongarm->value = array();
   $export['menu_options_newsletter'] = $strongarm;
@@ -324,16 +363,51 @@ function slac_newsletter_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'webauth.return_to_newsletter';
-  $strongarm->value = 'http://features.loc/user?destination=admin/structure/types/manage/simplenews';
-  $export['webauth.return_to_newsletter'] = $strongarm;
+  $strongarm->name = 'simplenews_debug';
+  $strongarm->value = 0;
+  $export['simplenews_debug'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'workbench_moderation_default_state_newsletter';
-  $strongarm->value = 'draft';
-  $export['workbench_moderation_default_state_newsletter'] = $strongarm;
+  $strongarm->name = 'simplenews_format';
+  $strongarm->value = 'html';
+  $export['simplenews_format'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'simplenews_priority';
+  $strongarm->value = '0';
+  $export['simplenews_priority'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'simplenews_send';
+  $strongarm->value = '1';
+  $export['simplenews_send'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'simplenews_source_cache';
+  $strongarm->value = 'SimplenewsSourceCacheBuild';
+  $export['simplenews_source_cache'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'simplenews_test_address_override';
+  $strongarm->value = 1;
+  $export['simplenews_test_address_override'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'simplenews_use_cron';
+  $strongarm->value = 1;
+  $export['simplenews_use_cron'] = $strongarm;
 
   return $export;
 }

@@ -275,7 +275,7 @@ function slac_newsletter_default_page_manager_pages() {
     $pane->pid = 'new-5';
     $pane->panel = 'right';
     $pane->type = 'block';
-    $pane->subtype = 'simplenews-82';
+    $pane->subtype = 'simplenews-32';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
