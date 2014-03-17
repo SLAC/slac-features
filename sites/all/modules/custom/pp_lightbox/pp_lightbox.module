@@ -87,6 +87,9 @@ function pp_lightbox_theme() {
 
 
 function theme_image_style_lightbox($variables) {
+  // Disable image zoom.
+  variable_set('lightbox2_disable_zoom', TRUE);
+
   $image_style = $variables['style_name'];
   $file = $variables['file'];
 
