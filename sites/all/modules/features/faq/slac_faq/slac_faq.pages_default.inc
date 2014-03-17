@@ -236,12 +236,13 @@ function slac_faq_default_page_manager_handlers() {
     $pane->pid = 'new-8';
     $pane->panel = 'right';
     $pane->type = 'views_panes';
-    $pane->subtype = 'slac_faq-panel_pane_1';
+    $pane->subtype = 'faq_category-panel_pane_1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
+      'items_per_page' => '10',
+      'override_title' => 1,
+      'override_title_text' => 'Categories',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -449,7 +450,15 @@ function slac_faq_default_page_manager_pages() {
     'css_id' => '',
     'css' => '',
     'contexts' => array(),
-    'relationships' => array(),
+    'relationships' => array(
+      0 => array(
+        'identifier' => 'Taxonomy vocabulary from Taxonomy term (on taxonomy_term_data.vocabulary)',
+        'keyword' => 'taxonomy_vocabulary',
+        'name' => 'entity_from_schema:vid-taxonomy_term-taxonomy_vocabulary',
+        'context' => 'argument_term_1',
+        'id' => 1,
+      ),
+    ),
     'access' => array(
       'plugins' => array(),
       'logic' => 'and',
@@ -522,12 +531,13 @@ function slac_faq_default_page_manager_pages() {
     $pane->pid = 'new-3';
     $pane->panel = 'right';
     $pane->type = 'views_panes';
-    $pane->subtype = 'slac_faq-panel_pane_1';
+    $pane->subtype = 'faq_category-panel_pane_1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
+      'items_per_page' => '10',
+      'override_title' => 1,
+      'override_title_text' => 'Categories',
     );
     $pane->cache = array();
     $pane->style = array(

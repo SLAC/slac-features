@@ -84,6 +84,7 @@ features[variable][] = pathauto_faq_pattern
 features[variable][] = pathauto_node_faq_pattern
 features[variable][] = pathauto_taxonomy_term_faq_categories_pattern
 features[variable][] = workbench_moderation_default_state_faq
+features[views_view][] = faq_category
 features[views_view][] = slac_faq
 features_exclude[dependencies][ctools] = ctools
 features_exclude[dependencies][features] = features
