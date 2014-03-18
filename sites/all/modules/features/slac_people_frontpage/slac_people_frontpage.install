@@ -187,7 +187,9 @@ function _slac_people_frontpage_install__panes($did) {
         'settings' => NULL,
         'style' => 'greybackground',
       ),
-      'css' => array(),
+      'css' => array(
+        'css_class' => 'extentions_normal-link_a',
+      ),
       'extras' => array(),
       'position' => 0,
       'locks' => array(),

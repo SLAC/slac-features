@@ -8,3 +8,4 @@ sites/*/private
 logs/*
 
 FirePHPCore
+*.sass-cache
