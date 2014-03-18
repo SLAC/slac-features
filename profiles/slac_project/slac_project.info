@@ -192,4 +192,3 @@ dependencies[] = ctools_plugins
 dependencies[] = mailsystem
 dependencies[] = simplenews
 dependencies[] = htmlmail
-dependencies[] = slac_newsletter

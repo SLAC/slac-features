@@ -31,6 +31,7 @@ function slac_int_org_install_task_demo_content() {
       'slac_intorg_permissions',
       'slac_demo_main_menu',
       'slac_demo_basic_page',
+      'slac_newsletter',
     ),
     $demo_modules
   );

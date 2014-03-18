@@ -218,4 +218,3 @@ dependencies[] = slac_workbench_settings_eo
 dependencies[] = mailsystem
 dependencies[] = simplenews
 dependencies[] = htmlmail
-dependencies[] = slac_newsletter
