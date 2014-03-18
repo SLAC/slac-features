@@ -18,12 +18,12 @@ $commands = array(
     'command' => 'drush --uri=http://slac-features.wearepropeople.md uli'
   ),
   array(
-    'description' => 'Create siteowner user account: ',
-    'command' => 'drush user-create siteowner --mail="siteowner@example.com" --password="1"'
+    'description' => 'Create manager user account: ',
+    'command' => 'drush user-create manager --mail="manager@example.com" --password="1"'
   ),
   array(
-    'description' => 'Add "site owner" role to siteowner: ',
-    'command' => 'drush user-add-role "site owner" siteowner'
+    'description' => 'Add "manager" role to manager: ',
+    'command' => 'drush user-add-role "manager" manager'
   ),
   array(
     'description' => 'Create author user account: ',

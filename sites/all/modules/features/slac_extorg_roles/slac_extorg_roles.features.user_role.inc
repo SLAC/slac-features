@@ -22,9 +22,9 @@ function slac_extorg_roles_user_default_roles() {
     'weight' => 7,
   );
 
-  // Exported role: site owner.
-  $roles['site owner'] = array(
-    'name' => 'site owner',
+  // Exported role: manager.
+  $roles['manager'] = array(
+    'name' => 'manager',
     'weight' => 5,
   );
 

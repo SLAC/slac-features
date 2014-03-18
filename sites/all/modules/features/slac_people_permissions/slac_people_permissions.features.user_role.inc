@@ -10,9 +10,9 @@
 function slac_people_permissions_user_default_roles() {
   $roles = array();
 
-  // Exported role: site owner.
-  $roles['site owner'] = array(
-    'name' => 'site owner',
+  // Exported role: manager.
+  $roles['manager'] = array(
+    'name' => 'manager',
     'weight' => 2,
   );
 

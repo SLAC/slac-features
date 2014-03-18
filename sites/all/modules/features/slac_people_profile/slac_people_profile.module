@@ -4,9 +4,9 @@
  * Implements hook_init().
  */
 function slac_people_profile_init() {
-  $siteowner_username = variable_get('slac_site_owner', '');
-  if (empty($siteowner_username) && user_is_logged_in()) {
-    drupal_set_message(t('Siteowner is not set for this site.'), 'error');
+  $manager_username = variable_get('slac_site_owner', '');
+  if (empty($manager_username) && user_is_logged_in()) {
+    drupal_set_message(t('Manager is not set for this site.'), 'error');
   }
 }
 
@@ -18,11 +18,11 @@ function slac_people_profile_views_pre_view($view, $display_id, $args) {
     return;
   }
 
-  $siteowner_username = variable_get('slac_site_owner', '');
-  if (empty($siteowner_username)) {
+  $manager_username = variable_get('slac_site_owner', '');
+  if (empty($manager_username)) {
     return;
   }
-  $account = user_load_by_name($siteowner_username);
+  $account = user_load_by_name($manager_username);
 
   foreach (array('bio', 'contact', 'social_media') as $profile_type_name) {
     $profile = profile2_load_by_user($account, $profile_type_name);
@@ -41,7 +41,7 @@ function slac_people_profile_views_pre_view($view, $display_id, $args) {
     }
   }
 
-  $view->exposed_input['uid'] = $siteowner_username;
+  $view->exposed_input['uid'] = $manager_username;
 }
 
 /**

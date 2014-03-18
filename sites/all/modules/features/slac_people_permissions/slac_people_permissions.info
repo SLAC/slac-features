@@ -78,4 +78,4 @@ features[user_permission][] = view own private files
 features[user_permission][] = view own social_media profile
 features[user_permission][] = view own unpublished content
 features[user_permission][] = view revisions
-features[user_role][] = site owner
+features[user_role][] = manager

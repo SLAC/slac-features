@@ -111,7 +111,7 @@ function landing_page_panelizer_defaults() {
     $pane->access = array();
     $pane->configuration = array(
       'exposed' => array(
-        'uid' => 'siteowner',
+        'uid' => 'manager',
       ),
       'override_title' => 0,
       'override_title_text' => '',
@@ -136,7 +136,7 @@ function landing_page_panelizer_defaults() {
     $pane->configuration = array(
       'items_per_page' => '10',
       'exposed' => array(
-        'uid_1' => 'siteowner',
+        'uid_1' => 'manager',
         'field_slac_blog_tags_tid' => '',
       ),
     );
@@ -159,7 +159,7 @@ function landing_page_panelizer_defaults() {
     $pane->access = array();
     $pane->configuration = array(
       'exposed' => array(
-        'uid' => 'siteowner',
+        'uid' => 'manager',
       ),
       'override_title' => 0,
       'override_title_text' => '',
@@ -183,7 +183,7 @@ function landing_page_panelizer_defaults() {
     $pane->access = array();
     $pane->configuration = array(
       'exposed' => array(
-        'uid' => 'siteowner',
+        'uid' => 'manager',
       ),
       'override_title' => 0,
       'override_title_text' => '',

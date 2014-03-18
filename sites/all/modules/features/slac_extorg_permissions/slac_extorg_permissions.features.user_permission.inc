@@ -27,7 +27,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'admin_menu',
   );
@@ -39,7 +39,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'system',
   );
@@ -67,7 +67,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'access all webform results',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'webform',
   );
@@ -110,7 +110,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -121,7 +121,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'contextual',
   );
@@ -133,7 +133,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'dashboard',
   );
@@ -165,7 +165,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'webform',
   );
@@ -177,7 +177,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'webform',
   );
@@ -214,7 +214,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'access site reports',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'system',
   );
@@ -226,7 +226,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'user',
   );
@@ -238,7 +238,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'workbench',
   );
@@ -250,7 +250,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'media_internet',
   );
@@ -314,7 +314,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'administer blocks',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'block',
   );
@@ -324,7 +324,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'administer cami',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'cami',
   );
@@ -389,7 +389,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'faq',
   );
@@ -435,7 +435,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'administer file types',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'file_entity',
   );
@@ -445,7 +445,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'administer files',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'file_entity',
   );
@@ -464,7 +464,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'administer google analytics',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'googleanalytics',
   );
@@ -474,7 +474,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'administer image styles',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'image',
   );
@@ -511,7 +511,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'administer menu',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'menu',
   );
@@ -548,7 +548,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'administer mini panels',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'panels_mini',
   );
@@ -576,7 +576,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'administer news feeds',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'aggregator',
   );
@@ -658,7 +658,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'administer profile types',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'profile2',
   );
@@ -722,7 +722,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'administer taxonomy',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'taxonomy',
   );
@@ -777,7 +777,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'administer workbench',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'workbench',
   );
@@ -787,7 +787,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'administer workbench moderation',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'workbench_moderation',
   );
@@ -799,7 +799,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'faq_ask',
   );
@@ -828,7 +828,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'bypass file access',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'file_entity',
   );
@@ -838,7 +838,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'bypass node access',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -873,7 +873,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'can administer state',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'support',
   );
@@ -885,7 +885,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'support',
   );
@@ -897,7 +897,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'support',
   );
@@ -907,7 +907,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'can select client',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'support',
   );
@@ -919,7 +919,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'support',
   );
@@ -931,7 +931,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'support',
   );
@@ -942,7 +942,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'support',
   );
@@ -952,7 +952,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'can suppress notification',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'support',
   );
@@ -987,7 +987,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'bean',
   );
@@ -999,7 +999,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'bean',
   );
@@ -1011,7 +1011,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'bean',
   );
@@ -1023,7 +1023,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'bean',
   );
@@ -1035,7 +1035,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -1047,7 +1047,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -1077,7 +1077,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'fieldable_panels_panes',
   );
@@ -1089,7 +1089,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'fieldable_panels_panes',
   );
@@ -1101,7 +1101,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'fieldable_panels_panes',
   );
@@ -1113,7 +1113,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'fieldable_panels_panes',
   );
@@ -1125,7 +1125,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'fieldable_panels_panes',
   );
@@ -1137,7 +1137,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'file_entity',
   );
@@ -1149,7 +1149,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -1161,7 +1161,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -1171,7 +1171,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'create mini panels',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'panels_mini',
   );
@@ -1183,7 +1183,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -1195,7 +1195,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -1207,7 +1207,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -1219,7 +1219,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -1231,7 +1231,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'path',
   );
@@ -1243,7 +1243,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -1263,7 +1263,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'file_entity',
   );
@@ -1275,7 +1275,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'bean',
   );
@@ -1286,7 +1286,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -1298,7 +1298,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'bean',
   );
@@ -1310,7 +1310,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'bean',
   );
@@ -1322,7 +1322,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'bean',
   );
@@ -1333,7 +1333,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'file_entity',
   );
@@ -1343,7 +1343,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'delete any event content',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -1353,7 +1353,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'delete any faq content',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -1364,7 +1364,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'file_entity',
   );
@@ -1374,7 +1374,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'delete any kb_article content',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -1384,7 +1384,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'delete any landing_page content',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -1394,7 +1394,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'delete any page content',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -1404,7 +1404,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'delete any slac_news content',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -1414,7 +1414,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'delete any slac_sc_catalog_item content',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -1424,7 +1424,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'delete any support_ticket content',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -1435,7 +1435,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'file_entity',
   );
@@ -1445,7 +1445,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'delete any webform content',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -1465,7 +1465,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'fieldable_panels_panes',
   );
@@ -1476,7 +1476,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'fieldable_panels_panes',
   );
@@ -1487,7 +1487,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'fieldable_panels_panes',
   );
@@ -1498,7 +1498,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'fieldable_panels_panes',
   );
@@ -1509,7 +1509,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'fieldable_panels_panes',
   );
@@ -1521,7 +1521,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'file_entity',
   );
@@ -1533,7 +1533,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -1545,7 +1545,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'file_entity',
   );
@@ -1555,7 +1555,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'delete own event content',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -1565,7 +1565,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'delete own faq content',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -1577,7 +1577,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'file_entity',
   );
@@ -1587,7 +1587,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'delete own kb_article content',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -1597,7 +1597,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'delete own landing_page content',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -1607,7 +1607,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'delete own page content',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -1617,7 +1617,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'delete own slac_news content',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -1627,7 +1627,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'delete own slac_sc_catalog_item content',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -1637,7 +1637,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'delete own support_ticket content',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -1649,7 +1649,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'file_entity',
   );
@@ -1659,7 +1659,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'delete own webform content',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -1687,7 +1687,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'delete terms in blog_categories',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'taxonomy',
   );
@@ -1697,7 +1697,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'delete terms in event_categories',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'taxonomy',
   );
@@ -1707,7 +1707,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'delete terms in kb_categories',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'taxonomy',
   );
@@ -1717,7 +1717,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'delete terms in news_types',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'taxonomy',
   );
@@ -1727,7 +1727,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'delete terms in slac_blog_tags',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'taxonomy',
   );
@@ -1737,7 +1737,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'delete terms in slac_news_tags',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'taxonomy',
   );
@@ -1747,7 +1747,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'delete terms in slac_sc_category',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'taxonomy',
   );
@@ -1757,7 +1757,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'delete terms in slac_sc_eligibility',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'taxonomy',
   );
@@ -1767,7 +1767,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'delete terms in slac_sc_self_help',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'taxonomy',
   );
@@ -1777,7 +1777,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'delete terms in tags',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'taxonomy',
   );
@@ -1787,7 +1787,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'display drupal links',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'admin_menu',
   );
@@ -1799,7 +1799,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'file_entity',
   );
@@ -1811,7 +1811,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'file_entity',
   );
@@ -1823,7 +1823,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'file_entity',
   );
@@ -1835,7 +1835,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'file_entity',
   );
@@ -1845,7 +1845,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'download mail via support/fetch',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'support',
   );
@@ -1868,7 +1868,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'file_entity',
   );
@@ -1880,7 +1880,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'file_entity',
   );
@@ -1892,7 +1892,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'file_entity',
   );
@@ -1904,7 +1904,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'file_entity',
   );
@@ -1914,7 +1914,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'edit all webform submissions',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'webform',
   );
@@ -1925,7 +1925,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'file_entity',
   );
@@ -1936,7 +1936,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'profile2',
   );
@@ -1948,7 +1948,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'bean',
   );
@@ -1959,7 +1959,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -1970,7 +1970,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'profile2',
   );
@@ -1982,7 +1982,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'bean',
   );
@@ -1994,7 +1994,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'bean',
   );
@@ -2006,7 +2006,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'bean',
   );
@@ -2017,7 +2017,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'file_entity',
   );
@@ -2029,7 +2029,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -2041,7 +2041,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -2052,7 +2052,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'file_entity',
   );
@@ -2064,7 +2064,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -2076,7 +2076,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -2088,7 +2088,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -2100,7 +2100,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -2112,7 +2112,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -2123,7 +2123,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'profile2',
   );
@@ -2135,7 +2135,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -2146,7 +2146,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'file_entity',
   );
@@ -2158,7 +2158,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -2177,7 +2177,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'edit fieldable fieldable_panels_pane',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'fieldable_panels_panes',
   );
@@ -2189,7 +2189,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'fieldable_panels_panes',
   );
@@ -2201,7 +2201,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'fieldable_panels_panes',
   );
@@ -2213,7 +2213,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'fieldable_panels_panes',
   );
@@ -2225,7 +2225,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'fieldable_panels_panes',
   );
@@ -2237,7 +2237,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'fieldable_panels_panes',
   );
@@ -2249,7 +2249,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'metatag',
   );
@@ -2261,7 +2261,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'file_entity',
   );
@@ -2273,7 +2273,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'profile2',
   );
@@ -2285,7 +2285,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -2297,7 +2297,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'comment',
   );
@@ -2309,7 +2309,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'profile2',
   );
@@ -2321,7 +2321,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'file_entity',
   );
@@ -2333,7 +2333,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -2345,7 +2345,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -2357,7 +2357,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'file_entity',
   );
@@ -2369,7 +2369,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -2381,7 +2381,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -2393,7 +2393,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -2405,7 +2405,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -2417,7 +2417,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -2429,7 +2429,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'profile2',
   );
@@ -2441,7 +2441,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -2453,7 +2453,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'file_entity',
   );
@@ -2465,7 +2465,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -2477,7 +2477,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'webform',
   );
@@ -2489,7 +2489,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'taxonomy',
   );
@@ -2501,7 +2501,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'taxonomy',
   );
@@ -2513,7 +2513,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'taxonomy',
   );
@@ -2525,7 +2525,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'taxonomy',
   );
@@ -2537,7 +2537,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'taxonomy',
   );
@@ -2549,7 +2549,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'taxonomy',
   );
@@ -2561,7 +2561,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'taxonomy',
   );
@@ -2573,7 +2573,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'taxonomy',
   );
@@ -2583,7 +2583,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'epsacrop administer available crops',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'epsacrop',
   );
@@ -2595,7 +2595,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'epsacrop',
   );
@@ -2607,7 +2607,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'epsacrop',
   );
@@ -2619,7 +2619,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'epsacrop',
   );
@@ -2630,7 +2630,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'admin_menu',
   );
@@ -2659,7 +2659,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'workbench_moderation',
   );
@@ -2671,7 +2671,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'workbench_moderation',
   );
@@ -2682,7 +2682,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'workbench_moderation',
   );
@@ -2692,7 +2692,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'move ticket',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'support',
   );
@@ -2702,7 +2702,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'notify of path changes',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'pathauto',
   );
@@ -2723,7 +2723,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'comment',
   );
@@ -2734,7 +2734,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -2752,7 +2752,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'comment',
   );
@@ -2773,7 +2773,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'location',
   );
@@ -2792,7 +2792,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'bean_wysiwyg',
   );
@@ -2802,7 +2802,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'use ipe with page manager',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'panels',
   );
@@ -2814,7 +2814,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'page_manager',
   );
@@ -2842,7 +2842,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'use panels in place editing',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'panels',
   );
@@ -2874,7 +2874,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'filter',
   );
@@ -2885,7 +2885,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'workbench_moderation',
   );
@@ -2897,7 +2897,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'workbench_moderation',
   );
@@ -2909,7 +2909,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'workbench_moderation',
   );
@@ -2921,7 +2921,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'profile2',
   );
@@ -2935,7 +2935,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'authenticated user' => 'authenticated user',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'bean',
   );
@@ -2947,7 +2947,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'profile2',
   );
@@ -2961,7 +2961,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'authenticated user' => 'authenticated user',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'bean',
   );
@@ -2975,7 +2975,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'authenticated user' => 'authenticated user',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'bean',
   );
@@ -2989,7 +2989,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'authenticated user' => 'authenticated user',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'bean',
   );
@@ -3001,7 +3001,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'profile2',
   );
@@ -3062,7 +3062,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'workbench_moderation',
   );
@@ -3073,7 +3073,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'workbench_moderation',
   );
@@ -3083,7 +3083,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'view node location table',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'location',
   );
@@ -3095,7 +3095,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'support',
   );
@@ -3107,7 +3107,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'profile2',
   );
@@ -3119,7 +3119,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'profile2',
   );
@@ -3131,7 +3131,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'file_entity',
   );
@@ -3143,7 +3143,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'file_entity',
   );
@@ -3155,7 +3155,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'profile2',
   );
@@ -3167,7 +3167,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -3187,7 +3187,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'file_entity',
   );
@@ -3199,7 +3199,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -3219,7 +3219,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'editor' => 'editor',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'location',
   );

@@ -14,12 +14,12 @@ $commands = array(
     'command' => 'drush si slac_project --db-url=mysql://slac_features:SwHbNJEZ6QRxrlU@localhost/slac_features --account-name=admin --account-pass=618hWVCDmY1n3uf --account-mail=admin@example.com --site-name=SLAC-PROJECT-' . date(DATE_ATOM) . ' -y'
   ),
   array(
-    'description' => 'Create siteowner user account: ',
-    'command' => 'drush user-create siteowner --mail="siteowner@example.com" --password="1"'
+    'description' => 'Create manager user account: ',
+    'command' => 'drush user-create manager --mail="manager@example.com" --password="1"'
   ),
   array(
-    'description' => 'Add "site owner" role to siteowner: ',
-    'command' => 'drush user-add-role "site owner" siteowner'
+    'description' => 'Add "manager" role to manager: ',
+    'command' => 'drush user-add-role "manager" manager'
   ),
   array(
     'description' => 'Create author user account: ',

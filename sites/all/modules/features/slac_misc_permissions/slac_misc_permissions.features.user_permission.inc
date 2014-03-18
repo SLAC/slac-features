@@ -15,7 +15,7 @@ function slac_misc_permissions_user_default_permissions() {
     'name' => 'access administration menu',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'admin_menu',
   );
@@ -25,7 +25,7 @@ function slac_misc_permissions_user_default_permissions() {
     'name' => 'access administration pages',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'system',
   );
@@ -35,7 +35,7 @@ function slac_misc_permissions_user_default_permissions() {
     'name' => 'administer demo modules',
     'roles' => array(
       'administrator' => 'administrator',
-      'site owner' => 'site owner',
+      'manager' => 'manager',
     ),
     'module' => 'slac_admin_modules',
   );
