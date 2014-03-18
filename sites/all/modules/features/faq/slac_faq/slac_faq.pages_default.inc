@@ -13,7 +13,7 @@ function slac_faq_default_page_manager_handlers() {
   $handler = new stdClass();
   $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
   $handler->api_version = 1;
-  $handler->name = 'node_view_panel_context_7';
+  $handler->name = 'node_view_panel_context_8';
   $handler->task = 'node_view';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
@@ -258,7 +258,7 @@ function slac_faq_default_page_manager_handlers() {
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
-  $export['node_view_panel_context_7'] = $handler;
+  $export['node_view_panel_context_8'] = $handler;
 
   return $export;
 }
@@ -278,15 +278,9 @@ function slac_faq_default_page_manager_pages() {
   $page->access = array(
     'plugins' => array(
       0 => array(
-        'name' => 'role',
+        'name' => 'perm',
         'settings' => array(
-          'rids' => array(
-            0 => 2,
-            1 => 6,
-            2 => 5,
-            3 => 3,
-            4 => 4,
-          ),
+          'perm' => 'ask question',
         ),
         'context' => 'logged-in-user',
         'not' => FALSE,
