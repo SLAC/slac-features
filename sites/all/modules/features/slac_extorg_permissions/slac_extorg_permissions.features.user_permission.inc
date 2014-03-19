@@ -334,6 +334,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'administer comments',
     'roles' => array(
       'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'comment',
   );
@@ -960,7 +961,9 @@ function slac_extorg_permissions_user_default_permissions() {
   // Exported permission: 'cancel account'.
   $permissions['cancel account'] = array(
     'name' => 'cancel account',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'user',
   );
 
@@ -976,7 +979,9 @@ function slac_extorg_permissions_user_default_permissions() {
   // Exported permission: 'change own username'.
   $permissions['change own username'] = array(
     'name' => 'change own username',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'user',
   );
 
@@ -1057,6 +1062,10 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'create faq content',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -1217,6 +1226,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'create support_ticket content',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
       'author' => 'author',
       'editor' => 'editor',
       'manager' => 'manager',
@@ -2742,7 +2752,9 @@ function slac_extorg_permissions_user_default_permissions() {
   // Exported permission: 'select account cancellation method'.
   $permissions['select account cancellation method'] = array(
     'name' => 'select account cancellation method',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'user',
   );
 
@@ -3072,6 +3084,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'view moderation messages',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
       'editor' => 'editor',
       'manager' => 'manager',
     ),
