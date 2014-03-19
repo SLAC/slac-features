@@ -22,15 +22,13 @@ if ($postition = strpos($currdir, 'sites')) {
   define('DRUPAL_ROOT', $_SERVER['DOCUMENT_ROOT']);
 }
 
-// @todo: how to handle subdirectory support?
-// assume provisioned sites will be
-$base_url = 'http://'.$_SERVER['HTTP_HOST']; // THIS IS IMPORTANT
-
-// localtest
-// for subdirectory, not working for remote
-//if ($position = strpos($_SERVER['SCRIPT_NAME'], 'sites')) {
-//  $base_url .= substr($_SERVER['SCRIPT_NAME'], 0, $position);
-//}
+// @todo: what is the name for the subdirectory ENV name??
+if (array_key_exists('SUBDIRECTORY', $_SERVER)) {
+  $base_url = 'http://'.$_SERVER['HTTP_HOST'] . '/' . $_SERVER['SUBDIRECTORY'];
+} else {
+  // assume provisioned sites will be
+  $base_url = 'http://'.$_SERVER['HTTP_HOST']; // THIS IS IMPORTANT
+}
 
 $base_url = rtrim($base_url, "/\//");
 
