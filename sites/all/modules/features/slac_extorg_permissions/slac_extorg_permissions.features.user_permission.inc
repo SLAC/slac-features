@@ -498,11 +498,23 @@ function slac_extorg_permissions_user_default_permissions() {
     'module' => 'lightbox2',
   );
 
+  // Exported permission: 'administer mailsystem'.
+  $permissions['administer mailsystem'] = array(
+    'name' => 'administer mailsystem',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'mailsystem',
+  );
+
   // Exported permission: 'administer media browser'.
   $permissions['administer media browser'] = array(
     'name' => 'administer media browser',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
     ),
     'module' => 'media',
   );
@@ -582,6 +594,15 @@ function slac_extorg_permissions_user_default_permissions() {
     'module' => 'aggregator',
   );
 
+  // Exported permission: 'administer newsletters'.
+  $permissions['administer newsletters'] = array(
+    'name' => 'administer newsletters',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'simplenews',
+  );
+
   // Exported permission: 'administer nodes'.
   $permissions['administer nodes'] = array(
     'name' => 'administer nodes',
@@ -618,11 +639,173 @@ function slac_extorg_permissions_user_default_permissions() {
     'module' => 'panelizer',
   );
 
+  // Exported permission: 'administer panelizer node faq defaults'.
+  $permissions['administer panelizer node faq defaults'] = array(
+    'name' => 'administer panelizer node faq defaults',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node landing_page choice'.
+  $permissions['administer panelizer node landing_page choice'] = array(
+    'name' => 'administer panelizer node landing_page choice',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node landing_page content'.
+  $permissions['administer panelizer node landing_page content'] = array(
+    'name' => 'administer panelizer node landing_page content',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node landing_page context'.
+  $permissions['administer panelizer node landing_page context'] = array(
+    'name' => 'administer panelizer node landing_page context',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node landing_page defaults'.
+  $permissions['administer panelizer node landing_page defaults'] = array(
+    'name' => 'administer panelizer node landing_page defaults',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node landing_page layout'.
+  $permissions['administer panelizer node landing_page layout'] = array(
+    'name' => 'administer panelizer node landing_page layout',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node landing_page overview'.
+  $permissions['administer panelizer node landing_page overview'] = array(
+    'name' => 'administer panelizer node landing_page overview',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node landing_page settings'.
+  $permissions['administer panelizer node landing_page settings'] = array(
+    'name' => 'administer panelizer node landing_page settings',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node newsletter content'.
+  $permissions['administer panelizer node newsletter content'] = array(
+    'name' => 'administer panelizer node newsletter content',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node newsletter context'.
+  $permissions['administer panelizer node newsletter context'] = array(
+    'name' => 'administer panelizer node newsletter context',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node newsletter defaults'.
+  $permissions['administer panelizer node newsletter defaults'] = array(
+    'name' => 'administer panelizer node newsletter defaults',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node newsletter layout'.
+  $permissions['administer panelizer node newsletter layout'] = array(
+    'name' => 'administer panelizer node newsletter layout',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node newsletter overview'.
+  $permissions['administer panelizer node newsletter overview'] = array(
+    'name' => 'administer panelizer node newsletter overview',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node newsletter settings'.
+  $permissions['administer panelizer node newsletter settings'] = array(
+    'name' => 'administer panelizer node newsletter settings',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node page choice'.
+  $permissions['administer panelizer node page choice'] = array(
+    'name' => 'administer panelizer node page choice',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node page content'.
+  $permissions['administer panelizer node page content'] = array(
+    'name' => 'administer panelizer node page content',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node page context'.
+  $permissions['administer panelizer node page context'] = array(
+    'name' => 'administer panelizer node page context',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node page defaults'.
+  $permissions['administer panelizer node page defaults'] = array(
+    'name' => 'administer panelizer node page defaults',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node page layout'.
+  $permissions['administer panelizer node page layout'] = array(
+    'name' => 'administer panelizer node page layout',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node page overview'.
+  $permissions['administer panelizer node page overview'] = array(
+    'name' => 'administer panelizer node page overview',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node page settings'.
+  $permissions['administer panelizer node page settings'] = array(
+    'name' => 'administer panelizer node page settings',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer taxonomy_term faq_categories defaults'.
+  $permissions['administer panelizer taxonomy_term faq_categories defaults'] = array(
+    'name' => 'administer panelizer taxonomy_term faq_categories defaults',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer taxonomy_term newsletter defaults'.
+  $permissions['administer panelizer taxonomy_term newsletter defaults'] = array(
+    'name' => 'administer panelizer taxonomy_term newsletter defaults',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
   // Exported permission: 'administer panels layouts'.
   $permissions['administer panels layouts'] = array(
     'name' => 'administer panels layouts',
     'roles' => array(
       'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'panels',
   );
@@ -632,6 +815,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'administer panels styles',
     'roles' => array(
       'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'panels',
   );
@@ -680,6 +864,24 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'rules',
+  );
+
+  // Exported permission: 'administer simplenews settings'.
+  $permissions['administer simplenews settings'] = array(
+    'name' => 'administer simplenews settings',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'simplenews',
+  );
+
+  // Exported permission: 'administer simplenews subscriptions'.
+  $permissions['administer simplenews subscriptions'] = array(
+    'name' => 'administer simplenews subscriptions',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'simplenews',
   );
 
   // Exported permission: 'administer site configuration'.
@@ -985,6 +1187,15 @@ function slac_extorg_permissions_user_default_permissions() {
     'module' => 'user',
   );
 
+  // Exported permission: 'choose htmlmail_plaintext'.
+  $permissions['choose htmlmail_plaintext'] = array(
+    'name' => 'choose htmlmail_plaintext',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'htmlmail',
+  );
+
   // Exported permission: 'create any block_with_brochures bean'.
   $permissions['create any block_with_brochures bean'] = array(
     'name' => 'create any block_with_brochures bean',
@@ -1180,9 +1391,15 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'create mini panels',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'panels_mini',
+  );
+
+  // Exported permission: 'create newsletter content'.
+  $permissions['create newsletter content'] = array(
+    'name' => 'create newsletter content',
+    'roles' => array(),
+    'module' => 'node',
   );
 
   // Exported permission: 'create page content'.
@@ -1193,6 +1410,15 @@ function slac_extorg_permissions_user_default_permissions() {
       'author' => 'author',
       'editor' => 'editor',
       'manager' => 'manager',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'create simplenews content'.
+  $permissions['create simplenews content'] = array(
+    'name' => 'create simplenews content',
+    'roles' => array(
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -1399,12 +1625,28 @@ function slac_extorg_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'delete any newsletter content'.
+  $permissions['delete any newsletter content'] = array(
+    'name' => 'delete any newsletter content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
   // Exported permission: 'delete any page content'.
   $permissions['delete any page content'] = array(
     'name' => 'delete any page content',
     'roles' => array(
       'administrator' => 'administrator',
       'manager' => 'manager',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete any simplenews content'.
+  $permissions['delete any simplenews content'] = array(
+    'name' => 'delete any simplenews content',
+    'roles' => array(
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -1612,12 +1854,28 @@ function slac_extorg_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'delete own newsletter content'.
+  $permissions['delete own newsletter content'] = array(
+    'name' => 'delete own newsletter content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
   // Exported permission: 'delete own page content'.
   $permissions['delete own page content'] = array(
     'name' => 'delete own page content',
     'roles' => array(
       'administrator' => 'administrator',
       'manager' => 'manager',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete own simplenews content'.
+  $permissions['delete own simplenews content'] = array(
+    'name' => 'delete own simplenews content',
+    'roles' => array(
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -1712,6 +1970,16 @@ function slac_extorg_permissions_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
+  // Exported permission: 'delete terms in faq_categories'.
+  $permissions['delete terms in faq_categories'] = array(
+    'name' => 'delete terms in faq_categories',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'taxonomy',
+  );
+
   // Exported permission: 'delete terms in kb_categories'.
   $permissions['delete terms in kb_categories'] = array(
     'name' => 'delete terms in kb_categories',
@@ -1725,6 +1993,16 @@ function slac_extorg_permissions_user_default_permissions() {
   // Exported permission: 'delete terms in news_types'.
   $permissions['delete terms in news_types'] = array(
     'name' => 'delete terms in news_types',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'delete terms in newsletter'.
+  $permissions['delete terms in newsletter'] = array(
+    'name' => 'delete terms in newsletter',
     'roles' => array(
       'administrator' => 'administrator',
       'manager' => 'manager',
@@ -2091,6 +2369,13 @@ function slac_extorg_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'edit any newsletter content'.
+  $permissions['edit any newsletter content'] = array(
+    'name' => 'edit any newsletter content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
   // Exported permission: 'edit any page content'.
   $permissions['edit any page content'] = array(
     'name' => 'edit any page content',
@@ -2099,6 +2384,15 @@ function slac_extorg_permissions_user_default_permissions() {
       'author' => 'author',
       'editor' => 'editor',
       'manager' => 'manager',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit any simplenews content'.
+  $permissions['edit any simplenews content'] = array(
+    'name' => 'edit any simplenews content',
+    'roles' => array(
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -2396,6 +2690,13 @@ function slac_extorg_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'edit own newsletter content'.
+  $permissions['edit own newsletter content'] = array(
+    'name' => 'edit own newsletter content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
   // Exported permission: 'edit own page content'.
   $permissions['edit own page content'] = array(
     'name' => 'edit own page content',
@@ -2404,6 +2705,15 @@ function slac_extorg_permissions_user_default_permissions() {
       'author' => 'author',
       'editor' => 'editor',
       'manager' => 'manager',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit own simplenews content'.
+  $permissions['edit own simplenews content'] = array(
+    'name' => 'edit own simplenews content',
+    'roles' => array(
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -2516,6 +2826,18 @@ function slac_extorg_permissions_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
+  // Exported permission: 'edit terms in faq_categories'.
+  $permissions['edit terms in faq_categories'] = array(
+    'name' => 'edit terms in faq_categories',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'taxonomy',
+  );
+
   // Exported permission: 'edit terms in kb_categories'.
   $permissions['edit terms in kb_categories'] = array(
     'name' => 'edit terms in kb_categories',
@@ -2531,6 +2853,18 @@ function slac_extorg_permissions_user_default_permissions() {
   // Exported permission: 'edit terms in news_types'.
   $permissions['edit terms in news_types'] = array(
     'name' => 'edit terms in news_types',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'edit terms in newsletter'.
+  $permissions['edit terms in newsletter'] = array(
+    'name' => 'edit terms in newsletter',
     'roles' => array(
       'administrator' => 'administrator',
       'author' => 'author',
@@ -2564,6 +2898,18 @@ function slac_extorg_permissions_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
+  // Exported permission: 'edit terms in slac_sc_category'.
+  $permissions['edit terms in slac_sc_category'] = array(
+    'name' => 'edit terms in slac_sc_category',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'taxonomy',
+  );
+
   // Exported permission: 'edit terms in slac_sc_eligibility'.
   $permissions['edit terms in slac_sc_eligibility'] = array(
     'name' => 'edit terms in slac_sc_eligibility',
@@ -2579,6 +2925,18 @@ function slac_extorg_permissions_user_default_permissions() {
   // Exported permission: 'edit terms in slac_sc_self_help'.
   $permissions['edit terms in slac_sc_self_help'] = array(
     'name' => 'edit terms in slac_sc_self_help',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'edit terms in tags'.
+  $permissions['edit terms in tags'] = array(
+    'name' => 'edit terms in tags',
     'roles' => array(
       'administrator' => 'administrator',
       'author' => 'author',
@@ -2758,6 +3116,15 @@ function slac_extorg_permissions_user_default_permissions() {
     'module' => 'user',
   );
 
+  // Exported permission: 'send newsletter'.
+  $permissions['send newsletter'] = array(
+    'name' => 'send newsletter',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'simplenews',
+  );
+
   // Exported permission: 'skip comment approval'.
   $permissions['skip comment approval'] = array(
     'name' => 'skip comment approval',
@@ -2788,6 +3155,15 @@ function slac_extorg_permissions_user_default_permissions() {
       'manager' => 'manager',
     ),
     'module' => 'location',
+  );
+
+  // Exported permission: 'subscribe to newsletters'.
+  $permissions['subscribe to newsletters'] = array(
+    'name' => 'subscribe to newsletters',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'simplenews',
   );
 
   // Exported permission: 'use PHP for tracking visibility'.
