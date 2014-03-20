@@ -643,6 +643,9 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'administer nodes',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -1329,6 +1332,18 @@ function slac_intorg_permissions_user_default_permissions() {
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'node',
+  );
+
+  // Exported permission: 'create field_status'.
+  $permissions['create field_status'] = array(
+    'name' => 'create field_status',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'field_permissions',
   );
 
   // Exported permission: 'create fieldable fieldable_panels_pane'.
@@ -2648,6 +2663,18 @@ function slac_intorg_permissions_user_default_permissions() {
     'module' => 'bean',
   );
 
+  // Exported permission: 'edit field_status'.
+  $permissions['edit field_status'] = array(
+    'name' => 'edit field_status',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'field_permissions',
+  );
+
   // Exported permission: 'edit fieldable fieldable_panels_pane'.
   $permissions['edit fieldable fieldable_panels_pane'] = array(
     'name' => 'edit fieldable fieldable_panels_pane',
@@ -2824,6 +2851,18 @@ function slac_intorg_permissions_user_default_permissions() {
       'manager' => 'manager',
     ),
     'module' => 'node',
+  );
+
+  // Exported permission: 'edit own field_status'.
+  $permissions['edit own field_status'] = array(
+    'name' => 'edit own field_status',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'field_permissions',
   );
 
   // Exported permission: 'edit own forum content'.
@@ -3698,6 +3737,18 @@ function slac_intorg_permissions_user_default_permissions() {
     'module' => 'faq',
   );
 
+  // Exported permission: 'view field_status'.
+  $permissions['view field_status'] = array(
+    'name' => 'view field_status',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'field_permissions',
+  );
+
   // Exported permission: 'view files'.
   $permissions['view files'] = array(
     'name' => 'view files',
@@ -3806,6 +3857,18 @@ function slac_intorg_permissions_user_default_permissions() {
       'manager' => 'manager',
     ),
     'module' => 'profile2',
+  );
+
+  // Exported permission: 'view own field_status'.
+  $permissions['view own field_status'] = array(
+    'name' => 'view own field_status',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'field_permissions',
   );
 
   // Exported permission: 'view own files'.
