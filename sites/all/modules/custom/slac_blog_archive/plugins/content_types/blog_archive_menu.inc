@@ -59,9 +59,6 @@ function slac_blog_archive_create_list() {
       $children = array();
       $year_attributes = array();
 
-      // the inactive year items display the count of nodes
-      $year_count = ' (' . $value->nid_count . ')';
-
       //check if the year item should has subitems
       if ($years == $value->years) {
 
@@ -84,7 +81,7 @@ function slac_blog_archive_create_list() {
         }
       }
       $menu[] = array(
-        'data' => l($value->years . $year_count, 'blog/archive/' . $value->years, $year_attributes),
+        'data' => l($value->years, 'blog/archive/' . $value->years, $year_attributes),
         'children' => ($children) ? $children : '',
       );
     }
