@@ -148,13 +148,13 @@ function _slac_news_pages_install__panes($did, $options) {
     array(
       'did' => $did,
       'panel' => 'right',
-      'type' => 'views_panes',
-      'subtype' => 'news_tags-panel_pane_1',
+      'type' => 'news_type_menu',
+      'subtype' => 'news_type_menu',
       'shown' => 1,
       'access' => array(),
       'configuration' => array(
-        'items_per_page' => 10,
-        'override_title_text' => 'Tags',
+        'override_title' => 1,
+        'override_title_text' => 'News By:',
       ),
       'cache' => array(),
       'style' => array(
@@ -169,13 +169,13 @@ function _slac_news_pages_install__panes($did, $options) {
     array(
       'did' => $did,
       'panel' => 'right',
-      'type' => 'news_type_menu',
-      'subtype' => 'news_type_menu',
+      'type' => 'views_panes',
+      'subtype' => 'news_tags-panel_pane_1',
       'shown' => 1,
       'access' => array(),
       'configuration' => array(
-        'override_title' => 1,
-        'override_title_text' => 'News By:',
+        'items_per_page' => 10,
+        'override_title_text' => 'Tags',
       ),
       'cache' => array(),
       'style' => array(

@@ -59,7 +59,7 @@ function slac_news_archive_create_list() {
       $children = _slac_news_archive_get_year_children($current_year, $current_month);
     }
 
-    $year_link_title = $value->years . ' (' . $value->nid_count . ')';
+    $year_link_title = $value->years;
     $menu[] = array(
       'data' => l($year_link_title, 'news/archive/' . $value->years, $year_attributes),
       'children' => ($children) ? $children : '',

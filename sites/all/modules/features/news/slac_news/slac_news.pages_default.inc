@@ -228,14 +228,13 @@ function slac_news_default_page_manager_handlers() {
     $pane = new stdClass();
     $pane->pid = 'new-7';
     $pane->panel = 'right';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'news_tags-panel_pane_1';
+    $pane->type = 'news_type_menu';
+    $pane->subtype = 'news_type_menu';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'items_per_page' => '10',
       'override_title' => 1,
-      'override_title_text' => 'TAGS',
+      'override_title_text' => 'News By:',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -251,13 +250,14 @@ function slac_news_default_page_manager_handlers() {
     $pane = new stdClass();
     $pane->pid = 'new-8';
     $pane->panel = 'right';
-    $pane->type = 'news_type_menu';
-    $pane->subtype = 'news_type_menu';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'news_tags-panel_pane_1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
+      'items_per_page' => '10',
       'override_title' => 1,
-      'override_title_text' => 'News By:',
+      'override_title_text' => 'TAGS',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -297,7 +297,7 @@ function slac_news_default_page_manager_handlers() {
   $handler = new stdClass();
   $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
   $handler->api_version = 1;
-  $handler->name = 'term_view_panel_context_4';
+  $handler->name = 'node_view_panel_context_44';
   $handler->task = 'term_view';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
@@ -455,13 +455,13 @@ function slac_news_default_page_manager_handlers() {
     $pane = new stdClass();
     $pane->pid = 'new-12';
     $pane->panel = 'right';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'news_tags-panel_pane_1';
+    $pane->type = 'news_type_menu';
+    $pane->subtype = 'news_type_menu';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
       'override_title' => 1,
-      'override_title_text' => 'TAGS',
+      'override_title_text' => 'News By:',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -477,13 +477,13 @@ function slac_news_default_page_manager_handlers() {
     $pane = new stdClass();
     $pane->pid = 'new-13';
     $pane->panel = 'right';
-    $pane->type = 'news_type_menu';
-    $pane->subtype = 'news_type_menu';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'news_tags-panel_pane_1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
       'override_title' => 1,
-      'override_title_text' => 'News By',
+      'override_title_text' => 'TAGS',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -521,7 +521,7 @@ function slac_news_default_page_manager_handlers() {
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
-  $export['term_view_panel_context_4'] = $handler;
+  $export['node_view_panel_context_44'] = $handler;
 
   return $export;
 }
@@ -751,14 +751,13 @@ function slac_news_default_page_manager_pages() {
     $pane = new stdClass();
     $pane->pid = 'new-3';
     $pane->panel = 'right';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'news_tags-panel_pane_1';
+    $pane->type = 'news_type_menu';
+    $pane->subtype = 'news_type_menu';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'items_per_page' => '10',
       'override_title' => 1,
-      'override_title_text' => 'TAGS',
+      'override_title_text' => 'News By:',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -774,13 +773,14 @@ function slac_news_default_page_manager_pages() {
     $pane = new stdClass();
     $pane->pid = 'new-4';
     $pane->panel = 'right';
-    $pane->type = 'news_type_menu';
-    $pane->subtype = 'news_type_menu';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'news_tags-panel_pane_1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
+      'items_per_page' => '10',
       'override_title' => 1,
-      'override_title_text' => 'News By:',
+      'override_title_text' => 'TAGS',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -969,14 +969,13 @@ else {return FALSE;}
     $pane = new stdClass();
     $pane->pid = 'new-8';
     $pane->panel = 'right';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'news_tags-panel_pane_1';
+    $pane->type = 'news_type_menu';
+    $pane->subtype = 'news_type_menu';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'items_per_page' => '10',
       'override_title' => 1,
-      'override_title_text' => 'TAGS',
+      'override_title_text' => 'News By:',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -992,13 +991,14 @@ else {return FALSE;}
     $pane = new stdClass();
     $pane->pid = 'new-9';
     $pane->panel = 'right';
-    $pane->type = 'news_type_menu';
-    $pane->subtype = 'news_type_menu';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'news_tags-panel_pane_1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
+      'items_per_page' => '10',
       'override_title' => 1,
-      'override_title_text' => 'News By:',
+      'override_title_text' => 'TAGS',
     );
     $pane->cache = array();
     $pane->style = array(

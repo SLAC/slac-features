@@ -11,7 +11,11 @@
   <?php if ($title_prefix || $title_suffix || $display_submitted || $unpublished || !$page && $title): ?>
     <?php if (isset($content['field_slac_news_media'])): ?>
         <div class="news-image">
-        <?php print render($content['field_slac_news_media']); ?>
+          <?php if ($view_mode == 'teaser') :?>
+            <a href="<?php print $node_url; ?>"><?php print render($content['field_slac_news_media'][0]['file']); ?></a>
+          <?php else: ?>
+            <?php print render($content['field_slac_news_media']); ?>
+          <?php endif; ?>
         </div>
       <?php endif; ?>
       <div class="news-content">
