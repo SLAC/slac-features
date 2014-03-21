@@ -155,15 +155,13 @@ function epsacrop_dialog($entity_name, $field_name, $bundle, $fid) {
     $styles = _epsacrop_load_styles_by_instance($entity_name, $field_name, $bundle);
   }
 
-  // Allow other modules to alter list of styles displayed in the popup.
-  drupal_alter('epsacrop_load_styles', $styles, $entity_name, $field_name, $bundle);
-
   foreach ($styles['styles'] as $style_name) {
     $style = _epsacrop_load_style($style_name);
     $effect = _epsacrop_get_effect($style);
     $effect = current($effect);
     $id = 'epsacrop-' . $style_name;
-    $out .='<li class="epsacrop-presets-menu-li"><a data-bgcolor="' . $effect['data']['jcrop_settings']['bgcolor'] . '" data-bgopacity="' . $effect['data']['jcrop_settings']['bgopacity'] . '" data-aspect-ratio="' . $effect['data']['jcrop_settings']['aspect_ratio'] . '" id="' . $id . '" href="javascript:Drupal.EPSACrop.crop(\'' . $id . '\');" rel="' . $effect['data']['width'] . 'x' . $effect['data']['height'] . '"' . ($i++ == 0 ? ' class="selected"' : '') . '>' . $style_name . '</a></li>';
+    $name = is_array($style) && !empty($style['label']) ? $style['label'] : $style_name;
+    $out .='<li class="epsacrop-presets-menu-li"><a data-bgcolor="' . $effect['data']['jcrop_settings']['bgcolor'] . '" data-bgopacity="' . $effect['data']['jcrop_settings']['bgopacity'] . '" data-aspect-ratio="' . $effect['data']['jcrop_settings']['aspect_ratio'] . '" id="' . $id . '" href="javascript:Drupal.EPSACrop.crop(\'' . $id . '\');" rel="' . $effect['data']['width'] . 'x' . $effect['data']['height'] . '"' . ($i++ == 0 ? ' class="selected"' : '') . '>' . $name . '</a></li>';
   }
   $out .='</ul>' . "\n";
   $out .='</div>' . "\n";
@@ -203,7 +201,6 @@ function epsacrop_ajax($op, $fid) {
     case 'put':
       if (isset($_POST) && (isset($_POST['coords']) && !empty($_POST['coords']))) {
         $coords = $_POST['coords'];
-        $fid = $fid;
         _epsacrop_save_coords($fid, $coords);
       }
     break;
@@ -338,7 +335,7 @@ function epsacrop_crop_image_form($data) {
   $form['width']['#element_validate'] = array('_epsacrop_width_validate');
 
   // Change description for the anchor
-  $form['anchor']['#description'] = t("The part of the image that will be retained during the crop if no coordonates will set.");
+  $form['anchor']['#description'] = t("The part of the image that will be retained during the crop if no coordinates are set.");
 
   $form['jcrop_settings'] = array(
     '#type' => 'fieldset',
@@ -416,7 +413,7 @@ function epsacrop_crop_image(stdClass $image, $settings) {
     if (!empty($coords) && is_array($coords)) {
       if (isset($GLOBALS['jcrop_style'])) {
         $style_name = $GLOBALS['jcrop_style'];
-      } 
+      }
       else {
         $style_name = _epsacrop_get_style_name_from_url();
       }
@@ -427,7 +424,7 @@ function epsacrop_crop_image(stdClass $image, $settings) {
           if (!empty($effect)) {
             $effect = current($effect);
             $preset = 'epsacrop-' . $style_name;
-            $coord = $coords[$fid][$preset];
+            $coord = isset($coords[$fid][$preset]) ? $coords[$fid][$preset] : '';
             if (!empty($coord)) {
               if (image_crop($image, $coord['x'], $coord['y'], $coord['w'], $coord['h'])) {
                 return image_scale($image, $settings['width'], $settings['height']);
@@ -443,7 +440,7 @@ function epsacrop_crop_image(stdClass $image, $settings) {
 
 /**
  * Function that provide the effect form settings for reusing epsa crop.
- * 
+ *
  * @access public
  * @param mixed $data
  * @return void
@@ -473,7 +470,7 @@ function epsacrop_crop_image_reuse_form($data) {
 
 /**
  * Apply the effect to the image on reuse.
- * 
+ *
  * @access public
  * @param stdClass $image
  * @param array $settings
@@ -491,7 +488,7 @@ function epsacrop_crop_image_reuse(stdClass $image, $settings) {
       return TRUE;
     }
   }
-  return FALSE;	
+  return FALSE;
 }
 
 /**
@@ -512,7 +509,7 @@ function epsacrop_form_field_ui_field_edit_form_alter(&$form, $form_state) {
       if (!empty($styles)) {
         $options = array();
         foreach ($styles as $style_name => $style) {
-          $options[$style_name] = $style['name'];
+          $options[$style_name] = $style['label'];
         }
 
         $form['instance']['settings']['epsacrop'] = array(
@@ -582,9 +579,15 @@ function epsacrop_form_file_entity_edit_alter(&$form, $form_state) {
   );
   $file = $form['preview']['#file'];
   $info = image_get_info($file->uri);
+  $preview_file = image_style_path('epsacrop_thumb', $file->uri);
   $setting['fid'] = $file->fid;
-  $setting['url'] = image_style_url('epsacrop_thumb', $file->uri);
-  $setting['size'] = array($info['width'], $info['height']);;
+  $setting['url'] = file_create_url($preview_file);
+  $setting['size'] = array($info['width'], $info['height']);
+
+  // Fix a strange bug when the image's name contains strange chars, like +
+  if (!file_exists($preview_file)) {
+    image_style_create_derivative(image_style_load('epsacrop_thumb'), $file->uri, $preview_file);
+  }
 
   $markup = "[<a href=\"javascript:Drupal.EPSACrop.dialog('" . $setting['entity_type'] . "', '" . $setting['field_name'] . "', '" . $setting['bundle'] . "', '" . $setting['fid'] . "', '" . $setting['url'] . "', [" . $setting['size'][0] . "," . $setting['size'][1] . "]);\" class=\"button epsacrop\">" . t("manage image crops") . "</a>]";
   $form['epsacrop'] = array(
@@ -632,9 +635,15 @@ function epsacrop_element_process($element, $form_state, $form) {
   );
   if(isset($element['#file']) && is_object($element['#file']) && $file = $element['#file']) {
     $info = image_get_info($file->uri);
+    $preview_file = image_style_path('epsacrop_thumb', $file->uri);
     $setting['fid'] = $file->fid;
-    $setting['url'] = image_style_url('epsacrop_thumb', $file->uri);
+    $setting['url'] = file_create_url($preview_file);
     $setting['size'] = array($info['width'], $info['height']);;
+
+    // Fix a strange bug when the image's name contains strange chars, like +
+    if (!file_exists($preview_file)) {
+      image_style_create_derivative(image_style_load('epsacrop_thumb'), $file->uri, $preview_file);
+    }
   }
 
   if ($element['#type'] == 'media') {

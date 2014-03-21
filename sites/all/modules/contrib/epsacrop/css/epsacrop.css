@@ -23,7 +23,7 @@
 }
 .epsacrop-presets-menu ul.epsacrop-presets-menu-ul li {
   background: none;
-  padding: 0; margin: 0;  
+  padding: 0; margin: 0;
 }
 
 .epsacrop-presets-menu ul.epsacrop-presets-menu-ul li a{
@@ -33,7 +33,7 @@
   padding:5px; margin:0 0 3px 0;
   border:1px solid #999999;
   border-left:none;
-  width:100px;
+  width:auto;
   color:#212121;
   display:block;
 }
@@ -44,7 +44,7 @@
   padding:5px; margin:0 0 3px 0;
   border:1px solid #999999;
   border-left:none;
-  width:100px;
+  width:auto;
   color:#212121;
   display:block;
 }

@@ -1,48 +1,70 @@
 
 -- SUMMARY --
 
-EPSA Crop is a module that allows a user to choose coordinates for different styles on an image. If a user defines coordinates EPSACrop will create a image with the points.
+EPSA Crop is a module that allows a user to choose coordinates for different
+styles on an image. If a user defines coordinates EPSACrop will create a image
+with the points.
 
-If the user don't change the coordinates, the normal crop process is applied.
+If the user doesn't change the coordinates, the normal crop process is applied.
 
-You can try the module on this demo web site : http://www.aswissidea.com (Drupal 6.x only for now)
+You can try out a demonstration of the Drupal 6 version of this module, here:
+http://www.aswissidea.com
 
 
 -- REQUIRENENTS --
 
-EPSACrop require this module enabled
+EPSACrop requires that the following module is enabled:
  - Image
 
-And need to install these external libraries
-JCrop (http://deepliquid.com/content/Jcrop.html)
-   If the Libraries module is installed, you may install the files into your libraries folder (ex.: sites/all/libraries). Otherwise, place them into the epsacrop module folder (ex.: sites/all/modules/epsacrop).
+EPSACrop requires that the following external libraries are installed:
+ - JCrop (http://deepliquid.com/content/Jcrop.html)
+ - json2 (https://github.com/douglascrockford/JSON-js)
 
-json2 (https://github.com/douglascrockford/JSON-js)
-  Rename the downloaded folder into json2 and place it into either libraries (only if the module Libraries is enabled) folder (ex.: sites/all/libraries), or the epsacrop folder (ex.: sites/all/modules/epsacrop/json2). 
-  You may use the minified version, but be sure to conserve the file name (json2.js).
 
 -- INSTALLATION --
 
-1. Extract epsacrop on your module directory (ex. sites/all/modules)
-2. Download the JCrop library and install it into either the libraries folder (ex.: sites/all/libraries), or the epsacrop module folder (ex.: sites/all/modules/epsacrop)
-  2.1 You would get, for example, sites/all/libraries/Jcrop or sites/all/modules/epsacrop/Jcrop
-3. Download the json2 library and install it into either the libraries folder (ex.: sites/all/libraries), or the epsacrop module folder (ex.: sites/all/modules/epsacrop)
-  3.1 You would get, for example, sites/all/libraries/json2 or sites/all/modules/epsacrop/json2
-4. Go to admin/build/modules and enable EPSA Crop
+1. Download the EPSAcrop module and place it into your modules directory
+   (ex. sites/all/modules or sites/all/modules/contrib)
+
+2. Download and unpack the JCrop library. Rename the resulting directory to
+   'Jcrop' and place it in one of two locations:
+    1. (recommended) If you are using the Libraries API module, place the Jcrop
+       directory into the libraries directory (ex.: sites/all/libraries/Jcrop).
+    2. Alternately, you may place the Jcrop directory into the epsacrop module
+       folder (ex.: sites/all/modules/epsacrop/Jcrop)
+
+3. Download the and unpack the json2 library. Rename the resulting directory to
+   'json2' and place it in one of two locations:
+    1. (recommended) If you are using the Libraries API module, place the json2
+       directory into the libraries directory (ex.: sites/all/libraries/json2).
+    2. Alternately, you may place the Jcrop directory into the epsacrop module
+       folder (ex.: sites/all/modules/epsacrop/json2)
+
+4. Go to admin/build/modules and enable EPSA Crop.
 
 -- CONFIGURATION --
 
-After actived the module, check the permissions and these parts.
+1. Enable the module and set the permissions at People -> Permissions.
 
-You can go Configuration -> Media -> Image styles and change/add a style with the Crop Dialog Effect.
+2. Go to Configuration -> Media -> Image styles and change/add an image style.
+   Add the effect 'EPSA Image crop' to any style.
 
-For each Content Type, you should tell which Styles are show, for this you've to go in Strcture -> Content Type -> {Type} -> Manage Fields and for each field with the Widget Image, if you edit you can see a new settings.
+3. Adjust the field settings for any Image field. For a content type, the field
+   settings are located at Structure -> Content Type -> {type} -> Manage fields.
+   Click 'edit' and select Available EPSACrop styles under "EPSACrop settings".
+   (All image styles containing the 'EPSA Image crop' effect should appear.)
+
+4. Adjust the field display settings for this image field. For a content type,
+   the field display settings are located at
+   Structure -> Content Type -> {type} -> Manage display. Select the image style
+   chosen in step 3 again to see your cropped image display.
+  
 
 -- TROUBLESHOOTING --
 
--- FAQ --
+For questions, comments, or bug reports, please use the issue queue:
+https://drupal.org/project/issues/epsacrop?categories=All
 
--- CONTACT --
 
 Current maintainers:
 * Yvan Marques (yvmarques) - http://drupal.org/user/298685

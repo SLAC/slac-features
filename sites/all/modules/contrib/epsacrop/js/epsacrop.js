@@ -15,7 +15,7 @@
 
       buttons[saveLabel] = function (){
         $.post(Drupal.settings.basePath +'?q=crop/ajax/put/' + delta, {'coords': JSON.stringify(Drupal.EPSACrop.presets)});
-        var field = field_name.replace('_', '-');
+        var field = field_name.replace(/_/g, '-');
         var welem = $('div[id*="' + field + '"]').eq(0);
         if(welem.find('.warning').size() == 0) {
           welem.prepend('<div class="tabledrag-changed-warning messages warning">' + Drupal.t("Changes made in image crops will not be saved until the form is submitted.") + '</div>');
@@ -56,6 +56,9 @@
           var h = parseInt(coords[1]);
 
           Drupal.EPSACrop.preset = preset;
+          if (Drupal.EPSACrop.delta === null || Drupal.EPSACrop.delta !== delta) {
+            Drupal.EPSACrop.init = false;
+          }
           Drupal.EPSACrop.delta = delta;
 
           presets = Drupal.EPSACrop.presets || {};

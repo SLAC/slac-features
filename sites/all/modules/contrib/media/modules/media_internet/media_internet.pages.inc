@@ -29,12 +29,11 @@ function media_internet_add($form, &$form_state = array(), $types = NULL) {
   // Determine if there are any visible providers.
   foreach (media_internet_get_providers() as $key => $provider) {
     if (empty($provider['hidden']) || $provider['hidden'] != TRUE) {
-      $providers[] = array(
-        'data' => check_plain($provider['title']),
-        'class' => array(drupal_html_class($provider['title'])),
-      );
+      $providers[] = check_plain($provider['title']);
     }
   }
+
+  $form['#providers'] = $providers;
 
   // Notify the user of any available providers.
   if ($providers) {
@@ -42,17 +41,7 @@ function media_internet_add($form, &$form_state = array(), $types = NULL) {
     $form['embed_code']['#title'] = t('File URL or media resource');
     $form['embed_code']['#description'] = t('Enter a URL to a file or media resource. Many media providers also support identifying media via the embed code used to embed the media into external websites.');
 
-    // Providers are displayed in an unordered list below the embed input.
-    // Providers can easily style their own listing by targeting the unique
-    // class assigned to each list item.
-    $form['providers'] = array(
-      '#theme' => 'item_list',
-      '#title' => t('Supported providers'),
-      '#items' => $providers,
-      '#attributes' => array(
-        'class' => array('media-internet-providers'),
-      ),
-    );
+    $form['embed_code']['#description'] = theme('media_internet_embed_help', array('description' => $form['embed_code']['#description'], 'supported_providers' => implode(' ', $providers)));
   }
 
   $form['#validators'] = array();

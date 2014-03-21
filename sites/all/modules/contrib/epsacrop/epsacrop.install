@@ -7,7 +7,7 @@
 
 /**
  * Implementation of hook_schema
- *
+ * 
  * @access public
  * @return array
  */
@@ -36,7 +36,7 @@ function epsacrop_schema() {
 
 /**
  * Implementation of hook_requirements.
- *
+ * 
  * @access public
  * @param string $phase
  * @return array
@@ -58,7 +58,7 @@ function epsacrop_requirements($phase) {
       $requirements['epsacrop_jcrop']['value'] = 'Jcrop version : ' . $version;
       $requirements['epsacrop_jcrop']['severity'] = REQUIREMENT_OK;
     }
-
+    
     if (_epsacrop_is_json2_exists()) {
       $requirements['epsacrop_json2']['value'] = 'JSON file (json2.js) OK';
       $requirements['epsacrop_json2']['severity'] = REQUIREMENT_OK;
@@ -83,7 +83,7 @@ function epsacrop_requirements($phase) {
 
 /**
  * Implementation of hook_install.
- *
+ * 
  * @access public
  * @return void
  */
@@ -97,7 +97,7 @@ function epsacrop_install() {
 
 /**
  * Implementation of hook_uninstall.
- *
+ * 
  * @access public
  * @return void
  */
@@ -105,7 +105,7 @@ function epsacrop_uninstall() {
 }
 
 /**
- * Converts all the epsacrop coordenates to a new machine_name format.
+ * Converts all the epsacrop coordinates to a new machine_name format.
  * Issue related: http://drupal.org/node/1396500
  */
 function epsacrop_update_7201() {

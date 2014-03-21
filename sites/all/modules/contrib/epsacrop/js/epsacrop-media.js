@@ -19,7 +19,7 @@ Drupal.behaviors.EPSACropMediaElement = {
       // When someone clicks the link to manage EPSA crops
       epsaButton.bind('click', function (e) {
         e.preventDefault();
-        var elem = $(this).parent();
+        var elem = $(this).parents('.media-widget');
         var fileInfo = epsaDialogSettings[elem.attr('id')];
         var fid = fidField.val();
         if(!fileInfo.fid || fileInfo.fid != fid) {
@@ -54,7 +54,7 @@ Drupal.behaviors.EPSACropMediaElement = {
 
 Drupal.behaviors.EPSACropMediaElement.helper = {
   attach: function (context, settings) {
-    
+
   }
 }
 

@@ -934,9 +934,11 @@ function media_update_7211() {
   foreach ($view_modes as $view_mode => $view_mode_info) {
     $displays = file_displays_load('image', $view_mode);
     foreach ($displays as $display) {
-      if ($display->settings['image_style'] == 'square_thumbnail') {
-        $display->settings['image_style'] = 'media_thumbnail';
-        file_display_save($display);
+      if (isset($display->settings['image_style'])) {
+        if ($display->settings['image_style'] == 'square_thumbnail') {
+          $display->settings['image_style'] = 'media_thumbnail';
+          file_display_save($display);
+        }
       }
     }
   }
@@ -1160,5 +1162,18 @@ function media_update_7225() {
       // Remove the old variable.
       variable_del('media_' . $variable);
     }
+  }
+}
+
+/**
+ * Accommodate the introduction of a new permission which restricts access to
+ * the media browser by granting it to existing users who were able to access
+ * it.
+ */
+function media_update_7226() {
+  $roles = user_roles(FALSE, 'create files');
+
+  foreach ($roles as $rid => $role) {
+    user_role_grant_permissions($rid, array('access media browser'));
   }
 }

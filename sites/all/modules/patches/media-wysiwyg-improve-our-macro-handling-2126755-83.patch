@@ -30,10 +30,10 @@ index 8cc99c9..2b0fecf 100644
    }
    else {
 diff --git a/modules/media_wysiwyg/js/media_wysiwyg.filter.js b/modules/media_wysiwyg/js/media_wysiwyg.filter.js
-index aa5b95c..44cb0e6 100644
+index 4a0ac0d..2cd6e9b 100644
 --- a/modules/media_wysiwyg/js/media_wysiwyg.filter.js
 +++ b/modules/media_wysiwyg/js/media_wysiwyg.filter.js
-@@ -15,59 +15,79 @@
+@@ -15,64 +15,84 @@
       */
      replaceTokenWithPlaceholder: function(content) {
        Drupal.media.filter.ensure_tagmap()
@@ -41,7 +41,7 @@ index aa5b95c..44cb0e6 100644
 -        matches = content.match(/\[\[.*?\]\]/g),
 -        media_definition;
 +      var matches = content.match(/\[\[.*?"type":"media".*?\]\]/g);
- 
+
        if (matches) {
 -        for (var macro in tagmap) {
 -          // We cant use indexOf because of IE.
@@ -78,7 +78,7 @@ index aa5b95c..44cb0e6 100644
 +            // Content should be returned to prevent an empty editor.
 +            return content;
 +          }
- 
+
 -              content = content.replace(macro, markup);
 -            }
 +          // Re-build the media if the macro has changed from the tagmap.
@@ -100,7 +100,7 @@ index aa5b95c..44cb0e6 100644
 +
        return content;
      },
- 
+
      /**
 -     * Replaces the placeholders for html editing with the media tokens to store.
 -     * @param content
@@ -113,14 +113,14 @@ index aa5b95c..44cb0e6 100644
        Drupal.media.filter.ensure_tagmap();
 -      // Convert all xhtml markup to html for reliable matching/replacing.
 -      content = content.replace(/[\s]\/\>/g, '>');
- 
+
 -      // Re-build the macros in case any element has changed in the editor.
 -      $('.media-element', content).each(function(i, element) {
 -        var markup = Drupal.media.filter.outerHTML($(element));
 -          macro = Drupal.media.filter.create_macro($(element));
 +      // Rewrite the tagmap in case any of the macros have changed.
 +      Drupal.settings.tagmap = {};
- 
+
 -        // Store the macro => html for more efficient rendering in
 -        // replaceTokenWithPlaceholder().
 -        Drupal.settings.tagmap[macro] = markup;
@@ -130,7 +130,7 @@ index aa5b95c..44cb0e6 100644
 +      // Wrap the content to be able to use replaceWith() and html().
 +      content = $('<div>').append(content);
 +      var media = $('.media-element', content);
- 
+
 -      return content;
 +      if (media.length) {
 +        // Replace all media elements with their respective macros.
@@ -148,11 +148,7 @@ index aa5b95c..44cb0e6 100644
 +
 +      return content.html();
      },
- 
-     /**
-@@ -119,8 +139,8 @@
-     },
- 
+
      /**
 -     * Serializes file information as a url-encoded JSON object and stores it as a
 -     * data attribute on the html element.
@@ -161,7 +157,7 @@ index aa5b95c..44cb0e6 100644
       *
       * @param html (string)
       *    A html element to be used to represent the inserted media element.
-@@ -128,13 +148,19 @@
+@@ -80,13 +100,19 @@
       *    A object containing the media file information (fid, view_mode, etc).
       */
      create_element: function (html, info) {
@@ -174,7 +170,7 @@ index aa5b95c..44cb0e6 100644
          html = '<span>' + html + '</span>';
        }
        var element = $(html);
- 
+
 +      // Parse out link wrappers. They will be re-applied when the image is
 +      // rendered on the front-end.
 +      if (element.is('a')) {
@@ -184,7 +180,7 @@ index aa5b95c..44cb0e6 100644
        // Move attributes from the file info array to the placeholder element.
        if (info.attributes) {
          $.each(Drupal.settings.media.wysiwyg_allowed_attributes, function(i, a) {
-@@ -143,17 +169,28 @@
+@@ -95,17 +121,28 @@
            }
          });
          delete(info.attributes);
@@ -196,12 +192,12 @@ index aa5b95c..44cb0e6 100644
 +          src: element[0].src
 +        }
        }
- 
+
 -      // Important to url-encode the file information as it is being stored in an
 -      // html data attribute.
        info.type = info.type || "media";
 -      element.attr('data-file_info', encodeURI(JSON.stringify(info)));
- 
+
 -      // Adding media-element class so we can find markup element later.
 +      // Store the data in the data map.
 +      Drupal.media.filter.ensureDataMap();
@@ -212,13 +208,13 @@ index aa5b95c..44cb0e6 100644
 +
 +      // Add media-element class so we can find markup element later.
        var classes = ['media-element'];
- 
+
 -      if(info.view_mode){
 +      if (info.view_mode) {
          classes.push('file-' + info.view_mode.replace(/_/g, '-'));
        }
        element.addClass(classes.join(' '));
-@@ -179,29 +216,29 @@
+@@ -131,36 +168,28 @@
       * Extract the file info from a WYSIWYG placeholder element as JSON.
       *
       * @param element (jQuery object)
@@ -230,43 +226,49 @@ index aa5b95c..44cb0e6 100644
 -        file_info,
 -        value;
 +      var fid, file_info, value;
- 
+
 -      try {
 -        file_info = JSON.parse(decodeURIComponent(file_json));
 -      }
 -      catch (err) {
--        return null;
+-        file_info = null;
 -      }
 +      if (fid = element.data('fid')) {
 +        Drupal.media.filter.ensureDataMap();
-+
+
+-      if (file_info) {
+-        file_info.attributes = {};
+-
+-        // Extract whitelisted attributes.
+-        $.each(Drupal.settings.media.wysiwyg_allowed_attributes, function(i, a) {
+-          if (value = element.attr(a)) {
+-            file_info.attributes[a] = value;
+-          }
+-        });
+-        delete(file_info.attributes['data-file_info']);
+-
+-        // Extract the link text, if there is any.
+-        file_info.link_text = element.find('a').html();
 +        if (file_info = Drupal.settings.mediaDataMap[fid]) {
 +          file_info.attributes = {};
- 
--      file_info.attributes = {}
+
 +          $.each(Drupal.settings.media.wysiwyg_allowed_attributes, function(i, a) {
 +            if (value = element.attr(a)) {
 +              // Replace &quot; by \" to avoid error with JSON format.
 +              if (typeof value == 'string') {
 +                value = value.replace('&quot;', '\\"');
 +              }
- 
--      // Extract whitelisted attributes.
--      $.each(Drupal.settings.media.wysiwyg_allowed_attributes, function(i, a) {
--        if (value = element.attr(a)) {
--          file_info.attributes[a] = value;
 +              file_info.attributes[a] = value;
 +            }
 +          });
-         }
--      });
--      delete(file_info.attributes['data-file_info']);
-+      }
- 
-       return Drupal.media.filter.syncAttributesToFields(file_info);
++        }
+       }
+-
+       return file_info;
      },
-@@ -232,10 +269,6 @@
- 
+
+@@ -190,10 +219,6 @@
+
        // Store macro/markup in the tagmap.
        Drupal.media.filter.ensure_tagmap();
 -      var i = 1;
@@ -274,11 +276,11 @@ index aa5b95c..44cb0e6 100644
 -        i++;
 -      }
        Drupal.settings.tagmap[macro] = markup;
- 
+
        // Return the html code to insert in an editor and use it with
-@@ -244,6 +277,22 @@
+@@ -202,6 +227,22 @@
      },
- 
+
      /**
 +     * Ensures the src tracking has been initialized and returns it.
 +     */
@@ -299,14 +301,14 @@ index aa5b95c..44cb0e6 100644
       * Ensures the tag map has been initialized and returns it.
       */
      ensure_tagmap: function () {
-@@ -251,4 +300,5 @@
+@@ -209,4 +250,5 @@
        return Drupal.settings.tagmap;
      }
    }
 +
  })(jQuery);
 diff --git a/modules/media_wysiwyg/js/wysiwyg-media.js b/modules/media_wysiwyg/js/wysiwyg-media.js
-index 6cc2519..62ed2f1 100644
+index ac5bf4d..af99097 100644
 --- a/modules/media_wysiwyg/js/wysiwyg-media.js
 +++ b/modules/media_wysiwyg/js/wysiwyg-media.js
 @@ -22,6 +22,7 @@ Drupal.wysiwyg.plugins.media = {

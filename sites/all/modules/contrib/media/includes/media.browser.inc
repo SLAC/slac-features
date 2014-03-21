@@ -12,7 +12,7 @@ function media_browser($selected = NULL) {
   $output = array();
   $output['#attached']['library'][] = array('media', 'media_browser_page');
 
-  $params = media_set_browser_params();
+  $params = media_get_browser_params();
 
   // If one or more files have been selected, the browser interaction is now
   // complete. Return empty page content to the dialog which now needs to close,
@@ -77,8 +77,8 @@ function media_browser($selected = NULL) {
       continue;
     }
 
-    // We need to get a submit and cancel button on each tab. If the plugin
-    // is not returning a form element we need to add a submit button.
+    // We need to ensure that a submit button is available on each tab. If the
+    // plugin is not returning a form element we need to add a submit button.
     // This is a fairly broad assumption.
     if (empty($plugin_output[$key]['#form']) && !empty($plugin_output[$key]['#markup'])) {
       $fake_buttons = '<div class="form-actions form-wrapper">';
@@ -87,33 +87,8 @@ function media_browser($selected = NULL) {
           'class' => array('button', 'button-yes', 'fake-submit', $key),
         ),
       ));
-      $fake_buttons .= l(t('Cancel'), '', array(
-        'attributes' => array(
-          'class' => array('button', 'button-no', 'fake-cancel', $key),
-        ),
-      ));
       $fake_buttons .= '</div>';
       $plugin_output[$key]['#markup'] .= $fake_buttons;
-    }
-
-    // I'm not sure if it is ever the case that a plugin form will ever have
-    // the correct cancel button so we add it here. Put it inline with the
-    // current submit button. This is a fairly broad assumption.
-    if (!empty($plugin_output[$key]['form']['actions']) && !isset($plugin_output[$key]['form']['actions']['cancel'])) {
-      $plugin_output[$key]['form']['actions']['cancel'] = array(
-        '#type' => 'link',
-        '#title' => t('Cancel'),
-        '#href' => '',
-        '#attributes' => array(
-          'class' => array(
-            'button',
-            'button-no',
-            'fake-cancel',
-            $key,
-          ),
-        ),
-        '#weight' => 100,
-      );
     }
   }
 
@@ -162,10 +137,6 @@ function media_browser($selected = NULL) {
 
   drupal_add_js($settings, 'setting');
 
-  $output['title'] = array(
-    '#markup' => t('Select a file')
-  );
-
   $output['tabset']['tabs'] = array(
     '#theme' => 'menu_local_tasks',
     '#attributes' => array('class' => array('tabs', 'primary')),
@@ -175,59 +146,6 @@ function media_browser($selected = NULL) {
   $output['tabset']['panes'] = $plugin_output;
 
   return $output;
-}
-
-/**
- * Provides a singleton of the params passed to the media browser.
- *
- * This is useful in situations like form alters because callers can pass
- * id="wysiywg_form" or whatever they want, and a form alter could pick this up.
- * We may want to change the hook_media_browser_plugin_view() implementations to
- * use this function instead of being passed params for consistency.
- *
- * It also offers a chance for some meddler to meddle with them.
- *
- * @see media_browser()
- */
-function media_set_browser_params() {
-  $params = &drupal_static(__FUNCTION__, array());
-
-  if (empty($params)) {
-    // Build out browser settings. Permissions- and security-related behaviors
-    // should not rely on these parameters, since they come from the HTTP query.
-    // @TODO make sure we treat parameters as user input.
-    $params = drupal_get_query_parameters() + array(
-      'types' => array(),
-      'multiselect' => FALSE,
-    );
-
-    // Transform text 'true' and 'false' to actual booleans.
-    foreach ($params as $k => $v) {
-      if ($v === 'true') {
-        $params[$k] = TRUE;
-      }
-      elseif ($v === 'false') {
-        $params[$k] = FALSE;
-      }
-    }
-
-    array_walk_recursive($params, 'media_recursive_check_plain');
-
-    // Allow modules to alter the parameters.
-    drupal_alter('media_browser_params', $params);
-  }
-
-  return $params;
-}
-
-
-/**
- * For sanity in grammar.
- *
- * @see media_set_browser_params()
- */
-function media_get_browser_params() {
-  return media_set_browser_params();
 }
 
 /**
