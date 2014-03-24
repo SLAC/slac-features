@@ -19,10 +19,18 @@ function slac_ext_org_install_tasks($install_state) {
 }
 
 function slac_ext_org_install_task_demo_content() {
-  $demo_modules = module_invoke_all('demo_modules');
+  $demo_modules = array(
+    'slac_blog_demo',
+    'slac_news_demo',
+    'slac_event_demo',
+    'slac_demo_accounts',
+    'slac_demo_main_menu',
+    'slac_demo_webform',
+    'slac_newsletter_demo',
+  );
   $modules = array_merge(
     array(
-      'slac_service_catalog_pages',
+//      'slac_service_catalog_pages',
       'slac_news_pages',
       'slac_admin_modules',
       'slac_ext_org_frontpage',
