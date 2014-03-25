@@ -22,6 +22,17 @@ function slac_faq_preprocess_views_view(&$vars) {
  */
 function slac_faq_preprocess_views_view_fields(&$vars) {
 
+  if (isset($vars['row']->nid) && user_access('access comments')) {
+    $node = node_load($vars['row']->nid);
+    $comments_per_page = variable_get('comment_default_per_page_faq', 50);
+    $mode = variable_get('comment_default_mode_faq', 1);
+    $comments = comment_load_multiple(comment_get_thread($node, $mode, $comments_per_page));
+
+    if (!empty($comments)) {
+      $vars['comments'] = comment_view_multiple($comments, $node, 'teaser', 0, NULL);
+    }
+  }
+
   if (isset($vars['fields']['title']->content)) {
     $vars['faq_title'] = $vars['fields']['title']->content;
   }

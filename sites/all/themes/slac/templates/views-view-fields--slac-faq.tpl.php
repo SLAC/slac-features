@@ -27,9 +27,19 @@
 
 
   <div class="views-field views-field-title">
-    <span class="field-content"><?php print $faq_title; ?></span>
+    <span class="field-content"><?php print $faq_title;?></span>
   </div>
   <?php print render($title_suffix); ?>
   <div class="views-field-field-slac-faq-answer">
-    <span class="field-content"><?php if (isset($faq_answer)){print $faq_answer;} ?></span>
+    <span class="field-content">
+      <?php if (isset($faq_answer)) {
+        print $faq_answer;
+      } ?>
+    </span>
+    <span class="faq-comments">
+      <?php if (isset($comments)) : ?>
+        <h2 class="faq-comments-title"><?php print t('Comments') . ':'; ?></h2>
+        <?php print drupal_render($comments); ?>
+      <?php endif; ?>
+    </span>
   </div>
