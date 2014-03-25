@@ -2501,7 +2501,6 @@ function slac_extorg_permissions_user_default_permissions() {
       'manager' => 'manager',
     ),
     'module' => 'field_permissions',
-
   );
 
   // Exported permission: 'edit fieldable fieldable_panels_pane'.
@@ -3618,6 +3617,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'view own unpublished content',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
       'author' => 'author',
       'editor' => 'editor',
       'manager' => 'manager',
