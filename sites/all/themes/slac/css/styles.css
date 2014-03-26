@@ -1389,6 +1389,8 @@ ul.tabs, .action-links {
   border-bottom: 1px solid #f3f1eb; }
 .faq-comments .field-name-comment-body {
   margin-bottom: 15px; }
+.faq-comments article {
+  margin-bottom: 15px; }
 .faq-comments .links li {
   border-bottom: 0;
   margin-bottom: 0; }
