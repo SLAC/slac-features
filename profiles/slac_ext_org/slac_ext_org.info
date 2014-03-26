@@ -205,6 +205,6 @@ dependencies[] = workbench_moderation
 dependencies[] = slac_workbench_settings_eo
 
 ; Newsletter
-dependencies[] = mailsystem
-dependencies[] = simplenews
-dependencies[] = htmlmail
+;dependencies[] = mailsystem
+;dependencies[] = simplenews
+;dependencies[] = htmlmail
