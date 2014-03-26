@@ -87,7 +87,7 @@ a[href*='mailto:'] {
   font-style: normal;
   text-indent: 0; }
 
-.date-and-author, .news-landing time, .news-landing .field-name-field-slac-news-date, .kb-articles time, .kb-articles .field-name-field-slac-news-date, .wiki-search .submitted {
+.date-and-author, .faq-comments header, .news-landing time, .news-landing .field-name-field-slac-news-date, .kb-articles time, .kb-articles .field-name-field-slac-news-date, .wiki-search .submitted {
   color: #555555;
   font-size: 12px;
   font-size: 0.75rem;
@@ -1379,6 +1379,19 @@ ul.tabs, .action-links {
   padding-left: 20px;
   margin-top: 10px;
   margin-bottom: 5px; }
+
+.faq-comments h2 {
+  font-size: 18px;
+  font-size: 1.125rem;
+  margin-top: 20px;
+  margin-bottom: 10px; }
+.faq-comments header {
+  border-bottom: 1px solid #f3f1eb; }
+.faq-comments .field-name-comment-body {
+  margin-bottom: 15px; }
+.faq-comments .links li {
+  border-bottom: 0;
+  margin-bottom: 0; }
 
 .feed-icon {
   display: none; }
