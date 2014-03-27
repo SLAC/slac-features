@@ -26,6 +26,19 @@ function webauth_menu() {
   return $items;
 }
 
+function webauth_menu_alter(&$items) {
+  $items['admin/people/create']['access callback'] = 'webauth_people_create_access';
+  $items['admin/people/create']['access arguments'] = array();
+}
+
+function webauth_people_create_access() {
+  if (variable_get('webauth_allow_user_creation', 0) == 1 && user_access('administer users')) {
+    return TRUE;
+  }
+  return FALSE;
+}
+
+
 /**
  * Implements hook_help().
  */
