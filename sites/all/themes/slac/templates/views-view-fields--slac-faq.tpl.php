@@ -30,13 +30,13 @@
 </div>
 <?php print render($title_suffix); ?>
 <div class="views-field-field-slac-faq-answer">
-  <span class="field-details">
+  <span class="faq-details">
     <?php if (isset($question_details)): ?>
       <h2 class="faq-details-title"><?php print t('Question details') . ':'; ?></h2>
       <?php print $question_details; ?>
     <?php endif;?>
   </span>
-  <span class="field-answer">
+  <span class="faq-answer">
     <?php if (isset($faq_answer)): ?>
       <h2 class="faq-answer-title"><?php print t('Answer') . ':'; ?></h2>
       <?php print $faq_answer; ?>
