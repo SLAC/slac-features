@@ -1731,17 +1731,21 @@ table.sticky-table
 
     article
       position: relative
-      padding: 0  15px
+      padding: 0  15px 0 0
       &.image_exist
         .news-content, .article-content
           padding-left: 170px
+
+      &:hover
+        .news-image img
+          +opacity(.9)
 
 
     .news-image, .article-image
       max-width: 150px
       position: absolute
       top: 2px
-      left: 15px
+      //left: 15px
       margin-bottom: 0
 
 
