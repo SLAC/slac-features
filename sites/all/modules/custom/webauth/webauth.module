@@ -233,13 +233,16 @@ function _webauth_user_sync($wa_username) {
   // 1a. if user not found, let's create a normal user
   // 1b. if user found, just return the user
   // 2. We will also sync the user roles in this function
-  $loaded_user = user_load_by_name($wa_username);
+
+  // construct the email address
+  $mail = $wa_username . '@' . EMAIL_DOMAIN;
+
+  $loaded_user = user_load_by_email($mail);
   if (!empty($loaded_user)) {
     return $loaded_user;
   }
 
   // saving a new user
-  $mail = $wa_username . '@' . EMAIL_DOMAIN;
   $edit = array(
     'name' => check_plain($wa_username),
     'pass' => user_password(),
