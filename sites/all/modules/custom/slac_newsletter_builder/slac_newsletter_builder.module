@@ -236,9 +236,6 @@ function newletter_builder_form($form, &$form_state) {
     '#type' => 'textfield',
     '#default_value' => isset($form_state['values']['main_article']) ? : '',
     '#autocomplete_path' => 'newsletter-builder/autocomplete',
-    '#ajax' => array(
-      'callback' => 'slac_newsletter_builder_set_nid',
-    ),
   );
   $number_secondary_articles = isset($form_state['values']['number_secondary_articles']) ? $form_state['values']['number_secondary_articles'] : 2;
   $form['number_secondary_articles'] = array(
