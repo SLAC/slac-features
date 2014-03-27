@@ -1,0 +1,4 @@
+name = Slac newsletter builder
+description = "Provides page to build html for the newsletters."
+package = SLAC
+core = 7.x
