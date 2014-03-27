@@ -152,6 +152,7 @@ function webauth_form_alter(&$form, $form_state, $form_id) {
     if (empty($authmap)) {
       return;
     }
+    $form['account']['name']['#disabled'] = TRUE;
     $form['account']['pass']['#type'] = 'hidden';
     $form['account']['current_pass']['#type'] = 'hidden';
     $form['account']['mail']['#type'] = 'hidden';
