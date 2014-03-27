@@ -81,7 +81,7 @@ a[href*='mailto:'] {
   .views-field-field-prf-bio-tp:after, .views-responsive-grid.views-columns-2 .views-row:after, .event-listing-item:after, .wiki-filter ul:after, .blog-tags ul:after, .connect-with-me .views-row:after, ul.blog-archive-class > li ul:after, div .color-box:after, .icons:after {
     clear: both; }
 
-.slac-font, .sf-accordion-toggle a:before, .sf-accordion a.sf-with-ul:after, .sf-accordion li.sf-expanded a.sf-with-ul:after, .mob-icon:before, .user-icons a:before, .share-block-wrapper a:before, .social-icon-block > div a:after, .footer-seccond ul li a:after, .event-calendar-page .pager li a:before, .calendar-page .view-header ul li.first a:after, .calendar-page .view-header ul li.first a:before, .calendar-page .view-header ul li.last a:after, .calendar-page .view-header ul li.last a:before, article.node-blog.node-teaser header h2 a:after, .profile-info-brief .views-more-link:after, .profile-info-full .profile-maxlist-more a:before, .more-link-template a:after, .last-three-news .more-link a:after, .event-calendar-block .more-link a:after, .event-block a.icon:after, .add-to-calendar a:before, .connect-with-me .views-row > div a:after, .pane-bundle-slideshow-description-bottom .field-slideshow-controls a:after, .pane-bundle-slac-mini-slideshow .field-slideshow-controls a:after {
+.slac-font, .sf-accordion-toggle a:before, .sf-accordion a.sf-with-ul:after, .sf-accordion li.sf-expanded a.sf-with-ul:after, .mob-icon:before, .user-icons a:before, .share-block-wrapper a:before, .social-icon-block > div a:after, .footer-seccond ul li a:after, .event-calendar-page .pager li a:before, .calendar-page .view-header ul li.first a:after, .calendar-page .view-header ul li.first a:before, .calendar-page .view-header ul li.last a:after, .calendar-page .view-header ul li.last a:before, article.node-blog.node-teaser header h2 a:after, .profile-info-brief .views-more-link:after, .profile-info-full .profile-maxlist-more a:before, .more-link-template a:after, .last-three-news .more-link a:after, .event-calendar-block .more-link a:after, .event-block a.icon:after, .add-to-calendar a:before, .lightbox-download-link:after, .connect-with-me .views-row > div a:after, .pane-bundle-slideshow-description-bottom .field-slideshow-controls a:after, .pane-bundle-slac-mini-slideshow .field-slideshow-controls a:after {
   font-family: "slac";
   font-weight: normal;
   font-style: normal;
@@ -2689,10 +2689,35 @@ ol.search-results .search-snippet {
 
 #imageData #caption {
   font-weight: normal !important; }
+#imageData #imageDetails {
+  width: 100% !important; }
+
+#imageDetails p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 16px; }
 
 .lightbox-download-link {
-  margin-top: 10px;
-  display: block; }
+  margin: 10px 0;
+  display: block;
+  font-size: 10px;
+  font-size: 0.625rem;
+  font-weight: bold;
+  color: #871628; }
+  .lightbox-download-link:after {
+    content: "\e630";
+    margin-left: 5px;
+    font-size: 16px;
+    font-size: 1rem; }
+
+#bottomNavClose {
+  position: absolute;
+  bottom: 5px;
+  right: 5px; }
+
+#imageDataContainer {
+  position: relative; }
 
 .forum-table tr.even, .forum-table tr.odd {
   background: none !important; }
