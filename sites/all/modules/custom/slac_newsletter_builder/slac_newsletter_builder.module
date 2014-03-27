@@ -1,0 +1,97 @@
+<?php
+
+/**
+ * Implements hook_menu().
+ */
+function slac_newsletter_builder_menu() {
+	$items['newsletter-builder'] = array(
+	  'page callback' => 'drupal_get_form',
+	  'page arguments' => array('newletter_builder_form'),
+	  'access arguments' => array('access newsletter builder'),
+	  'type' => MENU_CALLBACK,
+	);
+	return $items;
+}
+
+/**
+ * Implements hook_permission().
+ */
+function slac_newsletter_builder_permission() {
+  return array(
+    'access newsletter builder' => array(
+      'title' => t('Access newletter builder'),
+      'description' => t('Allow to use newletter builder.'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_admin_menu_output_alter().
+ */
+function slac_newsletter_builder_admin_menu_output_alter(&$content) {
+  if (user_access('access newsletter builder')) {
+    $content['menu']['11'] = array(
+      '#title' => t('Newletter builder'),
+      '#href' => 'newsletter-builder',
+      '#weight' => 0,
+    );
+  }
+}
+
+/**
+ * Main builder form.
+ *
+ * @param type $form
+ * @param type $form_state
+ */
+function newletter_builder_form($form, &$form_state) {
+
+  $form['page_title'] = array(
+    '#markup' => '<h2>' . t('Newletter builder') . '</h2>',
+  );
+
+  $form['main_article'] = array(
+    '#title' => t('Main article'),
+    '#type' => 'textfield',
+    '#default_value' => isset($form_state['values']['main_article']) ? : '',
+  );
+  $number_secondary_articles = isset($form_state['values']['number_secondary_articles']) ? $form_state['values']['number_secondary_articles'] : 2;
+  $form['number_secondary_articles'] = array(
+    '#title' => t('Number of secondary articles'),
+    '#type' => 'select',
+    '#options' => range(0, 15),
+    '#default_value' => $number_secondary_articles,
+    '#ajax' => array(
+      'callback' => 'slac_newsletter_builder_set_number_secondary_articles',
+      'method' => 'replace',
+      'wrapper' => 'edit-secondary-articles-wrapper',
+    ),
+  );
+
+  $form['secondary_articles'] = array(
+    '#title' => t('Secondary articles'),
+    '#type' => 'fieldset',
+    '#collapsible' => FALSE,
+    '#collapsed' => FALSE,
+    '#prefix' => '<div id="edit-secondary-articles-wrapper">',
+    '#suffix' => '</div>',
+  );
+
+  for ($i = 0; $i < $number_secondary_articles; $i++) {
+    $form['secondary_articles']['article_' . $i] = array(
+      '#type' => 'textfield',
+      '#default_value' => isset($form_state['values']['article_' . $i]) ? : '',
+    );
+  }
+
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => 'Submit',
+  );
+
+  return $form;
+}
+
+function slac_newsletter_builder_set_number_secondary_articles($form, $form_state) {
+  return $form['secondary_articles'];
+}
