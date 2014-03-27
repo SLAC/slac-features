@@ -37,7 +37,6 @@ function slac_newsletter_builder_permission() {
 }
 
 /**
-<<<<<<< HEAD
  * Implements hook_entity_info_alter().
  */
 function slac_newsletter_builder_entity_info_alter(&$entity_info) {
