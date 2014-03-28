@@ -12,7 +12,7 @@ function slac_newsletter_builder_menu() {
 	);
   $items['newsletter-builder/autocomplete'] = array(
     'title' => t('Newsletter autocomplete'),
-    'page callback' => '_slac_newsletter_builder_select_content',
+    'page callback' => 'slac_newsletter_builder_select_content',
     'access arguments' => array('access content'),
     'type' => MENU_CALLBACK,
   );
@@ -61,6 +61,9 @@ function newletter_builder_form($form, &$form_state) {
     '#type' => 'textfield',
     '#default_value' => isset($form_state['values']['main_article']) ? : '',
     '#autocomplete_path' => 'newsletter-builder/autocomplete',
+    '#ajax' => array(
+      'callback' => 'slac_newsletter_builder_set_nid',
+    ),
   );
   $number_secondary_articles = isset($form_state['values']['number_secondary_articles']) ? $form_state['values']['number_secondary_articles'] : 2;
   $form['number_secondary_articles'] = array(
@@ -79,9 +82,26 @@ function newletter_builder_form($form, &$form_state) {
     '#title' => t('Secondary articles'),
     '#type' => 'fieldset',
     '#collapsible' => FALSE,
-    '#collapsed' => FALSE,
+    '#collapsed' => TRUE,
     '#prefix' => '<div id="edit-secondary-articles-wrapper">',
     '#suffix' => '</div>',
+  );
+
+  $form['results'] = array(
+    '#title' => t('Newsletter Results'),
+    '#tree' => TRUE,
+    '#type' => 'fieldset',
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+    '#prefix' => '<div id="edit-newsletter-results-wrapper">',
+    '#suffix' => '</div>',
+  );
+
+  $form['results']['newsletter_results'] = array(
+    '#title' => '',
+    '#type' => 'textarea',
+    '#rows' => 10,
+    '#default_value' => isset($form_state['results']['newsletter_results']) ? : '',
   );
 
   for ($i = 0; $i < $number_secondary_articles; $i++) {
@@ -92,25 +112,69 @@ function newletter_builder_form($form, &$form_state) {
     );
   }
 
+  drupal_add_js(drupal_get_path('module', 'slac_newsletter_builder') . '/js/slac_newsletter_builder.js');
+
   $form['submit'] = array(
     '#type' => 'submit',
     '#value' => 'Submit',
+    '#ajax' => array(
+      'callback' => 'slac_newletter_builder_ajax_callback',
+    ),
   );
 
   return $form;
+}
+
+function slac_newletter_builder_ajax_callback($form, &$form_state) {
+  $nids = array();
+  $main_article_title = $form_state['values']['main_article'];
+  $match = preg_match('/\[nid:\s(\d+)\]/', $main_article_title, $matches);
+  if (isset($matches['1']) && is_numeric($matches['1'])) {
+    $nids['main_article_nid'][] = $matches['1'];
+  }
+  if (isset($form_state['values']['article_0'])) {
+    $article_number = 0;
+    foreach ($form_state['values'] as $key => $value) {
+      if ($key == 'article_' . $article_number) {
+        $match = preg_match('/\[nid:\s(\d+)\]/', $value, $matches);
+        if (isset($matches['1']) && is_numeric($matches['1'])) {
+          $nids[$key][] = $matches['1'];
+        }
+        $article_number++;
+      }
+    }
+  }
+
+  $html = slac_newsletter_builder_generate_html($nids);
+  $selector = '#edit-results-newsletter-results';
+
+  $commands = array();
+  $commands[] = ajax_command_invoke(NULL, "slac_newletter_builder_forms", array($selector, $html));
+  $commands[] = ajax_command_html('#ajax-forms-messages', theme('status_messages'));
+  return array('#type' => 'ajax', '#commands' => $commands);
 }
 
 function slac_newsletter_builder_set_number_secondary_articles($form, $form_state) {
   return $form['secondary_articles'];
 }
 
-function _slac_newsletter_builder_select_content($string) {
-  $result = db_query(
-    "SELECT nid, title FROM {node} WHERE title LIKE '%$string%' LIMIT 15");
+function slac_newsletter_builder_select_content($string = '') {
+  $result = db_select('node')->fields('node', array('nid', 'title'))->condition('title', db_like($string) . '%', 'LIKE')->range(0, 10)->execute();
   $matches = array();
   foreach($result as $item) {
-    $matches[$item->title] = check_plain($item->title);
+    $matches[$item->title . ' [nid: ' . $item->nid . ']'] = check_plain($item->title);
   }
   drupal_json_output($matches);
   exit;
+}
+
+function slac_newsletter_builder_generate_html($nids = array()) {
+  $output = '';
+  foreach ($nids as $key => $nid) {
+    $node = node_load($nid);
+    $view = node_view($node, 'teaser');
+    $rendered_node = drupal_render($view);
+    $output .= $rendered_node;
+  }
+  return $output;
 }
