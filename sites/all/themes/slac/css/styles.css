@@ -3304,6 +3304,8 @@ form#user-profile-form, form#user-login, form#user-register-form, form#user-pass
     float: none;
     display: block;
     margin: 0 0 10px 0; }
+  form#user-profile-form .filter-guidelines, form#user-login .filter-guidelines, form#user-register-form .filter-guidelines, form#user-pass .filter-guidelines, form#slac-configuration-form .filter-guidelines, form.webform-client-form .filter-guidelines, form.node-form .filter-guidelines, form.comment-form .filter-guidelines {
+    padding: 0; }
   form#user-profile-form .form-item, form#user-login .form-item, form#user-register-form .form-item, form#user-pass .form-item, form#slac-configuration-form .form-item, form.webform-client-form .form-item, form.node-form .form-item, form.comment-form .form-item {
     margin-bottom: 35px; }
     form#user-profile-form .form-item.form-type-radio, form#user-login .form-item.form-type-radio, form#user-register-form .form-item.form-type-radio, form#user-pass .form-item.form-type-radio, form#slac-configuration-form .form-item.form-type-radio, form.webform-client-form .form-item.form-type-radio, form.node-form .form-item.form-type-radio, form.comment-form .form-item.form-type-radio {
@@ -3313,6 +3315,10 @@ form#user-profile-form, form#user-login, form#user-register-form, form#user-pass
       form#user-profile-form .form-item.form-type-radio input, form#user-profile-form .form-item.form-type-radio label, form#user-login .form-item.form-type-radio input, form#user-login .form-item.form-type-radio label, form#user-register-form .form-item.form-type-radio input, form#user-register-form .form-item.form-type-radio label, form#user-pass .form-item.form-type-radio input, form#user-pass .form-item.form-type-radio label, form#slac-configuration-form .form-item.form-type-radio input, form#slac-configuration-form .form-item.form-type-radio label, form.webform-client-form .form-item.form-type-radio input, form.webform-client-form .form-item.form-type-radio label, form.node-form .form-item.form-type-radio input, form.node-form .form-item.form-type-radio label, form.comment-form .form-item.form-type-radio input, form.comment-form .form-item.form-type-radio label {
         margin: 0;
         display: inline-block; }
+    form#user-profile-form .form-item.form-type-textarea, form#user-login .form-item.form-type-textarea, form#user-register-form .form-item.form-type-textarea, form#user-pass .form-item.form-type-textarea, form#slac-configuration-form .form-item.form-type-textarea, form.webform-client-form .form-item.form-type-textarea, form.node-form .form-item.form-type-textarea, form.comment-form .form-item.form-type-textarea {
+      margin-bottom: 10px; }
+    form#user-profile-form .form-item.form-type-select, form#user-login .form-item.form-type-select, form#user-register-form .form-item.form-type-select, form#user-pass .form-item.form-type-select, form#slac-configuration-form .form-item.form-type-select, form.webform-client-form .form-item.form-type-select, form.node-form .form-item.form-type-select, form.comment-form .form-item.form-type-select {
+      padding: 0; }
   form#user-profile-form > div, form#user-login > div, form#user-register-form > div, form#user-pass > div, form#slac-configuration-form > div, form.webform-client-form > div, form.node-form > div, form.comment-form > div {
     max-width: 360px; }
   form#user-profile-form legend, form#user-login legend, form#user-register-form legend, form#user-pass legend, form#slac-configuration-form legend, form.webform-client-form legend, form.node-form legend, form.comment-form legend {
