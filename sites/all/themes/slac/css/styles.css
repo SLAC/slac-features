@@ -619,6 +619,11 @@ h2 {
     display: none; }
   .node-webform h2 {
     margin-bottom: 25px; }
+  h2.faq-details-title, h2.faq-answer-title {
+    font-size: 16px;
+    font-size: 1rem;
+    color: #626262;
+    margin-bottom: 5px; }
 
 h3 {
   font-size: 18px;
