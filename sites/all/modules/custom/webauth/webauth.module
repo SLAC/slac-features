@@ -26,6 +26,19 @@ function webauth_menu() {
   return $items;
 }
 
+function webauth_menu_alter(&$items) {
+  $items['admin/people/create']['access callback'] = 'webauth_people_create_access';
+  $items['admin/people/create']['access arguments'] = array();
+}
+
+function webauth_people_create_access() {
+  if (variable_get('webauth_allow_user_creation', 0) == 1 && user_access('administer users')) {
+    return TRUE;
+  }
+  return FALSE;
+}
+
+
 /**
  * Implements hook_help().
  */
@@ -152,6 +165,8 @@ function webauth_form_alter(&$form, $form_state, $form_id) {
     if (empty($authmap)) {
       return;
     }
+    $form['account']['name']['#disabled'] = TRUE;
+    $form['account']['name']['#description'] = '';
     $form['account']['pass']['#type'] = 'hidden';
     $form['account']['current_pass']['#type'] = 'hidden';
     $form['account']['mail']['#type'] = 'hidden';
@@ -234,15 +249,16 @@ function _webauth_user_sync($wa_username) {
   // 1b. if user found, just return the user
   // 2. We will also sync the user roles in this function
 
-  // construct the email address
-  $mail = $wa_username . '@' . EMAIL_DOMAIN;
+  $loaded_user = user_load_by_name($wa_username);
 
-  $loaded_user = user_load_by_email($mail);
   if (!empty($loaded_user)) {
     return $loaded_user;
   }
 
   // saving a new user
+  
+  // construct the email address
+  $mail = $wa_username . '@' . EMAIL_DOMAIN;
   $edit = array(
     'name' => check_plain($wa_username),
     'pass' => user_password(),

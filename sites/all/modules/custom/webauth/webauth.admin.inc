@@ -27,6 +27,14 @@ function webauth_admin_settings_form($form) {
       '#options' => array('0' => 'No', '1' => 'Yes'),
       '#description' => t('Set to no if only WEBAUTH can be used'),
       '#default_value' => variable_get('webauth_allow_drupal_login', 1),
+    );
+  $form['webauth_allow_user_creation'] = array(
+    '#type' => 'radios',
+    '#title' => t('Allow users to be created in the site'),
+    '#multiple' => TRUE,
+    '#options' => array('0' => 'No', '1' => 'Yes'),
+    '#description' => t('Set to no if users can only be created by logging in with webauth (and NOT at /admin/people/create).'),
+    '#default_value' => variable_get('webauth_allow_user_creation', 0),
   );
   $form['webauth_restrict_message'] = array(
     '#type' => 'textarea',

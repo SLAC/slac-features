@@ -40,6 +40,10 @@ function slac_faq_preprocess_views_view_fields(&$vars) {
   if (isset($vars['fields']['body']->content)) {
     $vars['faq_answer'] = $vars['fields']['body']->content;
   }
+
+  if (isset($vars['fields']['field_question_details']->content)) {
+    $vars['question_details'] = $vars['fields']['field_question_details']->content;
+  }
 }
 
 /**

@@ -101,6 +101,11 @@ h2
   .node-webform &
     margin-bottom: 25px
 
+  &.faq-details-title, &.faq-answer-title
+    +fontsize-rem(16px)
+    color: $h2-color
+    margin-bottom: 5px
+
 h3
   +fontsize-rem(18px)
 
@@ -1052,6 +1057,8 @@ ul.tabs, .action-links,
       border-bottom: 0 
       margin-bottom: 0
 
+
+
 //RSS Feed
 //-----------------------------------
 .feed-icon
@@ -1731,17 +1738,21 @@ table.sticky-table
 
     article
       position: relative
-      padding: 0  15px
+      padding: 0  15px 0 0
       &.image_exist
         .news-content, .article-content
           padding-left: 170px
+
+      &:hover
+        .news-image img
+          +opacity(.9)
 
 
     .news-image, .article-image
       max-width: 150px
       position: absolute
       top: 2px
-      left: 15px
+      //left: 15px
       margin-bottom: 0
 
 
@@ -2784,13 +2795,37 @@ h2
     margin-bottom: 10px
 
 
-#imageData #caption
-  font-weight: normal !important
+#imageData 
+  #caption
+    font-weight: normal !important
+  #imageDetails
+    width: 100% !important
+
+#imageDetails
+  p
+    font-family: Arial, Helvetica, sans-serif
+    +fontsize-rem(14px)
+    line-height: 16px
 
 .lightbox-download-link
-  margin-top: 10px
+  margin: 10px 0
   display: block
+  +fontsize-rem(10px)
+  font-weight: bold
+  color: $red
+  &:after
+    @extend .slac-font
+    content: '\e630'
+    margin-left: 5px
+    +fontsize-rem(16px)
 
+#bottomNavClose
+  position: absolute
+  bottom: 5px
+  right: 5px
+
+#imageDataContainer
+  position: relative
 
 .forum-table tr.even, .forum-table tr.odd
   background: none !important

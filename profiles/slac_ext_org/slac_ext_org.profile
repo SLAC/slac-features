@@ -41,7 +41,7 @@ function slac_ext_org_demo_modules() {
     'slac_demo_main_menu',
     'slac_demo_webform',
     'slac_demo_support_tickets',
-    'slac_newsletter_demo',
+//    'slac_newsletter_demo',
   );
 }
 
