@@ -63,6 +63,18 @@ function slac_newsletter_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 1,
       ),
+      'newsletter_main_article' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'newsletter_secondary_article' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -118,6 +130,18 @@ function slac_newsletter_field_default_field_instances() {
         'type' => 'date_default',
         'weight' => 0,
       ),
+      'newsletter_main_article' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'newsletter_secondary_article' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'date',
@@ -160,104 +184,6 @@ function slac_newsletter_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-newsletter-field_newsletter_image'
-  $field_instances['node-newsletter-field_newsletter_image'] = array(
-    'bundle' => 'newsletter',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'calendar_teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'image',
-        'settings' => array(
-          'image_link' => '',
-          'image_style' => '',
-        ),
-        'type' => 'image',
-        'weight' => 2,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'image',
-        'settings' => array(
-          'image_link' => '',
-          'image_style' => 'newsletter_small',
-        ),
-        'type' => 'image',
-        'weight' => 1,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_newsletter_image',
-    'label' => 'Image',
-    'required' => 0,
-    'settings' => array(
-      'alt_field' => 0,
-      'default_image' => 0,
-      'epsacrop' => array(
-        'styles' => array(
-          'basic_page_large_image' => 0,
-          'block_brochures_thumbnail' => 0,
-          'block_content_block_thumbnail' => 0,
-          'block_content_large_image' => 0,
-          'crop_kb_article_landscape' => 0,
-          'crop_landscape' => 0,
-          'crop_news_landscape' => 0,
-          'crop_portrait' => 0,
-          'crop_slac_projects' => 0,
-          'crop_slac_sidebar_block' => 0,
-          'crop_square' => 0,
-          'mini_slideshow_image_style' => 0,
-          'newsletter_large' => 'newsletter_large',
-          'newsletter_small' => 'newsletter_small',
-          'slac_blog_image' => 0,
-          'slac_blog_image_details' => 0,
-          'slac_kb_article_image_details' => 0,
-          'slac_news_image_details' => 0,
-          'slideshow_image_description_bottom' => 0,
-        ),
-      ),
-      'file_directory' => '',
-      'file_extensions' => 'png gif jpg jpeg',
-      'max_filesize' => '',
-      'max_resolution' => '',
-      'min_resolution' => '',
-      'title_field' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'media',
-      'settings' => array(
-        'allowed_schemes' => array(
-          'public' => 'public',
-        ),
-        'allowed_types' => array(
-          0 => 0,
-          'audio' => 0,
-          'document' => 0,
-          'image' => 'image',
-          'video' => 0,
-        ),
-        'browser_plugins' => array(
-          'media_default--media_browser_1' => 'media_default--media_browser_1',
-          'media_default--media_browser_my_files' => 'media_default--media_browser_my_files',
-          'media_internet' => 'media_internet',
-          'upload' => 'upload',
-        ),
-        'progress_indicator' => 'throbber',
-      ),
-      'type' => 'media_generic',
-      'weight' => 4,
-    ),
-  );
-
   // Exported field_instance: 'node-newsletter-field_simplenews_term'
   $field_instances['node-newsletter-field_simplenews_term'] = array(
     'bundle' => 'newsletter',
@@ -295,6 +221,18 @@ function slac_newsletter_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'newsletter_main_article' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'newsletter_secondary_article' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'settings' => array(),
@@ -323,7 +261,6 @@ function slac_newsletter_field_default_field_instances() {
   t('Body');
   t('Comment');
   t('Date');
-  t('Image');
   t('Newsletter category');
 
   return $field_instances;
