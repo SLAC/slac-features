@@ -69,6 +69,13 @@ function slac_newsletter_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'date_format_mm_dd_yy';
+  $strongarm->value = 'F d, Y';
+  $export['date_format_mm_dd_yy'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'diff_enable_revisions_page_node_newsletter';
   $strongarm->value = 1;
   $export['diff_enable_revisions_page_node_newsletter'] = $strongarm;

@@ -119,17 +119,12 @@ function slac_newsletter_views_default_views() {
     'multiple_from' => '',
     'multiple_to' => '',
   );
-  /* Field: Content: Image */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_newsletter_image']['id'] = 'field_newsletter_image';
   $handler->display->display_options['fields']['field_newsletter_image']['table'] = 'field_data_field_newsletter_image';
   $handler->display->display_options['fields']['field_newsletter_image']['field'] = 'field_newsletter_image';
   $handler->display->display_options['fields']['field_newsletter_image']['label'] = '';
   $handler->display->display_options['fields']['field_newsletter_image']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_newsletter_image']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_newsletter_image']['settings'] = array(
-    'image_style' => 'newsletter_large',
-    'image_link' => '',
-  );
   /* Field: Content: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
