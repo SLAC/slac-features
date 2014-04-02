@@ -1,6 +1,11 @@
 <?php
 
 /**
+ * Content type that will be used for newsletter.
+ */
+define('NEWSLETTER_CONTENT_TYPE', 'slac_news');
+
+/**
  * Implements hook_menu().
  */
 function slac_newsletter_builder_menu() {
@@ -43,37 +48,6 @@ function slac_newsletter_builder_entity_info_alter(&$entity_info) {
     'label' => t('Newsletter secondary article'),
     'custom settings' => TRUE,
   );
-
-  // @todo: Move in other place this code.
-//  $content_types = variable_get('slac_newsletter_content_types', array());
-//  foreach ($content_types as $bundle) {
-//    $instance_info = field_info_instance('node', 'body', $bundle);
-//    if (isset($instance_info['display']['newsletter_main_article']['type'])
-//      && $instance_info['display']['newsletter_main_article']['type'] == 'hidden') {
-//      $instance_info['display']['newsletter_main_article'] = array(
-//        'label' => 'hidden',
-//        'module' => 'text',
-//        'settings' => array(
-//          'trim_length' => '1000',
-//        ),
-//        'type' => 'text_trimmed',
-//        'weight' => '2',
-//      );
-//      field_update_instance($instance_info);
-//    } elseif (isset($instance_info['display']['newsletter_secondary_article']['type'])
-//      && $instance_info['display']['newsletter_secondary_article']['type'] == 'hidden') {
-//      $instance_info['display']['newsletter_secondary_article'] = array(
-//        'label' => 'hidden',
-//        'module' => 'text',
-//        'settings' => array(
-//          'trim_length' => '600',
-//        ),
-//        'type' => 'text_summary_or_trimmed',
-//        'weight' => '2',
-//      );
-//      field_update_instance($instance_info);
-//    }
-//  }
 }
 
 /**
@@ -111,33 +85,6 @@ function newletter_builder_form($form, &$form_state) {
 
   $form['page_title'] = array(
     '#markup' => '<h2>' . t('Newletter builder') . '</h2>',
-  );
-
-  $form['content_types_fieldset'] = array(
-    '#title' => t('Content types used for newsletter'),
-    '#tree' => TRUE,
-    '#type' => 'fieldset',
-    '#collapsible' => TRUE,
-    '#collapsed' => TRUE,
-    '#prefix' => '<div id="edit-newsletter-content_types-wrapper">',
-    '#suffix' => '</div>',
-  );
-
-  $content_types = slac_newsletter_builder_get_content_types();
-  $content_types_default = variable_get('slac_newsletter_content_types', array());
-
-  $form['content_types_fieldset']['content_types'] = array(
-    '#title' => '',
-    '#type' => 'checkboxes',
-    '#options' => $content_types,
-    '#default_value' => $content_types_default,
-  );
-
-  $form['content_types_fieldset']['save_content_types'] = array(
-    '#type' => 'submit',
-    '#value' => 'Save',
-    '#validate' => array('slac_newletter_builder_form_validate'),
-    '#submit' => array('slac_newletter_builder_form_submit'),
   );
 
   $form['main_article'] = array(
@@ -196,8 +143,6 @@ function newletter_builder_form($form, &$form_state) {
     );
   }
 
-  drupal_add_js(drupal_get_path('module', 'slac_newsletter_builder') . '/js/slac_newsletter_builder.js');
-
   $form['submit'] = array(
     '#type' => 'submit',
     '#value' => 'Submit',
@@ -206,26 +151,9 @@ function newletter_builder_form($form, &$form_state) {
     ),
   );
 
+  $form['#attached']['js'][] = drupal_get_path('module', 'slac_newsletter_builder') . '/js/slac_newsletter_builder.js';
+
   return $form;
-}
-
-function slac_newletter_builder_form_validate($form, &$form_state) {
-  $values = $form_state['values'];
-  if (isset($values['content_types_fieldset']['content_types'])) {
-    $options_count = 0;
-    foreach($values['content_types_fieldset']['content_types'] as $key => $value) {
-      if ($value != '0') {
-        $options_count++;
-      }
-    }
-    if ($options_count < 1) {
-      form_set_error('content_types_fieldset', t('You must specify at least one content type.'));
-    }
-  }
-}
-
-function slac_newletter_builder_form_submit($form, &$form_state) {
-  variable_set('slac_newsletter_content_types', $form_state['values']['content_types_fieldset']['content_types']);
 }
 
 function slac_newletter_builder_ajax_callback($form, &$form_state) {
@@ -233,7 +161,7 @@ function slac_newletter_builder_ajax_callback($form, &$form_state) {
   $main_article_title = $form_state['values']['main_article'];
   $match = preg_match('/\[nid:\s(\d+)\]/', $main_article_title, $matches);
   if (isset($matches['1']) && is_numeric($matches['1'])) {
-    $nids['main_article_nid'][] = $matches['1'];
+    $nids['main_article_nid'] = $matches['1'];
   }
   if (isset($form_state['values']['article_0'])) {
     $article_number = 0;
@@ -241,7 +169,7 @@ function slac_newletter_builder_ajax_callback($form, &$form_state) {
       if ($key == 'article_' . $article_number) {
         $match = preg_match('/\[nid:\s(\d+)\]/', $value, $matches);
         if (isset($matches['1']) && is_numeric($matches['1'])) {
-          $nids[$key][] = $matches['1'];
+          $nids[$key] = $matches['1'];
         }
         $article_number++;
       }
@@ -262,12 +190,10 @@ function slac_newsletter_builder_set_number_secondary_articles($form, $form_stat
 }
 
 function slac_newsletter_builder_select_content($string = '') {
-  $content_types = variable_get('slac_newsletter_content_types', array());
-
   $result = db_select('node')
     ->fields('node', array('nid', 'title'))
     ->condition('title', db_like($string) . '%', 'LIKE')
-    ->condition('type', $content_types, 'IN')
+    ->condition('type', NEWSLETTER_CONTENT_TYPE, '=')
     ->range(0, 10)
     ->execute();
   $matches = array();
@@ -281,6 +207,7 @@ function slac_newsletter_builder_select_content($string = '') {
 
 function slac_newsletter_builder_generate_html($nids = array()) {
   $output = '';
+  slac_newsletter_builder_field_update_instance();
   foreach ($nids as $key => $nid) {
     $node = node_load($nid);
     if ($key == 'main_article_nid') {
@@ -295,8 +222,91 @@ function slac_newsletter_builder_generate_html($nids = array()) {
   return $output;
 }
 
-function slac_newsletter_builder_get_content_types() {
-  $content_types = node_type_get_types();
-  $content_types_list = array_keys($content_types);
-  return array_combine($content_types_list, $content_types_list);
+/**
+ * Update specific fields instances.
+ */
+function slac_newsletter_builder_field_update_instance() {
+  $bundle = NEWSLETTER_CONTENT_TYPE;
+  $instance_info = field_info_instance('node', 'body', $bundle);
+  if (isset($instance_info['display']['newsletter_main_article']['type'])
+    && $instance_info['display']['newsletter_main_article']['type'] == 'hidden') {
+    $instance_info['display']['newsletter_main_article'] = array(
+      'label' => 'hidden',
+      'module' => 'text',
+      'settings' => array(
+        'trim_length' => '1000',
+      ),
+      'type' => 'text_trimmed',
+      'weight' => '3',
+    );
+    field_update_instance($instance_info);
+  } elseif (isset($instance_info['display']['newsletter_secondary_article']['type'])
+    && $instance_info['display']['newsletter_secondary_article']['type'] == 'hidden') {
+    $instance_info['display']['newsletter_secondary_article'] = array(
+      'label' => 'hidden',
+      'module' => 'text',
+      'settings' => array(
+        'trim_length' => '600',
+      ),
+      'type' => 'text_summary_or_trimmed',
+      'weight' => '3',
+    );
+    field_update_instance($instance_info);
+  }
+
+  if ($bundle == 'slac_news') {
+    $instance_info = field_info_instance('node', 'field_slac_news_date', $bundle);
+    if (isset($instance_info['display']['newsletter_main_article']['type'])
+      && $instance_info['display']['newsletter_main_article']['type'] == 'hidden') {
+      $instance_info['display']['newsletter_main_article'] = array(
+        'label' => 'hidden',
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'mm_dd_yy',
+        ),
+        'type' => 'date_format',
+        'weight' => '1',
+      );
+      field_update_instance($instance_info);
+    } elseif (isset($instance_info['display']['newsletter_secondary_article']['type'])
+      && $instance_info['display']['newsletter_secondary_article']['type'] == 'hidden') {
+      $instance_info['display']['newsletter_secondary_article'] = array(
+        'label' => 'hidden',
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'mm_dd_yy',
+        ),
+        'type' => 'date_format',
+        'weight' => '1',
+      );
+      field_update_instance($instance_info);
+    }
+
+    $instance_info = field_info_instance('node', 'field_slac_news_media', $bundle);
+    if (isset($instance_info['display']['newsletter_main_article']['type'])
+      && $instance_info['display']['newsletter_main_article']['type'] == 'hidden') {
+      $instance_info['display']['newsletter_main_article'] = array(
+        'label' => 'hidden',
+        'module' => 'mediafield',
+        'settings' => array(
+          'file_view_mode' => 'newsletter_main_article_style',
+        ),
+        'type' => 'media',
+        'weight' => '2',
+      );
+      field_update_instance($instance_info);
+    } elseif (isset($instance_info['display']['newsletter_secondary_article']['type'])
+      && $instance_info['display']['newsletter_secondary_article']['type'] == 'hidden') {
+      $instance_info['display']['newsletter_secondary_article'] = array(
+        'label' => 'hidden',
+        'module' => 'mediafield',
+        'settings' => array(
+          'file_view_mode' => 'newsletter_secondary_article_style',
+        ),
+        'type' => 'media',
+        'weight' => '2',
+      );
+      field_update_instance($instance_info);
+    }
+  }
 }
