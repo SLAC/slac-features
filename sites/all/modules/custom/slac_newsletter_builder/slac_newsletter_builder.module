@@ -231,33 +231,6 @@ function newletter_builder_form($form, &$form_state) {
     '#markup' => '<h2>' . t('Newletter builder') . '</h2>',
   );
 
-  $form['content_types_fieldset'] = array(
-    '#title' => t('Content types used for newsletter'),
-    '#tree' => TRUE,
-    '#type' => 'fieldset',
-    '#collapsible' => TRUE,
-    '#collapsed' => TRUE,
-    '#prefix' => '<div id="edit-newsletter-content_types-wrapper">',
-    '#suffix' => '</div>',
-  );
-
-  $content_types = slac_newsletter_builder_get_content_types();
-  $content_types_default = variable_get('slac_newsletter_content_types', array());
-
-  $form['content_types_fieldset']['content_types'] = array(
-    '#title' => '',
-    '#type' => 'checkboxes',
-    '#options' => $content_types,
-    '#default_value' => $content_types_default,
-  );
-
-  $form['content_types_fieldset']['save_content_types'] = array(
-    '#type' => 'submit',
-    '#value' => 'Save',
-    '#validate' => array('slac_newletter_builder_form_validate'),
-    '#submit' => array('slac_newletter_builder_form_submit'),
-  );
-
   $form['main_article'] = array(
     '#title' => t('Main article'),
     '#type' => 'textfield',
@@ -314,8 +287,6 @@ function newletter_builder_form($form, &$form_state) {
     );
   }
 
-  drupal_add_js(drupal_get_path('module', 'slac_newsletter_builder') . '/js/slac_newsletter_builder.js');
-
   $form['submit'] = array(
     '#type' => 'submit',
     '#value' => 'Submit',
@@ -342,10 +313,6 @@ function slac_newletter_builder_form_validate($form, &$form_state) {
       form_set_error('content_types_fieldset', t('You must specify at least one content type.'));
     }
   }
-}
-
-function slac_newletter_builder_form_submit($form, &$form_state) {
-  variable_set('slac_newsletter_content_types', $form_state['values']['content_types_fieldset']['content_types']);
 }
 
 function slac_newletter_builder_ajax_callback($form, &$form_state) {
