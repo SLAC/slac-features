@@ -17,7 +17,7 @@ function default_site_template_eo_default_page_manager_handlers() {
   $handler->task = 'site_template';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
-  $handler->weight = -30;
+  $handler->weight = -25;
   $handler->conf = array(
     'title' => 'Default site template',
     'no_blocks' => 1,

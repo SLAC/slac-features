@@ -17,7 +17,7 @@ function slac_newsletter_default_page_manager_handlers() {
   $handler->task = 'site_template';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
-  $handler->weight = -29;
+  $handler->weight = -30;
   $handler->conf = array(
     'title' => 'Newsletter template',
     'no_blocks' => 0,
