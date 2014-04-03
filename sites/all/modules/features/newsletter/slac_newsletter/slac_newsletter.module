@@ -5,17 +5,3 @@
  */
 
 include_once 'slac_newsletter.features.inc';
-
-/**
- * Implements hook_entity_info_alter().
- */
-function slac_newsletter_entity_info_alter(&$entity_info) {
-  $entity_info['file']['view modes']['newsletter_main_article_style'] = array(
-    'label' => t('Newsletter main article style'),
-    'custom settings' => TRUE,
-  );
-  $entity_info['file']['view modes']['newsletter_secondary_article_style'] = array(
-    'label' => t('Newsletter secondary article style'),
-    'custom settings' => TRUE,
-  );
-}

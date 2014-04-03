@@ -51,6 +51,150 @@ function slac_newsletter_builder_entity_info_alter(&$entity_info) {
 }
 
 /**
+ * Implements hook_field_formatter_info().
+ */
+function slac_newsletter_builder_field_formatter_info() {
+  return array(
+    'newsletter_main_article' => array(
+      'label' => t('Newsletter main'),
+      'field types' => array('file', 'media'),
+      'settings' => array(
+        'file_view_mode' => 'newsletter_main_article',
+      ),
+    ),
+    'newsletter_secondary_article' => array(
+      'label' => t('Newsletter secondary'),
+      'field types' => array('file', 'media'),
+      'settings' => array(
+        'file_view_mode' => 'newsletter_secondary_article',
+      ),
+    ),
+  );
+}
+
+/**
+ * Implements hook_field_formatter_view().
+ */
+function slac_newsletter_builder_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
+  $element = array();
+
+  if ($display['type'] != 'newsletter_main_article' && $display['type'] != 'newsletter_secondary_article') {
+    return $element;
+  }
+
+  foreach ($items as $delta => $item) {
+    if (isset($item['file']->type) && $item['file']->type == 'image') {
+
+      // Set up the settings array with your image style
+      $display['settings']['image_style'] = $display['type'];
+      $display['settings']['title'] = $item['file']->title;
+      $display['settings']['alt'] = $item['file']->alt;
+
+      $element = file_entity_file_formatter_file_image_view($item['file'], $display, LANGUAGE_NONE);
+    }
+  }
+
+  return $element;
+}
+
+/**
+ * Implements hook_image_default_styles().
+ */
+function slac_newsletter_builder_image_default_styles() {
+  $styles = array();
+
+  // Exported image style: newsletter_main_article_style.
+  $styles['newsletter_main_article'] = array(
+    'name' => 'newsletter_main_article',
+    'effects' => array(
+      1 => array(
+        'label' => 'EPSA Image Crop',
+        'help' => '',
+        'dimensions callback' => 'epsacrop_crop_dimensions',
+        'effect callback' => 'epsacrop_crop_image',
+        'form callback' => 'epsacrop_crop_image_form',
+        'module' => 'epsacrop',
+        'name' => 'epsacrop_crop',
+        'data' => array(
+          'width' => 215,
+          'height' => 150,
+          'anchor' => 'center-center',
+          'jcrop_settings' => array(
+            'aspect_ratio' => '',
+            'bgcolor' => 'black',
+            'bgopacity' => 0.6,
+            'fallback' => 0,
+          ),
+        ),
+        'weight' => 1,
+      ),
+      2 => array(
+        'label' => 'Scale and crop',
+        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
+        'effect callback' => 'image_scale_and_crop_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'image_resize_form',
+        'summary theme' => 'image_resize_summary',
+        'module' => 'image',
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 215,
+          'height' => 150,
+        ),
+        'weight' => 2,
+      ),
+    ),
+    'label' => 'newsletter_main_article',
+  );
+
+  // Exported image style: newsletter_secondary_article_style.
+  $styles['newsletter_secondary_article'] = array(
+    'name' => 'newsletter_secondary_article',
+    'effects' => array(
+      3 => array(
+        'label' => 'EPSA Image Crop',
+        'help' => '',
+        'dimensions callback' => 'epsacrop_crop_dimensions',
+        'effect callback' => 'epsacrop_crop_image',
+        'form callback' => 'epsacrop_crop_image_form',
+        'module' => 'epsacrop',
+        'name' => 'epsacrop_crop',
+        'data' => array(
+          'width' => 150,
+          'height' => 122,
+          'anchor' => 'center-center',
+          'jcrop_settings' => array(
+            'aspect_ratio' => '',
+            'bgcolor' => 'black',
+            'bgopacity' => 0.6,
+            'fallback' => 0,
+          ),
+        ),
+        'weight' => 1,
+      ),
+      4 => array(
+        'label' => 'Scale and crop',
+        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
+        'effect callback' => 'image_scale_and_crop_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'image_resize_form',
+        'summary theme' => 'image_resize_summary',
+        'module' => 'image',
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 150,
+          'height' => 122,
+        ),
+        'weight' => 2,
+      ),
+    ),
+    'label' => 'newsletter_secondary_article',
+  );
+
+  return $styles;
+}
+
+/**
  * Implements hook_preprocess_node().
  *
  * Add custom templates for view modes.
@@ -287,11 +431,11 @@ function slac_newsletter_builder_field_update_instance() {
       && $instance_info['display']['newsletter_main_article']['type'] == 'hidden') {
       $instance_info['display']['newsletter_main_article'] = array(
         'label' => 'hidden',
-        'module' => 'mediafield',
+        'module' => 'slac_newsletter_builder',
         'settings' => array(
-          'file_view_mode' => 'newsletter_main_article_style',
+          'file_view_mode' => 'newsletter_main_article',
         ),
-        'type' => 'media',
+        'type' => 'newsletter_main_article',
         'weight' => '2',
       );
       field_update_instance($instance_info);
@@ -299,11 +443,11 @@ function slac_newsletter_builder_field_update_instance() {
       && $instance_info['display']['newsletter_secondary_article']['type'] == 'hidden') {
       $instance_info['display']['newsletter_secondary_article'] = array(
         'label' => 'hidden',
-        'module' => 'mediafield',
+        'module' => 'slac_newsletter_builder',
         'settings' => array(
-          'file_view_mode' => 'newsletter_secondary_article_style',
+          'file_view_mode' => 'newsletter_secondary_article',
         ),
-        'type' => 'media',
+        'type' => 'newsletter_secondary_article',
         'weight' => '2',
       );
       field_update_instance($instance_info);
