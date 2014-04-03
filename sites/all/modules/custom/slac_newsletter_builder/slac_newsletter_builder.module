@@ -300,21 +300,6 @@ function newletter_builder_form($form, &$form_state) {
   return $form;
 }
 
-function slac_newletter_builder_form_validate($form, &$form_state) {
-  $values = $form_state['values'];
-  if (isset($values['content_types_fieldset']['content_types'])) {
-    $options_count = 0;
-    foreach($values['content_types_fieldset']['content_types'] as $key => $value) {
-      if ($value != '0') {
-        $options_count++;
-      }
-    }
-    if ($options_count < 1) {
-      form_set_error('content_types_fieldset', t('You must specify at least one content type.'));
-    }
-  }
-}
-
 function slac_newletter_builder_ajax_callback($form, &$form_state) {
   $nids = array();
   $main_article_title = $form_state['values']['main_article'];
