@@ -1,0 +1,23 @@
+#page-manager-edit .general-two-col .general-left{
+  float: left;
+  width: 75%;
+}
+
+#page-manager-edit .general-two-col .general-right{
+  float: left;
+  width: 25%;
+}
+
+
+
+.general-two-col {
+/*  overflow: hidden;  */
+}
+
+.general-two-col .general-right .inside {
+  margin: 0;
+}
+
+.general-two-col .panel-separator {
+  margin: 0;
+}
