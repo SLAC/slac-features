@@ -59,14 +59,22 @@ if (!strncmp($template_path, $current_path, $current_len)) {
 }
 $template_url = url($template_path, array('absolute' => TRUE));
 ?>
-<?php if ($key == 'node' || $key == 'test'): ?>
-  <div class="htmlmail-simplenews-link">
-    <a href="<?php echo url('node/' . $params['simplenews_source']->getNode()->nid, array('absolute' => TRUE)); ?>">
-      Click here to view this message on the web.
-    </a>
-  </div>
-<?php endif; ?>
-  <div class="htmlmail-simplenews-body htmlmail-body">
+<?php //if ($key == 'node' || $key == 'test'): ?>
+<!--  <div class="htmlmail-simplenews-link">-->
+<!--    <a href="--><?php //echo url('node/' . $params['simplenews_source']->getNode()->nid, array('absolute' => TRUE)); ?><!--">-->
+<!--      Click here to view this message on the web.-->
+<!--    </a>-->
+<!--  </div>-->
+<?php //endif; ?>
+<div class="htmlmail-simplenews-body htmlmail-body">
+  <div class="right-content">
     <?php echo $body; ?>
   </div>
+  <?php if (isset($right_sidebar_content)): ?>
+    <div class="left-content">
+      <?php echo $right_sidebar_content;
+      ?>
+    </div>
+  <?php endif; ?>
+</div>
 

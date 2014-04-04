@@ -5,3 +5,47 @@
  */
 
 include_once 'slac_newsletter.features.inc';
+
+/**
+ * Preprocess function.
+ */
+function slac_newsletter_preprocess_htmlmail(&$variables) {
+  if ($variables['module'] != 'simplenews') {
+    return;
+  }
+
+  $output = '';
+  if (isset($variables['params']['simplenews_source'])) {
+    $simplenews_source = $variables['params']['simplenews_source'];
+    if ($simplenews_source instanceof SimplenewsSourceNode) {
+      $node = $simplenews_source->getNode();
+
+      $body = $node->body[LANGUAGE_NONE]['0']['value'];
+      $variables['body'] = $body;
+
+      if (isset($node->panelizer['page_manager']->display)) {
+        $display = $node->panelizer['page_manager']->display;
+
+        if ($display instanceof panels_display) {
+          /*module_load_include('inc', 'ctools', 'includes/content');
+          $content = $display->content;
+          $right_panes = $display->panels['right'];
+
+          // Render each block from right sidebar.
+          foreach ($content as $key => $vale) {
+            if (in_array($key, $right_panes)) {
+              $output_array = ctools_content_render($content[$key]->type, $content[$key]->subtype, $content[$key]->configuration);
+              if (isset($output_array->content)) {
+                $output .= $output_array->content;
+              }
+            }
+          }*/
+
+          $output = panels_render_display($display, $display->renderer);
+        }
+      }
+    }
+  }
+
+  $variables['right_sidebar_content'] = $output;
+}
