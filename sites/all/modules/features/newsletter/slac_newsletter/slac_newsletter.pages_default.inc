@@ -175,13 +175,22 @@ function slac_newsletter_default_page_manager_pages() {
     ),
   );
   $display = new panels_display();
-  $display->layout = 'two_col';
+  $display->layout = 'newsletter';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
       'default' => NULL,
       'left' => NULL,
       'right' => NULL,
+      'intro_text_left' => NULL,
+      'intro_text_right' => NULL,
+      'header_h1' => NULL,
+      'header_h2' => NULL,
+      'date' => NULL,
+      'main_article' => NULL,
+      'secondary_article' => NULL,
+      'footer_left' => NULL,
+      'footer_right' => NULL,
     ),
   );
   $display->cache = array();
@@ -190,7 +199,7 @@ function slac_newsletter_default_page_manager_pages() {
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-1';
-    $pane->panel = 'left';
+    $pane->panel = 'main_article';
     $pane->type = 'views_panes';
     $pane->subtype = 'newsletter-panel_pane_2';
     $pane->shown = TRUE;
@@ -205,31 +214,9 @@ function slac_newsletter_default_page_manager_pages() {
     $pane->position = 0;
     $pane->locks = array();
     $display->content['new-1'] = $pane;
-    $display->panels['left'][0] = 'new-1';
+    $display->panels['main_article'][0] = 'new-1';
     $pane = new stdClass();
     $pane->pid = 'new-2';
-    $pane->panel = 'left';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'newsletter-panel_pane_1';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'items_per_page' => '3',
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['left'][1] = 'new-2';
-    $pane = new stdClass();
-    $pane->pid = 'new-3';
     $pane->panel = 'right';
     $pane->type = 'views_panes';
     $pane->subtype = 'news-panel_pane_5';
@@ -247,10 +234,10 @@ function slac_newsletter_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['right'][0] = 'new-3';
+    $display->content['new-2'] = $pane;
+    $display->panels['right'][0] = 'new-2';
     $pane = new stdClass();
-    $pane->pid = 'new-4';
+    $pane->pid = 'new-3';
     $pane->panel = 'right';
     $pane->type = 'views_panes';
     $pane->subtype = 'calendar-panel_pane_2';
@@ -269,10 +256,10 @@ function slac_newsletter_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-4'] = $pane;
-    $display->panels['right'][1] = 'new-4';
+    $display->content['new-3'] = $pane;
+    $display->panels['right'][1] = 'new-3';
     $pane = new stdClass();
-    $pane->pid = 'new-5';
+    $pane->pid = 'new-4';
     $pane->panel = 'right';
     $pane->type = 'block';
     $pane->subtype = 'simplenews-32';
@@ -290,8 +277,30 @@ function slac_newsletter_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
+    $display->content['new-4'] = $pane;
+    $display->panels['right'][2] = 'new-4';
+    $pane = new stdClass();
+    $pane->pid = 'new-5';
+    $pane->panel = 'secondary_article';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'newsletter-panel_pane_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'items_per_page' => '3',
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
     $display->content['new-5'] = $pane;
-    $display->panels['right'][2] = 'new-5';
+    $display->panels['secondary_article'][0] = 'new-5';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
