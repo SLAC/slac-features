@@ -14,7 +14,7 @@
  *   - $content['right']: Content in the right column.
  */
 ?>
-<div class="panel-display general-two-col article_panel_layout" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
+<div class="panel-display general-two-col article_panel_layout<?php echo ($content['right']) ? '' : ' full-width'; ?>" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
   <?php if ($content['left_title']): ?>
     <div class="panel-panel general-left-title <?php if ($content['left_author']){ print 'author_exist';}; ?> ">
       <div class="inside">
@@ -49,9 +49,9 @@
         <div class="inside"><?php print $content['left']; ?></div>
       <?php endif ?>
   </div>
-  <div class="panel-panel general-right">
-     <?php if ($content['right']): ?>
+  <?php if ($content['right']): ?>
+    <div class="panel-panel general-right">
         <div class="inside"><?php print $content['right']; ?></div>
-      <?php endif ?>
-  </div>
+    </div>
+  <?php endif ?>
 </div>

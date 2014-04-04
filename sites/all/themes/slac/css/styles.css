@@ -2849,6 +2849,10 @@ ol.search-results .search-snippet {
     width: 65.24702%;
     float: left;
     margin-right: 4.25894%; }
+    .full-width .general-left, .full-width .panel-col-first, .full-width .general-left-title {
+      width: 100%;
+      float: left;
+      margin-right: 4.25894%; }
 
   .reverse .general-left {
     width: 39.18228%;
