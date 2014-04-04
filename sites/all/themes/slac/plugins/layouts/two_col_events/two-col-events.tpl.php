@@ -14,7 +14,7 @@
  *   - $content['right']: Content in the right column.
  */
 ?>
-<div class="panel-display general-two-col reverse article_panel_layout  <?php if($content['right_sidebar']) { print 'with-right-sidebar';}?>" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
+<div class="panel-display general-two-col reverse article_panel_layout<?php if($content['right_sidebar']) { print ' with-right-sidebar';}?> <?php print ($content['left']) ? '' : ' full-width'; ?>" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
   <?php if ($content['left_title']): ?>
     <div class="panel-panel general-left-title">
       <div class="inside">
@@ -30,11 +30,11 @@
       </div>
     </div>
   <?php endif ?>
-  <div class="panel-panel general-left ">
-     <?php if ($content['left']): ?>
-        <div class="inside"><?php print $content['left']; ?></div>
-      <?php endif ?>
-  </div>
+  <?php if ($content['left']): ?>
+    <div class="panel-panel general-left ">
+      <div class="inside"><?php print $content['left']; ?></div>
+    </div>
+  <?php endif ?>
   <div class="panel-panel general-right <?php if ($content['left_title']){ print 'top_title_exist';}; ?>">
      <?php if ($content['right'] || $content['inner_right']): ?>
         <div class="inside"><?php print $content['right']; ?>

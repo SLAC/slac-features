@@ -2736,7 +2736,8 @@ ol.search-results .search-snippet {
   display: none; }
 
 .pp-image-style-description-left, .pp-image-style-description-right {
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  margin-top: 10px; }
   .pp-image-style-description-left img, .pp-image-style-description-right img {
     float: none !important; }
 
@@ -2864,6 +2865,8 @@ ol.search-results .search-snippet {
     float: none;
     width: auto;
     margin-right: auto; }
+  .reverse.full-width .general-left-title {
+    padding-left: 0%; }
 
   .general-right, .panel-col-last {
     width: 30.49404%;
@@ -2873,6 +2876,10 @@ ol.search-results .search-snippet {
       width: 56.55877%;
       float: right;
       margin-right: 0; }
+    .reverse.full-width .general-right, .reverse.full-width .panel-col-last {
+      width: 100%;
+      float: left;
+      margin-right: 4.25894%; }
 
   .front .pane-page-content .general-right, .front .pane-page-content .general-left {
     padding-top: 0; }
