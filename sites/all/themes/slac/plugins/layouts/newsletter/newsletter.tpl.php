@@ -24,16 +24,16 @@
     'footer_right' => t('Footer right'),
  */
 ?>
-  <table class="panel-display">
+  <table class="panel-display" style="width: 100%">
     <tr>
-      <td>
-        <table>
+      <td style="width: 846px; vertical-align: top; text-align: center">
+        <table >
           <tr>
             <td>
-              <table>
+              <table >
                 <tr>
                   <td>
-                    <table>
+                    <table style="background-color: #fafafa">
                       <tr>
                         <?php if ($content['intro_text_left']): ?>
                           <td class="panel-panel"><?php print $content['intro_text_left']; ?></td>
@@ -51,63 +51,73 @@
           <tr>
             <td>
               <table>
-                <tr><!--Header-->
+                <tr>
                   <td>
                     <table>
                       <tr>
-                        <?php if ($content['header_h1'] || $content['header_h2'] ): ?><!--Logo-->
-                          <td class="panel-panel"><?php print $content['header_h1']; ?><?php print $content['header_h2']; ?></td>
-                        <?php endif ?>
-                        <?php if ($content['date']): ?><!--Date-->
-                          <td class="panel-panel"><?php print $content['date']; ?></td>
-                        <?php endif ?>
+                        <td>
+                          <table style="background-color: #7d1427">
+                            <tr>
+                              <?php if ($content['header_h1'] || $content['header_h2'] ): ?>
+                                <td class="panel-panel"><?php print $content['header_h1']; ?><?php print $content['header_h2']; ?></td>
+                              <?php endif ?>
+                              <?php if ($content['date']): ?><!--Date-->
+                                <td class="panel-panel"><?php print $content['date']; ?></td>
+                              <?php endif ?>                              
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td  style="height: 4px; background-color: #878787"></td>
                       </tr>
                     </table>
                   </td>
                 </tr>
-                <tr><!--Body-->
-                  <table>
-                    <tr>
-                      <td><!--Left column-->
-                        <table>
-                          <tr>
-                            <?php if ($content['main_article']): ?><!--Logo-->
-                              <td class="panel-panel"><?php print $content['main_article']; ?></td>
-                            <?php endif ?>
-                          </tr>
-                           <tr>
-                            <?php if ($content['secondary_article']): ?><!--Logo-->
-                              <td class="panel-panel"><?php print $content['secondary_article']; ?></td>
-                            <?php endif ?>
-                          </tr>                         
-                        </table>
-                      </td>
-                      <td><!--Right column-->
-                        <table>
-                          <tr>
-                            <td>
-                             <?php if ($content['right']): ?><!--Logo-->
-                              <td class="panel-panel"><?php print $content['right']; ?></td>
-                            <?php endif ?>                             
-                            </td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-                  </table>
+                <tr>
+                  <td>
+                    <table>
+                      <tr>
+                        <?php if ($content['articles']): ?>
+                        <td>
+                          <table>
+                            <tr>
+                              <td class="panel-panel">
+                                <?php print $content['articles']; ?>
+                              </td>
+                            </tr>                         
+                          </table>
+                        </td>
+                        <?php endif ?>
+                        <?php if ($content['right']): ?>
+                        <td>
+                          <table>
+                            <tr>
+                                <td class="panel-panel"><?php print $content['right']; ?></td>
+                            </tr>
+                          </table>
+                        </td>
+                        <?php endif ?>  
+                      </tr>
+                    </table>
+                  </td>
                 </tr>
-                 <tr><!--Footer-->
-                  <table>
-                    <tr>
-                      <?php if ($content['footer_left']): ?>
-                        <td class="panel-panel"><?php print $content['footer_left']; ?></td>
-                      <?php endif ?>
-                      <?php if ($content['footer_right']): ?>
-                        <td class="panel-panel"><?php print $content['footer_right']; ?></td>
-                      <?php endif ?>
-                    </tr>
-                  </table>
-                </tr>                               
+                <?php if ($content['footer_left'] || $content['footer_right']): ?>
+                 <tr>
+                   <td>
+                    <table>
+                      <tr>
+                        <?php if ($content['footer_left']): ?>
+                          <td class="panel-panel"><?php print $content['footer_left']; ?></td>
+                        <?php endif ?>
+                        <?php if ($content['footer_right']): ?>
+                          <td class="panel-panel"><?php print $content['footer_right']; ?></td>
+                        <?php endif ?>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>   
+                <?php endif ?>                          
               </table>
             </td>
           </tr>          
