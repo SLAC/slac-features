@@ -24,16 +24,16 @@
     'footer_right' => t('Footer right'),
  */
 ?>
-  <table class="panel-display" style="width: 100%">
+  <table class="panel-display" style="width: 100%; border-spacing: 35px; border-collapse: separate; ">
     <tr>
-      <td style="width: 846px; vertical-align: top; text-align: center">
-        <table >
+      <td>
+        <table style="width: 846px; margin: 0 auto">
           <tr>
             <td>
               <table >
                 <tr>
                   <td>
-                    <table style="background-color: #fafafa">
+                    <table style="background-color: #fafafa; ">
                       <tr>
                         <?php if ($content['intro_text_left']): ?>
                           <td class="panel-panel"><?php print $content['intro_text_left']; ?></td>
@@ -53,10 +53,10 @@
               <table>
                 <tr>
                   <td>
-                    <table>
+                    <table style="width: 100%">
                       <tr>
                         <td>
-                          <table style="background-color: #7d1427">
+                          <table style="background-color: #7d1427; width: 100%">
                             <tr>
                               <?php if ($content['header_h1'] || $content['header_h2'] ): ?>
                                 <td class="panel-panel"><?php print $content['header_h1']; ?><?php print $content['header_h2']; ?></td>
@@ -104,7 +104,7 @@
                 </tr>
                 <?php if ($content['footer_left'] || $content['footer_right']): ?>
                  <tr>
-                   <td>
+                   <td style="background-color: #878787">
                     <table>
                       <tr>
                         <?php if ($content['footer_left']): ?>
