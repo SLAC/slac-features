@@ -49,3 +49,160 @@ function slac_newsletter_preprocess_htmlmail(&$variables) {
 
   $variables['right_sidebar_content'] = $output;
 }
+
+function slac_newsletter_entity_view_alter(&$build, $entity_type) {
+  if ($build['#bundle'] != 'newsletter') {
+    return;
+  }
+
+  $node = $build['#node'];
+
+  $excluded_nids = variable_get('slac_newsletter_nids_with_sidebar_html_fpps', array());
+  if (in_array($node->nid, $excluded_nids)) {
+    return;
+  }
+
+  $excluded_nids[] = $node->nid;
+  variable_set('slac_newsletter_nids_with_sidebar_html_fpps', $excluded_nids);
+
+  $output = '';
+  if (isset($node->panelizer['page_manager']->display)) {
+    $display = $node->panelizer['page_manager']->display;
+
+    $panels_display_info = array(
+      'layout' => $display->layout,
+      'layout_settings' => $display->layout_settings,
+      'panel_settings' => $display->panel_settings,
+    );
+
+    $new_panels_display = _slac_newsletter_panels_display($panels_display_info);
+    $panelizer = _slac_newsletter_panelizer_entity($node, $new_panels_display['did']);
+
+    panelizer_entity_update($node, 'node');
+
+    $update = array('entity_type', 'revision_id', 'view_mode');
+    drupal_write_record('panelizer_entity', $panelizer, $update);
+
+    module_load_include('inc', 'ctools', 'includes/content');
+    $content = $display->content;
+    $right_panes = $display->panels['right'];
+
+    // Render each block from right sidebar.
+    foreach ($content as $key => $value) {
+      if (in_array($key, $right_panes)) {
+        $output_array = ctools_content_render($content[$key]->type, $content[$key]->subtype, $content[$key]->configuration);
+        if (isset($output_array->content)) {
+          $output .= $output_array->content;
+        }
+      }
+    }
+    _slac_newsletter_panes($new_panels_display['did'], $output);
+  }
+  drupal_flush_all_caches();
+}
+
+/**
+ * Create panels display.
+ */
+function _slac_newsletter_panels_display($panels_display_info) {
+  drupal_write_record('panels_display', $panels_display_info);
+  return $panels_display_info;
+}
+
+/**
+ * Create panelized entity.
+ */
+function _slac_newsletter_panelizer_entity($node, $did) {
+  $panelizer_entity = array(
+    'entity_type' => 'node',
+    'entity_id' => $node->nid,
+    'revision_id' => $node->vid,
+    'name' => 'node:newsletter:default',
+    'no_blocks' => 0,
+    'css_id' => '',
+    'css' => '',
+    'pipeline' => 'standard',
+    'context' => array(),
+    'relationships' => array(),
+    'did' => $did,
+    'view_mode' => 'page_manager',
+    'css_class' => '',
+    'title_element' => 'H2',
+    'link_to_entity' => 1,
+    'extra' => array(),
+  );
+  $update = array('entity_type', 'entity_id');
+  drupal_write_record('panelizer_entity', $panelizer_entity, $update);
+  return $panelizer_entity;
+}
+
+/**
+ * Create panel panes.
+ */
+function _slac_newsletter_panes($did, $pane_content) {
+  $sidebar_fpp = (object) array(
+    'title' => '',
+    'bundle' => 'slac_sidebar_block',
+    'field_sb_body' => array(
+      LANGUAGE_NONE => array(
+        array(
+          'value' => $pane_content,
+          'format' => 'full_html',
+        ),
+      ),
+    ),
+  );
+  entity_save('fieldable_panels_pane', $sidebar_fpp);
+
+  $panels_panes = array(
+    array(
+      'did' => $did,
+      'panel' => 'left',
+      'type' => 'node_content',
+      'subtype' => 'node_content',
+      'shown' => 1,
+      'access' => array(),
+      'configuration' => array(
+        'links' => 1,
+        'no_extras' => 1,
+        'identifier' => '',
+        'link' => 0,
+        'leave_node_title' => 0,
+        'override_title' => 1,
+        'override_title_text' => '',
+        'build_mode' => 'full',
+        'context' => 'panelizer',
+      ),
+      'cache' => array(),
+      'style' => array(
+        'settings' => NULL,
+      ),
+      'css' => array(),
+      'extras' => array(),
+      'position' => 1,
+      'locks' => array(),
+    ),
+    array(
+      'did' => $did,
+      'panel' => 'right',
+      'type' => 'fieldable_panels_pane',
+      'subtype' => 'uuid:' . $sidebar_fpp->uuid,
+      'shown' => 1,
+      'access' => array(),
+      'configuration' => array(
+        'view_mode' => 'full',
+      ),
+      'cache' => array(),
+      'style' => array(
+        'settings' => NULL,
+      ),
+      'css' => array(),
+      'extras' => array(),
+      'position' => 1,
+      'locks' => array(),
+    ),
+  );
+  foreach ($panels_panes as $panels_pane) {
+    drupal_write_record('panels_pane', $panels_pane);
+  }
+}
