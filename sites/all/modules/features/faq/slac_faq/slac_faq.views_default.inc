@@ -278,6 +278,7 @@ function slac_faq_views_default_views() {
   $handler->display->display_options['allow']['use_pager'] = 0;
   $handler->display->display_options['allow']['items_per_page'] = 0;
   $handler->display->display_options['allow']['offset'] = 0;
+  $handler->display->display_options['pager']['options']['id'] = '12345';
   $handler->display->display_options['allow']['link_to_view'] = 0;
   $handler->display->display_options['allow']['more_link'] = 0;
   $handler->display->display_options['allow']['path_override'] = 0;
