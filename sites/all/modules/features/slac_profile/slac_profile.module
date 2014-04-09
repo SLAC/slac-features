@@ -22,3 +22,15 @@ function slac_profile_views_pre_view(&$view, &$display_id, &$args) {
     drupal_add_js(drupal_get_path('module', 'slac_profile') . '/js/slac_profile.js');
   }
 }
+
+/**
+ * Implements hook_profile2_presave().
+ */
+function slac_profile_profile2_presave($profile) {
+  $instance_info = field_info_instance('profile2', 'field_prf_contact_photo', 'contact');
+  if (isset($instance_info['settings']['default_image'])
+    && $instance_info['settings']['default_image'] == 0) {
+    $instance_info['settings']['default_image'] = variable_get('profile_default_picture_id', 0);
+    field_update_instance($instance_info);
+  }
+}

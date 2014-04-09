@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * Implements hook_insatll()
+ */
+function slac_profile_install() {
+  $image_fid = _slac_profile_images();
+  if (is_numeric($image_fid)) {
+    variable_set('profile_default_picture_id', $image_fid);
+  }
+}
+
+/**
+ * Create images for user profile and return fid.
+ */
+function _slac_profile_images() {
+  global $user;
+  $destination_directory = 'public://';
+  file_prepare_directory($destination_directory, FILE_CREATE_DIRECTORY);
+  $filename =  'user_pic.jpg';
+  $source = DRUPAL_ROOT . '/' . drupal_get_path('module', 'slac_profile') . '/' . $filename;
+  $destination = $destination_directory . '/' . $filename;
+  $uri = file_unmanaged_copy($source, $destination);
+
+  $file = new stdClass();
+  $file->fid = NULL;
+  $file->uri = $uri;
+  $file->filename = drupal_basename($uri);
+  $file->filemime = file_get_mimetype($file->uri);
+  $file->uid      = $user->uid;
+  $file->status   = FILE_STATUS_PERMANENT;
+  $file = file_save($file);
+
+  return $file->fid;
+}
