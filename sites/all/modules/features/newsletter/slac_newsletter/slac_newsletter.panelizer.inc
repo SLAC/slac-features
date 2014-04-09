@@ -30,13 +30,21 @@ function slac_newsletter_panelizer_defaults() {
   $panelizer->link_to_entity = TRUE;
   $panelizer->extra = array();
   $display = new panels_display();
-  $display->layout = 'two_col';
+  $display->layout = 'newsletter';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
       'default' => NULL,
       'left' => NULL,
       'right' => NULL,
+      'intro_text_left' => NULL,
+      'intro_text_right' => NULL,
+      'header_h1' => NULL,
+      'header_h2' => NULL,
+      'date' => NULL,
+      'articles' => NULL,
+      'footer_left' => NULL,
+      'footer_right' => NULL,
     ),
   );
   $display->cache = array();
@@ -45,7 +53,7 @@ function slac_newsletter_panelizer_defaults() {
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-1';
-    $pane->panel = 'left';
+    $pane->panel = 'intro_text_left';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:body';
     $pane->shown = TRUE;
@@ -68,7 +76,7 @@ function slac_newsletter_panelizer_defaults() {
     $pane->position = 0;
     $pane->locks = array();
     $display->content['new-1'] = $pane;
-    $display->panels['left'][0] = 'new-1';
+    $display->panels['intro_text_left'][0] = 'new-1';
     $pane = new stdClass();
     $pane->pid = 'new-2';
     $pane->panel = 'right';
@@ -112,7 +120,7 @@ function slac_newsletter_panelizer_defaults() {
     $pane->locks = array();
     $display->content['new-3'] = $pane;
     $display->panels['right'][1] = 'new-3';
-  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $panelizer->display = $display;
   $export['node:newsletter:default'] = $panelizer;
