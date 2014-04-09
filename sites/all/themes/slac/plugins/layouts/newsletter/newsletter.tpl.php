@@ -24,22 +24,35 @@
     'footer_right' => t('Footer right'),
  */
 ?>
-  <table class="panel-display" style="width: 100%; border-spacing: 35px; border-collapse: separate; ">
+
+<style type="text/css">
+#outlook a {padding:0;} /* Force Outlook to provide a "view in browser" menu link. */
+  body{width:100% !important; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; margin:0; padding:0; font-family: Arial, Helvetica, sans-serif;}
+  table td {border-collapse:collapse; }
+  img {outline:none; text-decoration:none; -ms-interpolation-mode: bicubic;}
+  a img {border:0 none;}
+  a {color:#8a1227; text-decoration: none} 
+  p {margin: 0}
+  #header a {color: #fff}
+  
+</style>
+
+  <table class="panel-display" border="0" cellspacing="0" cellpadding="35" width="100%">
     <tr>
       <td>
-        <table style="width: 846px; margin: 0 auto">
+        <table style="margin: 0 auto; " width="846" border="0" cellspacing="0" cellpadding="0">
           <tr>
-            <td>
-              <table >
+            <td style="padding: 0 120px 0 140px">
+              <table border="0" cellspacing="0" cellpadding="0">
                 <tr>
                   <td>
-                    <table style="background-color: #fafafa; ">
+                    <table style="background-color: #fafafa; font-size: 10px" border="0" cellspacing="0" cellpadding="0">
                       <tr>
                         <?php if ($content['intro_text_left']): ?>
-                          <td class="panel-panel"><?php print $content['intro_text_left']; ?></td>
+                          <td class="panel-panel" valign="top" style="padding: 5px 15px; width: 63%"><?php print $content['intro_text_left']; ?></td>
                         <?php endif ?>
                         <?php if ($content['intro_text_right']): ?>
-                          <td class="panel-panel"><?php print $content['intro_text_right']; ?></td>
+                          <td class="panel-panel" valign="top" style="padding: 5px 15px"><?php print $content['intro_text_right']; ?></td>
                         <?php endif ?>
                       </tr>
                     </table>
@@ -50,19 +63,29 @@
           </tr>
           <tr>
             <td>
-              <table>
+              <table style="border: 1px solid #dddddd;"  cellspacing="0" cellpadding="0">
                 <tr>
-                  <td>
-                    <table style="width: 100%">
+                  <td >
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
                       <tr>
                         <td>
-                          <table style="background-color: #7d1427; width: 100%">
+                          <table style="background-color: #7d1427; padding: 10px 22px 6px 22px;" width="100%" border="0" cellspacing="0" cellpadding="0">
                             <tr>
                               <?php if ($content['header_h1'] || $content['header_h2'] ): ?>
-                                <td class="panel-panel"><?php print $content['header_h1']; ?><?php print $content['header_h2']; ?></td>
+                                <td class="panel-panel" style="vertical-align: baseline" width="50%" id="header">
+                                  <table  border="0" cellspacing="0" cellpadding="0" style="color: #fff">
+                                    <tr>
+                                      <td style="vertical-align: baseline; font-size: 35px; text-transform: uppercase; color: #fff; padding-right: 20px"><?php print $content['header_h1']; ?></td>
+                                      <td style="vertical-align: baseline; font-size: 14px; text-transform: uppercase"><?php print $content['header_h2']; ?></td>
+                                    </tr>
+                                  </table>
+                                  
+                                  
+                                  
+                                </td>
                               <?php endif ?>
                               <?php if ($content['date']): ?><!--Date-->
-                                <td class="panel-panel"><?php print $content['date']; ?></td>
+                                <td class="panel-panel" style="vertical-align: baseline; color: #fff;font-weight: bold; font-size: 14px;" width="50%" align="right"><?php print $content['date']; ?></td>
                               <?php endif ?>                              
                             </tr>
                           </table>
@@ -75,11 +98,11 @@
                   </td>
                 </tr>
                 <tr>
-                  <td>
-                    <table>
+                  <td style="padding: 10px">
+                    <table style="border: 0 none">
                       <tr>
                         <?php if ($content['articles']): ?>
-                        <td>
+                        <td style="padding: 0 10px 0 0; vertical-align: top">
                           <table>
                             <tr>
                               <td class="panel-panel">
@@ -90,7 +113,7 @@
                         </td>
                         <?php endif ?>
                         <?php if ($content['right']): ?>
-                        <td>
+                        <td style="width: 240px; padding: 0 0 0 10px; vertical-align: top">
                           <table>
                             <tr>
                                 <td class="panel-panel"><?php print $content['right']; ?></td>
@@ -105,13 +128,13 @@
                 <?php if ($content['footer_left'] || $content['footer_right']): ?>
                  <tr>
                    <td style="background-color: #878787">
-                    <table>
+                    <table cellspacing="0" cellpadding="0" style="padding: 12px 20px;" width="100%">
                       <tr>
                         <?php if ($content['footer_left']): ?>
-                          <td class="panel-panel"><?php print $content['footer_left']; ?></td>
+                          <td valign="middle" class="panel-panel" style="color: #fff; font-size: 10px; "><?php print $content['footer_left']; ?></td>
                         <?php endif ?>
                         <?php if ($content['footer_right']): ?>
-                          <td class="panel-panel"><?php print $content['footer_right']; ?></td>
+                          <td align="right" valign="middle" class="panel-panel" style="padding-right: 16px; width: 214px;"><?php print $content['footer_right']; ?></td>
                         <?php endif ?>
                       </tr>
                     </table>
