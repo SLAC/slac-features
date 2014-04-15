@@ -380,6 +380,8 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'administer faq',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
     ),
     'module' => 'faq',
   );
