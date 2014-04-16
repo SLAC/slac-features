@@ -119,6 +119,16 @@ function slac_people_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'administer media browser'.
+  $permissions['administer media browser'] = array(
+    'name' => 'administer media browser',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'media',
+  );
+
   // Exported permission: 'administer panelizer'.
   $permissions['administer panelizer'] = array(
     'name' => 'administer panelizer',

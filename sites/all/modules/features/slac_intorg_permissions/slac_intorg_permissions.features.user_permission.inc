@@ -369,6 +369,9 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'administer crop styles',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
     ),
     'module' => 'pp_crop',
   );
@@ -545,6 +548,18 @@ function slac_intorg_permissions_user_default_permissions() {
   // Exported permission: 'administer media browser'.
   $permissions['administer media browser'] = array(
     'name' => 'administer media browser',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'media',
+  );
+
+  // Exported permission: 'access media browser'.
+  $permissions['access media browser'] = array(
+    'name' => 'access media browser',
     'roles' => array(
       'administrator' => 'administrator',
       'author' => 'author',

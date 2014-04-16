@@ -78,6 +78,7 @@ features[user_permission][] = access content overview
 features[user_permission][] = access contextual links
 features[user_permission][] = access dashboard
 features[user_permission][] = access direct download file
+features[user_permission][] = access media browser
 features[user_permission][] = access news feeds
 features[user_permission][] = access own webform results
 features[user_permission][] = access own webform submissions
