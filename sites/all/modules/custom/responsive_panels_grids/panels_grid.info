@@ -1,6 +1,0 @@
-name = Panels Grid
-description = Allow to build layouts with SASS mixins
-core = 7.x
-package = "Panels"
-dependencies[] = panels
-dependencies[] = breakpoints
