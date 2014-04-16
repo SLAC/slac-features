@@ -1,4 +1,0 @@
-name = Administrate demo content
-description = Admin dashboard to enable/disable demo content.
-core = 7.x
-package = Propeople
