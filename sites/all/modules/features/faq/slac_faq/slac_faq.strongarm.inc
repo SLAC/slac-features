@@ -42,7 +42,7 @@ function slac_faq_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_faq';
-  $strongarm->value = '1';
+  $strongarm->value = '2';
   $export['comment_faq'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -249,6 +249,9 @@ function slac_faq_strongarm() {
   $strongarm->name = 'faq_expert_role';
   $strongarm->value = array(
     6 => '6',
+    3 => '3',
+    4 => '4',
+    5 => '5',
   );
   $export['faq_expert_role'] = $strongarm;
 
