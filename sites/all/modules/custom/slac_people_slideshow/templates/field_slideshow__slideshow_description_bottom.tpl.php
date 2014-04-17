@@ -1,4 +1,4 @@
-<?php
+  <?php
 /**
  * @file
  * Template file for field_slideshow
@@ -33,25 +33,40 @@ if (!isset($pager_position)) {
         <div class="field-slideshow-image">
           <?php print $item['image']; ?>
         </div>
+
+        <?php
+          $desc = '';
+          if (isset($item['field_fcollection_description'][LANGUAGE_NONE][0]['safe_value'])) {
+            $desc = $item['field_fcollection_description'][LANGUAGE_NONE][0]['safe_value'];
+          }
+        ?>
+
+        <?php if (!empty($desc)): ?>
+
         <div class="field-slideshow-body">
           <?php if (isset($item['caption']) && $item['caption'] != '') : ?>
             <div class="field-slideshow-caption">
               <span class="field-slideshow-caption-text"><?php print $item['caption']; ?></span>
             </div>
           <?php endif; ?>
-          <?php if (isset($item['field_fcollection_description']) && isset($item['path']['path'])) : ?>
+
             <div class="field-slideshow-description">
+
+              <?php $link = isset($item['path']['path']); ?>
+
+              <?php if ($link): ?>
               <a href="<?php print $item['path']['path']; ?>">
-                <?php $desc = $item['field_fcollection_description'][LANGUAGE_NONE][0]['safe_value']; ?>
-                <?php print strlen($desc) > 190 ? substr($desc, 0, 190) . '...' : $desc; ?>
+              <?php endif; ?>
+
+                <?php print views_trim_text(array('max_length' => 190, 'word_boundary' => TRUE, 'ellipsis' => TRUE), $desc); ?>
+
+              <?php if ($link): ?>
               </a>
+              <?php endif; ?>
             </div>
-          <?php elseif (isset($item['field_fcollection_description'])) : ?>
-            <div class="field-slideshow-description">
-              <?php print $item['field_fcollection_description'][LANGUAGE_NONE][0]['safe_value']; ?>
-            </div>
-          <?php endif; ?>
         </div>
+
+        <?php endif; ?>
       </div>
     <?php endforeach; ?>
   </div>
