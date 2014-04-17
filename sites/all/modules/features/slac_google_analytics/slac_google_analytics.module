@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the SLAC Google Analytics feature.
+ */
+
+include_once 'slac_google_analytics.features.inc';

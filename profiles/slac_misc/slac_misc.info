@@ -167,3 +167,6 @@ dependencies[] = cami
 ; Authentication
 dependencies[] = webauth
 dependencies[] = slac_webauth_settings
+
+; Google analytics settings
+dependencies[] = slac_google_analytics

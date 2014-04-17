@@ -192,3 +192,6 @@ dependencies[] = ctools_plugins
 dependencies[] = mailsystem
 dependencies[] = simplenews
 dependencies[] = htmlmail
+
+; Google analytics settings
+dependencies[] = slac_google_analytics

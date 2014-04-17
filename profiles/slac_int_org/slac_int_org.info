@@ -218,3 +218,6 @@ dependencies[] = slac_workbench_settings_eo
 dependencies[] = mailsystem
 dependencies[] = simplenews
 dependencies[] = htmlmail
+
+; Google analytics settings
+dependencies[] = slac_google_analytics
