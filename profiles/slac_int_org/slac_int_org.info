@@ -162,7 +162,6 @@ dependencies[] = slac_block_style
 dependencies[] = slac_profile_base
 dependencies[] = slac_people_slideshow
 dependencies[] = slac_mini_slideshow
-dependencies[] = slac_style_guide
 dependencies[] = slac_projects
 
 ;Roles
