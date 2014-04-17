@@ -40,6 +40,7 @@ function slac_demo_webform_install() {
     'record_exists' => TRUE,
     'roles' => array(
       0 => '1', // Anonymous user can submit this webform.
+      1 => '2', // Authenticated user can submit this webform.
     ),
     'emails' => array(),
     'components' => $components,
