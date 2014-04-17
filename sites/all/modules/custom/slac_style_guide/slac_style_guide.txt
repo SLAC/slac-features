@@ -1,0 +1,291 @@
+<div class='style-guide'>
+  <h1>Style guide used for SLAC Profiles</h1>
+  <div class="styles style-1">
+    <h2>The grid system</h2>
+    <p>SLAC Profiles uses Susy grid systems</p>
+    <div class="style-col1">
+      <div class="wrapper">
+        <div class="grid1">1 col</div>
+      </div>
+      <div class="wrapper">
+        <div class="grid2">2 col</div>
+      </div>      
+      <div class="wrapper">
+        <div class="grid3">3 col</div>
+      </div>   
+      <div class="wrapper">
+        <div class="grid4">4 col</div>
+      </div>      
+      <div class="wrapper">
+        <div class="grid5">5 col</div>
+      </div> 
+      <div class="wrapper">
+        <div class="grid6">6 col</div>
+      </div>      
+      <div class="wrapper">
+        <div class="grid7">7 col</div>
+      </div> 
+      <div class="wrapper">
+        <div class="grid8">8 col</div>
+      </div>
+      <div class="wrapper">
+        <div class="grid9">9 col</div>
+      </div>
+      <div class="wrapper">
+        <div class="grid10">10 col</div>
+      </div>
+      <div class="wrapper">
+        <div class="grid11">11 col</div>
+      </div>
+      <div class="wrapper">
+        <div class="grid12">12 col</div>
+      </div>
+      
+      <div class="wrapper wrapper2">
+        <div class="grid1">1 col</div>
+        <div class="grid1">1 col</div>
+        <div class="grid1">1 col</div>
+        <div class="grid1">1 col</div>
+        <div class="grid1">1 col</div>
+        <div class="grid1">1 col</div>
+        <div class="grid1">1 col</div>
+        <div class="grid1">1 col</div>
+        <div class="grid1">1 col</div>
+        <div class="grid1">1 col</div>
+        <div class="grid1">1 col</div>
+        <div class="grid1">1 col</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="styles style-2">
+    <h2>Headings</h2>
+    <p>All available styles for headings</p>
+    <div class="style-col1">
+
+    <pre>&lt;h1></pre>
+    <h1>Heading H1</h1>
+    <pre>&lt;h2></pre>
+    <h2>Heading H2</h2>   
+    <pre>&lt;h3></pre>
+    <h3>Heading H3</h3>   
+    <pre>&lt;h4></pre>
+    <h4>Heading H4</h4>   
+    <pre>&lt;h5></pre>
+    <h5>Heading H5</h5> 
+    <pre>&lt;h6></pre>
+    <h6>Heading H6</h6>   
+    </div>
+
+  </div>
+  <div class="styles style-3">
+    <h2>Colors</h2>
+    <p>Defined colors for entire project</p>
+    <div class="style-col1">
+      <div class="color-box">
+        <span></span>
+        <p>HEX <ins>#871628</ins><br>Sass: $red</p>
+      </div>
+      <div class="color-box">
+        <span></span>
+        <p>HEX <ins>#f3f1eb</ins><br>Sass: $bg-col-1</p>
+      </div>
+      <div class="color-box">
+        <span></span>
+        <p>Hex <ins>#ebebdf</ins><br>Sass: $menu_bg</p>
+      </div>  
+      <div class="color-box">
+        <span></span>
+        <p>HEX <ins>#e7ebe6</ins><br>Sass: $border-h2</p>
+      </div>
+      <div class="color-box">
+        <span></span>
+        <p>HEX <ins>#b8737d</ins><br>Sass: $rose</p>
+      </div>  
+      <div class="color-box">
+        <span></span>
+        <p>HEX <ins>#f1f1f1</ins><br>Sass: $grey-f1</p>
+      </div>  
+      <div class="color-box">
+        <span></span>
+        <p>HEX <ins>#626263</ins><br>Sass: $h2-color</p>
+      </div>  
+      <div class="color-box">
+        <span></span>
+        <p>HEX <ins>#999</ins><br>Sass: $grey-9</p>
+      </div>        
+    </div>  
+  </div>
+  <div class="styles style-4">
+    <h2>Font-face icons</h2>
+    <p>Icons that are used and reserved for any cases.</p>
+    <div class="icons">
+      <div class="icon-box">
+        <span class="icon-ytb"></span>
+        <p>Code: <ins>e600</ins></p>
+      </div>
+      <div class="icon-box">
+        <span class="icon-unk"></span>
+        <p>Code: <ins>e601</ins></p>
+      </div>
+      <div class="icon-box">
+        <span class="icon-gp"></span>
+        <p>Code: <ins>e603</ins></p>
+      </div>
+      <div class="icon-box">
+        <span class="icon-fb"></span>
+        <p>Code: <ins>e604</ins></p>
+      </div> 
+      <div class="icon-box">
+        <span class="icon-ac"></span>
+        <p>Code: <ins>e605</ins></p>
+      </div>
+      <div class="icon-box">
+        <span class="icon-tw"></span>
+        <p>Code: <ins>e610</ins></p>
+      </div>
+      <div class="icon-box">
+        <span class="icon-arr"></span>
+        <p>Code: <ins>e608</ins></p>
+      </div>
+      <div class="icon-box">
+        <span class="icon-arr2"></span>
+        <p>Code: <ins>e615</ins></p>
+      </div>
+      <div class="icon-box">
+        <span class="icon-angle-down"></span>
+        <p>Code: <ins>e606</ins></p>
+      </div>
+      <div class="icon-box">
+        <span class="icon-angle-up"></span>
+        <p>Code: <ins>e607</ins></p>
+      </div>
+      <div class="icon-box">
+        <span class="icon-angle-right"></span>
+        <p>Code: <ins>3d</ins></p>
+      </div>
+      <div class="icon-box">
+        <span class="icon-angle-left"></span>
+        <p>Code: <ins>e609</ins></p>
+      </div>
+      <div class="icon-box">
+        <span class="icon-double-angle-down"></span>
+        <p>Code: <ins>e60a</ins></p>
+      </div>	  
+      <div class="icon-box">
+        <span class="icon-double-angle-up"></span>
+        <p>Code: <ins>e60b</ins></p>
+      </div>
+      <div class="icon-box">
+        <span class="icon-double-angle-right"></span>
+        <p>Code: <ins>e60c</ins></p>
+      </div>
+      <div class="icon-box">
+        <span class="icon-double-angle-left"></span>
+        <p>Code: <ins>e60d</ins></p>
+      </div>
+      <div class="icon-box">
+        <span class="icon-linkedin-sign"></span>
+        <p>Code: <ins>e602</ins></p>
+      </div>
+      <div class="icon-box">
+        <span class="icon-signout"></span>
+        <p>Code: <ins>e613</ins></p>
+      </div>
+      <div class="icon-box">
+        <span class="icon-reorder"></span>
+        <p>Code: <ins>e611</ins></p>
+      </div>
+       <div class="icon-box">
+        <span class="icon-calendar"></span>
+        <p>Code: <ins>e61f</ins></p>
+      </div> 
+       <div class="icon-box">
+        <span class="icon-list"></span>
+        <p>Code: <ins>e60e</ins></p>
+      </div>  
+      <div class="icon-box">
+        <span class="icon-logout"></span>
+        <p>Code: <ins>e614</ins></p>
+      </div>
+      <div class="icon-box">
+        <span class="icon-key"></span>
+        <p>Code: <ins>e61b</ins></p>
+      </div> 
+      <div class="icon-box">
+        <span class="icon-arrow-left"></span>
+        <p>Code: <ins>e617</ins></p>
+      </div> 
+      <div class="icon-box">
+        <span class="icon-arrow-down"></span>
+        <p>Code: <ins>e61c</ins></p>
+      </div> 
+      <div class="icon-box">
+        <span class="icon-arrow-up"></span>
+        <p>Code: <ins>e61d</ins></p>
+      </div>  
+      <div class="icon-box">
+        <span class="icon-arrow-right"></span>
+        <p>Code: <ins>e61e</ins></p>
+      </div> 
+      <div class="icon-box">
+        <span class="icon-list2"></span>
+        <p>Code: <ins>e60f</ins></p>
+      </div>  
+      <div class="icon-box">
+        <span class="icon-key2"></span>
+        <p>Code: <ins>e618</ins></p>
+      </div>  
+      <div class="icon-box">
+        <span class="icon-user"></span>
+        <p>Code: <ins>e612</ins></p>
+      </div> 
+
+       <div class="icon-box">
+        <span class="icon-locked"></span>
+        <p>Code: <ins>e61a</ins></p>
+      </div>  
+    </div>
+  </div>
+  
+<div class="styles style-5">
+    <h2>Form elements</h2>
+    <p>Inputs, textareas, selects, buttons etc.</p>
+	
+	<form action="/user/login" method="post" id="user-login" accept-charset="UTF-8">
+		<div>
+			<div class="form-item form-type-textfield form-item-name wrapped-with-icon">
+				<label for="edit-name">Username <span class="form-required" title="This field is required.">*</span></label>
+				<input type="text" id="edit-name" name="name" value="" size="60" maxlength="60" class="form-text required">
+				<div class="description" style="display: none;">Enter your SLAC username.</div>
+				<div class="icon-ask"></div>
+			</div>
+			<div class="form-item form-type-textfield form-item-name wrapped-with-icon">
+				<label for="edit-name">Password <span class="form-required" title="This field is required.">*</span></label>
+				<input type="password" id="edit-name" name="name" value="" size="60" maxlength="60" class="form-text required">
+				<div class="description" style="display: none;">Enter your SLAC password.</div>
+				<div class="icon-ask"></div>
+			</div>	
+			<div class="form-item form-type-textfield form-item-name wrapped-with-icon">
+				<label for="edit-name">Text <span class="form-required" title="This field is required.">*</span></label>
+				<textarea></textarea>
+				<div class="description" style="display: none;">Enter your SLAC password.</div>
+				<div class="icon-ask"></div>
+			</div>	
+			<div class="form-item form-type-textfield form-item-name wrapped-with-icon">
+				<label for="edit-name">Options <span class="form-required" title="This field is required.">*</span></label>
+				<select>
+					<option>Option 1</option>
+					<option>Option 2</option>
+					<option>Option 3</option>
+				</select>
+				<div class="description" style="display: none;">Select an option.</div>
+				<div class="icon-ask"></div>
+			</div>			
+		</div>
+	</form>
+	
+</div>
+  
+</div>

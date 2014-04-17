@@ -1,0 +1,6 @@
+name = Slac Style Guide
+description = "Slac Style Guide."
+package = SLAC
+core = 7.x
+
+scripts[] = slac_style_guide.js

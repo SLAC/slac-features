@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * Implements hook_menu().
+ */
+function slac_style_guide_menu() {
+	$items['slac_style_guide'] = array(
+	  'page callback' => 'slac_style_guide_txt',
+	  'access arguments' => array('access content'),
+	  'type' => MENU_CALLBACK,
+	);
+	return $items;
+}
+
+function slac_style_guide_txt() {
+	$file = drupal_get_path('module', 'slac_style_guide') . '/slac_style_guide.txt';
+	return file_get_contents($file);
+}
