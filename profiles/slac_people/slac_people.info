@@ -31,6 +31,7 @@ dependencies[] = googleanalytics
 
 ; Admin
 dependencies[] = admin_menu
+dependencies[] = admin_views
 dependencies[] = module_filter
 
 dependencies[] = ctools
