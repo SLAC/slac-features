@@ -89,7 +89,7 @@ dependencies[] = media
 dependencies[] = media_wysiwyg
 dependencies[] = mediafield
 dependencies[] = media_internet
-
+dependencies[] = header_menu
 dependencies[] = epsacrop
 
 dependencies[] = pp_crop
