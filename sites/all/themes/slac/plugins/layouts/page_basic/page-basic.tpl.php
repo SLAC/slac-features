@@ -21,8 +21,12 @@
       <div class="clearfix header-wrapper">
         <div class="logo-container">
           <div class="panel-pane pane-page-logo">
-            <a href="http://slac.stanford.edu" rel="home" id="logo" title="Home"><img src="/sites/all/themes/slac/logo.svg" class="svg" alt="SLAC"/><img src="/sites/all/themes/slac/logo.png" alt="SLAC"/></a>
-          </div>             
+            <?php if (isset($logo_path)): ?>
+              <a href="http://slac.stanford.edu" rel="home" id="logo" title="Home"><img src="<?php print $logo_path; ?>" alt="SLAC"/></a>
+            <?php else: ?>
+              <a href="http://slac.stanford.edu" rel="home" id="logo" title="Home"><img src="/sites/all/themes/slac/logo.svg" class="svg" alt="SLAC"/><img src="/sites/all/themes/slac/logo.png" alt="SLAC"/></a>
+            <?php endif; ?>
+          </div>
         </div>
      <?php if ($content['user-search']): ?>
         <div class="user-search"><?php print $content['user-search']; ?></div>

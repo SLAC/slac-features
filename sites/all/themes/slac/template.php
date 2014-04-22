@@ -231,3 +231,21 @@ function slac_form_alter(&$form, &$form_state, $form_id) {
 
   }
 }
+
+function slac_preprocess_page_basic_eo(&$variables) {
+  $logo_path = theme_get_setting('logo_path');
+  $default_logo = theme_get_setting('default_logo');
+
+  if (isset($logo_path) && $logo_path != '' && isset($default_logo) && $default_logo == 0) {
+    $variables['logo_path'] = file_create_url($logo_path);
+  }
+}
+
+function slac_preprocess_page_basic(&$variables) {
+  $logo_path = theme_get_setting('logo_path');
+  $default_logo = theme_get_setting('default_logo');
+
+  if (isset($logo_path) && $logo_path != '' && isset($default_logo) && $default_logo == 0) {
+    $variables['logo_path'] = file_create_url($logo_path);
+  }
+}
