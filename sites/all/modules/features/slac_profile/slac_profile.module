@@ -34,3 +34,23 @@ function slac_profile_profile2_presave($profile) {
     field_update_instance($instance_info);
   }
 }
+
+/**
+ * Implements hook_menu_alter().
+ */
+function slac_profile_menu_alter(&$items) {
+  if (isset($items['user/%user/edit'])) {
+    $items['user/%user/edit']['title'] = 'Edit User Info';
+  }
+
+  if (isset($items['user/%user/view'])) {
+    $items['user/%user/view']['title'] = 'View Profile';
+  }
+
+  $profile_types = array('bio', 'contact', 'social_media');
+  foreach ($profile_types as $type) {
+    if (isset($items['profile-' . $type . '/%profile2_by_uid/edit'])) {
+      $items['profile-' . $type . '/%profile2_by_uid/edit']['title'] = 'Edit ' . ucwords(str_replace('_', ' ', $type));
+    }
+  }
+}
