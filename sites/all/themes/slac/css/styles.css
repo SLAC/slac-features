@@ -1189,7 +1189,7 @@ ul.tabs, .action-links {
       display: none; }
     .pager li.pager-current {
       background-color: #ebebdf;
-      padding: 14px 11px 10px; }
+      padding: 14px 11px 10px !important; }
     .pager li a {
       display: block;
       color: #871628;
@@ -1350,6 +1350,8 @@ ul.tabs, .action-links {
   border-bottom: 1px solid #f3f1eb;
   margin-bottom: 10px;
   padding-bottom: 10px; }
+  .general-left .faq-list li[class^="pager-"] {
+    padding: 0; }
 .faq-list li:last-child {
   border-bottom: 0;
   margin-bottom: 0;

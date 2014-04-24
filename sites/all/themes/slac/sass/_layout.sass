@@ -767,10 +767,7 @@ ul.tabs, .action-links,
   @extend .clearfix
   li
     float: left
-    //border: 1px solid $grey-6
-    //border-right: 0
     font-size: em(17px)
-
     line-height: 14px
     display: inline-block
     vertical-align: middle
@@ -784,7 +781,7 @@ ul.tabs, .action-links,
 
     &.pager-current
       background-color: $menu_bg
-      padding: 14px 11px 10px
+      padding: 14px 11px 10px !important
     a
       display: block
       color: $red
@@ -993,11 +990,15 @@ ul.tabs, .action-links,
           content: '+'
           margin-top: -9px
 
+      
 
     .general-left &
       border-bottom: 1px solid $bg-col-1
       margin-bottom: 10px
       padding-bottom: 10px
+
+      &[class^="pager-"] 
+        padding: 0 
 
     &:last-child
       border-bottom: 0
