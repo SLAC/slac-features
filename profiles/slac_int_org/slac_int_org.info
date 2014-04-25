@@ -127,14 +127,13 @@ dependencies[] = pp_lightbox
 
 ; Forms
 dependencies[] = slac_webform_botcha
-dependencies[] = slac_search_redirect
+dependencies[] = slac_search
 
 ; RSS
 dependencies[] = slac_rss_block
 
 ;Features
 dependencies[] = default_site_template_eo
-dependencies[] = slac_search_settings
 
 ; Profile.
 dependencies[] = pp_profile

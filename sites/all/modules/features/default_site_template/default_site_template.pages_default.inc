@@ -490,14 +490,11 @@ function default_site_template_default_page_manager_handlers() {
     $pane = new stdClass();
     $pane->pid = 'new-8';
     $pane->panel = 'user-search';
-    $pane->type = 'block';
-    $pane->subtype = 'system-user-menu';
+    $pane->type = 'search_block';
+    $pane->subtype = 'search_block';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
+    $pane->configuration = array();
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,

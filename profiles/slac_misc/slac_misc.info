@@ -89,7 +89,6 @@ dependencies[] = media
 dependencies[] = media_wysiwyg
 dependencies[] = mediafield
 dependencies[] = media_internet
-dependencies[] = header_menu
 dependencies[] = epsacrop
 
 dependencies[] = pp_crop
@@ -114,7 +113,7 @@ dependencies[] = pp_lightbox
 
 ; Forms
 dependencies[] = slac_webform_botcha
-dependencies[] = slac_search_redirect
+dependencies[] = slac_search
 
 ; RSS
 dependencies[] = slac_rss_block
@@ -171,5 +170,3 @@ dependencies[] = slac_login_setting
 ; Google analytics settings
 dependencies[] = slac_google_analytics
 
-; Special Menu
-;dependencies[] = header_menu

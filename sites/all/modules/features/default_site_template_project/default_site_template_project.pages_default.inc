@@ -575,8 +575,8 @@ newsletter/*',
     $pane = new stdClass();
     $pane->pid = 'new-11';
     $pane->panel = 'user-search';
-    $pane->type = 'slac_search_redirect';
-    $pane->subtype = 'slac_search_redirect';
+    $pane->type = 'search_block';
+    $pane->subtype = 'search_block';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
