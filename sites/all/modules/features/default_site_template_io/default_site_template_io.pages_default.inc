@@ -575,11 +575,23 @@ newsletter/*',
     $pane = new stdClass();
     $pane->pid = 'new-11';
     $pane->panel = 'user-search';
-    $pane->type = 'search_block';
-    $pane->subtype = 'search_block';
+    $pane->type = 'menu_tree';
+    $pane->subtype = 'menu-header-top-menu';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array();
+    $pane->configuration = array(
+      'menu_name' => 'menu-header-top-menu',
+      'parent_mlid' => 'menu-header-top-menu:0',
+      'title_link' => 0,
+      'admin_title' => '',
+      'level' => '1',
+      'follow' => 0,
+      'depth' => 0,
+      'expanded' => 0,
+      'sort' => 0,
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
@@ -592,6 +604,24 @@ newsletter/*',
     $display->panels['user-search'][0] = 'new-11';
     $pane = new stdClass();
     $pane->pid = 'new-12';
+    $pane->panel = 'user-search';
+    $pane->type = 'search_block';
+    $pane->subtype = 'search_block';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $display->content['new-12'] = $pane;
+    $display->panels['user-search'][1] = 'new-12';
+    $pane = new stdClass();
+    $pane->pid = 'new-13';
     $pane->panel = 'user-search';
     $pane->type = 'block';
     $pane->subtype = 'system-user-menu';
@@ -607,10 +637,10 @@ newsletter/*',
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-12'] = $pane;
-    $display->panels['user-search'][1] = 'new-12';
+    $display->content['new-13'] = $pane;
+    $display->panels['user-search'][2] = 'new-13';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

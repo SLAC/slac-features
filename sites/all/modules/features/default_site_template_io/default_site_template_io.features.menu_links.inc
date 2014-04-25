@@ -157,6 +157,90 @@ function default_site_template_io_menu_default_menu_links() {
     'weight' => -49,
     'customized' => 1,
   );
+  // Exported menu link: menu-header-top-menu_slac-news:https://www6.slac.stanford.edu/news
+  $menu_links['menu-header-top-menu_slac-news:https://www6.slac.stanford.edu/news'] = array(
+    'menu_name' => 'menu-header-top-menu',
+    'link_path' => 'https://www6.slac.stanford.edu/news',
+    'router_path' => '',
+    'link_title' => 'SLAC News',
+    'options' => array(
+      'cami' => array(
+        'pages' => '',
+      ),
+      'attributes' => array(),
+      'identifier' => 'menu-header-top-menu_slac-news:https://www6.slac.stanford.edu/news',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -48,
+    'customized' => 1,
+  );
+  // Exported menu link: menu-header-top-menu_slac:https://www6.slac.stanford.edu/
+  $menu_links['menu-header-top-menu_slac:https://www6.slac.stanford.edu/'] = array(
+    'menu_name' => 'menu-header-top-menu',
+    'link_path' => 'https://www6.slac.stanford.edu/',
+    'router_path' => '',
+    'link_title' => 'SLAC',
+    'options' => array(
+      'cami' => array(
+        'pages' => '',
+      ),
+      'attributes' => array(),
+      'identifier' => 'menu-header-top-menu_slac:https://www6.slac.stanford.edu/',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -49,
+    'customized' => 1,
+  );
+  // Exported menu link: menu-header-top-menu_staff-resources:<front>
+  $menu_links['menu-header-top-menu_staff-resources:<front>'] = array(
+    'menu_name' => 'menu-header-top-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Staff Resources',
+    'options' => array(
+      'cami' => array(
+        'pages' => '',
+      ),
+      'attributes' => array(),
+      'identifier' => 'menu-header-top-menu_staff-resources:<front>',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -50,
+    'customized' => 1,
+  );
+  // Exported menu link: menu-header-top-menu_visiting-slac:https://www6.slac.stanford.edu/visiting-slac
+  $menu_links['menu-header-top-menu_visiting-slac:https://www6.slac.stanford.edu/visiting-slac'] = array(
+    'menu_name' => 'menu-header-top-menu',
+    'link_path' => 'https://www6.slac.stanford.edu/visiting-slac',
+    'router_path' => '',
+    'link_title' => 'Visiting SLAC',
+    'options' => array(
+      'cami' => array(
+        'pages' => '',
+      ),
+      'attributes' => array(),
+      'identifier' => 'menu-header-top-menu_visiting-slac:https://www6.slac.stanford.edu/visiting-slac',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => 0,
+    'customized' => 1,
+  );
   // Translatables
   // Included for use with string extractors like potx.
   t('About');
@@ -164,8 +248,12 @@ function default_site_template_io_menu_default_menu_links() {
   t('DOE Office of Science');
   t('Faq');
   t('News');
+  t('SLAC');
   t('SLAC Home');
+  t('SLAC News');
+  t('Staff Resources');
   t('Stanford University');
+  t('Visiting SLAC');
 
 
   return $menu_links;

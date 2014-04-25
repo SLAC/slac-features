@@ -28,10 +28,17 @@ function default_site_template_io_menu_default_menu_custom() {
     'title' => 'Header menu',
     'description' => '',
   );
+  // Exported menu: menu-header-top-menu.
+  $menus['menu-header-top-menu'] = array(
+    'menu_name' => 'menu-header-top-menu',
+    'title' => 'Header Top Menu',
+    'description' => '',
+  );
   // Translatables
   // Included for use with string extractors like potx.
   t('Footer Menu 1');
   t('Footer menu');
+  t('Header Top Menu');
   t('Header menu');
 
 
