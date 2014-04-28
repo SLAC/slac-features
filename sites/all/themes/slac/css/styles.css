@@ -1035,10 +1035,8 @@ ul.tabs, .action-links {
   width: 115px; }
 .no-svg .pane-page-logo img.svg {
   display: none; }
-.svg .pane-page-logo img {
-  display: none; }
-  .svg .pane-page-logo img.svg {
-    display: inline; }
+.svg .pane-page-logo img.svg {
+  display: inline; }
 
 .site-title {
   margin-bottom: 9px;
