@@ -239,6 +239,9 @@ function slac_preprocess_page_basic_eo(&$variables) {
   if (isset($logo_path) && $logo_path != '' && isset($default_logo) && $default_logo == 0) {
     $variables['logo_path'] = file_create_url($logo_path);
   }
+  else {
+    $variables['logo_path'] = '/sites/all/themes/slac/logo.png';
+  }
 }
 
 function slac_preprocess_page_basic(&$variables) {
@@ -247,5 +250,8 @@ function slac_preprocess_page_basic(&$variables) {
 
   if (isset($logo_path) && $logo_path != '' && isset($default_logo) && $default_logo == 0) {
     $variables['logo_path'] = file_create_url($logo_path);
+  }
+  else {
+    $variables['logo_path'] = '/sites/all/themes/slac/logo.png';
   }
 }
