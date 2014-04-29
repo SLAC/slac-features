@@ -222,34 +222,58 @@ a[href*='mailto:'] { word-break: break-all; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\0000353}}
 .sf-accordion-toggle a.sf-expanded:before { color: white; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\0000358}}
-.page-basic-io .sf-accordion-toggle a:hover { -webkit-box-shadow: 0px 0px 1px 1px #0c5791; -moz-box-shadow: 0px 0px 1px 1px #0c5791; box-shadow: 0px 0px 1px 1px #0c5791; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\0000360}}
-.page-basic-io .sf-accordion-toggle a:before { color: #0c5791; }
+/* IntOrg profile styles */
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\0000359}}
+.page-basic-io .main-menu { background-color: #eaeef0; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\0000362}}
+.page-basic-io .main-menu ul.sf-menu.sf-expanded a { color: #0c5791; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\0000366}}
+.page-basic-io .main-menu ul.sf-menu li a, .page-basic-io .main-menu ul.sf-menu li.sfHover a { color: #0c5791; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\0000368}}
+.page-basic-io .main-menu ul.sf-menu li a:hover, .page-basic-io .main-menu ul.sf-menu li.sfHover a:hover { color: #0c5791; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\0000370}}
+.page-basic-io .main-menu ul.sf-menu li.menuparent > ul, .page-basic-io .main-menu ul.sf-menu li.sfHover.menuparent > ul { background-color: #eaeef0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\0000372}}
+.page-basic-io .main-menu ul.sf-menu li.menuparent > ul a, .page-basic-io .main-menu ul.sf-menu li.sfHover.menuparent > ul a { color: #0c5791; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\0000374}}
+.page-basic-io .main-menu ul.sf-menu li.menuparent > ul a:hover, .page-basic-io .main-menu ul.sf-menu li.sfHover.menuparent > ul a:hover { background: #d3e0e2; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\0000380}}
+.page-basic-io .sf-accordion-toggle a:hover { -webkit-box-shadow: 0px 0px 1px 1px #0c5791; -moz-box-shadow: 0px 0px 1px 1px #0c5791; box-shadow: 0px 0px 1px 1px #0c5791; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\0000382}}
+.page-basic-io .sf-accordion-toggle a:before { color: #0c5791; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\0000384}}
 .page-basic-io .sf-accordion-toggle a.sf-expanded { background-color: #0c5791; -webkit-box-shadow: 0px 0px 1px 1px #0c5791; -moz-box-shadow: 0px 0px 1px 1px #0c5791; box-shadow: 0px 0px 1px 1px #0c5791; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\0000365}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\0000387}}
 .page-basic-io .sf-accordion-toggle a.sf-expanded:before { color: white; }
+@media (min-width: 690px) { @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\0000397}}
+  .page-basic-io .main-menu ul.sf-menu li a:before, .page-basic-io .main-menu ul.sf-menu li a:after, .page-basic-io .main-menu ul.sf-menu li a:hover:before, .page-basic-io .main-menu ul.sf-menu li a:hover:after, .page-basic-io .main-menu ul.sf-menu li.sfHover a:before, .page-basic-io .main-menu ul.sf-menu li.sfHover a:after, .page-basic-io .main-menu ul.sf-menu li.sfHover a:hover:before, .page-basic-io .main-menu ul.sf-menu li.sfHover a:hover:after { -webkit-box-shadow: 0px -2px 0px 0px #0c5791 inset; -moz-box-shadow: 0px -2px 0px 0px #0c5791 inset; box-shadow: 0px -2px 0px 0px #0c5791 inset; } }
+@media (min-width: 691px) and (max-width: 893px) { @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003105}}
+  .page-basic-io .main-menu.long-menu { background-color: transparent; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003108}}
+  .page-basic-io .main-menu.long-menu ul > li, .page-basic-io .main-menu.long-menu ul > li.sfHover { background-color: #eaeef0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003111}}
+  .page-basic-io .main-menu.long-menu ul > li:hover, .page-basic-io .main-menu.long-menu ul > li.sfHover:hover { background: #d3e0e2; } }
 
-@media (min-width: 690px) { @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\0000369}}
+/* ******  */
+@media (min-width: 690px) { @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003118}}
   .sf-accordion-toggle { display: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\0000371}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003120}}
   .sf-main-menu.sf-horizontal { display: block !important; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\0000373}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003122}}
   .sf-main-menu.sf-horizontal > li.menuparent { position: relative; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\0000375}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003124}}
   .sf-main-menu.sf-horizontal > li.menuparent > ul { background-color: #ebebdf; border-style: solid; position: absolute; text-transform: none; top: 100%; left: 0; z-index: 100; color: #871628; padding: 6px 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\0000385}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003134}}
   .sf-main-menu.sf-horizontal > li.menuparent > ul.sf-hidden { height: 100% !important; opacity: 1 !important; display: none !important; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\0000390}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003139}}
   .sf-main-menu.sf-horizontal > li.menuparent > ul > li { margin: 0; float: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\0000393}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003142}}
   .sf-main-menu.sf-horizontal > li.menuparent > ul > li a { color: inherit; padding: 5px 15px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\0000397}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003146}}
   .sf-main-menu.sf-horizontal > li.menuparent > a { position: relative; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003101}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003150}}
   .sf-main-menu.sf-horizontal > li.menuparent.active-trail > ul { margin-top: 0px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003104}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003153}}
   .sf-main-menu.sf-horizontal > li > a:hover, .sf-main-menu.sf-horizontal > li.sfHover > a { position: relative; color: #871628; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\000036}}
   .sf-main-menu.sf-horizontal > li > a:hover:after, .sf-main-menu.sf-horizontal > li > a:hover:before, .sf-main-menu.sf-horizontal > li.sfHover > a:after, .sf-main-menu.sf-horizontal > li.sfHover > a:before { content: ""; -webkit-box-shadow: 0px -2px 0px 0px #871628 inset; -moz-box-shadow: 0px -2px 0px 0px #871628 inset; box-shadow: 0px -2px 0px 0px #871628 inset; position: absolute; bottom: 0; width: 100%; height: 2px; }
@@ -257,70 +281,70 @@ a[href*='mailto:'] { word-break: break-all; }
   .sf-main-menu.sf-horizontal > li > a:hover:after, .sf-main-menu.sf-horizontal > li.sfHover > a:after { left: -2px; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\0000317}}
   .sf-main-menu.sf-horizontal > li > a:hover:before, .sf-main-menu.sf-horizontal > li.sfHover > a:before { right: -2px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003110}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003159}}
   .sf-main-menu.sf-horizontal .sf-sub-indicator { display: none; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003113}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003162}}
 ul.sf-menu.sf-accordion { display: none; position: absolute; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003117}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003166}}
 ul.sf-menu.sf-accordion, ul.sf-menu.sf-accordion ul, ul.sf-menu.sf-accordion li { float: left; width: 100%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003123}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003172}}
 ul.sf-menu.sf-accordion ul { margin: 0; padding: 0; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003127}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003176}}
 ul.sf-menu.sf-accordion.sf-expanded, ul.sf-menu.sf-accordion li.sf-expanded > ul { left: auto !important; position: relative; top: auto !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003134}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003183}}
 .sf-hidden { left: -99999em !important; top: -99999em !important; position: absolute; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003142}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003191}}
 .sf-accordion a.sf-with-ul:after { content: "\e61c"; margin-left: 5px; font-size: 16px; font-size: 1rem; position: absolute; top: 1px; right: -20px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003153}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003202}}
 .sf-accordion li.sf-expanded a.sf-with-ul:after { content: "\e61d"; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003159}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003208}}
 ul.sf-menu.sf-accordion.sf-expanded { padding: 15px 0 5px 21px; text-transform: none; color: #871628; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003165}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003214}}
 ul.sf-menu.sf-accordion.sf-expanded a.active-trail, ul.sf-menu.sf-accordion.sf-expanded a.active { text-decoration: underline; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003170}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003219}}
 ul.sf-menu.sf-accordion.sf-expanded li { margin-bottom: 16px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003172}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003221}}
 ul.sf-menu.sf-accordion.sf-expanded li a { color: inherit; position: relative; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003176}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003225}}
 ul.sf-menu.sf-accordion.sf-expanded li.active-trail > a { text-decoration: underline; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003180}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003229}}
 ul.sf-menu.sf-accordion.sf-expanded > li.menuparent { margin-bottom: 14px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003182}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003231}}
 ul.sf-menu.sf-accordion.sf-expanded > li > ul { *zoom: 1; padding-left: 15px; padding-top: 5px; font-size: 14px; font-size: 0.875rem; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_extends\.sass}line{font-family:\0000348}}
 ul.sf-menu.sf-accordion.sf-expanded > li > ul:before, ul.sf-menu.sf-accordion.sf-expanded > li > ul:after { content: ""; display: table; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_extends\.sass}line{font-family:\0000352}}
 ul.sf-menu.sf-accordion.sf-expanded > li > ul:after { clear: both; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003187}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003236}}
 ul.sf-menu.sf-accordion.sf-expanded > li > ul > li { margin-bottom: 6px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003191}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003240}}
 ul.sf-menu.sf-accordion.sf-expanded > li > ul a:after { display: none; }
 
-@media (min-width: 690px) { @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003195}}
+@media (min-width: 690px) { @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003244}}
   ul.sf-menu.sf-accordion { display: none !important; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003199}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003248}}
   .main-menu ul { *zoom: 1; color: #4c4c4c; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_extends\.sass}line{font-family:\0000348}}
   .main-menu ul:before, .main-menu ul:after { content: ""; display: table; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_extends\.sass}line{font-family:\0000352}}
   .main-menu ul:after { clear: both; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003202}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003251}}
   .main-menu ul a { color: #4c4c4c; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003205}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003254}}
   .main-menu ul li { float: left; margin: 0 25px; font-size: 14px; font-size: 0.875rem; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003213}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003262}}
   .main-menu ul li:first-child { margin-left: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003215}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003264}}
   .main-menu ul li:last-child { margin-right: 0 !important; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003217}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003266}}
   .main-menu ul li a { display: block; padding-bottom: 6px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003220}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003269}}
   .main-menu ul li a.active-trail, .main-menu ul li a.active { position: relative; color: #871628; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\000036}}
   .main-menu ul li a.active-trail:after, .main-menu ul li a.active-trail:before, .main-menu ul li a.active:after, .main-menu ul li a.active:before { content: ""; -webkit-box-shadow: 0px -2px 0px 0px #871628 inset; -moz-box-shadow: 0px -2px 0px 0px #871628 inset; box-shadow: 0px -2px 0px 0px #871628 inset; position: absolute; bottom: 0; width: 100%; height: 2px; }
@@ -328,13 +352,13 @@ ul.sf-menu.sf-accordion.sf-expanded > li > ul a:after { display: none; }
   .main-menu ul li a.active-trail:after, .main-menu ul li a.active:after { left: -2px; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\0000317}}
   .main-menu ul li a.active-trail:before, .main-menu ul li a.active:before { right: -2px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003228}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003277}}
   .main-menu ul li ul .active-trail a { display: block; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003232}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003281}}
   .main-menu ul li ul .active-trail a:before, .main-menu ul li ul .active-trail a:after { display: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003236}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003285}}
   .main-menu ul li ul li a:hover { background-color: #dbdbc6; text-decoration: underline; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003242}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003291}}
   .sf-menu > li.active-trail > a { position: relative; color: #871628; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\000036}}
   .sf-menu > li.active-trail > a:after, .sf-menu > li.active-trail > a:before { content: ""; -webkit-box-shadow: 0px -2px 0px 0px #871628 inset; -moz-box-shadow: 0px -2px 0px 0px #871628 inset; box-shadow: 0px -2px 0px 0px #871628 inset; position: absolute; bottom: 0; width: 100%; height: 2px; }
@@ -342,41 +366,41 @@ ul.sf-menu.sf-accordion.sf-expanded > li > ul a:after { display: none; }
   .sf-menu > li.active-trail > a:after { left: -2px; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\0000317}}
   .sf-menu > li.active-trail > a:before { right: -2px; } }
-@media (min-width: 691px) and (max-width: 893px) { @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003248}}
+@media (min-width: 691px) and (max-width: 893px) { @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003297}}
   .main-menu.long-menu { background-color: transparent; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003251}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003300}}
   .main-menu.long-menu ul > li { width: 25%; margin: 0; border-bottom: 1px solid white; border-right: 1px solid white; background-color: #ebebdf; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003259}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003308}}
   .main-menu.long-menu ul > li:hover { background-color: #f3f1eb; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003261}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003310}}
   .main-menu.long-menu ul > li:nth-child(4n+4) { border-right: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003263}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003312}}
   .main-menu.long-menu ul > li > a { padding: 5px 10px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003267}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003316}}
   .main-menu.long-menu ul > li > a.active-trail, .main-menu.long-menu ul > li > a.active { color: #871628; border-bottom: 0 none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003270}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003319}}
   .main-menu.long-menu ul > li > a:after, .main-menu.long-menu ul > li > a:before { left: 0 !important; right: 0 !important; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003276}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003325}}
   .main-menu.long-menu ul > li.active-trail a:after, .main-menu.long-menu ul > li.active-trail a:before { left: 0; right: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003282}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003331}}
   .main-menu.long-menu ul.sf-main-menu.sf-horizontal > li.menuparent > ul { width: 100% !important; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003285}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003334}}
   .main-menu.long-menu ul.sf-main-menu.sf-horizontal > li.menuparent > ul > li { width: 100%; border: 0 none; background: transparent; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003289}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003338}}
   .main-menu.long-menu ul.sf-main-menu.sf-horizontal > li.menuparent > ul > li a { padding: 7px 10px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003292}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003341}}
   .main-menu.long-menu ul.sf-main-menu.sf-horizontal > li.menuparent > ul > li:hover { background-color: transparent; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003294}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003343}}
   .main-menu.long-menu ul.sf-main-menu.sf-horizontal .sfHover { background-color: #f3f1eb; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003296}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003345}}
   .main-menu.long-menu ul.sf-main-menu.sf-horizontal .sfHover > ul { background-color: #f3f1eb; } }
-@media (min-width: 894px) { @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003303}}
+@media (min-width: 894px) { @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003352}}
   .sf-main-menu.sf-horizontal > li.menuparent > ul { left: -10px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003315}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003364}}
   .sf-main-menu.sf-horizontal.long-menu ul li { margin: 0 25px; } }
-@media (min-width: 1200px) { @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003324}}
+@media (min-width: 1200px) { @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003373}}
   .main-menu.long-menu ul li { margin: 0 33px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003326}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003375}}
   .main-menu.long-menu ul li:first-child { margin-left: 17px; } }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033}}
 .extentions_normal-link, .content .general-left a, .content .general-one-col a, .content .general-right a, .pane-node-field-slac-event-related-links a { color: #871628; }
@@ -1661,48 +1685,46 @@ ol.search-results .search-snippet strong { font-weight: bold; color: #871628; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032864}}
   .pp-image-style-description-right { float: right; margin-left: 20px; } }
 /* IntOrg profile styles */
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032872}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032871}}
 .page-basic-io .top-wrapper { background: url("../images/header-bg.jpg") center no-repeat; background-size: cover; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032875}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032874}}
 .page-basic-io .top-wrapper .header { padding-top: 20px; margin-top: -20px; border-bottom: 5px solid rgba(101, 166, 223, 0.25); }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032879}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032878}}
 .page-basic-io .top-wrapper .header .user-search { min-height: 60px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032882}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032881}}
 .page-basic-io .top-wrapper .user-search { padding-top: 18px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032885}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032884}}
 .page-basic-io .pane-page-logo { margin-top: -20px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032887}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032886}}
 .page-basic-io .pane-page-logo img { width: auto; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032890}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032889}}
 .page-basic-io .top-menu { background: rgba(67, 121, 142, 0.4); }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032892}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032891}}
 .page-basic-io .top-menu ul.menu { float: right; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032894}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032893}}
 .page-basic-io .top-menu ul.menu li { float: left; border-right: 1px solid white; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032897}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032896}}
 .page-basic-io .top-menu ul.menu li:first-child { border-left: 1px solid white; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032899}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032898}}
 .page-basic-io .top-menu ul.menu a { color: white; padding: 0 30px; font-size: 9px; text-transform: uppercase; line-height: 20px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032905}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032904}}
 .page-basic-io .top-menu ul.menu a:hover, .page-basic-io .top-menu ul.menu a.active { background-color: transparent; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032909}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032908}}
 .page-basic-io .header-menu ul li a { color: #6a98bb; border-color: #8a8a8a; padding: 0 10px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032913}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032912}}
 .page-basic-io .header-menu ul li a:hover { text-decoration: underline; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032916}}
-.page-basic-io .main-menu { background-color: #eaeef0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032915}}
+.page-basic-io .footer-seccond { background-color: #f4f4f4; color: #5f5f60; padding: 16px 0 12px; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032919}}
-.page-basic-io .main-menu ul.sf-menu.sf-expanded a { color: #0c5791; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032921}}
-.page-basic-io .main-menu ul.sf-menu a { color: #0c5791; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032923}}
-.page-basic-io .main-menu ul.sf-menu a:hover { color: #0c5791; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032925}}
-.page-basic-io .main-menu ul.sf-menu a:hover:after { -webkit-box-shadow: 0px -2px 0px 0px #0c5791 inset; -moz-box-shadow: 0px -2px 0px 0px #0c5791 inset; box-shadow: 0px -2px 0px 0px #0c5791 inset; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032930}}
-.page-basic-io .footer-seccond { background-color: #f4f4f4; color: #5f5f60; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032933}}
 .page-basic-io .footer-seccond a { color: #154e6b; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032921}}
+.page-basic-io .footer-seccond .general-left { padding-top: 15px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032923}}
+.page-basic-io .footer-seccond .general-right { margin: 12px 0 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032925}}
+.page-basic-io .footer-seccond .general-right a { display: inline-block; vertical-align: middle; }
+@media (min-width: 690px) { @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032931}}
+  .page-basic-io .footer-seccond .general-right { margin: 0; text-align: right; } }
 
 @media (min-width: 480px) { @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_responsive_misc\.sass}line{font-family:\0000311}}
   .views-field-field-prf-contact-photo { float: left; }

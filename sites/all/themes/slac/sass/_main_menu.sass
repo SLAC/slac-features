@@ -53,17 +53,66 @@
       &:before
         color: #fff
 
-.page-basic-io .sf-accordion-toggle
-  a
-    &:hover
-      +box-shadow(0px 0px 1px 1px $dark-blue)
-    &:before
-      color: $dark-blue
-    &.sf-expanded
-      background-color: $dark-blue
-      +box-shadow(0px 0px 1px 1px $dark-blue)
+/* IntOrg profile styles */
+
+.page-basic-io
+  .main-menu
+    background-color: #eaeef0
+    ul.sf-menu
+      &.sf-expanded a
+        color: $dark-blue
+      li,
+      li.sfHover
+        a
+          color: $dark-blue
+          &:hover
+            color: $dark-blue
+        &.menuparent > ul
+          background-color: #eaeef0
+          a
+            color: $dark-blue
+            &:hover
+              background: #d3e0e2
+
+
+  .sf-accordion-toggle
+    a
+      &:hover
+        +box-shadow(0px 0px 1px 1px $dark-blue)
       &:before
-        color: #fff
+        color: $dark-blue
+      &.sf-expanded
+        background-color: $dark-blue
+        +box-shadow(0px 0px 1px 1px $dark-blue)
+        &:before
+          color: #fff
+
+
+  +at-breakpoint($tablet)
+    .main-menu
+      ul.sf-menu
+        li,
+        li.sfHover
+          a
+            &:before,
+            &:after,
+            &:hover:before,
+            &:hover:after
+              +box-shadow(0px -2px 0px 0px $dark-blue inset )
+
+  +at-breakpoint($only-tablet)
+    .main-menu
+      &.long-menu
+        background-color: transparent
+        ul
+          > li,
+          > li.sfHover
+            background-color: #eaeef0
+            &:hover
+              background: #d3e0e2
+
+
+/* ******  */
 
 +at-breakpoint($tablet)
   .sf-accordion-toggle
