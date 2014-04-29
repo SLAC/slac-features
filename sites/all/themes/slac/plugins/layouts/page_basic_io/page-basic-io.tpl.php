@@ -17,24 +17,26 @@
 <div class="panel-display page-basic page-basic-io" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
 
 
-  <div class="panel-panel basic header-menu">
-    <?php if ($content['top-menu']): ?>
-      <div class="inside"><?php print $content['top-menu']; ?></div>
-    <?php endif ?>
-  </div>
-  <div class="panel-panel basic header <?php if ($content['user-search']) {print 'with_user_search';} ?>">
-    <div class="inside">
-      <div class="clearfix header-wrapper">
-        <div class="logo-container">
-          <div class="panel-pane pane-page-logo">
-            <?php if ($logo_path): ?>
-              <a href="http://slac.stanford.edu" rel="home" id="logo" title="Home"><img src="<?php print $logo_path; ?>" alt="SLAC"/></a>
-            <?php endif; ?>
+  <div class="top-wrapper">
+    <div class="panel-panel basic top-menu">
+      <?php if ($content['top-menu']): ?>
+        <div class="inside"><?php print $content['top-menu']; ?></div>
+      <?php endif ?>
+    </div>
+    <div class="panel-panel basic header <?php if ($content['user-search']) {print 'with_user_search';} ?>">
+      <div class="inside">
+        <div class="clearfix header-wrapper">
+          <div class="logo-container">
+            <div class="panel-pane pane-page-logo">
+              <?php if ($logo_path): ?>
+                <a href="http://slac.stanford.edu" rel="home" id="logo" title="Home"><img src="<?php print $logo_path; ?>" alt="SLAC"/></a>
+              <?php endif; ?>
+            </div>
           </div>
+          <?php if ($content['user-search']): ?>
+            <div class="user-search"><?php print $content['user-search']; ?></div>
+          <?php endif ?>
         </div>
-     <?php if ($content['user-search']): ?>
-        <div class="user-search"><?php print $content['user-search']; ?></div>
-      <?php endif ?>      
       </div>
     </div>
   </div>

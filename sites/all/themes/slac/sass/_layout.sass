@@ -125,10 +125,18 @@ html
   color: $grey-2
   background-color: #fff
 
+.page-basic-io .top-wrapper
+  > .header,
+  > .top-menu
+    .inside
+      +container
+      +box-sizing(content-box)
+
 .page-basic
   > .content,
   > .header,
   > .header-menu,
+  > .top-menu,
   > .main-menu,
   > .site-title,
   > .footer-first,
@@ -2858,19 +2866,66 @@ h2
     margin-left: 20px
 
 
-/* IntOrg profile styles*/
+/* IntOrg profile styles */
 
 .page-basic-io
+  .top-wrapper
+    background: url('../images/header-bg.jpg') center no-repeat
+    background-size: cover
+    .header
+      padding-top: 20px
+      margin-top: -20px
+      border-bottom: 5px solid rgba(101, 166, 223, 0.25)
+      .user-search
+        min-height: 60px
+
+    .user-search
+      padding-top: 18px
+
+  .pane-page-logo
+    margin-top: -20px
+    img
+      width: auto
+
+  .top-menu
+    background: rgba(67, 121, 142, 0.4)
+    ul.menu
+      float: right
+      li
+        float: left
+        border-right: 1px solid #fff
+        &:first-child
+          border-left: 1px solid #fff
+      a
+        color: #fff
+        padding: 0 30px
+        font-size: 9px
+        text-transform: uppercase
+        line-height: 20px
+        &:hover,
+        &.active
+          background-color: transparent
+
+  .header-menu ul li a
+    color: #6a98bb
+    border-color: #8a8a8a
+    padding: 0 10px
+    &:hover
+      text-decoration: underline
+
   .main-menu
     background-color: #eaeef0
-    ul.sf-menu a
-      color: #0c5791
-      &:hover
-        color: #0c5791
-        &:after
-          -webkit-box-shadow: 0px -2px 0px 0px #0c5791 inset
-          -moz-box-shadow: 0px -2px 0px 0px #0c5791 inset
-          box-shadow: 0px -2px 0px 0px #0c5791 inset
+    ul.sf-menu
+      &.sf-expanded a
+        color: $dark-blue
+      a
+        color: $dark-blue
+        &:hover
+          color: $dark-blue
+          &:after
+            -webkit-box-shadow: 0px -2px 0px 0px $dark-blue inset
+            -moz-box-shadow: 0px -2px 0px 0px $dark-blue inset
+            box-shadow: 0px -2px 0px 0px $dark-blue inset
 
   .footer-seccond
     background-color: #f4f4f4
