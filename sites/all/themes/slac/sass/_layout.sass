@@ -166,9 +166,9 @@ html
         margin-top: 25px
 
 
-    .general-right
+    //.general-right
       //margin-top: 40px
-      .front &
+      //.front &
         //margin-top: 0
 
 
@@ -1068,10 +1068,10 @@ ul.tabs, .action-links,
 
 //LEft site blocks
 //-----------------------------------
-.general-left
-  .pane-page-content &
-    .front &
-      .panel-pane
+//.general-left
+  //.pane-page-content &
+    //.front &
+      //.panel-pane
         //margin-bottom: 36px
 
 
@@ -1150,9 +1150,9 @@ h2
       .pane-page-content &
         border-bottom-color: #fff
 
-    .pane-page-content &
+    //.pane-page-content &
 
-      .front &
+      //.front &
         //text-transform: uppercase
         //letter-spacing: 0.05em
 
@@ -1190,7 +1190,7 @@ h2
 .general-right
   +fontsize-rem(13px)
   color: $text-color-1
-  a
+  //a
     //color: inherit
 
   //only for logged users
@@ -1384,10 +1384,10 @@ article.node-blog
 
 
 +at-breakpoint($only-tablet )
-  .general-right
-    .pane-page-content &
-      .front &
-        .inside
+  //.general-right
+  //  .pane-page-content &
+  //    .front &
+  //      .inside
           //+span-columns(4 omega,12) //Disable frontpage wrapper
 
 
@@ -2260,9 +2260,7 @@ form.search-form
 
 
 
-
-
-  #slac-search-wrapper
+  //#slac-search-wrapper
     //position: relative
 
 
@@ -2858,3 +2856,24 @@ h2
   .pp-image-style-description-right
     float: right
     margin-left: 20px
+
+
+/* IntOrg profile styles*/
+
+.page-basic-io
+  .main-menu
+    background-color: #eaeef0
+    ul.sf-menu a
+      color: #0c5791
+      &:hover
+        color: #0c5791
+        &:after
+          -webkit-box-shadow: 0px -2px 0px 0px #0c5791 inset
+          -moz-box-shadow: 0px -2px 0px 0px #0c5791 inset
+          box-shadow: 0px -2px 0px 0px #0c5791 inset
+
+  .footer-seccond
+    background-color: #f4f4f4
+    color: #5f5f60
+    a
+      color: #154e6b
