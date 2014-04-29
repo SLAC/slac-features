@@ -244,6 +244,18 @@ function slac_preprocess_page_basic_eo(&$variables) {
   }
 }
 
+function slac_preprocess_page_basic_io(&$variables) {
+  $logo_path = theme_get_setting('logo_path');
+  $default_logo = theme_get_setting('default_logo');
+
+  if (isset($logo_path) && $logo_path != '' && isset($default_logo) && $default_logo == 0) {
+    $variables['logo_path'] = file_create_url($logo_path);
+  }
+  else {
+    $variables['logo_path'] = '/sites/all/themes/slac/logo.png';
+  }
+}
+
 function slac_preprocess_page_basic(&$variables) {
   $logo_path = theme_get_setting('logo_path');
   $default_logo = theme_get_setting('default_logo');
