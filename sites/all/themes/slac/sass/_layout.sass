@@ -1,6 +1,6 @@
 
 
-.extentions_normal-link 
+.extentions_normal-link
   color: $red
   &:hover
     text-decoration: underline
@@ -15,21 +15,21 @@
       color: $red
 
 
-.extentions_people_link_sidebar 
+.extentions_people_link_sidebar
 
   &:link
     color: #635c2c
     text-decoration: none
-  
+
   &:visited
     color: #635c2c
-  
-  
-  &:hover 
+
+
+  &:hover
     color: #783333
     text-decoration: underline
-  
-  
+
+
   &:active
     color: #9b622f
     text-decoration: underline
@@ -62,7 +62,7 @@ a
     .blog-archive-class &, .news-archive-class &
       font-weight: bold
       text-decoration: none !important
-    
+
   .profile-textformatter-list &
     .profile-info-full &
       @extend .extentions_people_link_sidebar
@@ -478,14 +478,14 @@ ul.tabs, .action-links,
   &.share-googleplus
     &:before
       content: '\e603'
-      
+
   &.share-reddit
     &:before
       content: '\e62e'
 
   &.share-delicious
     &:before
-      content: '\e62f' 
+      content: '\e62f'
 
 
 
@@ -998,15 +998,15 @@ ul.tabs, .action-links,
           content: '+'
           margin-top: -9px
 
-      
+
 
     .general-left &
       border-bottom: 1px solid $bg-col-1
       margin-bottom: 10px
       padding-bottom: 10px
 
-      &[class^="pager-"] 
-        padding: 0 
+      &[class^="pager-"]
+        padding: 0
 
     &:last-child
       border-bottom: 0
@@ -1044,7 +1044,7 @@ ul.tabs, .action-links,
     margin-bottom: 5px
 
 .faq-comments, .pane-node-comments
-  
+
   h2
     +fontsize-rem(18px)
     margin-top: 20px
@@ -1057,13 +1057,13 @@ ul.tabs, .action-links,
 
   .field-name-comment-body
     margin-bottom: 15px
-    
+
   article
     margin-bottom: 15px
-  
+
   .links
-    li 
-      border-bottom: 0 
+    li
+      border-bottom: 0
       margin-bottom: 0
 
 
@@ -1278,7 +1278,7 @@ article.node-blog
         content: ''
       &:hover:after
         display: inline-block
-        
+
 
 
 
@@ -2803,7 +2803,7 @@ h2
     margin-bottom: 10px
 
 
-#imageData 
+#imageData
   #caption
     font-weight: normal !important
   #imageDetails
@@ -2886,6 +2886,14 @@ h2
     img
       width: auto
 
+  .left-title-wrapper
+    border: none
+    padding-bottom: 0
+    color: #494949
+  .general-left-title
+    h2.pane-title
+      font-size: 1.85rem
+
   .top-menu
     background: rgba(67, 121, 142, 0.4)
     ul.menu
@@ -2925,6 +2933,106 @@ h2
       a
         display: inline-block
         vertical-align: middle
+
+  .pane-page-content
+    .general-right
+      .region-grey-background-style
+        padding: 0
+        background: none
+        h2.panel-title
+          font-size: 12px
+          color: #484848
+          line-height: 17px
+          margin-bottom: 1px
+          padding-bottom: 0
+          border-bottom: none
+        .pane-body-grey-background-style
+          padding: 15px 15px 13px 15px
+          background: #f4f4f4
+          font-size: 12px
+          line-height: 18px
+    .menu
+      padding-left: 6px
+      li
+        margin-left: 16px
+        a.active-item,
+        a.active-type
+          position: relative
+          text-decoration: none
+          &:before
+            content: '•'
+            position: absolute
+            color: #484848
+            font-size: 16px
+            left: -12px
+            top: 50%
+            margin-top: -10px
+  .content .general-right .panel-pane .menu li a.active-item
+    text-decoration: none
+
+  .pager
+    li
+      background: #dbdbdb
+      a
+        color: #2582ca
+      &.pager-current
+        background: #95b5c9
+        a
+          color: #444
+      a:hover
+        background: #2582ca
+        color: #fff
+
+  .news-archive-class > li
+    padding-left: 10px
+
+  .article_panel_layout
+    .field-name-field-slac-news-date
+      font-style: normal
+      font-size: 12px
+
+  .news-landing .field-name-body,
+  .kb-articles .field-name-body
+    p
+      font-size: 0.85rem
+
+  .extentions_normal-link,
+  .content .general-left a,
+  .content .general-one-col a,
+  .content .general-right a,
+  .pane-node-field-slac-event-related-links a
+    color: #2582ca
+
+  .news-image
+    img
+      border: 2px #e0e0e0 solid
+
+  .news-landing,
+  .kb-articles
+    .views-row.views-row-last
+      padding-bottom: 20px
+      border-bottom: 2px solid #e0decd
+
+  .view-news-tags
+    .item-list
+      width: 105%
+      li
+        display: inline-block
+        height: 20px
+        line-height: 20px
+        margin-right: 19px
+        margin-bottom: 11px !important
+        a
+          background: #fff
+          display: inline-block
+          padding: 0 5px
+          border-radius: 4px
+          color: #424242
+          font-size: 13px
+          &:hover
+            background: #2582ca
+            color: #fff
+            text-decoration: none
 
   +at-breakpoint($tablet)
     .footer-seccond
