@@ -147,6 +147,18 @@ function slac_intorg_permissions_user_default_permissions() {
     'module' => 'download_file',
   );
 
+  // Exported permission: 'access media browser'.
+  $permissions['access media browser'] = array(
+    'name' => 'access media browser',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'media',
+  );
+
   // Exported permission: 'access news feeds'.
   $permissions['access news feeds'] = array(
     'name' => 'access news feeds',
@@ -548,18 +560,6 @@ function slac_intorg_permissions_user_default_permissions() {
   // Exported permission: 'administer media browser'.
   $permissions['administer media browser'] = array(
     'name' => 'administer media browser',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
-      'manager' => 'manager',
-    ),
-    'module' => 'media',
-  );
-
-  // Exported permission: 'access media browser'.
-  $permissions['access media browser'] = array(
-    'name' => 'access media browser',
     'roles' => array(
       'administrator' => 'administrator',
       'author' => 'author',
@@ -3231,6 +3231,7 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'post comments',
     'roles' => array(
       'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'comment',
