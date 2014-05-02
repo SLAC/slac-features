@@ -2935,22 +2935,26 @@ h2
         vertical-align: middle
 
   .pane-page-content
-    .general-right
-      .region-grey-background-style
-        padding: 0
-        background: none
-        h2.panel-title
-          font-size: 12px
-          color: #484848
-          line-height: 17px
-          margin-bottom: 1px
-          padding-bottom: 0
-          border-bottom: none
-        .pane-body-grey-background-style
-          padding: 15px 15px 13px 15px
-          background: #f4f4f4
-          font-size: 12px
-          line-height: 18px
+    .general-right,
+    .general-right .region-grey-background-style
+      padding: 0
+      background: none
+      h2.panel-title,
+      h2.pane-title
+        font-size: 12px
+        color: #484848
+        line-height: 17px
+        margin-bottom: 1px
+        padding-bottom: 0
+        border-bottom: none
+        letter-spacing: 1px
+      > .pane-body-grey-background-style,
+      > .view,
+      > .fieldable-panels-pane
+        padding: 15px 15px 13px 15px
+        background: #f4f4f4
+        font-size: 12px
+        line-height: 18px
     .menu
       padding-left: 6px
       li
@@ -2969,6 +2973,31 @@ h2
             margin-top: -10px
   .content .general-right .panel-pane .menu li a.active-item
     text-decoration: none
+
+  .field-name-field-slideshow-btmdesc-slide
+    border: none
+
+  .content .general-right
+    .event-block
+      padding-left: 55px
+      margin-bottom: 20px
+      border-bottom-color: #ebebe0
+      .event
+        padding-right: 35px
+        margin-bottom: 17px
+      a.icon
+        color: #c0bfbf
+    .more-link
+      margin-bottom: -13px
+      margin-right: -6px
+    .pane-bundle-slac-sidebar-block
+      ul li
+        color: #666
+
+  .pane-bundle-slac-sidebar-block
+    p
+      font-size: 0.9rem
+      line-height: 1.5em
 
   .pager
     li
@@ -3039,3 +3068,18 @@ h2
       .general-right
         margin: 0
         text-align: right
+
+
+.front
+  .page-basic-io
+    .pane-page-content
+      .general-left h2.pane-title,
+      .general-left-title h2.pane-title,
+      .general-title h2.pane-title,
+      .general-left h2.panel-title,
+      .general-left-title h2.panel-title,
+      .general-title h2.panel-title
+        border: none
+        margin-bottom: 7px
+        font-size: 1.1rem
+        color: #46494b
