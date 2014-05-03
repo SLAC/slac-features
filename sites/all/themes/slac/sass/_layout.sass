@@ -2885,7 +2885,30 @@ h2
     margin-top: -20px
     img
       width: auto
-
+  .panel-panel.site-title
+    margin-top: -11px
+  .pane-site-name-abbreviation,
+  .pane-page-site-name
+    a
+      color: #2582ca
+      font-size: 32px
+      font-weight: bold
+      &:hover
+        color: #666
+  .pane-site-name-abbreviation
+    margin-right: 11px
+    padding-right: 0
+    &:after
+      content: ''
+      display: inline-block
+      width: 3px
+      height: 42px
+      margin-left: 1px
+      position: relative
+      top: 7px
+      background: #dedddd
+    a
+      font-size: 36px
   .left-title-wrapper
     border: none
     padding-bottom: 0
@@ -2893,6 +2916,88 @@ h2
   .general-left-title
     h2.pane-title
       font-size: 1.85rem
+
+  .pane-page-content
+    .general-left .pane-menu-tree,
+    .general-left-title .pane-menu-tree,
+    .general-title .pane-menu-tree,
+    .general-left .pane-menu-tree,
+    .general-left-title .pane-menu-tree,
+    .general-title .pane-menu-tree
+      h2.panel-title,
+      h2.pane-title
+        font-size: 18px
+        line-height: 30px
+        color: #20659a
+        padding-bottom: 2px
+        border-bottom: 2px #2084c3 solid
+        letter-spacing: 0.5px
+        a
+          color: #20659a
+          &:hover
+            text-decoration: underline
+  .pane-menu-tree > div
+    background-color: #fff
+    .menu
+      padding-left: 0
+      li
+        padding-left: 0
+        margin-left: 0
+        &.depth-2
+          > a
+            color: #0c5791
+          &.is-active,
+          &.is-active-trail
+            background: #eaeef0
+            position: relative
+            overflow: hidden
+            &:before
+              content: ''
+              display: block
+              position: absolute
+              left: 0
+              width: 3px
+              height: 100%
+              background: #77a9d9
+          > a.active
+            background: none
+          &.is-expanded
+            border-bottom: 1px #b5b5b5 solid
+            > a
+              color: #0c5791
+              border: none
+              margin-top: 9px
+              padding-top: 5px
+              padding-bottom: 5px
+              &:hover
+                background: #dce2e5
+            > a.active
+              background: #dce2e5
+              color: #0c5791
+              font-size: 14px
+              padding-top: 5px
+              padding-bottom: 5px
+              border: none
+              margin-top: 9px
+            > .menu
+              margin-bottom: 9px
+        &.depth-3
+          a
+            border: none
+            padding: 3px 14px 3px 44px
+            font-size: 12px
+            line-height: 26px
+            color: #20659a
+            &:hover,
+            &.active
+              background: #dce2e5
+        a
+          font-size: 14px
+          line-height: 20px
+          padding: 12px 12px 12px 16px
+          border-bottom: 1px #b5b5b5 solid
+          &:hover
+            background: #eaeef0
 
   .top-menu
     background: rgba(67, 121, 142, 0.4)
@@ -2912,6 +3017,19 @@ h2
         &:hover,
         &.active
           background-color: transparent
+
+  .pane-node-field-bp-image img
+    border: 2px solid #e1e1e1
+    padding: 0
+
+  .box-about
+    > div.shaded
+      padding: 20px
+      background: #e7eee7
+      font-size: 16px
+      line-height: 22px
+      p
+        margin-bottom: 10px
 
   .header-menu ul li a
     color: #6a98bb
@@ -2934,9 +3052,21 @@ h2
         display: inline-block
         vertical-align: middle
 
+  .pane-page-content .general-left h2.pane-title,
+  .pane-page-content .general-left-title h2.pane-title,
+  .pane-page-content .general-title h2.pane-title,
+  .pane-page-content .general-left h2.panel-title,
+  .pane-page-content .general-left-title h2.panel-title,
+  .pane-page-content .general-title h2.panel-title
+    border: none
+    font-size: 30px
+    color: #494949
+    padding-bottom: 2px
+
   .pane-page-content
     .general-right,
-    .general-right .region-grey-background-style
+    .general-right .region-grey-background-style,
+    .pane-bundle-slac-sidebar-block
       padding: 0
       background: none
       h2.panel-title,
@@ -2998,6 +3128,35 @@ h2
     p
       font-size: 0.9rem
       line-height: 1.5em
+
+  .event-listing-item .field-name-body
+    font-size: 14px
+    line-height: 22px
+    color: #353535
+
+  .event-wrapper
+    padding: 20px
+
+  .calendar-page table tbody td a.active
+    color: #fff
+    background: #2582ca
+
+  .basic-format-text,
+  article.node-blog.view-mode-full .field-type-text-with-summary,
+  article.node-blog.view-mode-full .blog-wrapper,
+  .article_panel_layout .pane-node-body,
+  .service-body,
+  .node-slac-sc-catalog-item,
+  .node-support-ticket .field-type-text-with-summary
+    p
+      font-size: 14px
+      line-height: 22px
+      margin-bottom: 10px
+      color: #353535
+
+  .share-block-wrapper a:hover,
+  .add-to-calendar a:hover:before
+    color: #2582ca !important
 
   .pager
     li
