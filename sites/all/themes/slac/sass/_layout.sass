@@ -3022,6 +3022,21 @@ h2
     border: 2px solid #e1e1e1
     padding: 0
 
+  input[type='text'],
+  input[type='password'],
+  select,
+  textarea,
+  input[type='email'],
+  input[type='number']
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.15)
+
+  .content .services-sidebar .views-field-field-slac-sc-request-link a
+    background: #2582ca
+    color: #fff
+    &:hover
+      box-shadow: inset 0 0 5px rgba(0,0,0,0.25)
+      border: none
+
   .box-about
     > div.shaded
       padding: 20px
@@ -3080,7 +3095,9 @@ h2
         letter-spacing: 1px
       > .pane-body-grey-background-style,
       > .view,
-      > .fieldable-panels-pane
+      > .fieldable-panels-pane,
+      .a-z-filter,
+      .view-service-catalog-category.view-display-id-panel_pane_4
         padding: 15px 15px 13px 15px
         background: #f4f4f4
         font-size: 12px
@@ -3103,6 +3120,10 @@ h2
             margin-top: -10px
   .content .general-right .panel-pane .menu li a.active-item
     text-decoration: none
+
+  .pane-bundle-slideshow-description-bottom .field-slideshow-controls a:hover,
+  .pane-bundle-slac-mini-slideshow .field-slideshow-controls a:hover
+    color: #fff
 
   .field-name-field-slideshow-btmdesc-slide
     border: none
@@ -3140,6 +3161,9 @@ h2
   .calendar-page table tbody td a.active
     color: #fff
     background: #2582ca
+
+  .faq-list .views-field-title
+    color: #2582ca
 
   .basic-format-text,
   article.node-blog.view-mode-full .field-type-text-with-summary,

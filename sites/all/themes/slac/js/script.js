@@ -181,4 +181,31 @@
       $('.projects-blocks-wrapper .project-block-wrapper:nth-child(3n+3)').addClass('nth-3');
     }
   };
+
+  Drupal.behaviors.adminMissingBlocks = {
+    attach: function(context) {
+      function hideblocksForAdmin() {
+        // Exit if not admin.
+        if ($('body').hasClass('not-logged-in')) return;
+
+        var $rightSidebar = $('.right-sidebar', context);
+        var $eventWrapper = $('.event-wrapper', context);
+
+        if ($rightSidebar.length) {
+          // Only if has no children
+          if (!$rightSidebar.find('.panels-ipe-sort-container').children().length)
+            $rightSidebar.prev('.general-right').addClass('expand-full');
+        }
+        if ($eventWrapper.length) {
+          // Only if has no children
+          if (!$eventWrapper.find('.panels-ipe-sort-container').children().length)
+            $eventWrapper.addClass('expand-hide');
+        }
+      }
+      // visually hide empty regions.
+      hideblocksForAdmin();
+
+    }
+  };
+
 }(this, this.document, this.jQuery, this.Drupal));
