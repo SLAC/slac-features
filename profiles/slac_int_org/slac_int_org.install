@@ -60,6 +60,7 @@ function slac_int_org_install_task_demo_content() {
   foreach ($modules_sorted as $module => $weight) {
     $operations[] = array('_slac_int_org_enable_module', array($module, $files[$module]->info['name']));
   }
+  $operations[] = array('_slac_int_org_disable_update_module', array(t('Disable Update module.')));
   $operations[] = array('_slac_int_org_flush_caches', array(t('Flushed caches.')));
 
   $batch = array(
@@ -124,6 +125,14 @@ function _slac_int_org_filter_dependencies($dependency) {
 function _slac_int_org_enable_module($module, $module_name, &$context) {
   module_enable(array($module), FALSE);
   $context['message'] = st('Installed %module module.', array('%module' => $module_name));
+}
+
+/**
+ * Disable update module.
+ */
+function _slac_int_org_disable_update_module($operation, &$context) {
+  $context['message'] = t('@operation', array('@operation' => $operation));
+  exec('drush dis update -y');
 }
 
 function _slac_int_org_flush_caches($operation, &$context) {
