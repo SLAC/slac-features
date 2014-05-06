@@ -2936,68 +2936,69 @@ h2
           color: #20659a
           &:hover
             text-decoration: underline
-  .pane-menu-tree > div
-    background-color: #fff
-    .menu
-      padding-left: 0
-      li
+  .panel-panel.content
+    .pane-menu-tree > div
+      background-color: #fff
+      .menu
         padding-left: 0
-        margin-left: 0
-        &.depth-2
-          > a
-            color: #0c5791
-          &.is-active,
-          &.is-active-trail
-            background: #eaeef0
-            position: relative
-            overflow: hidden
-            &:before
-              content: ''
-              display: block
-              position: absolute
-              left: 0
-              width: 3px
-              height: 100%
-              background: #77a9d9
-          > a.active
-            background: none
-          &.is-expanded
-            border-bottom: 1px #b5b5b5 solid
+        li
+          padding-left: 0
+          margin-left: 0
+          &.depth-2
             > a
               color: #0c5791
-              border: none
-              margin-top: 9px
-              padding-top: 5px
-              padding-bottom: 5px
-              &:hover
-                background: #dce2e5
+            &.is-active,
+            &.is-active-trail
+              background: #eaeef0
+              position: relative
+              overflow: hidden
+              &:before
+                content: ''
+                display: block
+                position: absolute
+                left: 0
+                width: 3px
+                height: 100%
+                background: #77a9d9
             > a.active
-              background: #dce2e5
-              color: #0c5791
-              font-size: 14px
-              padding-top: 5px
-              padding-bottom: 5px
+              background: none
+            &.is-expanded
+              border-bottom: 1px #b5b5b5 solid
+              > a
+                color: #0c5791
+                border: none
+                margin-top: 9px
+                padding-top: 5px
+                padding-bottom: 5px
+                &:hover
+                  background: #dce2e5
+              > a.active
+                background: #dce2e5
+                color: #0c5791
+                font-size: 14px
+                padding-top: 5px
+                padding-bottom: 5px
+                border: none
+                margin-top: 9px
+              > .menu
+                margin-bottom: 9px
+          &.depth-3
+            a
               border: none
-              margin-top: 9px
-            > .menu
-              margin-bottom: 9px
-        &.depth-3
+              padding: 3px 14px 3px 44px
+              font-size: 12px
+              line-height: 26px
+              color: #20659a
+              &:hover,
+              &.active
+                background: #dce2e5
           a
-            border: none
-            padding: 3px 14px 3px 44px
-            font-size: 12px
-            line-height: 26px
-            color: #20659a
-            &:hover,
-            &.active
-              background: #dce2e5
-        a
-          font-size: 14px
-          line-height: 20px
-          padding: 12px 12px 12px 16px
-          border-bottom: 1px #b5b5b5 solid
-          &:hover
-            background: #eaeef0
+            font-size: 14px
+            line-height: 20px
+            padding: 12px 12px 12px 16px
+            border-bottom: 1px #b5b5b5 solid
+            &:hover
+              background: #eaeef0
 
   .top-menu
     background: rgba(67, 121, 142, 0.4)
@@ -3121,13 +3122,25 @@ h2
   .content .general-right .panel-pane .menu li a.active-item
     text-decoration: none
 
-  .pane-bundle-slideshow-description-bottom .field-slideshow-controls a:hover,
-  .pane-bundle-slac-mini-slideshow .field-slideshow-controls a:hover
+  .pane-bundle-slideshow-description-bottom div.field-slideshow-controls a:hover,
+  .pane-bundle-slac-mini-slideshow div.field-slideshow-controls a:hover
     color: #fff
 
   .field-name-field-slideshow-btmdesc-slide
     border: none
 
+  .pane-bundle-slideshow-description-bottom
+    .field-slideshow-body
+      background: rgba(0,0,0,0.38)
+      .field-slideshow-description
+        a
+          color: #fff
+  .projects-blocks-wrapper
+    .project-block-wrapper
+      .project-title,
+      .project-description
+        a
+          color: #fff
   .content .general-right
     .event-block
       padding-left: 55px
@@ -3181,6 +3194,10 @@ h2
   .share-block-wrapper a:hover,
   .add-to-calendar a:hover:before
     color: #2582ca !important
+
+  .pane-bundle-slideshow-description-bottom .field-slideshow-controls a
+    &:hover
+      color: #fff
 
   .pager
     li
