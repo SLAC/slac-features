@@ -4,7 +4,7 @@ function slac_wiki_install() {
   $editor_info = "array (
     'name' => 'Markdown',
     'pages' => 'node/*/edit
-node/add/slac-wiki-page',
+node/add/wiki-page',
     'excludes' => 'edit-log
 edit-menu-description',
     'iconpath' => 'sites/all/modules/contrib/markdowneditor/icons',

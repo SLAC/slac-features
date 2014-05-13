@@ -519,7 +519,7 @@ function slac_wiki_default_page_manager_pages() {
     'contexts' => array(),
     'relationships' => array(),
     'code' => '301',
-    'destination' => 'node/add/slac-wiki-page',
+    'destination' => 'node/add/wiki-page',
   );
   $page->default_handlers[$handler->name] = $handler;
   $pages['add_new_wiki_page'] = $page;
