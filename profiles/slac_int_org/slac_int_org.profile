@@ -5,6 +5,16 @@
  */
 
 /**
+ * Implements hook_init().
+ */
+function slac_int_org_init() {
+  global $user, $base_url;
+  if (!function_exists('drush_main') && $user->uid == 0 && $_GET['q'] != 'user/login' && module_exists('webauth')) {
+    drupal_goto($base_url . '/' . conf_path() . '/files/webauth/login.php');
+  }
+}
+
+/**
  * Implements hook_form_FORM_ID_alter() for install_configure_form().
  *
  * Allows the profile to alter the site configuration form.
