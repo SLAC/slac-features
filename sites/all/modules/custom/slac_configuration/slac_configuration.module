@@ -1,5 +1,14 @@
 <?php
 
+$profile = variable_get('install_profile', '');
+if ($profile == 'slac_int_org') {
+  define('SLAC_CONFIGURATION_LOGO_HEIGHT_INFO', '65');
+}
+else {
+  define('SLAC_CONFIGURATION_LOGO_HEIGHT_INFO', '33');
+}
+
+
 /**
  * Implements hook_permission().
  */
@@ -71,10 +80,12 @@ function slac_configuration_form($form, &$form_state) {
     '#default_value' => theme_get_setting('logo_path'),
   );
   $form['site_logo']['settings']['logo_upload'] = array(
+    '#prefix' =>  '<div class="messages notice">' . t("Logo dimensions restrictions: maximum width - 200 pixels, height - @height pixels. ",
+      array('@height' => SLAC_CONFIGURATION_LOGO_HEIGHT_INFO)) . '</div>',
     '#type' => 'file',
     '#title' => t('Upload logo image'),
     '#maxlength' => 40,
-    '#description' => t("If you don't have direct file access to the server, use this field to upload your logo.")
+    '#description' => t("If you don't have direct file access to the server, use this field to upload your logo."),
   );
 
   $form = system_settings_form($form);
@@ -169,5 +180,16 @@ function slac_configuration_admin_menu_output_alter(&$content) {
 function slac_configuration_ctools_plugin_directory($owner, $plugin_type) {
   if ($owner == 'ctools' && $plugin_type == 'content_types') {
     return 'ctools_content_types';
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function slac_configuration_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'system_theme_settings' && isset($form['logo']['settings']['logo_upload'])) {
+    $form['logo']['settings']['logo_upload']['#prefix'] = '<div class="messages notice">'
+      . t("Logo dimensions restrictions: maximum width - 200 pixels, height - @height pixels. ",
+        array('@height' => SLAC_CONFIGURATION_LOGO_HEIGHT_INFO)) . '</div>';
   }
 }
