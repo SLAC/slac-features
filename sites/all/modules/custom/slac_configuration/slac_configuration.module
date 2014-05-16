@@ -8,7 +8,6 @@ else {
   define('SLAC_CONFIGURATION_LOGO_HEIGHT_INFO', '33');
 }
 
-
 /**
  * Implements hook_permission().
  */
