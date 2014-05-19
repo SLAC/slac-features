@@ -103,6 +103,7 @@
             }
           );
         } else {
+          // Radio to select for search.
           var $searchOptions = $('#slac-search-options');
           $searchOptions.insertBefore($('#slac-search'));
 
@@ -153,7 +154,7 @@
         $action_description,
         $close_all_description;
 
-      //Funtion to hide all descriptions text
+      //Function to hide all descriptions text
       $close_all_description = function() {
         $description.hide();
       };

@@ -181,28 +181,28 @@ a[href*='mailto:'] { word-break: break-all; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sprites\/\*\.png}line{font-family:\0000398}}
 .sprites-sprite, .sprites-Microsoft-Office-Excel-icon, span.document-type-ms-office-excel, .sprites-Microsoft-Office-Word-icon, span.document-type-ms-office-word, .sprites-Microsoft-PowerPoint-icon, span.document-type-ms-office-powerpoint, .sprites-compressed-icon, span.document-type-compressed, .sprites-external-icon, span.document-type-external, .sprites-google-docs-icon, span.document-type-gdoc, .sprites-keynote-on-icon, span.document-type-keynote, .sprites-pdf_icon_16px, span.document-type-pdf { background: url('../images/sprites-s7e31974e21.png') no-repeat; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/compass-sourcemaps-0\.12\.2\.sourcemaps\.57a186c\/frameworks\/compass\/stylesheets\/compass\/utilities\/sprites\/_base\.scss}line{font-family:\0000360}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/compass-0\.12\.6\/frameworks\/compass\/stylesheets\/compass\/utilities\/sprites\/_base\.scss}line{font-family:\0000360}}
 .sprites-Microsoft-Office-Excel-icon, span.document-type-ms-office-excel { background-position: 0 -36px; height: 16px; width: 16px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/compass-sourcemaps-0\.12\.2\.sourcemaps\.57a186c\/frameworks\/compass\/stylesheets\/compass\/utilities\/sprites\/_base\.scss}line{font-family:\0000360}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/compass-0\.12\.6\/frameworks\/compass\/stylesheets\/compass\/utilities\/sprites\/_base\.scss}line{font-family:\0000360}}
 .sprites-Microsoft-Office-Word-icon, span.document-type-ms-office-word { background-position: 0 0; height: 16px; width: 16px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/compass-sourcemaps-0\.12\.2\.sourcemaps\.57a186c\/frameworks\/compass\/stylesheets\/compass\/utilities\/sprites\/_base\.scss}line{font-family:\0000360}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/compass-0\.12\.6\/frameworks\/compass\/stylesheets\/compass\/utilities\/sprites\/_base\.scss}line{font-family:\0000360}}
 .sprites-Microsoft-PowerPoint-icon, span.document-type-ms-office-powerpoint { background-position: 0 -180px; height: 16px; width: 16px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/compass-sourcemaps-0\.12\.2\.sourcemaps\.57a186c\/frameworks\/compass\/stylesheets\/compass\/utilities\/sprites\/_base\.scss}line{font-family:\0000360}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/compass-0\.12\.6\/frameworks\/compass\/stylesheets\/compass\/utilities\/sprites\/_base\.scss}line{font-family:\0000360}}
 .sprites-compressed-icon, span.document-type-compressed { background-position: 0 -216px; height: 16px; width: 16px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/compass-sourcemaps-0\.12\.2\.sourcemaps\.57a186c\/frameworks\/compass\/stylesheets\/compass\/utilities\/sprites\/_base\.scss}line{font-family:\0000360}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/compass-0\.12\.6\/frameworks\/compass\/stylesheets\/compass\/utilities\/sprites\/_base\.scss}line{font-family:\0000360}}
 .sprites-external-icon, span.document-type-external { background-position: 0 -252px; height: 11px; width: 12px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/compass-sourcemaps-0\.12\.2\.sourcemaps\.57a186c\/frameworks\/compass\/stylesheets\/compass\/utilities\/sprites\/_base\.scss}line{font-family:\0000360}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/compass-0\.12\.6\/frameworks\/compass\/stylesheets\/compass\/utilities\/sprites\/_base\.scss}line{font-family:\0000360}}
 .sprites-google-docs-icon, span.document-type-gdoc { background-position: 0 -108px; height: 16px; width: 16px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/compass-sourcemaps-0\.12\.2\.sourcemaps\.57a186c\/frameworks\/compass\/stylesheets\/compass\/utilities\/sprites\/_base\.scss}line{font-family:\0000360}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/compass-0\.12\.6\/frameworks\/compass\/stylesheets\/compass\/utilities\/sprites\/_base\.scss}line{font-family:\0000360}}
 .sprites-keynote-on-icon, span.document-type-keynote { background-position: 0 -72px; height: 16px; width: 16px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/compass-sourcemaps-0\.12\.2\.sourcemaps\.57a186c\/frameworks\/compass\/stylesheets\/compass\/utilities\/sprites\/_base\.scss}line{font-family:\0000360}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/compass-0\.12\.6\/frameworks\/compass\/stylesheets\/compass\/utilities\/sprites\/_base\.scss}line{font-family:\0000360}}
 .sprites-pdf_icon_16px, span.document-type-pdf { background-position: 0 -144px; height: 16px; width: 16px; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\0000321}}
@@ -449,14 +449,14 @@ ul.sf-menu.sf-accordion.sf-expanded > li > ul a:after { display: none; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003477}}
   .main-menu.long-menu ul li:first-child { margin-left: 17px; } }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033}}
-.extentions_normal-link, .content .general-left a, .content .general-one-col a, .content .general-right a, .pane-node-field-slac-event-related-links a { color: #871628; }
+.extentions_normal-link, .content .general-left a, .content .general-one-col a, .content .general-right a, .pane-node-field-slac-event-related-links a { color: #0c5791; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000035}}
 .extentions_normal-link:hover, .content .general-left a:hover, .content .general-one-col a:hover, .content .general-right a:hover, .pane-node-field-slac-event-related-links a:hover { text-decoration: underline; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\0000310}}
 .content .extentions_normal-link_a a { color: #706161; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\0000313}}
-.content .extentions_normal-link_a a:hover { text-decoration: underline; color: #871628; }
+.content .extentions_normal-link_a a:hover { text-decoration: underline; color: #0c5791; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\0000320}}
 .extentions_people_link_sidebar:link, .profile-info-full .profile-textformatter-list a:link { color: #635c2c; text-decoration: none; }
@@ -470,7 +470,7 @@ ul.sf-menu.sf-accordion.sf-expanded > li > ul a:after { display: none; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\0000338}}
 a { color: #222222; text-decoration: none; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\0000341}}
-a:hover { color: #871628; }
+a:hover { color: #0c5791; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\0000358}}
 .content .general-right .panel-pane ul li a.active, .content .general-right .panel-pane ul li a.active-item { text-decoration: underline; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\0000362}}
@@ -505,7 +505,7 @@ h2.faq-details-title, h2.faq-answer-title { font-size: 16px; font-size: 1rem; co
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\00003109}}
 h3 { font-size: 18px; font-size: 1.125rem; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\00003112}}
-.event-listing-item h3 { color: #871628; }
+.event-listing-item h3 { color: #0c5791; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\00003114}}
 .event-listing-item h3 a { color: inherit; }
 
@@ -514,17 +514,17 @@ html { font-family: Arial, Helvetica, sans-serif; line-height: 1.25; -webkit-fon
 
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\00003131}}
 .page-basic-io .top-wrapper > .header .inside, .page-basic-io .top-wrapper > .top-menu .inside { max-width: 1174px; _width: 1174px; padding-left: 13px; padding-right: 13px; margin-left: auto; margin-right: auto; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/compass-sourcemaps-0\.12\.2\.sourcemaps\.57a186c\/frameworks\/compass\/stylesheets\/compass\/utilities\/general\/_clearfix\.scss}line{font-family:\0000338}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/compass-0\.12\.6\/frameworks\/compass\/stylesheets\/compass\/utilities\/general\/_clearfix\.scss}line{font-family:\0000338}}
 .page-basic-io .top-wrapper > .header .inside:after, .page-basic-io .top-wrapper > .top-menu .inside:after { content: ""; display: table; clear: both; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\00003136}}
 .page-basic > .content, .page-basic > .header, .page-basic > .header-menu, .page-basic > .top-menu, .page-basic > .main-menu, .page-basic > .site-title, .page-basic > .footer-first, .page-basic > .footer-seccond { /*+susy-grid-background +at-breakpoint($tablet) +susy-grid-background +at-breakpoint($small-desktop) +susy-grid-background +at-breakpoint($large-desktop) +susy-grid-background  */ }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\00003144}}
 .page-basic > .content > .inside, .page-basic > .header > .inside, .page-basic > .header-menu > .inside, .page-basic > .top-menu > .inside, .page-basic > .main-menu > .inside, .page-basic > .site-title > .inside, .page-basic > .footer-first > .inside, .page-basic > .footer-seccond > .inside { max-width: 1174px; _width: 1174px; padding-left: 13px; padding-right: 13px; margin-left: auto; margin-right: auto; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/compass-sourcemaps-0\.12\.2\.sourcemaps\.57a186c\/frameworks\/compass\/stylesheets\/compass\/utilities\/general\/_clearfix\.scss}line{font-family:\0000338}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/compass-0\.12\.6\/frameworks\/compass\/stylesheets\/compass\/utilities\/general\/_clearfix\.scss}line{font-family:\0000338}}
 .page-basic > .content > .inside:after, .page-basic > .header > .inside:after, .page-basic > .header-menu > .inside:after, .page-basic > .top-menu > .inside:after, .page-basic > .main-menu > .inside:after, .page-basic > .site-title > .inside:after, .page-basic > .footer-first > .inside:after, .page-basic > .footer-seccond > .inside:after { content: ""; display: table; clear: both; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\00003155}}
-.page-basic > .header { background-color: #871628; }
+.page-basic > .header { background-color: #0c5791; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\00003158}}
 .page-basic > .header .header-wrapper { padding: 10px 0 7px; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\00003161}}
@@ -607,7 +607,7 @@ ul.tabs li a:hover, .action-links li a:hover { background-color: #2e2e2e; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\00003323}}
 .mobile-block .header-menu ul li a { color: #666666; display: block; text-decoration: none; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\00003327}}
-.mobile-block .header-menu ul li a:hover { color: #871628; }
+.mobile-block .header-menu ul li a:hover { color: #0c5791; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\00003333}}
 .pane-system-user-menu { text-align: right; color: white; }
@@ -694,7 +694,7 @@ ul.tabs li a:hover, .action-links li a:hover { background-color: #2e2e2e; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\00003517}}
 .share-block-wrapper a { font-size: 21px; font-size: 1.3125rem; color: #999999 !important; margin: 0; width: 21px; height: 22px; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\00003523}}
-.share-block-wrapper a:hover { color: #871628 !important; }
+.share-block-wrapper a:hover { color: #0c5791 !important; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\00003530}}
 .pane-page-site-name { font-size: 26px; font-size: 1.625rem; }
@@ -764,7 +764,7 @@ ul.tabs li a:hover, .action-links li a:hover { background-color: #2e2e2e; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\00003674}}
 .social-icon-block > div a:after { position: absolute; top: 50%; left: 50%; margin-top: -22px; margin-left: -18px; font-size: 35px; font-size: 2.1875rem; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\00003684}}
-.social-icon-block > div a:hover { color: #871628; }
+.social-icon-block > div a:hover { color: #0c5791; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\00003688}}
 .social-icon-block > div.social-icon-twitter a:after { content: "\e610"; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\00003692}}
@@ -813,9 +813,9 @@ ul.tabs li a:hover, .action-links li a:hover { background-color: #2e2e2e; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\00003790}}
 .pager li.pager-current { background-color: #ebebdf; padding: 14px 11px 10px !important; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\00003793}}
-.pager li a { display: block; color: #871628; padding: 14px 11px 10px; }
+.pager li a { display: block; color: #0c5791; padding: 14px 11px 10px; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\00003797}}
-.pager li a:hover { background-color: #871628; color: white; text-decoration: none !important; }
+.pager li a:hover { background-color: #0c5791; color: white; text-decoration: none !important; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\00003802}}
 .event-calendar-page .pager { margin-top: 0; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\00003804}}
@@ -823,7 +823,7 @@ ul.tabs li a:hover, .action-links li a:hover { background-color: #2e2e2e; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\00003813}}
 .event-calendar-page .pager li a { display: block; overflow: hidden; width: 100%; height: 100%; text-indent: -999px; color: #2e2e2e; position: absolute; top: 0; left: 0; line-height: 1; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\00003825}}
-.event-calendar-page .pager li a:hover { color: #871628; background: none; }
+.event-calendar-page .pager li a:hover { color: #0c5791; background: none; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\00003830}}
 .event-calendar-page .pager li a:before { position: absolute; font-size: 50px; font-size: 3.125rem; top: 45%; left: 0; margin-top: -25px; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\00003840}}
@@ -899,7 +899,7 @@ ul.tabs li a:hover, .action-links li a:hover { background-color: #2e2e2e; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\00003981}}
 .calendar-page table tbody td a { padding: 6px; display: inline-block; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\00003984}}
-.calendar-page table tbody td a.active { background-color: #871628; color: white; font-weight: bold; }
+.calendar-page table tbody td a.active { background-color: #0c5791; color: white; font-weight: bold; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\00003997}}
 .faq-list li.inactive .views-field-title:before { content: "+"; margin-top: -9px; }
@@ -910,7 +910,7 @@ ul.tabs li a:hover, .action-links li a:hover { background-color: #2e2e2e; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000031011}}
 .faq-list li:last-child { border-bottom: 0; margin-bottom: 0; padding-bottom: 0; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000031016}}
-.faq-list .views-field-title { cursor: pointer; color: #871628; font-weight: bold; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; position: relative; padding-left: 15px; }
+.faq-list .views-field-title { cursor: pointer; color: #0c5791; font-weight: bold; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; position: relative; padding-left: 15px; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000031023}}
 .faq-list .views-field-title:hover { text-decoration: none; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000031026}}
@@ -941,7 +941,7 @@ ul.tabs li a:hover, .action-links li a:hover { background-color: #2e2e2e; }
 .front .pane-page-content .general-left .panels-ipe-portlet-wrapper { margin-bottom: 36px; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000031113}}
-.pane-page-content .general-left .pane-menu-tree h2.pane-title, .pane-page-content .general-left-title .pane-menu-tree h2.pane-title, .pane-page-content .general-title .pane-menu-tree h2.pane-title, .pane-page-content .general-left .pane-menu-tree h2.panel-title, .pane-page-content .general-left-title .pane-menu-tree h2.panel-title, .pane-page-content .general-title .pane-menu-tree h2.panel-title { border-bottom: 0 none; color: #871628; font-size: 22px; font-size: 1.375rem; font-weight: normal; padding-bottom: 5px; }
+.pane-page-content .general-left .pane-menu-tree h2.pane-title, .pane-page-content .general-left-title .pane-menu-tree h2.pane-title, .pane-page-content .general-title .pane-menu-tree h2.pane-title, .pane-page-content .general-left .pane-menu-tree h2.panel-title, .pane-page-content .general-left-title .pane-menu-tree h2.panel-title, .pane-page-content .general-title .pane-menu-tree h2.panel-title { border-bottom: 0 none; color: #0c5791; font-size: 22px; font-size: 1.375rem; font-weight: normal; padding-bottom: 5px; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000031121}}
 h2.pane-title i, h2.panel-title i { text-transform: capitalize; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000031125}}
@@ -1022,13 +1022,13 @@ article.node-blog.node-teaser .separator { border-bottom: 3px solid white; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000031314}}
 article.node-blog.node-teaser header h2 { font-size: 1.25em; padding: 0; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000031317}}
-article.node-blog.node-teaser header h2 a { color: #871628; display: block; padding: 13px 35px 9px 13px; position: relative; }
+article.node-blog.node-teaser header h2 a { color: #0c5791; display: block; padding: 13px 35px 9px 13px; position: relative; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000031322}}
 article.node-blog.node-teaser header h2 a:after { content: "\e608"; position: absolute; right: 3px; top: 50%; margin-top: -17px; font-size: 30px; font-size: 1.875rem; color: #c8d3c7; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000031331}}
 article.node-blog.node-teaser header h2 a:hover { background-color: #ebebdf; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000031333}}
-article.node-blog.node-teaser header h2 a:hover:after { color: #871628; }
+article.node-blog.node-teaser header h2 a:hover:after { color: #0c5791; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000031337}}
 article.node-blog.node-teaser header .submitted { padding: 9px 13px 7px; font-size: 12px; font-size: 0.75rem; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000031341}}
@@ -1100,7 +1100,7 @@ article.node-blog.node-teaser .links li a { display: block; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000031472}}
 .profile-info-brief .views-field-field-prf-bio-bio { font-size: 14px; font-size: 0.875rem; margin-bottom: 10px; line-height: 20px; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000031477}}
-.profile-info-brief .views-more-link { margin-top: 15px; display: inline-block; vertical-align: middle; text-transform: uppercase; color: #871628; font-size: 11px; font-size: 0.6875rem; letter-spacing: 0.05em; width: 100%; line-height: 1; }
+.profile-info-brief .views-more-link { margin-top: 15px; display: inline-block; vertical-align: middle; text-transform: uppercase; color: #0c5791; font-size: 11px; font-size: 0.6875rem; letter-spacing: 0.05em; width: 100%; line-height: 1; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000031487}}
 .profile-info-brief .views-more-link:after { content: "\e61e"; font-size: 14px; font-size: 0.875rem; vertical-align: middle; line-height: 1; }
 
@@ -1193,7 +1193,7 @@ table.sticky-table td, table.sticky-table th { border: 1px solid #f3f1eb; paddin
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000031708}}
 .news-landing h2, .kb-articles h2 { font-size: 18px; font-size: 1.125rem; margin-bottom: 4px; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000031711}}
-.news-landing h2 a, .kb-articles h2 a { color: #871628; }
+.news-landing h2 a, .kb-articles h2 a { color: #0c5791; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000031713}}
 .news-landing .field-name-body, .kb-articles .field-name-body { margin-bottom: 5px; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000031715}}
@@ -1267,7 +1267,7 @@ table.sticky-table td, table.sticky-table th { border: 1px solid #f3f1eb; paddin
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000031879}}
 .more-link-template, .last-three-news .more-link, .event-calendar-block .more-link { border-top: 1px solid #f3f1eb; border-bottom: 1px solid #f3f1eb; display: block; padding: 2px 0 4px; text-align: right; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000031885}}
-.more-link-template a, .last-three-news .more-link a, .event-calendar-block .more-link a { color: #871628; font-size: 11px; font-size: 0.6875rem; display: inline-block; vertical-align: middle; }
+.more-link-template a, .last-three-news .more-link a, .event-calendar-block .more-link a { color: #0c5791; font-size: 11px; font-size: 0.6875rem; display: inline-block; vertical-align: middle; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000031890}}
 .more-link-template a:after, .last-three-news .more-link a:after, .event-calendar-block .more-link a:after { content: "\e605"; line-height: 1; vertical-align: middle; display: inline-block; font-size: 9px; font-size: 0.5625rem; }
 
@@ -1278,7 +1278,7 @@ table.sticky-table td, table.sticky-table th { border: 1px solid #f3f1eb; paddin
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000031905}}
 .last-three-news .views-field-title { margin-bottom: 2px; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000031907}}
-.last-three-news .views-field-title a { color: #871628; font-size: 12px; font-size: 0.75rem; }
+.last-three-news .views-field-title a { color: #0c5791; font-size: 12px; font-size: 0.75rem; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000031913}}
 .last-three-news .views-field-created { font-size: 11px; font-size: 0.6875rem; color: #777777; }
 
@@ -1315,7 +1315,7 @@ ul.news-archive-class li .item-list { margin-left: 10px; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000031998}}
 .event-block .event { color: #626262; padding-right: 25px; margin-bottom: 10px; line-height: 16px; position: relative; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032004}}
-.event-block a { color: #871628; }
+.event-block a { color: #0c5791; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032007}}
 .event-block a.icon { position: absolute; line-height: 1; right: 3px; top: 0; font-size: 15px; font-size: 0.9375rem; color: #626262; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032014}}
@@ -1338,7 +1338,7 @@ ul.news-archive-class li .item-list { margin-left: 10px; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032055}}
 .general-right .pane-bundle-slac-sidebar-block ul { list-style-type: disc; padding-left: 30px; font-size: 12px; font-size: 0.75rem; margin-bottom: 12px; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032060}}
-.general-right .pane-bundle-slac-sidebar-block ul li { color: #871628; margin-bottom: 7px !important; }
+.general-right .pane-bundle-slac-sidebar-block ul li { color: #0c5791; margin-bottom: 7px !important; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032063}}
 .general-right .pane-bundle-slac-sidebar-block ul li a { color: inherit; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032065}}
@@ -1374,7 +1374,7 @@ ul.news-archive-class li .item-list { margin-left: 10px; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032122}}
 .service-listing h2 { font-size: 20px; font-size: 1.25rem; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032125}}
-.service-listing h2 a { color: #871628; }
+.service-listing h2 a { color: #0c5791; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032128}}
 .service-listing p { font-size: 14px; font-size: 0.875rem; line-height: 20px; }
 
@@ -1385,9 +1385,9 @@ ul.news-archive-class li .item-list { margin-left: 10px; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032158}}
 .services-sidebar .views-label { font-weight: bold; margin-bottom: 5px; text-transform: uppercase; display: inline-block; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032166}}
-.services-sidebar .views-field-field-slac-sc-request-link a { padding: 6px 12px; color: white; background-color: #871628; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; }
+.services-sidebar .views-field-field-slac-sc-request-link a { padding: 6px 12px; color: white; background-color: #0c5791; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032171}}
-.services-sidebar .views-field-field-slac-sc-request-link a:hover { -webkit-box-shadow: 0 0 4px 1px white inset, 0 0 0 1px #871628; -moz-box-shadow: 0 0 4px 1px white inset, 0 0 0 1px #871628; box-shadow: 0 0 4px 1px white inset, 0 0 0 1px #871628; text-shadow: 1px 1px 1px black; text-decoration: none; }
+.services-sidebar .views-field-field-slac-sc-request-link a:hover { -webkit-box-shadow: 0 0 4px 1px white inset, 0 0 0 1px #0c5791; -moz-box-shadow: 0 0 4px 1px white inset, 0 0 0 1px #0c5791; box-shadow: 0 0 4px 1px white inset, 0 0 0 1px #0c5791; text-shadow: 1px 1px 1px black; text-decoration: none; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032178}}
 .services-sidebar .view-content .views-field { margin-bottom: 25px; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032181}}
@@ -1422,7 +1422,7 @@ form.search-form input[type="submit"] { position: absolute; top: -2px; right: 0;
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032245}}
 #slac-search-options .form-radios label, #slac-search-options .form-radios input[type='radio'] { margin: 0; padding: 0; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032249}}
-#slac-search-options .form-radios label { color: #871628; font-size: 11px; font-size: 0.6875rem; }
+#slac-search-options .form-radios label { color: #0c5791; font-size: 11px; font-size: 0.6875rem; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032253}}
 #slac-search-options .form-radios input[type='radio'] { cursor: pointer; }
 
@@ -1439,7 +1439,7 @@ ol.search-results .search-info { color: #474747; text-align: right; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032294}}
 ol.search-results .search-snippet { font-size: 14px; font-size: 0.875rem; margin: 5px 0; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032297}}
-ol.search-results .search-snippet strong { font-weight: bold; color: #871628; }
+ol.search-results .search-snippet strong { font-weight: bold; color: #0c5791; }
 
 @media (min-width: 690px) { @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032303}}
   form.search-form { *zoom: 1; }
@@ -1525,11 +1525,11 @@ ol.search-results .search-snippet strong { font-weight: bold; color: #871628; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032453}}
 .add-to-calendar { background-color: #e1e1e1; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032456}}
-.add-to-calendar a { color: #871628; display: inline-block; vertical-align: middle; }
+.add-to-calendar a { color: #0c5791; display: inline-block; vertical-align: middle; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032460}}
 .add-to-calendar a:before { content: "\e627"; color: #999999; font-size: 23px; font-size: 1.4375rem; display: inline-block; vertical-align: middle; line-height: 1; margin-right: 5px; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032470}}
-.add-to-calendar a:hover:before { color: #871628; }
+.add-to-calendar a:hover:before { color: #0c5791; }
 
 @media (min-width: 355px) { @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032475}}
   .event-wrapper .pane-node-field-event-image { border: 3px solid white; margin-left: 0; } }
@@ -1619,7 +1619,7 @@ ol.search-results .search-snippet strong { font-weight: bold; color: #871628; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032653}}
 .pane-menu-tree > div { background-color: whitesmoke; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032655}}
-.pane-menu-tree > div > ul.menu { font-size: 14px; font-size: 0.875rem; color: #871628; }
+.pane-menu-tree > div > ul.menu { font-size: 14px; font-size: 0.875rem; color: #0c5791; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032660}}
 .pane-menu-tree > div > ul.menu > li > ul { font-size: 12px; font-size: 0.75rem; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032664}}
@@ -1702,7 +1702,7 @@ ol.search-results .search-snippet strong { font-weight: bold; color: #871628; }
 #imageDetails p { font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-size: 0.875rem; line-height: 16px; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032818}}
-.lightbox-download-link { margin: 10px 0; display: block; font-size: 10px; font-size: 0.625rem; font-weight: bold; color: #871628; }
+.lightbox-download-link { margin: 10px 0; display: block; font-size: 10px; font-size: 0.625rem; font-weight: bold; color: #0c5791; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032824}}
 .lightbox-download-link:after { content: "\e630"; margin-left: 5px; font-size: 16px; font-size: 1rem; }
 
@@ -1884,7 +1884,7 @@ ol.search-results .search-snippet strong { font-weight: bold; color: #871628; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033178}}
 .page-basic-io .calendar-page table tbody td a.active { color: white; background: #2582ca; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033182}}
-.page-basic-io .faq-list .views-field-title { color: #2582ca; }
+.page-basic-io .faq-list .views-field-title { color: #0c5791; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033192}}
 .page-basic-io .basic-format-text p, .page-basic-io article.node-blog.view-mode-full .field-type-text-with-summary p, article.node-blog.view-mode-full .page-basic-io .field-type-text-with-summary p, .page-basic-io article.node-blog.view-mode-full .blog-wrapper p, article.node-blog.view-mode-full .page-basic-io .blog-wrapper p, .page-basic-io .article_panel_layout .pane-node-body p, .article_panel_layout .page-basic-io .pane-node-body p, .page-basic-io .service-body p, .page-basic-io .node-slac-sc-catalog-item p, .page-basic-io .node-support-ticket .field-type-text-with-summary p, .node-support-ticket .page-basic-io .field-type-text-with-summary p, .page-basic-io article.node-blog.view-mode-full .field-type-text-with-summary p, .page-basic-io article.node-blog.view-mode-full .blog-wrapper p, .page-basic-io .article_panel_layout .pane-node-body p, .page-basic-io .service-body p, .page-basic-io .node-slac-sc-catalog-item p, .page-basic-io .node-support-ticket .field-type-text-with-summary p { font-size: 14px; line-height: 22px; margin-bottom: 10px; color: #353535; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033198}}
