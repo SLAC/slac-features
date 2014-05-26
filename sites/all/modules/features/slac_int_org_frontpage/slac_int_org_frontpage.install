@@ -95,24 +95,29 @@ function _slac_int_org_frontpage_install__panes($did) {
   $field_collection_item->setHostEntity('fieldable_panels_pane', $slideshow_fpp);
   entity_save('field_collection_item', $field_collection_item);
 
-  $projects_files = _slac_int_org_frontpage_install__projects_images();
-
-  // Create host entity for field collection (frontpage projects block).
-  $projects_fpp = (object) array(
-    'title' => t('Research Projects'),
-    'bundle' => 'slac_projects',
+  $paragraph_fpp = (object) array(
+    'title' => '',
+    'bundle' => 'slac_sidebar_block',
+    'field_sb_body' => array(
+      LANGUAGE_NONE => array(
+        array(
+          'value' => '<p>Mauris vulputate elit id lorem eleifend, non luctus neque bibendum. Ut tortor lectus, ultricies facilisis scelerisque ut; fringilla ' .
+            'sed nisl. Donec adipiscing purus a purus pretium, at porta neque posuere. Morbi quis massa dictum, consectetur elit non, tempus lorem. Nunc sed' .
+            ' nibh velit! Fusce cursus cursus eros, ac vulputate lacus vehicula sed. Cras lobortis urna elit. Nulla auctor dictum orci a euismod. Donec ' .
+            'tincidunt urna in ornare ultrices. <a href="#">Fusce a sapien libero</a> Cras dignissim molestie augue, ac pulvinar tortor elementum ut.</p>' .
+            '<p> </p><p>Vivamus ut cursus augue. Fusce magna lacus, aliquam sit amet tincidunt nec, luctus et nunc. Aliquam ut mi nec erat vestibulum placerat porta ' .
+            'nec dui. Nullam aliquet quam vel felis viverra condimentum! Curabitur congue libero ut suscipit interdum. Aenean aliquet ornare dapibus. Fusce luctus ' .
+            'eget lorem sed feugiat. Sed at nunc ornare, placerat turpis ut, sagittis leo. Vestibulum sed tellus nibh. Aliquam vel lacus quis neque euismod ' .
+            'accumsan. Quisque non risus turpis. Morbi ipsum diam, blandit ut sagittis at, congue gravida libero. Vivamus molestie nunc in justo tincidunt, ' .
+            'vel mattis est mattis! Praesent et gravida justo. Ut non rhoncus diam. Maecenas eu suscipit nisi. Sed congue iaculis velit, eget scelerisque metus' .
+            ' blandit vitae. Sed ornare vestibulum malesuada. Vestibulum sed diam malesuada, fringilla mi in, viverra ipsum! Mauris tincidunt leo id ligula ' .
+            'elementum, sed egestas mauris tempor. Nam sodales ultricies rhoncus. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>',
+          'format' => 'full_html',
+        )
+      )
+    ),
   );
-  entity_save('fieldable_panels_pane', $projects_fpp);
-
-  for ($i = 0; $i <= 5; $i++) {
-    $field_collection_item = entity_create('field_collection_item', array('field_name' => 'field_project_info'));
-    $field_collection_item->field_project_info_image = array(LANGUAGE_NONE => array(array('fid' => $projects_files[$i]->fid)));
-    $field_collection_item->field_project_info_link = array(LANGUAGE_NONE => array(array('url' => 'http://slac.stanford.edu')));
-    $field_collection_item->field_project_info_name = array(LANGUAGE_NONE => array(array('value' => t('Project ') . ($i+1))));
-    $field_collection_item->field_project_info_description = array(LANGUAGE_NONE => array(array('value' => 'Stet clita kasd gubergren, no sea takimata sanctus est. Lorem ipsum dolor sit amet, consetetur sadipscing elitr. ' . ($i+1))));
-    $field_collection_item->setHostEntity('fieldable_panels_pane', $projects_fpp);
-    entity_save('field_collection_item', $field_collection_item);
-  }
+  entity_save('fieldable_panels_pane', $paragraph_fpp);
 
   $mission_fpp = (object) array(
     'title' => t('Mission and Vision'),
@@ -120,7 +125,10 @@ function _slac_int_org_frontpage_install__panes($did) {
     'field_sb_body' => array(
       LANGUAGE_NONE => array(
         array(
-          'value' => 'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc sed accumsan tellus. Suspendisse et dui vitae diam hendrerit adipiscing? Duis et ante urna. Suspendisse nisi ipsum, porttitor a hendrerit et; bibendum a sapien. Quisque at posuere nisi. In imperdiet sed. Vivamus laoreet eget metus a tincidunt. Morbi ac lorem sed turpis pulvinar gravida. Nunc porttitor arcu malesuada vestibulum pellentesque. Nulla hendrerit enim in blandit facilisis. Nulla porta ullamcorper odio non viverra? Morbi vestibulum sodales euismod!',
+          'value' => 'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc sed accumsan tellus. Suspendisse et dui ' .
+            'vitae diam hendrerit adipiscing? <a href="#">Duis et ante urna</a> Suspendisse nisi ipsum, porttitor a hendrerit et; bibendum a sapien. Quisque at posuere nisi. ' .
+            'In imperdiet sed. Vivamus laoreet eget metus a tincidunt. Morbi ac lorem sed turpis pulvinar gravida. Nunc porttitor arcu malesuada vestibulum ' .
+            'pellentesque. Nulla hendrerit enim in blandit facilisis. Nulla porta ullamcorper odio non viverra? Morbi vestibulum sodales euismod!',
           'format' => 'full_html',
         )
       )
@@ -159,6 +167,20 @@ function _slac_int_org_frontpage_install__panes($did) {
     entity_save('field_collection_item', $field_collection_item);
   }
 
+  $slides_description_fpp = (object) array(
+    'title' => '',
+    'bundle' => 'slac_sidebar_block',
+    'field_sb_body' => array(
+      LANGUAGE_NONE => array(
+        array(
+          'value' => 'Suspendisse eget blandit ante. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed pulvinar ullamcorper ante, eget tincidunt.',
+          'format' => 'full_html',
+        )
+      )
+    ),
+  );
+  entity_save('fieldable_panels_pane', $slides_description_fpp);
+
   $frontpage_panels_panes = array(
     array(
       'did' => $did,
@@ -179,7 +201,7 @@ function _slac_int_org_frontpage_install__panes($did) {
       'did' => $did,
       'panel' => 'left',
       'type' => 'fieldable_panels_pane',
-      'subtype' => 'uuid:' . $projects_fpp->uuid,
+      'subtype' => 'uuid:' . $paragraph_fpp->uuid,
       'shown' => 1,
       'access' => array(),
       'configuration' => array(),
@@ -187,7 +209,7 @@ function _slac_int_org_frontpage_install__panes($did) {
       'style' => array(),
       'css' => array(),
       'extras' => array(),
-      'position' => 0,
+      'position' => 1,
       'locks' => array(),
     ),
     array(
@@ -224,6 +246,23 @@ function _slac_int_org_frontpage_install__panes($did) {
       'css' => array(),
       'extras' => array(),
       'position' => 3,
+      'locks' => array(),
+    ),
+    array(
+      'did' => $did,
+      'panel' => 'right_inner',
+      'type' => 'fieldable_panels_pane',
+      'subtype' => 'uuid:' . $slides_description_fpp->uuid,
+      'shown' => 1,
+      'access' => array(),
+      'configuration' => array(
+        'view_mode' => 'full',
+      ),
+      'cache' => array(),
+      'style' => array(),
+      'css' => array(),
+      'extras' => array(),
+      'position' => 4,
       'locks' => array(),
     ),
     array(
@@ -303,33 +342,6 @@ function _slac_int_org_frontpage_install__slideshow_images() {
   foreach (array(1, 2) as $i) {
     $filename =  'slideshow_slide' . $i . '.jpg';
     $source = DRUPAL_ROOT . '/' . drupal_get_path('module', 'slac_int_org_frontpage') . '/' . $filename;
-    $destination = $destination_directory . '/' . $filename;
-    $uri = file_unmanaged_copy($source, $destination);
-
-    $file = new stdClass();
-    $file->fid = NULL;
-    $file->uri = $uri;
-    $file->filename = drupal_basename($uri);
-    $file->filemime = file_get_mimetype($file->uri);
-    $file->uid      = $user->uid;
-    $file->status   = FILE_STATUS_PERMANENT;
-    $files[] = file_save($file);
-  }
-
-  return $files;
-}
-
-/**
- * Create images for projects fpp.
- */
-function _slac_int_org_frontpage_install__projects_images() {
-  global $user;
-  $files = array();
-  $destination_directory = 'public://projects_block_images';
-  file_prepare_directory($destination_directory, FILE_CREATE_DIRECTORY);
-  foreach (array(1, 2, 3, 4, 5, 6) as $i) {
-    $filename =  'frontpage_project' . $i . '.jpg';
-    $source = DRUPAL_ROOT . '/' . drupal_get_path('module', 'slac_int_org_frontpage') . '/projects_block_images/' . $filename;
     $destination = $destination_directory . '/' . $filename;
     $uri = file_unmanaged_copy($source, $destination);
 
