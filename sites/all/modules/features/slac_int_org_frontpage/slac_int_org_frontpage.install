@@ -119,13 +119,18 @@ function _slac_int_org_frontpage_install__panes($did) {
   );
   entity_save('fieldable_panels_pane', $paragraph_fpp);
 
+
+  $file = _slac_int_org_frontpage_install__one_image();
+
   $mission_fpp = (object) array(
     'title' => t('Mission and Vision'),
     'bundle' => 'slac_sidebar_block',
     'field_sb_body' => array(
       LANGUAGE_NONE => array(
         array(
-          'value' => 'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc sed accumsan tellus. Suspendisse et dui ' .
+          'value' => '[[{"fid":"' . $file->fid . '","view_mode":"crop_crop_square","fields":{"format":"crop_crop_square","field_file_image_alt_text[und][0][value]":"",' .
+            '"field_file_image_title_text[und][0][value]":"","field_file_image_description[und][0][value]":"","thumbnails":"crop_crop_square","pp_lightbox":true,' .
+            '"pp_description":false},"type":"media","attributes":{"height":150,"width":150,"style":"float: right;","class":"media-element file-crop-crop-square"}}]]Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc sed accumsan tellus. Suspendisse et dui ' .
             'vitae diam hendrerit adipiscing? <a href="#">Duis et ante urna</a> Suspendisse nisi ipsum, porttitor a hendrerit et; bibendum a sapien. Quisque at posuere nisi. ' .
             'In imperdiet sed. Vivamus laoreet eget metus a tincidunt. Morbi ac lorem sed turpis pulvinar gravida. Nunc porttitor arcu malesuada vestibulum ' .
             'pellentesque. Nulla hendrerit enim in blandit facilisis. Nulla porta ullamcorper odio non viverra? Morbi vestibulum sodales euismod!',
@@ -136,7 +141,7 @@ function _slac_int_org_frontpage_install__panes($did) {
   );
   entity_save('fieldable_panels_pane', $mission_fpp);
 
-  $research_fpp = (object) array(
+  /*$research_fpp = (object) array(
     'title' => t('Research Openings'),
     'bundle' => 'slac_sidebar_block',
     'field_sb_body' => array(
@@ -148,7 +153,7 @@ function _slac_int_org_frontpage_install__panes($did) {
       )
     ),
   );
-  entity_save('fieldable_panels_pane', $research_fpp);
+  entity_save('fieldable_panels_pane', $research_fpp);*/
 
   $gallery_files = _slac_int_org_frontpage_install__gallery_images();
 
@@ -173,7 +178,7 @@ function _slac_int_org_frontpage_install__panes($did) {
     'field_sb_body' => array(
       LANGUAGE_NONE => array(
         array(
-          'value' => 'Suspendisse eget blandit ante. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed pulvinar ullamcorper ante, eget tincidunt.',
+          'value' => 'Suspendisse eget blandit ante. Interdum et malesuada fames ac ante ipsum primis in faucibus.',
           'format' => 'full_html',
         )
       )
@@ -306,7 +311,7 @@ function _slac_int_org_frontpage_install__panes($did) {
       'position' => 1,
       'locks' => array(),
     ),
-    array(
+    /*array(
       'did' => $did,
       'panel' => 'right',
       'type' => 'fieldable_panels_pane',
@@ -324,7 +329,7 @@ function _slac_int_org_frontpage_install__panes($did) {
       'extras' => array(),
       'position' => 2,
       'locks' => array(),
-    ),
+    ),*/
   );
   foreach ($frontpage_panels_panes as $frontpage_panels_pane) {
     drupal_write_record('panels_pane', $frontpage_panels_pane);
@@ -383,4 +388,28 @@ function _slac_int_org_frontpage_install__gallery_images() {
   }
 
   return $files;
+}
+
+/**
+ * Create images for projects fpp.
+ */
+function _slac_int_org_frontpage_install__one_image() {
+  global $user;
+  $destination_directory = 'public://';
+  file_prepare_directory($destination_directory, FILE_CREATE_DIRECTORY);
+  $filename =  'frontpage_project5.jpg';
+  $source = DRUPAL_ROOT . '/' . drupal_get_path('module', 'slac_int_org_frontpage') . '/projects_block_images/' . $filename;
+  $destination = $destination_directory . '/' . $filename;
+  $uri = file_unmanaged_copy($source, $destination);
+
+  $file = new stdClass();
+  $file->fid = NULL;
+  $file->uri = $uri;
+  $file->filename = drupal_basename($uri);
+  $file->filemime = file_get_mimetype($file->uri);
+  $file->uid      = $user->uid;
+  $file->status   = FILE_STATUS_PERMANENT;
+  $file = file_save($file);
+
+  return $file;
 }
