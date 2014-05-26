@@ -606,11 +606,14 @@ newsletter/*',
     $pane = new stdClass();
     $pane->pid = 'new-12';
     $pane->panel = 'user-search';
-    $pane->type = 'search_block';
-    $pane->subtype = 'search_block';
+    $pane->type = 'current_date';
+    $pane->subtype = 'current_date';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
@@ -623,6 +626,24 @@ newsletter/*',
     $display->panels['user-search'][0] = 'new-12';
     $pane = new stdClass();
     $pane->pid = 'new-13';
+    $pane->panel = 'user-search';
+    $pane->type = 'search_block';
+    $pane->subtype = 'search_block';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $display->content['new-13'] = $pane;
+    $display->panels['user-search'][1] = 'new-13';
+    $pane = new stdClass();
+    $pane->pid = 'new-14';
     $pane->panel = 'user-search';
     $pane->type = 'block';
     $pane->subtype = 'system-user-menu';
@@ -638,10 +659,10 @@ newsletter/*',
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-13'] = $pane;
-    $display->panels['user-search'][1] = 'new-13';
+    $display->content['new-14'] = $pane;
+    $display->panels['user-search'][2] = 'new-14';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
