@@ -399,14 +399,14 @@ function _slac_int_org_frontpage_install__one_image($style) {
 
   $pp_crop_styles = variable_get('pp_crop_wysiwyg_settings', array());
 
-  if (!in_array('crop_' . $style, $pp_crop_styles)) {
+  if (!in_array($style, $pp_crop_styles)) {
     $pp_crop_styles[$style] = $style;
     variable_set('pp_crop_wysiwyg_settings', $pp_crop_styles);
   }
 
   $destination_directory = 'public://';
   file_prepare_directory($destination_directory, FILE_CREATE_DIRECTORY);
-  $filename =  'frontpage_project5.jpg';
+  $filename =  'frontpage_project3.jpg';
   $source = DRUPAL_ROOT . '/' . drupal_get_path('module', 'slac_int_org_frontpage') . '/projects_block_images/' . $filename;
   $destination = $destination_directory . '/' . $filename;
   $uri = file_unmanaged_copy($source, $destination);
@@ -425,7 +425,7 @@ function _slac_int_org_frontpage_install__one_image($style) {
 
   foreach ($pp_crop_styles as $img_style) {
     $derivative_url = image_style_url($img_style, $file->uri);
-    $success = file_exists($derivative_url) || image_style_create_derivative($img_style, $file->uri, $derivative_url);
+    $success = file_exists($derivative_url) || image_style_create_derivative(image_style_load($img_style), $file->uri, $derivative_url);
 
     if (!$success) {
       file_create_url($derivative_url);
