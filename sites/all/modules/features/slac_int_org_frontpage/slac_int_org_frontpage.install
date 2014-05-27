@@ -120,7 +120,7 @@ function _slac_int_org_frontpage_install__panes($did) {
   entity_save('fieldable_panels_pane', $paragraph_fpp);
 
 
-  $file = _slac_int_org_frontpage_install__one_image();
+  $file = _slac_int_org_frontpage_install__one_image('crop_square');
 
   $mission_fpp = (object) array(
     'title' => t('Mission and Vision'),
@@ -130,7 +130,7 @@ function _slac_int_org_frontpage_install__panes($did) {
         array(
           'value' => '[[{"fid":"' . $file->fid . '","view_mode":"crop_crop_square","fields":{"format":"crop_crop_square","field_file_image_alt_text[und][0][value]":"",' .
             '"field_file_image_title_text[und][0][value]":"","field_file_image_description[und][0][value]":"","thumbnails":"crop_crop_square","pp_lightbox":true,' .
-            '"pp_description":false},"type":"media","attributes":{"height":150,"width":150,"style":"float: right;","class":"media-element file-crop-crop-square"}}]]Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc sed accumsan tellus. Suspendisse et dui ' .
+            '"pp_description":false},"type":"media","attributes":{"height":200,"width":150,"style":"float: right;","class":"media-element file-crop-crop-square"}}]]Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc sed accumsan tellus. Suspendisse et dui ' .
             'vitae diam hendrerit adipiscing? <a href="#">Duis et ante urna</a> Suspendisse nisi ipsum, porttitor a hendrerit et; bibendum a sapien. Quisque at posuere nisi. ' .
             'In imperdiet sed. Vivamus laoreet eget metus a tincidunt. Morbi ac lorem sed turpis pulvinar gravida. Nunc porttitor arcu malesuada vestibulum ' .
             'pellentesque. Nulla hendrerit enim in blandit facilisis. Nulla porta ullamcorper odio non viverra? Morbi vestibulum sodales euismod!',
@@ -391,9 +391,9 @@ function _slac_int_org_frontpage_install__gallery_images() {
 }
 
 /**
- * Create images for projects fpp.
+ * Create images and the image style derivative.
  */
-function _slac_int_org_frontpage_install__one_image() {
+function _slac_int_org_frontpage_install__one_image($style) {
   global $user;
   $destination_directory = 'public://';
   file_prepare_directory($destination_directory, FILE_CREATE_DIRECTORY);
@@ -410,6 +410,12 @@ function _slac_int_org_frontpage_install__one_image() {
   $file->uid      = $user->uid;
   $file->status   = FILE_STATUS_PERMANENT;
   $file = file_save($file);
+  $derivative_url = image_style_url($style, $file->uri);
+  $success = file_exists($derivative_url) || image_style_create_derivative($style, $file->uri, $derivative_url);
+
+  if (!$success) {
+    file_create_url($derivative_url);
+  }
 
   return $file;
 }
