@@ -801,11 +801,11 @@ ul.tabs li a:hover, .action-links li a:hover { background-color: #2e2e2e; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\00003755}}
 .footer-seccond a { color: inherit; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\00003758}}
-.footer-seccond .pane-1, .footer-seccond .pane-2 { display: inline; }
+.footer-seccond .pane-1, .footer-seccond .pane-2, .footer-seccond .pane-site-address { display: inline; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\00003760}}
-.footer-seccond .pane-1 p, .footer-seccond .pane-2 p { display: block; }
+.footer-seccond .pane-1 p, .footer-seccond .pane-2 p, .footer-seccond .pane-site-address p { display: block; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\00003762}}
-.footer-seccond .pane-1 a, .footer-seccond .pane-2 a { text-transform: uppercase; font-weight: bold; }
+.footer-seccond .pane-1 a, .footer-seccond .pane-2 a, .footer-seccond .pane-site-address a { text-transform: uppercase; font-weight: bold; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\00003767}}
 .footer-seccond .pane-1 p { margin-bottom: 5px; }
 
