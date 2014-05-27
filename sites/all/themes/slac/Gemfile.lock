@@ -1,0 +1,8 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+
+PLATFORMS
+  x64-mingw32
+
+DEPENDENCIES

@@ -12,6 +12,7 @@ $plugin = array(
   'theme arguments' => array('id', 'content'),
   'css' => 'page_basic_io.css',
   'regions' => array(
+    'header-date' => t('Header Date'),
     'top-menu' => t('Top menu'),
     'user-search' => t('User controls and search'),
     'header-menu' => t('Header menu'),
