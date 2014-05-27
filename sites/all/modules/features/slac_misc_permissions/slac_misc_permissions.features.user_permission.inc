@@ -40,5 +40,15 @@ function slac_misc_permissions_user_default_permissions() {
     'module' => 'slac_admin_modules',
   );
 
+  // Exported permission: 'slac administer configuration'.
+  $permissions['slac administer configuration'] = array(
+    'name' => 'slac administer configuration',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'slac_configuration',
+  );
+
   return $permissions;
 }
