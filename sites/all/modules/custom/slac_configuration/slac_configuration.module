@@ -88,8 +88,6 @@ function slac_configuration_form($form, &$form_state) {
   );
 
   $form = system_settings_form($form);
-  // We don't want to call system_settings_form_submit(), so change #submit.
-  array_pop($form['#submit']);
   $form['#submit'][] = 'slac_configuration_submit';
   $form['#validate'][] = 'slac_configuration_validate';
 
