@@ -146,17 +146,11 @@ function default_site_template_default_panels_mini() {
     $pane = new stdClass();
     $pane->pid = 'new-2';
     $pane->panel = 'left';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
+    $pane->type = 'site_address';
+    $pane->subtype = 'site_address';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array(
-      'admin_title' => 'Site address',
-      'title' => '',
-      'body' => '2575 Sand Hill Road, Menlo Park, CA 94025',
-      'format' => 'full_html',
-      'substitute' => TRUE,
-    );
+    $pane->configuration = array();
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
