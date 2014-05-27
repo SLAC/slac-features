@@ -419,6 +419,9 @@ function _slac_int_org_frontpage_install__one_image($style) {
   $file->status   = FILE_STATUS_PERMANENT;
   $file = file_save($file);
 
+  // Add image style for lightbox to create derivative.
+  $pp_crop_styles['lightbox_image_popup'] = 'lightbox_image_popup';
+
   foreach ($pp_crop_styles as $img_style) {
     $derivative_url = image_style_url($img_style, $file->uri);
     $success = file_exists($derivative_url) || image_style_create_derivative($img_style, $file->uri, $derivative_url);
