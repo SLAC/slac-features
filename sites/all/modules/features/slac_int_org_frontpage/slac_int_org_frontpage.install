@@ -120,7 +120,7 @@ function _slac_int_org_frontpage_install__panes($did) {
   entity_save('fieldable_panels_pane', $paragraph_fpp);
 
 
-  $file = _slac_int_org_frontpage_install__one_image('crop_square');
+  $file = _slac_int_org_frontpage_install__one_image('block_brochures_thumbnail');
 
   $mission_fpp = (object) array(
     'title' => t('Mission and Vision'),
@@ -128,8 +128,8 @@ function _slac_int_org_frontpage_install__panes($did) {
     'field_sb_body' => array(
       LANGUAGE_NONE => array(
         array(
-          'value' => '[[{"fid":"' . $file->fid . '","view_mode":"crop_crop_square","fields":{"format":"crop_crop_square","field_file_image_alt_text[und][0][value]":"",' .
-            '"field_file_image_title_text[und][0][value]":"","field_file_image_description[und][0][value]":"","thumbnails":"crop_crop_square","pp_lightbox":true,' .
+          'value' => '[[{"fid":"' . $file->fid . '","view_mode":"crop_block_brochures_thumbnail","fields":{"format":"crop_block_brochures_thumbnail","field_file_image_alt_text[und][0][value]":"",' .
+            '"field_file_image_title_text[und][0][value]":"","field_file_image_description[und][0][value]":"","thumbnails":"crop_block_brochures_thumbnail","pp_lightbox":true,' .
             '"pp_description":false},"type":"media","attributes":{"height":200,"width":150,"style":"float: right;","class":"media-element file-crop-crop-square"}}]]Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc sed accumsan tellus. Suspendisse et dui ' .
             'vitae diam hendrerit adipiscing? <a href="#">Duis et ante urna</a> Suspendisse nisi ipsum, porttitor a hendrerit et; bibendum a sapien. Quisque at posuere nisi. ' .
             'In imperdiet sed. Vivamus laoreet eget metus a tincidunt. Morbi ac lorem sed turpis pulvinar gravida. Nunc porttitor arcu malesuada vestibulum ' .
@@ -395,6 +395,14 @@ function _slac_int_org_frontpage_install__gallery_images() {
  */
 function _slac_int_org_frontpage_install__one_image($style) {
   global $user;
+
+  $pp_crop_styles = variable_get('pp_crop_wysiwyg_settings', array());
+
+  if (!in_array('crop_' . $style, $pp_crop_styles)) {
+    $pp_crop_styles[$style] = $style;
+    variable_set('pp_crop_wysiwyg_settings', $pp_crop_styles);
+  }
+
   $destination_directory = 'public://';
   file_prepare_directory($destination_directory, FILE_CREATE_DIRECTORY);
   $filename =  'frontpage_project5.jpg';
@@ -410,11 +418,14 @@ function _slac_int_org_frontpage_install__one_image($style) {
   $file->uid      = $user->uid;
   $file->status   = FILE_STATUS_PERMANENT;
   $file = file_save($file);
-  $derivative_url = image_style_url($style, $file->uri);
-  $success = file_exists($derivative_url) || image_style_create_derivative($style, $file->uri, $derivative_url);
 
-  if (!$success) {
-    file_create_url($derivative_url);
+  foreach ($pp_crop_styles as $img_style) {
+    $derivative_url = image_style_url($img_style, $file->uri);
+    $success = file_exists($derivative_url) || image_style_create_derivative($img_style, $file->uri, $derivative_url);
+
+    if (!$success) {
+      file_create_url($derivative_url);
+    }
   }
 
   return $file;
