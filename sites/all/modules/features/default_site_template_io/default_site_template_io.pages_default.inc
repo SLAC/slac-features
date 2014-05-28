@@ -368,6 +368,7 @@ newsletter/*',
       'logo' => NULL,
       'user-search' => NULL,
       'top-menu' => NULL,
+      'header-date' => NULL,
     ),
   );
   $display->cache = array();
@@ -458,6 +459,27 @@ newsletter/*',
     $display->panels['footer'][1] = 'new-4';
     $pane = new stdClass();
     $pane->pid = 'new-5';
+    $pane->panel = 'header-date';
+    $pane->type = 'current_date';
+    $pane->subtype = 'current_date';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-5'] = $pane;
+    $display->panels['header-date'][0] = 'new-5';
+    $pane = new stdClass();
+    $pane->pid = 'new-6';
     $pane->panel = 'header-menu';
     $pane->type = 'block';
     $pane->subtype = 'menu-menu-header-menu';
@@ -475,10 +497,10 @@ newsletter/*',
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-5'] = $pane;
-    $display->panels['header-menu'][0] = 'new-5';
+    $display->content['new-6'] = $pane;
+    $display->panels['header-menu'][0] = 'new-6';
     $pane = new stdClass();
-    $pane->pid = 'new-6';
+    $pane->pid = 'new-7';
     $pane->panel = 'main-menu';
     $pane->type = 'block';
     $pane->subtype = 'system-main-menu';
@@ -496,10 +518,10 @@ newsletter/*',
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-6'] = $pane;
-    $display->panels['main-menu'][0] = 'new-6';
+    $display->content['new-7'] = $pane;
+    $display->panels['main-menu'][0] = 'new-7';
     $pane = new stdClass();
-    $pane->pid = 'new-7';
+    $pane->pid = 'new-8';
     $pane->panel = 'main-menu';
     $pane->type = 'block';
     $pane->subtype = 'superfish-1';
@@ -517,10 +539,10 @@ newsletter/*',
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-7'] = $pane;
-    $display->panels['main-menu'][1] = 'new-7';
+    $display->content['new-8'] = $pane;
+    $display->panels['main-menu'][1] = 'new-8';
     $pane = new stdClass();
-    $pane->pid = 'new-8';
+    $pane->pid = 'new-9';
     $pane->panel = 'site-title';
     $pane->type = 'site_name_abbreviation';
     $pane->subtype = 'site_name_abbreviation';
@@ -535,10 +557,10 @@ newsletter/*',
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-8'] = $pane;
-    $display->panels['site-title'][0] = 'new-8';
+    $display->content['new-9'] = $pane;
+    $display->panels['site-title'][0] = 'new-9';
     $pane = new stdClass();
-    $pane->pid = 'new-9';
+    $pane->pid = 'new-10';
     $pane->panel = 'site-title';
     $pane->type = 'page_site_name';
     $pane->subtype = 'page_site_name';
@@ -553,10 +575,10 @@ newsletter/*',
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-9'] = $pane;
-    $display->panels['site-title'][1] = 'new-9';
+    $display->content['new-10'] = $pane;
+    $display->panels['site-title'][1] = 'new-10';
     $pane = new stdClass();
-    $pane->pid = 'new-10';
+    $pane->pid = 'new-11';
     $pane->panel = 'site-title';
     $pane->type = 'site_logo';
     $pane->subtype = 'site_logo';
@@ -571,10 +593,10 @@ newsletter/*',
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-10'] = $pane;
-    $display->panels['site-title'][2] = 'new-10';
+    $display->content['new-11'] = $pane;
+    $display->panels['site-title'][2] = 'new-11';
     $pane = new stdClass();
-    $pane->pid = 'new-11';
+    $pane->pid = 'new-12';
     $pane->panel = 'top-menu';
     $pane->type = 'menu_tree';
     $pane->subtype = 'menu-header-top-menu';
@@ -601,29 +623,8 @@ newsletter/*',
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-11'] = $pane;
-    $display->panels['top-menu'][0] = 'new-11';
-    $pane = new stdClass();
-    $pane->pid = 'new-12';
-    $pane->panel = 'user-search';
-    $pane->type = 'current_date';
-    $pane->subtype = 'current_date';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
     $display->content['new-12'] = $pane;
-    $display->panels['user-search'][0] = 'new-12';
+    $display->panels['top-menu'][0] = 'new-12';
     $pane = new stdClass();
     $pane->pid = 'new-13';
     $pane->panel = 'user-search';
@@ -638,10 +639,10 @@ newsletter/*',
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 0;
     $pane->locks = array();
     $display->content['new-13'] = $pane;
-    $display->panels['user-search'][1] = 'new-13';
+    $display->panels['user-search'][0] = 'new-13';
     $pane = new stdClass();
     $pane->pid = 'new-14';
     $pane->panel = 'user-search';
@@ -659,10 +660,10 @@ newsletter/*',
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 1;
     $pane->locks = array();
     $display->content['new-14'] = $pane;
-    $display->panels['user-search'][2] = 'new-14';
+    $display->panels['user-search'][1] = 'new-14';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
