@@ -77,9 +77,13 @@
               background: #d3e0e2
 
   .logo-container
-    width: 37.87053%
+    width: 70%
+    +at-breakpoint($tablet)
+      width: 37.87053%
   .user-search
-    width: 57.87053%
+    width: 25%
+    +at-breakpoint($tablet)
+      width: 57.87053%
   .mobile-block
     +at-breakpoint($mobile-and_tablet)
       min-height: 92px
@@ -99,10 +103,14 @@
       margin: 10px 0 0 0
       height: 28px
     > div
-      display: inline-block
+      display: block
       position: relative
       background-color: #fff
       border: none
+      > div
+        padding: 2px 6px 5px
+        +at-breakpoint($tablet)
+          padding: 0
     select
       display: block
       width: 100%

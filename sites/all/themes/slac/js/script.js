@@ -227,13 +227,18 @@
     }
   };
 
-
   Drupal.behaviors.menuElementsResponsive = {
     attach: function() {
       menuElementsResponsive();
       $(window).resize(function(){
         menuElementsResponsive();
       });
+    }
+  };
+
+  Drupal.behaviors.chosenInit = {
+    attach: function() {
+      $('.page-basic-io #slac-search-options select').chosen();
     }
   };
 
