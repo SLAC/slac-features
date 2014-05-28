@@ -16,7 +16,7 @@
   // To understand behaviors, see https://drupal.org/node/756722#behaviors
 
   var menuElementsResponsive = function(){
-    if ($('.page-basic').length) {
+    if ($('.page-basic-io').length) {
       var $this = $('.sf-menu li.sf-depth-1');
       $this.css('padding','0');
       var $mainWidth = $('.sf-menu').width();
