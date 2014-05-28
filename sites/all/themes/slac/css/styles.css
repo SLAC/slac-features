@@ -1862,82 +1862,80 @@ ol.search-results .search-snippet strong { font-weight: bold; color: #0c5791; }
 .page-basic-io .pane-page-content .menu li a.active-item, .page-basic-io .pane-page-content .menu li a.active-type { position: relative; text-decoration: none; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033131}}
 .page-basic-io .pane-page-content .menu li a.active-item:before, .page-basic-io .pane-page-content .menu li a.active-type:before { content: "•"; position: absolute; color: #484848; font-size: 16px; left: -12px; top: 50%; margin-top: -10px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033140}}
-.page-basic-io .region-grey-background-style, .page-basic-io .general-right .region-grey-background-style { background: #f4f4f4; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033143}}
-.page-basic-io .panel-title-grey-background-style { padding: 0 15px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033146}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033139}}
+.page-basic-io .pane-body-grey-background-style { background: #f4f4f4; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033142}}
 .page-basic-io .content .general-right .panel-pane .menu li a.active-item { text-decoration: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033149}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033145}}
 .page-basic-io .pane-bundle-slideshow-description-bottom div.field-slideshow-controls a:hover, .page-basic-io .pane-bundle-slac-mini-slideshow div.field-slideshow-controls a:hover { color: white; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033153}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033149}}
 .page-basic-io .field-name-field-slideshow-btmdesc-slide { border: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033157}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033153}}
 .page-basic-io .pane-bundle-slideshow-description-bottom .field-slideshow-body { background: rgba(0, 0, 0, 0.38); }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033160}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033156}}
 .page-basic-io .pane-bundle-slideshow-description-bottom .field-slideshow-body .field-slideshow-description a { color: white; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033166}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033162}}
 .page-basic-io .projects-blocks-wrapper .project-block-wrapper .project-title a, .page-basic-io .projects-blocks-wrapper .project-block-wrapper .project-description a { color: white; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033169}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033165}}
 .page-basic-io .content .general-right .event-block { padding-left: 55px; margin-bottom: 20px; border-bottom-color: #ebebe0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033173}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033169}}
 .page-basic-io .content .general-right .event-block .event { padding-right: 35px; margin-bottom: 17px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033176}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033172}}
 .page-basic-io .content .general-right .event-block a.icon { color: #c0bfbf; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033178}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033174}}
 .page-basic-io .content .general-right .more-link { margin-bottom: -13px; margin-right: -6px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033182}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033178}}
 .page-basic-io .content .general-right .pane-bundle-slac-sidebar-block ul li { color: #666666; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033186}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033182}}
 .page-basic-io .pane-bundle-slac-sidebar-block p { font-size: 0.9rem; line-height: 1.5em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033190}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033186}}
 .page-basic-io .event-listing-item .field-name-body { font-size: 14px; line-height: 22px; color: #353535; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033195}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033191}}
 .page-basic-io .event-wrapper { padding: 20px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033198}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033194}}
 .page-basic-io .calendar-page table tbody td a.active { color: white; background: #2582ca; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033202}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033198}}
 .page-basic-io .faq-list .views-field-title { color: #0c5791; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033212}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033208}}
 .page-basic-io .basic-format-text p, .page-basic-io article.node-blog.view-mode-full .field-type-text-with-summary p, article.node-blog.view-mode-full .page-basic-io .field-type-text-with-summary p, .page-basic-io article.node-blog.view-mode-full .blog-wrapper p, article.node-blog.view-mode-full .page-basic-io .blog-wrapper p, .page-basic-io .article_panel_layout .pane-node-body p, .article_panel_layout .page-basic-io .pane-node-body p, .page-basic-io .service-body p, .page-basic-io .node-slac-sc-catalog-item p, .page-basic-io .node-support-ticket .field-type-text-with-summary p, .node-support-ticket .page-basic-io .field-type-text-with-summary p, .page-basic-io article.node-blog.view-mode-full .field-type-text-with-summary p, .page-basic-io article.node-blog.view-mode-full .blog-wrapper p, .page-basic-io .article_panel_layout .pane-node-body p, .page-basic-io .service-body p, .page-basic-io .node-slac-sc-catalog-item p, .page-basic-io .node-support-ticket .field-type-text-with-summary p { font-size: 14px; line-height: 22px; margin-bottom: 10px; color: #353535; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033218}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033214}}
 .page-basic-io .share-block-wrapper a:hover, .page-basic-io .add-to-calendar a:hover:before { color: #2582ca !important; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033223}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033219}}
 .page-basic-io .pane-bundle-slideshow-description-bottom .field-slideshow-controls a:hover { color: white; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033227}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033223}}
 .page-basic-io .pager li { background: #dbdbdb; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033229}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033225}}
 .page-basic-io .pager li a { color: #2582ca; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033231}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033227}}
 .page-basic-io .pager li.pager-current { background: #95b5c9; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033233}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033229}}
 .page-basic-io .pager li.pager-current a { color: #444444; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033235}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033231}}
 .page-basic-io .pager li a:hover { background: #2582ca; color: white; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033239}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033235}}
 .page-basic-io .news-archive-class > li { padding-left: 10px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033243}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033239}}
 .page-basic-io .article_panel_layout .field-name-field-slac-news-date { font-style: normal; font-size: 12px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033249}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033245}}
 .page-basic-io .news-landing .field-name-body p, .page-basic-io .kb-articles .field-name-body p { font-size: 0.85rem; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033252}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033248}}
 .page-basic-io .extentions_normal-link, .page-basic-io .content .general-left a, .content .general-left .page-basic-io a, .page-basic-io .content .general-one-col a, .content .general-one-col .page-basic-io a, .page-basic-io .content .general-right a, .content .general-right .page-basic-io a, .page-basic-io .pane-node-field-slac-event-related-links a, .pane-node-field-slac-event-related-links .page-basic-io a, .page-basic-io .content .general-left a, .page-basic-io .content .general-one-col a, .page-basic-io .content .general-right a, .page-basic-io .pane-node-field-slac-event-related-links a, .page-basic-io .content .general-right .panel-pane ul li { color: #2582ca; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033261}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033257}}
 .page-basic-io .news-image img { border: 2px #e0e0e0 solid; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033266}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033262}}
 .page-basic-io .news-landing .views-row.views-row-last, .page-basic-io .kb-articles .views-row.views-row-last { padding-bottom: 20px; border-bottom: 2px solid #e0decd; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033271}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033267}}
 .page-basic-io .view-news-tags .item-list { width: 105%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033273}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033269}}
 .page-basic-io .view-news-tags .item-list li { display: inline-block; height: 20px; line-height: 20px; margin-right: 19px; margin-bottom: 11px !important; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033279}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033275}}
 .page-basic-io .view-news-tags .item-list li a { background: white; display: inline-block; padding: 0 5px; border-radius: 4px; color: #424242; font-size: 13px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033286}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033282}}
 .page-basic-io .view-news-tags .item-list li a:hover { background: #2582ca; color: white; text-decoration: none; }
-@media (min-width: 690px) { @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033293}}
+@media (min-width: 690px) { @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033289}}
   .page-basic-io .footer-seccond .general-right { margin: 0; text-align: right; } }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033301}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033297}}
 .front .page-basic-io .pane-page-content .general-left h2.pane-title, .front .page-basic-io .pane-page-content .general-left-title h2.pane-title, .front .page-basic-io .pane-page-content .general-title h2.pane-title, .front .page-basic-io .pane-page-content .general-left h2.panel-title, .front .page-basic-io .pane-page-content .general-left-title h2.panel-title, .front .page-basic-io .pane-page-content .general-title h2.panel-title { border: none; margin-bottom: 7px; font-size: 1.1rem; color: #46494b; }
 
 @media (min-width: 480px) { @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_responsive_misc\.sass}line{font-family:\0000311}}
