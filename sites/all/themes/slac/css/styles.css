@@ -1033,9 +1033,9 @@ article.node-blog.node-teaser header h2 a { color: #871628; display: block; padd
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000031330}}
 article.node-blog.node-teaser header h2 a:after { content: "\e608"; position: absolute; right: 3px; top: 50%; margin-top: -17px; font-size: 30px; font-size: 1.875rem; color: #c8d3c7; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000031339}}
-article.node-blog.node-teaser header h2 a:hover { background-color: #c8d6c8; }
+article.node-blog.node-teaser header h2 a:hover { background-color: #ebebdf; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000031341}}
-article.node-blog.node-teaser header h2 a:hover:after { color: #2284c3; }
+article.node-blog.node-teaser header h2 a:hover:after { color: #871628; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000031344}}
 article.node-blog.node-teaser header .submitted { padding: 9px 13px 7px; font-size: 12px; font-size: 0.75rem; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000031348}}
@@ -1934,8 +1934,12 @@ ol.search-results .search-snippet strong { font-weight: bold; color: #871628; }
 .page-basic-io .view-news-tags .item-list li a:hover { background: #2582ca; color: white; text-decoration: none; }
 @media (min-width: 690px) { @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033288}}
   .page-basic-io .footer-seccond .general-right { margin: 0; text-align: right; } }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033292}}
+.page-basic-io article.node-blog.node-teaser header h2 a { background-color: #c8d6c8; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033294}}
+.page-basic-io article.node-blog.node-teaser header h2 a:after { color: #2284c3; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033296}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000033300}}
 .front .page-basic-io .pane-page-content .general-left h2.pane-title, .front .page-basic-io .pane-page-content .general-left-title h2.pane-title, .front .page-basic-io .pane-page-content .general-title h2.pane-title, .front .page-basic-io .pane-page-content .general-left h2.panel-title, .front .page-basic-io .pane-page-content .general-left-title h2.panel-title, .front .page-basic-io .pane-page-content .general-title h2.panel-title { border: none; margin-bottom: 7px; font-size: 1.1rem; color: #46494b; }
 
 @media (min-width: 480px) { @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_responsive_misc\.sass}line{font-family:\0000311}}

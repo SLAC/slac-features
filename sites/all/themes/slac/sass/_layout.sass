@@ -1337,9 +1337,9 @@ article.node-blog
             +fontsize-rem(30px)
             color: $normal-arrow
           &:hover
-            background-color: #c8d6c8
+            background-color: $menu_bg
             &:after
-              color: #2284c3
+              color: $red
 
       .submitted
         padding: 9px 13px 7px
@@ -3289,6 +3289,10 @@ h2
         margin: 0
         text-align: right
 
+  article.node-blog.node-teaser header h2 a
+    background-color: #c8d6c8
+    &:after
+      color: #2284c3
 
 .front
   .page-basic-io
