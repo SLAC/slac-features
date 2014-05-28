@@ -16,19 +16,21 @@
   // To understand behaviors, see https://drupal.org/node/756722#behaviors
 
   var menuElementsResponsive = function(){
-    var $this = $('.sf-menu li.sf-depth-1');
-    $this.css('padding','0');
-    var $mainWidth = $('.sf-menu').width();
-    var $elementsWidth = 0;
-    var $i = 0;
-    $this.each(function(){
-      $elementsWidth += $(this).find('a').first().width();
-      $i++;
-    });
-    var $elementPadding = (($mainWidth-$elementsWidth)/$i)/2;
-    $this.each(function(){
-      $this.css({'padding-left':$elementPadding, 'padding-right':$elementPadding})
-    })
+    if ($('.page-basic').length) {
+      var $this = $('.sf-menu li.sf-depth-1');
+      $this.css('padding','0');
+      var $mainWidth = $('.sf-menu').width();
+      var $elementsWidth = 0;
+      var $i = 0;
+      $this.each(function(){
+        $elementsWidth += $(this).find('a').first().width();
+        $i++;
+      });
+      var $elementPadding = (($mainWidth-$elementsWidth)/$i)/2;
+      $this.each(function(){
+        $this.css({'padding-left':$elementPadding, 'padding-right':$elementPadding})
+      })
+    }
   };
 
   Drupal.behaviors.mobile_header = {
