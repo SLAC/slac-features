@@ -121,31 +121,34 @@
             }
           );
         } else {
-          // Radio to select for search.
-          var $searchOptions = $('#slac-search-options');
-          $searchOptions.insertBefore($('#slac-search'));
 
-          var $checkbox = $searchOptions.find('input[type=radio]');
-          var $select = $('<select class="form-select"></select>'); // create a select
-          $select.attr('name', $checkbox.attr('name')); // set name and value
-          $checkbox.each(function(i, checkbox) {
-            var checkVal = $checkbox.eq(i).val();
-            var checkText = $checkbox.eq(i).next().text();
-            $select.append($('<option>').val(checkVal).text(checkText));
-          });
+          $('.header .user-search').once('search-radios', function(){
+            // Radio to select for search.
+            var $searchOptions = $('#slac-search-options');
+            $searchOptions.insertBefore($('#slac-search'));
 
-          $searchOptions.find('.form-item').hide();
-          $searchOptions.append($select);
+            var $checkbox = $searchOptions.find('input[type=radio]');
+            var $select = $('<select class="form-select"></select>'); // create a select
+            $select.attr('name', $checkbox.attr('name')); // set name and value
+            $checkbox.each(function(i, checkbox) {
+              var checkVal = $checkbox.eq(i).val();
+              var checkText = $checkbox.eq(i).next().text();
+              $select.append($('<option>').val(checkVal).text(checkText));
+            });
 
-          $('#slac-search input').addClass('web');
+            $searchOptions.find('.form-item').hide();
+            $searchOptions.append($select);
 
-          $searchOptions.find('select').change(function(e) {
-            var value = parseInt($(this).val());
-            var placeholder = value ? Drupal.t('SEARCH PEOPLE') : Drupal.t('SEARCH SLAC');
-            var inputClass = value ? 'people' : 'web';
-            $('#slac-search input')
-              .attr('placeholder', placeholder)
-              .removeClass('people').removeClass('web').addClass(inputClass);
+            $('#slac-search input').addClass('web');
+
+            $searchOptions.find('select').change(function(e) {
+              var value = parseInt($(this).val());
+              var placeholder = value ? Drupal.t('SEARCH PEOPLE') : Drupal.t('SEARCH SLAC');
+              var inputClass = value ? 'people' : 'web';
+              $('#slac-search input')
+                .attr('placeholder', placeholder)
+                .removeClass('people').removeClass('web').addClass(inputClass);
+            })
           })
         }
       });
