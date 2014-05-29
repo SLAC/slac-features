@@ -229,9 +229,9 @@ a[href*='mailto:'] { word-break: break-all; }
 @media screen and (max-width: 1050px) and (min-width: 893px) { @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\0000360}}
   .page-basic-io .main-menu li { margin: 0 15px; } }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\0000364}}
-.page-basic-io .main-menu ul.sf-menu.sf-expanded a { color: #0c5791 !important; }
+.page-basic-io .main-menu ul.sf-menu.sf-expanded a { color: #0c5791; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\0000368}}
-.page-basic-io .main-menu ul.sf-menu li a, .page-basic-io .main-menu ul.sf-menu li.sfHover a { color: #0c5791; }
+.page-basic-io .main-menu ul.sf-menu li a, .page-basic-io .main-menu ul.sf-menu li.sfHover a { color: #0c5791 !important; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\0000370}}
 .page-basic-io .main-menu ul.sf-menu li a:hover, .page-basic-io .main-menu ul.sf-menu li.sfHover a:hover { color: #0c5791; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\0000372}}
