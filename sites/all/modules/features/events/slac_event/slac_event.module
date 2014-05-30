@@ -54,7 +54,7 @@ function slac_event_preprocess_node(&$vars) {
   }
 
   $event_date_timestamp = strtotime($event_date);
-  $vars['month'] = format_date($event_date_timestamp, 'custom', 'F');
+  $vars['month'] = format_date($event_date_timestamp, 'custom', 'M');
   $vars['day'] = format_date($event_date_timestamp, 'custom', 'j');
 
   $event_date_end = $vars['field_slac_event_date'][LANGUAGE_NONE][0]['value2'];
