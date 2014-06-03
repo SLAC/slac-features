@@ -139,7 +139,7 @@
 
             $searchOptions.find('.form-item').hide();
             $searchOptions.append($select);
-            $searchOptions.find('select').val($checkbox.val());
+            $searchOptions.find('select').val(1);
 
             var $addClass = $searchOptions.find('select').val() == 0 ? 'web' : 'people';
             $('#slac-search input').addClass($addClass);
