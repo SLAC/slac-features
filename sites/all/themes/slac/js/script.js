@@ -141,7 +141,7 @@
             $searchOptions.append($select);
             $searchOptions.find('select').val($checkbox.val());
 
-            $addClass = $searchOptions.find('select').val() == 0 ? 'web' : 'people';
+            var $addClass = $searchOptions.find('select').val() == 0 ? 'web' : 'people';
             $('#slac-search input').addClass($addClass);
 
             $searchOptions.find('select').change(function(e) {
