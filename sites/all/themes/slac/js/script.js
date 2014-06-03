@@ -142,7 +142,9 @@
             $searchOptions.find('select').val(1);
 
             var $addClass = $searchOptions.find('select').val() == 0 ? 'web' : 'people';
-            $('#slac-search input').addClass($addClass);
+            $('#slac-search input')
+              .attr('placeholder', Drupal.t('SEARCH PEOPLE'))
+              .addClass($addClass);
 
             $searchOptions.find('select').change(function(e) {
               var value = parseInt($(this).val());
