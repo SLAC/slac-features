@@ -133,7 +133,7 @@
             $checkbox.each(function(i, checkbox) {
               var checkVal = $checkbox.eq(i).val();
               var checkText = $checkbox.eq(i).next().text();
-              $select.append($('<option>').val(checkVal).text(checkText));
+              $select.prepend($('<option>').val(checkVal).text(checkText));
             });
 
 
