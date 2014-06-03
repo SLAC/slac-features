@@ -136,10 +136,13 @@
               $select.append($('<option>').val(checkVal).text(checkText));
             });
 
+
             $searchOptions.find('.form-item').hide();
             $searchOptions.append($select);
+            $searchOptions.find('select').val($checkbox.val());
 
-            $('#slac-search input').addClass('web');
+            $addClass = $searchOptions.find('select').val() == 0 ? 'web' : 'people';
+            $('#slac-search input').addClass($addClass);
 
             $searchOptions.find('select').change(function(e) {
               var value = parseInt($(this).val());
