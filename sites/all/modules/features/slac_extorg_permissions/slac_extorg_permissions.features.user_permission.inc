@@ -1029,6 +1029,8 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'bypass workbench moderation',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
     ),
     'module' => 'workbench_moderation',
   );
