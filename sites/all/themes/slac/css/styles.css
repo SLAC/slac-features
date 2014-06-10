@@ -339,6 +339,7 @@ a[href*='mailto:'] { word-break: break-all; }
   .sf-main-menu.sf-horizontal > li > a:hover:before, .sf-main-menu.sf-horizontal > li.sfHover > a:before { right: -2px; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003275}}
   .sf-main-menu.sf-horizontal .sf-sub-indicator { display: none; } }
+.sf-main-menu.sf-horizontal .sf-depth-2 ul {display: none !important}
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_main_menu\.sass}line{font-family:\00003278}}
 ul.sf-menu.sf-accordion { display: none; position: absolute; }
 
