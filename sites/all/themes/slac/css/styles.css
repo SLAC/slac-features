@@ -1769,7 +1769,7 @@ ol.search-results .search-snippet strong { font-weight: bold; color: #871628; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032906}}
 .page-basic-io .pane-site-name-abbreviation a, .page-basic-io .pane-page-site-name a { color: #2582ca; font-size: 32px; font-weight: bold; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032910}}
-.page-basic-io .pane-site-name-abbreviation a:hover, .page-basic-io .pane-page-site-name a:hover { color: #666666; text-decoration: underline; }
+.page-basic-io .pane-site-name-abbreviation a:hover, .page-basic-io .pane-page-site-name a:hover {text-decoration: underline; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032913}}
 .page-basic-io .pane-site-name-abbreviation { margin-right: 11px; padding-right: 0; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/sites\/slac-features\/sites\/all\/themes\/slac\/sass\/_layout\.sass}line{font-family:\000032916}}
