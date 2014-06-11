@@ -61,6 +61,16 @@ function slac_people_permissions_user_default_permissions() {
     'module' => 'contextual',
   );
 
+  // Exported permission: 'access media browser'.
+  $permissions['access media browser'] = array(
+    'name' => 'access media browser',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'media',
+  );
+
   // Exported permission: 'access user profiles'.
   $permissions['access user profiles'] = array(
     'name' => 'access user profiles',
@@ -91,6 +101,16 @@ function slac_people_permissions_user_default_permissions() {
     'module' => 'slac_admin_modules',
   );
 
+  // Exported permission: 'administer media browser'.
+  $permissions['administer media browser'] = array(
+    'name' => 'administer media browser',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'media',
+  );
+
   // Exported permission: 'administer menu'.
   $permissions['administer menu'] = array(
     'name' => 'administer menu',
@@ -117,16 +137,6 @@ function slac_people_permissions_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'node',
-  );
-
-  // Exported permission: 'administer media browser'.
-  $permissions['administer media browser'] = array(
-    'name' => 'administer media browser',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'manager' => 'manager',
-    ),
-    'module' => 'media',
   );
 
   // Exported permission: 'administer panelizer'.
@@ -584,16 +594,6 @@ function slac_people_permissions_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'node',
-  );
-
-  // Exported permission: 'view the administration theme'.
-  $permissions['view the administration theme'] = array(
-    'name' => 'view the administration theme',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'manager' => 'manager',
-    ),
-    'module' => 'system',
   );
 
   return $permissions;
