@@ -650,13 +650,6 @@ function slac_extorg_permissions_user_default_permissions() {
     'module' => 'panelizer',
   );
 
-  // Exported permission: 'administer panelizer taxonomy_term faq_categories defaults'.
-  $permissions['administer panelizer taxonomy_term faq_categories defaults'] = array(
-    'name' => 'administer panelizer taxonomy_term faq_categories defaults',
-    'roles' => array(),
-    'module' => 'panelizer',
-  );
-
   // Exported permission: 'administer panels layouts'.
   $permissions['administer panels layouts'] = array(
     'name' => 'administer panels layouts',
