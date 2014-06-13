@@ -27,5 +27,5 @@ output_style = :compact
 sprite_engine = :chunky_png
 chunky_png_options = {:best_compression  => Zlib::BEST_COMPRESSION}
 sass_options = {:sourcemap => true}
-sass_options = {:debug_info => true}
+sass_options = {:debug_info => false}
 enable_sourcemaps = true

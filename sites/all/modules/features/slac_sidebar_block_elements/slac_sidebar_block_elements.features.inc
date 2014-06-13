@@ -24,8 +24,8 @@ function slac_sidebar_block_elements_image_default_styles() {
         'module' => 'epsacrop',
         'name' => 'epsacrop_crop',
         'data' => array(
-          'width' => 70,
-          'height' => 80,
+          'width' => 165,
+          'height' => 125,
           'anchor' => 'center-center',
           'jcrop_settings' => array(
             'aspect_ratio' => '',
@@ -46,8 +46,8 @@ function slac_sidebar_block_elements_image_default_styles() {
         'module' => 'image',
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => 70,
-          'height' => 80,
+          'width' => 165,
+          'height' => 125,
         ),
         'weight' => 2,
       ),

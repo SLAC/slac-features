@@ -133,6 +133,14 @@ function _slac_int_org_frontpage_install__panes($did) {
         )
       )
     ),
+    'field_sb_image' => array(
+      LANGUAGE_NONE => array(
+        array(
+          'fid' => $slideshow_files[0]->fid,
+        ),
+      ),
+    ),
+
   );
   entity_save('fieldable_panels_pane', $mission_fpp);
 

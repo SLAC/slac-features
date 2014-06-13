@@ -16,7 +16,6 @@ dependencies[] = number
 dependencies[] = options
 dependencies[] = path
 dependencies[] = taxonomy
-dependencies[] = dblog
 ;dependencies[] = search
 dependencies[] = field_ui
 dependencies[] = file
@@ -222,3 +221,5 @@ dependencies[] = slac_google_analytics
 
 ; Special Menu
 ;dependencies[] = header_menu
+
+dependencies[] = dblog
