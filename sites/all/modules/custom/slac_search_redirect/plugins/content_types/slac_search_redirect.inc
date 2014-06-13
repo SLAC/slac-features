@@ -37,17 +37,16 @@ function slac_redirect_search_form() {
   $form = array();
 
   $form['search_redirect_keyword'] = array(
-  '#type' => 'textfield', 
-  '#size' => 30, 
-  '#maxlength' => 128, 
-  '#required' => TRUE,
-  '#attributes' => array('placeholder' => t('search SLAC')),
+    '#type' => 'textfield',
+    '#size' => 30,
+    '#maxlength' => 128,
+    '#required' => TRUE,
+    '#attributes' => array('placeholder' => t('search web or people')),
   );
 
   $form['submit'] = array(
-  '#type' => 'submit',
-  '#value' => t('GO'), 
-
+    '#type' => 'submit',
+    '#value' => t('GO'),
   );
 
   return $form;

@@ -50,7 +50,7 @@ function search_block_search_form($form, &$form_state) {
     '#title' => '',
     '#prefix' => '<div id="slac-search-wrapper"><div id="slac-search">',
     '#suffix' => '</div>',
-    '#attributes' => array('placeholder' => t('search SLAC')),
+    '#attributes' => array('placeholder' => t('search web or people')),
   );
   $form['submit'] = array(
     '#type' => 'submit',
