@@ -162,10 +162,12 @@ dependencies[] = slac_form_building
 
 dependencies[] = cami
 
-; Authentication
+; Environment integration
 dependencies[] = webauth
 dependencies[] = slac_webauth_settings
 dependencies[] = slac_login_setting
+dependencies[] = slac_ldap_roles
+dependencies[] = slac_pt_notification
 
 ; Google analytics settings
 dependencies[] = slac_google_analytics

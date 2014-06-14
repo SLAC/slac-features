@@ -198,11 +198,12 @@ dependencies[] = slac_wiki
 
 dependencies[] = cami
 
-; Authentication
+; Environment integration
 dependencies[] = webauth
 dependencies[] = slac_webauth_settings
 dependencies[] = slac_login_setting
 dependencies[] = slac_ldap_roles
+dependencies[] = slac_pt_notification
 
 ; Moderation
 dependencies[] = workbench
