@@ -538,9 +538,13 @@ ul.tabs li a:hover, .action-links li a:hover { background-color: #2e2e2e; }
 .front .pane-page-content .general-left .panel-pane { margin-bottom: 36px; }
 .front .pane-page-content .general-left .panels-ipe-portlet-wrapper .panel-pane { margin-bottom: 0; }
 
-.front .pane-page-content .general-left .panels-ipe-portlet-wrapper { margin-bottom: 36px; }
-.front .page-basic-io .pane-page-content .general-left .panels-ipe-portlet-wrapper { margin-bottom: 23px; }
-.front .page-basic-io .pane-page-content .inner_right .panels-ipe-portlet-wrapper { margin-bottom: 8px;}
+.front .pane-page-content .general-left .panels-ipe-portlet-wrapper {  margin-bottom: 36px;}
+
+.front .page-basic-io .general-left .panels-ipe-portlet-wrapper,
+.front .page-basic-io .general-left .panel-pane {  margin-bottom: 23px;}
+
+.front .page-basic-io .inner_right .panels-ipe-portlet-wrapper,
+.front .page-basic-io .inner_right .pane-fieldable-panels-pane {  margin-bottom: 8px;}
 
 .pane-page-content .general-left .pane-menu-tree h2.pane-title, .pane-page-content .general-left-title .pane-menu-tree h2.pane-title, .pane-page-content .general-title .pane-menu-tree h2.pane-title, .pane-page-content .general-left .pane-menu-tree h2.panel-title, .pane-page-content .general-left-title .pane-menu-tree h2.panel-title, .pane-page-content .general-title .pane-menu-tree h2.panel-title { border-bottom: 0 none; color: #871628; font-size: 22px; font-size: 1.375rem; font-weight: normal; padding-bottom: 5px; }
 h2.pane-title i, h2.panel-title i { text-transform: capitalize; }
