@@ -567,7 +567,7 @@ h2.pane-title i, h2.panel-title i { text-transform: capitalize; }
 .general-right { font-size: 13px; font-size: 0.8125rem; color: #706161; }
 .content .general-right .panels-ipe-portlet-wrapper { margin-bottom: 25px; }
 
-.general-right .panel-pane { margin-bottom: 36px; }
+.general-right .panel-pane { margin-bottom: 18px; }
 .general-right .panel-pane:last-child { margin-bottom: 0; }
 .inner_right .panel-pane { margin-bottom: 20px; }
 .right-sidebar .panel-pane { background-color: #f3f1eb; padding: 13px 22px; }
