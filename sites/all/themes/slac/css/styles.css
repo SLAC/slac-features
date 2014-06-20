@@ -1132,7 +1132,7 @@ ol.search-results .search-snippet strong { font-weight: bold; color: #871628; }
   .reverse .general-right, .reverse .panel-col-last { width: 56.55877%; float: right; margin-right: 0; }
   .reverse.full-width .general-right, .reverse.full-width .panel-col-last { width: 100%; float: left; margin-right: 4.25894%; }
   .front .pane-page-content .general-right, .front .pane-page-content .general-left { padding-top: 0; }
-  .content .general-right .panel-pane, .content .general-right .panels-ipe-portlet-wrapper { padding: 0px 22px 13px 22px; width: 100%; }
+  .content .general-right .panel-pane{ padding: 0px 22px 13px 22px; width: 100%; }
   .reverse .content .general-right .panel-pane, .reverse .content .general-right .panels-ipe-portlet-wrapper { padding: 0; }
   .content .general-right .panel-pane:first-of-type, .content .general-right .panels-ipe-portlet-wrapper:first-of-type { /*margin-top: -24px */ }
   .content .general-right .panel-pane:first-of-type.region-grey-background-style, .front .content .general-right .panel-pane:first-of-type, .content .general-right .panels-ipe-portlet-wrapper:first-of-type.region-grey-background-style, .front .content .general-right .panels-ipe-portlet-wrapper:first-of-type { /*margin-top: 0 */ }
