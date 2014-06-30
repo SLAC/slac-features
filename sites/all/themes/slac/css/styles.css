@@ -240,7 +240,7 @@ ul.sf-menu.sf-accordion.sf-expanded > li > ul a:after { display: none; }
   .main-menu ul:before, .main-menu ul:after { content: ""; display: table; }
   .main-menu ul:after { clear: both; }
   .main-menu ul a { color: #4c4c4c; }
-  .main-menu ul li { float: left; margin: 0 25px; font-size: 14px; font-size: 0.875rem; }
+  .main-menu ul li { float: left; margin: 0; font-size: 14px; font-size: 0.875rem; }
   .main-menu ul li:first-child { margin-left: 0; }
   .main-menu ul li:last-child { margin-right: 0 !important; }
   .main-menu ul li a { display: block; padding-bottom: 6px; }
