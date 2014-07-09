@@ -171,7 +171,7 @@ function slac_ldap_roles_init_server($config = array()) {
   }
   catch (adLDAPException $e) {
     // watchdog the exception
-    watchdog('slac_ldap_roles', 'Unable to create ADLDAP connection', array(), WATCHDOG_ERROR);
+    watchdog('slac_ldap_roles', 'Unable to create ADLDAP connection', array(), WATCHDOG_WARNING);
     return;
   }
   return $adldap;
