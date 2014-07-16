@@ -1010,7 +1010,7 @@ ol.search-results .search-snippet strong { font-weight: bold; color: #871628; }
 .page-basic-io .top-menu ul.menu li { list-style-type: none; list-style-image: none; float: left; }
 @media (min-width: 690px) { .page-basic-io .top-menu ul.menu li { border-right: 1px solid white; }
   .page-basic-io .top-menu ul.menu li:first-child { border-left: 1px solid white; } }
-.page-basic-io .top-menu ul.menu a { color: white; padding: 0 30px; font-size: 9px; text-transform: uppercase; line-height: 20px; font-weight: bold; letter-spacing: 0.125em; }
+.page-basic-io .top-menu ul.menu a { color: white; padding: 0 20px; font-size: 9px; text-transform: uppercase; line-height: 20px; font-weight: bold; letter-spacing: 0.125em; }
 .page-basic-io .top-menu ul.menu a:hover, .page-basic-io .top-menu ul.menu a.active { background-color: transparent; }
 .page-basic-io .top-menu ul.menu a:hover { text-decoration: underline; }
 @media (min-width: 690px) { .page-basic-io .top-menu ul.menu a { padding: 0 30px; } }
