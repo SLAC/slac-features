@@ -3025,13 +3025,18 @@ h2
 
   .top-menu
     background: rgba(67, 121, 142, 0.4)
+    +at-breakpoint($mobile-and_tablet)
+      display: none
     ul.menu
       float: right
       li
+        list-style-type: none
+        list-style-image: none
         float: left
-        border-right: 1px solid #fff
-        &:first-child
-          border-left: 1px solid #fff
+        +at-breakpoint($tablet)
+          border-right: 1px solid white
+          &:first-child
+            border-left: 1px solid white
       a
         color: #fff
         padding: 0 30px
@@ -3045,7 +3050,8 @@ h2
           background-color: transparent
         &:hover
           text-decoration: underline
-
+        +at-breakpoint($tablet)
+          padding: 0 30px
   .pane-node-field-bp-image img
     border: 2px solid #e1e1e1
     padding: 0
