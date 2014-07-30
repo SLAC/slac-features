@@ -1,4 +1,17 @@
-
+.content .general-two-col
+  &:not(.reverse),
+  &.reverse
+    .general-left
+      ul,
+      ol
+        list-style-type: disc
+        padding-left: 20px
+        margin-bottom: 10px
+        li
+          line-height: 20px
+          margin-bottom: 5px
+      ol
+        list-style-type: decimal
 
 .extentions_normal-link
   color: $red
@@ -1002,6 +1015,15 @@ ul.tabs, .action-links,
 
 //Frequently Asked Questions
 //-----------------------------------
+
+.content .general-two-col .general-left .faq-list ul
+  padding-left: 0
+  li
+    border-bottom: 1px solid #f3f1eb
+    margin-bottom: 10px
+    padding-bottom: 10px
+    list-style-type: none
+
 .faq-list
   li
     &.inactive

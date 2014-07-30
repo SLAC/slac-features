@@ -270,6 +270,10 @@ ul.sf-menu.sf-accordion.sf-expanded > li > ul a:after { display: none; }
   .sf-main-menu.sf-horizontal.long-menu ul li { margin: 0 25px; } }
 @media (min-width: 1200px) { .main-menu.long-menu ul li { margin: 0 33px; }
   .main-menu.long-menu ul li:first-child { margin-left: 17px; } }
+.content .general-two-col:not(.reverse) .general-left ul, .content .general-two-col:not(.reverse) .general-left ol, .content .general-two-col.reverse .general-left ul, .content .general-two-col.reverse .general-left ol { list-style-type: disc; padding-left: 20px; margin-bottom: 10px; }
+.content .general-two-col:not(.reverse) .general-left ul li, .content .general-two-col:not(.reverse) .general-left ol li, .content .general-two-col.reverse .general-left ul li, .content .general-two-col.reverse .general-left ol li { line-height: 20px; margin-bottom: 5px; }
+.content .general-two-col:not(.reverse) .general-left ol, .content .general-two-col.reverse .general-left ol { list-style-type: decimal; }
+
 .extentions_normal-link, .content .general-left a, .content .general-one-col a, .content .general-right a, .pane-node-field-slac-event-related-links a { color: #871628; }
 .extentions_normal-link:hover, .content .general-left a:hover, .content .general-one-col a:hover, .content .general-right a:hover, .pane-node-field-slac-event-related-links a:hover { text-decoration: underline; }
 
@@ -519,6 +523,9 @@ ul.tabs li a:hover, .action-links li a:hover { background-color: #2e2e2e; }
 .calendar-page table tbody td .month { display: inline-block; }
 .calendar-page table tbody td a { padding: 6px; display: inline-block; }
 .calendar-page table tbody td a.active { background-color: #871628; color: white; font-weight: bold; }
+
+.content .general-two-col .general-left .faq-list ul { padding-left: 0; }
+.content .general-two-col .general-left .faq-list ul li { border-bottom: 1px solid #f3f1eb; margin-bottom: 10px; padding-bottom: 10px; list-style-type: none; }
 
 .faq-list li.inactive .views-field-title:before { content: "+"; margin-top: -9px; }
 .general-left .faq-list li { border-bottom: 1px solid #f3f1eb; margin-bottom: 10px; padding-bottom: 10px; }
