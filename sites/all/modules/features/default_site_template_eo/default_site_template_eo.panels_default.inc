@@ -151,6 +151,8 @@ function default_site_template_eo_default_panels_mini() {
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
+    $pane->cache = '';
+    $pane->style = '';
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 1;

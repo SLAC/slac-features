@@ -208,7 +208,7 @@ function slac_news_default_page_manager_handlers() {
     $pane->pid = 'new-6';
     $pane->panel = 'right';
     $pane->type = 'fieldable_panels_pane';
-    $pane->subtype = 'uuid:fad4b398-3f64-495f-92bc-31dd59a3aa6a';
+    $pane->subtype = 'uuid:1af0e390-0d27-4d3e-8891-dd1bae5b6cd4';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
