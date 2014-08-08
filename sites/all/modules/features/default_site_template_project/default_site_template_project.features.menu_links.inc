@@ -140,9 +140,9 @@ function default_site_template_project_menu_default_menu_links() {
   // Included for use with string extractors like potx.
   t('About');
   t('Blog');
+  t('DOE Office of Science');
   t('Faq');
   t('SLAC Home');
-  t('DOE Office of Science');
   t('Stanford University');
 
 

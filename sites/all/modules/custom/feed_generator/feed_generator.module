@@ -1,0 +1,114 @@
+<?php
+/*
+ * @file .module
+ */
+
+/**
+ * Implements hook_menu
+ */
+function feed_generator_menu() {
+
+  $items['admin/structure/feed_generator'] = array(
+    'title' => 'Feed Generator',
+    'description' => 'Manage feed configuage of site.',
+    'page callback' => 'feed_generator_manage',
+    'access arguments' => array('administer nodes'),
+    'file' => 'feed_generator.admin.inc',
+  );
+
+  // Layout overview, primary tab.
+  $items['admin/structure/feed_generator/list'] = array(
+    'title' => 'Feed Generator',
+    'weight' => -10,
+    'type' => MENU_DEFAULT_LOCAL_TASK,
+  );
+  
+  $items['admin/structure/feed_generator/add/rss'] = array(
+    'title' => 'Add RSS',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('feed_generator_form_add', 4),
+    'access arguments' => array('administer nodes'),
+    'type' => MENU_LOCAL_ACTION,
+    'file' => 'feed_generator.admin.inc',
+    'weight' => -9,
+  );
+
+  $items['admin/structure/feed_generator/add/ical'] = array(
+    'title' => 'Add iCal',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('feed_generator_form_add', 4),
+    'access arguments' => array('administer nodes'),
+    'type' => MENU_LOCAL_ACTION,
+    'file' => 'feed_generator.admin.inc',
+    'weight' => -8,
+  );
+
+  $items['admin/structure/feed_generator/add/ical/form'] = array(
+    'title' => 'Add iCal',
+    'type' => MENU_DEFAULT_LOCAL_TASK,
+    'weight' => -7,
+  );
+
+  $items['admin/structure/feed_generator/add/ical/mapping'] = array(
+    'title' => 'iCal mapping',
+    'page callback' => 'feed_generator_ical',
+    'access arguments' => array('administer nodes'),
+    'type' => MENU_LOCAL_TASK,
+    'file' => 'feed_generator_ical.admin.inc',
+    'weight' => 1,
+  );
+
+  $items['admin/structure/feed_generator/%feed_generator/edit'] = array(
+    'title' => 'Edit Feed',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('feed_generator_form_edit', 3),
+    'access arguments' => array('administer nodes'),
+    'type' => MENU_CALLBACK,
+    'file' => 'feed_generator.admin.inc',
+  );
+
+  $items['admin/structure/feed_generator/%feed_generator/delete'] = array(
+    'title' => 'Delete Feed',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('feed_generator_form_delete', 3),
+    'access arguments' => array('administer nodes'),
+    'type' => MENU_CALLBACK,
+    'file' => 'feed_generator.admin.inc',
+  );
+
+  $items['admin/structure/feed_generator/ical/%node_type/edit'] = array(
+    'title' => 'iCal Feed',
+    'title callback' => 'simpleviews_ical_page_title',
+    'title arguments' => array(4),
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('simpleviews_ical_form', 4),
+    'access arguments' => array('administer nodes'),
+    'type' => MENU_CALLBACK,
+    'file' => 'feed_generator_ical.admin.inc',
+  );
+
+  $items['admin/structure/feed_generator/ical/%node_type/delete'] = array(
+    'title' => 'Delete iCal Feed',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('simpleviews_ical_form_delete', 4),
+    'access arguments' => array('administer nodes'),
+    'type' => MENU_CALLBACK,
+    'file' => 'feed_generator_ical.admin.inc',
+  );
+
+  return $items;
+}
+
+function feed_generator_load($fid) {
+  $query = db_select('feed_generator', 'sf')
+    ->fields('sf')
+    ->condition('sf.fid', $fid);
+
+  $rs = $query->execute()->fetchAssoc();
+
+  return empty($rs) ? FALSE : $rs;
+}
+
+function simpleviews_ical_page_title($type) {
+  return 'iCal: ' . $type->name;
+}

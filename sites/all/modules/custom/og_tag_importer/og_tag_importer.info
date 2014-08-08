@@ -1,0 +1,5 @@
+name = OG:Tag importer
+description = Easily pull external urls with open graph tags into Drupal
+core = 7.x
+package = Others
+version = 7.x-1.x-dev

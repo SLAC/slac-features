@@ -1,7 +1,6 @@
 name = Default Site Template
 core = 7.x
 package = SLAC
-php = 5.2.4
 version = 7.x-1.5
 project = default_site_template
 dependencies[] = ctools

@@ -1,0 +1,39 @@
+<?php
+/**
+ * @file
+ * Code for the Slac feed news importer feature.
+ */
+
+include_once 'slac_news_feed_importer.features.inc';
+
+
+/**
+* Implements hook_feeds_parser_sources_alter().
+*/
+function slac_news_feed_importer_feeds_parser_sources_alter(&$sources, $content_type) {
+	if ($content_type == 'news_feed') {
+		$sources['field_published_items_news_feed'] = array(
+			'name' => 'Feed Node: Published',
+			'description' => 'Set item published',
+			'callback' => 'feedmapper_slac_news_get_published_item_feed',
+		);
+
+		$sources['field_promoted_items_news_feed'] = array(
+			'name' => 'Feed Node: Promoted',
+			'description' => 'Set item promoted',
+			'callback' => 'feedmapper_slac_news_get_promoted_item_feed',
+		);
+	}
+}
+
+function feedmapper_slac_news_get_published_item_feed(FeedsSource $source) {
+	$nid = $source->feed_nid;
+	$feed_importer = node_load($nid);
+	return $feed_importer->field_published_items_news_feed['und'][0]['value'];
+}
+
+function feedmapper_slac_news_get_promoted_item_feed(FeedsSource $source) {
+	$nid = $source->feed_nid;
+	$feed_importer = node_load($nid);
+	return $feed_importer->field_promoted_items_news_feed['und'][0]['value'];
+}
