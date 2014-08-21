@@ -64,11 +64,11 @@ function feed_generator_manage() {
 // Form add feed_generator
 function feed_generator_form_add($form, &$form_state, $feed_type) {
   if ($feed_type == 'rss') {
-    drupal_set_title(t('Add feed News'));
+    drupal_set_title(t('Add News Feed'));
     $bundle = 'slac_news';
   }
   else {
-    drupal_set_title(t('Add feed Event')); 
+    drupal_set_title(t('Add Event Feed')); 
     $bundle = 'event';
   }
 
@@ -620,7 +620,7 @@ function feed_generator_form_edit_submit($form, &$form_state) {
 //form confirm delete og_tag
 function feed_generator_form_delete($form, &$form_state, $feed) {
   $form['#fid'] = $feed;
-  return confirm_form($form, t('Are you sure you want to delete the this simpleview Feed?'), 'admin/structure/feed_generator', t('This action cannot be undone.'), t('Delete'), t('Cancel'));
+  return confirm_form($form, t('Are you sure you want to delete the this Feed?'), 'admin/structure/feed_generator', t('This action cannot be undone.'), t('Delete'), t('Cancel'));
 }
 
 //function submit delete og tag
