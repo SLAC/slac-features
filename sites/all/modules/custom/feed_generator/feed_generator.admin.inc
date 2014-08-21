@@ -29,6 +29,7 @@ function feed_generator_manage() {
     $bundle = $rs->bundle;
     $title = $rs->title;
     $link_feed = str_replace(' ', '-', strtolower("feed/$bundle/$title"));
+    $link_feed = str_replace('_', '-', strtolower($link_feed));
     $actions[] = l(t('View'), $link_feed);
 
     $actions[] = l(t('Edit'), 'admin/structure/feed_generator/'.$rs->fid.'/edit');
@@ -62,29 +63,14 @@ function feed_generator_manage() {
 
 // Form add feed_generator
 function feed_generator_form_add($form, &$form_state, $feed_type) {
-	$types = _node_types_build();
-  $options = $types->names;
-
-  if ($feed_type == 'ical') {
-    $query = db_select('ical_mapping', 'im');
-    $query->fields('im', array('bundle'));
-
-    $results = $query->execute()->fetchAll();
-
-    if (!empty($results)) {
-      foreach ($results as $key => $value) {
-        $ical_settings[$value->bundle] = $options[$value->bundle];
-      }
-
-      $options = $ical_settings;
-    }else {
-      drupal_set_message(t('Please mapping for iCal before create new feed iCal!'), 'warning');
-      drupal_goto('admin/structure/feed_generator/add/ical/mapping');
-    }      
+  if ($feed_type == 'rss') {
+    drupal_set_title(t('Add feed News'));
+    $bundle = 'slac_news';
   }
-
-	$bundles = array_keys($options);
-	$bundle = reset($bundles);
+  else {
+    drupal_set_title(t('Add feed Event')); 
+    $bundle = 'event';
+  }
 
 	$form['title'] = array(
     '#type' => 'textfield',
@@ -93,71 +79,55 @@ function feed_generator_form_add($form, &$form_state, $feed_type) {
   );
   
   $form['bundle'] = array(
-    '#type' => 'select',
-    '#title' => t('Types'),
-    '#options' => $options,
-    '#default_value' => $bundle,
-    '#ajax' => array(
-      'callback' => 'ajax_change_bundle_callback',
-      'wrapper' => 'sf-attribute',
-      'method' => 'replace',
-      'effect' => 'fade',
-    ), 
-    '#required' => TRUE,
-  );
-
-  $form['sf'] = array(
-    '#type' => 'container',
-    '#id' => 'sf-attribute',
+    '#type' => 'value',
+    '#value' => $bundle,
   );
     
-  $options_filter = array(
-    '' => t('--select--'),
-  );
-    
-  if (!empty($form_state['values']['bundle'])) {
-  	$bundle = $form_state['values']['bundle'];
-  }
+  if ($feed_type == 'rss') {
+    $options_filter = array(
+      '' => t('- Select -'),
+    );
+      
+    $fields = field_info_instances('node', $bundle);
 
-  $fields = field_info_instances('node', $bundle);
-
-  foreach ($fields as $field_name => $instance) {
-    if ($instance['widget']['module'] == 'taxonomy') {
-      $options_filter[$field_name] = $instance['label'];
+    foreach ($fields as $field_name => $instance) {
+      if ($instance['widget']['module'] == 'taxonomy') {
+        $options_filter[$field_name] = $instance['label'];
+      }
     }
-  }
-  
-  $form['sf']['filter'] = array(
-    '#title' => 'Field filter',
-    '#type' => 'select',
-    '#options' => $options_filter,
-    '#ajax' => array(
-      'callback' => 'ajax_change_filter_callback',
-      'wrapper' => 'sf-filter-attribute',
-      'method' => 'replace',
-      'effect' => 'fade',
-    ), 
-  );
-  
-  $form['sf']['field_value'] = array(
-  	'#type' => 'container',
-  	'#id' => 'sf-filter-attribute',
-  );
+    
+    $form['filter'] = array(
+      '#title' => t('Field filter'),
+      '#type' => 'select',
+      '#options' => $options_filter,
+      '#ajax' => array(
+        'callback' => 'ajax_change_filter_callback',
+        'wrapper' => 'sf-filter-attribute',
+        'method' => 'replace',
+        'effect' => 'fade',
+      ), 
+    );
+    
+    $form['field_value'] = array(
+      '#type' => 'container',
+      '#id' => 'sf-filter-attribute',
+    );
 
-  if (!empty($form_state['values']['filter'])) {
-  	$field_instance = field_info_instance('node', $form_state['values']['filter'], $form_state['values']['bundle']);
-  	
-  	$form['sf']['field_value']['filter_value'] = array(
-  		'#type' => 'textfield',
-  		'#title' => 'Value filter',
-  		'#required' => TRUE,
-  		'#autocomplete_path' => $field_instance['widget']['settings']['autocomplete_path'] . '/' . $form_state['values']['filter'],
-      '#states' => array(
-        'invisible' => array(
-          ':input[name="filter"]' => array('value' => ''),
-        )
-      ),
-  	);
+    if (!empty($form_state['values']['filter'])) {
+      $field_instance = field_info_instance('node', $form_state['values']['filter'], $bundle);
+      
+      $form['field_value']['filter_value'] = array(
+        '#type' => 'textfield',
+        '#title' => t('Value filter'),
+        '#required' => TRUE,
+        '#autocomplete_path' => $field_instance['widget']['settings']['autocomplete_path'] . '/' . $form_state['values']['filter'],
+        '#states' => array(
+          'invisible' => array(
+            ':input[name="filter"]' => array('value' => ''),
+          )
+        ),
+      );
+    }
   }
 
   $form['is_ical'] = array(
@@ -170,26 +140,19 @@ function feed_generator_form_add($form, &$form_state, $feed_type) {
   	'#value' => t('Create'),
   );
 
-  $form['#validate'][] = 'ical_validation_callback';
-
 	return $form;
-}
-
-// ajax callback change bundle
-function ajax_change_bundle_callback($form, &$form_state) {
-  return $form['sf'];
 }
 
 // ajax callback change filter
 function ajax_change_filter_callback($form, &$form_state) {
-  return $form['sf']['field_value'];
+  return $form['field_value'];
 }
 
 function feed_generator_form_add_submit($form, &$form_state) {
 	$values = $form_state['values'];
 
 	$bundle = $values['bundle'];
-	$filter = $values['filter'];
+	$filter = !empty($values['filter']) ? $values['filter'] : '';
 	$filter_value = !empty($values['filter_value']) ? $values['filter_value'] : '';
 	$title = $values['title'];
   $ical = $values['is_ical'];
@@ -217,18 +180,12 @@ function feed_generator_form_add_submit($form, &$form_state) {
   ))
   ->execute();
 
-  if ($ical) {
-    $query = db_select('ical_mapping', 'im');
-    $query->fields('im');
-    $query->condition('im.bundle', $bundle);
-    $ical_config = $query->execute()->fetchAssoc();
-  }
-
   // Generate views feed
   $human_name = "SF $bundle $title";
   $view_name = str_replace(' ', '_', strtolower($human_name));
   $view_desc = "Feed of $bundle";
   $page_path = str_replace(' ', '-', strtolower("feed/$bundle/$title"));
+  $page_path = str_replace('_', '-', strtolower($page_path));
 
   if ($ical) {
     $feed_path = $page_path . '.ics';
@@ -266,6 +223,39 @@ function feed_generator_form_add_submit($form, &$form_state) {
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
 
+  if ($ical) {
+    /* Field: Content: Body */
+    $handler->display->display_options['fields']['body']['id'] = 'body';
+    $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+    $handler->display->display_options['fields']['body']['field'] = 'body';
+    $handler->display->display_options['fields']['body']['label'] = '';
+    $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+    $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
+    $handler->display->display_options['fields']['body']['settings'] = array(
+      'trim_length' => '600',
+    );
+    /* Field: Content: Event date */
+    $handler->display->display_options['fields']['field_slac_event_date']['id'] = 'field_slac_event_date';
+    $handler->display->display_options['fields']['field_slac_event_date']['table'] = 'field_data_field_slac_event_date';
+    $handler->display->display_options['fields']['field_slac_event_date']['field'] = 'field_slac_event_date';
+    $handler->display->display_options['fields']['field_slac_event_date']['label'] = '';
+    $handler->display->display_options['fields']['field_slac_event_date']['element_label_colon'] = FALSE;
+    $handler->display->display_options['fields']['field_slac_event_date']['type'] = 'calendar_date';
+    $handler->display->display_options['fields']['field_slac_event_date']['settings'] = array(
+      'format_type' => 'long',
+      'fromto' => 'both',
+      'multiple_number' => '',
+      'multiple_from' => '',
+      'multiple_to' => '',
+    );
+    /* Field: Content: Event Scientific Area */
+    $handler->display->display_options['fields']['field_slac_event_scientific_area']['id'] = 'field_slac_event_scientific_area';
+    $handler->display->display_options['fields']['field_slac_event_scientific_area']['table'] = 'field_data_field_slac_event_scientific_area';
+    $handler->display->display_options['fields']['field_slac_event_scientific_area']['field'] = 'field_slac_event_scientific_area';
+    $handler->display->display_options['fields']['field_slac_event_scientific_area']['label'] = '';
+    $handler->display->display_options['fields']['field_slac_event_scientific_area']['element_label_colon'] = FALSE;
+  }
+
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -295,23 +285,30 @@ function feed_generator_form_add_submit($form, &$form_state) {
     $handler->display->display_options['filters'][$field]['vocabulary'] = $vocabulary;
   }
 
-  /* Display: Feed */
+  /* Display: Feed iCal */
   if ($ical) {
-    /* Display: Feed */
     $handler = $view->new_display('feed', 'Feed', 'feed_1');
+    $handler->display->display_options['pager']['type'] = 'some';
     $handler->display->display_options['style_plugin'] = 'date_ical';
     $handler->display->display_options['style_options']['cal_name'] = $title;
     $handler->display->display_options['style_options']['disable_webcal'] = TRUE;
-    $handler->display->display_options['row_plugin'] = 'date_ical';
-    $handler->display->display_options['row_options']['date_field'] = $ical_config['date'];
-    $handler->display->display_options['row_options']['summary_field'] = $ical_config['summary'];
-    $handler->display->display_options['row_options']['location_field'] = $ical_config['location'];
+    $handler->display->display_options['row_plugin'] = 'date_ical_fields';
+    $handler->display->display_options['row_options']['date_field'] = 'field_slac_event_date';
+    $handler->display->display_options['row_options']['title_field'] = 'title';
+    $handler->display->display_options['row_options']['description_field'] = 'body';
+    $handler->display->display_options['row_options']['location_field'] = 'field_slac_event_scientific_area';
+    $handler->display->display_options['row_options']['additional_settings'] = array(
+      'skip_blank_dates' => 1,
+    );
     $handler->display->display_options['path'] = $feed_path;
     $handler->display->display_options['displays'] = array(
       'page_1' => 'page_1',
       'default' => 0,
     );
-  }else {
+  }
+
+  /* Display: Feed RSS */
+  else {
     $handler = $view->new_display('feed', 'Feed', 'feed_1');
     $handler->display->display_options['pager']['type'] = 'some';
     $handler->display->display_options['style_plugin'] = 'rss';
@@ -340,10 +337,6 @@ function feed_generator_form_add_submit($form, &$form_state) {
 
 // Form edit feed_generator
 function feed_generator_form_edit($form, &$form_state, $feed) {
-  $types = _node_types_build();
-  $bundles = array_keys($types->names);
-  $bundle = $feed['bundle'];
-
   $form['feed_id'] = array(
     '#type' => 'value',
     '#value' => $feed['fid'],
@@ -356,64 +349,63 @@ function feed_generator_form_edit($form, &$form_state, $feed) {
     '#default_value' => $feed['title'],
   );
   
+  $bundle = $feed['bundle'];
+
   $form['bundle'] = array(
-    '#type' => 'select',
-    '#title' => t('Types'),
-    '#options' => $types->names,
-    '#default_value' => $bundle,
-    '#attributes' => array(
-      'disabled' => TRUE,
-    ),
+    '#type' => 'value',
+    '#value' => $bundle,
   );
     
-  $options_filter = array(
-    '' => t('--select--'),
-  );
+  if (!$feed['ical']) {
+    $options_filter = array(
+      '' => t('- Select -'),
+    );
 
-  $fields = field_info_instances('node', $bundle);
+    $fields = field_info_instances('node', $bundle);
 
-  foreach ($fields as $field_name => $instance) {
-    if ($instance['widget']['module'] == 'taxonomy') {
-      $options_filter[$field_name] = $instance['label'];
+    foreach ($fields as $field_name => $instance) {
+      if ($instance['widget']['module'] == 'taxonomy') {
+        $options_filter[$field_name] = $instance['label'];
+      }
     }
-  }
-  
-  $form['sf']['filter'] = array(
-    '#title' => 'Field filter',
-    '#type' => 'select',
-    '#options' => $options_filter,
-    '#ajax' => array(
-      'callback' => 'ajax_change_filter_callback',
-      'wrapper' => 'sf-filter-attribute',
-      'method' => 'replace',
-      'effect' => 'fade',
-    ),
-    '#default_value' => $feed['filter'],
-  );
-  
-  $form['sf']['field_value'] = array(
-    '#type' => 'container',
-    '#id' => 'sf-filter-attribute',
-  );
+    
+    $form['filter'] = array(
+      '#title' => 'Field filter',
+      '#type' => 'select',
+      '#options' => $options_filter,
+      '#ajax' => array(
+        'callback' => 'ajax_change_filter_callback',
+        'wrapper' => 'sf-filter-attribute',
+        'method' => 'replace',
+        'effect' => 'fade',
+      ),
+      '#default_value' => $feed['filter'],
+    );
+    
+    $form['field_value'] = array(
+      '#type' => 'container',
+      '#id' => 'sf-filter-attribute',
+    );
 
-  if (!empty($form_state['values']['filter'])) {
-    $field_instance = field_info_instance('node', $form_state['values']['filter'], $form_state['values']['bundle']);
-    $filter = $form_state['values']['filter'];
-    $value_filter = '';
+    if (!empty($form_state['values']['filter'])) {
+      $field_instance = field_info_instance('node', $form_state['values']['filter'], $form_state['values']['bundle']);
+      $filter = $form_state['values']['filter'];
+      $value_filter = '';
 
-    if (isset($field_instance)) {
-      $form['sf']['field_value']['filter_value'] = array(
-        '#type' => 'textfield',
-        '#title' => 'Value filter',
-        '#required' => TRUE,
-        '#autocomplete_path' => $field_instance['widget']['settings']['autocomplete_path'] . '/' . $filter,
-        '#default_value' => $value_filter,
-        '#states' => array(
-          'invisible' => array(
-            ':input[name="filter"]' => array('value' => ''),
-          )
-        ),
-      );
+      if (isset($field_instance)) {
+        $form['field_value']['filter_value'] = array(
+          '#type' => 'textfield',
+          '#title' => 'Value filter',
+          '#required' => TRUE,
+          '#autocomplete_path' => $field_instance['widget']['settings']['autocomplete_path'] . '/' . $filter,
+          '#default_value' => $value_filter,
+          '#states' => array(
+            'invisible' => array(
+              ':input[name="filter"]' => array('value' => ''),
+            )
+          ),
+        );
+      }
     }
   }
 
@@ -426,8 +418,6 @@ function feed_generator_form_edit($form, &$form_state, $feed) {
     '#type' => 'submit',
     '#value' => t('Save'),
   );
-
-  $form['#validate'][] = 'ical_validation_callback';
 
   return $form;
 }
@@ -444,7 +434,7 @@ function feed_generator_form_edit_submit($form, &$form_state) {
   }
 
   $bundle = $values['bundle'];
-  $filter = $values['filter'];
+  $filter = empty($values['filter']) ? '' : $values['filter'];
   $filter_value = !empty($values['filter_value']) ? $values['filter_value'] : '';
   $title = $values['title'];
   $ical = $values['is_ical'];
@@ -459,13 +449,6 @@ function feed_generator_form_edit_submit($form, &$form_state) {
       $term_id = reset($term);
       $term_id = $term_id->tid;
     }
-  }
-
-  if ($ical) {
-    $query = db_select('ical_mapping', 'im');
-    $query->fields('im');
-    $query->condition('im.bundle', $bundle);
-    $ical_config = $query->execute()->fetchAssoc();
   }
 
   // Save config
@@ -485,6 +468,7 @@ function feed_generator_form_edit_submit($form, &$form_state) {
   $view_name = str_replace(' ', '_', strtolower($human_name));
   $view_desc = "Feed of $bundle";
   $page_path = str_replace(' ', '-', strtolower("feed/$bundle/$title"));
+  $page_path = str_replace('_', '-', strtolower($page_path));
 
   if ($ical) {
     $feed_path = $page_path . '.ics';
@@ -522,6 +506,39 @@ function feed_generator_form_edit_submit($form, &$form_state) {
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
 
+  if ($ical) {
+    /* Field: Content: Body */
+    $handler->display->display_options['fields']['body']['id'] = 'body';
+    $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+    $handler->display->display_options['fields']['body']['field'] = 'body';
+    $handler->display->display_options['fields']['body']['label'] = '';
+    $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+    $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
+    $handler->display->display_options['fields']['body']['settings'] = array(
+      'trim_length' => '600',
+    );
+    /* Field: Content: Event date */
+    $handler->display->display_options['fields']['field_slac_event_date']['id'] = 'field_slac_event_date';
+    $handler->display->display_options['fields']['field_slac_event_date']['table'] = 'field_data_field_slac_event_date';
+    $handler->display->display_options['fields']['field_slac_event_date']['field'] = 'field_slac_event_date';
+    $handler->display->display_options['fields']['field_slac_event_date']['label'] = '';
+    $handler->display->display_options['fields']['field_slac_event_date']['element_label_colon'] = FALSE;
+    $handler->display->display_options['fields']['field_slac_event_date']['type'] = 'calendar_date';
+    $handler->display->display_options['fields']['field_slac_event_date']['settings'] = array(
+      'format_type' => 'long',
+      'fromto' => 'both',
+      'multiple_number' => '',
+      'multiple_from' => '',
+      'multiple_to' => '',
+    );
+    /* Field: Content: Event Scientific Area */
+    $handler->display->display_options['fields']['field_slac_event_scientific_area']['id'] = 'field_slac_event_scientific_area';
+    $handler->display->display_options['fields']['field_slac_event_scientific_area']['table'] = 'field_data_field_slac_event_scientific_area';
+    $handler->display->display_options['fields']['field_slac_event_scientific_area']['field'] = 'field_slac_event_scientific_area';
+    $handler->display->display_options['fields']['field_slac_event_scientific_area']['label'] = '';
+    $handler->display->display_options['fields']['field_slac_event_scientific_area']['element_label_colon'] = FALSE;
+  }
+
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -555,13 +572,18 @@ function feed_generator_form_edit_submit($form, &$form_state) {
   if ($ical) {
     /* Display: Feed */
     $handler = $view->new_display('feed', 'Feed', 'feed_1');
+    $handler->display->display_options['pager']['type'] = 'some';
     $handler->display->display_options['style_plugin'] = 'date_ical';
     $handler->display->display_options['style_options']['cal_name'] = $title;
     $handler->display->display_options['style_options']['disable_webcal'] = TRUE;
-    $handler->display->display_options['row_plugin'] = 'date_ical';
-    $handler->display->display_options['row_options']['date_field'] = $ical_config['date'];
-    $handler->display->display_options['row_options']['summary_field'] = $ical_config['summary'];
-    $handler->display->display_options['row_options']['location_field'] = $ical_config['location'];
+    $handler->display->display_options['row_plugin'] = 'date_ical_fields';
+    $handler->display->display_options['row_options']['date_field'] = 'field_slac_event_date';
+    $handler->display->display_options['row_options']['title_field'] = 'title';
+    $handler->display->display_options['row_options']['description_field'] = 'body';
+    $handler->display->display_options['row_options']['location_field'] = 'field_slac_event_scientific_area';
+    $handler->display->display_options['row_options']['additional_settings'] = array(
+      'skip_blank_dates' => 1,
+    );
     $handler->display->display_options['path'] = $feed_path;
     $handler->display->display_options['displays'] = array(
       'page_1' => 'page_1',
@@ -617,19 +639,4 @@ function feed_generator_form_delete_submit($form, &$form_state) {
     ->execute();
 
   drupal_goto('admin/structure/feed_generator');
-}
-
-// function validate data input
-function ical_validation_callback($form, &$form_state) {
-  if ($form_state['values']['is_ical']) {
-    $bundle = $form_state['values']['bundle'];
-    $query = db_select('ical_mapping', 'im');
-    $query->fields('im');
-    $query->condition('im.bundle', $bundle);
-    $ical_config = $query->execute()->fetchAssoc();
-
-    if (empty($ical_config)) {
-      form_set_error('is_ical', t('This type not configuage for display iCal'));
-    }
-  }
 }
