@@ -17,18 +17,16 @@ function og_tags_manage() {
 	$slac_ogs = array();
 	foreach ($results as $rs) {
     $actions = array();
-    $actions[] = l(t('Edit'), 'admin/content/og_tags/'.$rs->id.'/edit');
-    $actions[] = l(t('Delete'), 'admin/content/og_tags/'.$rs->id.'/delete');
+    $actions[] = l(t('Edit'), 'admin/config/content/og_tag_importer/'.$rs->id.'/edit');
+    $actions[] = l(t('Delete'), 'admin/config/content/og_tag_importer/'.$rs->id.'/delete');
 		$slac_ogs[] = array(
 			'type' => $types->names[$rs->type],
-			'importer' => l(t('Import'), 'admin/content/og_tags/'.$rs->id.'/importer'),
 			'actions' => implode(' | ', $actions),
 		);
 	}
 
 	$header = array(
 		'type' => t('Content type'),
-		'importer' => t('Source URL'),
 		'edit' => t('Actions'),
 	);
 
@@ -152,7 +150,7 @@ function og_tags_form_add_submit($form, &$form_state) {
 	))
 	->execute();
 
-	drupal_goto('admin/content/og_tags');
+	drupal_goto('admin/config/content/og_tag_importer');
 }
 
 function og_tags_form_edit($form, &$form_state, $og_tag) {
@@ -279,7 +277,7 @@ function og_tags_form_edit_submit($form, &$form_state) {
 	->condition('id', $values['og_tag_id'])
 	->execute();
 
-	drupal_goto('admin/content/og_tags');
+	drupal_goto('admin/config/content/og_tag_importer');
 }
 
 // ajax callback change bundle
@@ -292,7 +290,7 @@ function og_tags_form_delete($form, $form_state, $og_tag) {
   $form['#og_tag'] = $og_tag;
   $types = _node_types_build();
   $bundle = $types->names[$og_tag['type']];
-  return confirm_form($form, t('Are you sure you want to delete the OG:Tab %bundle?', array('%bundle' => $bundle)), 'admin/content/og_tags', t('This action cannot be undone.'), t('Delete'), t('Cancel'));
+  return confirm_form($form, t('Are you sure you want to delete the OG:Tab %bundle?', array('%bundle' => $bundle)), 'admin/config/content/og_tag_importer', t('This action cannot be undone.'), t('Delete'), t('Cancel'));
 }
 
 //function submit delete og tag
@@ -302,13 +300,64 @@ function og_tags_form_delete_submit($form, &$form_state) {
 	  ->condition('id', $id)
 	  ->execute();
 
-	drupal_goto('admin/content/og_tags');
+	drupal_goto('admin/config/content/og_tag_importer');
 }
 
 
 //Form import content from url
 function og_tags_form_importer($form, &$form_state, $og_tag) {
-	$bundle = $og_tag['type'];
+  $bundle = $og_tag['type'];
+
+  if (!empty($form_state['data_og'])) {
+    form_load_include($form_state, 'inc', 'node', 'node.pages');
+    $data = $form_state['data_og'];
+    
+    global $user;
+    $node = (object) array(
+      'uid' => $user->uid,
+      'type' => $bundle,
+      'language' => LANGUAGE_NONE,
+    );
+    
+    //unset($_SESSION['data_og']);
+    foreach ($data as $field_name => $values) {
+      if ($field_name == 'title') {
+        $node->title = $values[0];
+      } 
+      else {
+        $field_info = field_info_field($field_name);
+        switch($field_info['module']) {
+          case 'link':
+            $node->{$field_name}[LANGUAGE_NONE][0]['url'] = $values[0];
+          break;
+          
+          case 'image':
+          case 'mediafield':
+            // we will need to save the image value first, assuming we are getting an image url
+            $image = _og_tag_importer_image_import($values[0]);
+            if (!empty($image)) {
+              $node->{$field_name}[LANGUAGE_NONE][0]['fid'] = $image['fid'];
+            }              
+            
+          break;
+
+          default:
+            if (array_key_exists('value', $field_info['columns'])) {
+              try {
+                $node->{$field_name}[LANGUAGE_NONE][0]['value'] = implode("\n\n", $values);
+              } catch (Exception $e) {}
+            }
+          break;
+        }
+      }
+    }
+    node_object_prepare($node);
+
+    $form = node_form($form, $form_state, $node);
+    
+    return $form;
+  }
+
   $types = _node_types_build();
 
   $form['og_tag'] = array(
@@ -380,61 +429,10 @@ function og_tags_form_importer_submit($form, &$form_state) {
     }
 
     drupal_session_start();
-    $_SESSION['data_og'] = $data;
-    $form_state['redirect'] = 'admin/og_tags/import/'.$form_state['values']['og_tag']['type'];
-
+    $form_state['data_og'] = $data;
+    $form_state['rebuild'] = TRUE;
   }else {
     drupal_set_message('A problem has occurred with fetch data.', 'error');
   }
 }
 
-function og_tags_prefill_form_node($node_type){
-  global $user;
-  if (isset($_SESSION['data_og'])) {
-    module_load_include('inc', 'node', 'node.pages');
-    $node = (object) array(
-      'uid' => $user->uid,
-      'name' => (isset($user->name) ? $user->name : ''),
-      'type' => $node_type->type,
-      'language' => LANGUAGE_NONE,
-    );
-    $data = $_SESSION['data_og'];
-    //unset($_SESSION['data_og']);
-    foreach ($data as $field_name => $values) {
-      if ($field_name == 'title') {
-        $node->title = $values[0];
-      } 
-      else {
-        $field_info = field_info_field($field_name);
-        switch($field_info['module']) {
-          case 'link':
-            $node->{$field_name}[LANGUAGE_NONE][0]['url'] = $values[0];
-          break;
-          
-          case 'image':
-          case 'mediafield':
-            // we will need to save the image value first, assuming we are getting an image url
-            $image = _og_tag_importer_image_import($values[0]);
-            if (empty($image)) {
-              return;
-            }                   
-            $node->{$field_name}[LANGUAGE_NONE][0]['fid'] = $image['fid'];
-          break;
-
-          default:
-            if (array_key_exists('value', $field_info['columns'])) {
-              try {
-                $node->{$field_name}[LANGUAGE_NONE][0]['value'] = implode("\n\n", $values);
-              } catch (Exception $e) {}
-            }
-          break;
-        }
-      }
-    }
-    $form = drupal_get_form($node_type->type.'_node_form', $node);
-    return drupal_render($form);
-  }else {
-    drupal_set_message('No data is be pulled.', 'error');
-    drupal_goto('admin/content/og_tags');
-  }
-}

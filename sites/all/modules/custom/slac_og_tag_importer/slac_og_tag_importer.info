@@ -1,0 +1,6 @@
+name = Slac Og Tag Importer
+description = Mapping slac news and event for og tag importer
+version = 7.x-1.0
+core = 7.x
+package = SLAC
+dependencies[] = og_tag_importer 
