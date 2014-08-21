@@ -15,7 +15,7 @@ function slac_news_metatag_export_default() {
     'instance' => 'node:slac_news',
     'config' => array(
       'og:image' => array(
-        'value' => '[node:field_slac_news_media]',
+        'value' => '[node:field-slac-news-media:file:url]',
       ),
     ),
   );

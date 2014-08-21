@@ -16,7 +16,7 @@ function feed_generator_menu() {
   );
   
   $items['admin/structure/feed_generator/add/rss'] = array(
-    'title' => t('Add RSS'),
+    'title' => t('Add News Feed'),
     'page callback' => 'drupal_get_form',
     'page arguments' => array('feed_generator_form_add', 4),
     'access arguments' => array('administer nodes'),
@@ -26,7 +26,7 @@ function feed_generator_menu() {
   );
 
   $items['admin/structure/feed_generator/add/ical'] = array(
-    'title' => t('Add iCal'),
+    'title' => t('Add Event Feed'),
     'page callback' => 'drupal_get_form',
     'page arguments' => array('feed_generator_form_add', 4),
     'access arguments' => array('administer nodes'),

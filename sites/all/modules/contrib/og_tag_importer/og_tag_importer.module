@@ -5,65 +5,102 @@
  */
 
 /**
+ * Implements hook_permission
+ */
+function og_tag_importer_permission() {
+  return array(
+    'administer og_tag_importer' => array(
+      'title' => t('Administer OG:Tag importer'),
+      'description' => t('Perform administration tasks for OG:Tag importer'),
+    ),
+    'import og_tag_importer' => array(
+      'title' => t('Import content from OpenGraph tags'),
+    ),
+  );
+}
+
+/**
  * Implements hook_menu
  */
 function og_tag_importer_menu() {
 
-  $items['admin/content/og_tags'] = array(
+  $items['admin/config/content/og_tag_importer'] = array(
     'title' => 'Manage OG:Tag Importer',
     'page callback' => 'og_tags_manage',
-    'access arguments' => array('administer nodes'),
+    'access arguments' => array('administer og_tag_importer'),
     'file' => 'og_tag_importer.admin.inc',
   );
   
-  $items['admin/content/og_tags/add'] = array(
+  $items['admin/config/content/og_tag_importer/add'] = array(
     'title' => 'Add OG:Tag Importer',
     'page callback' => 'drupal_get_form',
     'page arguments' => array('og_tags_form_add'),
-    'access arguments' => array('administer nodes'),
+    'access arguments' => array('administer og_tag_importer'),
     'type' => MENU_LOCAL_ACTION,
     'file' => 'og_tag_importer.admin.inc',
   );
 
-  $items['admin/content/og_tags/%og_tag/edit'] = array(
+  $items['admin/config/content/og_tag_importer/%og_tag/edit'] = array(
     'title' => 'Add OG:Tag Importer',
     'page callback' => 'drupal_get_form',
-    'page arguments' => array('og_tags_form_edit', 3),
-    'access arguments' => array('administer nodes'),
+    'page arguments' => array('og_tags_form_edit', 4),
+    'access arguments' => array('administer og_tag_importer'),
     'type' => MENU_CALLBACK,
     'file' => 'og_tag_importer.admin.inc',
   );
 
-  $items['admin/content/og_tags/%og_tag/delete'] = array(
+  $items['admin/config/content/og_tag_importer/%og_tag/delete'] = array(
     'title' => 'Add OG:Tag Importer',
     'page callback' => 'drupal_get_form',
-    'page arguments' => array('og_tags_form_delete', 3),
-    'access arguments' => array('administer nodes'),
+    'page arguments' => array('og_tags_form_delete', 4),
+    'access arguments' => array('administer og_tag_importer'),
     'type' => MENU_CALLBACK,
     'file' => 'og_tag_importer.admin.inc',
   );
 
-  $items['admin/content/og_tags/%og_tag/importer'] = array(
-    'title' => 'Run OG:Tag Importer',
+  $items['node/add/og_tag_importer'] = array(
+    'title' => 'OG:Tag content',
+    'description' => 'Add content from OG:Tag importer',
+    'page callback' => 'og_tag_importer_import',
+    'access arguments' => array('import og_tag_importer'),
+    'type' => MENU_NORMAL_ITEM,
+  );
+
+  $items['node/add/og_tag_importer/%og_tag'] = array(
+    'title' => t("Run import"),
     'page callback' => 'drupal_get_form',
     'page arguments' => array('og_tags_form_importer', 3),
-    'access arguments' => array('administer nodes'),
+    'access arguments' => array('import og_tag_importer'),
     'type' => MENU_CALLBACK,
     'file' => 'og_tag_importer.admin.inc',
   );
-
-   $items['admin/og_tags/import/%node_type'] = array(
-    'title' => 'Run OG:Tag Importer',
-    'page callback' => 'og_tags_prefill_form_node',
-    'page arguments' => array(3),
-    'access arguments' => array('administer nodes'),
-    'type' => MENU_CALLBACK,
-    'file' => 'og_tag_importer.admin.inc',
-  );
-
-  
 
   return $items;
+}
+
+function og_tag_importer_import() {
+  $query = db_select('og_tag_importer', 'oti');
+  $query->fields('oti');
+
+  $results = $query->execute()->fetchAll();
+  
+  $slac_ogs = array();
+  $types = _node_types_build();
+  foreach ($results as $rs) {
+    $bundle = $types->names[$rs->type];
+    $slac_ogs[] = array(
+      'data' => l(t("Import $bundle"), 'node/add/og_tag_importer/'.$rs->id),
+      'class' => array($rs->type),
+    );
+  }
+
+  return theme('item_list', array(
+      'items' => $slac_ogs,
+      'title' => '',
+      'type' => 'ol',
+      'attributes' => array('id' => 'og-tags-list'),
+    )
+  );
 }
 
 function og_tag_load($id) {
