@@ -27,6 +27,7 @@ dependencies[] = file
 ; Contrib
 dependencies[] = jreject
 dependencies[] = googleanalytics
+dependencies[] = superfish
 
 
 ; Admin
@@ -96,7 +97,7 @@ dependencies[] = slac_style_guide
 dependencies[] = slac_configuration
 
 ; Features
-dependencies[] = default_site_template
+dependencies[] = default_site_template_people
 dependencies[] = slac_header_menu
 
 ;Custom modules
