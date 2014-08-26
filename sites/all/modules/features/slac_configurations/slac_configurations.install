@@ -7,6 +7,7 @@
 function slac_configurations_update_7004(){
 	$modules = array(
 		'metatag_opengraph',
+		'metatag',
 		'slac_event',
 		'slac_news',
 		'feeds',
