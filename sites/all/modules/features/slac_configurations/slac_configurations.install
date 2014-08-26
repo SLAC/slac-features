@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * Implements hook_update_N()
+ */
+
+function slac_configurations_update_7004(){
+	$modules = array(
+		'metatag_opengraph',
+		'slac_event',
+		'slac_news',
+		'feeds',
+		'slac_event_feed_importer',
+		'slac_news_feed_importer',
+		'slac_og_tag_importer',
+		'feed_generator',
+	);
+	module_enable($modules);
+}
