@@ -8,13 +8,13 @@ function feed_generator_manage() {
   $types = _node_types_build();
   $output = '';
 
-	$query = db_select('feed_generator', 'sf');
-	$query->fields('sf');
+  $query = db_select('feed_generator', 'sf');
+  $query->fields('sf');
 
-	$results = $query->execute()->fetchAll();
-	
-	$feed_generators = array();
-	foreach ($results as $rs) {
+  $results = $query->execute()->fetchAll();
+
+  $feed_generators = array();
+  foreach ($results as $rs) {
     $filters = array();
     $filters[] = 'Bundle: ' . $types->names[$rs->bundle];
 
@@ -32,33 +32,33 @@ function feed_generator_manage() {
     $link_feed = str_replace('_', '-', strtolower($link_feed));
     $actions[] = l(t('View'), $link_feed);
 
-    $actions[] = l(t('Edit'), 'admin/structure/feed_generator/'.$rs->fid.'/edit');
+    $actions[] = l(t('Edit'), 'admin/structure/feed_generator/' . $rs->fid . '/edit');
 
-    $actions[] = l(t('Delete'), 'admin/structure/feed_generator/'.$rs->fid.'/delete');
+    $actions[] = l(t('Delete'), 'admin/structure/feed_generator/' . $rs->fid . '/delete');
 
-		$feed_generators[] = array(
-			'title' => $title,
+    $feed_generators[] = array(
+      'title' => $title,
       'type' => $rs->ical ? 'iCal' : 'RSS',
       'filter' => implode('<br />', $filters),
-			'actions' => implode(' | ', $actions),
-		);
-	}
+      'actions' => implode(' | ', $actions),
+    );
+  }
 
-	$header = array(
-		'title' => t('Title'),
+  $header = array(
+    'title' => t('Title'),
     'type' => t('Type'),
     'filter' => t('Filter'),
-		'actions' => t('Actions'),
-	);
+    'actions' => t('Actions'),
+  );
 
-	if (!empty($feed_generators)) {
-		$output .= theme('table', array(
-		  'header' => $header,
-		  'rows' => $feed_generators,
-		));
-	}
+  if (!empty($feed_generators)) {
+    $output .= theme('table', array(
+      'header' => $header,
+      'rows' => $feed_generators,
+    ));
+  }
 
-	return $output;
+  return $output;
 }
 
 // Form add feed_generator
@@ -68,26 +68,26 @@ function feed_generator_form_add($form, &$form_state, $feed_type) {
     $bundle = 'slac_news';
   }
   else {
-    drupal_set_title(t('Add Event Feed')); 
+    drupal_set_title(t('Add Event Feed'));
     $bundle = 'event';
   }
 
-	$form['title'] = array(
+  $form['title'] = array(
     '#type' => 'textfield',
     '#title' => t('Title'),
     '#required' => TRUE,
   );
-  
+
   $form['bundle'] = array(
     '#type' => 'value',
     '#value' => $bundle,
   );
-    
+
   if ($feed_type == 'rss') {
     $options_filter = array(
       '' => t('- Select -'),
     );
-      
+
     $fields = field_info_instances('node', $bundle);
 
     foreach ($fields as $field_name => $instance) {
@@ -95,7 +95,7 @@ function feed_generator_form_add($form, &$form_state, $feed_type) {
         $options_filter[$field_name] = $instance['label'];
       }
     }
-    
+
     $form['filter'] = array(
       '#title' => t('Field filter'),
       '#type' => 'select',
@@ -105,9 +105,9 @@ function feed_generator_form_add($form, &$form_state, $feed_type) {
         'wrapper' => 'sf-filter-attribute',
         'method' => 'replace',
         'effect' => 'fade',
-      ), 
+      ),
     );
-    
+
     $form['field_value'] = array(
       '#type' => 'container',
       '#id' => 'sf-filter-attribute',
@@ -115,7 +115,7 @@ function feed_generator_form_add($form, &$form_state, $feed_type) {
 
     if (!empty($form_state['values']['filter'])) {
       $field_instance = field_info_instance('node', $form_state['values']['filter'], $bundle);
-      
+
       $form['field_value']['filter_value'] = array(
         '#type' => 'textfield',
         '#title' => t('Value filter'),
@@ -136,11 +136,11 @@ function feed_generator_form_add($form, &$form_state, $feed_type) {
   );
 
   $form['submit'] = array(
-  	'#type' => 'submit',
-  	'#value' => t('Create'),
+    '#type' => 'submit',
+    '#value' => t('Create'),
   );
 
-	return $form;
+  return $form;
 }
 
 // ajax callback change filter
@@ -149,12 +149,12 @@ function ajax_change_filter_callback($form, &$form_state) {
 }
 
 function feed_generator_form_add_submit($form, &$form_state) {
-	$values = $form_state['values'];
+  $values = $form_state['values'];
 
-	$bundle = $values['bundle'];
-	$filter = !empty($values['filter']) ? $values['filter'] : '';
-	$filter_value = !empty($values['filter_value']) ? $values['filter_value'] : '';
-	$title = $values['title'];
+  $bundle = $values['bundle'];
+  $filter = !empty($values['filter']) ? $values['filter'] : '';
+  $filter_value = !empty($values['filter_value']) ? $values['filter_value'] : '';
+  $title = $values['title'];
   $ical = $values['is_ical'];
 
   if ($filter_value) {
@@ -163,22 +163,23 @@ function feed_generator_form_add_submit($form, &$form_state) {
     $term = taxonomy_get_term_by_name($filter_value, $vocabulary);
     if (empty($term)) {
       $filter_value = '';
-    }else {
+    }
+    else {
       $term_id = reset($term);
       $term_id = $term_id->tid;
     }
   }
 
   // Save config
-  $id = db_insert('feed_generator') // Table name no longer needs {}
+  $id = db_insert('feed_generator')// Table name no longer needs {}
   ->fields(array(
-    'title' => $title,
-    'bundle' => $bundle,
-    'filter' => $filter,
-    'filter_value' => $filter_value,
-    'ical' => $ical,
-  ))
-  ->execute();
+      'title' => $title,
+      'bundle' => $bundle,
+      'filter' => $filter,
+      'filter_value' => $filter_value,
+      'ical' => $ical,
+    ))
+    ->execute();
 
   // Generate views feed
   $human_name = "SF $bundle $title";
@@ -189,7 +190,8 @@ function feed_generator_form_add_submit($form, &$form_state) {
 
   if ($ical) {
     $feed_path = $page_path . '.ics';
-  }else {
+  }
+  else {
     $feed_path = $page_path . '.xml';
   }
 
@@ -215,7 +217,7 @@ function feed_generator_form_add_submit($form, &$form_state) {
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
 
-   /* Field: Content: Title */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -348,14 +350,14 @@ function feed_generator_form_edit($form, &$form_state, $feed) {
     '#required' => TRUE,
     '#default_value' => $feed['title'],
   );
-  
+
   $bundle = $feed['bundle'];
 
   $form['bundle'] = array(
     '#type' => 'value',
     '#value' => $bundle,
   );
-    
+
   if (!$feed['ical']) {
     $options_filter = array(
       '' => t('- Select -'),
@@ -368,7 +370,7 @@ function feed_generator_form_edit($form, &$form_state, $feed) {
         $options_filter[$field_name] = $instance['label'];
       }
     }
-    
+
     $form['filter'] = array(
       '#title' => 'Field filter',
       '#type' => 'select',
@@ -381,7 +383,7 @@ function feed_generator_form_edit($form, &$form_state, $feed) {
       ),
       '#default_value' => $feed['filter'],
     );
-    
+
     $form['field_value'] = array(
       '#type' => 'container',
       '#id' => 'sf-filter-attribute',
@@ -426,7 +428,7 @@ function feed_generator_form_edit_submit($form, &$form_state) {
   $values = $form_state['values'];
   $fid = $values['feed_id'];
   $feed = feed_generator_load($fid);
-  $human_name = "SF ".$feed['bundle'] . " " . $feed['title'];
+  $human_name = "SF " . $feed['bundle'] . " " . $feed['title'];
   $view_name = str_replace(' ', '_', strtolower($human_name));
   $views = views_get_view($view_name);
   if (!empty($views)) {
@@ -442,26 +444,27 @@ function feed_generator_form_edit_submit($form, &$form_state) {
     $field_info = field_info_field($filter);
     $vocabulary = $field_info['settings']['allowed_values'][0]['vocabulary'];
     $term = taxonomy_get_term_by_name($filter_value, $vocabulary);
-    
+
     if (empty($term)) {
       $filter_value = '';
-    }else {
+    }
+    else {
       $term_id = reset($term);
       $term_id = $term_id->tid;
     }
   }
 
   // Save config
-  $id = db_update('feed_generator') // Table name no longer needs {}
+  $id = db_update('feed_generator')// Table name no longer needs {}
   ->fields(array(
-    'title' => $title,
-    'bundle' => $bundle,
-    'filter' => $filter,
-    'filter_value' => $filter_value,
-    'ical' => $ical,
-  ))
-  ->condition('fid', $fid)
-  ->execute();
+      'title' => $title,
+      'bundle' => $bundle,
+      'filter' => $filter,
+      'filter_value' => $filter_value,
+      'ical' => $ical,
+    ))
+    ->condition('fid', $fid)
+    ->execute();
 
   // Generate views feed
   $human_name = "SF $bundle $title";
@@ -472,7 +475,8 @@ function feed_generator_form_edit_submit($form, &$form_state) {
 
   if ($ical) {
     $feed_path = $page_path . '.ics';
-  }else {
+  }
+  else {
     $feed_path = $page_path . '.xml';
   }
 
@@ -498,7 +502,7 @@ function feed_generator_form_edit_submit($form, &$form_state) {
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
 
-   /* Field: Content: Title */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -589,7 +593,8 @@ function feed_generator_form_edit_submit($form, &$form_state) {
       'page_1' => 'page_1',
       'default' => 0,
     );
-  }else {
+  }
+  else {
     $handler = $view->new_display('feed', 'Feed', 'feed_1');
     $handler->display->display_options['pager']['type'] = 'some';
     $handler->display->display_options['style_plugin'] = 'rss';
@@ -610,10 +615,10 @@ function feed_generator_form_edit_submit($form, &$form_state) {
   $handler->display->display_options['row_plugin'] = 'node';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['path'] = $page_path;
-  
+
 
   $view->save();
-  
+
   drupal_goto('admin/structure/feed_generator');
 }
 
@@ -627,7 +632,7 @@ function feed_generator_form_delete($form, &$form_state, $feed) {
 function feed_generator_form_delete_submit($form, &$form_state) {
   $fid = $form['#fid']['fid'];
   $feed = feed_generator_load($fid);
-  $human_name = "SF ".$feed['bundle'] . " " . $feed['title'];
+  $human_name = "SF " . $feed['bundle'] . " " . $feed['title'];
   $view_name = str_replace(' ', '_', strtolower($human_name));
   $views = views_get_view($view_name);
   if (!empty($views)) {
