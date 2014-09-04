@@ -695,7 +695,7 @@ function slac_event_field_default_field_instances() {
     'bundle' => 'event',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Please enter the link of the event, i.e. https://conf-slac.stanford.edu/ixs-2013/Welcome. User will be REDIRECTED to this page instead of viewing the event on this site.',
+    'description' => 'Inserting a URL in this field will cause the node to redirect to the given link.',
     'display' => array(
       'calendar_teaser' => array(
         'label' => 'hidden',
@@ -759,7 +759,7 @@ function slac_event_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_slac_event_link',
-    'label' => 'Redirect event link',
+    'label' => 'Redirect link',
     'required' => 0,
     'settings' => array(
       'attributes' => array(
