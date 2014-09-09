@@ -156,6 +156,8 @@ function slac_event_feed_importer_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('If checked, all items will be promoted');
+  t('If checked, all items will be published');
   t('Promoted');
   t('Published');
   t('Tags');
