@@ -27,7 +27,7 @@ function slac_event_feed_importer_feeds_importer_default() {
       ),
     ),
     'parser' => array(
-      'plugin_key' => 'FeedsSyndicationParser',
+      'plugin_key' => 'DateIcalIcalcreatorParser',
       'config' => array(),
     ),
     'processor' => array(
@@ -38,37 +38,42 @@ function slac_event_feed_importer_feeds_importer_default() {
         'authorize' => 1,
         'mappings' => array(
           0 => array(
-            'source' => 'guid',
-            'target' => 'guid',
-            'unique' => FALSE,
-          ),
-          1 => array(
-            'source' => 'title',
-            'target' => 'title',
-            'unique' => FALSE,
-          ),
-          2 => array(
             'source' => 'description',
             'target' => 'body',
             'unique' => FALSE,
           ),
-          3 => array(
+          1 => array(
             'source' => 'url',
             'target' => 'field_slac_event_link:url',
             'unique' => FALSE,
           ),
+          2 => array(
+            'source' => 'location',
+            'target' => 'field_slac_event_scientific_area',
+            'unique' => FALSE,
+          ),
+          3 => array(
+            'source' => 'summary',
+            'target' => 'title',
+            'unique' => FALSE,
+          ),
           4 => array(
-            'source' => 'field_promoted_items_feed',
-            'target' => 'promote',
+            'source' => 'dtstart',
+            'target' => 'field_slac_event_date:start',
             'unique' => FALSE,
           ),
           5 => array(
-            'source' => 'field_published_items_feed',
-            'target' => 'status',
+            'source' => 'dtend',
+            'target' => 'field_slac_event_date:end',
             'unique' => FALSE,
           ),
+          6 => array(
+            'source' => 'uid',
+            'target' => 'guid',
+            'unique' => 1,
+          ),
         ),
-        'update_existing' => '0',
+        'update_existing' => '2',
         'input_format' => 'full_html',
         'skip_hash_check' => 0,
         'bundle' => 'event',
