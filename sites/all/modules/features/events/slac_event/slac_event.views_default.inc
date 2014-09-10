@@ -1026,5 +1026,114 @@ function slac_event_views_default_views() {
   $handler->display->display_options['path'] = 'event/%/calendar.ics';
   $export['ical_event'] = $view;
 
+  $view = new view();
+  $view->name = 'sf_event_events';
+  $view->description = 'Feed of event';
+  $view->tag = 'FeedGenerator';
+  $view->base_table = 'node';
+  $view->human_name = 'SF event Events';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Events';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
+  $handler->display->display_options['fields']['body']['settings'] = array(
+    'trim_length' => '600',
+  );
+  /* Field: Content: Event date */
+  $handler->display->display_options['fields']['field_slac_event_date']['id'] = 'field_slac_event_date';
+  $handler->display->display_options['fields']['field_slac_event_date']['table'] = 'field_data_field_slac_event_date';
+  $handler->display->display_options['fields']['field_slac_event_date']['field'] = 'field_slac_event_date';
+  $handler->display->display_options['fields']['field_slac_event_date']['label'] = '';
+  $handler->display->display_options['fields']['field_slac_event_date']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_slac_event_date']['type'] = 'calendar_date';
+  $handler->display->display_options['fields']['field_slac_event_date']['settings'] = array(
+    'format_type' => 'long',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+  );
+  /* Field: Content: Event Scientific Area */
+  $handler->display->display_options['fields']['field_slac_event_scientific_area']['id'] = 'field_slac_event_scientific_area';
+  $handler->display->display_options['fields']['field_slac_event_scientific_area']['table'] = 'field_data_field_slac_event_scientific_area';
+  $handler->display->display_options['fields']['field_slac_event_scientific_area']['field'] = 'field_slac_event_scientific_area';
+  $handler->display->display_options['fields']['field_slac_event_scientific_area']['label'] = '';
+  $handler->display->display_options['fields']['field_slac_event_scientific_area']['element_label_colon'] = FALSE;
+  /* Sort criterion: Content: Event date -  start date (field_slac_event_date) */
+  $handler->display->display_options['sorts']['field_slac_event_date_value']['id'] = 'field_slac_event_date_value';
+  $handler->display->display_options['sorts']['field_slac_event_date_value']['table'] = 'field_data_field_slac_event_date';
+  $handler->display->display_options['sorts']['field_slac_event_date_value']['field'] = 'field_slac_event_date_value';
+  $handler->display->display_options['sorts']['field_slac_event_date_value']['order'] = 'DESC';
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'event' => 'event',
+  );
+
+  /* Display: Feed */
+  $handler = $view->new_display('feed', 'Feed', 'feed_1');
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['style_plugin'] = 'date_ical';
+  $handler->display->display_options['style_options']['cal_name'] = 'Events';
+  $handler->display->display_options['style_options']['disable_webcal'] = TRUE;
+  $handler->display->display_options['row_plugin'] = 'date_ical_fields';
+  $handler->display->display_options['row_options']['date_field'] = 'field_slac_event_date';
+  $handler->display->display_options['row_options']['title_field'] = 'title';
+  $handler->display->display_options['row_options']['description_field'] = 'body';
+  $handler->display->display_options['row_options']['location_field'] = 'field_slac_event_scientific_area';
+  $handler->display->display_options['row_options']['additional_settings'] = array(
+    'skip_blank_dates' => 1,
+  );
+  $handler->display->display_options['path'] = 'feed/event/events.ics';
+  $handler->display->display_options['displays'] = array(
+    'page_1' => 'page_1',
+    'default' => 0,
+  );
+
+  /* Display: Page */
+  $handler = $view->new_display('page', 'Page', 'page_1');
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'node';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['path'] = 'feed/event/events';
+  $export['sf_event_events'] = $view;
+
   return $export;
 }
