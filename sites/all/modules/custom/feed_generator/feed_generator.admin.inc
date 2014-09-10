@@ -83,51 +83,49 @@ function feed_generator_form_add($form, &$form_state, $feed_type) {
     '#value' => $bundle,
   );
 
-  if ($feed_type == 'rss') {
-    $options_filter = array(
-      '' => t('- Select -'),
-    );
+  $options_filter = array(
+    '' => t('- Select -'),
+  );
 
-    $fields = field_info_instances('node', $bundle);
+  $fields = field_info_instances('node', $bundle);
 
-    foreach ($fields as $field_name => $instance) {
-      if ($instance['widget']['module'] == 'taxonomy') {
-        $options_filter[$field_name] = $instance['label'];
-      }
+  foreach ($fields as $field_name => $instance) {
+    if ($instance['widget']['module'] == 'taxonomy') {
+      $options_filter[$field_name] = $instance['label'];
     }
+  }
 
-    $form['filter'] = array(
-      '#title' => t('Field filter'),
-      '#type' => 'select',
-      '#options' => $options_filter,
-      '#ajax' => array(
-        'callback' => 'ajax_change_filter_callback',
-        'wrapper' => 'sf-filter-attribute',
-        'method' => 'replace',
-        'effect' => 'fade',
+  $form['filter'] = array(
+    '#title' => t('Field filter'),
+    '#type' => 'select',
+    '#options' => $options_filter,
+    '#ajax' => array(
+      'callback' => 'ajax_change_filter_callback',
+      'wrapper' => 'sf-filter-attribute',
+      'method' => 'replace',
+      'effect' => 'fade',
+    ),
+  );
+
+  $form['field_value'] = array(
+    '#type' => 'container',
+    '#id' => 'sf-filter-attribute',
+  );
+
+  if (!empty($form_state['values']['filter'])) {
+    $field_instance = field_info_instance('node', $form_state['values']['filter'], $bundle);
+
+    $form['field_value']['filter_value'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Value filter'),
+      '#required' => TRUE,
+      '#autocomplete_path' => $field_instance['widget']['settings']['autocomplete_path'] . '/' . $form_state['values']['filter'],
+      '#states' => array(
+        'invisible' => array(
+          ':input[name="filter"]' => array('value' => ''),
+        )
       ),
     );
-
-    $form['field_value'] = array(
-      '#type' => 'container',
-      '#id' => 'sf-filter-attribute',
-    );
-
-    if (!empty($form_state['values']['filter'])) {
-      $field_instance = field_info_instance('node', $form_state['values']['filter'], $bundle);
-
-      $form['field_value']['filter_value'] = array(
-        '#type' => 'textfield',
-        '#title' => t('Value filter'),
-        '#required' => TRUE,
-        '#autocomplete_path' => $field_instance['widget']['settings']['autocomplete_path'] . '/' . $form_state['values']['filter'],
-        '#states' => array(
-          'invisible' => array(
-            ':input[name="filter"]' => array('value' => ''),
-          )
-        ),
-      );
-    }
   }
 
   $form['is_ical'] = array(
@@ -172,7 +170,7 @@ function feed_generator_form_add_submit($form, &$form_state) {
 
   // Save config
   $id = db_insert('feed_generator')// Table name no longer needs {}
-  ->fields(array(
+    ->fields(array(
       'title' => $title,
       'bundle' => $bundle,
       'filter' => $filter,
