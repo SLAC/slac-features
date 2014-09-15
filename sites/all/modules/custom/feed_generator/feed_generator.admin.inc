@@ -254,6 +254,11 @@ function feed_generator_form_add_submit($form, &$form_state) {
     $handler->display->display_options['fields']['field_slac_event_scientific_area']['field'] = 'field_slac_event_scientific_area';
     $handler->display->display_options['fields']['field_slac_event_scientific_area']['label'] = '';
     $handler->display->display_options['fields']['field_slac_event_scientific_area']['element_label_colon'] = FALSE;
+    /* Sort criterion: Content: Event date -  start date (field_slac_event_date) */
+    $handler->display->display_options['sorts']['field_slac_event_date_value']['id'] = 'field_slac_event_date_value';
+    $handler->display->display_options['sorts']['field_slac_event_date_value']['table'] = 'field_data_field_slac_event_date';
+    $handler->display->display_options['sorts']['field_slac_event_date_value']['field'] = 'field_slac_event_date_value';
+    $handler->display->display_options['sorts']['field_slac_event_date_value']['order'] = 'DESC';
   }
 
   /* Filter criterion: Content: Published */
