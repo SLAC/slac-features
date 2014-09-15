@@ -84,3 +84,17 @@ function _slac_news_get_news_node_nid() {
 
   return $news_node->nid;
 }
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function slac_news_preprocess_node(&$variables) {
+  if ($variables['type'] === 'slac_news') {
+    // Set the $node_url variable to the article source URL. This makes it so
+    // when people click article titles from the "News and Press Releases" view,
+    // they are taken to the original article instead of our copy of it.
+    if ($source_urls = field_get_items('node', $variables['node'], 'field_slac_news_source')) {
+      $variables['node_url'] = $source_urls[0]['url'];
+    }
+  }
+}
