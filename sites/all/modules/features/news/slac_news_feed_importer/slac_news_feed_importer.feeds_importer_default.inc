@@ -40,7 +40,7 @@ function slac_news_feed_importer_feeds_importer_default() {
           0 => array(
             'source' => 'guid',
             'target' => 'guid',
-            'unique' => FALSE,
+            'unique' => 1,
           ),
           1 => array(
             'source' => 'title',
@@ -73,8 +73,13 @@ function slac_news_feed_importer_feeds_importer_default() {
             'target' => 'status',
             'unique' => FALSE,
           ),
+          7 => array(
+            'source' => 'timestamp',
+            'target' => 'field_slac_news_date:start',
+            'unique' => FALSE,
+          ),
         ),
-        'update_existing' => '0',
+        'update_existing' => '2',
         'input_format' => 'full_html',
         'skip_hash_check' => 0,
         'bundle' => 'slac_news',
@@ -82,7 +87,7 @@ function slac_news_feed_importer_feeds_importer_default() {
     ),
     'content_type' => 'news_feed',
     'update' => 0,
-    'import_period' => '1800',
+    'import_period' => '0',
     'expire_period' => 3600,
     'import_on_create' => 1,
     'process_in_background' => 0,
