@@ -224,3 +224,7 @@ dependencies[] = slac_google_analytics
 ;dependencies[] = header_menu
 
 dependencies[] = dblog
+
+; OG Tag Importing
+dependencies[] = og_tag_importer
+dependencies[] = slac_og_tag_importer
