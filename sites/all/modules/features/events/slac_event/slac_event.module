@@ -11,6 +11,118 @@ include_once 'slac_event.features.inc';
 include_once 'slac_event.formatter.inc';
 
 /**
+ * Implements hook_menu().
+ */
+function slac_event_menu() {
+  return array(
+    'node/add/event-import' => array(
+      'title' => 'Event import (single)',
+      'type' => MENU_NORMAL_ITEM,
+      'page callback' => 'drupal_get_form',
+      'page arguments' => array('slac_event_import_single'),
+      'access callback' => 'node_access',
+      'access arguments' => array('create', 'event'),
+    ),
+  );
+}
+
+/**
+ * Form callback for our new single event import form.
+ */
+function slac_event_import_single($form, $form_state) {
+  $form['url'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Event page URL'),
+    '#description' => t('Paste in the URL of an event on a SLAC site.'),
+    '#required' => TRUE,
+    '#weight' => 0,
+  );
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Import'),
+  );
+  return $form;
+}
+
+/**
+ * Form validator for our single event import form.
+ *
+ * @see slac_event_import_single()
+ */
+function slac_event_import_single_validate($form, &$form_state) {
+  // Load the page.
+  $page = drupal_http_request($form_state['values']['url']);
+  if ($page->code <= 0) {
+    form_set_error('url', t('This does not appear to be a valid URL.'));
+    return;
+  }
+  elseif ($page->code != 200) {
+    form_set_error('url', t('Loading the page at this URL failed. Error code @code (@error).', array('@code' => $page->code, '@error' => empty($page->error) ? '?' : $page->error)));
+    return;
+  }
+  // XML parsing is easy to fail. I know it's "wrong," but use regex to find
+  // our calendar link.
+  if (!preg_match('/\<link rel="icalendar" href="([^"]+)"/', $page->data, $matches)) {
+    form_set_error('url', t('Event information could not be found on the page.'));
+    return;
+  }
+  $ical = drupal_http_request($matches[1]);
+  if ($ical->code != 200) {
+    form_set_error('url', t('Loading the event information for this event failed. Error code @code (@error).', array('@code' => $page->code, '@error' => empty($page->error) ? '?' : $page->error)));
+    return;
+  }
+  libraries_load('iCalcreator');
+  $calendar = new vcalendar();
+  if (!$calendar->parse($ical->data)) {
+    form_set_error('url', t('Parsing the event information for this event failed.'));
+    return;
+  }
+  $form_state['ical'] = $calendar->components[1];
+}
+
+/**
+ * Form submission function for our single event import form.
+ *
+ * @see slac_event_import_single()
+ */
+function slac_event_import_single_submit($form, &$form_state) {
+  // Ideally, we could leverage already-configured stuff (mappings, etc) for
+  // this, but I can't find a way to do so - it doesn't seem very modular.
+  $node = new stdClass();
+  $node->type = 'event';
+  node_object_prepare($node);
+  $node->title = empty($form_state['ical']->summary) ? '' : $form_state['ical']->summary['value'];
+  $node->field_slac_event_date[LANGUAGE_NONE][] = array(
+    'value' => $form_state['ical']->dtstart['value']['year'] . '-'
+      . $form_state['ical']->dtstart['value']['month'] . '-'
+      . $form_state['ical']->dtstart['value']['day'] . 'T'
+      . $form_state['ical']->dtstart['value']['hour'] . ':'
+      . $form_state['ical']->dtstart['value']['min'] . ':'
+      . $form_state['ical']->dtstart['value']['sec'],
+    'value2' => $form_state['ical']->dtend['value']['year'] . '-'
+      . $form_state['ical']->dtend['value']['month'] . '-'
+      . $form_state['ical']->dtend['value']['day'] . 'T'
+      . $form_state['ical']->dtend['value']['hour'] . ':'
+      . $form_state['ical']->dtend['value']['min'] . ':'
+      . $form_state['ical']->dtend['value']['sec'],
+    'timezone' => $form_state['ical']->dtstart['params']['TZID'],
+    'timezone_db' => $form_state['ical']->dtstart['params']['TZID'],
+    'date_type' => 'date',
+  );
+  if (!empty($form_state['ical']->description)) {
+    // Why is this one a numeric array?
+    $node->body[LANGUAGE_NONE][] = array('value' => $form_state['ical']->description[0]['value']);
+  }
+  if (!empty($form_state['ical']->location)) {
+    $node->field_slac_event_scientific_area[LANGUAGE_NONE][] = array('value' => $form_state['ical']->location['value']);
+  }
+  node_save($node);
+  // Let's redirect the user to the node edit form for the node we just created.
+  $form_state['redirect'] = "node/{$node->nid}/edit";
+  drupal_set_message(t('Event imported. Edit it below if necessary.'));
+}
+
+/**
  * Preprocess function for node template.
  */
 function slac_event_preprocess_node(&$vars) {
