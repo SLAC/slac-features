@@ -305,3 +305,27 @@ function _slac_event_get_date_from_url_with_day() {
 function _slac_event_convert_date_with_day_to_date_without_day($date_string) {
   return substr($date_string, 0, 7);
 }
+
+/**
+ * Implements hook_panels_post_render().
+ */
+function slac_event_panels_post_render($display, $renderer) {
+  // If an event node is being viewed, add a link to its iCalendar display. Now
+  // normally, we'd do this in hook_node_view, easy peasy. But no, because this
+  // site uses Panels, and Panels doesn't have much respect for standard core
+  // hooks. So instead, I use this undocumented Panels hook. Is this the right
+  // way to do this? Asciishrug. Panels is *never* the right way to do
+  // *anything,* but here we are, so here we go.
+  if (isset($display->context['argument_entity_id:node_1'])
+    && $display->context['argument_entity_id:node_1']->data->type === 'event'
+  ) {
+    $event_ics = url("event/{$display->context['argument_entity_id:node_1']->data->nid}/calendar.ics",
+      array('absolute' => TRUE)
+    );
+    drupal_add_html_head_link(array(
+      'rel' => 'icalendar',
+      'href' => $event_ics,
+      'type' => 'text/icalendar',
+    ));
+  }
+}
