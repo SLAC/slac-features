@@ -19,11 +19,29 @@ function feed_generator_manage() {
     $filters[] = 'Bundle: ' . $types->names[$rs->bundle];
 
     if ($rs->filter && $rs->filter_value) {
+      $term_data = explode(', ', $rs->filter_value);
+      $term_objects = taxonomy_term_load_multiple($term_data);
+
       $field_info = field_info_field($rs->filter);
       $vocabulary = $field_info['settings']['allowed_values'][0]['vocabulary'];
       $voca = taxonomy_vocabulary_machine_name_load($vocabulary);
-      $filters[] = $voca->name . ': ' . $rs->filter_value;
+      
+      $vocab_names = '';
+      $first_index = TRUE;
+      foreach ($term_objects as $term_key => $term_obj) {
+        if($first_index) {
+          $vocab_names .= ' ' . $term_obj->name;
+        } else {
+          $vocab_names .= ', ' . $term_obj->name;
+        }
+        $first_index = FALSE;
+      }
+
+      if(!empty($voca->name) && !empty($vocab_names)) {
+        $filters[] = $voca->name . ': ' . $vocab_names;
+      }
     }
+
     $actions = array();
 
     $bundle = $rs->bundle;
@@ -155,16 +173,23 @@ function feed_generator_form_add_submit($form, &$form_state) {
   $title = $values['title'];
   $ical = $values['is_ical'];
 
+  $term_array;
   if ($filter_value) {
     $field_info = field_info_field($filter);
-    $vocabulary = $field_info['settings']['allowed_values'][0]['vocabulary'];
-    $term = taxonomy_get_term_by_name($filter_value, $vocabulary);
-    if (empty($term)) {
-      $filter_value = '';
-    }
-    else {
-      $term_id = reset($term);
-      $term_id = $term_id->tid;
+    $filter_terms = explode(', ', $filter_value);
+
+    foreach ($filter_terms as $term) {
+      $vocabulary = $field_info['settings']['allowed_values'][0]['vocabulary'];
+      $term_object = taxonomy_get_term_by_name($term, $vocabulary);
+
+      if (empty($term_object)) {
+        drupal_set_message(t('@term is not a valid tag', array('@term' => $term)), 'error');
+        return;
+      }
+      else {
+        $term_id = array_keys($term_object);
+        $term_array[] = $term_id[0]; // should only need one
+      }
     }
   }
 
@@ -174,7 +199,7 @@ function feed_generator_form_add_submit($form, &$form_state) {
       'title' => $title,
       'bundle' => $bundle,
       'filter' => $filter,
-      'filter_value' => $filter_value,
+      'filter_value' => implode(', ', $term_array),
       'ical' => $ical,
     ))
     ->execute();
@@ -403,7 +428,7 @@ function feed_generator_form_edit($form, &$form_state, $feed) {
           '#title' => 'Value filter',
           '#required' => TRUE,
           '#autocomplete_path' => $field_instance['widget']['settings']['autocomplete_path'] . '/' . $filter,
-          '#default_value' => $value_filter,
+          '#default_value' => $feed['filter_value'],
           '#states' => array(
             'invisible' => array(
               ':input[name="filter"]' => array('value' => ''),
@@ -443,17 +468,24 @@ function feed_generator_form_edit_submit($form, &$form_state) {
   $filter_value = !empty($values['filter_value']) ? $values['filter_value'] : '';
   $title = $values['title'];
   $ical = $values['is_ical'];
+
+  $term_array;
   if ($filter_value) {
     $field_info = field_info_field($filter);
-    $vocabulary = $field_info['settings']['allowed_values'][0]['vocabulary'];
-    $term = taxonomy_get_term_by_name($filter_value, $vocabulary);
+    $filter_terms = explode(', ', $filter_value);
 
-    if (empty($term)) {
-      $filter_value = '';
-    }
-    else {
-      $term_id = reset($term);
-      $term_id = $term_id->tid;
+    foreach ($filter_terms as $term) {
+      $vocabulary = $field_info['settings']['allowed_values'][0]['vocabulary'];
+      $term_object = taxonomy_get_term_by_name($term, $vocabulary);
+
+      if (empty($term_object)) {
+        drupal_set_message(t('@term is not a valid tag', array('@term' => $term)), 'error');
+        return;
+      }
+      else {
+        $term_id = array_keys($term_object);
+        $term_array[] = $term_id[0]; // should only need one
+      }
     }
   }
 
@@ -463,7 +495,7 @@ function feed_generator_form_edit_submit($form, &$form_state) {
       'title' => $title,
       'bundle' => $bundle,
       'filter' => $filter,
-      'filter_value' => $filter_value,
+      'filter_value' => implode(', ', $term_array),
       'ical' => $ical,
     ))
     ->condition('fid', $fid)
