@@ -173,7 +173,7 @@ function feed_generator_form_add_submit($form, &$form_state) {
   $title = $values['title'];
   $ical = $values['is_ical'];
 
-  $term_array;
+  $term_array = array();
   if ($filter_value) {
     $field_info = field_info_field($filter);
     $filter_terms = explode(', ', $filter_value);
