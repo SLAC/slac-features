@@ -763,6 +763,25 @@ function slac_event_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  /* Field: Content: Event date */
+  $handler->display->display_options['fields']['field_slac_event_date']['id'] = 'field_slac_event_date';
+  $handler->display->display_options['fields']['field_slac_event_date']['table'] = 'field_data_field_slac_event_date';
+  $handler->display->display_options['fields']['field_slac_event_date']['field'] = 'field_slac_event_date';
+  $handler->display->display_options['fields']['field_slac_event_date']['settings'] = array(
+    'format_type' => 'long',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+  );
+  /* Field: Content: Event Scientific Area */
+  $handler->display->display_options['fields']['field_slac_event_scientific_area']['id'] = 'field_slac_event_scientific_area';
+  $handler->display->display_options['fields']['field_slac_event_scientific_area']['table'] = 'field_data_field_slac_event_scientific_area';
+  $handler->display->display_options['fields']['field_slac_event_scientific_area']['field'] = 'field_slac_event_scientific_area';
   /* Sort criterion: Content: Event date -  start date (field_slac_event_date) */
   $handler->display->display_options['sorts']['field_slac_event_date_value']['id'] = 'field_slac_event_date_value';
   $handler->display->display_options['sorts']['field_slac_event_date_value']['table'] = 'field_data_field_slac_event_date';
@@ -880,16 +899,29 @@ function slac_event_views_default_views() {
   /* Display: Feed */
   $handler = $view->new_display('feed', 'Feed', 'feed_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Events RSS Feed';
+  $handler->display->display_options['title'] = 'Events iCalendar Feed';
   $handler->display->display_options['defaults']['link_display'] = FALSE;
   $handler->display->display_options['link_display'] = 'feed_1';
   $handler->display->display_options['link_url'] = 'events/feed';
   $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['style_plugin'] = 'rss';
-  $handler->display->display_options['row_plugin'] = 'node_rss';
-  $handler->display->display_options['row_options']['item_length'] = 'calendar_teaser';
+  $handler->display->display_options['style_plugin'] = 'date_ical';
+  $handler->display->display_options['style_options']['cal_name'] = '';
+  $handler->display->display_options['row_plugin'] = 'date_ical_fields';
+  $handler->display->display_options['row_options']['date_field'] = 'field_slac_event_date';
+  $handler->display->display_options['row_options']['title_field'] = 'title';
+  $handler->display->display_options['row_options']['description_field'] = 'body';
+  $handler->display->display_options['row_options']['location_field'] = 'field_slac_event_scientific_area';
+  $handler->display->display_options['row_options']['additional_settings'] = array(
+    'skip_blank_dates' => 0,
+  );
   $handler->display->display_options['defaults']['header'] = FALSE;
   $handler->display->display_options['defaults']['empty'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Event date -  start date (field_slac_event_date) */
+  $handler->display->display_options['sorts']['field_slac_event_date_value']['id'] = 'field_slac_event_date_value';
+  $handler->display->display_options['sorts']['field_slac_event_date_value']['table'] = 'field_data_field_slac_event_date';
+  $handler->display->display_options['sorts']['field_slac_event_date_value']['field'] = 'field_slac_event_date_value';
+  $handler->display->display_options['sorts']['field_slac_event_date_value']['order'] = 'DESC';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
