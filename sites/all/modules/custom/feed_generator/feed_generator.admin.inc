@@ -601,7 +601,7 @@ function feed_generator_form_edit_submit($form, &$form_state) {
     $handler->display->display_options['filters'][$field]['table'] = 'field_data_' . $filter;
     $handler->display->display_options['filters'][$field]['field'] = $filter . '_tid';
     $handler->display->display_options['filters'][$field]['value'] = array(
-      $term_id => $term_id,
+      $term_id => implode(', ', $term_array),
     );
     $handler->display->display_options['filters'][$field]['type'] = 'select';
     $handler->display->display_options['filters'][$field]['vocabulary'] = $vocabulary;

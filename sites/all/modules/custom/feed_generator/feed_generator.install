@@ -54,3 +54,33 @@ function feed_generator_schema() {
 
   return $schema;
 }
+
+function feed_generator_update_7001() {
+  $query = db_select('feed_generator', 'fg');
+  $query->fields('fg', array('fid','filter_value', 'bundle'));
+  $results = $query->execute()->fetchAll();
+
+  foreach ($results as $record) {
+    $values = explode(', ', $record->filter_value);
+
+    if(!$values === FALSE || empty($values)) {
+      $term_array;
+      foreach ($values as $val) {
+        if(!is_int($val)) {
+          $voca = taxonomy_vocabulary_machine_name_load($record->bundle));
+          $term_object = taxonomy_get_term_by_name($val, $voca);
+
+          $term_id = array_keys($term_object);
+          $term_array[] = $term_id[0]; // should only need one
+        }
+      }
+
+      db_update('feed_generator')
+      ->fields(array(
+          'filter_value' => implode(', ', $term_array),
+        ))
+      ->condition('fid', $fid)
+      ->execute();
+    }
+  }  
+}
