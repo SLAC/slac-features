@@ -67,7 +67,7 @@ function feed_generator_update_7001() {
       $term_array;
       foreach ($values as $val) {
         if(!is_int($val)) {
-          $voca = taxonomy_vocabulary_machine_name_load($record->bundle));
+          $voca = taxonomy_vocabulary_machine_name_load($record->bundle);
           $term_object = taxonomy_get_term_by_name($val, $voca);
 
           $term_id = array_keys($term_object);
