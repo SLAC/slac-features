@@ -422,13 +422,29 @@ function feed_generator_form_edit($form, &$form_state, $feed) {
       $filter = $form_state['values']['filter'];
       $value_filter = '';
 
+      $term_data = explode(', ', $feed['filter_value']);
+      $term_objects = taxonomy_term_load_multiple($term_data);
+
+      $voca = taxonomy_vocabulary_machine_name_load($feed['bundle']);
+      
+      $vocab_names = '';
+      $first_index = TRUE;
+      foreach ($term_objects as $term_key => $term_obj) {
+        if($first_index) {
+          $vocab_names .= ' ' . $term_obj->name;
+        } else {
+          $vocab_names .= ', ' . $term_obj->name;
+        }
+        $first_index = FALSE;
+      }
+
       if (isset($field_instance)) {
         $form['field_value']['filter_value'] = array(
           '#type' => 'textfield',
           '#title' => 'Value filter',
           '#required' => TRUE,
           '#autocomplete_path' => $field_instance['widget']['settings']['autocomplete_path'] . '/' . $filter,
-          '#default_value' => $feed['filter_value'],
+          '#default_value' => $vocab_names,
           '#states' => array(
             'invisible' => array(
               ':input[name="filter"]' => array('value' => ''),
