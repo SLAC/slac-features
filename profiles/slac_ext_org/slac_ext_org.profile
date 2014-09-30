@@ -69,8 +69,14 @@ function slac_ext_org_form_slac_configuration_form_alter(&$form, &$form_state) {
 
   $form['site_url_address'] = array(
     '#type' => 'textfield',
-    '#title' => t('Address'),
+    '#title' => t('Secondary Footer Address'),
     '#default_value' => variable_get('site_url_address', ''),
+    '#required' => TRUE,
+  );
+  $form['site_footer_address'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Address'),
+    '#default_value' => variable_get('site_footer_address', ''),
     '#required' => TRUE,
   );
 //  if (function_exists('slac_form_system_theme_settings_alter')) {
