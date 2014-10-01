@@ -373,7 +373,7 @@ ul.tabs li a:hover, .action-links li a:hover { background-color: #2e2e2e; }
 .mobile-search-form .pane-search-block, .mobile-search-form .pane-search-form { display: block; }
 
 .header.with_user_search form { padding-right: 38px; position: relative; }
-.header.with_user_search form input[type='text'] { width: 100%; -moz-box-shadow: 0px 0px 0px 1px #a1a1a1 inset, 0px 0px 0px 0px black; -webkit-box-shadow: 0px 0px 0px 1px #a1a1a1 inset, 0px 0px 0px 0px black; box-shadow: 0px 0px 0px 1px #a1a1a1 inset, 0px 0px 0px 0px black; -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0; border: 0 none; padding: 5px 6px; -webkit-appearance: none; letter-spacing: 1px; }
+.header.with_user_search form input[type='text'] { width: 100%; -moz-box-shadow: 0px 0px 0px 1px #a1a1a1 inset, 0px 0px 0px 0px black; -webkit-box-shadow: 0px 0px 0px 1px #a1a1a1 inset, 0px 0px 0px 0px black; box-shadow: 0px 0px 0px 1px #a1a1a1 inset, 0px 0px 0px 0px black; -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0; border: 0 none; padding: 0 6px; -webkit-appearance: none; letter-spacing: 1px; }
 .header.with_user_search form input[type='submit'] { position: absolute; top: 0; right: 0; margin: 0; text-align: center; height: 26px; width: 32px; padding: 0; line-height: 1; -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0; background-color: white; -webkit-appearance: none; border: 0 none; -moz-box-shadow: 0px 0px 0px 1px #a1a1a1 inset, 0px 0px 0px 0px black; -webkit-box-shadow: 0px 0px 0px 1px #a1a1a1 inset, 0px 0px 0px 0px black; box-shadow: 0px 0px 0px 1px #a1a1a1 inset, 0px 0px 0px 0px black; }
 
 @media (min-width: 690px) { .pane-search-block, .pane-search-form { display: none; }
@@ -979,7 +979,7 @@ ol.search-results .search-snippet strong { font-weight: bold; color: #871628; }
   .pp-image-style-description-right { float: right; margin-left: 20px; } }
 /* IntOrg profile styles */
 .page-basic-io a:hover { color: #0c5791; }
-.page-basic-io .top-wrapper { background: url("../images/header-bg.jpg") center no-repeat; background-size: cover; }
+.page-basic-io .top-wrapper { background: url("../images/header-bg.jpg") center no-repeat; background-size: cover; -ms-behavior: url(/backgroundsize.min.htc); }
 .page-basic-io .top-wrapper .header { padding-top: 20px; margin-top: -20px; border-bottom: 5px solid rgba(101, 166, 223, 0.25); }
 .page-basic-io .top-wrapper .header .user-search { min-height: 60px; }
 .page-basic-io .top-wrapper .user-search { padding-top: 18px; }
