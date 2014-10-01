@@ -18,3 +18,12 @@ function slac_event_demo_install() {
   $share_fpp = fieldable_panels_panes_create($values);
   fieldable_panels_panes_save($share_fpp);
 }
+
+/**
+ * No longer allow event importing via OG tags (it never worked).
+ */
+function slac_event_update_7001(&$sandbox) {
+  db_delete('og_tag_importer')
+    ->condition('type', 'event')
+    ->execute();
+}

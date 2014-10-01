@@ -1,0 +1,109 @@
+<?php
+/**
+ * @file
+ * Code for the Slac feed news importer feature.
+ */
+
+include_once 'slac_news_feed_importer.features.inc';
+
+
+/**
+* Implements hook_feeds_parser_sources_alter().
+*/
+function slac_news_feed_importer_feeds_parser_sources_alter(&$sources, $content_type) {
+	if ($content_type == 'news_feed') {
+		$sources['field_published_items_news_feed'] = array(
+			'name' => 'Feed Node: Published',
+			'description' => 'Set item published',
+			'callback' => 'feedmapper_slac_news_get_published_item_feed',
+		);
+
+		$sources['field_promoted_items_news_feed'] = array(
+			'name' => 'Feed Node: Promoted',
+			'description' => 'Set item promoted',
+			'callback' => 'feedmapper_slac_news_get_promoted_item_feed',
+		);
+	}
+}
+
+function feedmapper_slac_news_get_published_item_feed(FeedsSource $source) {
+	$nid = $source->feed_nid;
+	$feed_importer = node_load($nid);
+	return $feed_importer->field_published_items_news_feed['und'][0]['value'];
+}
+
+function feedmapper_slac_news_get_promoted_item_feed(FeedsSource $source) {
+	$nid = $source->feed_nid;
+	$feed_importer = node_load($nid);
+	return $feed_importer->field_promoted_items_news_feed['und'][0]['value'];
+}
+
+/**
+ * Implements hook_feeds_presave().
+ *
+ * If there seems to be an image in the body field, try to import it and put it
+ * in our media field.
+ */
+function slac_news_feed_importer_feeds_presave(FeedsSource $source, $entity, $item, $entity_id) {
+  if ($entity->feeds_item->entity_type == 'node') {
+    // Pluck the image from the body and put it in the image field.
+    $bodies = field_get_items('node', $entity, 'body');
+    try {
+      $dom = filter_dom_load($bodies[0]['value']);
+    }
+    catch (Exception $e) {
+      // Parsing the XML failed. Just give up.
+      return;
+    }
+    $images = $dom->getElementsByTagName('img');
+    if ($images->length < 1) {
+      return;
+    }
+    $src = $images->item(0)->getAttribute('src');
+    // Only bother continuing if we have an SRC and it's absolute
+    if (empty($src) || !preg_match('~^https?://~', $src)) {
+      return;
+    }
+    $src_parsed = parse_url($src);
+    $filename = basename($src_parsed['path']);
+    $destdir = 'public://slac_news/';
+    $destname = $destdir . $filename;
+    // Check to see if we have a file with this name already
+    if (!file_destination($destname, FILE_EXISTS_ERROR)) {
+      // Interesting. Can we load that file?
+      $fid = db_select('file_managed', 'fm')
+        ->condition('fm.uri', $destname)
+        ->fields('fm', array('fid'))
+        ->range(0, 1)
+        ->execute()
+        ->fetchField();
+      if ($fid) {
+        $file = file_load($fid);
+      }
+    }
+    // If we didn't just find a file, download a new one.
+    if (empty($file)) {
+      $data = drupal_http_request($src);
+      if ($data->code != 200) {
+        return;
+      }
+      file_prepare_directory($destdir, FILE_MODIFY_PERMISSIONS | FILE_CREATE_DIRECTORY);
+      if (!$file = file_save_data($data->data, $destname, FILE_EXISTS_REPLACE)) {
+        return;
+      }
+    }
+    $lang = field_language('node', $entity, 'field_slac_news_media');
+    $entity->field_slac_news_media[$lang][] = (array) $file;
+    // Remove the image from the body DOM
+    try {
+/*       $dom->removeChild($images->item(0)); */
+      // Oh, hmm, that always fails for some reason. Okay, a stupid hack, then.
+      $to_remove = $dom->saveXML($images->item(0));
+    }
+    catch (Exception $e) {
+    }
+    $lang = field_language('node', $entity, 'body');
+    // Stupid hack, commence!
+    $entity->body[$lang][0]['value'] = str_replace($to_remove, '', filter_dom_serialize($dom));
+  }
+}

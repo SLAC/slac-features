@@ -1,0 +1,343 @@
+<?php
+
+/*
+ * @file .module
+ */
+
+/**
+ * Implements hook_permission
+ */
+function og_tag_importer_permission() {
+  return array(
+    'administer og_tag_importer' => array(
+      'title' => t('Administer OG:Tag importer'),
+      'description' => t('Perform administration tasks for OG:Tag importer'),
+    ),
+    'import og_tag_importer' => array(
+      'title' => t('Import content from OpenGraph tags'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_menu
+ */
+function og_tag_importer_menu() {
+
+  $items['admin/config/content/og_tag_importer'] = array(
+    'title' => 'Manage OG:Tag Importer',
+    'page callback' => 'og_tags_manage',
+    'access arguments' => array('administer og_tag_importer'),
+    'file' => 'og_tag_importer.admin.inc',
+  );
+  
+  $items['admin/config/content/og_tag_importer/add'] = array(
+    'title' => 'Add OG:Tag Importer',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('og_tags_form_add'),
+    'access arguments' => array('administer og_tag_importer'),
+    'type' => MENU_LOCAL_ACTION,
+    'file' => 'og_tag_importer.admin.inc',
+  );
+
+  $items['admin/config/content/og_tag_importer/%og_tag/edit'] = array(
+    'title' => 'Add OG:Tag Importer',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('og_tags_form_edit', 4),
+    'access arguments' => array('administer og_tag_importer'),
+    'type' => MENU_CALLBACK,
+    'file' => 'og_tag_importer.admin.inc',
+  );
+
+  $items['admin/config/content/og_tag_importer/%og_tag/delete'] = array(
+    'title' => 'Add OG:Tag Importer',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('og_tags_form_delete', 4),
+    'access arguments' => array('administer og_tag_importer'),
+    'type' => MENU_CALLBACK,
+    'file' => 'og_tag_importer.admin.inc',
+  );
+
+  $items['node/add/og_tag_importer'] = array(
+    'title' => 'OG:Tag content',
+    'description' => 'Add content from OG:Tag importer',
+    'page callback' => 'og_tag_importer_import',
+    'access arguments' => array('import og_tag_importer'),
+    'type' => MENU_NORMAL_ITEM,
+  );
+
+  $items['node/add/og_tag_importer/%og_tag'] = array(
+    'title' => t("Run import"),
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('og_tags_form_importer', 3),
+    'access arguments' => array('import og_tag_importer'),
+    'type' => MENU_CALLBACK,
+    'file' => 'og_tag_importer.admin.inc',
+  );
+
+  return $items;
+}
+
+function og_tag_importer_import() {
+  $query = db_select('og_tag_importer', 'oti');
+  $query->fields('oti');
+
+  $results = $query->execute()->fetchAll();
+  
+  $slac_ogs = array();
+  $types = _node_types_build();
+  foreach ($results as $rs) {
+    $bundle = $types->names[$rs->type];
+    $slac_ogs[] = array(
+      'data' => l(t("Import $bundle"), 'node/add/og_tag_importer/'.$rs->id),
+      'class' => array($rs->type),
+    );
+  }
+
+  return theme('item_list', array(
+      'items' => $slac_ogs,
+      'title' => '',
+      'type' => 'ol',
+      'attributes' => array('id' => 'og-tags-list'),
+    )
+  );
+}
+
+function og_tag_load($id) {
+	$query = db_select('og_tag_importer', 'sog')
+		->fields('sog')
+		->condition('sog.id', $id);
+
+	$rs = $query->execute()->fetchAssoc();
+
+	return empty($rs) ? FALSE : $rs;
+}
+
+function og_tag_importer_import_tags($og_tags, $tags) {
+	$bundle = $tags['type'];
+
+  $mapping = og_tag_importer_auto_map($tags);
+  $data = array();
+  foreach ($og_tags as $tag_name => $value) {
+  	$key = str_replace(':', '_', $tag_name);
+
+  	if (array_key_exists($key, $tags)) {
+  		$map = $tags[$key];
+  	}else {
+  		$map = array_key_exists($tag_name, $mapping) ? $mapping[$tag_name] : '';
+  	}
+
+    if ($map != '') {
+      $data[$map][] = $value;
+    }
+  }
+  $node = new stdClass();
+  $node->type = $bundle;
+  node_object_prepare($node);
+  
+  $node->language = LANGUAGE_NONE;
+  $node->status = 0;
+  
+  node_save($node);
+  
+  $wrapper = entity_metadata_wrapper('node', $node);
+  foreach ($data as $field_name => $values) {
+    if ($field_name == 'title') {
+      $wrapper->title = $values[0];
+    } 
+    else {
+      $field_info = field_info_field($field_name);
+      switch($field_info['module']) {
+        case 'link':
+          $wrapper->{$field_name}->set(array('url' => $values[0]));
+        break;
+        case 'image':
+          // we will need to save the image value first, assuming we are getting an image url
+          $image = _og_tag_importer_image_import($values[0]);
+          if (empty($image)) {
+            return;
+          }          
+          if ($field_info['cardinality'] == 1) {
+          	$input = $image;
+          } else {
+          	$input = array($image);	
+          }          
+          $wrapper->{$field_name}->set($input);
+        break;
+        case 'mediafield':
+          // we will need to save the image value first, assuming we are getting an image url
+          $image = _og_tag_importer_image_import($values[0]);
+          if (empty($image)) {
+            return;
+          }          
+          if ($field_info['cardinality'] == 1) {
+            $input = $image;
+          } else {
+            $input = array($image); 
+          }          
+          $wrapper->{$field_name}->set($input);
+        break;
+
+        default:
+          if (array_key_exists('value', $field_info['columns'])) {
+            try {
+              $wrapper->{$field_name}->set(array('value' => implode("\n\n", $values)));
+            } catch (Exception $e) {}
+          }
+        break;
+      }
+    }
+  }
+  // let other modules alter the wrapper before we save it
+  drupal_alter('og_tag_importer_import', $wrapper, $data);
+  $wrapper->save();
+  return $node->nid;
+}
+
+/**
+ * Creates an auto mapping of the content type with the og fields
+ */
+function og_tag_importer_auto_map($og_tag) {
+  $mapping = array(
+    'og:title' => 'title',
+  );
+  $bundle = $og_tag['type'];
+  $fields = field_info_instances('node', $bundle);
+  foreach ($fields as $field_name => $instance) {
+    // auto field mappings
+    if ($instance['widget']['module'] == 'link') {
+        $mapping['og:url'] = $field_name; 
+    }
+    if ($instance['widget']['module'] == 'image') {
+      $mapping['og:image'] = $field_name;
+    }
+  }
+  // we can't assume body field always exists
+  if (array_key_exists('body', $fields)) {
+    $mapping['og:description'] = 'body';
+    // default setting for fields if no auto-mapping detected
+    // they are going to be appended ot the body tag
+    if (!array_key_exists('og:url', $mapping)) {
+      $mapping['og:url'] = 'body';
+    }
+    if (!array_key_exists('og:image', $mapping)) {
+      $mapping['og:image'] = 'body';
+    }
+    $mapping['og:site_name'] = 'body';  
+  }
+  return $mapping;
+}
+
+/**
+ * function to fetch the OG tags from an external url
+ *
+ * @params
+ * (string) $url        An valid url of an external article
+ *
+ * @return
+ * (array)  $result     A result array with error, message, data elements, 
+ *                      If error occurs, error = 1 and data element is not there 
+ */
+function og_tag_importer_fetch($url) {
+
+  $error = '';
+  $result = drupal_http_request($url);
+  // error with fetching the url
+  if ($result->code != '200') {
+    $message = 'OG:Tag importer was unable to fetch the url with code: %code and error: %error';
+    $variables = array(
+      '%code' => $result->code,
+      '%error' => $result->error,
+    );
+    watchdog('og_tag_importer', $message, $variables, WATCHDOG_WARNING, 'node/add/og_tag_importer');
+    $error = t('Unable to fetch the url given, please check the logs for more details');
+    return array(
+      'error' => 1,
+      'message' => $error,
+    );
+  }
+
+  // let's parse the content
+  libxml_use_internal_errors(true);
+  $og_tags = array();
+  $html = $result->data;
+  $doc = new DomDocument();
+  $doc->loadHTML($html);
+  $xpath = new DOMXPath($doc);
+  $query = '//*/meta[starts-with(@property, \'og:\')]';
+  $metas = $xpath->query($query);
+  foreach ($metas as $meta) {
+    $property = $meta->getAttribute('property');
+    $content = $meta->getAttribute('content');
+    $og_tags[$property] = $content;
+  }
+  
+  if (empty($og_tags)) {
+    $error = t('The fetched url does not contain any OpenGraph tags');
+    return array(
+      'error' => 1,
+      'message' => $error,
+    );
+  }
+  
+  return array(
+    'data' => $og_tags,
+    'error' => 0,
+    'message' => 0,
+  );  
+}
+
+/**
+ * Import an url into an image
+ *
+ * @params 
+ * (string) $url        A well formed url string of the image
+ *
+ * @returns
+ * (array) $file        A file array for the field, contains elements such as 
+ *                      fid, uri, filename, filemime, uid, status, width, height
+ *
+ */
+function _og_tag_importer_image_import($url) {
+  $file = new stdClass();
+  $result = drupal_http_request($url);
+  // error with fetching the url
+  if ($result->code != '200') {
+    return;
+  }
+  $file_name = '';
+  $file_name = parse_url($url);
+  if (array_key_exists('path', $file_name)) {
+    $file_name = pathinfo($file_name['path']);
+    $file_name = $file_name['basename'];
+  }
+  
+  $file = file_save_data($result->data, 'public://' . $file_name); 
+  $file->status =0;
+  file_save($file);
+  if (!empty($file)) {
+    $image_info = image_get_info(drupal_realpath($file->uri));
+    if (!$image_info) {
+      return;
+    }
+    $file->width = $image_info['width'];
+    $file->height = $image_info['height'];
+  }
+
+  return (array) $file;
+}
+
+/**
+ * Implements hook_form_alter
+ */
+/*
+function og_tag_importer_form_alter(&$form,$form_state,$form_id){
+  foreach ($_SESSION['data_og'] as $field_name => $value) {
+    print_r($form[]);
+    die;
+  }
+}
+
+function og_tag_importer_pull_data($form,$form_state){
+ 
+}*/

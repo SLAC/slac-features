@@ -213,3 +213,10 @@ dependencies[] = slac_workbench_settings_eo
 dependencies[] = slac_google_analytics
 ; Special Menu
 ;dependencies[] = header_menu
+
+; OG Tag Importing
+dependencies[] = og_tag_importer
+dependencies[] = slac_og_tag_importer
+
+;feeds deps
+dependencies[] = feed_generator

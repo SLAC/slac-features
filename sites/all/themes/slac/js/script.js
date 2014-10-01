@@ -223,11 +223,6 @@
           if (!$rightSidebar.find('.panels-ipe-sort-container').children().length)
             $rightSidebar.prev('.general-right').addClass('expand-full');
         }
-        if ($eventWrapper.length) {
-          // Only if has no children
-          if (!$eventWrapper.find('.panels-ipe-sort-container').children().length)
-            $eventWrapper.addClass('expand-hide');
-        }
       }
       // visually hide empty regions.
       hideblocksForAdmin();

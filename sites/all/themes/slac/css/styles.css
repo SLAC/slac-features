@@ -541,8 +541,6 @@ ul.tabs li a:hover, .action-links li a:hover { background-color: #2e2e2e; }
 .faq-comments article, .pane-node-comments article { margin-bottom: 15px; }
 .faq-comments .links li, .pane-node-comments .links li { border-bottom: 0; margin-bottom: 0; }
 
-.feed-icon { display: none; }
-
 .front .pane-page-content .general-left .panel-pane { margin-bottom: 36px; }
 .front .pane-page-content .general-left .panels-ipe-portlet-wrapper .panel-pane { margin-bottom: 0; }
 

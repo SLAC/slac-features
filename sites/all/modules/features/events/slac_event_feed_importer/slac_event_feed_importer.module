@@ -1,0 +1,58 @@
+<?php
+/**
+ * @file
+ * Code for the Slac feed event importer feature.
+ */
+
+include_once 'slac_event_feed_importer.features.inc';
+
+/**
+* Implements hook_feeds_parser_sources_alter().
+*/
+function slac_event_feed_importer_feeds_parser_sources_alter(&$sources, $content_type) {
+	if ($content_type == 'event_feed') {
+		$sources['field_published_items_feed'] = array(
+			'name' => 'Feed Node: Published',
+			'description' => 'Set item published',
+			'callback' => 'feedmapper_slac_event_get_published_item_feed',
+		);
+
+		$sources['field_promoted_items_feed'] = array(
+			'name' => 'Feed Node: Promoted',
+			'description' => 'Set item promoted',
+			'callback' => 'feedmapper_slac_event_get_promoted_item_feed',
+		);
+	}
+}
+
+
+function feedmapper_slac_event_get_published_item_feed(FeedsSource $source) {
+	$nid = $source->feed_nid;
+	$feed_importer = node_load($nid);
+	return $feed_importer->field_published_items_feed['und'][0]['value'];
+}
+
+function feedmapper_slac_event_get_promoted_item_feed(FeedsSource $source) {
+	$nid = $source->feed_nid;
+	$feed_importer = node_load($nid);
+	return $feed_importer->field_promoted_items_feed['und'][0]['value'];
+}
+
+/**
+ * Implements hook_feeds_presave().
+ */
+function slac_event_feed_importer_feeds_presave(FeedsSource $source, $entity, $item) {
+  if (!empty($entity->type) && $entity->type === 'event' && $item instanceof DateIcalIcalcreatorComponent) {
+    // Massage date data - even though the field mapping is in place, it's not
+    // working. Perhaps because the incoming date fields are not in an expected
+    // format.
+    $date_info = array('date_type' => 'date');
+    $date_info['timezone'] = empty($item->component->dtstart['params']['TZID']) ? 'America/Los_Angeles' : $item->component->dtstart['params']['TZID'];
+    $date_info['timezone_db'] = $date_info['timezone'];
+    $start = $item->component->dtstart['value'];
+    $date_info['value'] = "{$start['year']}-{$start['month']}-{$start['day']}T{$start['hour']}:{$start['min']}:{$start['sec']}";
+    $end = $item->component->dtend['value'];
+    $date_info['value2'] = "{$end['year']}-{$end['month']}-{$end['day']}T{$end['hour']}:{$end['min']}:{$end['sec']}";
+    $entity->field_slac_event_date[LANGUAGE_NONE][0] = $date_info;
+  }
+}

@@ -1,0 +1,86 @@
+<?php
+/*
+ * @file .inc
+ */
+
+/*
+ * Implement hook_schema
+ */
+function feed_generator_schema() {
+  $schema['feed_generator'] = array(
+    'description' => 'Listing config Feed.',
+    'fields' => array(
+      'fid' => array(
+        'description' => 'The primary identifier for a Simpleviews Feed.',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'title' => array(
+        'description' => 'The feed title.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      'bundle' => array(
+        'description' => 'The {node_type} of this node.',
+        'type' => 'varchar',
+        'length' => 32,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      'filter' => array(
+        'description' => 'Filter of views feed.',
+        'type' => 'varchar',
+        'length' => 255,
+        'default' => '',
+      ),
+      'filter_value' => array(
+        'description' => 'Value of Filter feed.',
+        'type' => 'varchar',
+        'length' => 255,
+        'default' => '',
+      ),
+      'ical' => array(
+        'description' => 'Is iCal feed.',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+    ),
+    'primary key' => array('fid'),
+  );
+
+  return $schema;
+}
+
+function feed_generator_update_7001() {
+  $query = db_select('feed_generator', 'fg');
+  $query->fields('fg', array('fid','filter_value', 'bundle'));
+  $results = $query->execute()->fetchAll();
+
+  foreach ($results as $record) {
+    $values = explode(', ', $record->filter_value);
+
+    if(!$values === FALSE || empty($values)) {
+      $term_array;
+      foreach ($values as $val) {
+        if(!is_int($val)) {
+          $voca = taxonomy_vocabulary_machine_name_load($record->bundle);
+          $term_object = taxonomy_get_term_by_name($val, $voca);
+
+          $term_id = array_keys($term_object);
+          $term_array[] = $term_id[0]; // should only need one
+        }
+      }
+
+      db_update('feed_generator')
+      ->fields(array(
+          'filter_value' => implode(', ', $term_array),
+        ))
+      ->condition('fid', $fid)
+      ->execute();
+    }
+  }  
+}

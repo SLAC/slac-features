@@ -260,6 +260,64 @@ function slac_event_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-event-field_event_tags'
+  $field_instances['node-event-field_event_tags'] = array(
+    'bundle' => 'event',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Arbitrary tags to assist in the creation of event feeds which only provide events with certain tags.',
+    'display' => array(
+      'calendar_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 13,
+      ),
+      'ical' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'rss' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_event_tags',
+    'label' => 'Event tags',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'taxonomy',
+      'settings' => array(
+        'autocomplete_path' => 'taxonomy/autocomplete',
+        'size' => 60,
+      ),
+      'type' => 'taxonomy_autocomplete',
+      'weight' => 12,
+    ),
+  );
+
   // Exported field_instance: 'node-event-field_location'
   $field_instances['node-event-field_location'] = array(
     'bundle' => 'event',
@@ -695,7 +753,7 @@ function slac_event_field_default_field_instances() {
     'bundle' => 'event',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Please enter the link of the event, i.e. https://conf-slac.stanford.edu/ixs-2013/Welcome. User will be REDIRECTED to this page instead of viewing the event on this site.',
+    'description' => 'Inserting a URL in this field will cause the node to redirect to the given link.',
     'display' => array(
       'calendar_teaser' => array(
         'label' => 'hidden',
@@ -759,7 +817,7 @@ function slac_event_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_slac_event_link',
-    'label' => 'Redirect event link',
+    'label' => 'Redirect link',
     'required' => 0,
     'settings' => array(
       'attributes' => array(
@@ -958,7 +1016,7 @@ function slac_event_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 12,
+      'weight' => 11,
     ),
   );
 
@@ -1086,6 +1144,7 @@ function slac_event_field_default_field_instances() {
   t('Event Scientific Area');
   t('Event Series');
   t('Event date');
+  t('Event tags');
   t('Image');
   t('Location');
   t('Please enter an area of expertise for this event such as "Photon, X-ray" (If applicable)');

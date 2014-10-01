@@ -11,6 +11,118 @@ include_once 'slac_event.features.inc';
 include_once 'slac_event.formatter.inc';
 
 /**
+ * Implements hook_menu().
+ */
+function slac_event_menu() {
+  return array(
+    'node/add/event-import' => array(
+      'title' => 'Event import (single)',
+      'type' => MENU_NORMAL_ITEM,
+      'page callback' => 'drupal_get_form',
+      'page arguments' => array('slac_event_import_single'),
+      'access callback' => 'node_access',
+      'access arguments' => array('create', 'event'),
+    ),
+  );
+}
+
+/**
+ * Form callback for our new single event import form.
+ */
+function slac_event_import_single($form, $form_state) {
+  $form['url'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Event page URL'),
+    '#description' => t('Paste in the URL of an event on a SLAC site.'),
+    '#required' => TRUE,
+    '#weight' => 0,
+  );
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Import'),
+  );
+  return $form;
+}
+
+/**
+ * Form validator for our single event import form.
+ *
+ * @see slac_event_import_single()
+ */
+function slac_event_import_single_validate($form, &$form_state) {
+  // Load the page.
+  $page = drupal_http_request($form_state['values']['url']);
+  if ($page->code <= 0) {
+    form_set_error('url', t('This does not appear to be a valid URL.'));
+    return;
+  }
+  elseif ($page->code != 200) {
+    form_set_error('url', t('Loading the page at this URL failed. Error code @code (@error).', array('@code' => $page->code, '@error' => empty($page->error) ? '?' : $page->error)));
+    return;
+  }
+  // XML parsing is easy to fail. I know it's "wrong," but use regex to find
+  // our calendar link.
+  if (!preg_match('/\<link rel="icalendar" href="([^"]+)"/', $page->data, $matches)) {
+    form_set_error('url', t('Event information could not be found on the page.'));
+    return;
+  }
+  $ical = drupal_http_request($matches[1]);
+  if ($ical->code != 200) {
+    form_set_error('url', t('Loading the event information for this event failed. Error code @code (@error).', array('@code' => $page->code, '@error' => empty($page->error) ? '?' : $page->error)));
+    return;
+  }
+  libraries_load('iCalcreator');
+  $calendar = new vcalendar();
+  if (!$calendar->parse($ical->data)) {
+    form_set_error('url', t('Parsing the event information for this event failed.'));
+    return;
+  }
+  $form_state['ical'] = $calendar->components[1];
+}
+
+/**
+ * Form submission function for our single event import form.
+ *
+ * @see slac_event_import_single()
+ */
+function slac_event_import_single_submit($form, &$form_state) {
+  // Ideally, we could leverage already-configured stuff (mappings, etc) for
+  // this, but I can't find a way to do so - it doesn't seem very modular.
+  $node = new stdClass();
+  $node->type = 'event';
+  node_object_prepare($node);
+  $node->title = empty($form_state['ical']->summary) ? '' : $form_state['ical']->summary['value'];
+  $node->field_slac_event_date[LANGUAGE_NONE][] = array(
+    'value' => $form_state['ical']->dtstart['value']['year'] . '-'
+      . $form_state['ical']->dtstart['value']['month'] . '-'
+      . $form_state['ical']->dtstart['value']['day'] . 'T'
+      . $form_state['ical']->dtstart['value']['hour'] . ':'
+      . $form_state['ical']->dtstart['value']['min'] . ':'
+      . $form_state['ical']->dtstart['value']['sec'],
+    'value2' => $form_state['ical']->dtend['value']['year'] . '-'
+      . $form_state['ical']->dtend['value']['month'] . '-'
+      . $form_state['ical']->dtend['value']['day'] . 'T'
+      . $form_state['ical']->dtend['value']['hour'] . ':'
+      . $form_state['ical']->dtend['value']['min'] . ':'
+      . $form_state['ical']->dtend['value']['sec'],
+    'timezone' => $form_state['ical']->dtstart['params']['TZID'],
+    'timezone_db' => $form_state['ical']->dtstart['params']['TZID'],
+    'date_type' => 'date',
+  );
+  if (!empty($form_state['ical']->description)) {
+    // Why is this one a numeric array?
+    $node->body[LANGUAGE_NONE][] = array('value' => $form_state['ical']->description[0]['value']);
+  }
+  if (!empty($form_state['ical']->location)) {
+    $node->field_slac_event_scientific_area[LANGUAGE_NONE][] = array('value' => $form_state['ical']->location['value']);
+  }
+  node_save($node);
+  // Let's redirect the user to the node edit form for the node we just created.
+  $form_state['redirect'] = "node/{$node->nid}/edit";
+  drupal_set_message(t('Event imported. Edit it below if necessary.'));
+}
+
+/**
  * Preprocess function for node template.
  */
 function slac_event_preprocess_node(&$vars) {
@@ -241,14 +353,12 @@ function _slac_event_get_date_argument_events_main_content() {
  * Should either pass url argument or current date in format 2014-01.
  */
 function _slac_event_get_date_argument_events_calendar() {
-  $arg0 = arg(0);
-  if ($arg0 == SLAC_EVENT_EVENTS_PAGE_URI) {
+  if ($date = _slac_event_get_current_date()) {
+    return date('Y-m', $date);
+  }
+  elseif (arg(0) == SLAC_EVENT_EVENTS_PAGE_URI) {
     $url_date = _slac_event_get_date_argument_events_main_content();
     return _slac_event_convert_date_with_day_to_date_without_day($url_date);
-  }
-  if ($arg0 == 'node') {
-    $node_date = _slac_event_get_date_from_event_node_with_day();
-    return _slac_event_convert_date_with_day_to_date_without_day($node_date);
   }
 }
 
@@ -257,27 +367,21 @@ function _slac_event_get_date_argument_events_calendar() {
  * page, or date of the event if we are on full node view page.
  */
 function _slac_event_get_current_date() {
-  $arg0 = arg(0);
-  $date_string = '';
-  if ($arg0 == SLAC_EVENT_EVENTS_PAGE_URI) {
-    $date_string = _slac_event_get_date_argument_events_main_content();
+  if ($date = _slac_event_get_date_from_event_node_with_day()) {
+    return $date;
   }
-  if ($arg0 == 'node') {
-    $date_string = _slac_event_get_date_from_event_node_with_day();
+  elseif ($date = _slac_event_get_date_from_url_month_only()) {
+    return strtotime($date);
   }
-  if (empty($date_string)) {
-    return;
-  }
-  return strtotime($date_string);
 }
 
 function _slac_event_get_date_from_event_node_with_day() {
-  $arg0 = arg(0);
-  $arg1 = arg(1);
-  if ($arg0 == 'node') {
-    $node = node_load($arg1);
-    $node_start_date = $node->field_slac_event_date[LANGUAGE_NONE][0]['value'];
-    return substr($node_start_date, 0, 10);
+  if ($node = menu_get_object()) {
+    if ($node->type === 'event') {
+      if ($dates = field_get_items('node', $node, 'field_slac_event_date')) {
+        return strtotime($dates[0]['value']);
+      }
+    }
   }
 }
 
@@ -285,7 +389,7 @@ function _slac_event_get_date_from_url_month_only() {
   $arg0 = arg(0);
   $arg1 = arg(1);
   if ($arg0 == SLAC_EVENT_EVENTS_PAGE_URI) {
-    if (!empty($arg1) && preg_match('/(\d){4}-(\d){2}$/', $arg1)) {
+    if (!empty($arg1) && preg_match('/^(\d+)-(\d+)/', $arg1)) {
       return $arg1;
     }
   }
@@ -296,12 +400,36 @@ function _slac_event_get_date_from_url_with_day() {
   $arg0 = arg(0);
   $arg1 = arg(1);
   if ($arg0 == SLAC_EVENT_EVENTS_PAGE_URI) {
-    if (!empty($arg1) && preg_match('/(\d){4}-(\d){2}-(\d){2}$/', $arg1)) {
+    if (!empty($arg1) && preg_match('/^(\d+)-(\d+)-(\d+)$/', $arg1)) {
       return $arg1;
     }
   }
 }
 
 function _slac_event_convert_date_with_day_to_date_without_day($date_string) {
-  return substr($date_string, 0, 7);
+  return date('Y-m', strtotime($date_string));
+}
+
+/**
+ * Implements hook_panels_post_render().
+ */
+function slac_event_panels_post_render($display, $renderer) {
+  // If an event node is being viewed, add a link to its iCalendar display. Now
+  // normally, we'd do this in hook_node_view, easy peasy. But no, because this
+  // site uses Panels, and Panels doesn't have much respect for standard core
+  // hooks. So instead, I use this undocumented Panels hook. Is this the right
+  // way to do this? Asciishrug. Panels is *never* the right way to do
+  // *anything,* but here we are, so here we go.
+  if (isset($display->context['argument_entity_id:node_1'])
+    && $display->context['argument_entity_id:node_1']->data->type === 'event'
+  ) {
+    $event_ics = url("event/{$display->context['argument_entity_id:node_1']->data->nid}/calendar.ics",
+      array('absolute' => TRUE)
+    );
+    drupal_add_html_head_link(array(
+      'rel' => 'icalendar',
+      'href' => $event_ics,
+      'type' => 'text/icalendar',
+    ));
+  }
 }

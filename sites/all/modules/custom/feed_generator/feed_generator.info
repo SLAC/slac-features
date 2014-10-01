@@ -1,0 +1,11 @@
+name = Feed Generator
+description = An easy-to-use tool for bulding Feed.
+core = 7.x
+package = Others
+dependencies[] = date_ical
+dependencies[] = slac_event
+dependencies[] = slac_news
+
+version = 7.x-1.x-dev
+
+configure = admin/structure/feed_generator

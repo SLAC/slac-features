@@ -44,6 +44,44 @@ function slac_event_field_default_field_bases() {
     'type' => 'image',
   );
 
+  // Exported field_base: 'field_event_tags'
+  $field_bases['field_event_tags'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_event_tags',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
+    'foreign keys' => array(
+      'tid' => array(
+        'columns' => array(
+          'tid' => 'tid',
+        ),
+        'table' => 'taxonomy_term_data',
+      ),
+    ),
+    'indexes' => array(
+      'tid' => array(
+        0 => 'tid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'taxonomy',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => array(
+          'vocabulary' => 'event_tags',
+          'parent' => 0,
+        ),
+      ),
+      'profile2_private' => FALSE,
+    ),
+    'translatable' => 0,
+    'type' => 'taxonomy_term_reference',
+  );
+
   // Exported field_base: 'field_field_slac_event_color'
   $field_bases['field_field_slac_event_color'] = array(
     'active' => 1,

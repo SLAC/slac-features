@@ -1,0 +1,67 @@
+<?php
+/*
+ * @file .module
+ */
+
+/**
+ * Implements hook_menu
+ */
+function feed_generator_menu() {
+  $items['admin/structure/feed_generator'] = array(
+    'title' => 'Feed Generator',
+    'description' => 'Manage feed configuage of site.',
+    'page callback' => 'feed_generator_manage',
+    'access arguments' => array('administer nodes'),
+    'file' => 'feed_generator.admin.inc',
+  );
+  
+  $items['admin/structure/feed_generator/add/rss'] = array(
+    'title' => t('Add News Feed'),
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('feed_generator_form_add', 4),
+    'access arguments' => array('administer nodes'),
+    'type' => MENU_LOCAL_ACTION,
+    'file' => 'feed_generator.admin.inc',
+    'weight' => -9,
+  );
+
+  $items['admin/structure/feed_generator/add/ical'] = array(
+    'title' => t('Add Event Feed'),
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('feed_generator_form_add', 4),
+    'access arguments' => array('administer nodes'),
+    'type' => MENU_LOCAL_ACTION,
+    'file' => 'feed_generator.admin.inc',
+    'weight' => -8,
+  );
+
+  $items['admin/structure/feed_generator/%feed_generator/edit'] = array(
+    'title' => 'Edit Feed',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('feed_generator_form_edit', 3),
+    'access arguments' => array('administer nodes'),
+    'type' => MENU_CALLBACK,
+    'file' => 'feed_generator.admin.inc',
+  );
+
+  $items['admin/structure/feed_generator/%feed_generator/delete'] = array(
+    'title' => 'Delete Feed',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('feed_generator_form_delete', 3),
+    'access arguments' => array('administer nodes'),
+    'type' => MENU_CALLBACK,
+    'file' => 'feed_generator.admin.inc',
+  );
+
+  return $items;
+}
+
+function feed_generator_load($fid) {
+  $query = db_select('feed_generator', 'sf')
+    ->fields('sf')
+    ->condition('sf.fid', $fid);
+
+  $rs = $query->execute()->fetchAssoc();
+
+  return empty($rs) ? FALSE : $rs;
+}

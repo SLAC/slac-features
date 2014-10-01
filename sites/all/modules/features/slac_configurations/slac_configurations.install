@@ -1,0 +1,30 @@
+<?php
+
+/**
+ * Implements hook_update_N()
+ * Enable modules for task news/event sharing
+ */
+
+function slac_configurations_update_7001(){
+	$modules = array(
+		'slac_event',
+		'slac_news',
+		'slac_event_feed_importer',
+		'slac_news_feed_importer',
+		'slac_og_tag_importer',
+		'feed_generator',
+	);
+	module_enable($modules);
+}
+
+/**
+ * Implements hook_update_dependencies()
+ * Enable modules for task news/event sharing
+ */
+
+function slac_configurations_update_dependencies() {
+  $dependencies['slac_configurations'][7001] = array(
+    'og_tag_importer' => 7002,
+  );
+  return $dependencies;
+}

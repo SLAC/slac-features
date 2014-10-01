@@ -1,0 +1,129 @@
+<?php
+/*
+ * @file .install
+ */
+
+/*
+ * Implement hook_schema
+ * Store config settings OG:Tags for each imported item
+ */
+function og_tag_importer_schema() {
+  $schema['og_tag_importer'] = array(
+    'description' => 'Manage config OG:Tags.',
+    'fields' => array(
+      'id' => array(
+        'description' => 'The primary identifier for a OpenGraph.',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'type' => array(
+        'description' => 'The {node_type} of this node.',
+        'type' => 'varchar',
+        'length' => 32,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      'og_title' => array(
+        'description' => 'The og:title.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      'og_image' => array(
+        'description' => 'The og:image.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      'og_url' => array(
+        'description' => 'The og:url.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      'og_description' => array(
+        'description' => 'The og:description.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      'og_site_name' => array(
+        'description' => 'The og:site_name.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+    ),
+    'primary key' => array('id'),
+  );
+  return $schema;
+}
+
+/**
+ * Implements hook_update_N()
+ * Create table og_tag_importer
+ */
+
+function og_tag_importer_update_7002(){
+  $schema['og_tag_importer'] = array(
+    'description' => 'Manage config OG:Tags.',
+    'fields' => array(
+      'id' => array(
+        'description' => 'The primary identifier for a OpenGraph.',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'type' => array(
+        'description' => 'The {node_type} of this node.',
+        'type' => 'varchar',
+        'length' => 32,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      'og_title' => array(
+        'description' => 'The og:title.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      'og_image' => array(
+        'description' => 'The og:image.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      'og_url' => array(
+        'description' => 'The og:url.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      'og_description' => array(
+        'description' => 'The og:description.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      'og_site_name' => array(
+        'description' => 'The og:site_name.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+    ),
+    'primary key' => array('id'),
+  );
+  db_create_table('og_tag_importer', $schema['og_tag_importer']);
+}

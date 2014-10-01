@@ -9,10 +9,10 @@
  */
 function slac_event_taxonomy_default_vocabularies() {
   return array(
-    'event_categories' => array(
-      'name' => 'Event Categories',
-      'machine_name' => 'event_categories',
-      'description' => '',
+    'event_tags' => array(
+      'name' => 'Event tags',
+      'machine_name' => 'event_tags',
+      'description' => 'Arbitrary tags for events.',
       'hierarchy' => 0,
       'module' => 'taxonomy',
       'weight' => 0,

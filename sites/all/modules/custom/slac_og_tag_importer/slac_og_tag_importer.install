@@ -1,0 +1,26 @@
+<?php
+/**
+ * Implements hook_install
+ */
+
+function slac_og_tag_importer_install(){
+ 	//Mapping slac news
+ 	db_merge('og_tag_importer')
+  ->key(array('type' => 'slac_news'))
+  ->fields(array(
+      'og_title' => 'title',
+      'og_image' => 'field_slac_news_media',
+      'og_url'=> 'field_slac_news_source',
+      'og_description' => 'body',
+  ))->execute();
+
+  //Mapping event
+  db_merge('og_tag_importer')
+  ->key(array('type' => 'event'))
+  ->fields(array(
+      'og_title' => 'title',
+      'og_image' => 'field_event_image',
+      'og_url'=> 'field_slac_event_link',
+      'og_description' => 'body',
+  ))->execute();
+}
