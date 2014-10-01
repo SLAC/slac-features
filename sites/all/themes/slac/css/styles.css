@@ -1009,7 +1009,7 @@ ol.search-results .search-snippet strong { font-weight: bold; color: #871628; }
 .page-basic-io .panel-panel.content .pane-menu-tree > div .menu li.depth-3 a:hover, .page-basic-io .panel-panel.content .pane-menu-tree > div .menu li.depth-3 a.active { background: #dce2e5; }
 .page-basic-io .panel-panel.content .pane-menu-tree > div .menu li a { font-size: 14px; line-height: 20px; padding: 12px 12px 12px 16px; border-bottom: 1px #b5b5b5 solid; }
 .page-basic-io .panel-panel.content .pane-menu-tree > div .menu li a:hover { background: #eaeef0; }
-.page-basic-io .top-menu { min-height: 20px; background: rgba(67, 121, 142, 0.4); }
+.page-basic-io .top-menu { min-height: 20px; background: #91a5b7; background: rgba(67, 121, 142, 0.4); }
 .page-basic-io .top-menu ul.menu { float: right; }
 .page-basic-io .top-menu ul.menu li { list-style-type: none; list-style-image: none; float: left; }
 @media (min-width: 690px) { .page-basic-io .top-menu ul.menu li { border-right: 1px solid white; }
