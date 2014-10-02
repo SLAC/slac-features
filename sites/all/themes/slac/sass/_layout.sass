@@ -378,7 +378,7 @@ ul.tabs, .action-links,
       +box-shadow(0px 0px 0px 1px #a1a1a1 inset, 0px 0px 0px 0px #000)
       +border-radius(0)
       border: 0 none
-      padding: 0 6px
+      padding: 5px 6px
       -webkit-appearance: none
       letter-spacing: 1px
     input[type='submit']
@@ -1241,9 +1241,10 @@ h2
     //color: inherit
 
   //only for logged users
-  //.content &
-  //  .panels-ipe-portlet-wrapper
-  //    margin-bottom: 18px
+  .content &
+    .panels-ipe-portlet-wrapper
+      margin-bottom: 18px
+
 
 .panel-pane
   .general-right &
@@ -2911,19 +2912,34 @@ h2
   .top-wrapper
     background: url("../images/header-bg.jpg") center no-repeat
     background-size: cover
-    -ms-behavior: url(/backgroundsize.min.htc)
+    -ms-behavior: url(/sites/all/themes/slac/css/backgroundsize.min.htc)
+  
     .header
-      padding-top: 20px
       margin-top: -20px
-      border-bottom: 5px solid rgba(101, 166, 223, 0.25)
+      padding-bottom: 5px
+      padding-top: 20px
+      position: relative
+      &:before
+        background-color: #65a6df
+        bottom: 0
+        content: ''
+        height: 5px
+        left: 0
+        @include opacity(0.25)
+        position: absolute
+        width: 100%
+        
       .user-search
-        min-height: 60px
+        //min-height: 60px
+        padding-bottom: 18px
 
     .user-search
       padding-top: 18px
 
   .pane-page-logo
     margin-top: -20px
+    position: relative
+    z-index: 2
     img
       width: auto
   .panel-panel.site-title
@@ -3043,8 +3059,20 @@ h2
 
   .top-menu
     min-height: 20px
-    background: #91A5B7
-    background: rgba(67, 121, 142, 0.4)
+    position: relative
+    z-index: 1
+    &:before
+      background-color: #43798e
+      content: ""
+      height: 100%
+      left: 0
+      @include opacity(0.4)
+      behavior: url(/sites/all/themes/slac/css/PIE.htc)
+      position: absolute
+      top: 0
+      width: 100%
+      z-index: -1
+    
     ul.menu
       float: right
       li
@@ -3404,3 +3432,6 @@ h2
 .bordered-img img
   border: 5px solid #f3f1eb
   display: block
+
+.field-type-image img
+  max-width: none\9
