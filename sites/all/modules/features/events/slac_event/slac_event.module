@@ -431,5 +431,24 @@ function slac_event_panels_post_render($display, $renderer) {
       'href' => $event_ics,
       'type' => 'text/icalendar',
     ));
+
+    // Hmm, the iCalendar approach isn't giving us enough info. Let's try this
+    // silly trick.
+    $fields = array('title', 'body', 'field_slac_event_date', 'field_location', 'field_slac_event_link');
+    $blob = array();
+    foreach ($fields as $field) {
+      if (isset($display->context['argument_entity_id:node_1']->data->{$field})) {
+        $blob[$field] = $display->context['argument_entity_id:node_1']->data->{$field};
+      }
+    }
+    $tag = array(
+      '#tag' => 'meta',
+      '#attributes' => array(
+        'name' => 'slac-event-data',
+        'content' => drupal_json_encode($blob),
+      ),
+    );
+    drupal_add_html_head($tag, 'slac-event-data');
+    
   }
 }
