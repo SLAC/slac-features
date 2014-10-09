@@ -62,22 +62,16 @@ function slac_event_import_single_validate($form, &$form_state) {
   }
   // XML parsing is easy to fail. I know it's "wrong," but use regex to find
   // our calendar link.
-  if (!preg_match('/\<link rel="icalendar" href="([^"]+)"/', $page->data, $matches)) {
+  if (!preg_match('/\<meta name="slac-event-data" content="([^"]+)"/', $page->data, $matches)) {
     form_set_error('url', t('Event information could not be found on the page.'));
     return;
   }
-  $ical = drupal_http_request($matches[1]);
-  if ($ical->code != 200) {
-    form_set_error('url', t('Loading the event information for this event failed. Error code @code (@error).', array('@code' => $page->code, '@error' => empty($page->error) ? '?' : $page->error)));
-    return;
-  }
-  libraries_load('iCalcreator');
-  $calendar = new vcalendar();
-  if (!$calendar->parse($ical->data)) {
+  $data = drupal_json_decode(decode_entities($matches[1]));
+  if ($data === NULL) {
     form_set_error('url', t('Parsing the event information for this event failed.'));
     return;
   }
-  $form_state['ical'] = $calendar->components[1];
+  $form_state['event'] = $data;
 }
 
 /**
@@ -91,30 +85,51 @@ function slac_event_import_single_submit($form, &$form_state) {
   $node = new stdClass();
   $node->type = 'event';
   node_object_prepare($node);
-  $node->title = empty($form_state['ical']->summary) ? '' : $form_state['ical']->summary['value'];
-  $node->field_slac_event_date[LANGUAGE_NONE][] = array(
-    'value' => $form_state['ical']->dtstart['value']['year'] . '-'
-      . $form_state['ical']->dtstart['value']['month'] . '-'
-      . $form_state['ical']->dtstart['value']['day'] . 'T'
-      . $form_state['ical']->dtstart['value']['hour'] . ':'
-      . $form_state['ical']->dtstart['value']['min'] . ':'
-      . $form_state['ical']->dtstart['value']['sec'],
-    'value2' => $form_state['ical']->dtend['value']['year'] . '-'
-      . $form_state['ical']->dtend['value']['month'] . '-'
-      . $form_state['ical']->dtend['value']['day'] . 'T'
-      . $form_state['ical']->dtend['value']['hour'] . ':'
-      . $form_state['ical']->dtend['value']['min'] . ':'
-      . $form_state['ical']->dtend['value']['sec'],
-    'timezone' => $form_state['ical']->dtstart['params']['TZID'],
-    'timezone_db' => $form_state['ical']->dtstart['params']['TZID'],
-    'date_type' => 'date',
-  );
-  if (!empty($form_state['ical']->description)) {
-    // Why is this one a numeric array?
-    $node->body[LANGUAGE_NONE][] = array('value' => $form_state['ical']->description[0]['value']);
-  }
-  if (!empty($form_state['ical']->location)) {
-    $node->field_slac_event_scientific_area[LANGUAGE_NONE][] = array('value' => $form_state['ical']->location['value']);
+  foreach (_slac_event_fields_to_export() as $field) {
+    if (isset($form_state['event'][$field])) {
+      // Special processing for images…
+      if ($field === 'field_event_image') {
+        $image_data = $form_state['event']['field_event_image'];
+        foreach (array_keys($image_data) as $langcode) {
+          foreach (array_keys($image_data[$langcode]) as $idx) {
+            $image = $image_data[$langcode][$idx];
+            if (isset($image['uuid'])) {
+              // Can we load the file by UUID?
+              if ($files = entity_uuid_load('file', array($image['uuid']))) {
+                $file = reset($files);
+                $node->field_event_image[$langcode][$idx] = (array) $file;
+                drupal_set_message(t('Successfully re-used the file %file for the imported content.', array('%file' => $file->filename)));
+              }
+              else {
+                // Okay, we have to download the file and save it as a new file.
+                $data = drupal_http_request($image['url']);
+                if ($data->code != 200) {
+                  drupal_set_message(t('Failed downloading file at %file for the imported content.', array('%file' => $image['url'])), 'warning');
+                }
+                else {
+                  if ($file = file_save_data($data->data, file_default_scheme() . '://' . $image['filename'])) {
+                    foreach (array('field_file_image_alt_text', 'field_file_image_title_text', 'field_file_image_description') as $file_field) {
+                      if (isset($image[$file_field])) {
+                        $file->$file_field = $image[$file_field];
+                      }
+                    }
+                    file_save($file);
+                    $node->field_event_image[$langcode][$idx] = (array) $file;
+                    drupal_set_message(t('Successfully imported the file %file for the imported content.', array('%file' => $image['filename'])));
+                  }
+                  else {
+                    drupal_set_message(t('Failed saving file at %file for the imported content.', array('%file' => $image['url'])), 'warning');
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      else {
+        $node->{$field} = $form_state['event'][$field];
+      }
+    }
   }
   node_save($node);
   // Let's redirect the user to the node edit form for the node we just created.
@@ -431,5 +446,62 @@ function slac_event_panels_post_render($display, $renderer) {
       'href' => $event_ics,
       'type' => 'text/icalendar',
     ));
+
+    // Hmm, the iCalendar approach isn't giving us enough info. Let's try this
+    // silly trick.
+    $blob = array();
+    foreach (_slac_event_fields_to_export() as $field) {
+      if (isset($display->context['argument_entity_id:node_1']->data->{$field})) {
+        $data = $display->context['argument_entity_id:node_1']->data->{$field};
+        // Do some special-case processing of the image field
+        if ($field === 'field_event_image') {
+          foreach (array_keys($data) as $langcode) {
+            foreach (array_keys($data[$langcode]) as $idx) {
+              $full_url = file_create_url($data[$langcode][$idx]['uri']);
+              // Reduce the data to only essential fields
+              $fields_to_keep = array('uuid', 'filename', 'field_file_image_alt_text', 'field_file_image_title_text', 'field_file_image_description');
+              foreach (array_keys($data[$langcode][$idx]) as $file_field) {
+                if (!in_array($file_field, $fields_to_keep)) {
+                  unset($data[$langcode][$idx][$file_field]);
+                }
+              }
+              // Add on the url field so we can download the file.
+              $data[$langcode][$idx]['url'] = $full_url;
+            }
+          }
+        }
+        $blob[$field] = $data;
+      }
+    }
+    $tag = array(
+      '#tag' => 'meta',
+      '#attributes' => array(
+        'name' => 'slac-event-data',
+        'content' => drupal_json_encode($blob),
+      ),
+    );
+    drupal_add_html_head($tag, 'slac-event-data');
   }
 }
+
+/**
+ * Helper function to store an array of event fields for exporting/importing.
+ */
+function _slac_event_fields_to_export() {
+  return array(
+    'title',
+    'field_slac_event_link',
+    'field_slac_event_date',
+    'field_location',
+    'field_slac_event_contact',
+    'body',
+    'field_slac_event_category',
+    'field_slac_event_audience',
+    'field_slac_event_scientific_area',
+    'field_slac_event_organization',
+    'field_slac_event_related_links',
+/*     'field_event_tags', */
+    'field_event_image',
+  );
+}
+
