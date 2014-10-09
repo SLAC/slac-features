@@ -504,3 +504,4 @@ function _slac_event_fields_to_export() {
     'field_event_image',
   );
 }
+
