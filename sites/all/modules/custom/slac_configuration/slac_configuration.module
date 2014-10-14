@@ -190,3 +190,32 @@ function slac_configuration_form_alter(&$form, &$form_state, $form_id) {
         array('@height' => SLAC_CONFIGURATION_LOGO_HEIGHT_INFO)) . '</div>';
   }
 }
+
+
+/**
+ * Implements hook_flush_caches()
+ *
+ * Rational: File streams are being broken on clear cache runs. Essentially, 
+ * the only way to fix this is to re-check the folder and file permissions to
+ * update the stream.
+ */
+function slac_configuration_flush_caches() {
+  $form['file_public_path'] = array(
+    '#value' => variable_get('file_public_path', conf_path() . '/files'),
+  );
+  $form['file_private_path'] = array(
+    '#value' => variable_get('file_private_path', ''),
+  );
+  $form['file_temporary_path'] = array(
+    '#value' => variable_get('file_temporary_path', file_directory_temp()),
+  );
+  
+  foreach ($form as $element) {
+    system_check_directory($element);
+  }
+
+  // return empty array as we aren't actually clearing caches
+  return array();
+}
+
+
