@@ -211,7 +211,7 @@ function slac_configuration_flush_caches() {
   );
   
   foreach ($form as $element) {
-    system_check_directory($element);
+    @system_check_directory($element);
   }
 
   // return empty array as we aren't actually clearing caches
