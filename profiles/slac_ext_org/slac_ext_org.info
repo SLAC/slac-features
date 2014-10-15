@@ -179,4 +179,3 @@ dependencies[] = views_ui
 dependencies[] = webform
 dependencies[] = workbench
 dependencies[] = workbench_moderation
-dependencies[] = slac
