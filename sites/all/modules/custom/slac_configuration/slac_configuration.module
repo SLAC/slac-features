@@ -226,7 +226,6 @@ function slac_configuration_file_presave($file) {
   );
   
   foreach ($form as $element) {
-    @system_check_directory($element);
-
+    system_check_directory($element);
   }
 }
