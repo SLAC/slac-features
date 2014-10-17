@@ -539,7 +539,7 @@ function slac_event_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_slac_event_category',
     'label' => 'Event Series',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
