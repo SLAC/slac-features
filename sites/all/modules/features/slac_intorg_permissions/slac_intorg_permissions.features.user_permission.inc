@@ -3044,6 +3044,18 @@ function slac_intorg_permissions_user_default_permissions() {
     'module' => 'features',
   );
 
+  // Exported permission: 'import og_tag_importer'.
+  $permissions['import og_tag_importer'] = array(
+    'name' => 'import og_tag_importer',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'og_tag_importer',
+  );
+
   // Exported permission: 'manage features'.
   $permissions['manage features'] = array(
     'name' => 'manage features',
