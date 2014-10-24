@@ -60,9 +60,7 @@ dependencies[] = views
 dependencies[] = webform
 dependencies[] = workbench
 dependencies[] = workbench_moderation
-<<<<<<< HEAD
 features[user_permission][] = edit terms in slac_sc_category
->>>>>>> parent of a43bcf0... Issue #10527: Remove news tags vocabulary.
 features[user_permission][] = edit terms in tags
 features[features_api][] = api:2
 features[user_permission][] = access Internal tickets
