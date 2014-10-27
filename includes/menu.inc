@@ -917,13 +917,13 @@ function _menu_link_translate(&$item, $translate = FALSE) {
       $item['access'] = FALSE;
       return FALSE;
     }
-    if (!empty($item['load_functions']) && !_menu_load_objects($item, $map)) {
-      // An error occurred loading an object.
-      $item['access'] = FALSE;
-      return FALSE;
-    }
     // menu_tree_check_access() may set this ahead of time for links to nodes.
     if (!isset($item['access'])) {
+      if (!empty($item['load_functions']) && !_menu_load_objects($item, $map)) {
+        // An error occurred loading an object.
+        $item['access'] = FALSE;
+        return FALSE;
+      }
       _menu_check_access($item, $map);
     }
     // For performance, don't localize a link the user can't access.
@@ -1000,7 +1000,7 @@ function menu_tree($menu_name) {
 }
 
 /**
- * Returns a rendered menu tree.
+ * Returns an output structure for rendering a menu tree.
  *
  * The menu item's LI element is given one of the following classes:
  * - expanded: The menu item is showing its submenu.
