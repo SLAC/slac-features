@@ -11,7 +11,7 @@ function feed_generator_menu() {
     'title' => 'Feed Generator',
     'description' => 'Manage feed configuage of site.',
     'page callback' => 'feed_generator_manage',
-    'access arguments' => array('administer nodes'),
+    'access arguments' => array('administer feeds'),
     'file' => 'feed_generator.admin.inc',
   );
   
@@ -19,7 +19,7 @@ function feed_generator_menu() {
     'title' => t('Add News Feed'),
     'page callback' => 'drupal_get_form',
     'page arguments' => array('feed_generator_form_add', 4),
-    'access arguments' => array('administer nodes'),
+    'access arguments' => array('administer feeds'),
     'type' => MENU_LOCAL_ACTION,
     'file' => 'feed_generator.admin.inc',
     'weight' => -9,
@@ -29,7 +29,7 @@ function feed_generator_menu() {
     'title' => t('Add Event Feed'),
     'page callback' => 'drupal_get_form',
     'page arguments' => array('feed_generator_form_add', 4),
-    'access arguments' => array('administer nodes'),
+    'access arguments' => array('administer feeds'),
     'type' => MENU_LOCAL_ACTION,
     'file' => 'feed_generator.admin.inc',
     'weight' => -8,
@@ -39,7 +39,7 @@ function feed_generator_menu() {
     'title' => 'Edit Feed',
     'page callback' => 'drupal_get_form',
     'page arguments' => array('feed_generator_form_edit', 3),
-    'access arguments' => array('administer nodes'),
+    'access arguments' => array('administer feeds'),
     'type' => MENU_CALLBACK,
     'file' => 'feed_generator.admin.inc',
   );
@@ -48,7 +48,7 @@ function feed_generator_menu() {
     'title' => 'Delete Feed',
     'page callback' => 'drupal_get_form',
     'page arguments' => array('feed_generator_form_delete', 3),
-    'access arguments' => array('administer nodes'),
+    'access arguments' => array('administer feeds'),
     'type' => MENU_CALLBACK,
     'file' => 'feed_generator.admin.inc',
   );

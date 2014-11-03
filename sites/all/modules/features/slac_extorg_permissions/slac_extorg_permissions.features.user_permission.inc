@@ -147,6 +147,18 @@ function slac_extorg_permissions_user_default_permissions() {
     'module' => 'download_file',
   );
 
+  // Exported permission: 'access media browser'.
+  $permissions['access media browser'] = array(
+    'name' => 'access media browser',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'media',
+  );
+
   // Exported permission: 'access news feeds'.
   $permissions['access news feeds'] = array(
     'name' => 'access news feeds',
@@ -515,18 +527,6 @@ function slac_extorg_permissions_user_default_permissions() {
   // Exported permission: 'administer media browser'.
   $permissions['administer media browser'] = array(
     'name' => 'administer media browser',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
-      'manager' => 'manager',
-    ),
-    'module' => 'media',
-  );
-
-  // Exported permission: 'access media browser'.
-  $permissions['access media browser'] = array(
-    'name' => 'access media browser',
     'roles' => array(
       'administrator' => 'administrator',
       'author' => 'author',
@@ -1436,6 +1436,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'delete any event content',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'node',
@@ -1506,6 +1507,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'delete any slac_news content',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'node',
@@ -1657,6 +1659,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'delete own event content',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'node',
@@ -1728,6 +1731,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'delete own slac_news content',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'node',
@@ -2843,6 +2847,18 @@ function slac_extorg_permissions_user_default_permissions() {
     'module' => 'features',
   );
 
+  // Exported permission: 'import og_tag_importer'.
+  $permissions['import og_tag_importer'] = array(
+    'name' => 'import og_tag_importer',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'og_tag_importer',
+  );
+
   // Exported permission: 'manage features'.
   $permissions['manage features'] = array(
     'name' => 'manage features',
@@ -3441,7 +3457,6 @@ function slac_extorg_permissions_user_default_permissions() {
       'author' => 'author',
       'editor' => 'editor',
       'manager' => 'manager',
-
     ),
     'module' => 'system',
   );

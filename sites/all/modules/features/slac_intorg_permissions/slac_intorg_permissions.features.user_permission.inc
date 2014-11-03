@@ -1508,6 +1508,7 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'delete any event content',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'node',
@@ -1588,6 +1589,7 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'delete any slac_news content',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'node',
@@ -1749,6 +1751,7 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'delete own event content',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'node',
@@ -1830,6 +1833,7 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'delete own slac_news content',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'node',
@@ -3042,6 +3046,18 @@ function slac_intorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'features',
+  );
+
+  // Exported permission: 'import og_tag_importer'.
+  $permissions['import og_tag_importer'] = array(
+    'name' => 'import og_tag_importer',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'og_tag_importer',
   );
 
   // Exported permission: 'manage features'.
