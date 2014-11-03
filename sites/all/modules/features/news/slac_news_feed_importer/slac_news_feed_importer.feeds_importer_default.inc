@@ -45,7 +45,7 @@ function slac_news_feed_importer_feeds_importer_default() {
           1 => array(
             'source' => 'title',
             'target' => 'title',
-            'unique' => FALSE,
+            'unique' => 0,
           ),
           2 => array(
             'source' => 'parent:taxonomy:slac_news_tags',
@@ -79,7 +79,7 @@ function slac_news_feed_importer_feeds_importer_default() {
             'unique' => FALSE,
           ),
         ),
-        'update_existing' => '2',
+        'update_existing' => '0',
         'input_format' => 'full_html',
         'skip_hash_check' => 0,
         'bundle' => 'slac_news',
