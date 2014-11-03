@@ -203,13 +203,13 @@ class FieldCollectionItemEntity extends Entity {
     // type. If the property is not set, we are hitting a PDO or a core's bug.
     // FIXME: Remove when #1264440 is fixed and the required PHP version is
     //  properly identified and documented in the module documentation.
-    if (isset($this->field_name)) {
-      // Ok, we have the field name property, we can proceed and check the field's type
-      $field_info = $this->fieldInfo();
-      if (!$field_info || $field_info['type'] != 'field_collection') {
-        throw new Exception("Invalid field name given: {$this->field_name} is not a Field Collection field.");
-      }
-    }
+    // if (isset($this->field_name)) {
+    //   // Ok, we have the field name property, we can proceed and check the field's type
+    //   $field_info = $this->fieldInfo();
+    //   if (!$field_info || $field_info['type'] != 'field_collection') {
+    //     throw new Exception("Invalid field name given: {$this->field_name} is not a Field Collection field.");
+    //   }
+    // }
   }
 
   /**
