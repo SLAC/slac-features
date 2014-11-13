@@ -216,7 +216,7 @@ function slac_configuration_file_presave($file) {
   // This function does not actually modify the file object, it simply checks 
   // the folders files may get saved into. 
   $form['file_public_path'] = array(
-    '#value' = variable_get('file_public_path', conf_path() . '/files'),
+    '#value' => variable_get('file_public_path', conf_path() . '/files'),
   );
   $form['file_private_path'] = array(
     '#value' => variable_get('file_private_path', ''),
