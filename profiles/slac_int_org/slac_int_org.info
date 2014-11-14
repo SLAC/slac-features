@@ -232,3 +232,4 @@ dependencies[] = slac_og_tag_importer
 ;feeds deps
 dependencies[] = feeds
 dependencies[] = feed_generator
+dependencies[] = feeds_ui
