@@ -54,22 +54,22 @@ function slac_event_import_single_validate($form, &$form_state) {
   $page = drupal_http_request($form_state['values']['url']);
   if ($page->code <= 0) {
     form_set_error('url', t('This does not appear to be a valid URL.'));
-    return;
   }
   elseif ($page->code != 200) {
     form_set_error('url', t('Loading the page at this URL failed. Error code @code (@error).', array('@code' => $page->code, '@error' => empty($page->error) ? '?' : $page->error)));
-    return;
   }
-  // XML parsing is easy to fail. I know it's "wrong," but use regex to find
-  // our calendar link.
-  if (!preg_match('/\<meta name="slac-event-data" content="([^"]+)"/', $page->data, $matches)) {
-    form_set_error('url', t('Event information could not be found on the page.'));
-    return;
-  }
-  $data = drupal_json_decode(decode_entities($matches[1]));
-  if ($data === NULL) {
-    form_set_error('url', t('Parsing the event information for this event failed.'));
-    return;
+  else {
+    // XML parsing is easy to fail. I know it's "wrong," but use regex to find
+    // our calendar link.
+    if (!preg_match('/\<meta name="slac-event-data" content="([^"]+)"/', $page->data, $matches)) {
+      form_set_error('url', t('Event information could not be found on the page.'));
+    }
+    else {
+      $data = drupal_json_decode(decode_entities($matches[1]));
+      if ($data === NULL) {
+        form_set_error('url', t('Parsing the event information for this event failed.'));
+      }
+    }
   }
   $form_state['event'] = $data;
 }
@@ -123,6 +123,15 @@ function slac_event_import_single_submit($form, &$form_state) {
                 }
               }
             }
+          }
+          if (isset($form_state['event']['field_link'])) {
+            // Special handling for this.
+            if (empty($form_state['event']['field_link'])) {
+              // Use the event page URL.
+              drupal_set_message(t('The source event page did not have a redirect URL, so the URL of the event page itself is being used instead.'), 'warning');
+              $form_state['event']['field_link'] = $form_state['values']['url'];
+            }
+            $node->field_slac_event_link = array(LANGUAGE_NONE => array(array('url' => $form_state['event']['field_link'])));
           }
         }
       }
