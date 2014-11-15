@@ -36,7 +36,7 @@ margin-bottom: 10px;
       color: #871628; }
 .box-about figure {
   border: 2px solid white;
-  width: 84px;
+  width: auto;
   margin: 0; }
   .box-about figure img {
     display: block;
