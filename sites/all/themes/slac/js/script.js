@@ -33,8 +33,6 @@
 
       //fix submenu
       var $this_ul = $('.sf-menu li.sf-depth-1 > ul');
-      var $this_ul_a = $('.sf-menu li.sf-depth-1 > ul > li > a');
-      var $elementPadding_a = parseInt($this_ul_a.css("padding-left"));
 
       $this_ul.removeClass("sf-hidden");
       $this_ul.css('left',($elementPadding - $elementPadding_a) + "px");
