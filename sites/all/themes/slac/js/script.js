@@ -29,7 +29,14 @@
       var $elementPadding = (($mainWidth-$elementsWidth)/$i)/2;
       $this.each(function(){
         $this.css({'padding-left':$elementPadding, 'padding-right':$elementPadding})
-      })
+      });
+
+      //fix submenu
+      var $this_ul = $('.sf-menu li.sf-depth-1 > ul');
+
+      $this_ul.removeClass("sf-hidden");
+      $this_ul.css('left',($elementPadding - $elementPadding_a) + "px");
+      $this_ul.addClass("sf-hidden");
     }
   };
 
