@@ -22,21 +22,21 @@
       var $mainWidth = $('.sf-menu').width();
       var $elementsWidth = 0;
       var $i = 0;
+      var $factor = 2;
+
       $this.each(function(){
         $elementsWidth += $(this).find('a').first().width();
         $i++;
       });
-      var $elementPadding = (($mainWidth-$elementsWidth)/$i)/2;
+
+      if($i > 9) {
+        $factor = 3;
+      }
+
+      var $elementPadding = (($mainWidth-$elementsWidth)/$i)/$factor;
       $this.each(function(){
         $this.css({'padding-left':$elementPadding, 'padding-right':$elementPadding})
       });
-
-      //fix submenu
-      var $this_ul = $('.sf-menu li.sf-depth-1 > ul');
-
-      $this_ul.removeClass("sf-hidden");
-      $this_ul.css('left',($elementPadding - $elementPadding_a) + "px");
-      $this_ul.addClass("sf-hidden");
     }
   };
 
