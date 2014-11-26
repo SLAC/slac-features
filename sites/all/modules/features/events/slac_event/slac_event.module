@@ -124,9 +124,9 @@ function slac_event_import_single_submit($form, &$form_state) {
               }
             }
           }
-          if (isset($form_state['event']['field_link'])) {
+          if (isset($form_state['event']['field_slac_event_link'])) {
             // Special handling for this.
-            if (empty($form_state['event']['field_link'])) {
+            if (empty($form_state['event']['field_slac_event_link'])) {
               // Use the event page URL.
               drupal_set_message(t('The source event page did not have a redirect URL, so the URL of the event page itself is being used instead.'), 'warning');
               $form_state['event']['field_link'] = $form_state['values']['url'];
