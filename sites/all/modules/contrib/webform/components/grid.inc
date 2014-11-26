@@ -18,6 +18,7 @@ function _webform_defaults_grid() {
     'required' => 0,
     'pid' => 0,
     'weight' => 0,
+    'value' => '',
     'extra' => array(
       'options' => '',
       'questions' => '',
@@ -27,8 +28,10 @@ function _webform_defaults_grid() {
       'title_display' => 0,
       'custom_option_keys' => 0,
       'custom_question_keys' => 0,
+      'sticky' => TRUE,
       'description' => '',
       'private' => FALSE,
+      'analysis' => TRUE,
     ),
   );
 }
@@ -68,13 +71,13 @@ function _webform_edit_grid($component) {
     $form['options']['options'] = array(
       '#type' => 'options',
       '#options' => _webform_select_options_from_text($component['extra']['options'], TRUE),
-      '#optgroups' => FALSE,
-      '#default_value' => FALSE,
-      '#default_value_allowed' => FALSE,
+      '#default_value' => $component['value'],
+      '#default_value_allowed' => TRUE,
       '#optgroups' => FALSE,
       '#key_type' => 'mixed',
       '#key_type_toggle' => t('Customize option keys (Advanced)'),
       '#key_type_toggled' => $component['extra']['custom_option_keys'],
+      '#default_value_pattern' => '^%.+\[.+\]$',
     );
 
     $form['questions'] = array(
@@ -91,7 +94,6 @@ function _webform_edit_grid($component) {
       '#optgroups' => FALSE,
       '#default_value' => FALSE,
       '#default_value_allowed' => FALSE,
-      '#optgroups' => FALSE,
       '#key_type' => 'mixed',
       '#key_type_toggle' => t('Customize question keys (Advanced)'),
       '#key_type_toggled' => $component['extra']['custom_question_keys'],
@@ -122,6 +124,15 @@ function _webform_edit_grid($component) {
       '#wysiwyg' => FALSE,
       '#element_validate' => array('_webform_edit_validate_select'),
     );
+    $form['value'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Default value'),
+      '#default_value' => $component['value'],
+      '#description' => t('The default option of the grid identified by its key.') . ' ' . theme('webform_token_help'),
+      '#size' => 60,
+      '#maxlength' => 1024,
+      '#weight' => 1,
+    );
   }
 
   $form['display']['optrand'] = array(
@@ -137,6 +148,13 @@ function _webform_edit_grid($component) {
     '#default_value' => $component['extra']['qrand'],
     '#description' => t('Randomize the order of the questions on the side when they are displayed in the form.'),
     '#parents' => array('extra', 'qrand')
+  );
+  $form['display']['sticky'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Sticky table header'),
+    '#default_value' => $component['extra']['sticky'],
+    '#description' => t('Use a sticky (non-scrolling) table header.'),
+    '#parents' => array('extra', 'sticky')
   );
 
   $form['validation']['unique'] = array(
@@ -158,6 +176,13 @@ function _webform_edit_grid($component) {
 function _webform_render_grid($component, $value = NULL, $filter = TRUE) {
   $node = isset($component['nid']) ? node_load($component['nid']) : NULL;
 
+  $questions = _webform_select_options_from_text($component['extra']['questions'], TRUE);
+  $options = _webform_select_options_from_text($component['extra']['options'], TRUE);
+  if ($filter) {
+    $questions = _webform_select_replace_tokens($questions, $node);
+    $options = _webform_select_replace_tokens($options, $node);
+  }
+
   $element = array(
     '#type' => 'webform_grid',
     '#title' => $filter ? webform_filter_xss($component['name']) : $component['name'],
@@ -165,10 +190,13 @@ function _webform_render_grid($component, $value = NULL, $filter = TRUE) {
     '#required' => $component['required'],
     '#weight' => $component['weight'],
     '#description' => $filter ? webform_filter_descriptions($component['extra']['description'], $node) : $component['extra']['description'],
-    '#grid_questions' => _webform_select_options_from_text($component['extra']['questions'], TRUE),
-    '#grid_options' => _webform_select_options_from_text($component['extra']['options'], TRUE),
+    '#grid_questions' => $questions,
+    '#grid_options' => $options,
+    '#default_value' => isset($value) || !strlen($component['value']) ? $value : array_fill_keys(array_keys($questions), $component['value']),
+    '#grid_default' => $component['value'],
     '#optrand' => $component['extra']['optrand'],
     '#qrand' => $component['extra']['qrand'],
+    '#sticky' => $component['extra']['sticky'],
     '#theme' => 'webform_grid',
     '#theme_wrappers' => array('webform_element'),
     '#process' => array('webform_expand_grid'),
@@ -178,10 +206,6 @@ function _webform_render_grid($component, $value = NULL, $filter = TRUE) {
   // Enforce uniqueness.
   if ($component['extra']['unique']) {
     $element['#element_validate'][] = '_webform_edit_grid_unique_validate';
-  }
-
-  if ($value) {
-    $element['#default_value'] = $value;
   }
 
   return $element;
@@ -236,15 +260,20 @@ function webform_expand_grid($element) {
  * Implements _webform_display_component().
  */
 function _webform_display_grid($component, $value, $format = 'html') {
+  $node = node_load($component['nid']);
   $questions = _webform_select_options_from_text($component['extra']['questions'], TRUE);
+  $questions = _webform_select_replace_tokens($questions, $node);
   $options = _webform_select_options_from_text($component['extra']['options'], TRUE);
+  $options = _webform_select_replace_tokens($options, $node);
 
   $element = array(
     '#title' => $component['name'],
+    '#title_display' => $component['extra']['title_display'] ? $component['extra']['title_display'] : 'before',
     '#weight' => $component['weight'],
     '#format' => $format,
     '#grid_questions' => $questions,
     '#grid_options' => $options,
+    '#sticky' => $component['extra']['sticky'],
     '#theme' => 'webform_display_grid',
     '#theme_wrappers' => $format == 'html' ? array('webform_element') : array('webform_element_text'),
     '#sorted' => TRUE,
@@ -294,7 +323,7 @@ function theme_webform_display_grid($variables) {
     }
 
     $option_count = count($header) - 1;
-    $output = theme('table', array('header' => $header, 'rows' => $rows, 'attributes' => array('class' => array('webform-grid', 'webform-grid-' . $option_count))));
+    $output = theme('table', array('header' => $header, 'rows' => $rows, 'sticky' => $element['#sticky'], 'attributes' => array('class' => array('webform-grid', 'webform-grid-' . $option_count))));
   }
   else {
     $items = array();
@@ -312,8 +341,11 @@ function theme_webform_display_grid($variables) {
  */
 function _webform_analysis_grid($component, $sids = array()) {
   // Generate the list of options and questions.
-  $options = _webform_select_options_from_text($component['extra']['options'], TRUE);
+  $node = node_load($component['nid']);
   $questions = _webform_select_options_from_text($component['extra']['questions'], TRUE);
+  $questions = _webform_select_replace_tokens($questions, $node);
+  $options = _webform_select_options_from_text($component['extra']['options'], TRUE);
+  $options = _webform_select_replace_tokens($options, $node);
 
   // Generate a lookup table of results.
   $query = db_select('webform_submitted_data', 'wsd')
@@ -352,18 +384,22 @@ function _webform_analysis_grid($component, $sids = array()) {
     }
     $rows[] = $row;
   }
-  $output = theme('table', array('header' => $header, 'rows' => $rows, 'attributes' => array('class' => array('webform-grid'))));
 
-
-  return array(array(array('data' => $output, 'colspan' => 2)));
+  return array(
+    'table_header' => $header,
+    'table_rows' => $rows,
+  );
 }
 
 /**
  * Implements _webform_table_component().
  */
 function _webform_table_grid($component, $value) {
+  $node = node_load($component['nid']);
   $questions = _webform_select_options_from_text($component['extra']['questions'], TRUE);
+  $questions = _webform_select_replace_tokens($questions, $node);
   $options = _webform_select_options_from_text($component['extra']['options'], TRUE);
+  $options = _webform_select_replace_tokens($options, $node);
 
   $output = '';
   // Set the value as a single string.
@@ -380,10 +416,13 @@ function _webform_table_grid($component, $value) {
  * Implements _webform_csv_headers_component().
  */
 function _webform_csv_headers_grid($component, $export_options) {
+  $node = node_load($component['nid']);
+  $items = _webform_select_options_from_text($component['extra']['questions'], TRUE);
+  $items = _webform_select_replace_tokens($items, $node);
+
   $header = array();
   $header[0] = array('');
   $header[1] = array($export_options['header_keys'] ? $component['form_key'] : $component['name']);
-  $items = _webform_select_options_from_text($component['extra']['questions'], TRUE);
   $count = 0;
   foreach ($items as $key => $item) {
     // Empty column per sub-field in main header.
@@ -403,8 +442,12 @@ function _webform_csv_headers_grid($component, $export_options) {
  * Implements _webform_csv_data_component().
  */
 function _webform_csv_data_grid($component, $export_options, $value) {
+  $node = node_load($component['nid']);
   $questions = _webform_select_options_from_text($component['extra']['questions'], TRUE);
+  $questions = _webform_select_replace_tokens($questions, $node);
   $options = _webform_select_options_from_text($component['extra']['options'], TRUE);
+  $options = _webform_select_replace_tokens($options, $node);
+
   $return = array();
   foreach ($questions as $key => $question) {
     if (isset($value[$key]) && isset($options[$value[$key]])) {
@@ -421,8 +464,23 @@ function _webform_csv_data_grid($component, $export_options, $value) {
  * A Form API element validate function to check that all choices are unique.
  */
 function _webform_edit_grid_unique_validate($element) {
-  if (!empty($element['#value']) && count($element['#value']) > count(array_unique($element['#value']))) {
-    form_error($element, t('<em>!title</em> is not allowed to have the same answer for more than one question.', array('!title' => $element['#title'])));
+  $nr_unique = count(array_unique($element['#value']));
+  $nr_values = count($element['#value']);
+  $nr_possible = count($element['#grid_options']);
+  if (strlen($element['#grid_default']) && isset($element['#grid_options'][$element['#grid_default']])) {
+    // A default is defined and is one of the options. Don't count default values
+    // toward uniqueness.
+    $nr_defaults = count(array_keys($element['#value'], $element['#grid_default']));
+    if ($nr_defaults) {
+      $nr_values -= $nr_defaults;
+      $nr_unique--;
+    }
+  }
+  if ($nr_unique < $nr_values && $nr_unique < $nr_possible) {
+    // Fewer unique values than values means that at least one value is duplicated.
+    // Fewer unique values than possible values means that there is a possible choice
+    // that wasn't used.
+    form_error($element, t('!title is not allowed to have the same answer for more than one question.', array('!title' => $element['#title'])));
   }
 }
 
@@ -453,5 +511,5 @@ function theme_webform_grid($variables) {
   }
 
   $option_count = count($header) - 1;
-  return theme('table', array('header' => $header, 'rows' => $rows, 'attributes' => array('class' => array('webform-grid', 'webform-grid-' . $option_count))));
+  return theme('table', array('header' => $header, 'rows' => $rows, 'sticky' => $element['#sticky'], 'attributes' => array('class' => array('webform-grid', 'webform-grid-' . $option_count))));
 }

@@ -13,14 +13,15 @@ class WebformTestCase extends DrupalWebTestCase {
   /**
    * Implements setUp().
    */
-  function setUp() {
+  function setUp($added_modules = array()) {
     // Enable Webform and Token module if available.
     if (module_exists('token')) {
-      parent::setUp('webform', 'token');
+      $modules = array('webform', 'token');
     }
     else {
-      parent::setUp('webform');
+      $modules = array('webform');
     }
+    parent::setUp(array_merge($modules, $added_modules));
 
     // Create a profile field to test [user:?] tokens.
     $field = array(
@@ -521,7 +522,7 @@ class WebformTestCase extends DrupalWebTestCase {
         ),
         'sample values' => 'admin@localhost.localhost',
         'database values' => array('admin@localhost.localhost'),
-        'database default values' => module_exists('token') ? array($this->webform_users['admin']->mail) : array(),
+        'database default values' => array($this->webform_users['admin']->mail),
         // Conditionals match against the 'sample values'.
         'match conditional values' => array(
           'equal' => 'admin@localhost.localhost',
@@ -646,7 +647,7 @@ class WebformTestCase extends DrupalWebTestCase {
         // TODO: Update after http://drupal.org/node/1347790 is finished.
         'sample values' => module_exists('token') ? NULL : 'bar',
         'database values' => array('bar'),
-        'database default values' => array('bar'),
+        'database default values' => module_exists('token') ? array('bar') : array(''),
       ),
       'textfield_profile' => array(
         'component' => array(
@@ -665,7 +666,7 @@ class WebformTestCase extends DrupalWebTestCase {
         'database values' => array('Female'),
         // The default value will be blank if token does not exist.
         // TODO: Update after http://drupal.org/node/1347790 is finished.
-        'database default values' => module_exists('token') ? array($this->webform_users['admin']->gender[LANGUAGE_NONE][0]['value']) : '',
+        'database default values' => module_exists('token') ? array($this->webform_users['admin']->gender[LANGUAGE_NONE][0]['value']) : array(''),
       ),
 
       // Test time components.
@@ -765,8 +766,8 @@ class WebformTestCase extends DrupalWebTestCase {
           'empty' => TRUE,
         ),
         'error values' => array(
-          '1.5' => t('%name field value of @value must be an integer.', array('%name' => 'Integer', '@value' => '1.5')),
-          '101' => t('%name field value must be less than @max.', array('%name' => 'Integer', '@max' => '100')),
+          '1.5' => t('!name field value of @value must be an integer.', array('!name' => 'Integer', '@value' => '1.5')),
+          '101' => t('!name field value must be less than @max.', array('!name' => 'Integer', '@max' => '100')),
         ),
       ),
       'integer_range' => array(
@@ -830,7 +831,7 @@ class WebformTestCase extends DrupalWebTestCase {
           'empty' => TRUE,
         ),
         'error values' => array(
-          '-1' => t('%name field value must be greater than @min.', array('%name' => 'Decimal positive', '@min' => '0')),
+          '-1' => t('!name field value must be greater than @min.', array('!name' => 'Decimal positive', '@min' => '0')),
         ),
       ),
       'decimal_range' => array(
@@ -857,8 +858,8 @@ class WebformTestCase extends DrupalWebTestCase {
         'database values' => array('11.5'),
         'database default values' => array('1'),
         'error values' => array(
-          '2' => t('%name field value must be @start plus a multiple of @step.', array('%name' => 'Decimal range', '@start' => '1', '@step' => '1.5')),
-          '13' => t('%name field value of @value should be in the range @min to @max.', array('%name' => 'Decimal range', '@value' => '13', '@min' => '1', '@max' => '12')),
+          '2' => t('!name field value must be @start plus a multiple of @step.', array('!name' => 'Decimal range', '@start' => '1', '@step' => '1.5')),
+          '13' => t('!name field value of @value should be in the range @min to @max.', array('!name' => 'Decimal range', '@value' => '13', '@min' => '1', '@max' => '12')),
         ),
       ),
       'decimal_range_select' => array(
@@ -921,18 +922,7 @@ class WebformTestCase extends DrupalWebTestCase {
      'format' => '1',
      'webform' => array(
         'confirmation' => 'Thanks!',
-        'confirmation_format' => filter_default_format(),
-        'redirect_url' => '<confirmation>',
-        'allow_draft' => '1',
-        'submit_text' => '',
-        'submit_limit' => '-1',
-        'submit_interval' => '-1',
-        'submit_notice' => '1',
-        'roles' => array('1', '2'),
-        'components' => array(),
-        'conditionals' => array(),
-        'emails' => array(),
-      ),
+      ) + webform_node_defaults(),
     );
 
     $cid = 0;
@@ -1029,7 +1019,8 @@ class WebformGeneralTestCase extends WebformTestCase {
    */
   function testWebformCreateNewType() {
     // Enable webforms on the page content type.
-    variable_set('webform_node_types', array('webform', 'page'));
+    variable_set('webform_node_webform', TRUE);
+    variable_set('webform_node_page', TRUE);
 
     $settings = array(
       'title' => 'Test webform-enabled page',
