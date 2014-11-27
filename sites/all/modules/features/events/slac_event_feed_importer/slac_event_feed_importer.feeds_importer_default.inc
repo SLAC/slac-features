@@ -27,8 +27,13 @@ function slac_event_feed_importer_feeds_importer_default() {
       ),
     ),
     'parser' => array(
-      'plugin_key' => 'DateIcalIcalcreatorParser',
-      'config' => array(),
+      'plugin_key' => 'DateiCalFeedsParser',
+      'config' => array(
+        'indefinite_count' => '52',
+        'indefinite_message_display' => TRUE,
+        'until_not_utc' => FALSE,
+        'skip_days' => NULL,
+      ),
     ),
     'processor' => array(
       'plugin_key' => 'FeedsNodeProcessor',
@@ -38,37 +43,37 @@ function slac_event_feed_importer_feeds_importer_default() {
         'authorize' => 1,
         'mappings' => array(
           0 => array(
-            'source' => 'description',
+            'source' => 'DESCRIPTION',
             'target' => 'body',
             'unique' => FALSE,
           ),
           1 => array(
-            'source' => 'url',
+            'source' => 'URL',
             'target' => 'field_slac_event_link:url',
             'unique' => FALSE,
           ),
           2 => array(
-            'source' => 'location',
+            'source' => 'LOCATION',
             'target' => 'field_slac_event_scientific_area',
             'unique' => FALSE,
           ),
           3 => array(
-            'source' => 'summary',
+            'source' => 'SUMMARY',
             'target' => 'title',
             'unique' => FALSE,
           ),
           4 => array(
-            'source' => 'dtstart',
+            'source' => 'DTSTART',
             'target' => 'field_slac_event_date:start',
             'unique' => FALSE,
           ),
           5 => array(
-            'source' => 'dtend',
+            'source' => 'DTEND',
             'target' => 'field_slac_event_date:end',
             'unique' => FALSE,
           ),
           6 => array(
-            'source' => 'uid',
+            'source' => 'UID',
             'target' => 'guid',
             'unique' => 1,
           ),

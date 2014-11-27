@@ -39,20 +39,53 @@ function feedmapper_slac_event_get_promoted_item_feed(FeedsSource $source) {
 }
 
 /**
+ * Implements hook_date_ical_import_post_parse_alter().
+ *
+ * Make sure "xprops" are passed along in the parsed data; they (and apparently
+ * any other field we can't map in the GUI) are not by default.
+ */
+function slac_event_feed_importer_date_ical_import_post_parse_alter(&$parsed_data, $context) {
+    foreach ($context['calendar']->components as $component) {
+      if ($component instanceof vevent && $component->uid['value'] === $parsed_data['UID']) {
+        foreach ($component->xprop as $name => $value) {
+          $parsed_data[$name] = $value['value'];
+        }
+      }
+    }
+}
+
+/**
  * Implements hook_feeds_presave().
  */
 function slac_event_feed_importer_feeds_presave(FeedsSource $source, $entity, $item) {
-  if (!empty($entity->type) && $entity->type === 'event' && $item instanceof DateIcalIcalcreatorComponent) {
+  if (!empty($entity->type) && $entity->type === 'event' && isset($item['UID'])) {
     // Massage date data - even though the field mapping is in place, it's not
     // working. Perhaps because the incoming date fields are not in an expected
     // format.
     $date_info = array('date_type' => 'date');
-    $date_info['timezone'] = empty($item->component->dtstart['params']['TZID']) ? 'America/Los_Angeles' : $item->component->dtstart['params']['TZID'];
+    $date_info['timezone'] = empty($item['DTSTART']->timezone) ? 'America/Los_Angeles' : $item['DTSTART']->timezone;
     $date_info['timezone_db'] = $date_info['timezone'];
-    $start = $item->component->dtstart['value'];
-    $date_info['value'] = "{$start['year']}-{$start['month']}-{$start['day']}T{$start['hour']}:{$start['min']}:{$start['sec']}";
-    $end = $item->component->dtend['value'];
-    $date_info['value2'] = "{$end['year']}-{$end['month']}-{$end['day']}T{$end['hour']}:{$end['min']}:{$end['sec']}";
+    $date_info['value'] = $item['DTSTART']->format(DATE_FORMAT_ISO);
+    $date_info['value2'] = $item['DTEND']->format(DATE_FORMAT_ISO);
     $entity->field_slac_event_date[LANGUAGE_NONE][0] = $date_info;
+
+    // Did we pass an image in the iCalendar data?
+    if (!empty($item['X-IMG-UUID'])) {
+      if ($files = entity_uuid_load('file', array($item['X-IMG-UUID']))) {
+        $file = reset($files);
+        $entity->field_event_image[LANGUAGE_NONE][0] = (array)$file;
+      }
+      elseif (!empty($item['X-IMG-URL'])) {
+        $data = drupal_http_request($item['X-IMG-URL']);
+        if ($data->code == 200) {
+          $filename = basename(parse_url($item['X-IMG-URL'], PHP_URL_PATH));
+          if ($file = file_save_data($data->data, file_default_scheme() . '://' . $filename)) {
+            $file->uuid = $item['X-IMG-UUID'];
+            file_save($file);
+            $entity->field_event_image[LANGUAGE_NONE][0] = (array) $file;
+          }
+        }
+      }
+    }
   }
 }
