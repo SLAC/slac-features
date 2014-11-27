@@ -113,6 +113,7 @@ function slac_event_import_single_submit($form, &$form_state) {
                         $file->$file_field = $image[$file_field];
                       }
                     }
+                    $file->uuid = $image['uuid'];
                     file_save($file);
                     $node->field_event_image[$langcode][$idx] = (array) $file;
                     drupal_set_message(t('Successfully imported the file %file for the imported content.', array('%file' => $image['filename'])));
@@ -505,3 +506,20 @@ function _slac_event_fields_to_export() {
   );
 }
 
+/**
+ * Implements hook_date_ical_export_vevent_alter().
+ *
+ * Add image information as X- properties.
+ */
+function slac_event_date_ical_export_vevent_alter(&$vevent, $view, $event_array) {
+  preg_match('/^calendar\.(\d+)/', $event_array['uid'], $matches);
+  if (isset($matches[1])) {
+    if ($node = node_load($matches[1])) {
+      if ($images = field_get_items('node', $node, 'field_event_image')) {
+        $url = file_create_url($images[0]['uri']);
+        $vevent->setProperty('X-IMG-UUID', $images[0]['uuid']);
+        $vevent->setProperty('X-IMG-URL', $url);
+      }
+    }
+  }
+}
