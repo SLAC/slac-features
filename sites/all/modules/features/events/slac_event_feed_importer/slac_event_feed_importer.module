@@ -70,5 +70,27 @@ function slac_event_feed_importer_feeds_presave(FeedsSource $source, $entity, $i
     $end = $item->component->dtend['value'];
     $date_info['value2'] = "{$end['year']}-{$end['month']}-{$end['day']}T{$end['hour']}:{$end['min']}:{$end['sec']}";
     $entity->field_slac_event_date[LANGUAGE_NONE][0] = $date_info;
+
+    // Did we pass an image in the iCalendar data?
+    if (!empty($item['X-IMG-UUID'])) {
+      if ($files = entity_uuid_load('file', array($item['X-IMG-UUID']))) {
+        $file = reset($files);
+        $entity->field_event_image[LANGUAGE_NONE][0] = (array)$file;
+      }
+      elseif (!empty($item['X-IMG-URL'])) {
+        $data = drupal_http_request($item['X-IMG-URL']);
+        if ($data->code == 200) {
+          $filename = basename(parse_url($item['X-IMG-URL'], PHP_URL_PATH));
+          if ($file = file_save_data($data->data, file_default_scheme() . '://' . $filename)) {
+            $file->uuid = $item['X-IMG-UUID'];
+            file_save($file);
+            $entity->field_event_image[LANGUAGE_NONE][0] = (array) $file;
+          }
+        }
+      }
+    }
+    // Bypass content moderation workflow and just publish it!
+    $entity->status = NODE_PUBLISHED;
+    $entity->workbench_moderation_state_new = workbench_moderation_state_published();
   }
 }
