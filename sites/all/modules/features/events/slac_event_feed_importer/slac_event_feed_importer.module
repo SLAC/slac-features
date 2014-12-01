@@ -87,5 +87,8 @@ function slac_event_feed_importer_feeds_presave(FeedsSource $source, $entity, $i
         }
       }
     }
+    // Bypass content moderation workflow and just publish it!
+    $entity->status = NODE_PUBLISHED;
+    $entity->workbench_moderation_state_new = workbench_moderation_state_published();
   }
 }
