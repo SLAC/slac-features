@@ -45,13 +45,13 @@ function feedmapper_slac_event_get_promoted_item_feed(FeedsSource $source) {
  * any other field we can't map in the GUI) are not by default.
  */
 function slac_event_feed_importer_date_ical_import_post_parse_alter(&$parsed_data, $context) {
-    foreach ($context['calendar']->components as $component) {
-      if ($component instanceof vevent && $component->uid['value'] === $parsed_data['UID']) {
-        foreach ($component->xprop as $name => $value) {
-          $parsed_data[$name] = $value['value'];
-        }
+  foreach ($context['calendar']->components as $component) {
+    if ($component instanceof vevent && $component->uid['value'] === $parsed_data['UID']) {
+      foreach ($component->xprop as $name => $value) {
+        $parsed_data[$name] = $value['value'];
       }
     }
+  }
 }
 
 /**
