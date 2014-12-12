@@ -473,6 +473,7 @@ function default_site_template_io_strongarm() {
     'toggle_secondary_menu' => 1,
     'site_name_abbreviation' => 0,
     'site_url_address' => 0,
+    'site_footer_address' => 0,
     'default_logo' => 0,
     'logo_path' => 'sites/all/modules/features/default_site_template_io/logo-header.png',
     'logo_upload' => '',

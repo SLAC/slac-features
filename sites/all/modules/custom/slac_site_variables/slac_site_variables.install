@@ -6,6 +6,7 @@
 function slac_site_variables_install() {
   variable_set('site_name_abbreviation', '');
   variable_set('site_url_address', '');
+  variable_set('site_footer_address','');
 }
 
 /**
@@ -14,4 +15,5 @@ function slac_site_variables_install() {
 function slac_site_variables_uninstall() {
   variable_del('site_name_abbreviation');
   variable_del('site_url_address');
+  variable_del('site_footer_address');
 }

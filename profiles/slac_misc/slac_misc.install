@@ -102,6 +102,7 @@ function slac_misc_install() {
   variable_set('site_name', 'SLAC Projects');
   variable_set('site_name_abbreviation', 'Misc');
   variable_set('site_url_address', '2575 Sand Hill Road, Menlo Park, CA 94025');
+  variable_set('site_footer_address', '123 Directorate Way');
 
   slac_profiles_shared_place_system_blocks_to_regions();
 

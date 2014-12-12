@@ -63,5 +63,12 @@ function slac_int_org_form_slac_configuration_form_alter(&$form, &$form_state) {
     '#default_value' => variable_get('site_url_address', ''),
     '#required' => TRUE,
   );
+
+  $form['site_footer_address'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Secondary Footer Address'),
+    '#default_value' => variable_get('site_footer_address', ''),
+    '#required' => TRUE,
+  );
 }
 
