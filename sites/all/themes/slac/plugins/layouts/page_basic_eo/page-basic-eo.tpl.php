@@ -22,7 +22,7 @@
         <div class="logo-container">
           <div class="panel-pane pane-page-logo">
             <?php if ($logo_path): ?>
-              <a href="http://slac.stanford.edu" rel="home" id="logo" title="Home"><img src="<?php print $logo_path; ?>" alt="SLAC"/></a>
+              <a href="<?php print $logo_link; ?>" rel="home" id="logo" title="Home"><img src="<?php print $logo_path; ?>" alt="SLAC"/></a>
             <?php endif; ?>
           </div>
         </div>

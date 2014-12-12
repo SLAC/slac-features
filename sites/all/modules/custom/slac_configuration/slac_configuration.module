@@ -87,6 +87,20 @@ function slac_configuration_form($form, &$form_state) {
     '#description' => t("If you don't have direct file access to the server, use this field to upload your logo."),
   );
 
+  $form['site_logo_url'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Logo Link Settings'),
+    '#description' => t('Enter the URL you wish the logo to point too. You must enter "http://" in front of your URL'),
+    '#attributes' => array('class' => array('theme-settings-bottom')),
+
+  );
+  $form['site_logo_url']['settings']['logo_link'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Site Logo URL'),
+    '#default_value' => variable_get('logo_link', 'http://www6.slac.stanford.edu'),
+  );
+
+
   $form = system_settings_form($form);
   $form['#submit'][] = 'slac_configuration_submit';
   $form['#validate'][] = 'slac_configuration_validate';
