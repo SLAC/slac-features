@@ -2980,7 +2980,6 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'slac administer configuration',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'slac_configuration',
   );
