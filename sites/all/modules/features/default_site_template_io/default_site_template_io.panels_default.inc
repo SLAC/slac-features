@@ -414,7 +414,7 @@ function default_site_template_io_default_panels_mini() {
       'body' => '<div class="social-icon-block">
 	<div class="social-icon-facebook"><a href="http://facebook.com/SLAC.National.Lab">Facebook</a></div>
 
-	<div class="social-icon-twitter"><a href="http://twitter.com//slaclab">Twitter</a></div>
+	<div class="social-icon-twitter"><a href="http://twitter.com/slaclab">Twitter</a></div>
 
 	<div class="social-icon-flickr"><a href="http://www.flickr.com/photos/slaclab">Flickr</a></div>
 
