@@ -37,6 +37,8 @@
       $this.each(function(){
         $this.css({'padding-left':$elementPadding, 'padding-right':$elementPadding})
       });
+        var myElement = document.querySelector(".sf-menu .first");
+        myElement.style.paddingLeft = "0";
     }
   };
 
