@@ -55,10 +55,12 @@
       $this.each(function(){
         $this.css({'padding-left':$elementPadding, 'padding-right':$elementPadding})
       });
-        var myMenuPadding = document.querySelector(".sf-menu .first");
-        myMenuPadding.style.paddingLeft = "0";
-        var myMenuDD = document.querySelector(".sf-main-menu.sf-horizontal > li.menuparent > ul");
-        myMenuDD.style.marginLeft = "40px";
+      var myMenuPadding = document.querySelector(".sf-menu .first");
+      myMenuPadding.style.paddingLeft = "0";
+      //var myMenuDD = document.querySelector(".sf-main-menu.sf-horizontal li.menuparent ul");
+      //myMenuDD.style.marginLeft = "2em";
+      var $that = $('.sf-main-menu.sf-horizontal li.menuparent ul');
+        $that.css('margin-left','3em');
     }
   };
 
