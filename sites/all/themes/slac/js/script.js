@@ -44,7 +44,7 @@
       myMenuPadding.style.paddingLeft = "0";
 
       var $that = $('.sf-main-menu.sf-horizontal li.menuparent ul');
-        $that.css('margin-left','1.5em');
+        $that.css('margin-left','1em');
     }
   };
 
