@@ -58,7 +58,7 @@
         var myMenuPadding = document.querySelector(".sf-menu .first");
         myMenuPadding.style.paddingLeft = "0";
         var myMenuDD = document.querySelector(".sf-main-menu.sf-horizontal > li.menuparent > ul");
-        myMenuDD.style.marginLeft = "50px";
+        myMenuDD.style.marginLeft = "40px";
     }
   };
 
