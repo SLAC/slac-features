@@ -45,6 +45,9 @@
 
       var $that = $('.sf-main-menu.sf-horizontal li.menuparent ul');
         $that.css('margin-left','1em');
+        if ($i < 4) {
+            $that.css('margin-left','3em');
+        }
     }
   };
 
