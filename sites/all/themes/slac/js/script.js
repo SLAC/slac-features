@@ -60,7 +60,7 @@
       //var myMenuDD = document.querySelector(".sf-main-menu.sf-horizontal li.menuparent ul");
       //myMenuDD.style.marginLeft = "2em";
       var $that = $('.sf-main-menu.sf-horizontal li.menuparent ul');
-        $that.css('margin-left','3em');
+        $that.css('margin-left','2em');
     }
   };
 
