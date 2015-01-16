@@ -14,7 +14,6 @@
   "use strict";
 
   // To understand behaviors, see https://drupal.org/node/756722#behaviors
-
   var menuElementsResponsive = function(){
     if ($('.page-basic-io').length) {
       var $this = $('.sf-menu li.sf-depth-1');
@@ -28,15 +27,27 @@
         $elementsWidth += $(this).find('a').first().width();
         $i++;
       });
+        switch ($i) {
 
-      if($i > 9) {
-        $factor = 3;
-      }
+            case $i > 8:
+                $factor = 4
+
+            default:
+                $factor = 8
+        }
 
       var $elementPadding = (($mainWidth-$elementsWidth)/$i)/$factor;
       $this.each(function(){
         $this.css({'padding-left':$elementPadding, 'padding-right':$elementPadding})
       });
+      var myMenuPadding = document.querySelector(".sf-menu .first");
+      myMenuPadding.style.paddingLeft = "0";
+
+      var $that = $('.sf-main-menu.sf-horizontal li.menuparent ul');
+        $that.css('margin-left','1em');
+        if ($i < 4) {
+            $that.css('margin-left','3em');
+        }
     }
   };
 
