@@ -48,6 +48,8 @@
         if ($i < 4) {
             $that.css('margin-left','3em');
         }
+        var myElement = document.querySelector(".sf-menu .first");
+        myElement.style.paddingLeft = "0";
     }
   };
 
