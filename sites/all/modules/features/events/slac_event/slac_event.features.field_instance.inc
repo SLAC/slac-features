@@ -1135,6 +1135,7 @@ function slac_event_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Arbitrary tags to assist in the creation of event feeds which only provide events with certain tags.');
   t('Audience');
   t('Comment');
   t('Contact');
@@ -1146,11 +1147,11 @@ function slac_event_field_default_field_instances() {
   t('Event date');
   t('Event tags');
   t('Image');
+  t('Inserting a URL in this field will cause the node to redirect to the given link.');
   t('Location');
   t('Please enter an area of expertise for this event such as "Photon, X-ray" (If applicable)');
   t('Please enter the date for the event, please specify an end date. Event can span across multiple days.');
-  t('Please enter the link of the event, i.e. https://conf-slac.stanford.edu/ixs-2013/Welcome. User will be REDIRECTED to this page instead of viewing the event on this site.');
-  t('Redirect event link');
+  t('Redirect link');
   t('Related links');
 
   return $field_instances;
