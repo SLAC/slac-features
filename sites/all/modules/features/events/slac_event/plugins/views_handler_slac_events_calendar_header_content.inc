@@ -10,8 +10,6 @@ class views_handler_slac_events_calendar_header_content extends views_handler_ar
   function render($empty = FALSE) {
     $current_display = $this->view->current_display;
     $current_display = str_replace('_list', '', $current_display);
-    // Have to return pager, calendar and list/grid toggle + day/week/month
-    // pager + calendar will return data taht differs based on date view mode
     $current_time = _slac_event_get_current_date($current_display);
     // Default to one month.
     $previous_time_string = '-1 month';
@@ -37,6 +35,7 @@ class views_handler_slac_events_calendar_header_content extends views_handler_ar
       $next_time_string = '+1 day';
     }
 
+    // Append view mode to url if found.
     $display_mode_extra = '';
     $view_mode = arg(2);
     if (!empty($view_mode)) {
@@ -46,6 +45,7 @@ class views_handler_slac_events_calendar_header_content extends views_handler_ar
       $view_mode = 'grid';
     }
 
+    // Append date to url if found.
     $date_mode = arg(3);
     if (!empty($date_mode)) {
       $display_mode_extra .= '/' . $date_mode;
