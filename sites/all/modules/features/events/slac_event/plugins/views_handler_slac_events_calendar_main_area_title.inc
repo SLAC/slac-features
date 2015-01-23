@@ -2,7 +2,7 @@
 
 /**
  * Custom plugin for Header area of views.
- * 
+ *
  * Display title for the Calendar main area.
  */
 
