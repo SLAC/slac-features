@@ -141,6 +141,23 @@ function slac_event_import_single_submit($form, &$form_state) {
       }
     }
   }
+
+  // Add an "external" tag to imported events.
+  $terms = taxonomy_get_term_by_name('external', 'event_tags');
+  // Create a new term if no existing term was found.
+  if (empty($terms)) {
+    $vocabulary = taxonomy_vocabulary_machine_name_load('event_tags');
+    $term = new stdClass();
+    $term->vid = $vocabulary->vid;
+    $term->name = 'External';
+    taxonomy_term_save($term);
+  }
+  // Use the existing term.
+  else {
+    $term = array_shift($terms);
+  }
+  $node->field_event_tags[LANGUAGE_NONE][]['tid'] = $term->tid;
+
   node_save($node);
   // Let's redirect the user to the node edit form for the node we just created.
   $form_state['redirect'] = "node/{$node->nid}/edit";
