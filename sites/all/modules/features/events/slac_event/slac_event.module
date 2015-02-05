@@ -587,10 +587,8 @@ function slac_event_theme($existing, $type, $theme, $path) {
 /**
  * Implements hook_ctools_plugin_directory().
  */
-/*
 function slac_event_ctools_plugin_directory($owner, $plugin_type) {
   if ($owner == 'ctools' && $plugin_type == 'content_types') {
     return 'plugins/' . $plugin_type;
   }
 }
-*/
