@@ -1031,6 +1031,7 @@ function slac_event_views_default_views() {
   $handler->display->display_options['arguments']['date_argument']['default_action'] = 'default';
   $handler->display->display_options['arguments']['date_argument']['default_argument_type'] = 'php';
   $handler->display->display_options['arguments']['date_argument']['default_argument_options']['code'] = 'return _slac_event_get_date_argument_events_calendar(\'week\');';
+  $handler->display->display_options['arguments']['date_argument']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['date_argument']['granularity'] = 'day';
   $handler->display->display_options['arguments']['date_argument']['date_fields'] = array(
     'field_data_field_slac_event_date.field_slac_event_date_value' => 'field_data_field_slac_event_date.field_slac_event_date_value',
@@ -1094,6 +1095,7 @@ function slac_event_views_default_views() {
   $handler->display->display_options['arguments']['date_argument']['default_action'] = 'default';
   $handler->display->display_options['arguments']['date_argument']['default_argument_type'] = 'php';
   $handler->display->display_options['arguments']['date_argument']['default_argument_options']['code'] = 'return _slac_event_get_date_argument_events_calendar(\'day\');';
+  $handler->display->display_options['arguments']['date_argument']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['date_argument']['granularity'] = 'day';
   $handler->display->display_options['arguments']['date_argument']['date_fields'] = array(
     'field_data_field_slac_event_date.field_slac_event_date_value' => 'field_data_field_slac_event_date.field_slac_event_date_value',
@@ -1171,6 +1173,7 @@ function slac_event_views_default_views() {
   $handler->display->display_options['arguments']['date_argument']['default_action'] = 'default';
   $handler->display->display_options['arguments']['date_argument']['default_argument_type'] = 'php';
   $handler->display->display_options['arguments']['date_argument']['default_argument_options']['code'] = 'return _slac_event_get_date_argument_events_calendar(\'week\');';
+  $handler->display->display_options['arguments']['date_argument']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['date_argument']['granularity'] = 'day';
   $handler->display->display_options['arguments']['date_argument']['date_fields'] = array(
     'field_data_field_slac_event_date.field_slac_event_date_value' => 'field_data_field_slac_event_date.field_slac_event_date_value',
@@ -1209,6 +1212,7 @@ function slac_event_views_default_views() {
   $handler->display->display_options['arguments']['date_argument']['default_action'] = 'default';
   $handler->display->display_options['arguments']['date_argument']['default_argument_type'] = 'php';
   $handler->display->display_options['arguments']['date_argument']['default_argument_options']['code'] = 'return _slac_event_get_date_argument_events_calendar(\'day\');';
+  $handler->display->display_options['arguments']['date_argument']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['date_argument']['granularity'] = 'day';
   $handler->display->display_options['arguments']['date_argument']['date_fields'] = array(
     'field_data_field_slac_event_date.field_slac_event_date_value' => 'field_data_field_slac_event_date.field_slac_event_date_value',

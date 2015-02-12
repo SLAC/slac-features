@@ -10,6 +10,41 @@
 function slac_event_field_default_field_bases() {
   $field_bases = array();
 
+  // Exported field_base: 'field_event_date_2'
+  $field_bases['field_event_date_2'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_event_date_2',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
+    'foreign keys' => array(),
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'date',
+    'settings' => array(
+      'cache_count' => 4,
+      'cache_enabled' => 0,
+      'granularity' => array(
+        'day' => 'day',
+        'hour' => 'hour',
+        'minute' => 'minute',
+        'month' => 'month',
+        'second' => 0,
+        'year' => 'year',
+      ),
+      'profile2_private' => FALSE,
+      'repeat' => 1,
+      'timezone_db' => 'UTC',
+      'todate' => 'optional',
+      'tz_handling' => 'site',
+    ),
+    'translatable' => 0,
+    'type' => 'date',
+  );
+
   // Exported field_base: 'field_event_image'
   $field_bases['field_event_image'] = array(
     'active' => 1,
