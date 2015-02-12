@@ -29,3 +29,4 @@ chunky_png_options = {:best_compression  => Zlib::BEST_COMPRESSION}
 sass_options = {:sourcemap => true}
 sass_options = {:debug_info => false}
 enable_sourcemaps = true
+sourcemap = true

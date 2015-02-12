@@ -1,0 +1,219 @@
+.calendar-page
+  color: $grey-47
+  a
+    color: $grey-47
+
+
+  .top_title_exist
+    margin-top: 0
+
+  .view-header
+    background: white
+    +clearfix
+    ul
+      position: relative
+      text-transform: uppercase
+      li
+        position: static
+        display: block
+        text-align: center
+        +fontsize-rem(16px)
+        font-weight: bold
+        a:hover
+          text-decoration: none
+  .events-calendar-header-pager,
+  .events-calendar-header-date
+    +float-items(left)
+    margin-top: 40px
+  .events-calendar-header-pager
+    width: 33%
+    margin-top: 36px
+    li
+      height: 17px
+      line-height: 12px !important
+      +float-items(left)
+      background: $grey-e
+      border: 1px solid $grey-d
+      border-radius: 3px
+      padding: 0 9px
+      margin: 0 0.25rem 0 0
+      &.first
+        left: 0
+        padding: 0
+        a
+          &:before
+            content: '\e628'
+      &.last
+        right: 0
+        padding: 0
+        a
+          &:after
+            content: '\e62b'
+      &.first, &.last
+        padding: 0 2px
+        a
+          +no-select
+          line-height: 12px
+          &:after, &:before
+            @extend .slac-font
+            position: relative
+            top: 2px
+            +fontsize-rem(16px)
+    a
+      +link($h2-color)
+      +fontsize-rem(9px)
+
+
+  .events-calendar-header-date
+    +float-items(left)
+    +fontsize-rem(20px)
+    +bold
+    width: 33%
+    text-align: center
+  .events-calendar-header-date-switch
+    +float-items(right)
+    width: 33%
+  .events-calendar-header-switch,
+  .events-calendar-header-displayview
+    +float-items(right)
+    clear: both
+  .events-calendar-header-switch
+    +fontsize-rem(12px)
+    margin-bottom: 1rem
+    a
+      +bold
+  .events-calendar-header-displayview
+    li
+      +float-items(left)
+      height: 17px
+      a
+        +link($h2-color, white)
+        text-transform: capitalize
+        border: 1px solid $grey-d
+        font-weight: normal
+        +fontsize-rem(10px)
+        padding: 0.25rem 0.5rem
+        &.active,
+        &:hover
+          background: $h2-color
+      &:first-child
+        a
+          border-radius: 3px 0 0 3px
+          border-right: 0
+      &:last-child
+        a
+          border-radius: 0 3px 3px 0
+          border-left: 0
+  .view-content
+    padding: 5px
+  .view-footer li
+    padding: 15px
+
+  .view-footer li
+    background-color: $bg-col-1
+
+
+  .view-content, .view-footer li.first
+    margin-bottom: 5px
+
+  .calendar-empty
+    display: none
+
+  table
+    margin-bottom: 0 !important
+    width: 100%
+
+    > .content &
+      .page-basic &
+        td, th
+          border: 0
+          padding: 0
+          text-align: center
+          background-color: transparent !important
+          +fontsize-rem(12px)
+          color: inherit
+        td
+          border-right: 1px solid $grey-d
+          padding: 0
+          width: auto 
+          max-width: 140px
+        thead
+          th
+            padding: 6px 0
+        tbody
+          tr
+            .month
+              display: inline-block
+            a
+              padding: 6px
+              display: inline-block
+              &.active
+                background-color: $red
+                color: #fff
+                font-weight: bold
+        .date-box
+          td
+            border-right: 1px solid $grey-d
+            text-align: right
+            +fontsize-rem(13px)
+            +bold
+            padding: 3px
+
+    .single-day
+      border-bottom: 1px solid $grey-d
+
+
+  .calendar-calendar
+    border: 2px solid $grey-d
+    thead
+      background: $menu_bg
+    .contents
+      background: $menu_bg
+      margin: 0 8px
+      padding: 8px
+      .views-field-field-slac-event-date,
+      .views-field-field-slac-event-date-1
+        +fontsize-rem(11px)
+        +bold
+      .views-field-title
+        color: $calendar-event-red
+        text-align: left
+        +fontsize-rem(10px)
+
+.calendar-page table tbody td a.active
+  color: #fff
+  background: #2582ca
+
+.view-display-id-month_list.calendar-page
+  .events-calendar-header-pager,
+  .events-calendar-header-switch
+    display: none
+  .events-calendar-header-displayview
+    float: left
+  .events-calendar-header-date
+    float: right
+    width: 50%
+    text-align: left
+    margin-bottom: 5px
+  .events-calendar-header-date-switch
+    float: left
+    width: 50%
+  .view-content
+    width: 50%
+    float: right
+    border-top: 2.5px solid $grey-be
+    padding: 0
+    +at-breakpoint($mobile-only)
+      width: 100%
+    .views-row
+      background: $grey-e
+      margin: 25px 0
+      padding: 25px
+      .views-field-title
+        color: $red
+        +fontsize-rem(16px)
+        +bold
+      .views-field-field-slac-event-date,
+      .views-field-field-slac-event-date-1
+        +fontsize-rem(12px)
+        +bold
