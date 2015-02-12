@@ -653,15 +653,6 @@ events/month*',
           'context' => 'empty',
           'not' => FALSE,
         ),
-        1 => array(
-          'name' => 'path_visibility',
-          'settings' => array(
-            'visibility_setting' => '1',
-            'paths' => 'events/month/list*',
-          ),
-          'context' => 'empty',
-          'not' => TRUE,
-        ),
       ),
     );
     $pane->configuration = array();
@@ -691,15 +682,6 @@ events/month*',
           ),
           'context' => 'empty',
           'not' => FALSE,
-        ),
-        1 => array(
-          'name' => 'path_visibility',
-          'settings' => array(
-            'visibility_setting' => '1',
-            'paths' => 'events/week/list*',
-          ),
-          'context' => 'empty',
-          'not' => TRUE,
         ),
       ),
     );
@@ -765,7 +747,8 @@ events/month*',
           'name' => 'path_visibility',
           'settings' => array(
             'visibility_setting' => '1',
-            'paths' => 'events/month/list*',
+            'paths' => 'events
+events/month*',
           ),
           'context' => 'empty',
           'not' => FALSE,
@@ -795,7 +778,7 @@ events/month*',
           'name' => 'path_visibility',
           'settings' => array(
             'visibility_setting' => '1',
-            'paths' => 'events/week/list*',
+            'paths' => 'events/week*',
           ),
           'context' => 'empty',
           'not' => FALSE,
