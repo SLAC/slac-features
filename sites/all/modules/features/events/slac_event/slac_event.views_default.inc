@@ -1492,11 +1492,10 @@ function slac_event_views_default_views() {
   );
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Header: Global: Minicaledar pager */
+  /* Header: Broken/missing handler */
   $handler->display->display_options['header']['calendar_mini_pager']['id'] = 'calendar_mini_pager';
   $handler->display->display_options['header']['calendar_mini_pager']['table'] = 'views';
   $handler->display->display_options['header']['calendar_mini_pager']['field'] = 'calendar_mini_pager';
-  $handler->display->display_options['header']['calendar_mini_pager']['label'] = 'calendar_mini_pager';
   $handler->display->display_options['defaults']['footer'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Title */
