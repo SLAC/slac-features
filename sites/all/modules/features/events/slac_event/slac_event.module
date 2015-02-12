@@ -297,6 +297,13 @@ function slac_event_views_data_alter(&$data) {
       'handler' => 'views_handler_slac_events_calendar_header_content',
     ),
   );
+  $data['views']['calendar_mini_pager'] = array(
+    'title' => t('Minicaledar pager'),
+    'help' => t('Allows to scroll back and forward for months.'),
+    'area' => array(
+      'handler' => 'views_handler_slac_events_calendar_mini_pager',
+    ),
+  );
 }
 
 /**
@@ -590,5 +597,15 @@ function slac_event_theme($existing, $type, $theme, $path) {
 function slac_event_ctools_plugin_directory($owner, $plugin_type) {
   if ($owner == 'ctools' && $plugin_type == 'content_types') {
     return 'plugins/' . $plugin_type;
+  }
+}
+
+/**
+ * Implements template_preprocess_calendar_datebox().
+ */
+function slac_event_preprocess_calendar_datebox(&$vars) {
+  // Add a link to the day view for days that have events.
+  if (!empty($vars['selected'])) {
+    $vars['link'] = l($vars['day'], 'events/day/list/' . $vars['date']);
   }
 }

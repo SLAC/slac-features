@@ -64,7 +64,7 @@ function slac_event_views_default_views() {
   $handler->display->display_options['footer']['area']['table'] = 'views';
   $handler->display->display_options['footer']['area']['field'] = 'area';
   $handler->display->display_options['footer']['area']['label'] = 'Legend';
-  $handler->display->display_options['footer']['area']['content'] = 'Colors indicate event series. 
+  $handler->display->display_options['footer']['area']['content'] = 'Colors indicate event series.
 ';
   $handler->display->display_options['footer']['area']['format'] = 'filtered_html';
   /* Footer: Global: View area */
@@ -1454,6 +1454,73 @@ function slac_event_views_default_views() {
     'field_data_field_slac_event_date.field_slac_event_date_value' => 'field_data_field_slac_event_date.field_slac_event_date_value',
   );
   $handler->display->display_options['pane_title'] = 'Events Calendar Day List view';
+  $handler->display->display_options['link_to_view'] = '0';
+
+  /* Display: Minicalendar */
+  $handler = $view->new_display('panel_pane', 'Minicalendar', 'minicalendar');
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'calendar-page';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'calendar_style';
+  $handler->display->display_options['style_options']['name_size'] = '1';
+  $handler->display->display_options['style_options']['mini'] = '1';
+  $handler->display->display_options['style_options']['with_weekno'] = '0';
+  $handler->display->display_options['style_options']['multiday_theme'] = '0';
+  $handler->display->display_options['style_options']['theme_style'] = '1';
+  $handler->display->display_options['style_options']['max_items'] = '1';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'calendar_entity';
+  $handler->display->display_options['row_options']['inline'] = array(
+    'field_slac_event_date' => 'field_slac_event_date',
+    'field_slac_event_date_1' => 'field_slac_event_date_1',
+  );
+  $handler->display->display_options['row_options']['colors']['legend'] = 'type';
+  $handler->display->display_options['row_options']['colors']['calendar_colors_type'] = array(
+    'page' => '#ffffff',
+    'blog' => '#ffffff',
+    'slac_sc_catalog_item' => '#ffffff',
+    'event' => '#ffffff',
+    'faq' => '#ffffff',
+    'kb_article' => '#ffffff',
+    'landing_page' => '#ffffff',
+    'slac_news' => '#ffffff',
+    'newsletter' => '#ffffff',
+    'simplenews' => '#ffffff',
+    'support_ticket' => '#ffffff',
+    'webform' => '#ffffff',
+  );
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Minicaledar pager */
+  $handler->display->display_options['header']['calendar_mini_pager']['id'] = 'calendar_mini_pager';
+  $handler->display->display_options['header']['calendar_mini_pager']['table'] = 'views';
+  $handler->display->display_options['header']['calendar_mini_pager']['field'] = 'calendar_mini_pager';
+  $handler->display->display_options['header']['calendar_mini_pager']['label'] = 'calendar_mini_pager';
+  $handler->display->display_options['defaults']['footer'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Date: Date (node) */
+  $handler->display->display_options['arguments']['date_argument']['id'] = 'date_argument';
+  $handler->display->display_options['arguments']['date_argument']['table'] = 'node';
+  $handler->display->display_options['arguments']['date_argument']['field'] = 'date_argument';
+  $handler->display->display_options['arguments']['date_argument']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['date_argument']['default_argument_type'] = 'php';
+  $handler->display->display_options['arguments']['date_argument']['default_argument_options']['code'] = 'return _slac_event_get_date_argument_events_calendar();';
+  $handler->display->display_options['arguments']['date_argument']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['date_argument']['granularity'] = 'day';
+  $handler->display->display_options['arguments']['date_argument']['date_fields'] = array(
+    'field_data_field_slac_event_date.field_slac_event_date_value' => 'field_data_field_slac_event_date.field_slac_event_date_value',
+  );
+  $handler->display->display_options['pane_title'] = 'Events Calendar Minicalendar view';
   $handler->display->display_options['link_to_view'] = '0';
   $export['events'] = $view;
 
