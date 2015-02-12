@@ -69,6 +69,13 @@ function slac_event_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'date_format_day_of_week_month_and_year';
+  $strongarm->value = 'l, F j, Y';
+  $export['date_format_day_of_week_month_and_year'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'date_format_full_text_month';
   $strongarm->value = 'F';
   $export['date_format_full_text_month'] = $strongarm;
