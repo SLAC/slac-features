@@ -83,6 +83,20 @@ function slac_event_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'date_format_hour_minute';
+  $strongarm->value = 'g:i';
+  $export['date_format_hour_minute'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'date_format_hour_minute_ampm';
+  $strongarm->value = 'g:ia';
+  $export['date_format_hour_minute_ampm'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'date_format_short_day';
   $strongarm->value = 'j';
   $export['date_format_short_day'] = $strongarm;
