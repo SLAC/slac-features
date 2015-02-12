@@ -1379,7 +1379,7 @@ form.node-blog-form .filter-help a { padding-left: 0; }
 .calendar-page .calendar-empty { display: none; }
 .calendar-page table { margin-bottom: 0 !important; width: 100%; }
 .page-basic > .content .calendar-page table td, .page-basic > .content .calendar-page table th { border: 0; padding: 0; text-align: center; background-color: transparent !important; font-size: 12px; font-size: 0.75rem; color: inherit; }
-.page-basic > .content .calendar-page table td { border-right: 1px solid #dddddd; padding: 0; width: auto; max-width: 140px; }
+.page-basic > .content .calendar-page table td { border-right: 1px solid #dddddd; padding: 0; width: 14.3%; }
 .page-basic > .content .calendar-page table thead th { padding: 6px 0; }
 .page-basic > .content .calendar-page table tbody tr .month { display: inline-block; }
 .page-basic > .content .calendar-page table tbody tr a { padding: 6px; display: inline-block; }
@@ -1388,7 +1388,7 @@ form.node-blog-form .filter-help a { padding-left: 0; }
 .calendar-page table .single-day { border-bottom: 1px solid #dddddd; }
 .calendar-page .calendar-calendar { border: 2px solid #dddddd; }
 .calendar-page .calendar-calendar thead { background: #ebebdf; }
-.calendar-page .calendar-calendar .contents { background: #ebebdf; margin: 0 8px; padding: 8px; }
+.calendar-page .calendar-calendar .contents { background: #ebebdf; margin: 0 8px; padding: 8px; max-width: 135px; }
 .calendar-page .calendar-calendar .contents .views-field-field-slac-event-date, .calendar-page .calendar-calendar .contents .views-field-field-slac-event-date-1 { font-size: 11px; font-size: 0.6875rem; font-weight: bold; }
 .calendar-page .calendar-calendar .contents .views-field-title { color: #a34c59; text-align: left; font-size: 10px; font-size: 0.625rem; }
 
