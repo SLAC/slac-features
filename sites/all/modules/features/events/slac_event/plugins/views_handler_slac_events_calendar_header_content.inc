@@ -11,6 +11,12 @@ class views_handler_slac_events_calendar_header_content extends views_handler_ar
     $current_display = $this->view->current_display;
     $current_display = str_replace('_list', '', $current_display);
     $current_time = _slac_event_get_current_date($current_display);
+
+    $view_mode = arg(2);
+    if (empty($view_mode)) {
+      $view_mode = 'grid';
+    }
+
     // Default to one month.
     $previous_time_string = '-1 month';
     $next_time_string = '+1 month';

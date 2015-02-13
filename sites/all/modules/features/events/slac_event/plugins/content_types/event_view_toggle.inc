@@ -61,7 +61,7 @@ function slac_event_view_toggle_render($context) {
   if ($view_mode == 'grid') {
     $switch = l(t('List View'), SLAC_EVENT_EVENTS_PAGE_URI . '/' . $current_display . '/list');
   }
-  elseif ($view_mod = 'list') {
+  elseif ($view_mode = 'list') {
     $switch = l(t('Grid View'), SLAC_EVENT_EVENTS_PAGE_URI . '/' . $current_display . '/grid');
   }
 
@@ -76,4 +76,6 @@ function slac_event_view_toggle_render($context) {
     'switch' => $switch,
     'display_modes' => theme('item_list', array('items' => $display_items)),
   ));
+
+  return $output;
 }
