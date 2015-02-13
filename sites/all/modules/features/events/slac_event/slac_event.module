@@ -583,6 +583,13 @@ function slac_event_theme($existing, $type, $theme, $path) {
         'variables' => array(
           'pager' => NULL,
           'date_display' => NULL,
+        ),
+      ),
+      'slac_event_view_toggle_content' => array(
+        'template' => 'event-view-toggle',
+        'path' => $path . '/theme',
+        'type' => 'theme',
+        'variables' => array(
           'switch' => NULL,
           'display_modes' => NULL,
         ),
