@@ -829,6 +829,160 @@ events/month*',
     $display->panels['right'][0] = 'new-9';
     $pane = new stdClass();
     $pane->pid = 'new-10';
+    $pane->panel = 'right';
+    $pane->type = 'block';
+    $pane->subtype = 'views--exp-events-month';
+    $pane->shown = TRUE;
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'path_visibility',
+          'settings' => array(
+            'visibility_setting' => '1',
+            'paths' => 'events
+events/month*',
+          ),
+          'context' => 'empty',
+          'not' => FALSE,
+        ),
+      ),
+    );
+    $pane->configuration = array(
+      'inherit_path' => 1,
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => array(
+        'pane_title' => 'Calendar Filters (month grid)',
+        'pane_collapsed' => 0,
+      ),
+      'style' => 'collapsible',
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $display->content['new-10'] = $pane;
+    $display->panels['right'][1] = 'new-10';
+    $pane = new stdClass();
+    $pane->pid = 'new-11';
+    $pane->panel = 'right';
+    $pane->type = 'block';
+    $pane->subtype = 'views--exp-events-month_list';
+    $pane->shown = TRUE;
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'path_visibility',
+          'settings' => array(
+            'visibility_setting' => '1',
+            'paths' => 'events
+events/month*',
+          ),
+          'context' => 'empty',
+          'not' => FALSE,
+        ),
+      ),
+    );
+    $pane->configuration = array(
+      'inherit_path' => 1,
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => array(
+        'pane_title' => 'Calendar Filters (month list)',
+        'pane_collapsed' => 0,
+      ),
+      'style' => 'collapsible',
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $display->content['new-11'] = $pane;
+    $display->panels['right'][2] = 'new-11';
+    $pane = new stdClass();
+    $pane->pid = 'new-12';
+    $pane->panel = 'right';
+    $pane->type = 'block';
+    $pane->subtype = 'views--exp-events-week';
+    $pane->shown = TRUE;
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'path_visibility',
+          'settings' => array(
+            'visibility_setting' => '1',
+            'paths' => 'events/week*',
+          ),
+          'context' => 'empty',
+          'not' => FALSE,
+        ),
+      ),
+    );
+    $pane->configuration = array(
+      'inherit_path' => 1,
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => array(
+        'pane_title' => 'Calendar Filters (week grid)',
+        'pane_collapsed' => 0,
+      ),
+      'style' => 'collapsible',
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 3;
+    $pane->locks = array();
+    $display->content['new-12'] = $pane;
+    $display->panels['right'][3] = 'new-12';
+    $pane = new stdClass();
+    $pane->pid = 'new-13';
+    $pane->panel = 'right';
+    $pane->type = 'block';
+    $pane->subtype = 'views--exp-events-week_list';
+    $pane->shown = TRUE;
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'path_visibility',
+          'settings' => array(
+            'visibility_setting' => '1',
+            'paths' => 'events/week*',
+          ),
+          'context' => 'empty',
+          'not' => FALSE,
+        ),
+      ),
+    );
+    $pane->configuration = array(
+      'inherit_path' => 1,
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => array(
+        'pane_title' => 'Calendar Filters (week list)',
+        'pane_collapsed' => 0,
+      ),
+      'style' => 'collapsible',
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 4;
+    $pane->locks = array();
+    $display->content['new-13'] = $pane;
+    $display->panels['right'][4] = 'new-13';
+    $pane = new stdClass();
+    $pane->pid = 'new-14';
     $pane->panel = 'title';
     $pane->type = 'page_title';
     $pane->subtype = 'page_title';
@@ -849,10 +1003,10 @@ events/month*',
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-10'] = $pane;
-    $display->panels['title'][0] = 'new-10';
+    $display->content['new-14'] = $pane;
+    $display->panels['title'][0] = 'new-14';
     $pane = new stdClass();
-    $pane->pid = 'new-11';
+    $pane->pid = 'new-15';
     $pane->panel = 'title';
     $pane->type = 'views_panes';
     $pane->subtype = 'events-panel_pane_1';
@@ -870,8 +1024,8 @@ events/month*',
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-11'] = $pane;
-    $display->panels['title'][1] = 'new-11';
+    $display->content['new-15'] = $pane;
+    $display->panels['title'][1] = 'new-15';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
