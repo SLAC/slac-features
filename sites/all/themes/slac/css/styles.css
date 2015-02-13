@@ -1338,6 +1338,17 @@ form.node-blog-form .filter-help a { padding-left: 0; }
 .icon-box span { font-size: 30px; font-size: 1.875rem; }
 .icon-box p { text-align: left; margin-top: 10px; }
 
+.page-events .page-basic > .content > .inside { padding-left: 0; padding-right: 0; }
+
+.l-calendar-container .l-calendar-center { width: 83%; float: left; }
+.l-calendar-container .l-calendar-right-sidebar { width: 17%; float: left; padding: 0 0 0 33px; }
+.l-calendar-container .l-calendar-lower-section { clear: both; display: none; }
+.l-calendar-container .l-calendar-lower-section .l-calendar-list-left, .l-calendar-container .l-calendar-lower-section .l-calendar-list-right { float: left; width: 56%; }
+.l-calendar-container .l-calendar-lower-section .l-calendar-list-left { width: 44%; }
+
+.page-events-month-list .l-calendar-upper { display: none; }
+.page-events-month-list .l-calendar-lower-section { display: block; }
+
 .calendar-page { color: #474747; }
 .calendar-page a { color: #474747; }
 .calendar-page .top_title_exist { margin-top: 0; }
@@ -1372,7 +1383,6 @@ form.node-blog-form .filter-help a { padding-left: 0; }
 .calendar-page .events-calendar-header-displayview li a.active, .calendar-page .events-calendar-header-displayview li a:hover { background: #626262; }
 .calendar-page .events-calendar-header-displayview li:first-child a { border-radius: 3px 0 0 3px; border-right: 0; }
 .calendar-page .events-calendar-header-displayview li:last-child a { border-radius: 0 3px 3px 0; border-left: 0; }
-.calendar-page .view-content { padding: 5px; }
 .calendar-page .view-footer li { padding: 15px; }
 .calendar-page .view-footer li { background-color: #f3f1eb; }
 .calendar-page .view-content, .calendar-page .view-footer li.first { margin-bottom: 5px; }

@@ -28,7 +28,7 @@ function slac_event_series_pane_edit_form($form, &$form_state) {
 function slac_event_series_pane_render($subtype, $conf, $args, $context) {
   $block = new stdClass();
   $block->title = t('Seminar Series Block');
-  $block->content = t('View Entire Seminar Series In List View.');
+  $block->content = t('Event Series');
   $block->content .= slac_event_series_render($context);
   return $block;
 }

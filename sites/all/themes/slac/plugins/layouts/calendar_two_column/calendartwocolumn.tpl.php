@@ -15,39 +15,44 @@
  */
 ?>
 <div class="l-calendar l-calendar-container">
-  <?php if ($content['title']): ?>
-    <div class="l-calendar-title">
-      <div class="inside">
-          <div class="l-calendar-title-wrapper">
-            <?php print $content['title'];?>
-          </div> 
+  <div class="l-calendar l-calendar-upper">
+    <?php if ($content['title']): ?>
+      <div class="l-calendar-title">
+        <div class="inside">
+            <div class="l-calendar-title-wrapper">
+              <?php print $content['title'];?>
+            </div> 
+        </div>
       </div>
+       <?php endif ?>
+    <?php if ($content['left']): ?>
+      <div class="l-calendar-left-sidebar ">
+        <div class="inside"><?php print $content['left']; ?></div>
+      </div>
+    <?php endif ?>
+    <div class="l-calendar-center ">
+       <?php if ($content['center']): ?>
+          <div class="inside"><?php print $content['center']; ?>
+          </div>
+        <?php endif ?>
     </div>
-     <?php endif ?>
-  <?php if ($content['left']): ?>
-    <div class="l-calendar-left-sidebar ">
-      <div class="inside"><?php print $content['left']; ?></div>
+  <?php if ($content['right']): ?>
+    <div class="l-calendar-right-sidebar">
+      <div class="inside"><?php print $content['right']; ?></div>
     </div>
   <?php endif ?>
-  <div class="l-calendar-center ">
-     <?php if ($content['center']): ?>
-        <div class="inside"><?php print $content['center']; ?>
-        </div>
-      <?php endif ?>
   </div>
-<?php if ($content['right']): ?>
-  <div class="l-calendar-right-sidebar">
-    <div class="inside"><?php print $content['right']; ?></div>
-  </div>
-<?php endif ?>
-<?php if ($content['list-left']): ?>
   <div class="l-calendar-lower-section">
+    <?php if ($content['list-left']): ?>
     <div class="l-calendar-list-left">
       <div class="inside"><?php print $content['list-left']; ?></div>
     </div>
+    <?php endif ?>
+    <?php if ($content['list-right']): ?>
     <div class="l-calendar-list-right">
       <div class="inside"><?php print $content['list-right']; ?></div>
     </div>
+    <?php endif ?>
   </div>
-<?php endif ?>
+
 </div>

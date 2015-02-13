@@ -541,7 +541,7 @@ function slac_event_default_page_manager_pages() {
     'relationships' => array(),
   );
   $display = new panels_display();
-  $display->layout = 'two_col_events';
+  $display->layout = 'calendar_two_column';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -557,6 +557,10 @@ function slac_event_default_page_manager_pages() {
       'left_author' => NULL,
       'social_media_1' => NULL,
       'social_media_2' => NULL,
+      'title' => NULL,
+      'center' => NULL,
+      'list-left' => NULL,
+      'list-right' => NULL,
     ),
   );
   $display->cache = array();
@@ -565,61 +569,7 @@ function slac_event_default_page_manager_pages() {
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-1';
-    $pane->panel = 'left';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'events-minicalendar';
-    $pane->shown = TRUE;
-    $pane->access = array(
-      'plugins' => array(
-        0 => array(
-          'name' => 'path_visibility',
-          'settings' => array(
-            'visibility_setting' => '1',
-            'paths' => 'events/*/list*',
-          ),
-          'context' => 'empty',
-          'not' => FALSE,
-        ),
-      ),
-    );
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-1'] = $pane;
-    $display->panels['left'][0] = 'new-1';
-    $pane = new stdClass();
-    $pane->pid = 'new-2';
-    $pane->panel = 'left_title';
-    $pane->type = 'page_title';
-    $pane->subtype = 'page_title';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'markup' => 'h2',
-      'class' => 'pane-title',
-      'id' => '',
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['left_title'][0] = 'new-2';
-    $pane = new stdClass();
-    $pane->pid = 'new-3';
-    $pane->panel = 'right';
+    $pane->panel = 'center';
     $pane->type = 'views_feed_pane';
     $pane->subtype = 'events:feed_1';
     $pane->shown = FALSE;
@@ -633,11 +583,11 @@ function slac_event_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['right'][0] = 'new-3';
+    $display->content['new-1'] = $pane;
+    $display->panels['center'][0] = 'new-1';
     $pane = new stdClass();
-    $pane->pid = 'new-4';
-    $pane->panel = 'right';
+    $pane->pid = 'new-2';
+    $pane->panel = 'center';
     $pane->type = 'views_panes';
     $pane->subtype = 'events-month';
     $pane->shown = TRUE;
@@ -664,11 +614,11 @@ events/month*',
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-4'] = $pane;
-    $display->panels['right'][1] = 'new-4';
+    $display->content['new-2'] = $pane;
+    $display->panels['center'][1] = 'new-2';
     $pane = new stdClass();
-    $pane->pid = 'new-5';
-    $pane->panel = 'right';
+    $pane->pid = 'new-3';
+    $pane->panel = 'center';
     $pane->type = 'views_panes';
     $pane->subtype = 'events-week';
     $pane->shown = TRUE;
@@ -694,11 +644,11 @@ events/month*',
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-5'] = $pane;
-    $display->panels['right'][2] = 'new-5';
+    $display->content['new-3'] = $pane;
+    $display->panels['center'][2] = 'new-3';
     $pane = new stdClass();
-    $pane->pid = 'new-6';
-    $pane->panel = 'right';
+    $pane->pid = 'new-4';
+    $pane->panel = 'center';
     $pane->type = 'views_panes';
     $pane->subtype = 'events-day';
     $pane->shown = TRUE;
@@ -733,11 +683,41 @@ events/month*',
     $pane->extras = array();
     $pane->position = 3;
     $pane->locks = array();
-    $display->content['new-6'] = $pane;
-    $display->panels['right'][3] = 'new-6';
+    $display->content['new-4'] = $pane;
+    $display->panels['center'][3] = 'new-4';
     $pane = new stdClass();
-    $pane->pid = 'new-7';
-    $pane->panel = 'right';
+    $pane->pid = 'new-5';
+    $pane->panel = 'list-left';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'events-minicalendar';
+    $pane->shown = TRUE;
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'path_visibility',
+          'settings' => array(
+            'visibility_setting' => '1',
+            'paths' => 'events/*/list*',
+          ),
+          'context' => 'empty',
+          'not' => FALSE,
+        ),
+      ),
+    );
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-5'] = $pane;
+    $display->panels['list-left'][0] = 'new-5';
+    $pane = new stdClass();
+    $pane->pid = 'new-6';
+    $pane->panel = 'list-right';
     $pane->type = 'views_panes';
     $pane->subtype = 'events-month_list';
     $pane->shown = TRUE;
@@ -762,13 +742,13 @@ events/month*',
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 4;
+    $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-7'] = $pane;
-    $display->panels['right'][4] = 'new-7';
+    $display->content['new-6'] = $pane;
+    $display->panels['list-right'][0] = 'new-6';
     $pane = new stdClass();
-    $pane->pid = 'new-8';
-    $pane->panel = 'right';
+    $pane->pid = 'new-7';
+    $pane->panel = 'list-right';
     $pane->type = 'views_panes';
     $pane->subtype = 'events-week_list';
     $pane->shown = TRUE;
@@ -792,13 +772,13 @@ events/month*',
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 5;
+    $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-8'] = $pane;
-    $display->panels['right'][5] = 'new-8';
+    $display->content['new-7'] = $pane;
+    $display->panels['list-right'][1] = 'new-7';
     $pane = new stdClass();
-    $pane->pid = 'new-9';
-    $pane->panel = 'right';
+    $pane->pid = 'new-8';
+    $pane->panel = 'list-right';
     $pane->type = 'views_panes';
     $pane->subtype = 'events-day_list';
     $pane->shown = TRUE;
@@ -822,13 +802,58 @@ events/month*',
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 6;
+    $pane->position = 2;
+    $pane->locks = array();
+    $display->content['new-8'] = $pane;
+    $display->panels['list-right'][2] = 'new-8';
+    $pane = new stdClass();
+    $pane->pid = 'new-9';
+    $pane->panel = 'right';
+    $pane->type = 'event_series';
+    $pane->subtype = 'event_series';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
     $pane->locks = array();
     $display->content['new-9'] = $pane;
-    $display->panels['right'][6] = 'new-9';
+    $display->panels['right'][0] = 'new-9';
     $pane = new stdClass();
     $pane->pid = 'new-10';
-    $pane->panel = 'right_sidebar';
+    $pane->panel = 'title';
+    $pane->type = 'page_title';
+    $pane->subtype = 'page_title';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'markup' => 'h2',
+      'class' => 'pane-title',
+      'id' => '',
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-10'] = $pane;
+    $display->panels['title'][0] = 'new-10';
+    $pane = new stdClass();
+    $pane->pid = 'new-11';
+    $pane->panel = 'title';
     $pane->type = 'views_panes';
     $pane->subtype = 'events-panel_pane_1';
     $pane->shown = FALSE;
@@ -843,31 +868,10 @@ events/month*',
       'css_class' => 'event-listing-panel',
     );
     $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-10'] = $pane;
-    $display->panels['right_sidebar'][0] = 'new-10';
-    $pane = new stdClass();
-    $pane->pid = 'new-11';
-    $pane->panel = 'right_sidebar';
-    $pane->type = 'event_series';
-    $pane->subtype = 'event_series';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
     $display->content['new-11'] = $pane;
-    $display->panels['right_sidebar'][1] = 'new-11';
+    $display->panels['title'][1] = 'new-11';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
