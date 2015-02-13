@@ -734,11 +734,47 @@ function slac_event_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
-  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['type'] = 'better_exposed_filters';
+  $handler->display->display_options['exposed_form']['options']['autosubmit'] = TRUE;
+  $handler->display->display_options['exposed_form']['options']['bef'] = array(
+    'general' => array(
+      'allow_secondary' => 0,
+      'secondary_label' => 'Advanced options',
+    ),
+    'field_slac_event_category_tid' => array(
+      'bef_format' => 'bef',
+      'more_options' => array(
+        'bef_select_all_none' => 1,
+        'bef_collapsible' => 0,
+        'is_secondary' => 0,
+        'bef_filter_description' => '',
+        'tokens' => array(
+          'available' => array(
+            0 => 'global_types',
+          ),
+        ),
+      ),
+    ),
+    'field_event_tags_tid' => array(
+      'bef_format' => 'bef',
+      'more_options' => array(
+        'bef_select_all_none' => 1,
+        'bef_collapsible' => 0,
+        'is_secondary' => 0,
+        'bef_filter_description' => '',
+        'tokens' => array(
+          'available' => array(
+            0 => 'global_types',
+          ),
+        ),
+      ),
+    ),
+  );
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
@@ -824,6 +860,46 @@ function slac_event_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'event' => 'event',
   );
+  /* Filter criterion: Content: Event Series (field_slac_event_category) */
+  $handler->display->display_options['filters']['field_slac_event_category_tid']['id'] = 'field_slac_event_category_tid';
+  $handler->display->display_options['filters']['field_slac_event_category_tid']['table'] = 'field_data_field_slac_event_category';
+  $handler->display->display_options['filters']['field_slac_event_category_tid']['field'] = 'field_slac_event_category_tid';
+  $handler->display->display_options['filters']['field_slac_event_category_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_slac_event_category_tid']['expose']['operator_id'] = 'field_slac_event_category_tid_op';
+  $handler->display->display_options['filters']['field_slac_event_category_tid']['expose']['label'] = 'Filter by Seminar Series';
+  $handler->display->display_options['filters']['field_slac_event_category_tid']['expose']['operator'] = 'field_slac_event_category_tid_op';
+  $handler->display->display_options['filters']['field_slac_event_category_tid']['expose']['identifier'] = 'field_slac_event_category_tid';
+  $handler->display->display_options['filters']['field_slac_event_category_tid']['expose']['multiple'] = TRUE;
+  $handler->display->display_options['filters']['field_slac_event_category_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    6 => 0,
+    5 => 0,
+    3 => 0,
+    4 => 0,
+  );
+  $handler->display->display_options['filters']['field_slac_event_category_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_slac_event_category_tid']['vocabulary'] = 'event_categories';
+  /* Filter criterion: Content: Event tags (field_event_tags) */
+  $handler->display->display_options['filters']['field_event_tags_tid']['id'] = 'field_event_tags_tid';
+  $handler->display->display_options['filters']['field_event_tags_tid']['table'] = 'field_data_field_event_tags';
+  $handler->display->display_options['filters']['field_event_tags_tid']['field'] = 'field_event_tags_tid';
+  $handler->display->display_options['filters']['field_event_tags_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_event_tags_tid']['expose']['operator_id'] = 'field_event_tags_tid_op';
+  $handler->display->display_options['filters']['field_event_tags_tid']['expose']['label'] = 'Filter by Tags';
+  $handler->display->display_options['filters']['field_event_tags_tid']['expose']['operator'] = 'field_event_tags_tid_op';
+  $handler->display->display_options['filters']['field_event_tags_tid']['expose']['identifier'] = 'field_event_tags_tid';
+  $handler->display->display_options['filters']['field_event_tags_tid']['expose']['multiple'] = TRUE;
+  $handler->display->display_options['filters']['field_event_tags_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    6 => 0,
+    5 => 0,
+    3 => 0,
+    4 => 0,
+  );
+  $handler->display->display_options['filters']['field_event_tags_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_event_tags_tid']['vocabulary'] = 'event_tags';
 
   /* Display: Main content */
   $handler = $view->new_display('panel_pane', 'Main content', 'panel_pane_1');
@@ -886,6 +962,7 @@ function slac_event_views_default_views() {
     'webform' => '#ffffff',
   );
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['exposed_block'] = TRUE;
   $handler->display->display_options['defaults']['header'] = FALSE;
   /* Header: Header Content */
   $handler->display->display_options['header']['calendar_header_content']['id'] = 'calendar_header_content';
@@ -1010,6 +1087,7 @@ function slac_event_views_default_views() {
     'webform' => '#ffffff',
   );
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['exposed_block'] = TRUE;
   $handler->display->display_options['defaults']['header'] = FALSE;
   /* Header: Header Content */
   $handler->display->display_options['header']['calendar_header_content']['id'] = 'calendar_header_content';
@@ -1117,6 +1195,7 @@ function slac_event_views_default_views() {
     'field_slac_event_date_1' => 'field_slac_event_date_1',
   );
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['exposed_block'] = TRUE;
   $handler->display->display_options['defaults']['header'] = FALSE;
   /* Header: Header Content */
   $handler->display->display_options['header']['calendar_header_content']['id'] = 'calendar_header_content';
@@ -1275,6 +1354,7 @@ function slac_event_views_default_views() {
     'field_slac_event_date_1' => 'field_slac_event_date_1',
   );
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['exposed_block'] = TRUE;
   $handler->display->display_options['defaults']['header'] = FALSE;
   /* Header: Header Content */
   $handler->display->display_options['header']['calendar_header_content']['id'] = 'calendar_header_content';
