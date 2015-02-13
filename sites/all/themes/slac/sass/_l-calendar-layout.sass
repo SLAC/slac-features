@@ -6,6 +6,7 @@
         padding-right: 0
 
 .l-calendar-container
+  +clearfix
   .l-calendar-center
     width: 83%
     +float(left)
@@ -15,16 +16,37 @@
     padding: 0 0 0 33px
   .l-calendar-lower-section
     clear: both
-    display: none
+    display: block
+    +at-breakpoint($small-desktop)
+      display: none
     .l-calendar-list-left,
     .l-calendar-list-right
-      +float(left)
-      width: 56%
+      width: 100%
+      margin-left: 10px
+      margin-right: 10px
+      +at-breakpoint($tablet)
+        +float(left)
+        width: 60%
+        margin-left: 13px
+        margin-right: 13px
     .l-calendar-list-left
-      width: 44%
+      width: 100%
+      +at-breakpoint($tablet)
+        width: 33%
 
 .page-events-month-list
   .l-calendar-upper
     display: none
   .l-calendar-lower-section
     display: block
+
+//control over what displays
+.l-calendar-upper
+  +clearfix
+  display: none
+  +at-breakpoint($small-desktop)
+    display: block
+.l-calendar-lower-section
+  display: block
+  +at-breakpoint($small-desktop)
+    display: none

@@ -123,6 +123,12 @@ $base-font-size: 16px
 =bold
   font-weight: bold
 
+=caps
+  text-transform: uppercase
+
+=firstletter
+  text-transform: capitalize
+
 =link($link-color: $h2-color, $link-hover: $red, $underline: no) 
   text-decoration: none
   color: $link-color
@@ -141,3 +147,8 @@ $base-font-size: 16px
       text-decoration: underline
       color: $link-hover
 
+/* iPads (landscape) ----------- */
+
+=tablet-landscape
+  @media only screen and(min-device-width : 768px) and(max-device-width : 1024px) and(orientation : landscape)
+    @content
