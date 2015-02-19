@@ -1,3 +1,5 @@
+//styles that were taken out of the layout file, and pasted here for simplicity
+
 .calendar-page
   color: $grey-47
   a
@@ -238,11 +240,15 @@
       +float(left)
       .view-content
         +list-view-style
+        .views-row .list-title
+          a
+            .page-basic-io &
+              +link($dark-blue, $dark-blue)
     .views-widget-filter-field_slac_event_category_tid,
     .views-widget-filter-field_event_tags_tid
       display: none
 
-//hides a filer that is present on the view
+//hides a filter that is present on the view
 .pane-events-day
   .view-filters
     display: none
@@ -268,6 +274,7 @@
     a
       +bold
       +link($red)
+      +internal-link-color
   .events-calendar-toggle-switch,
   .events-calendar-toggle-displayview
     +float-items(right)
@@ -306,10 +313,13 @@
       +bold
       color: $h2-color
       border-bottom: 3.5px solid $menu_bg
+      .page-basic-io &
+        border-bottom: 3.5px solid $calendar-internal-blue-line
     a
       +link($red)
       +firstletter
       +fontsize-rem(11px)
+      +internal-link-color
 
 .l-calendar-lower-section
   position: relative
@@ -408,6 +418,7 @@
         width: 50%
       .view-content
         +list-view-style
+        +internal-link-color
 
 ///theming of the filters copied from the module folder and adjusted
 .page-events
@@ -418,6 +429,8 @@
       +fontsize-rem(12px)
       color: $red
       padding: 5px
+      .page-basic-io &
+        color: $dark-blue
     form label
       +fontsize-rem(12px)
       +normal
