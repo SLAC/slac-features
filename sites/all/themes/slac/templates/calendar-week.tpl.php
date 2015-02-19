@@ -92,7 +92,11 @@ $start_timestamp = strtotime($view->args[0]);
     <?php endfor; ?>
     <tr class="not-all-day">
       <?php foreach ($columns as $index => $column): ?>
-        <td class="calendar-agenda-items single-day" headers="<?php print $header_ids[$index] ?>">
+        <?php $weekend = ''; ?>
+        <?php if (strtolower($header_ids[$index]) == 'sunday' || strtolower($header_ids[$index]) == 'saturday'):?>
+          <?php $weekend = ' weekend'; ?>
+        <?php endif; ?>
+        <td class="calendar-agenda-items single-day<?php print $weekend; ?>" headers="<?php print $header_ids[$index] ?>">
           <?php foreach ($items as $time): ?>
             <?php if(!empty($time['values'][$column])) :?>
               <div class="calendar">
