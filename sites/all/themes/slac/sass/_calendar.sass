@@ -180,6 +180,8 @@
         color: $calendar-event-red
         text-align: left
         +fontsize-rem(10px)
+        .page-basic-io &
+          color: $dark-blue
     //day view adjustments for when the day is selected, not month or week
     .day-view
       .full
@@ -247,7 +249,12 @@
     .views-widget-filter-field_slac_event_category_tid,
     .views-widget-filter-field_event_tags_tid
       display: none
-
+  .page-basic-io
+    .l-calendar-upper
+      .pane-events-month-list,
+      .pane-events-week-list
+        .view-content
+          +list-view-style($dark-blue)
 //hides a filter that is present on the view
 .pane-events-day
   .view-filters
@@ -353,6 +360,8 @@
           margin: 5px 0
           width: 100%
           display: block
+          .page-basic-io &
+            +link(white, $dark-blue)
           &::after
             background-image: url(../images/events-arrow.png)
             background-repeat: no-repeat
@@ -381,6 +390,7 @@
             margin: 10px 0
             width: 100%
             display: block
+            +internal-link-color
             &::after
               background-image: url(../images/events-arrow.png)
               background-repeat: no-repeat
@@ -418,7 +428,13 @@
         width: 50%
       .view-content
         +list-view-style
-        +internal-link-color
+.page-basic-io
+  .l-calendar-lower-section
+    .l-calendar-list-right
+      .view-display-id-month_list.calendar-page,
+      .view-display-id-week_list.calendar-page
+        .view-content
+          +list-view-style($dark-blue)
 
 ///theming of the filters copied from the module folder and adjusted
 .page-events
@@ -429,8 +445,6 @@
       +fontsize-rem(12px)
       color: $red
       padding: 5px
-      .page-basic-io &
-        color: $dark-blue
     form label
       +fontsize-rem(12px)
       +normal
@@ -447,6 +461,9 @@
       input[type="checkbox"]
         float: right
         margin: 5px
+  .page-basic-io 
+    .ctools-collapsible-container h2
+      color: $dark-blue
   .ctools-collapsible-container .ctools-toggle
     float: right
     width: 21px
@@ -471,3 +488,4 @@
 
   .ctools-collapsible-container .ctools-toggle-collapsed
     background-image: url(../images/collapsible-expanded.png)
+

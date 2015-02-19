@@ -203,7 +203,7 @@ $base-font-size: 16px
         text-align: left
         +fontsize-rem(10px)
 
-=list-view-style
+=list-view-style($color:$red)
   border-top: 2.5px solid $grey-be
   padding: 0
   .views-row
@@ -213,7 +213,7 @@ $base-font-size: 16px
     position: relative
     .list-title
       a
-        +link($red)
+        +link($color)
         +fontsize-rem(16px)
         +bold
     .list-fulldate,
