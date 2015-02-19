@@ -49,7 +49,11 @@ $start_timestamp = strtotime($view->args[0]);
     <tr>
       <?php foreach ($columns as $index => $column): ?>
         <?php $dow = $index - 1; ?>
-        <td class="calendar-day-of-month">
+        <?php $today = ''; ?>
+        <?php if (date('U', strtotime("TODAY")) == date('U', strtotime('+' . $dow . ' DAYS', $start_timestamp))): ?>
+          <?php $today = ' today'; ?>
+        <?php endif; ?>
+        <td class="calendar-day-of-month<?php print $today; ?>">
           <div class="week-days"><?php print date('j', strtotime('+' . $dow . ' DAYS', $start_timestamp)); ?></div>
         </td>
       <?php endforeach; ?>
@@ -92,7 +96,16 @@ $start_timestamp = strtotime($view->args[0]);
     <?php endfor; ?>
     <tr class="not-all-day">
       <?php foreach ($columns as $index => $column): ?>
-        <td class="calendar-agenda-items single-day" headers="<?php print $header_ids[$index] ?>">
+        <?php $weekend = ''; ?>
+        <?php $today = ''; ?>
+        <?php if (strtolower($header_ids[$index]) == 'sunday' || strtolower($header_ids[$index]) == 'saturday'):?>
+          <?php $weekend = ' weekend'; ?>
+        <?php endif; ?>
+        <?php $dow = $index - 1; ?>
+        <?php if (date('U', strtotime("TODAY")) == date('U', strtotime('+' . $dow . ' DAYS', $start_timestamp))): ?>
+          <?php $today = ' today'; ?>
+        <?php endif; ?>
+        <td class="calendar-agenda-items single-day<?php print $weekend; ?><?php print $today; ?>" headers="<?php print $header_ids[$index] ?>">
           <?php foreach ($items as $time): ?>
             <?php if(!empty($time['values'][$column])) :?>
               <div class="calendar">
