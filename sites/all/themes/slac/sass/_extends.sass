@@ -155,3 +155,91 @@ $base-font-size: 16px
 =tablet-landscape
   @media only screen and(min-device-width : 768px) and(max-device-width : 1024px) and(orientation : landscape)
     @content
+
+/* some reusable code for the events page ----------- */
+//mini-calendar-styling
+=mini-calendar
+  .calendar-calendar
+    margin-top: 16px
+    border: 0px !important
+    background: $menu_bg
+    padding: 10px
+    .today
+      border-left: 0 !important
+      border-right: 0 !important
+      border-bottom: 0 !important
+      background: transparent !important
+      .mini-day-on
+        a
+          background-color: $red
+          border-radius: 15px
+          +link(white)
+          +bold
+    thead,
+    tbody
+      background: $menu_bg
+      td
+        border-right: 0px !important
+    thead
+      border-top: 3px solid white 
+      border-bottom: 3px solid white
+      th
+        +fontsize-rem(10px)
+    .contents
+      background: $menu_bg
+      margin: 0 8px
+      padding: 8px
+      max-width: 135px
+      .views-field-field-slac-event-date,
+      .views-field-field-slac-event-date-1
+        +fontsize-rem(11px)
+        +bold
+      .views-field-title
+        color: $calendar-event-red
+        text-align: left
+        +fontsize-rem(10px)
+
+=list-view-style
+  border-top: 2.5px solid $grey-be
+  padding: 0
+  .views-row
+    background: $grey-e
+    margin: 25px 0
+    padding: 25px
+    position: relative
+    .list-title
+      a
+        +link($red)
+        +fontsize-rem(16px)
+        +bold
+    .list-fulldate,
+    .list-starttime,
+    .list-endtime,
+    .list-location
+      +fontsize-rem(12px)
+      +bold
+    .list-starttime,
+    .list-endtime
+      +inline-block
+    .list-teaser
+      +fontsize-rem(13px)
+      margin-top: 25px
+    .views-field-field-event-image
+      margin-right: 25px
+      +float-items(left)
+      height: 100%
+      img
+        width: 92px
+        height: auto
+        border: 2px solid white
+    .views-field-nothing
+      overflow: hidden
+    .list-view-ics
+      position: absolute
+      top: 5px
+      right: 5px
+      background-image: url(../images/i-cal-download.png)
+      padding: 12px
+      background-repeat: no-repeat
+      font-size: 0
+      background-size: cover

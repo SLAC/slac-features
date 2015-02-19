@@ -8,6 +8,7 @@
     margin-top: 0
   .view-header
     +clearfix
+    margin-bottom: 16px
     ul
       position: relative
       text-transform: uppercase
@@ -22,7 +23,7 @@
   .events-calendar-header-pager,
   .events-calendar-header-date
     +float-items(left)
-    margin-top: 40px
+    margin-top: 30px
   .events-calendar-header-pager
     width: 33%
     margin-top: 36px
@@ -58,7 +59,7 @@
             top: 2px
             +fontsize-rem(16px)
     a
-      +link($h2-color)
+      +link($h2-color, $h2-color)
       +fontsize-rem(9px)
 
 
@@ -103,6 +104,11 @@
           border-right: 1px solid $grey-d
           padding: 0
           width: 14.3%
+        .today
+          background: $calendar-today
+          border-left: 3px solid $grey-d
+          border-right: 3px solid $grey-d
+          border-bottom: 3px solid $grey-d
         .page-events-day &
           td
             width: 100%
@@ -133,6 +139,12 @@
             +fontsize-rem(13px)
             +bold
             padding: 3px
+          .today
+            background: $calendar-today
+            border-left: 3px solid $grey-d
+            border-right: 3px solid $grey-d
+            border-top: 3px solid $grey-d
+            border-bottom: 0px
 
     .single-day
       border-bottom: 1px solid $grey-d
@@ -207,6 +219,29 @@
         width: 100%
         +fontsize-rem(14px)
 
+///month and week list page adjustments
+.page-events-month-list,
+.page-events-week-list
+  .l-calendar-upper
+    .pane-events-minicalendar
+      width: 25%
+      float: left
+      +mini-calendar
+      margin-top: 68px
+    .calendar-calendar
+      a
+        padding: 3px !important
+    .pane-events-month-list,
+    .pane-events-week-list
+      width: 69%
+      margin-left: 37px
+      +float(left)
+      .view-content
+        +list-view-style
+    .views-widget-filter-field_slac_event_category_tid,
+    .views-widget-filter-field_event_tags_tid
+      display: none
+
 //hides a filer that is present on the view
 .pane-events-day
   .view-filters
@@ -280,6 +315,13 @@
   position: relative
   .l-calendar-list-left
     margin-top: 0px
+    .ctools-collapsible-container
+      border: 3px solid  $menu_bg
+      .views-exposed-widget
+        width: 100%
+      .bef-checkboxes
+        input[type="checkbox"]
+          margin: 0px
   .events-calendar-toggle-switch
     display: none
   .events-calendar-toggle
@@ -341,56 +383,16 @@
 
   .pane-event-view-toggle
     position: relative
-    top: -10px
+    top: -6px
     right: 33%
     z-index: 3
+
   .pane-events-minicalendar
     .view-filters
       display: none
-  .calendar-calendar
-    margin-top: 16px
-    border: 0px 
-    background: $menu_bg
-    padding: 10px
-    .today
-      .mini-day-on
-        a
-          background-color: $red
-          border-radius: 15px
-          +link(white)
-          +bold
-    thead,
-    tbody
-      background: $menu_bg
-      td
-        border-right: 0px !important
-    thead
-      border-top: 3px solid white 
-      border-bottom: 3px solid white
-      th
-        +fontsize-rem(10px)
-    .contents
-      background: $menu_bg
-      margin: 0 8px
-      padding: 8px
-      max-width: 135px
-      .views-field-field-slac-event-date,
-      .views-field-field-slac-event-date-1
-        +fontsize-rem(11px)
-        +bold
-      .views-field-title
-        color: $calendar-event-red
-        text-align: left
-        +fontsize-rem(10px)
+    +mini-calendar
 
   .l-calendar-list-right
-    .ctools-collapsible-container
-      border: 3px solid  $menu_bg
-      .views-exposed-widget
-        width: 100%
-      .bef-checkboxes
-        input[type="checkbox"]
-          margin: 0px
     .view-display-id-month_list.calendar-page,
     .view-display-id-week_list.calendar-page
       .events-calendar-header-pager,
@@ -405,49 +407,7 @@
         float: left
         width: 50%
       .view-content
-        border-top: 2.5px solid $grey-be
-        padding: 0
-        .views-row
-          background: $grey-e
-          margin: 25px 0
-          padding: 25px
-          position: relative
-          .list-title
-            a
-              +link($red)
-              +fontsize-rem(16px)
-              +bold
-          .list-fulldate,
-          .list-starttime,
-          .list-endtime,
-          .list-location
-            +fontsize-rem(12px)
-            +bold
-          .list-starttime,
-          .list-endtime
-            +inline-block
-          .list-teaser
-            +fontsize-rem(13px)
-            margin-top: 25px
-          .views-field-field-event-image
-            margin-right: 25px
-            +float-items(left)
-            height: 100%
-            img
-              width: 92px
-              height: auto
-              border: 2px solid white
-          .views-field-nothing
-            overflow: hidden
-          .list-view-ics
-            position: absolute
-            top: 5px
-            right: 5px
-            background-image: url(../images/i-cal-download.png)
-            padding: 12px
-            background-repeat: no-repeat
-            font-size: 0
-            background-size: cover
+        +list-view-style
 
 ///theming of the filters copied from the module folder and adjusted
 .page-events

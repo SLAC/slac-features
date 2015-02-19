@@ -25,21 +25,24 @@
       width: 100%
       padding-left: 10px
       padding-right: 10px
-      +at-breakpoint($tablet)
+      +at-breakpoint($less-than-758)
         +float(left)
         width: 60%
         margin-left: 13px
         margin-right: 13px
     .l-calendar-list-left
       width: 100%
-      +at-breakpoint($tablet)
+      +at-breakpoint($less-than-758)
         width: 33%
-
 .page-events-month-list
   .l-calendar-upper
     display: none
+    +at-breakpoint($less-than-800)
+      display: block
   .l-calendar-lower-section
     display: block
+    +at-breakpoint($less-than-800)
+      display: none
 
 //control over what displays
 .l-calendar-upper
