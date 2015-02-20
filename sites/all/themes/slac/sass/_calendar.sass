@@ -1,3 +1,5 @@
+//styles that were taken out of the layout file, and pasted here for simplicity
+
 .calendar-page
   color: $grey-47
   a
@@ -178,6 +180,8 @@
         color: $calendar-event-red
         text-align: left
         +fontsize-rem(10px)
+        .page-basic-io &
+          color: $dark-blue
     //day view adjustments for when the day is selected, not month or week
     .day-view
       .full
@@ -238,11 +242,20 @@
       +float(left)
       .view-content
         +list-view-style
+        .views-row .list-title
+          a
+            .page-basic-io &
+              +link($dark-blue, $dark-blue)
     .views-widget-filter-field_slac_event_category_tid,
     .views-widget-filter-field_event_tags_tid
       display: none
-
-//hides a filer that is present on the view
+  .page-basic-io
+    .l-calendar-upper
+      .pane-events-month-list,
+      .pane-events-week-list
+        .view-content
+          +list-view-style($dark-blue)
+//hides a filter that is present on the view
 .pane-events-day
   .view-filters
     display: none
@@ -268,6 +281,7 @@
     a
       +bold
       +link($red)
+      +internal-link-color
   .events-calendar-toggle-switch,
   .events-calendar-toggle-displayview
     +float-items(right)
@@ -306,10 +320,13 @@
       +bold
       color: $h2-color
       border-bottom: 3.5px solid $menu_bg
+      .page-basic-io &
+        border-bottom: 3.5px solid $calendar-internal-blue-line
     a
       +link($red)
       +firstletter
       +fontsize-rem(11px)
+      +internal-link-color
 
 .l-calendar-lower-section
   position: relative
@@ -343,6 +360,8 @@
           margin: 5px 0
           width: 100%
           display: block
+          .page-basic-io &
+            +link(white, $dark-blue)
           &::after
             background-image: url(../images/events-arrow.png)
             background-repeat: no-repeat
@@ -371,6 +390,7 @@
             margin: 10px 0
             width: 100%
             display: block
+            +internal-link-color
             &::after
               background-image: url(../images/events-arrow.png)
               background-repeat: no-repeat
@@ -408,6 +428,13 @@
         width: 50%
       .view-content
         +list-view-style
+.page-basic-io
+  .l-calendar-lower-section
+    .l-calendar-list-right
+      .view-display-id-month_list.calendar-page,
+      .view-display-id-week_list.calendar-page
+        .view-content
+          +list-view-style($dark-blue)
 
 ///theming of the filters copied from the module folder and adjusted
 .page-events
@@ -434,6 +461,9 @@
       input[type="checkbox"]
         float: right
         margin: 5px
+  .page-basic-io 
+    .ctools-collapsible-container h2
+      color: $dark-blue
   .ctools-collapsible-container .ctools-toggle
     float: right
     width: 21px
@@ -458,3 +488,4 @@
 
   .ctools-collapsible-container .ctools-toggle-collapsed
     background-image: url(../images/collapsible-expanded.png)
+
