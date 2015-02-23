@@ -3,7 +3,7 @@
  * @file
  * Template to display a view as a calendar day, grouped by time
  * and optionally organized into columns by a field value.
- * 
+ *
  * @see template_preprocess_calendar_day.
  *
  * $rows: The rendered data for this day.
@@ -14,17 +14,17 @@
  * $rows['items'] - an array of timed items for the day.
  * $rows['items'][$time_period]['hour'] - the formatted hour for a time period.
  * $rows['items'][$time_period]['ampm'] - the formatted ampm value, if any for a time period.
- * $rows['items'][$time_period][$column]['values'] - An array of formatted 
+ * $rows['items'][$time_period][$column]['values'] - An array of formatted
  *   items for a time period and field column.
- * 
+ *
  * $view: The view.
  * $columns: an array of column names.
  * $min_date_formatted: The minimum date for this calendar in the format YYYY-MM-DD HH:MM:SS.
  * $max_date_formatted: The maximum date for this calendar in the format YYYY-MM-DD HH:MM:SS.
- * 
- * The width of the columns is dynamically set using <col></col> 
+ *
+ * The width of the columns is dynamically set using <col></col>
  * based on the number of columns presented. The values passed in will
- * work to set the 'hour' column to 10% and split the remaining columns 
+ * work to set the 'hour' column to 10% and split the remaining columns
  * evenly over the remaining 90% of the table.
  */
 //dsm('Display: '. $display_type .': '. $min_date_formatted .' to '. $max_date_formatted);
@@ -56,24 +56,26 @@
          </div>
          </div>
        </td>
-      <?php endforeach; ?>   
+      <?php endforeach; ?>
     </tr>
     <?php foreach ($rows['items'] as $hour): ?>
     <tr>
-      <td class="calendar-agenda-hour">
-        <span class="calendar-hour"><?php print $hour['hour']; ?></span><span class="calendar-ampm"><?php print $hour['ampm']; ?></span>
-      </td>
       <?php foreach ($columns as $column): ?>
-        <td class="calendar-agenda-items single-day">
-          <div class="calendar">
-          <div class="inner">
-            <?php print isset($hour['values'][$column]) ? implode($hour['values'][$column]) : '&nbsp;'; ?>
-          </div>
-          </div>
-        </td>
-      <?php endforeach; ?>   
+        <?php if (isset($hour['values'][$column])): ?>
+          <td class="calendar-agenda-hour">
+            <span class="calendar-hour"><?php print $hour['hour']; ?></span><span class="calendar-ampm"><?php print $hour['ampm']; ?></span>
+          </td>
+          <td class="calendar-agenda-items single-day">
+            <div class="calendar">
+            <div class="inner">
+              <?php print implode($hour['values'][$column]); ?>
+            </div>
+            </div>
+          </td>
+        <?php endif; ?>
+      <?php endforeach; ?>
     </tr>
-   <?php endforeach; ?>   
+   <?php endforeach; ?>
   </tbody>
 </table>
 </div></div>
