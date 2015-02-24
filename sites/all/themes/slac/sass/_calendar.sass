@@ -90,7 +90,7 @@
     display: none
 
   table
-    margin-bottom: 0 !important
+    margin-bottom: -2px !important
     width: 100%
 
     > .content &
@@ -99,7 +99,7 @@
           border: 0
           padding: 0
           text-align: center
-          background-color: transparent 
+          //background-color: transparent 
           +fontsize-rem(12px)
           color: inherit
         td
@@ -111,6 +111,10 @@
           border-left: 3px solid $grey-d
           border-right: 3px solid $grey-d
           border-bottom: 3px solid $grey-d
+        .calendar-day-of-month 
+          &.today
+            border-bottom: 0
+            border-top: 3px solid $grey-d
         .page-events-day &
           td
             width: 100%
@@ -141,6 +145,7 @@
             +fontsize-rem(13px)
             +bold
             padding: 3px
+          //month-view adds the border for today to the top, removes bottom
           .today
             background: $calendar-today
             border-left: 3px solid $grey-d
@@ -162,6 +167,8 @@
   //calendar calendar is the actual grid display of the calendar
   .calendar-calendar
     border: 2px solid $grey-d
+    .weekend
+      background-color: $form-bdr
     /// page events day, or the day view adjustments
     .pane-events-day &
       border: 0px
@@ -176,10 +183,12 @@
       .views-field-field-slac-event-date-1
         +fontsize-rem(11px)
         +bold
+        float: left
       .views-field-title
         color: $calendar-event-red
         text-align: left
         +fontsize-rem(10px)
+        clear: both
         .page-basic-io &
           color: $dark-blue
     //day view adjustments for when the day is selected, not month or week
@@ -203,12 +212,42 @@
         +bold
         float: right
         margin: 10px
+      .list-starttime,
+      .list-endtime
+        +inline-block
+        float: left
       .contents
+        position: relative
         background: $menu_bg
         margin: 20px 30px
         padding: 8px
         max-width: 300px
         +clearfix
+        .list-title
+          +clearfix
+          a
+            +link($red)
+            text-align: left
+        .list-location
+          +clearfix
+          padding: 6px
+        .views-field
+          +clearfix
+          a
+            width: 100%
+            display: block
+            float: left
+          .list-view-ics
+            position: absolute
+            top: 5px
+            right: 5px
+            width: auto
+            +fontsize-rem(0px)
+            color: $h2-color
+            &:after
+              +fontsize-rem(15px)
+              content: "\e61f"
+              @extend .slac-font
         span
           float: left
           span

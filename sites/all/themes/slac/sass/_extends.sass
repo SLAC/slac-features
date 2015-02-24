@@ -242,8 +242,9 @@ $base-font-size: 16px
       position: absolute
       top: 5px
       right: 5px
-      background-image: url(../images/i-cal-download.png)
-      padding: 12px
-      background-repeat: no-repeat
       font-size: 0
-      background-size: cover
+      color: $h2-color
+      &:after
+        content: "\e61f"
+        @extend .slac-font
+        +fontsize-rem(15px)
