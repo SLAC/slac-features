@@ -71,7 +71,7 @@ $start_timestamp = strtotime($view->args[0]);
     ?>
     <tr class="<?php print $rowclass?>">
       <?php if($i == 0 && ($by_hour_count > 0 || !empty($start_times))) :?>
-      <td class="<?php print $agenda_hour_class ?>" rowspan="<?php print $multiday_rows?>">
+      <td class="<?php print $agenda_hour_class ?>" rowspan="<?php print $multiday_rows?>">74
         <span class="calendar-hour"><?php print t('All day', array(), array('context' => 'datetime'))?></span>
       </td>
       <?php endif; ?>
@@ -79,9 +79,27 @@ $start_timestamp = strtotime($view->args[0]);
         <?php $cell = (empty($all_day[$j][$i])) ? NULL : $all_day[$j][$i]; ?>
         <?php if($cell != NULL && $cell['filled'] && $cell['wday'] == $j): ?>
           <?php for($k = $colpos; $k < $cell['wday']; $k++) : ?>
-          <td class="multi-day no-entry"><div class="inner">&nbsp;</div></td>
+            <?php $weekend = ''; ?>
+            <?php $today = ''; ?>
+            <?php if (strtolower($header_ids[$k]) == 'sunday' || strtolower($header_ids[$k]) == 'saturday'):?>
+              <?php $weekend = ' weekend'; ?>
+            <?php endif; ?>
+            <?php $dow = $k - 1; ?>
+            <?php if (date('U', strtotime("TODAY")) == date('U', strtotime('+' . $dow . ' DAYS', $start_timestamp))): ?>
+              <?php $today = ' today'; ?>
+            <?php endif; ?>
+            <td class="multi-day no-entry<?php print $today; ?><?php print $weekend; ?>"><div class="inner">&nbsp;</div></td>
           <?php endfor;?>
-          <td colspan="<?php print $cell['colspan']?>" class="multi-day">
+          <?php $weekend = ''; ?>
+          <?php $today = ''; ?>
+          <?php if (strtolower($header_ids[$j]) == 'sunday' || strtolower($header_ids[$j]) == 'saturday'):?>
+            <?php $weekend = ' weekend'; ?>
+          <?php endif; ?>
+          <?php $dow = $j - 1; ?>
+          <?php if (date('U', strtotime("TODAY")) == date('U', strtotime('+' . $dow . ' DAYS', $start_timestamp))): ?>
+            <?php $today = ' today'; ?>
+          <?php endif; ?>
+          <td colspan="<?php print $cell['colspan']?>" class="multi-day<?php print $today; ?><?php print $weekend; ?>">
             <div class="inner">
             <?php print $cell['entry']?>
             </div>
@@ -90,7 +108,16 @@ $start_timestamp = strtotime($view->args[0]);
         <?php endif; ?>
       <?php endfor; ?>
       <?php for($j = $colpos; $j < 7; $j++) : ?>
-      <td class="multi-day no-entry"><div class="inner">&nbsp;</div></td>
+      <?php $weekend = ''; ?>
+      <?php $today = ''; ?>
+      <?php if (strtolower($header_ids[$j]) == 'sunday' || strtolower($header_ids[$j]) == 'saturday'):?>
+        <?php $weekend = ' weekend'; ?>
+      <?php endif; ?>
+      <?php $dow = $j - 1; ?>
+      <?php if (date('U', strtotime("TODAY")) == date('U', strtotime('+' . $dow . ' DAYS', $start_timestamp))): ?>
+        <?php $today = ' today'; ?>
+      <?php endif; ?>
+      <td class="multi-day no-entry<?php print $today; ?><?php print $weekend; ?>"><div class="inner">&nbsp;</div></td>
       <?php endfor;?>
     </tr>
     <?php endfor; ?>
