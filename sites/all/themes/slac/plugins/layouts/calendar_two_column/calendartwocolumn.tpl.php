@@ -25,11 +25,6 @@
         </div>
       </div>
        <?php endif ?>
-    <?php if ($content['left']): ?>
-      <div class="l-calendar-left-sidebar ">
-        <div class="inside"><?php print $content['left']; ?></div>
-      </div>
-    <?php endif ?>
     <div class="l-calendar-center ">
        <?php if ($content['center']): ?>
           <div class="inside"><?php print $content['center']; ?>

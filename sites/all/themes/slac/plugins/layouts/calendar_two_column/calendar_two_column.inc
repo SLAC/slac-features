@@ -13,7 +13,6 @@ $plugin = array(
   'css' => 'calendar_two_column.css',
   'regions' => array(
     'title' => t('Title'),
-    'left' => t('Left Sidebar'),
     'center' => t('Center Column'),
     'right' => t('Right Sidebar'),
     'list-left'=>t('List Left'),
