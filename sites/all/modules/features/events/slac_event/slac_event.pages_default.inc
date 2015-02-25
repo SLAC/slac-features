@@ -1201,7 +1201,11 @@ events/month*',
     );
     $pane->cache = array();
     $pane->style = array(
-      'settings' => NULL,
+      'settings' => array(
+        'pane_title' => 'Calendar Filters',
+        'pane_collapsed' => 1,
+      ),
+      'style' => 'collapsible',
     );
     $pane->css = array();
     $pane->extras = array();
