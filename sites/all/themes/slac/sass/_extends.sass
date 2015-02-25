@@ -212,6 +212,7 @@ $base-font-size: 16px
     padding: 25px
     position: relative
     .list-title
+      margin-bottom: 16px
       a
         +link($color)
         +fontsize-rem(16px)
@@ -225,9 +226,11 @@ $base-font-size: 16px
     .list-starttime,
     .list-endtime
       +inline-block
+    .list-location
+      margin-top: 5px
     .list-teaser
       +fontsize-rem(13px)
-      margin-top: 25px
+      margin-top: 16px
     .views-field-field-event-image
       margin-right: 25px
       +float-items(left)
@@ -240,8 +243,8 @@ $base-font-size: 16px
       overflow: hidden
     .list-view-ics
       position: absolute
-      top: 5px
-      right: 5px
+      top: 27px
+      right: 16px
       font-size: 0
       color: $h2-color
       &:after

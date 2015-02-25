@@ -737,7 +737,8 @@ events/month*',
           'settings' => array(
             'visibility_setting' => '1',
             'paths' => 'events/month/list*
-events/week/list*',
+events/week/list*
+events/day/list*',
           ),
           'context' => 'empty',
           'not' => FALSE,
@@ -1176,6 +1177,40 @@ events/month*',
     $display->panels['right'][2] = 'new-20';
     $pane = new stdClass();
     $pane->pid = 'new-21';
+    $pane->panel = 'right';
+    $pane->type = 'block';
+    $pane->subtype = 'views--exp-events-day';
+    $pane->shown = TRUE;
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'path_visibility',
+          'settings' => array(
+            'visibility_setting' => '1',
+            'paths' => 'events/day*',
+          ),
+          'context' => 'empty',
+          'not' => FALSE,
+        ),
+      ),
+    );
+    $pane->configuration = array(
+      'inherit_path' => 1,
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 3;
+    $pane->locks = array();
+    $display->content['new-21'] = $pane;
+    $display->panels['right'][3] = 'new-21';
+    $pane = new stdClass();
+    $pane->pid = 'new-22';
     $pane->panel = 'title';
     $pane->type = 'page_title';
     $pane->subtype = 'page_title';
@@ -1196,10 +1231,10 @@ events/month*',
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-21'] = $pane;
-    $display->panels['title'][0] = 'new-21';
+    $display->content['new-22'] = $pane;
+    $display->panels['title'][0] = 'new-22';
     $pane = new stdClass();
-    $pane->pid = 'new-22';
+    $pane->pid = 'new-23';
     $pane->panel = 'title';
     $pane->type = 'views_panes';
     $pane->subtype = 'events-panel_pane_1';
@@ -1217,8 +1252,8 @@ events/month*',
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-22'] = $pane;
-    $display->panels['title'][1] = 'new-22';
+    $display->content['new-23'] = $pane;
+    $display->panels['title'][1] = 'new-23';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
