@@ -115,7 +115,7 @@
           &.today
             border-bottom: 0
             border-top: 3px solid $grey-d
-        .page-events-day &
+        .page-events-day-grid &
           td
             width: 100%
             border-right: 0px 
@@ -264,7 +264,8 @@
 
 ///month and week list page adjustments
 .page-events-month-list,
-.page-events-week-list
+.page-events-week-list,
+.page-events-day-list
   .l-calendar-upper
     .pane-events-minicalendar
       width: 25%
@@ -275,7 +276,8 @@
       a
         padding: 3px !important
     .pane-events-month-list,
-    .pane-events-week-list
+    .pane-events-week-list,
+    .pane-events-day-list
       width: 69%
       margin-left: 37px
       +float(left)
@@ -292,6 +294,7 @@
     .l-calendar-upper
       .pane-events-month-list,
       .pane-events-week-list
+      .page-events-day-list
         .view-content
           +list-view-style($dark-blue)
 //hides a filter that is present on the view
@@ -453,7 +456,8 @@
 
   .l-calendar-list-right
     .view-display-id-month_list.calendar-page,
-    .view-display-id-week_list.calendar-page
+    .view-display-id-week_list.calendar-page,
+    .view-display-id-day_list.calendar-page
       .events-calendar-header-pager,
       .events-calendar-header-switch
         display: none
@@ -467,11 +471,17 @@
         width: 50%
       .view-content
         +list-view-style
+    .view-display-id-day_list
+      .view-filters
+        display: none
+      .events-calendar-header-date
+        width: 100%
 .page-basic-io
   .l-calendar-lower-section
     .l-calendar-list-right
       .view-display-id-month_list.calendar-page,
-      .view-display-id-week_list.calendar-page
+      .view-display-id-week_list.calendar-page,
+      .view-display-id-day_list.calendar-page
         .view-content
           +list-view-style($dark-blue)
 
