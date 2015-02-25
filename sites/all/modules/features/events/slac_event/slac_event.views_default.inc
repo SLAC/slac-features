@@ -1159,6 +1159,7 @@ function slac_event_views_default_views() {
     'webform' => '#ffffff',
   );
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['exposed_block'] = TRUE;
   $handler->display->display_options['defaults']['header'] = FALSE;
   /* Header: Header Content */
   $handler->display->display_options['header']['calendar_header_content']['id'] = 'calendar_header_content';
@@ -1621,6 +1622,7 @@ function slac_event_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['exposed_block'] = TRUE;
   $handler->display->display_options['defaults']['header'] = FALSE;
   /* Header: Header Content */
   $handler->display->display_options['header']['calendar_header_content']['id'] = 'calendar_header_content';
