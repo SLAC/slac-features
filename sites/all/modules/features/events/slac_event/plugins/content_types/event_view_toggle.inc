@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * Quickstats plugin.
@@ -27,7 +28,7 @@ function slac_event_view_toggle_pane_edit_form($form, &$form_state) {
  */
 function slac_event_view_toggle_pane_render($subtype, $conf, $args, $context) {
   $block = new stdClass();
-  $block->title = t('');
+  $block->title = '';
   $block->content .= slac_event_view_toggle_render($context);
   return $block;
 }
@@ -67,7 +68,6 @@ function slac_event_view_toggle_render($context) {
     $switch = l(t('Grid View'), SLAC_EVENT_EVENTS_PAGE_URI . '/' . $current_display . '/grid');
   }
 
-  // @todo: set a default class for the current view.
   $display_items = array(
     l(t('Day'), SLAC_EVENT_EVENTS_PAGE_URI . '/day' . $display_mode_extra),
     l(t('Week'), SLAC_EVENT_EVENTS_PAGE_URI . '/week' . $display_mode_extra),
