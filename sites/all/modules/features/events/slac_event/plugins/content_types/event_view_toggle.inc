@@ -49,8 +49,10 @@ function slac_event_view_toggle_render($context) {
 
   // Append date to url if found.
   $date_mode = arg(3);
+  $date_extra = '';
   if (!empty($date_mode)) {
     $display_mode_extra .= '/' . $date_mode;
+    $date_extra = '/' . $date_mode;
   }
 
   // Get the current display mode.
@@ -62,10 +64,10 @@ function slac_event_view_toggle_render($context) {
   }
 
   if ($view_mode == 'grid') {
-    $switch = l(t('List View'), SLAC_EVENT_EVENTS_PAGE_URI . '/' . $current_display . '/list');
+    $switch = l(t('List View'), SLAC_EVENT_EVENTS_PAGE_URI . '/' . $current_display . '/list' . $date_extra);
   }
   elseif ($view_mode = 'list') {
-    $switch = l(t('Grid View'), SLAC_EVENT_EVENTS_PAGE_URI . '/' . $current_display . '/grid');
+    $switch = l(t('Grid View'), SLAC_EVENT_EVENTS_PAGE_URI . '/' . $current_display . '/grid' . $date_extra);
   }
 
   $display_items = array(
