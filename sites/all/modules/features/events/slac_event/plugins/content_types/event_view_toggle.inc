@@ -54,8 +54,10 @@ function slac_event_view_toggle_render($context) {
 
   // Get the current display mode.
   $current_display = arg(1);
+  $force_active = array();
   if (empty($current_display)) {
     $current_display = 'month';
+    $force_active[] = 'active';
   }
 
   if ($view_mode == 'grid') {
@@ -69,7 +71,11 @@ function slac_event_view_toggle_render($context) {
   $display_items = array(
     l(t('Day'), SLAC_EVENT_EVENTS_PAGE_URI . '/day' . $display_mode_extra),
     l(t('Week'), SLAC_EVENT_EVENTS_PAGE_URI . '/week' . $display_mode_extra),
-    l(t('Month'), SLAC_EVENT_EVENTS_PAGE_URI . '/month' . $display_mode_extra),
+    l(t('Month'), SLAC_EVENT_EVENTS_PAGE_URI . '/month' . $display_mode_extra, array(
+      'attributes' => array(
+        'class' => $force_active,
+      ),
+    )),
   );
 
   $output = theme('slac_event_view_toggle_content', array(

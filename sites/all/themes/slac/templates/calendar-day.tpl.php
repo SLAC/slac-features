@@ -45,17 +45,22 @@
   </thead>
   <tbody>
     <tr>
-      <td class="<?php print $agenda_hour_class ?>">
-         <span class="calendar-hour"><?php print $by_hour_count > 0 ? t('All day', array(), array('context' => 'datetime')) : ''; ?></span>
-       </td>
+      <?php $count = 0; ?>
       <?php foreach ($columns as $column): ?>
-       <td class="calendar-agenda-items multi-day">
-         <div class="calendar">
-         <div class="inner">
-           <?php print isset($rows['all_day'][$column]) ? implode($rows['all_day'][$column]) : '&nbsp;';?>
-         </div>
-         </div>
-       </td>
+        <?php if (isset($rows['all_day'][$column])): ?>
+          <?php if ($count++ == 0): ?>
+            <td class="<?php print $agenda_hour_class ?>">
+              <span class="calendar-hour"><?php print $by_hour_count > 0 ? t('All day', array(), array('context' => 'datetime')) : ''; ?></span>
+            </td>
+          <?php endif; ?>
+          <td class="calendar-agenda-items multi-day">
+            <div class="calendar">
+              <div class="inner">
+                <?php print implode($rows['all_day'][$column]); ?>
+              </div>
+             </div>
+           </td>
+        <?php endif; ?>
       <?php endforeach; ?>
     </tr>
     <?php foreach ($rows['items'] as $hour): ?>
