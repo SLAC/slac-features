@@ -49,11 +49,15 @@ $start_timestamp = strtotime($view->args[0]);
     <tr>
       <?php foreach ($columns as $index => $column): ?>
         <?php $dow = $index - 1; ?>
+        <?php $weekend = ''; ?>
         <?php $today = ''; ?>
         <?php if (date('U', strtotime("TODAY")) == date('U', strtotime('+' . $dow . ' DAYS', $start_timestamp))): ?>
           <?php $today = ' today'; ?>
         <?php endif; ?>
-        <td class="calendar-day-of-month<?php print $today; ?>">
+        <?php if (strtolower($header_ids[$index]) == 'sunday' || strtolower($header_ids[$index]) == 'saturday'):?>
+          <?php $weekend = ' weekend'; ?>
+        <?php endif; ?>
+        <td class="calendar-day-of-month<?php print $today; ?><?php print $weekend; ?>">
           <div class="week-days"><?php print date('j', strtotime('+' . $dow . ' DAYS', $start_timestamp)); ?></div>
         </td>
       <?php endforeach; ?>
