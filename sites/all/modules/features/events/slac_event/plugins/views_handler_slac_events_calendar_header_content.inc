@@ -28,9 +28,14 @@ class views_handler_slac_events_calendar_header_content extends views_handler_ar
       $next_time_string = '+1 month';
     }
     elseif ($current_display == 'week') {
-      // @todo: This isn't correct, needs major rework for start of week.
-      $range = strtotime(format_date($current_time, 'custom', 'Y-m-d') . '+1 WEEK');
-      $date_display = format_date($current_time, 'custom', 'F j') . ' - ' . format_date($range, 'custom', 'j, Y');
+      $current_time = (format_date($current_time, 'custom', 'l') == 'Sunday') ? $current_time : strtotime('last Sunday', $current_time);
+      $range = strtotime(format_date($current_time, 'custom', 'Y-m-d') . 'next Saturday');
+      // Edge case of end date being in the next month.
+      $end_range_format = 'j, Y';
+      if (format_date($range, 'custom', 'F') != format_date($current_time, 'custom', 'F')) {
+        $end_range_format = 'F j, Y';
+      }
+      $date_display = format_date($current_time, 'custom', 'F j') . ' - ' . format_date($range, 'custom', $end_range_format);
       $previous_time_string = '-1 week';
       $next_time_string = '+1 week';
     }

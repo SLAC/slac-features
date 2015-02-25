@@ -400,6 +400,10 @@ function _slac_event_get_date_argument_events_calendar($type = 'month') {
     $date_format = 'Y-m-d';
   }
   if ($date = _slac_event_get_current_date($type)) {
+    // PHP weeks start on Monday, but the Calendar is Sunday -> Saturday.
+    if ($type == 'week') {
+      $date = $date + 60 * 60 * 24;
+    }
     return date($date_format, $date);
   }
   elseif (arg(0) == SLAC_EVENT_EVENTS_PAGE_URI) {
