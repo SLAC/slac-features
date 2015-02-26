@@ -805,7 +805,9 @@ function slac_event_views_default_views() {
     'multiple_number' => '',
     'multiple_from' => '',
     'multiple_to' => '',
+    'show_repeat_rule' => 'hide',
   );
+  $handler->display->display_options['fields']['field_slac_event_date']['delta_offset'] = '0';
   /* Field: Content: Event date */
   $handler->display->display_options['fields']['field_slac_event_date_1']['id'] = 'field_slac_event_date_1';
   $handler->display->display_options['fields']['field_slac_event_date_1']['table'] = 'field_data_field_slac_event_date';
@@ -820,7 +822,9 @@ function slac_event_views_default_views() {
     'multiple_number' => '',
     'multiple_from' => '',
     'multiple_to' => '',
+    'show_repeat_rule' => 'hide',
   );
+  $handler->display->display_options['fields']['field_slac_event_date_1']['delta_offset'] = '0';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -1207,8 +1211,9 @@ function slac_event_views_default_views() {
     'multiple_number' => '',
     'multiple_from' => '',
     'multiple_to' => '',
-    'show_repeat_rule' => 'show',
+    'show_repeat_rule' => 'hide',
   );
+  $handler->display->display_options['fields']['field_slac_event_date_2']['delta_offset'] = '0';
   /* Field: Content: Event date */
   $handler->display->display_options['fields']['field_slac_event_date']['id'] = 'field_slac_event_date';
   $handler->display->display_options['fields']['field_slac_event_date']['table'] = 'field_data_field_slac_event_date';
@@ -1222,8 +1227,9 @@ function slac_event_views_default_views() {
     'multiple_number' => '',
     'multiple_from' => '',
     'multiple_to' => '',
-    'show_repeat_rule' => 'show',
+    'show_repeat_rule' => 'hide',
   );
+  $handler->display->display_options['fields']['field_slac_event_date']['delta_offset'] = '0';
   /* Field: Content: Event date */
   $handler->display->display_options['fields']['field_slac_event_date_1']['id'] = 'field_slac_event_date_1';
   $handler->display->display_options['fields']['field_slac_event_date_1']['table'] = 'field_data_field_slac_event_date';
@@ -1239,8 +1245,9 @@ function slac_event_views_default_views() {
     'multiple_number' => '',
     'multiple_from' => '',
     'multiple_to' => '',
-    'show_repeat_rule' => 'show',
+    'show_repeat_rule' => 'hide',
   );
+  $handler->display->display_options['fields']['field_slac_event_date_1']['delta_offset'] = '0';
   /* Field: Content: Location */
   $handler->display->display_options['fields']['field_location']['id'] = 'field_location';
   $handler->display->display_options['fields']['field_location']['table'] = 'field_data_field_location';
@@ -1358,8 +1365,9 @@ function slac_event_views_default_views() {
     'multiple_number' => '',
     'multiple_from' => '',
     'multiple_to' => '',
-    'show_repeat_rule' => 'show',
+    'show_repeat_rule' => 'hide',
   );
+  $handler->display->display_options['fields']['field_slac_event_date_2']['delta_offset'] = '0';
   /* Field: Content: Event date */
   $handler->display->display_options['fields']['field_slac_event_date']['id'] = 'field_slac_event_date';
   $handler->display->display_options['fields']['field_slac_event_date']['table'] = 'field_data_field_slac_event_date';
@@ -1373,8 +1381,9 @@ function slac_event_views_default_views() {
     'multiple_number' => '',
     'multiple_from' => '',
     'multiple_to' => '',
-    'show_repeat_rule' => 'show',
+    'show_repeat_rule' => 'hide',
   );
+  $handler->display->display_options['fields']['field_slac_event_date']['delta_offset'] = '0';
   /* Field: Content: Event date */
   $handler->display->display_options['fields']['field_slac_event_date_1']['id'] = 'field_slac_event_date_1';
   $handler->display->display_options['fields']['field_slac_event_date_1']['table'] = 'field_data_field_slac_event_date';
@@ -1390,8 +1399,9 @@ function slac_event_views_default_views() {
     'multiple_number' => '',
     'multiple_from' => '',
     'multiple_to' => '',
-    'show_repeat_rule' => 'show',
+    'show_repeat_rule' => 'hide',
   );
+  $handler->display->display_options['fields']['field_slac_event_date_1']['delta_offset'] = '0';
   /* Field: Content: Location */
   $handler->display->display_options['fields']['field_location']['id'] = 'field_location';
   $handler->display->display_options['fields']['field_location']['table'] = 'field_data_field_location';
@@ -1517,8 +1527,9 @@ function slac_event_views_default_views() {
     'multiple_number' => '',
     'multiple_from' => '',
     'multiple_to' => '',
-    'show_repeat_rule' => 'show',
+    'show_repeat_rule' => 'hide',
   );
+  $handler->display->display_options['fields']['field_slac_event_date_2']['delta_offset'] = '0';
   /* Field: Content: Event date */
   $handler->display->display_options['fields']['field_slac_event_date']['id'] = 'field_slac_event_date';
   $handler->display->display_options['fields']['field_slac_event_date']['table'] = 'field_data_field_slac_event_date';
@@ -1532,8 +1543,9 @@ function slac_event_views_default_views() {
     'multiple_number' => '',
     'multiple_from' => '',
     'multiple_to' => '',
-    'show_repeat_rule' => 'show',
+    'show_repeat_rule' => 'hide',
   );
+  $handler->display->display_options['fields']['field_slac_event_date']['delta_offset'] = '0';
   /* Field: Content: Event date */
   $handler->display->display_options['fields']['field_slac_event_date_1']['id'] = 'field_slac_event_date_1';
   $handler->display->display_options['fields']['field_slac_event_date_1']['table'] = 'field_data_field_slac_event_date';
@@ -1549,8 +1561,9 @@ function slac_event_views_default_views() {
     'multiple_number' => '',
     'multiple_from' => '',
     'multiple_to' => '',
-    'show_repeat_rule' => 'show',
+    'show_repeat_rule' => 'hide',
   );
+  $handler->display->display_options['fields']['field_slac_event_date_1']['delta_offset'] = '0';
   /* Field: Content: Location */
   $handler->display->display_options['fields']['field_location']['id'] = 'field_location';
   $handler->display->display_options['fields']['field_location']['table'] = 'field_data_field_location';
@@ -1670,8 +1683,9 @@ function slac_event_views_default_views() {
     'multiple_number' => '',
     'multiple_from' => '',
     'multiple_to' => '',
-    'show_repeat_rule' => 'show',
+    'show_repeat_rule' => 'hide',
   );
+  $handler->display->display_options['fields']['field_slac_event_date_2']['delta_offset'] = '0';
   /* Field: Content: Event date */
   $handler->display->display_options['fields']['field_slac_event_date']['id'] = 'field_slac_event_date';
   $handler->display->display_options['fields']['field_slac_event_date']['table'] = 'field_data_field_slac_event_date';
@@ -1685,8 +1699,9 @@ function slac_event_views_default_views() {
     'multiple_number' => '',
     'multiple_from' => '',
     'multiple_to' => '',
-    'show_repeat_rule' => 'show',
+    'show_repeat_rule' => 'hide',
   );
+  $handler->display->display_options['fields']['field_slac_event_date']['delta_offset'] = '0';
   /* Field: Content: Event date */
   $handler->display->display_options['fields']['field_slac_event_date_1']['id'] = 'field_slac_event_date_1';
   $handler->display->display_options['fields']['field_slac_event_date_1']['table'] = 'field_data_field_slac_event_date';
@@ -1702,8 +1717,9 @@ function slac_event_views_default_views() {
     'multiple_number' => '',
     'multiple_from' => '',
     'multiple_to' => '',
-    'show_repeat_rule' => 'show',
+    'show_repeat_rule' => 'hide',
   );
+  $handler->display->display_options['fields']['field_slac_event_date_1']['delta_offset'] = '0';
   /* Field: Content: Location */
   $handler->display->display_options['fields']['field_location']['id'] = 'field_location';
   $handler->display->display_options['fields']['field_location']['table'] = 'field_data_field_location';

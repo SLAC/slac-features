@@ -988,44 +988,6 @@ events/month*',
     $display->panels['list-left'][4] = 'new-14';
     $pane = new stdClass();
     $pane->pid = 'new-15';
-    $pane->panel = 'list-left';
-    $pane->type = 'block';
-    $pane->subtype = 'views--exp-events-week';
-    $pane->shown = TRUE;
-    $pane->access = array(
-      'plugins' => array(
-        0 => array(
-          'name' => 'path_visibility',
-          'settings' => array(
-            'visibility_setting' => '1',
-            'paths' => 'events/day*',
-          ),
-          'context' => 'empty',
-          'not' => FALSE,
-        ),
-      ),
-    );
-    $pane->configuration = array(
-      'inherit_path' => 1,
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => array(
-        'pane_title' => 'Calendar Filters',
-        'pane_collapsed' => 1,
-      ),
-      'style' => 'collapsible',
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 5;
-    $pane->locks = array();
-    $display->content['new-15'] = $pane;
-    $display->panels['list-left'][5] = 'new-15';
-    $pane = new stdClass();
-    $pane->pid = 'new-16';
     $pane->panel = 'list-right';
     $pane->type = 'views_panes';
     $pane->subtype = 'events-month_list';
@@ -1053,10 +1015,10 @@ events/month*',
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-16'] = $pane;
-    $display->panels['list-right'][0] = 'new-16';
+    $display->content['new-15'] = $pane;
+    $display->panels['list-right'][0] = 'new-15';
     $pane = new stdClass();
-    $pane->pid = 'new-17';
+    $pane->pid = 'new-16';
     $pane->panel = 'list-right';
     $pane->type = 'views_panes';
     $pane->subtype = 'events-week_list';
@@ -1083,10 +1045,10 @@ events/month*',
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-17'] = $pane;
-    $display->panels['list-right'][1] = 'new-17';
+    $display->content['new-16'] = $pane;
+    $display->panels['list-right'][1] = 'new-16';
     $pane = new stdClass();
-    $pane->pid = 'new-18';
+    $pane->pid = 'new-17';
     $pane->panel = 'list-right';
     $pane->type = 'views_panes';
     $pane->subtype = 'events-day_list';
@@ -1097,7 +1059,7 @@ events/month*',
           'name' => 'path_visibility',
           'settings' => array(
             'visibility_setting' => '1',
-            'paths' => 'events/day*',
+            'paths' => 'events/day/list*',
           ),
           'context' => 'empty',
           'not' => FALSE,
@@ -1113,10 +1075,10 @@ events/month*',
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-18'] = $pane;
-    $display->panels['list-right'][2] = 'new-18';
+    $display->content['new-17'] = $pane;
+    $display->panels['list-right'][2] = 'new-17';
     $pane = new stdClass();
-    $pane->pid = 'new-19';
+    $pane->pid = 'new-18';
     $pane->panel = 'right';
     $pane->type = 'event_series';
     $pane->subtype = 'event_series';
@@ -1134,10 +1096,10 @@ events/month*',
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-19'] = $pane;
-    $display->panels['right'][0] = 'new-19';
+    $display->content['new-18'] = $pane;
+    $display->panels['right'][0] = 'new-18';
     $pane = new stdClass();
-    $pane->pid = 'new-20';
+    $pane->pid = 'new-19';
     $pane->panel = 'right';
     $pane->type = 'block';
     $pane->subtype = 'views--exp-events-month';
@@ -1173,10 +1135,10 @@ events/month*',
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-20'] = $pane;
-    $display->panels['right'][1] = 'new-20';
+    $display->content['new-19'] = $pane;
+    $display->panels['right'][1] = 'new-19';
     $pane = new stdClass();
-    $pane->pid = 'new-21';
+    $pane->pid = 'new-20';
     $pane->panel = 'right';
     $pane->type = 'block';
     $pane->subtype = 'views--exp-events-week';
@@ -1211,10 +1173,10 @@ events/month*',
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-21'] = $pane;
-    $display->panels['right'][2] = 'new-21';
+    $display->content['new-20'] = $pane;
+    $display->panels['right'][2] = 'new-20';
     $pane = new stdClass();
-    $pane->pid = 'new-22';
+    $pane->pid = 'new-21';
     $pane->panel = 'right';
     $pane->type = 'block';
     $pane->subtype = 'views--exp-events-day';
@@ -1249,10 +1211,10 @@ events/month*',
     $pane->extras = array();
     $pane->position = 3;
     $pane->locks = array();
-    $display->content['new-22'] = $pane;
-    $display->panels['right'][3] = 'new-22';
+    $display->content['new-21'] = $pane;
+    $display->panels['right'][3] = 'new-21';
     $pane = new stdClass();
-    $pane->pid = 'new-23';
+    $pane->pid = 'new-22';
     $pane->panel = 'title';
     $pane->type = 'page_title';
     $pane->subtype = 'page_title';
@@ -1273,10 +1235,10 @@ events/month*',
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-23'] = $pane;
-    $display->panels['title'][0] = 'new-23';
+    $display->content['new-22'] = $pane;
+    $display->panels['title'][0] = 'new-22';
     $pane = new stdClass();
-    $pane->pid = 'new-24';
+    $pane->pid = 'new-23';
     $pane->panel = 'title';
     $pane->type = 'views_panes';
     $pane->subtype = 'events-panel_pane_1';
@@ -1294,8 +1256,8 @@ events/month*',
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-24'] = $pane;
-    $display->panels['title'][1] = 'new-24';
+    $display->content['new-23'] = $pane;
+    $display->panels['title'][1] = 'new-23';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
