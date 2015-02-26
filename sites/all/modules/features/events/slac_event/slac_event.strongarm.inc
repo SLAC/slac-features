@@ -111,6 +111,26 @@ function slac_event_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'date_repeat_entity_bundles_available';
+  $strongarm->value = array(
+    'event' => 'event',
+    'page' => 0,
+    'blog' => 0,
+    'slac_sc_catalog_item' => 0,
+    'faq' => 0,
+    'kb_article' => 0,
+    'landing_page' => 0,
+    'slac_news' => 0,
+    'newsletter' => 0,
+    'simplenews' => 0,
+    'support_ticket' => 0,
+    'webform' => 0,
+  );
+  $export['date_repeat_entity_bundles_available'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__event';
   $strongarm->value = array(
     'view_modes' => array(
