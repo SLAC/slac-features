@@ -70,7 +70,7 @@
     +fontsize-rem(20px)
     +bold
     text-align: center
-    +at-breakpoint($tablet)
+    +at-breakpoint($small-desktop)
       width: 33%
   .events-calendar-header-date-switch
     +float-items(right)
@@ -99,7 +99,6 @@
           border: 0
           padding: 0
           text-align: center
-          //background-color: transparent 
           +fontsize-rem(12px)
           color: inherit
         td
@@ -116,14 +115,15 @@
             border-bottom: 0
             border-top: 3px solid $grey-d
         .page-events-day-grid &
-          td
-            width: 100%
-            border-right: 0px 
-            &.calendar-agenda-items
-              border-left: 5px solid $menu_bg
-          tr
-            border-top: 5px solid $menu_bg
-            border-right: 5px solid $menu_bg
+          &.full
+            td
+              width: 100%
+              border-right: 0px 
+              &.calendar-agenda-items
+                border-left: 5px solid $menu_bg
+            tr
+              border-top: 5px solid $menu_bg
+              border-right: 5px solid $menu_bg
         thead
           th
             padding: 6px 0
@@ -194,7 +194,7 @@
     //day view adjustments for when the day is selected, not month or week
     .day-view
       .full
-        margin-top: 32px
+        margin-top: 45px
       tbody
         +clearfix
         th
@@ -220,9 +220,12 @@
         position: relative
         background: $menu_bg
         margin: 20px 30px
-        padding: 8px
+        padding: 10px
         max-width: 300px
         +clearfix
+        a
+          display: block
+          padding: 0
         .list-title
           +clearfix
           a
@@ -230,8 +233,19 @@
             text-align: left
         .list-location
           +clearfix
-          padding: 6px
+        .list-fulldate
+          text-align: left
+          width: 90%
+        .views-field-field-event-image
+          margin-right: 15px
+          +float-items(left)
+          height: 100%
+          img
+            width: 92px
+            height: auto
+            border: 2px solid white
         .views-field
+          overflow: hidden
           +clearfix
           a
             width: 100%
@@ -239,8 +253,8 @@
             float: left
           .list-view-ics
             position: absolute
-            top: 5px
-            right: 5px
+            top: 8px
+            right: 10px
             width: auto
             +fontsize-rem(0px)
             color: $h2-color
@@ -281,12 +295,17 @@
       width: 69%
       margin-left: 37px
       +float(left)
+      .events-calendar-header-pager
+        display: none
       .view-content
         +list-view-style
         .views-row .list-title
           a
             .page-basic-io &
               +link($dark-blue, $dark-blue)
+    .views-widget-filter-field_slac_event_category_tid,
+    .views-widget-filter-field_event_tags_tid
+      display: none
   .page-basic-io
     .l-calendar-upper
       .pane-events-month-list,
@@ -308,8 +327,10 @@
   .pane-event-view-toggle
     position: absolute
     top: 0
-    right: 0
+    right: 24px
     z-index: 3
+    +at-breakpoint($small-desktop)
+      right: 0px
   .events-calendar-toggle-date-switch
     +float-items(right)
     clear: both
@@ -349,9 +370,8 @@
           border-left: 0
 
 .l-calendar-right-sidebar
-  .page-events-day &
-    .pane-event-series
-      margin-top: 80px
+  .pane-event-series
+    margin-top: 80px
   .pane-event-series
     h2
       +fontsize-rem(16px)
@@ -366,6 +386,11 @@
       +firstletter
       +fontsize-rem(11px)
       +internal-link-color
+
+.page-events-day-grid
+  .l-calendar-lower-section
+    .pane-events-minicalendar
+      +mini-calendar
 
 .l-calendar-lower-section
   position: relative
