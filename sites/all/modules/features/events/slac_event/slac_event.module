@@ -298,7 +298,7 @@ function slac_event_views_data_alter(&$data) {
     ),
   );
   $data['views']['calendar_mini_pager'] = array(
-    'title' => t('Minicaledar pager'),
+    'title' => t('Minicalendar pager'),
     'help' => t('Allows to scroll back and forward for months.'),
     'area' => array(
       'handler' => 'views_handler_slac_events_calendar_mini_pager',
