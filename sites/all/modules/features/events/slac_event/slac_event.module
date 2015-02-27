@@ -290,6 +290,20 @@ function slac_event_views_data_alter(&$data) {
       'handler' => 'views_handler_slac_events_calendar_main_area_title',
     ),
   );
+  $data['views']['calendar_header_content'] = array(
+    'title' => t('Calendar header content'),
+    'help' => t('Display content for the events calendar header.'),
+    'area' => array(
+      'handler' => 'views_handler_slac_events_calendar_header_content',
+    ),
+  );
+  $data['views']['calendar_mini_pager'] = array(
+    'title' => t('Minicalendar pager'),
+    'help' => t('Allows to scroll back and forward for months.'),
+    'area' => array(
+      'handler' => 'views_handler_slac_events_calendar_mini_pager',
+    ),
+  );
 }
 
 /**
@@ -307,9 +321,9 @@ function slac_event_entity_info_alter(&$entity_info) {
  */
 function slac_event_views_pre_view(&$view) {
   $arg0 = arg(0);
-  $arg1 = arg(1);
+  $arg3 = arg(3);
   if ($view->name == 'events' && $view->current_display == 'panel_pane_1') {
-    if ($arg0 == SLAC_EVENT_EVENTS_PAGE_URI && !empty($arg1)
+    if ($arg0 == SLAC_EVENT_EVENTS_PAGE_URI && !empty($arg3)
       && isset($view->display['panel_pane_1']->handler->options['filters']['field_slac_event_date_value'])) {
       $view_filters = $view->display['panel_pane_1']->handler->options['filters'];
       if (isset($view_filters['field_slac_event_date_value'])) {
@@ -325,11 +339,11 @@ function slac_event_views_pre_view(&$view) {
  */
 function slac_event_views_pre_render(&$view) {
   $arg0 = arg(0);
-  $arg1 = arg(1);
+  $arg3 = arg(3);
   $url_date_with_day = _slac_event_get_date_from_url_with_day();
   if ($view->name == 'events' && $view->current_display == 'panel_pane_1' && !$url_date_with_day) {
     $view->empty['area']->options['content'] = t('No events planned for this month.');
-    if ($arg0 == SLAC_EVENT_EVENTS_PAGE_URI && empty($arg1)) {
+    if ($arg0 == SLAC_EVENT_EVENTS_PAGE_URI && empty($arg3)) {
       $view->empty['area']->options['content'] = t('No events planned for next months.');
     }
   }
@@ -340,9 +354,9 @@ function slac_event_views_pre_render(&$view) {
  */
 function slac_event_views_query_alter(&$view) {
   $arg0 = arg(0);
-  $arg1 = arg(1);
+  $arg3 = arg(3);
   if ($view->name == 'events' && $view->current_display == 'panel_pane_1') {
-    if ($arg0 == SLAC_EVENT_EVENTS_PAGE_URI && empty($arg1)) {
+    if ($arg0 == SLAC_EVENT_EVENTS_PAGE_URI && empty($arg3)) {
       unset($view->query->where['date']);
       $pager = array(
         'type' => 'full',
@@ -377,9 +391,20 @@ function _slac_event_get_date_argument_events_main_content() {
  *
  * Should either pass url argument or current date in format 2014-01.
  */
-function _slac_event_get_date_argument_events_calendar() {
-  if ($date = _slac_event_get_current_date()) {
-    return date('Y-m', $date);
+function _slac_event_get_date_argument_events_calendar($type = 'month') {
+  $date_format = 'Y-m';
+  if ($type == 'week') {
+    $date_format = 'Y-\WW';
+  }
+  elseif ($type == 'day') {
+    $date_format = 'Y-m-d';
+  }
+  if ($date = _slac_event_get_current_date($type)) {
+    // PHP weeks start on Monday, but the Calendar is Sunday -> Saturday.
+    if ($type == 'week') {
+      $date = $date + 60 * 60 * 24;
+    }
+    return date($date_format, $date);
   }
   elseif (arg(0) == SLAC_EVENT_EVENTS_PAGE_URI) {
     $url_date = _slac_event_get_date_argument_events_main_content();
@@ -391,11 +416,16 @@ function _slac_event_get_date_argument_events_calendar() {
  * Return date for Calendar's pager. It can be either arg(1) in case we are on events
  * page, or date of the event if we are on full node view page.
  */
-function _slac_event_get_current_date() {
+function _slac_event_get_current_date($type = 'month') {
   if ($date = _slac_event_get_date_from_event_node_with_day()) {
     return $date;
   }
-  elseif ($date = _slac_event_get_date_from_url_month_only()) {
+  elseif ($type == 'month') {
+    $date = _slac_event_get_date_from_url_month_only();
+    return strtotime($date);
+  }
+  elseif ($type == 'week' || $type == 'day') {
+    $date = _slac_event_get_date_from_url_month_and_day();
     return strtotime($date);
   }
 }
@@ -412,21 +442,32 @@ function _slac_event_get_date_from_event_node_with_day() {
 
 function _slac_event_get_date_from_url_month_only() {
   $arg0 = arg(0);
-  $arg1 = arg(1);
+  $arg3 = arg(3);
   if ($arg0 == SLAC_EVENT_EVENTS_PAGE_URI) {
-    if (!empty($arg1) && preg_match('/^(\d+)-(\d+)/', $arg1)) {
-      return $arg1;
+    if (!empty($arg3) && preg_match('/^(\d+)-(\d+)/', $arg3)) {
+      return $arg3;
     }
   }
   return format_date(REQUEST_TIME, 'custom', 'Y-m');
 }
 
+function _slac_event_get_date_from_url_month_and_day() {
+  $arg0 = arg(0);
+  $arg3 = arg(3);
+  if ($arg0 == SLAC_EVENT_EVENTS_PAGE_URI) {
+    if (!empty($arg3) && preg_match('/^(\d+)-(\d+)-(\d+)/', $arg3)) {
+      return $arg3;
+    }
+  }
+  return format_date(REQUEST_TIME, 'custom', 'Y-m-d');
+}
+
 function _slac_event_get_date_from_url_with_day() {
   $arg0 = arg(0);
-  $arg1 = arg(1);
+  $arg3 = arg(3);
   if ($arg0 == SLAC_EVENT_EVENTS_PAGE_URI) {
-    if (!empty($arg1) && preg_match('/^(\d+)-(\d+)-(\d+)$/', $arg1)) {
-      return $arg1;
+    if (!empty($arg3) && preg_match('/^(\d+)-(\d+)-(\d+)$/', $arg3)) {
+      return $arg3;
     }
   }
 }
@@ -530,5 +571,52 @@ function slac_event_date_ical_export_vevent_alter(&$vevent, $view, $event_array)
         $vevent->setProperty('X-IMG-URL', $url);
       }
     }
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function slac_event_theme($existing, $type, $theme, $path) {
+  if ($type === 'module') {
+    return array(
+      'slac_event_calendar_header_content' => array(
+        'template' => 'calendar-header-content',
+        'path' => $path . '/theme',
+        'type' => 'theme',
+        'variables' => array(
+          'pager' => NULL,
+          'date_display' => NULL,
+        ),
+      ),
+      'slac_event_view_toggle_content' => array(
+        'template' => 'event-view-toggle',
+        'path' => $path . '/theme',
+        'type' => 'theme',
+        'variables' => array(
+          'switch' => NULL,
+          'display_modes' => NULL,
+        ),
+      ),
+    );
+  }
+}
+
+/**
+ * Implements hook_ctools_plugin_directory().
+ */
+function slac_event_ctools_plugin_directory($owner, $plugin_type) {
+  if ($owner == 'ctools' && $plugin_type == 'content_types') {
+    return 'plugins/' . $plugin_type;
+  }
+}
+
+/**
+ * Implements template_preprocess_calendar_datebox().
+ */
+function slac_event_preprocess_calendar_datebox(&$vars) {
+  // Add a link to the day view for days that have events.
+  if (!empty($vars['selected'])) {
+    $vars['link'] = l($vars['day'], 'events/day/list/' . $vars['date']);
   }
 }

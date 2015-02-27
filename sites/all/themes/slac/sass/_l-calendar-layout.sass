@@ -1,0 +1,77 @@
+.page-events
+  .page-basic
+    > .content
+      > .inside
+        padding-left: 0
+        padding-right: 0
+
+.l-calendar-container
+  +clearfix
+  .l-calendar-center
+    width: 83%
+    position: relative
+    +float(left)
+  .l-calendar-right-sidebar
+    width: 17%
+    +float(left)
+    padding: 0 0 0 33px
+  .l-calendar-lower-section
+    clear: both
+    display: block
+    +at-breakpoint($small-desktop)
+      display: none
+    .l-calendar-list-left,
+    .l-calendar-list-right
+      width: 100%
+      padding-left: 10px
+      padding-right: 10px
+      +at-breakpoint($less-than-758)
+        +float(left)
+        width: 60%
+        margin-left: 13px
+        margin-right: 13px
+    .l-calendar-list-left
+      width: 100%
+      +at-breakpoint($less-than-758)
+        width: 33%
+
+//control over what displays
+.l-calendar-upper
+  +clearfix
+  display: none
+  +at-breakpoint($small-desktop)
+    display: block
+.l-calendar-lower-section
+  display: block
+  +at-breakpoint($small-desktop)
+    display: none
+
+///event-month-list
+.page-events-month-list
+  .l-calendar-upper
+    display: none
+    +at-breakpoint($less-than-800)
+      display: block
+  .l-calendar-lower-section
+    display: block
+    +at-breakpoint($less-than-800)
+      display: none
+
+.section-event-categories
+  .l-calendar-upper
+    display: block
+  .l-calendar-lower-section
+    display: none
+  .l-calendar-center
+    width: 100%
+    +at-breakpoint($small-desktop)
+      width: 83%
+      position: relative
+      +float(left)
+  .l-calendar-right-sidebar
+    width: 17%
+    padding: 0 0 0 0px
+    +at-breakpoint($small-desktop)
+      width: 17%
+      +float(left)
+      padding: 0 0 0 33px

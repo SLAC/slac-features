@@ -903,115 +903,6 @@ ul.tabs, .action-links,
       vertical-align: middle
 
 
-
-
-.calendar-page
-  color: $grey-47
-  a
-    color: $grey-47
-
-  .view-header
-    padding: 15px 15px 0 15px
-
-
-
-  .view-content
-    padding: 5px
-  .view-footer li
-    padding: 15px
-
-
-  .view-header,
-  .view-content,
-  .view-footer li
-    background-color: $bg-col-1
-
-
-  .view-content, .view-footer li.first
-    margin-bottom: 5px
-
-  .calendar-empty
-    display: none
-
-  .view-header
-    ul
-      position: relative
-      text-transform: uppercase
-      li
-        position: static
-        display: block
-        text-align: center
-        +fontsize-rem(16px)
-        font-weight: bold
-        a:hover
-          text-decoration: none
-
-        &.first, &.last
-          position: absolute
-          +fontsize-rem(14px)
-          top: 2px
-          font-weight: normal
-          a
-            +no-select
-            line-height: 1
-
-
-            &:after, &:before
-              @extend .slac-font
-              position: relative
-              top: 2px
-
-        &.first
-          left: 0
-          a
-            &:before
-              content: '\e628'
-
-
-        &.last
-          right: 0
-          a
-            &:after
-              content: '\e62b'
-
-
-  table
-    margin-bottom: 0 !important
-    width: 100%
-    td,
-    th
-      text-align: center
-      background-color: transparent !important
-      +fontsize-rem(12px)
-      color: inherit
-    thead
-      th
-        border-color: #fff !important
-        border-style: solid !important
-        border-width: 3px 0 !important
-        padding: 6px 0 !important
-
-    tbody
-      tr
-        &:first-child
-          td
-            padding-top: 15px !important
-      td
-        border: 0 none !important
-        padding: 0 !important
-        width: auto !important
-        .month
-          display: inline-block
-        a
-          padding: 6px
-          display: inline-block
-          &.active
-            background-color: $red
-            color: #fff
-            font-weight: bold
-
-
-
 //Frequently Asked Questions
 //-----------------------------------
 
@@ -3269,10 +3160,6 @@ h2
 
   .event-wrapper
     padding: 20px
-
-  .calendar-page table tbody td a.active
-    color: #fff
-    background: #2582ca
 
   .faq-list .views-field-title
     color: $dark-blue

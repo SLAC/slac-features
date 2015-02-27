@@ -1,0 +1,581 @@
+//styles that were taken out of the layout file, and pasted here for simplicity
+
+.calendar-page
+  color: $grey-47
+  a
+    color: $grey-47
+
+
+  .top_title_exist
+    margin-top: 0
+  .view-header
+    +clearfix
+    margin-bottom: 16px
+    ul
+      position: relative
+      text-transform: uppercase
+      li
+        position: static
+        display: block
+        text-align: center
+        +fontsize-rem(16px)
+        font-weight: bold
+        a:hover
+          text-decoration: none
+  .events-calendar-header-pager,
+  .events-calendar-header-date
+    +float-items(left)
+    margin-top: 30px
+  .events-calendar-header-pager
+    width: 33%
+    margin-top: 36px
+    li
+      height: 17px
+      line-height: 12px !important
+      +float-items(left)
+      background: $grey-e
+      border: 1px solid $grey-d
+      border-radius: 3px
+      padding: 0 9px
+      margin: 0 0.25rem 0 0
+      &.first
+        left: 0
+        padding: 0
+        a
+          &:before
+            content: '\e628'
+      &.last
+        right: 0
+        padding: 0
+        a
+          &:after
+            content: '\e62b'
+      &.first, &.last
+        padding: 0 2px
+        a
+          +no-select
+          line-height: 12px
+          &:after, &:before
+            @extend .slac-font
+            position: relative
+            top: 2px
+            +fontsize-rem(16px)
+    a
+      +link($h2-color, $h2-color)
+      +fontsize-rem(9px)
+
+
+  .events-calendar-header-date
+    +float-items(left)
+    +fontsize-rem(20px)
+    +bold
+    text-align: center
+    +at-breakpoint($small-desktop)
+      width: 33%
+  .events-calendar-header-date-switch
+    +float-items(right)
+    width: 33%
+
+  .view-footer li
+    padding: 15px
+
+  .view-footer li
+    background-color: $bg-col-1
+
+
+  .view-content, .view-footer li.first
+    margin-bottom: 5px
+
+  .calendar-empty
+    display: none
+
+  table
+    margin-bottom: -2px !important
+    width: 100%
+
+    > .content &
+      .page-basic &
+        td, th
+          border: 0
+          padding: 0
+          text-align: center
+          +fontsize-rem(12px)
+          color: inherit
+        td
+          border-right: 1px solid $grey-d
+          padding: 0
+          width: 14.3%
+        .today
+          background: $calendar-today
+          border-left: 3px solid $grey-d
+          border-right: 3px solid $grey-d
+          border-bottom: 3px solid $grey-d
+        .calendar-day-of-month 
+          &.today
+            border-bottom: 0
+            border-top: 3px solid $grey-d
+        .page-events-day-grid &
+          &.full
+            td
+              width: 100%
+              border-right: 0px 
+              &.calendar-agenda-items
+                border-left: 5px solid $menu_bg
+            tr
+              border-top: 5px solid $menu_bg
+              border-right: 5px solid $menu_bg
+        thead
+          th
+            padding: 6px 0
+        tbody
+          tr
+            .month
+              display: inline-block
+            a
+              padding: 6px
+              display: inline-block
+              &.active
+                background-color: $red
+                color: #fff
+                font-weight: bold
+        .date-box
+          td
+            border-right: 1px solid $grey-d
+            text-align: right
+            +fontsize-rem(13px)
+            +bold
+            padding: 3px
+          //month-view adds the border for today to the top, removes bottom
+          .today
+            background: $calendar-today
+            border-left: 3px solid $grey-d
+            border-right: 3px solid $grey-d
+            border-top: 3px solid $grey-d
+            border-bottom: 0px
+
+    .single-day
+      border-bottom: 1px solid $grey-d
+    ////week view control
+    .week-days
+      text-align: right
+      +fontsize-rem(13px)
+      +bold
+      padding: 3px
+    .calendar-agenda-hour
+      display: none
+
+  //calendar calendar is the actual grid display of the calendar
+  .calendar-calendar
+    border: 2px solid $grey-d
+    .weekend
+      background-color: $form-bdr
+    /// page events day, or the day view adjustments
+    .pane-events-day &
+      border: 0px
+    thead
+      background: $menu_bg
+    .contents,
+    .calendar-more
+      background: $menu_bg
+      margin: 0 8px
+      padding: 8px
+      max-width: 135px
+      .views-field-field-slac-event-date,
+      .views-field-field-slac-event-date-1
+        +fontsize-rem(11px)
+        +bold
+        float: left
+      .views-field-title
+        color: $calendar-event-red
+        text-align: left
+        +fontsize-rem(10px)
+        clear: both
+        .page-basic-io &
+          color: $dark-blue
+    .calendar-more
+      padding: 0 8px
+      color: $red
+      +fontsize-rem(10px)
+      margin-bottom: 10px
+      a
+        +link($red)
+    //day view adjustments for when the day is selected, not month or week
+    .day-view
+      .full
+        margin-top: 45px
+      tbody
+        +clearfix
+        th
+          border: 5px solid $menu_bg
+          margin: 10px
+          padding: 10px
+      th.calendar-dayview-hour,
+      th.calendar-agenda-items
+        display: none
+      .calendar-agenda-hour
+        display: block
+      .calendar-hour
+        +fontsize-rem(14px)
+        text-align: left
+        +bold
+        float: right
+        margin: 10px
+      .list-starttime,
+      .list-endtime
+        +inline-block
+        float: left
+      .contents
+        position: relative
+        background: $menu_bg
+        margin: 20px 30px
+        padding: 10px
+        max-width: 300px
+        +clearfix
+        a
+          display: block
+          padding: 0
+        .list-title
+          +clearfix
+          a
+            +link($red)
+            text-align: left
+            +fontsize-rem(14px)
+        .list-location
+          +clearfix
+        .list-fulldate
+          text-align: left
+          width: 90%
+        .views-field-field-event-image
+          margin-right: 15px
+          +float-items(left)
+          height: 100%
+          img
+            width: 92px
+            height: auto
+            border: 2px solid white
+        .views-field
+          overflow: hidden
+          +clearfix
+          a
+            width: 100%
+            display: block
+            float: left
+          .list-view-ics
+            position: absolute
+            top: 8px
+            right: 10px
+            width: auto
+            +fontsize-rem(0px)
+            color: $h2-color
+            &:after
+              +fontsize-rem(15px)
+              content: "\e61f"
+              @extend .slac-font
+        span
+          float: left
+          span
+            float: none
+      .cutoff
+        display: none
+      .date-display-single
+        +fontsize-rem(14px)
+        +bold
+      .views-field-title
+        float: left
+        width: 100%
+        +fontsize-rem(14px)
+
+///month and week list page adjustments
+.page-events-month-list,
+.page-events-week-list,
+.page-events-day-list
+  .l-calendar-upper
+    .pane-events-minicalendar
+      width: 25%
+      float: left
+      +mini-calendar
+      margin-top: 68px
+      .view-header
+        +mini-calendar-header
+    .calendar-calendar
+      a
+        padding: 3px !important
+    .pane-events-month-list,
+    .pane-events-week-list,
+    .pane-events-day-list
+      width: 69%
+      margin-left: 37px
+      +float(left)
+      .events-calendar-header-pager
+        display: none
+      .view-content
+        +list-view-style
+        .views-row .list-title
+          a
+            .page-basic-io &
+              +link($dark-blue, $dark-blue)
+    .views-widget-filter-field_slac_event_category_tid,
+    .views-widget-filter-field_event_tags_tid
+      display: none
+  .page-basic-io
+    .l-calendar-upper
+      .pane-events-month-list,
+      .pane-events-week-list,
+      .page-events-day-list
+        .view-content
+          +list-view-style($dark-blue)
+//hides a filter that is present on the view
+.pane-events-day
+  .view-filters
+    display: none
+
+.calendar-page table tbody td a.active
+  color: #fff
+  background: #2582ca
+
+//page adjustments based on the template being used
+.l-calendar
+  .pane-event-view-toggle
+    position: absolute
+    top: 0
+    right: 24px
+    z-index: 3
+    +at-breakpoint($small-desktop)
+      right: 0px
+  .events-calendar-toggle-date-switch
+    +float-items(right)
+    clear: both
+  .events-calendar-toggle-switch
+    +fontsize-rem(11px)
+    margin-bottom: 1rem
+    color: $grey-8
+    a
+      +bold
+      +link($red)
+      +internal-link-color
+  .events-calendar-toggle-switch,
+  .events-calendar-toggle-displayview
+    +float-items(right)
+    clear: both
+  .events-calendar-toggle-displayview
+    li
+      +float-items(left)
+      height: 17px
+      a
+        +link($h2-color, white)
+        text-transform: capitalize
+        border: 1px solid $grey-d
+        font-weight: normal
+        +fontsize-rem(10px)
+        padding: 0.25rem 0.5rem
+        &.active,
+        &:hover
+          background: $h2-color
+      &:first-child
+        a
+          border-radius: 3px 0 0 3px
+          border-right: 0
+      &:last-child
+        a
+          border-radius: 0 3px 3px 0
+          border-left: 0
+
+.l-calendar-right-sidebar
+  .pane-event-series
+    margin-top: 80px
+    .section-event-categories &
+      margin-top: 0px
+  .pane-event-series
+    h2
+      +fontsize-rem(16px)
+      +caps
+      +bold
+      color: $h2-color
+      border-bottom: 3.5px solid $menu_bg
+      .page-basic-io &
+        border-bottom: 3.5px solid $calendar-internal-blue-line
+    a
+      +link($red)
+      +firstletter
+      +fontsize-rem(11px)
+      +internal-link-color
+
+.page-events-day-grid
+  .l-calendar-lower-section
+    .pane-events-minicalendar
+      +mini-calendar
+
+.l-calendar-lower-section
+  position: relative
+  .l-calendar-list-left
+    margin-top: 0px
+    .ctools-collapsible-container
+      border: 3px solid  $menu_bg
+      .views-exposed-widget
+        width: 100%
+      .bef-checkboxes
+        input[type="checkbox"]
+          margin: 0px
+  .events-calendar-toggle-switch
+    display: none
+  .events-calendar-toggle
+    +clearfix
+  .pane-event-series
+    margin-top: 16px
+    h2
+      +fontsize-rem(12px)
+      +caps
+      color: $h2-color
+    #series-list
+      li
+        width: 100%
+        a
+          +link(white)
+          +fontsize-rem(12px)
+          background: $calendar-even-back
+          padding: 15px 12px
+          margin: 5px 0
+          width: 100%
+          display: block
+          .page-basic-io &
+            +link(white, $dark-blue)
+          &::after
+            background-image: url(../images/events-arrow.png)
+            background-repeat: no-repeat
+            content: ""
+            padding: 16px
+            position: absolute
+            right: 0
+          &:hover
+            background: darken($calendar-even-back,10%)
+  +at-breakpoint($tablet)
+    .pane-event-series
+      h2
+        +fontsize-rem(16px)
+        +caps
+        +bold
+        color: $h2-color
+        border-bottom: 3.5px solid $menu_bg
+      #series-list
+        li
+          width: 100%
+          a
+            +link($red)
+            +fontsize-rem(11px)
+            background: white
+            padding: 0px 0px
+            margin: 10px 0
+            width: 100%
+            display: block
+            +internal-link-color
+            &::after
+              background-image: url(../images/events-arrow.png)
+              background-repeat: no-repeat
+              content: ""
+              padding: 16px
+              position: absolute
+              right: 0
+            &:hover
+              background: white
+
+  .pane-event-view-toggle
+    position: relative
+    top: -6px
+    right: 33%
+    z-index: 3
+
+  .pane-events-minicalendar
+    .view-header
+      +mini-calendar-header
+    .view-filters
+      display: none
+    +mini-calendar
+
+  .l-calendar-list-right
+    .view-display-id-month_list.calendar-page,
+    .view-display-id-week_list.calendar-page,
+    .view-display-id-day_list.calendar-page
+      .events-calendar-header-pager,
+      .events-calendar-header-switch
+        display: none
+      .events-calendar-header-displayview
+        float: left
+      .events-calendar-header-date
+        text-align: left
+        margin-bottom: 5px
+      .events-calendar-header-date-switch
+        float: left
+        width: 50%
+      .view-content
+        +list-view-style
+    .view-display-id-day_list
+      .view-filters
+        display: none
+      .events-calendar-header-date
+        width: 100%
+.page-basic-io
+  .l-calendar-lower-section
+    .l-calendar-list-right
+      .view-display-id-month_list.calendar-page,
+      .view-display-id-week_list.calendar-page,
+      .view-display-id-day_list.calendar-page
+        .view-content
+          +list-view-style($dark-blue)
+
+///theming of the filters copied from the module folder and adjusted
+.page-events
+  .ctools-collapsible-container
+    border: 1px solid $grey-b
+    margin-top: 42px
+    h2
+      +fontsize-rem(12px)
+      color: $red
+      padding: 5px
+    form label
+      +fontsize-rem(12px)
+      +normal
+    a.bef-toggle
+      +link($red)
+      +fontsize-rem(12px)
+    .views-exposed-widget
+      padding-left: 8px
+    .views-exposed-form
+      margin-bottom: 10px
+    .bef-checkboxes
+      width: 95%
+      margin: 0 15px
+      input[type="checkbox"]
+        float: right
+        margin: 5px
+  .page-basic-io 
+    .ctools-collapsible-container h2
+      color: $dark-blue
+  .ctools-collapsible-container .ctools-toggle
+    float: right
+    width: 21px
+    height: 21px
+    cursor: pointer
+    background-position: 7px 10px
+    background-repeat: no-repeat
+    background-image: url(../images/collapsible-collapsed.png)
+
+
+  .ctools-collapsible-container .ctools-collapsible-handle 
+    display: none
+  
+
+  html.js .ctools-collapsible-container .ctools-collapsible-handle
+    display: block
+
+
+  .ctools-collapsible-container .ctools-collapsible-handle
+    cursor: pointer
+
+
+  .ctools-collapsible-container .ctools-toggle-collapsed
+    background-image: url(../images/collapsible-expanded.png)
+
+////tax term pages
+.section-event-categories
+  .pane-events-taxonomy-term-list
+    +list-view-style($color:$red)

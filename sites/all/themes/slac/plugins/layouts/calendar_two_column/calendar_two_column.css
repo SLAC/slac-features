@@ -1,0 +1,26 @@
+.panels-dnd .l-calendar-center {
+  float: left;
+  clear: left;
+  display: inline-block;
+  width: 70%;
+}
+.panels-dnd .l-calendar-right-sidebar {
+  float: left;
+  clear: right;
+  display: inline-block;
+  width: 30%;
+}
+.panels-dnd .l-calendar-lower-section {
+  clear: both;
+}
+
+.panels-dnd .l-calendar-list-left {
+  float: left;
+  display: inline-block;
+  width: 60%;
+}
+.panels-dnd .l-calendar-list-right {
+  float: left;
+  display: inline-block;
+  width: 40%;
+}
