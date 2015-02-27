@@ -34,15 +34,6 @@
       width: 100%
       +at-breakpoint($less-than-758)
         width: 33%
-.page-events-month-list
-  .l-calendar-upper
-    display: none
-    +at-breakpoint($less-than-800)
-      display: block
-  .l-calendar-lower-section
-    display: block
-    +at-breakpoint($less-than-800)
-      display: none
 
 //control over what displays
 .l-calendar-upper
@@ -54,3 +45,33 @@
   display: block
   +at-breakpoint($small-desktop)
     display: none
+
+///event-month-list
+.page-events-month-list
+  .l-calendar-upper
+    display: none
+    +at-breakpoint($less-than-800)
+      display: block
+  .l-calendar-lower-section
+    display: block
+    +at-breakpoint($less-than-800)
+      display: none
+
+.section-event-categories
+  .l-calendar-upper
+    display: block
+  .l-calendar-lower-section
+    display: none
+  .l-calendar-center
+    width: 100%
+    +at-breakpoint($small-desktop)
+      width: 83%
+      position: relative
+      +float(left)
+  .l-calendar-right-sidebar
+    width: 17%
+    padding: 0 0 0 0px
+    +at-breakpoint($small-desktop)
+      width: 17%
+      +float(left)
+      padding: 0 0 0 33px

@@ -203,6 +203,38 @@ $base-font-size: 16px
         text-align: left
         +fontsize-rem(10px)
 
+=mini-calendar-header
+  margin-bottom: 0
+  background: $menu_bg
+  float: left
+  width: 100%
+  padding: 3px 10px
+  a
+    +link($red)
+    +fontsize-rem(10px)
+  .first,
+  .last
+    display: inline-block
+    float: left
+    &::before,
+    &::after
+      content: '<'
+      +fontsize-rem(10px)
+      color: $red
+      margin-left: 5px
+  .first
+    &::after
+      display: none
+    &::before
+      margin-left: 0px
+      margin-right: 5px
+  .last
+    float: right
+    &::after
+      content: '>'
+    &::before
+      display: none
+
 =list-view-style($color:$red)
   border-top: 2.5px solid $grey-be
   padding: 0

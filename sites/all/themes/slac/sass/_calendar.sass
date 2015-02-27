@@ -174,7 +174,8 @@
       border: 0px
     thead
       background: $menu_bg
-    .contents
+    .contents,
+    .calendar-more
       background: $menu_bg
       margin: 0 8px
       padding: 8px
@@ -191,6 +192,13 @@
         clear: both
         .page-basic-io &
           color: $dark-blue
+    .calendar-more
+      padding: 0 8px
+      color: $red
+      +fontsize-rem(10px)
+      margin-bottom: 10px
+      a
+        +link($red)
     //day view adjustments for when the day is selected, not month or week
     .day-view
       .full
@@ -231,6 +239,7 @@
           a
             +link($red)
             text-align: left
+            +fontsize-rem(14px)
         .list-location
           +clearfix
         .list-fulldate
@@ -286,6 +295,8 @@
       float: left
       +mini-calendar
       margin-top: 68px
+      .view-header
+        +mini-calendar-header
     .calendar-calendar
       a
         padding: 3px !important
@@ -309,7 +320,7 @@
   .page-basic-io
     .l-calendar-upper
       .pane-events-month-list,
-      .pane-events-week-list
+      .pane-events-week-list,
       .page-events-day-list
         .view-content
           +list-view-style($dark-blue)
@@ -372,6 +383,8 @@
 .l-calendar-right-sidebar
   .pane-event-series
     margin-top: 80px
+    .section-event-categories &
+      margin-top: 0px
   .pane-event-series
     h2
       +fontsize-rem(16px)
@@ -472,6 +485,8 @@
     z-index: 3
 
   .pane-events-minicalendar
+    .view-header
+      +mini-calendar-header
     .view-filters
       display: none
     +mini-calendar
@@ -560,3 +575,7 @@
   .ctools-collapsible-container .ctools-toggle-collapsed
     background-image: url(../images/collapsible-expanded.png)
 
+////tax term pages
+.section-event-categories
+  .pane-events-taxonomy-term-list
+    +list-view-style($color:$red)

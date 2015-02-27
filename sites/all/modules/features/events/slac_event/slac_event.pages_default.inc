@@ -481,7 +481,7 @@ function slac_event_default_page_manager_handlers() {
     $pane->pid = 'new-14';
     $pane->panel = 'center';
     $pane->type = 'views_panes';
-    $pane->subtype = 'events-minicalendar';
+    $pane->subtype = 'events-taxonomy_term_list';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
@@ -497,31 +497,13 @@ function slac_event_default_page_manager_handlers() {
     $display->panels['center'][0] = 'new-14';
     $pane = new stdClass();
     $pane->pid = 'new-15';
-    $pane->panel = 'center';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'events-taxonomy_term_list';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $display->content['new-15'] = $pane;
-    $display->panels['center'][1] = 'new-15';
-    $pane = new stdClass();
-    $pane->pid = 'new-16';
     $pane->panel = 'right';
     $pane->type = 'event_series';
     $pane->subtype = 'event_series';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_title' => 0,
+      'override_title' => 1,
       'override_title_text' => '',
     );
     $pane->cache = array();
@@ -532,10 +514,10 @@ function slac_event_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-16'] = $pane;
-    $display->panels['right'][0] = 'new-16';
+    $display->content['new-15'] = $pane;
+    $display->panels['right'][0] = 'new-15';
     $pane = new stdClass();
-    $pane->pid = 'new-17';
+    $pane->pid = 'new-16';
     $pane->panel = 'title';
     $pane->type = 'term_description';
     $pane->subtype = 'term_description';
@@ -557,8 +539,8 @@ function slac_event_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-17'] = $pane;
-    $display->panels['title'][0] = 'new-17';
+    $display->content['new-16'] = $pane;
+    $display->panels['title'][0] = 'new-16';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
