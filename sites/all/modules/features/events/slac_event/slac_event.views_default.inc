@@ -990,12 +990,6 @@ function slac_event_views_default_views() {
   $handler->display->display_options['header']['calendar_header_content']['field'] = 'calendar_header_content';
   $handler->display->display_options['header']['calendar_header_content']['ui_name'] = 'Header Content';
   $handler->display->display_options['defaults']['footer'] = FALSE;
-  /* Footer: Calendar footer */
-  $handler->display->display_options['footer']['calendar_footer']['id'] = 'calendar_footer';
-  $handler->display->display_options['footer']['calendar_footer']['table'] = 'views';
-  $handler->display->display_options['footer']['calendar_footer']['field'] = 'calendar_footer';
-  $handler->display->display_options['footer']['calendar_footer']['ui_name'] = 'Calendar footer';
-  $handler->display->display_options['footer']['calendar_footer']['label'] = 'calendar_footer';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Date: Date (node) */
   $handler->display->display_options['arguments']['date_argument']['id'] = 'date_argument';
@@ -1115,12 +1109,6 @@ function slac_event_views_default_views() {
   $handler->display->display_options['header']['calendar_header_content']['field'] = 'calendar_header_content';
   $handler->display->display_options['header']['calendar_header_content']['ui_name'] = 'Header Content';
   $handler->display->display_options['defaults']['footer'] = FALSE;
-  /* Footer: Calendar footer */
-  $handler->display->display_options['footer']['calendar_footer']['id'] = 'calendar_footer';
-  $handler->display->display_options['footer']['calendar_footer']['table'] = 'views';
-  $handler->display->display_options['footer']['calendar_footer']['field'] = 'calendar_footer';
-  $handler->display->display_options['footer']['calendar_footer']['ui_name'] = 'Calendar footer';
-  $handler->display->display_options['footer']['calendar_footer']['label'] = 'calendar_footer';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Date: Date (node) */
   $handler->display->display_options['arguments']['date_argument']['id'] = 'date_argument';
@@ -1180,12 +1168,6 @@ function slac_event_views_default_views() {
   $handler->display->display_options['header']['calendar_header_content']['field'] = 'calendar_header_content';
   $handler->display->display_options['header']['calendar_header_content']['ui_name'] = 'Header Content';
   $handler->display->display_options['defaults']['footer'] = FALSE;
-  /* Footer: Calendar footer */
-  $handler->display->display_options['footer']['calendar_footer']['id'] = 'calendar_footer';
-  $handler->display->display_options['footer']['calendar_footer']['table'] = 'views';
-  $handler->display->display_options['footer']['calendar_footer']['field'] = 'calendar_footer';
-  $handler->display->display_options['footer']['calendar_footer']['ui_name'] = 'Calendar footer';
-  $handler->display->display_options['footer']['calendar_footer']['label'] = 'calendar_footer';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Image */
   $handler->display->display_options['fields']['field_event_image']['id'] = 'field_event_image';
@@ -1343,12 +1325,6 @@ function slac_event_views_default_views() {
   $handler->display->display_options['header']['calendar_header_content']['field'] = 'calendar_header_content';
   $handler->display->display_options['header']['calendar_header_content']['ui_name'] = 'Header Content';
   $handler->display->display_options['defaults']['footer'] = FALSE;
-  /* Footer: Calendar footer */
-  $handler->display->display_options['footer']['calendar_footer']['id'] = 'calendar_footer';
-  $handler->display->display_options['footer']['calendar_footer']['table'] = 'views';
-  $handler->display->display_options['footer']['calendar_footer']['field'] = 'calendar_footer';
-  $handler->display->display_options['footer']['calendar_footer']['ui_name'] = 'Calendar footer';
-  $handler->display->display_options['footer']['calendar_footer']['label'] = 'calendar_footer';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Image */
   $handler->display->display_options['fields']['field_event_image']['id'] = 'field_event_image';
@@ -1505,12 +1481,6 @@ function slac_event_views_default_views() {
   $handler->display->display_options['header']['calendar_header_content']['field'] = 'calendar_header_content';
   $handler->display->display_options['header']['calendar_header_content']['ui_name'] = 'Header Content';
   $handler->display->display_options['defaults']['footer'] = FALSE;
-  /* Footer: Calendar footer */
-  $handler->display->display_options['footer']['calendar_footer']['id'] = 'calendar_footer';
-  $handler->display->display_options['footer']['calendar_footer']['table'] = 'views';
-  $handler->display->display_options['footer']['calendar_footer']['field'] = 'calendar_footer';
-  $handler->display->display_options['footer']['calendar_footer']['ui_name'] = 'Calendar footer';
-  $handler->display->display_options['footer']['calendar_footer']['label'] = 'calendar_footer';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Image */
   $handler->display->display_options['fields']['field_event_image']['id'] = 'field_event_image';
@@ -1661,12 +1631,6 @@ function slac_event_views_default_views() {
   $handler->display->display_options['header']['calendar_header_content']['field'] = 'calendar_header_content';
   $handler->display->display_options['header']['calendar_header_content']['ui_name'] = 'Header Content';
   $handler->display->display_options['defaults']['footer'] = FALSE;
-  /* Footer: Calendar footer */
-  $handler->display->display_options['footer']['calendar_footer']['id'] = 'calendar_footer';
-  $handler->display->display_options['footer']['calendar_footer']['table'] = 'views';
-  $handler->display->display_options['footer']['calendar_footer']['field'] = 'calendar_footer';
-  $handler->display->display_options['footer']['calendar_footer']['ui_name'] = 'Calendar footer';
-  $handler->display->display_options['footer']['calendar_footer']['label'] = 'calendar_footer';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Image */
   $handler->display->display_options['fields']['field_event_image']['id'] = 'field_event_image';
@@ -1889,12 +1853,6 @@ function slac_event_views_default_views() {
   $handler->display->display_options['exposed_block'] = TRUE;
   $handler->display->display_options['defaults']['header'] = FALSE;
   $handler->display->display_options['defaults']['footer'] = FALSE;
-  /* Footer: Calendar footer */
-  $handler->display->display_options['footer']['calendar_footer']['id'] = 'calendar_footer';
-  $handler->display->display_options['footer']['calendar_footer']['table'] = 'views';
-  $handler->display->display_options['footer']['calendar_footer']['field'] = 'calendar_footer';
-  $handler->display->display_options['footer']['calendar_footer']['ui_name'] = 'Calendar footer';
-  $handler->display->display_options['footer']['calendar_footer']['label'] = 'calendar_footer';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Image */
   $handler->display->display_options['fields']['field_event_image']['id'] = 'field_event_image';
