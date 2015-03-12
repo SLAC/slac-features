@@ -40,7 +40,7 @@ class views_handler_slac_events_calendar_header_content extends views_handler_ar
       $next_time_string = '+1 week';
     }
     elseif ($current_display == 'day') {
-      $date_display = format_date($current_time, 'custom', 'F j, Y');
+      $date_display = format_date($current_time, 'custom', 'l, F j, Y');
       $previous_time_string = '-1 day';
       $next_time_string = '+1 day';
     }
