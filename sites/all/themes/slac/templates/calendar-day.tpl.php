@@ -31,10 +31,10 @@
 ?>
 <div class="calendar-calendar"><div class="day-view">
 <table class="full">
-  <col width="20"></col>
+  <col width="20%"></col>
   <thead>
     <?php foreach ($columns as $column): ?>
-    <col width="80"></col>
+    <col width="80%"></col>
     <?php endforeach; ?>
     <tr>
       <th class="calendar-dayview-hour"><?php print $by_hour_count > 0 ? t('Time') : ''; ?></th>

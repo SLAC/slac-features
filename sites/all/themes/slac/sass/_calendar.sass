@@ -119,13 +119,17 @@
           &.today
             border-bottom: 0
             border-top: 3px solid $grey-d
-        .page-events-day-grid &
+        .page-events-day-grid &,
+        .page-events-day &
           &.full
             td
               width: 100%
               border-right: 0px 
               &.calendar-agenda-items
                 border-left: 5px solid $menu_bg
+                .item
+                  display: inline-block
+                  float: left
             tr
               border-top: 5px solid $menu_bg
               border-right: 5px solid $menu_bg
@@ -138,9 +142,11 @@
               display: inline-block
               padding: 3px
             a
-              padding: 6px
+              padding: 0px
               display: inline-block
-              &.active
+              +at-breakpoint($mini-cal-break)
+                padding: 6px
+              &.active 
                 background-color: $red
                 color: #fff
                 font-weight: bold
@@ -233,7 +239,7 @@
       .contents
         position: relative
         background: $menu_bg
-        margin: 20px 30px
+        margin: 20px 0px 20px 30px
         padding: 10px
         max-width: 300px
         +clearfix
@@ -320,9 +326,6 @@
           a
             .page-basic-io &
               +link($dark-blue, $dark-blue)
-    .views-widget-filter-field_slac_event_category_tid,
-    .views-widget-filter-field_event_tags_tid
-      display: none
   .page-basic-io
     .l-calendar-upper
       .pane-events-month-list,
@@ -371,7 +374,7 @@
         +link($h2-color, white)
         text-transform: capitalize
         border: 1px solid $grey-d
-        font-weight: normal
+        font-weight: bold
         +fontsize-rem(10px)
         padding: 0.25rem 0.5rem
         &.active,
@@ -393,7 +396,7 @@
       margin-top: 0px
   .pane-event-series
     h2
-      +fontsize-rem(16px)
+      +fontsize-rem(12px)
       +caps
       +bold
       color: $h2-color
@@ -550,6 +553,8 @@
     .bef-checkboxes
       width: 95%
       margin: 0 15px
+      .form-type-bef-checkbox
+        clear: both
       input[type="checkbox"]
         float: right
         margin: 5px
@@ -585,7 +590,15 @@
 .section-event-categories
   .pane-events-taxonomy-term-list
     +list-view-style($color:$red)
+
+///mini cal adjusment for FF
 .page-events
   .view-display-id-minicalendar
     display: table
     width: 100%
+
+///
+.page-events-day-grid
+  .day-view
+    border-bottom: 5px solid $menu_bg
+page-events-day
