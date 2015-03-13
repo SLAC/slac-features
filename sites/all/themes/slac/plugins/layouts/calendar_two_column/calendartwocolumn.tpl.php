@@ -38,6 +38,7 @@
   <?php endif ?>
   </div>
   <div class="l-calendar-lower-section">
+    <a name ="linktotop"></a>
     <?php if ($content['list-left']): ?>
     <div class="l-calendar-list-left">
       <div class="inside"><?php print $content['list-left']; ?></div>
@@ -46,6 +47,11 @@
     <?php if ($content['list-right']): ?>
     <div class="l-calendar-list-right">
       <div class="inside"><?php print $content['list-right']; ?></div>
+    </div>
+    <?php endif ?>
+    <?php if ($content['list-bottom']): ?>
+    <div class="l-calendar-list-bottom">
+      <div class="inside"><?php print $content['list-bottom']; ?></div>
     </div>
     <?php endif ?>
   </div>

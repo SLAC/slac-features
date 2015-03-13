@@ -597,8 +597,27 @@
     display: table
     width: 100%
 
-///
+///adds the bottom border
 .page-events-day-grid
   .day-view
     border-bottom: 5px solid $menu_bg
 page-events-day
+
+///back to top link
+.l-calendar-list-bottom
+  position: relative
+  background: $red
+  height: 35px
+  a
+    +fontsize-rem(12px)
+    +link(white, $grey-f5)
+    position: absolute
+    top: 12px
+    margin: 0 50px
+    &::after
+      @extend .slac-font
+      content: "\E607"
+      padding: 5px
+      font-size: 25px
+      line-height: 0
+      position: absolute

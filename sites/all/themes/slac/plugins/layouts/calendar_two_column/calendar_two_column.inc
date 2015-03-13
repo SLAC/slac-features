@@ -17,6 +17,7 @@ $plugin = array(
     'right' => t('Right Sidebar'),
     'list-left'=>t('List Left'),
     'list-right'=> t('List Right'),
+    'list-bottom'=> t('Return To Top'),
   ),
 );
 
