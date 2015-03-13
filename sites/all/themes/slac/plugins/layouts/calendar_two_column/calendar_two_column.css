@@ -24,3 +24,7 @@
   display: inline-block;
   width: 40%;
 }
+.panels-dnd .l-calendar-list-bottom {
+  clear: both;
+  width: 100%;
+}
