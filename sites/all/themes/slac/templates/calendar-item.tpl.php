@@ -49,7 +49,10 @@ foreach ($rendered_fields as $field) {
 }
 $content .= '</div>';
 
-if (isset($item->rendered_fields['path'])) {
+if (isset($item->rendered_fields['field_slac_event_link'])) {
+  $content = l($content, $item->rendered_fields['field_slac_event_link'], array('html' => TRUE));
+}
+elseif (isset($item->rendered_fields['path'])) {
   $content = l($content, trim($item->rendered_fields['path'], '/'), array('html' => TRUE));
 }
 

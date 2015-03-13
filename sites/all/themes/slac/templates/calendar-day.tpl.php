@@ -31,10 +31,10 @@
 ?>
 <div class="calendar-calendar"><div class="day-view">
 <table class="full">
-  <col width="20"></col>
+  <col width="20%"></col>
   <thead>
     <?php foreach ($columns as $column): ?>
-    <col width="80"></col>
+    <col width="80%"></col>
     <?php endforeach; ?>
     <tr>
       <th class="calendar-dayview-hour"><?php print $by_hour_count > 0 ? t('Time') : ''; ?></th>
@@ -63,17 +63,18 @@
         <?php endif; ?>
       <?php endforeach; ?>
     </tr>
-    <?php foreach ($rows['items'] as $hour): ?>
+    <?php foreach ($rows['items'] as $hour => $data): ?>
     <tr>
       <?php foreach ($columns as $column): ?>
-        <?php if (isset($hour['values'][$column])): ?>
+        <?php if (isset($data['values'][$column])): ?>
           <td class="calendar-agenda-hour">
-            <span class="calendar-hour"><?php print $hour['hour']; ?></span><span class="calendar-ampm"><?php print $hour['ampm']; ?></span>
+            <?php $custom_format = date('g:ia', strtotime($hour)); ?>
+            <span class="calendar-hour calendar-time calendar-ampm"><?php print $custom_format; ?></span>
           </td>
           <td class="calendar-agenda-items single-day">
             <div class="calendar">
             <div class="inner">
-              <?php print implode($hour['values'][$column]); ?>
+              <?php print implode($data['values'][$column]); ?>
             </div>
             </div>
           </td>

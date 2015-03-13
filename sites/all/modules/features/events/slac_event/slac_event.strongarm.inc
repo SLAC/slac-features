@@ -168,7 +168,10 @@ function slac_event_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '13',
+          'weight' => '14',
+        ),
+        'metatags' => array(
+          'weight' => '15',
         ),
       ),
       'display' => array(),
