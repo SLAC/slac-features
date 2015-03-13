@@ -177,6 +177,9 @@ $base-font-size: 16px
         a
           background-color: $red
           border-radius: 15px
+          width: 17px
+          height: 17px
+          line-height: 1.5
           +link(white)
           +bold
     thead,
@@ -184,6 +187,18 @@ $base-font-size: 16px
       background: $menu_bg
       td
         border-right: 0px !important
+        padding: 3px
+        &.has-events
+          position: relative
+          &::after
+            content: '•'
+            position: absolute
+            bottom: -13px
+            left: 43%
+            color: #b7b389
+            +fontsize-rem(20px)
+            +at-breakpoint($less-than-758)
+              left: 38%
     thead
       border-top: 3px solid white 
       border-bottom: 3px solid white
