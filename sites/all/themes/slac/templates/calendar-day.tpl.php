@@ -63,17 +63,18 @@
         <?php endif; ?>
       <?php endforeach; ?>
     </tr>
-    <?php foreach ($rows['items'] as $hour): ?>
+    <?php foreach ($rows['items'] as $hour => $data): ?>
     <tr>
       <?php foreach ($columns as $column): ?>
-        <?php if (isset($hour['values'][$column])): ?>
+        <?php if (isset($data['values'][$column])): ?>
           <td class="calendar-agenda-hour">
-            <span class="calendar-hour"><?php print $hour['hour']; ?></span><span class="calendar-ampm"><?php print $hour['ampm']; ?></span>
+            <?php $custom_format = date('g:ia', strtotime($hour)); ?>
+            <span class="calendar-hour calendar-time calendar-ampm"><?php print $custom_format; ?></span>
           </td>
           <td class="calendar-agenda-items single-day">
             <div class="calendar">
             <div class="inner">
-              <?php print implode($hour['values'][$column]); ?>
+              <?php print implode($data['values'][$column]); ?>
             </div>
             </div>
           </td>
