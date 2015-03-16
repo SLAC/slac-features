@@ -1726,6 +1726,8 @@ form.node-blog-form .filter-help a { padding-left: 0; }
 .section-event-categories .pane-events-taxonomy-term-list .views-row .views-field-nothing { overflow: hidden; }
 .section-event-categories .pane-events-taxonomy-term-list .views-row .list-view-ics { position: absolute; top: 27px; right: 16px; font-size: 0; color: #626262; }
 .section-event-categories .pane-events-taxonomy-term-list .views-row .list-view-ics:after { content: "\e61f"; font-size: 15px; font-size: 0.9375rem; }
+.section-event-categories .l-calendar-right-sidebar { width: 100%; }
+@media (min-width: 894px) { .section-event-categories .l-calendar-right-sidebar { width: 17%; } }
 
 .page-events .view-display-id-minicalendar { display: table; width: 100%; }
 
