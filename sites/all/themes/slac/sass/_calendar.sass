@@ -213,6 +213,8 @@
         +link($red)
     //day view adjustments for when the day is selected, not month or week
     .day-view
+      display: inline-block
+      float: left
       .full
         margin-top: 45px
       tbody
@@ -625,3 +627,10 @@ page-events-day
       font-size: 25px
       line-height: 0
       position: absolute
+
+.node-type-event
+  .pane-node-field-attachment
+    .download-file
+      a
+        float: left
+        margin-right: 5px

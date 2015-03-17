@@ -1436,6 +1436,7 @@ form.node-blog-form .filter-help a { padding-left: 0; }
 .calendar-page .calendar-calendar .calendar-more a { text-decoration: none; color: #871628; }
 .calendar-page .calendar-calendar .calendar-more a:link, .calendar-page .calendar-calendar .calendar-more a:visited { text-decoration: none; }
 .calendar-page .calendar-calendar .calendar-more a.active, .calendar-page .calendar-calendar .calendar-more a:hover, .calendar-page .calendar-calendar .calendar-more a:focus { color: #871628; }
+.calendar-page .calendar-calendar .day-view { display: inline-block; float: left; }
 .calendar-page .calendar-calendar .day-view .full { margin-top: 45px; }
 .calendar-page .calendar-calendar .day-view tbody { *zoom: 1; }
 .calendar-page .calendar-calendar .day-view tbody:before, .calendar-page .calendar-calendar .day-view tbody:after { content: ""; display: table; }
@@ -1738,6 +1739,8 @@ form.node-blog-form .filter-help a { padding-left: 0; }
 .l-calendar-list-bottom a:link, .l-calendar-list-bottom a:visited { text-decoration: none; }
 .l-calendar-list-bottom a.active, .l-calendar-list-bottom a:hover, .l-calendar-list-bottom a:focus { color: whitesmoke; }
 .l-calendar-list-bottom a::after { content: "\E607"; padding: 5px; font-size: 25px; line-height: 0; position: absolute; }
+
+.node-type-event .pane-node-field-attachment .download-file a { float: left; margin-right: 5px; }
 
 /*# sourceMappingURL=styles.css.map */
 
