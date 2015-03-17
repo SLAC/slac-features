@@ -598,6 +598,15 @@ function slac_event_theme($existing, $type, $theme, $path) {
           'display_modes' => NULL,
         ),
       ),
+      'slac_events_calendar_mini_pager' => array(
+        'template' => 'calendar-mini-pager',
+        'path' => $path . '/theme',
+        'type' => 'theme',
+        'variables' => array(
+          'pager' => NULL,
+          'date_display' => NULL,
+        ),
+      ),
     );
   }
 }
