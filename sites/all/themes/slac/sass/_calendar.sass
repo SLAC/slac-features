@@ -127,7 +127,7 @@
               border-right: 0px 
               &.calendar-agenda-items
                 border-left: 5px solid $menu_bg
-                .item
+                .view-item
                   display: inline-block
                   float: left
             tr
@@ -192,6 +192,7 @@
       margin: 0 8px
       padding: 8px
       max-width: 135px
+      position: relative
       .views-field-field-slac-event-date,
       .views-field-field-slac-event-date-1
         +fontsize-rem(11px)
@@ -204,6 +205,17 @@
         clear: both
         .page-basic-io &
           color: $dark-blue
+      .list-view-ics
+        position: absolute
+        top: 0px
+        right: 0px
+        width: auto
+        +fontsize-rem(0px)
+        color: $h2-color
+        &:after
+          +fontsize-rem(15px)
+          content: "\e61f"
+          @extend .slac-font
     .calendar-more
       padding: 0 8px
       color: $red
@@ -550,6 +562,7 @@
       +fontsize-rem(12px)
     .views-exposed-widget
       padding-left: 8px
+      width: 100%
     .views-exposed-form
       margin-bottom: 10px
     .bef-checkboxes
@@ -607,7 +620,7 @@
 .page-events-day-grid
   .day-view
     border-bottom: 5px solid $menu_bg
-page-events-day
+
 
 ///back to top link
 .l-calendar-list-bottom
