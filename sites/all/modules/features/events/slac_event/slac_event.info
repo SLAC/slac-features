@@ -120,4 +120,6 @@ files[] = plugins/views_handler_slac_events_calendar_footer.inc
 files[] = plugins/views_handler_slac_events_calendar_main_area_title.inc
 files[] = plugins/views_handler_slac_events_calendar_header_content.inc
 files[] = plugins/views_handler_slac_events_calendar_mini_pager.inc
-mtime = 1426606506
+
+mtime = 1426708730
+
