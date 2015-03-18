@@ -301,6 +301,36 @@
           float: left
           span
             float: none
+      .full
+        td.multi-day
+          +clearfix
+          div.dayview
+            height: auto !important
+          .contents
+            img
+              margin-right: 15px
+              +float-items(left)
+              height: 100%
+              border: 2px solid white
+            a
+              content: ' '
+              font-size: 0
+            .list-starttime,
+            .list-endtime,
+            .date-display-single
+              display: none
+            .list-fulldate
+              float: left
+              width: 60%
+              .date-display-single
+                display: block
+            .list-title
+              a
+                +fontsize-rem(14px)
+            .list-view-ics
+              top: 8px
+              right: 10px
+
       .cutoff
         display: none
       .date-display-single
@@ -617,7 +647,8 @@
     width: 100%
 
 ///adds the bottom border
-.page-events-day-grid
+.page-events-day-grid,
+.page-events-day
   .day-view
     border-bottom: 5px solid $menu_bg
 

@@ -1472,6 +1472,17 @@ form.node-blog-form .filter-help a { padding-left: 0; }
 .calendar-page .calendar-calendar .day-view .contents .views-field .list-view-ics:after { font-size: 15px; font-size: 0.9375rem; content: "\e61f"; }
 .calendar-page .calendar-calendar .day-view .contents span { float: left; }
 .calendar-page .calendar-calendar .day-view .contents span span { float: none; }
+.calendar-page .calendar-calendar .day-view .full td.multi-day { *zoom: 1; }
+.calendar-page .calendar-calendar .day-view .full td.multi-day:before, .calendar-page .calendar-calendar .day-view .full td.multi-day:after { content: ""; display: table; }
+.calendar-page .calendar-calendar .day-view .full td.multi-day:after { clear: both; }
+.calendar-page .calendar-calendar .day-view .full td.multi-day div.dayview { height: auto !important; }
+.calendar-page .calendar-calendar .day-view .full td.multi-day .contents img { margin-right: 15px; float: left; display: inline-block; height: 100%; border: 2px solid white; }
+.calendar-page .calendar-calendar .day-view .full td.multi-day .contents a { content: " "; font-size: 0; }
+.calendar-page .calendar-calendar .day-view .full td.multi-day .contents .list-starttime, .calendar-page .calendar-calendar .day-view .full td.multi-day .contents .list-endtime, .calendar-page .calendar-calendar .day-view .full td.multi-day .contents .date-display-single { display: none; }
+.calendar-page .calendar-calendar .day-view .full td.multi-day .contents .list-fulldate { float: left; width: 60%; }
+.calendar-page .calendar-calendar .day-view .full td.multi-day .contents .list-fulldate .date-display-single { display: block; }
+.calendar-page .calendar-calendar .day-view .full td.multi-day .contents .list-title a { font-size: 14px; font-size: 0.875rem; }
+.calendar-page .calendar-calendar .day-view .full td.multi-day .contents .list-view-ics { top: 8px; right: 10px; }
 .calendar-page .calendar-calendar .day-view .cutoff { display: none; }
 .calendar-page .calendar-calendar .day-view .date-display-single { font-size: 14px; font-size: 0.875rem; font-weight: bold; }
 .calendar-page .calendar-calendar .day-view .views-field-title { float: left; width: 100%; font-size: 14px; font-size: 0.875rem; }
@@ -1736,7 +1747,7 @@ form.node-blog-form .filter-help a { padding-left: 0; }
 
 .page-events .view-display-id-minicalendar { display: table; width: 100%; }
 
-.page-events-day-grid .day-view { border-bottom: 5px solid #ebebdf; }
+.page-events-day-grid .day-view, .page-events-day .day-view { border-bottom: 5px solid #ebebdf; }
 
 .l-calendar-list-bottom { position: relative; background: #871628; height: 35px; }
 .l-calendar-list-bottom a { font-size: 12px; font-size: 0.75rem; text-decoration: none; color: white; position: absolute; top: 12px; margin: 0 50px; }

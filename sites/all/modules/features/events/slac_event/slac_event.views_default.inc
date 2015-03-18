@@ -1242,7 +1242,7 @@ function slac_event_views_default_views() {
   $handler->display->display_options['fields']['field_event_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_event_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_event_image']['settings'] = array(
-    'image_style' => 'crop_portrait',
+    'image_style' => 'event-calendar',
     'image_link' => '',
   );
   /* Field: Content: Title */

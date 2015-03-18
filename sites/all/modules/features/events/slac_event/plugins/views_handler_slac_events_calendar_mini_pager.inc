@@ -34,7 +34,6 @@ class views_handler_slac_events_calendar_mini_pager extends views_handler_area {
       'pager' => theme('item_list', array('items' => $items)),
     ));
 
-
     return $output;
   }
 }
