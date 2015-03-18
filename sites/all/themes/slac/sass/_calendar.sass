@@ -127,7 +127,7 @@
               border-right: 0px 
               &.calendar-agenda-items
                 border-left: 5px solid $menu_bg
-                .item
+                .view-item
                   display: inline-block
                   float: left
             tr
@@ -192,6 +192,7 @@
       margin: 0 8px
       padding: 8px
       max-width: 135px
+      position: relative
       .views-field-field-slac-event-date,
       .views-field-field-slac-event-date-1
         +fontsize-rem(11px)
@@ -204,6 +205,17 @@
         clear: both
         .page-basic-io &
           color: $dark-blue
+      .list-view-ics
+        position: absolute
+        top: 0px
+        right: 0px
+        width: auto
+        +fontsize-rem(0px)
+        color: $h2-color
+        &:after
+          +fontsize-rem(15px)
+          content: "\e61f"
+          @extend .slac-font
     .calendar-more
       padding: 0 8px
       color: $red
@@ -213,6 +225,8 @@
         +link($red)
     //day view adjustments for when the day is selected, not month or week
     .day-view
+      display: inline-block
+      float: left
       .full
         margin-top: 45px
       tbody
@@ -287,6 +301,36 @@
           float: left
           span
             float: none
+      .full
+        td.multi-day
+          +clearfix
+          div.dayview
+            height: auto !important
+          .contents
+            img
+              margin-right: 15px
+              +float-items(left)
+              height: 100%
+              border: 2px solid white
+            a
+              content: ' '
+              font-size: 0
+            .list-starttime,
+            .list-endtime,
+            .date-display-single
+              display: none
+            .list-fulldate
+              float: left
+              width: 60%
+              .date-display-single
+                display: block
+            .list-title
+              a
+                +fontsize-rem(14px)
+            .list-view-ics
+              top: 8px
+              right: 10px
+
       .cutoff
         display: none
       .date-display-single
@@ -548,6 +592,7 @@
       +fontsize-rem(12px)
     .views-exposed-widget
       padding-left: 8px
+      width: 100%
     .views-exposed-form
       margin-bottom: 10px
     .bef-checkboxes
@@ -590,6 +635,10 @@
 .section-event-categories
   .pane-events-taxonomy-term-list
     +list-view-style($color:$red)
+  .l-calendar-right-sidebar
+    width: 100%
+    +at-breakpoint($small-desktop)
+      width: 17%
 
 ///mini cal adjusment for FF
 .page-events
@@ -598,10 +647,11 @@
     width: 100%
 
 ///adds the bottom border
-.page-events-day-grid
+.page-events-day-grid,
+.page-events-day
   .day-view
     border-bottom: 5px solid $menu_bg
-page-events-day
+
 
 ///back to top link
 .l-calendar-list-bottom
@@ -621,3 +671,10 @@ page-events-day
       font-size: 25px
       line-height: 0
       position: absolute
+
+.node-type-event
+  .pane-node-field-attachment
+    .download-file
+      a
+        float: left
+        margin-right: 5px

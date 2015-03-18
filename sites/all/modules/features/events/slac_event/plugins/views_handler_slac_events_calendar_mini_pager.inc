@@ -18,6 +18,9 @@ class views_handler_slac_events_calendar_mini_pager extends views_handler_area {
 
     $prev_timestamp = strtotime(format_date($current_time, 'custom', 'Y-m-d') . '-1 ' . $view_mode);
     $prev_date = format_date($prev_timestamp, 'custom', 'Y-m-d');
+    $date_display = format_date($current_time, 'custom', 'F Y');
+    
+
 
     $next_timestamp = strtotime(format_date($current_time, 'custom', 'Y-m-d') . '+1 ' . $view_mode);
     $next_date = format_date($next_timestamp, 'custom', 'Y-m-d');
@@ -25,6 +28,12 @@ class views_handler_slac_events_calendar_mini_pager extends views_handler_area {
       l(t('Prev'), SLAC_EVENT_EVENTS_PAGE_URI . '/' . $view_mode . '/list/' . $prev_date),
       l(t('Next'), SLAC_EVENT_EVENTS_PAGE_URI . '/' . $view_mode . '/list/' . $next_date),
     );
-    return theme('item_list', array('items' => $items));
+
+    $output = theme('slac_events_calendar_mini_pager', array(
+      'date_display' => $date_display,
+      'pager' => theme('item_list', array('items' => $items)),
+    ));
+
+    return $output;
   }
 }
