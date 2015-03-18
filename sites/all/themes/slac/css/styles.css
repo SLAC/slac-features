@@ -1409,6 +1409,7 @@ form.node-blog-form .filter-help a { padding-left: 0; }
 .page-basic > .content .calendar-page table td, .page-basic > .content .calendar-page table th { border: 0; padding: 0; text-align: center; font-size: 12px; font-size: 0.75rem; color: inherit; }
 .page-basic > .content .calendar-page table td { border-right: 1px solid #dddddd; padding: 0; width: 14.3%; vertical-align: top; }
 .page-basic > .content .calendar-page table .today { background: #d8d3bc; border-left: 3px solid #dddddd; border-right: 3px solid #dddddd; border-bottom: 3px solid #dddddd; }
+.page-basic > .content .calendar-page table .all-day .today { border-bottom: 0px; }
 .page-basic > .content .calendar-page table .calendar-day-of-month.today { border-bottom: 0; border-top: 3px solid #dddddd; }
 .page-events-day-grid .page-basic > .content .calendar-page table.full td, .page-events-day .page-basic > .content .calendar-page table.full td { width: 100%; border-right: 0px; }
 .page-events-day-grid .page-basic > .content .calendar-page table.full td.calendar-agenda-items, .page-events-day .page-basic > .content .calendar-page table.full td.calendar-agenda-items { border-left: 5px solid #ebebdf; }
