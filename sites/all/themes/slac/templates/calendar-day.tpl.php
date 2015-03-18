@@ -63,10 +63,12 @@
         <?php endif; ?>
       <?php endforeach; ?>
     </tr>
+    <?php $has_data = FALSE; ?>
     <?php foreach ($rows['items'] as $hour => $data): ?>
     <tr>
       <?php foreach ($columns as $column): ?>
         <?php if (isset($data['values'][$column])): ?>
+          <?php $has_data = TRUE; ?>
           <td class="calendar-agenda-hour">
             <?php $custom_format = date('g:ia', strtotime($hour)); ?>
             <span class="calendar-hour calendar-time calendar-ampm"><?php print $custom_format; ?></span>
@@ -81,7 +83,13 @@
         <?php endif; ?>
       <?php endforeach; ?>
     </tr>
-   <?php endforeach; ?>
+    <?php endforeach; ?>
+    <?php if ($has_data === FALSE): ?>
+      <tr class="no-event">
+        <td class="calendar-agenda-hour no-event"></td>
+        <td class="calendar-agenda-items single-day no-event"><div class="calendar"><div class="inner">No events for this date.</div></div></td>
+      </tr>
+    <?php endif; ?>
   </tbody>
 </table>
 </div></div>
