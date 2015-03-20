@@ -173,7 +173,10 @@ $base-font-size: 16px
       border-right: 0 !important
       border-bottom: 0 !important
       background: transparent !important
-      .mini-day-on
+      &.currently-viewed-week
+        background: lighten($menu_bg, 5%) !important
+      .mini-day-on,
+      .mini-day-off
         a
           background-color: $red
           border-radius: 15px
