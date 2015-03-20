@@ -56,6 +56,8 @@ function slac_event_default_page_manager_handlers() {
       'inner_left' => NULL,
       'inner_right' => NULL,
       'inner_title' => NULL,
+      'social_media' => NULL,
+      'right_sidebar' => NULL,
     ),
   );
   $display->cache = array();
@@ -351,6 +353,34 @@ function slac_event_default_page_manager_handlers() {
     $display->panels['inner_right'][6] = 'new-10';
     $pane = new stdClass();
     $pane->pid = 'new-11';
+    $pane->panel = 'inner_right';
+    $pane->type = 'entity_field';
+    $pane->subtype = 'node:field_attachment';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'label' => 'title',
+      'formatter' => 'direct_download_icon',
+      'delta_limit' => '0',
+      'delta_offset' => '0',
+      'delta_reversed' => 0,
+      'formatter_settings' => array(),
+      'context' => 'argument_entity_id:node_1',
+      'override_title' => 1,
+      'override_title_text' => 'RELATED FILES',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 7;
+    $pane->locks = array();
+    $display->content['new-11'] = $pane;
+    $display->panels['inner_right'][7] = 'new-11';
+    $pane = new stdClass();
+    $pane->pid = 'new-12';
     $pane->panel = 'inner_title';
     $pane->type = 'node_title';
     $pane->subtype = 'node_title';
@@ -373,10 +403,10 @@ function slac_event_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-11'] = $pane;
-    $display->panels['inner_title'][0] = 'new-11';
+    $display->content['new-12'] = $pane;
+    $display->panels['inner_title'][0] = 'new-12';
     $pane = new stdClass();
-    $pane->pid = 'new-12';
+    $pane->pid = 'new-13';
     $pane->panel = 'left';
     $pane->type = 'views_panes';
     $pane->subtype = 'events-panel_pane_2';
@@ -391,10 +421,10 @@ function slac_event_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-12'] = $pane;
-    $display->panels['left'][0] = 'new-12';
+    $display->content['new-13'] = $pane;
+    $display->panels['left'][0] = 'new-13';
     $pane = new stdClass();
-    $pane->pid = 'new-13';
+    $pane->pid = 'new-14';
     $pane->panel = 'left_title';
     $pane->type = 'page_title';
     $pane->subtype = 'page_title';
@@ -415,10 +445,10 @@ function slac_event_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-13'] = $pane;
-    $display->panels['left_title'][0] = 'new-13';
+    $display->content['new-14'] = $pane;
+    $display->panels['left_title'][0] = 'new-14';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-13';
+  $display->title_pane = 'new-14';
   $handler->conf['display'] = $display;
   $export['node_view_panel_context_5'] = $handler;
 
@@ -478,7 +508,7 @@ function slac_event_default_page_manager_handlers() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-14';
+    $pane->pid = 'new-15';
     $pane->panel = 'center';
     $pane->type = 'views_panes';
     $pane->subtype = 'events-taxonomy_term_list';
@@ -493,10 +523,10 @@ function slac_event_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-14'] = $pane;
-    $display->panels['center'][0] = 'new-14';
+    $display->content['new-15'] = $pane;
+    $display->panels['center'][0] = 'new-15';
     $pane = new stdClass();
-    $pane->pid = 'new-15';
+    $pane->pid = 'new-16';
     $pane->panel = 'right';
     $pane->type = 'event_series';
     $pane->subtype = 'event_series';
@@ -514,10 +544,10 @@ function slac_event_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-15'] = $pane;
-    $display->panels['right'][0] = 'new-15';
+    $display->content['new-16'] = $pane;
+    $display->panels['right'][0] = 'new-16';
     $pane = new stdClass();
-    $pane->pid = 'new-16';
+    $pane->pid = 'new-17';
     $pane->panel = 'title';
     $pane->type = 'term_description';
     $pane->subtype = 'term_description';
@@ -539,8 +569,8 @@ function slac_event_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-16'] = $pane;
-    $display->panels['title'][0] = 'new-16';
+    $display->content['new-17'] = $pane;
+    $display->panels['title'][0] = 'new-17';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

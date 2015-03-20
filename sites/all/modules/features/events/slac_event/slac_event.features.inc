@@ -29,6 +29,29 @@ function slac_event_views_api($module = NULL, $api = NULL) {
 function slac_event_image_default_styles() {
   $styles = array();
 
+  // Exported image style: event-calendar.
+  $styles['event-calendar'] = array(
+    'name' => 'event-calendar',
+    'label' => 'event-calendar',
+    'effects' => array(
+      2 => array(
+        'label' => 'Scale and crop',
+        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
+        'effect callback' => 'image_scale_and_crop_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'image_resize_form',
+        'summary theme' => 'image_resize_summary',
+        'module' => 'image',
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 92,
+          'height' => 136,
+        ),
+        'weight' => 2,
+      ),
+    ),
+  );
+
   // Exported image style: slac_event_thumbnail.
   $styles['slac_event_thumbnail'] = array(
     'name' => 'slac_event_thumbnail',

@@ -141,6 +141,11 @@ function slac_event_import_single_submit($form, &$form_state) {
       }
     }
   }
+
+  // Add an "external" tag to imported events.
+  $term = slac_event_get_external_term();
+  $node->field_event_tags[LANGUAGE_NONE][]['tid'] = $term->tid;
+
   node_save($node);
   // Let's redirect the user to the node edit form for the node we just created.
   $form_state['redirect'] = "node/{$node->nid}/edit";
@@ -598,6 +603,15 @@ function slac_event_theme($existing, $type, $theme, $path) {
           'display_modes' => NULL,
         ),
       ),
+      'slac_events_calendar_mini_pager' => array(
+        'template' => 'calendar-mini-pager',
+        'path' => $path . '/theme',
+        'type' => 'theme',
+        'variables' => array(
+          'pager' => NULL,
+          'date_display' => NULL,
+        ),
+      ),
     );
   }
 }
@@ -619,4 +633,41 @@ function slac_event_preprocess_calendar_datebox(&$vars) {
   if (!empty($vars['selected'])) {
     $vars['link'] = l($vars['day'], 'events/day/list/' . $vars['date']);
   }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * Adds "external" tag when importing with og_tag.
+ */
+function slac_event_form_og_tags_form_importer_alter(&$form, &$form_state, $form_id) {
+  if (!empty($form['#node_edit_form']) && $form['#node_edit_form'] == TRUE) {
+    $term = slac_event_get_external_term();
+    // Term name, not TID, because the value entered here drops right into the
+    // autocomplete text field as if it had been typed directly by a user.
+    $form['field_event_tags'][LANGUAGE_NONE]['#default_value'] = $term->name;
+  }
+}
+
+/**
+ * Helper function that returns the "external" term.
+ *
+ * @return object
+ *   The loaded "external" term object.
+ */
+function slac_event_get_external_term() {
+  $terms = taxonomy_get_term_by_name('external', 'event_tags');
+  // Create a new term if no existing term was found.
+  if (empty($terms)) {
+    $vocabulary = taxonomy_vocabulary_machine_name_load('event_tags');
+    $term = new stdClass();
+    $term->vid = $vocabulary->vid;
+    $term->name = 'External';
+    taxonomy_term_save($term);
+  }
+  // Use the existing term.
+  else {
+    $term = array_shift($terms);
+  }
+  return $term;
 }

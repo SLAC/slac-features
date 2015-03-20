@@ -173,13 +173,18 @@ $base-font-size: 16px
       border-right: 0 !important
       border-bottom: 0 !important
       background: transparent !important
-      .mini-day-on
+      &.currently-viewed-week
+        background: lighten($menu_bg, 5%) !important
+      .mini-day-on,
+      .mini-day-off
+        background-color: $red
+        border-radius: 15px
+        width: 21px
+        height: 21px
+        line-height: 1.5
+        color: white
+        +bold
         a
-          background-color: $red
-          border-radius: 15px
-          width: 17px
-          height: 17px
-          line-height: 1.5
           +link(white)
           +bold
     thead,
@@ -188,12 +193,14 @@ $base-font-size: 16px
       td
         border-right: 0px !important
         padding: 3px
+        &.currently-viewed-week
+          background: lighten($menu_bg, 5%)
         &.has-events
           position: relative
           &::after
             content: '•'
             position: absolute
-            bottom: -13px
+            bottom: -10px
             left: 43%
             color: #b7b389
             +fontsize-rem(20px)
@@ -249,6 +256,10 @@ $base-font-size: 16px
       content: '>'
     &::before
       display: none
+  .slac-event-minical-header
+    text-align: center
+    +fontsize-rem(14px)
+    font-weight: bold
 
 =list-view-style($color:$red)
   border-top: 2.5px solid $grey-be
