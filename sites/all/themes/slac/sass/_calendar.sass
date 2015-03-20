@@ -674,10 +674,28 @@
       font-size: 25px
       line-height: 0
       position: absolute
-
+//////download files
 .node-type-event
-  .pane-node-field-attachment
-    .download-file
-      a
-        float: left
-        margin-right: 5px
+  .download-file
+    a
+      float: left
+      margin-right: 5px
+    .file-icon
+      &[title~="application/vnd.openxmlformats-officedocument.wordprocessingml.document"],
+      &[title~="application/pdf"],
+      &[title~="application/vnd.ms-powerpoint"],
+      &[title~="application/octet-stream"],
+      &[title~="application/vnd.ms-excel"]
+        background-size: auto
+        width: 0
+        height: 0
+        padding: 8px
+        background: url(../images/download-icons/doc-x.png)
+      &[title~="application/pdf"]
+        background: url(../images/download-icons/pdf.png)
+      &[title~="application/vnd.ms-powerpoint"]
+        background: url(../images/download-icons/powerpoint.png)
+      &[title~="application/octet-stream"]
+        background: url(../images/download-icons/keynote.png)
+      &[title~="application/vnd.ms-excel"]
+        background: url(../images/download-icons/xcell.png)

@@ -1756,7 +1756,12 @@ form.node-blog-form .filter-help a { padding-left: 0; }
 .l-calendar-list-bottom a.active, .l-calendar-list-bottom a:hover, .l-calendar-list-bottom a:focus { color: whitesmoke; }
 .l-calendar-list-bottom a::after { content: "\E607"; padding: 5px; font-size: 25px; line-height: 0; position: absolute; }
 
-.node-type-event .pane-node-field-attachment .download-file a { float: left; margin-right: 5px; }
+.node-type-event .download-file a { float: left; margin-right: 5px; }
+.node-type-event .download-file .file-icon[title~="application/vnd.openxmlformats-officedocument.wordprocessingml.document"], .node-type-event .download-file .file-icon[title~="application/pdf"], .node-type-event .download-file .file-icon[title~="application/vnd.ms-powerpoint"], .node-type-event .download-file .file-icon[title~="application/octet-stream"], .node-type-event .download-file .file-icon[title~="application/vnd.ms-excel"] { background-size: auto; width: 0; height: 0; padding: 8px; background: url(../images/download-icons/doc-x.png); }
+.node-type-event .download-file .file-icon[title~="application/pdf"] { background: url(../images/download-icons/pdf.png); }
+.node-type-event .download-file .file-icon[title~="application/vnd.ms-powerpoint"] { background: url(../images/download-icons/powerpoint.png); }
+.node-type-event .download-file .file-icon[title~="application/octet-stream"] { background: url(../images/download-icons/keynote.png); }
+.node-type-event .download-file .file-icon[title~="application/vnd.ms-excel"] { background: url(../images/download-icons/xcell.png); }
 
 /*# sourceMappingURL=styles.css.map */
 
