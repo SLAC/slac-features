@@ -144,6 +144,19 @@ function _date_repeat_entity_update_dates($entity_wrapper, $entity, $entity_type
   // If query successful, update retrieved entities.
   if (isset($result[$entity_type])) {
 
+    // Get all the field name in the bundle.
+    $fields = field_info_instances($entity_type, $bundle);
+
+    // Get the repeating field name.
+    $repeating_date_field = date_repeat_entity_get_repeating_date_field($entity_type, $bundle);
+
+    // This is to ensure that we do not update the following three fields which are used for tracking the repeat date.
+    $do_not_update = array(
+      DATE_REPEAT_ENTITY_FIELD_CLONE_STATE,
+      DATE_REPEAT_ENTITY_FIELD_MASTER_UUID,
+      $repeating_date_field['field_name'],
+    );
+
     // Build an array of entity ids for for the entity type.
     $date_entity_ids = array_keys($result[$entity_type]);
 
@@ -162,6 +175,15 @@ function _date_repeat_entity_update_dates($entity_wrapper, $entity, $entity_type
       // Set clone state to TRUE so the cloning procedures are skipped
       // when hook_entity_presave is triggered.
       $date_entity_wrapper->{DATE_REPEAT_ENTITY_FIELD_CLONE_STATE} = TRUE;
+
+      // Save the field value in all other entity.
+      foreach (array_keys($fields) as $value) {
+        if (!in_array($value, $do_not_update)) {
+          if (isset($entity_wrapper->{$value})) {
+            $date_entity_wrapper->{$value} = $entity_wrapper->{$value}->value();
+          }
+        }
+      }
 
       // Save the entity.
       entity_save($entity_type, $date_entity);
