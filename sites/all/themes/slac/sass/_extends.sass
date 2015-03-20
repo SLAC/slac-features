@@ -179,9 +179,11 @@ $base-font-size: 16px
       .mini-day-off
         background-color: $red
         border-radius: 15px
-        width: 17px
+        width: 21px
         height: 21px
         line-height: 1.5
+        color: white
+        +bold
         a
           +link(white)
           +bold
@@ -198,7 +200,7 @@ $base-font-size: 16px
           &::after
             content: '•'
             position: absolute
-            bottom: -13px
+            bottom: -10px
             left: 43%
             color: #b7b389
             +fontsize-rem(20px)
