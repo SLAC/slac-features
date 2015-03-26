@@ -381,6 +381,20 @@
       .page-events-day-list
         .view-content
           +list-view-style($dark-blue)
+
+.page-events-month-list,
+.page-events-month
+  .l-calendar-upper
+    .pane-events-minicalendar
+      .calendar-calendar
+        .today
+          &.currently-viewed-week
+            background: transparent !important
+        thead,
+        tbody
+          td
+            &.currently-viewed-week
+              background: transparent
 //hides a filter that is present on the view
 .pane-events-day
   .view-filters

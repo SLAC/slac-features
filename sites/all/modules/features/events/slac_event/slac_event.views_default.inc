@@ -1168,6 +1168,11 @@ function slac_event_views_default_views() {
   $handler->display->display_options['fields']['field_slac_event_link']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_slac_event_link']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_slac_event_link']['type'] = 'link_plain';
+  /* Field: Content: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
