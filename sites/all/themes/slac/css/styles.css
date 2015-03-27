@@ -1435,7 +1435,7 @@ form.node-blog-form .filter-help a { padding-left: 0; }
 .page-basic-io .calendar-page .calendar-calendar .contents .views-field-title, .page-basic-io .calendar-page .calendar-calendar .calendar-more .views-field-title { color: #0c5791; }
 .calendar-page .calendar-calendar .contents .list-view-ics, .calendar-page .calendar-calendar .calendar-more .list-view-ics { position: absolute; top: 0px; right: 0px; width: auto; font-size: 0px; font-size: 0rem; color: #626262; }
 .calendar-page .calendar-calendar .contents .list-view-ics:after, .calendar-page .calendar-calendar .calendar-more .list-view-ics:after { font-size: 15px; font-size: 0.9375rem; content: "\e61f"; }
-.calendar-page .calendar-calendar .calendar-more { padding: 0 8px; color: #871628; font-size: 10px; font-size: 0.625rem; margin-bottom: 10px; }
+.calendar-page .calendar-calendar .calendar-more { padding: 0 0px; color: #871628; font-size: 10px; font-size: 0.625rem; margin-bottom: 10px; }
 .calendar-page .calendar-calendar .calendar-more a { text-decoration: none; color: #871628; }
 .calendar-page .calendar-calendar .calendar-more a:link, .calendar-page .calendar-calendar .calendar-more a:visited { text-decoration: none; }
 .calendar-page .calendar-calendar .calendar-more a.active, .calendar-page .calendar-calendar .calendar-more a:hover, .calendar-page .calendar-calendar .calendar-more a:focus { color: #871628; }
