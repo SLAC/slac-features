@@ -1414,6 +1414,7 @@ form.node-blog-form .filter-help a { padding-left: 0; }
 .page-events-day-grid .page-basic > .content .calendar-page table.full td, .page-events-day .page-basic > .content .calendar-page table.full td { width: 100%; border-right: 0px; }
 .page-events-day-grid .page-basic > .content .calendar-page table.full td.calendar-agenda-items, .page-events-day .page-basic > .content .calendar-page table.full td.calendar-agenda-items { border-left: 5px solid #ebebdf; }
 .page-events-day-grid .page-basic > .content .calendar-page table.full td.calendar-agenda-items .view-item, .page-events-day .page-basic > .content .calendar-page table.full td.calendar-agenda-items .view-item { display: inline-block; float: left; }
+.page-events-day-grid .page-basic > .content .calendar-page table.full td.calendar-agenda-items .inner div[class~=md_3]:nth-child(2n+1), .page-events-day .page-basic > .content .calendar-page table.full td.calendar-agenda-items .inner div[class~=md_3]:nth-child(2n+1) { clear: left; }
 .page-events-day-grid .page-basic > .content .calendar-page table.full tr, .page-events-day .page-basic > .content .calendar-page table.full tr { border-top: 5px solid #ebebdf; border-right: 5px solid #ebebdf; }
 .page-basic > .content .calendar-page table thead th { padding: 6px 0; }
 .page-basic > .content .calendar-page table tbody tr .month { display: inline-block; padding: 3px; }
