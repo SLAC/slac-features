@@ -18,7 +18,15 @@ if (date('U', strtotime("TODAY")) == date('U', strtotime($item['date']))) {
 if (strtolower($item['header_id']) == 'sunday' || strtolower($item['header_id']) == 'saturday') {
   $weekend = ' weekend';
 }
-if (date('n', strtotime("TODAY")) != date('n', strtotime($item['date']))) {
+$date_view = time();
+$arg0 = arg(0);
+$arg3 = arg(3);
+if ($arg0 == SLAC_EVENT_EVENTS_PAGE_URI) {
+  if (!empty($arg3) && preg_match('/^(\d+)-(\d+)-(\d+)/', $arg3)) {
+    $date_view = strtotime($arg3);
+  }
+}
+if (date('n', $date_view) != date('n', strtotime($item['date']))) {
   $non_month = ' not-current';
 }
 ?>
