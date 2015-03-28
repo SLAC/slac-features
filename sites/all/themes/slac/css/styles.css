@@ -1450,7 +1450,7 @@ form.node-blog-form .filter-help a { padding-left: 0; }
 .calendar-page .calendar-calendar .day-view .calendar-agenda-hour { display: block; }
 .calendar-page .calendar-calendar .day-view .calendar-hour { font-size: 14px; font-size: 0.875rem; text-align: left; font-weight: bold; float: right; margin: 10px; }
 .calendar-page .calendar-calendar .day-view .list-starttime, .calendar-page .calendar-calendar .day-view .list-endtime { display: inline-block; float: left; }
-.calendar-page .calendar-calendar .day-view .contents { position: relative; background: #ebebdf; margin: 20px 0px 20px 30px; padding: 10px; max-width: 300px; *zoom: 1; }
+.calendar-page .calendar-calendar .day-view .contents { position: relative; background: #ebebdf; margin: 20px 0px 20px 30px; padding: 10px; width: 300px; max-width: 300px; *zoom: 1; }
 .calendar-page .calendar-calendar .day-view .contents:before, .calendar-page .calendar-calendar .day-view .contents:after { content: ""; display: table; }
 .calendar-page .calendar-calendar .day-view .contents:after { clear: both; }
 .calendar-page .calendar-calendar .day-view .contents a { display: block; padding: 0; }
