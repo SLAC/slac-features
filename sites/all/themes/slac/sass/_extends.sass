@@ -168,6 +168,12 @@ $base-font-size: 16px
     border: 0px !important
     background: $menu_bg
     padding: 10px
+    tr
+      .mini-day-on,
+      .mini-day-off
+        a.active
+          background: transparent
+          color: #474747
     .today
       border-left: 0 !important
       border-right: 0 !important
@@ -187,6 +193,9 @@ $base-font-size: 16px
         a
           +link(white)
           +bold
+          &.active
+            background: transparent
+            color: white
     thead,
     tbody
       background: $menu_bg
