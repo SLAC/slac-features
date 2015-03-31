@@ -133,6 +133,9 @@
                 .view-item
                   display: inline-block
                   float: left
+                .inner
+                  div[class~=md_3]:nth-child(2n+1)
+                    clear: left
             tr
               border-top: 5px solid $menu_bg
               border-right: 5px solid $menu_bg
@@ -259,6 +262,7 @@
         background: $menu_bg
         margin: 20px 0px 20px 30px
         padding: 10px
+        width: 300px
         max-width: 300px
         +clearfix
         a
