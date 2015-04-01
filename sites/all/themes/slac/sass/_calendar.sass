@@ -701,11 +701,13 @@
       margin-right: 5px
     .file-icon
       &[title~="application/vnd.openxmlformats-officedocument.wordprocessingml.document"],
+      &[title~="application/msword"],
       &[title~="application/pdf"],
       &[title~="application/vnd.ms-powerpoint"],
       &[title~="application/vnd.openxmlformats-officedocument.presentationml.presentation"],
       &[title~="application/octet-stream"],
-      &[title~="application/vnd.ms-excel"]
+      &[title~="application/vnd.ms-excel"],
+      &[title~="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"]
         background-size: auto
         width: 0
         height: 0
@@ -718,5 +720,6 @@
         background: url(../images/download-icons/powerpoint.png)
       &[title~="application/octet-stream"]
         background: url(../images/download-icons/keynote.png)
-      &[title~="application/vnd.ms-excel"]
+      &[title~="application/vnd.ms-excel"],
+      &[title~="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"]
         background: url(../images/download-icons/xcell.png)
