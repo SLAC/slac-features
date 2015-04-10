@@ -122,6 +122,9 @@ dependencies[] = landing_page
 ;Profile frontpage elements
 dependencies[] = slac_profile_elements
 
+; Panelized basic page settings
+dependencies[] = slac_basic_page_settings
+
 ;Configurations
 dependencies[] = slac_configurations
 
