@@ -593,24 +593,6 @@ function slac_people_listing_views_default_views() {
   $handler->display->display_options['arguments']['uid']['validate']['fail'] = 'access denied';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: User: Name */
-  $handler->display->display_options['filters']['uid']['id'] = 'uid';
-  $handler->display->display_options['filters']['uid']['table'] = 'users';
-  $handler->display->display_options['filters']['uid']['field'] = 'uid';
-  $handler->display->display_options['filters']['uid']['relationship'] = 'user';
-  $handler->display->display_options['filters']['uid']['value'] = '';
-  $handler->display->display_options['filters']['uid']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['uid']['expose']['operator_id'] = 'uid_op';
-  $handler->display->display_options['filters']['uid']['expose']['label'] = 'User Name';
-  $handler->display->display_options['filters']['uid']['expose']['operator'] = 'uid_op';
-  $handler->display->display_options['filters']['uid']['expose']['identifier'] = 'uid';
-  $handler->display->display_options['filters']['uid']['expose']['required'] = TRUE;
-  $handler->display->display_options['filters']['uid']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    3 => 0,
-    4 => 0,
-  );
   $handler->display->display_options['pane_category']['name'] = 'Profile element';
   $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['allow']['use_pager'] = 0;
@@ -620,7 +602,7 @@ function slac_people_listing_views_default_views() {
   $handler->display->display_options['allow']['more_link'] = 0;
   $handler->display->display_options['allow']['path_override'] = 0;
   $handler->display->display_options['allow']['title_override'] = 'title_override';
-  $handler->display->display_options['allow']['exposed_form'] = 'exposed_form';
+  $handler->display->display_options['allow']['exposed_form'] = 0;
   $handler->display->display_options['allow']['fields_override'] = 0;
 
   /* Display: Full Profile */
