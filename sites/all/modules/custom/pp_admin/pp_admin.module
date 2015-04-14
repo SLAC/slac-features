@@ -17,4 +17,141 @@ function pp_admin_wysiwyg_editor_settings_alter(&$settings, $context) {
   // Remove "Insert paragraph here" plugin.
   // @see http://ckeditor.com/forums/CKEditor/How-to-Remove-Insert-Paragraph-Here-Pointer
   $settings['removePlugins'] = 'magicline';
+
+  // Add Greek and special characters to CKEditor
+  // Based on https://www.drupal.org/node/1827316#comment-8870515
+  $settings['entities_latin'] = TRUE;
+  $settings['entities_greek'] = TRUE;
+
+  // Default list of the special characters.
+  $settings['specialChars'] = array(
+    '!','"','#','$','%','&',"'",'(',')','*','+','-','.','/',
+    '0','1','2','3','4','5','6','7','8','9',':',';',
+    '<','=','>','?','@',
+    'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O',
+    'P','Q','R','S','T','U','V','W','X','Y','Z',
+    '[',']','^','_','`',
+    'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p',
+    'q','r','s','t','u','v','w','x','y','z',
+    '{','|','}','~',
+    "€", "‘", "’", "“", "”", "–", "—", "¡", "¢", "£", "¤", "¥", "¦", "§", "¨", "©", "ª", "«", "¬",
+    "®", "¯", "°", "²", "³", "´", "µ", "¶", "·", "¸", "¹", "º", "»", "¼", "½", "¾", "¿",
+    "À", "Á", "Â", "Ã", "Ä", "Å", "Æ", "Ç", "È", "É", "Ê", "Ë", "Ì", "Í", "Î", "Ï", "Ð", "Ñ", "Ò",
+    "Ó", "Ô", "Õ", "Ö", "×", "Ø", "Ù", "Ú", "Û", "Ü", "Ý", "Þ", "ß", "à", "á", "â", "ã", "ä", "å",
+    "æ", "ç", "è", "é", "ê", "ë", "ì", "í", "î", "ï", "ð", "ñ", "ò", "ó", "ô", "õ", "ö", "÷", "ø",
+    "ù", "ú", "û", "ü", "ý", "þ", "ÿ", "Œ", "œ", "Ŵ", "Ŷ", "ŵ", "ŷ",
+  );
+  // Greek characters.
+  // @see http://www.w3.org/TR/html4/sgml/entities.html#h-24.3.1
+  $settings['specialChars'][] = array('&Alpha;', 'Alpha');
+  $settings['specialChars'][] = array('&Beta;', 'Beta');
+  $settings['specialChars'][] = array('&Gamma;', 'Gamma');
+  $settings['specialChars'][] = array('&Delta;', 'Delta');
+  $settings['specialChars'][] = array('&Epsilon;', 'Epsilon');
+  $settings['specialChars'][] = array('&Zeta;', 'Zeta');
+  $settings['specialChars'][] = array('&Eta;', 'Eta');
+  $settings['specialChars'][] = array('&Theta;', 'Theta');
+  $settings['specialChars'][] = array('&Iota;', 'Iota');
+  $settings['specialChars'][] = array('&Kappa;', 'Kappa');
+  $settings['specialChars'][] = array('&Lambda;', 'Lambda');
+  $settings['specialChars'][] = array('&Mu;', 'Mu');
+  $settings['specialChars'][] = array('&Nu;', 'Nu');
+  $settings['specialChars'][] = array('&Xi;', 'Xi');
+  $settings['specialChars'][] = array('&Omicron;', 'Omicron');
+  $settings['specialChars'][] = array('&Pi;', 'Pi');
+  $settings['specialChars'][] = array('&Rho;', 'Rho');
+  $settings['specialChars'][] = array('&Sigma;', 'Sigma');
+  $settings['specialChars'][] = array('&Tau;', 'Tau');
+  $settings['specialChars'][] = array('&Upsilon;', 'Upsilon');
+  $settings['specialChars'][] = array('&Phi;', 'Phi');
+  $settings['specialChars'][] = array('&Chi;', 'Chi');
+  $settings['specialChars'][] = array('&Psi;', 'Psi');
+  $settings['specialChars'][] = array('&Omega;', 'Omega');
+  $settings['specialChars'][] = array('&alpha;', 'alpha');
+  $settings['specialChars'][] = array('&beta;', 'beta');
+  $settings['specialChars'][] = array('&gamma;', 'gamma');
+  $settings['specialChars'][] = array('&delta;', 'delta');
+  $settings['specialChars'][] = array('&epsilon;', 'epsilon');
+  $settings['specialChars'][] = array('&zeta;', 'zeta');
+  $settings['specialChars'][] = array('&eta;', 'eta');
+  $settings['specialChars'][] = array('&theta;', 'theta');
+  $settings['specialChars'][] = array('&iota;', 'iota');
+  $settings['specialChars'][] = array('&kappa;', 'kappa');
+  $settings['specialChars'][] = array('&lambda;', 'lambda');
+  $settings['specialChars'][] = array('&mu;', 'mu');
+  $settings['specialChars'][] = array('&nu;', 'nu');
+  $settings['specialChars'][] = array('&xi;', 'xi');
+  $settings['specialChars'][] = array('&omicron;', 'omicron');
+  $settings['specialChars'][] = array('&pi;', 'pi');
+  $settings['specialChars'][] = array('&rho;', 'rho');
+  $settings['specialChars'][] = array('&sigmaf;', 'sigmaf');
+  $settings['specialChars'][] = array('&sigma;', 'sigma');
+  $settings['specialChars'][] = array('&tau;', 'tau');
+  $settings['specialChars'][] = array('&upsilon;', 'upsilon');
+  $settings['specialChars'][] = array('&phi;', 'phi');
+  $settings['specialChars'][] = array('&chi;', 'chi');
+  $settings['specialChars'][] = array('&psi;', 'psi');
+  $settings['specialChars'][] = array('&omega;', 'omega');
+  $settings['specialChars'][] = array('&thetasym;', 'theta symbol');
+  $settings['specialChars'][] = array('&upsih;', 'upsilon with hook symbol');
+  $settings['specialChars'][] = array('&piv;', 'pi symbol');
+  // Symbols from http://www.dionysia.org/html/entities/symbols.html
+  $settings['specialChars'][] = array('&bull;', 'bullet = black small circle');
+  $settings['specialChars'][] = array('&hellip;', 'horizontal ellipsis = three dot leader');
+  $settings['specialChars'][] = array('&prime;',');prime = minutes = feet');
+  $settings['specialChars'][] = array('&Prime;', 'double prime = seconds = inches');
+  $settings['specialChars'][] = array('&oline;', 'overline = spacing overscore');
+  $settings['specialChars'][] = array('&frasl;', 'fraction slash');
+  $settings['specialChars'][] = array('&weierp;', 'script capital P = power set = Weierstrass p');
+  $settings['specialChars'][] = array('&image;', 'blackletter capital I = imaginary part');
+  $settings['specialChars'][] = array('&real;', 'blackletter capital R = real part symbol');
+  $settings['specialChars'][] = array('&trade;', 'trade mark sign');
+  $settings['specialChars'][] = array('&alefsym;', 'alef symbol = first transfinite cardinal');
+  $settings['specialChars'][] = array('&larr;', 'leftwards arrow');
+  $settings['specialChars'][] = array('&rarr;', 'rightwards arrow');
+  $settings['specialChars'][] = array('&darr;', 'downwards arrow');
+  $settings['specialChars'][] = array('&harr;', 'left right arrow');
+  $settings['specialChars'][] = array('&crarr;', 'downwards arrow with corner leftwards = carriage return');
+  $settings['specialChars'][] = array('&lArr;', 'leftwards double arrow');
+  $settings['specialChars'][] = array('&rArr;', 'rightwards double arrow');
+  $settings['specialChars'][] = array('&dArr;', 'downwards double arrow');
+  $settings['specialChars'][] = array('&hArr;', 'left right double arrow');
+  $settings['specialChars'][] = array('&forall;', 'for all');
+  $settings['specialChars'][] = array('&part;', 'partial differential');
+  $settings['specialChars'][] = array('&exist;', 'there exists');
+  $settings['specialChars'][] = array('&empty;', 'empty set = null set = diameter');
+  $settings['specialChars'][] = array('&nabla;', 'nabla = backward difference');
+  $settings['specialChars'][] = array('&isin;', 'element of');
+  $settings['specialChars'][] = array('&notin;', 'not an element of');
+  $settings['specialChars'][] = array('&ni;', 'contains as member');
+  $settings['specialChars'][] = array('&prod;', 'n-ary product = product sign');
+  $settings['specialChars'][] = array('&sum;', 'n-ary sumation');
+  $settings['specialChars'][] = array('&minus;', 'minus sign');
+  $settings['specialChars'][] = array('&lowast;', 'asterisk operator');
+  $settings['specialChars'][] = array('&radic;', 'square root = radical sign');
+  $settings['specialChars'][] = array('&prop;', 'proportional to');
+  $settings['specialChars'][] = array('&infin;', 'infinity');
+  $settings['specialChars'][] = array('&ang;', 'angle');
+  $settings['specialChars'][] = array('&and;', 'logical and = wedge');
+  $settings['specialChars'][] = array('&or;', 'logical or = vee');
+  $settings['specialChars'][] = array('&cap;', 'intersection = cap');
+  $settings['specialChars'][] = array('&cup;', 'union = cup');
+  $settings['specialChars'][] = array('&int;', 'integral');
+  $settings['specialChars'][] = array('&there4;', 'therefore');
+  $settings['specialChars'][] = array('&sim;', 'tilde operator = varies with = similar to');
+  $settings['specialChars'][] = array('&cong;', 'approximately equal to');
+  $settings['specialChars'][] = array('&asymp;', 'almost equal to = asymptotic to');
+  $settings['specialChars'][] = array('&ne;', 'not equal to');
+  $settings['specialChars'][] = array('&equiv;', 'identical to');
+  $settings['specialChars'][] = array('&le;', 'less-than or equal to');
+  $settings['specialChars'][] = array('&ge;', 'greater-than or equal to');
+  $settings['specialChars'][] = array('&sub;', 'subset of');
+  $settings['specialChars'][] = array('&sup;', 'superset of');
+  $settings['specialChars'][] = array('&nsub;', 'not a subset of');
+  $settings['specialChars'][] = array('&sube;', 'subset of or equal to');
+  $settings['specialChars'][] = array('&supe;', 'superset of or equal to');
+  $settings['specialChars'][] = array('&oplus;', 'circled plus = direct sum');
+  $settings['specialChars'][] = array('&otimes;', 'circled times = vector product');
+  $settings['specialChars'][] = array('&perp;', 'up tack = orthogonal to = perpendicular');
+  $settings['specialChars'][] = array('&sdot;', 'dot operator');
 }
