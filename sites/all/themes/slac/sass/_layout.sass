@@ -1,16 +1,20 @@
 .content .general-two-col
   &:not(.reverse) .general-left,
-  &.reverse .general-right
+  &.reverse .general-right,
+  .right-sidebar
     ul,
     ol
       list-style-type: disc
       padding-left: 20px
       margin-bottom: 10px
       li
+        +fontsize-rem(14px)
         line-height: 20px
         margin-bottom: 5px
     ol
       list-style-type: decimal
+    p
+      +fontsize-rem(14px)
 
 .extentions_normal-link
   color: $red
@@ -53,7 +57,7 @@ a
   &:hover
     color: $red
 
-  .general-left &, .general-one-col &, .general-right &
+  .general-left &, .general-one-col &, .general-right &, .right-sidebar &
     .content &
 
       @extend .extentions_normal-link
@@ -126,8 +130,11 @@ h3
     a
       color: inherit
 
+strong
+  font-weight: bold
 
-
+em
+  font-style: italic
 
 html
   font-family: Arial, Helvetica, sans-serif
@@ -1183,7 +1190,7 @@ h2
         margin-bottom: 13px
         padding-bottom: 7px
         border-bottom: 3px solid $bg-col-1
-        text-transform: uppercase
+        // text-transform: uppercase
         letter-spacing: 0.05em
 
 
@@ -1259,6 +1266,7 @@ h2
   .right-sidebar &
     background-color: $bg-col-1
     padding: 13px 22px
+    margin-bottom: 18px
 
 .region-grey-background-style
   background-color: $bg-col-1
@@ -3189,6 +3197,8 @@ h2
         padding: 15px 15px 13px 15px
         font-size: 12px
         line-height: 18px
+      .panel-pane > .connect-with-me
+        line-height: inherit
     div.general-right
       a
         color: #20659a
