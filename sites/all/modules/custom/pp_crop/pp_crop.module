@@ -45,6 +45,7 @@ function pp_crop_wysiwyg_settings_form($form, &$form_state) {
   foreach (_epsacrop_load_styles() as $key => $style) {
     $style_options[$key] = $style['name'];
   }
+  $style_options['original'] = 'original';
 
   $form['pp_crop_wysiwyg_settings'] = array(
     '#type' => 'checkboxes',
@@ -161,6 +162,10 @@ function pp_crop_media_wysiwyg_format_form_prepare_alter(&$form, $form_state, $f
       $options[$image_preset] = $image_element;
     }
   }
+  // Add unaltered original image as choice
+  $original_path = file_create_url($file->uri);
+  $original = array('default' => '<img class="pp-crop-thumbnail" typeof="foaf:Image" src="' . $original_path . '" alt="" />');
+  $options = $original + $options;
 
   $form['options']['thumbnails'] = array(
     '#type' => 'radios',
@@ -358,4 +363,11 @@ function pp_crop_js_alter(&$js) {
     $pp_crop_wysiwyg = drupal_get_path('module', 'pp_crop'). '/js/pp_crop-wysiwyg-media.js';
     $js[$pp_crop_wysiwyg] = array_merge($js[$wysiwyg_media], array('data' => $pp_crop_wysiwyg, 'weight' => 0.9));
   }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function pp_crop_form_media_wysiwyg_format_form_alter(&$form, &$form_state) {
+  $form['options']['format']['#options']['default'] = t('Original');
 }
