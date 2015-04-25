@@ -164,7 +164,7 @@ function pp_crop_media_wysiwyg_format_form_prepare_alter(&$form, $form_state, $f
   }
   // Add unaltered original image as choice
   $original_path = file_create_url($file->uri);
-  $original = array('default' => '<img class="pp-crop-thumbnail" typeof="foaf:Image" src="' . $original_path . '" alt="" />');
+  $original = array('default' => '<img class="pp-crop-thumbnail" typeof="foaf:Image" src="' . $original_path . '" alt="" /><br>' . t('Original image size'));
   $options = $original + $options;
 
   $form['options']['thumbnails'] = array(
@@ -369,5 +369,6 @@ function pp_crop_js_alter(&$js) {
  * Implements hook_form_FORM_ID_alter().
  */
 function pp_crop_form_media_wysiwyg_format_form_alter(&$form, &$form_state) {
+  // Add option to hidden form element to make selecting original image size work
   $form['options']['format']['#options']['default'] = t('Original');
 }
