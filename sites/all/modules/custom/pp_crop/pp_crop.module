@@ -45,7 +45,6 @@ function pp_crop_wysiwyg_settings_form($form, &$form_state) {
   foreach (_epsacrop_load_styles() as $key => $style) {
     $style_options[$key] = $style['name'];
   }
-  $style_options['original'] = 'original';
 
   $form['pp_crop_wysiwyg_settings'] = array(
     '#type' => 'checkboxes',
