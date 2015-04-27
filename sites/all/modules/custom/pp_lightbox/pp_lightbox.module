@@ -12,7 +12,7 @@ include_once 'pp_lightbox.features.inc';
  * Needed to display thumbnails properly in WYSIWYG on inserting.
  */
 function pp_lightbox_media_wysiwyg_token_to_markup_alter(&$element, $tag_info, &$settings) {
-  if (strpos($tag_info['view_mode'], 'crop_') === FALSE) {
+  if (strpos($tag_info['view_mode'], 'crop_') === FALSE && $tag_info['view_mode'] != 'default') {
     return;
   }
 
@@ -30,7 +30,13 @@ function pp_lightbox_media_wysiwyg_token_to_markup_alter(&$element, $tag_info, &
     return;
   }
 
-  $image_style = substr($tag_info['view_mode'], strlen('crop_'));
+  if ($tag_info['view_mode'] == 'default') {
+    $image_style = 'default';
+    // Remove the extra description field that the default style adds
+    unset($element['content']['field_file_image_description']);
+  } else {
+    $image_style = substr($tag_info['view_mode'], strlen('crop_'));
+  }
   if (isset($element['content']['file'])) {
     if ($add_lightbox && $add_description) {
       $element['content']['file']['#theme'] = 'image_style_lightbox_description';
