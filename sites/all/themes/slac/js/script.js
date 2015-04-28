@@ -27,13 +27,8 @@
         $elementsWidth += $(this).find('a').first().width();
         $i++;
       });
-        switch ($i) {
-
-            case $i > 8:
-                $factor = 4
-
-            default:
-                $factor = 8
+        if ($i < 8) {
+          $factor = 6;
         }
 
       var $elementPadding = (($mainWidth-$elementsWidth)/$i)/$factor;
