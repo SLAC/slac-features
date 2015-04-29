@@ -35,8 +35,6 @@
       $this.each(function(){
         $this.css({'padding-left':$elementPadding, 'padding-right':$elementPadding})
       });
-      var myMenuPadding = document.querySelector(".sf-menu .first");
-      myMenuPadding.style.paddingLeft = "0";
 
       var $that = $('.sf-main-menu.sf-horizontal li.menuparent ul');
         $that.css('margin-left','1em');
