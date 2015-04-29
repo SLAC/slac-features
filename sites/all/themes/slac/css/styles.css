@@ -1170,7 +1170,8 @@ ol.search-results .search-snippet strong { font-weight: bold; color: #871628; }
   .general-left, .panel-col-first, #user-profile-form, .general-left-title { width: 64.74654%; float: left; margin-right: 5.76037%; }
   .front .pane-page-content .general-left, .front .pane-page-content .panel-col-first, .front .pane-page-content #user-profile-form, .front .pane-page-content .general-left-title { width: 64.74654%; float: left; margin-right: 5.76037%; }
   .reverse .general-left, .reverse .panel-col-first, .reverse #user-profile-form, .reverse .general-left-title { width: 21.80579%; float: left; margin-right: 4.25894%; }
-  .reverse .general-left-title { padding-left: 0%; float: none; width: auto; margin-right: auto; } }
+  .reverse .general-left-title { padding-left: 0%; float: none; width: auto; margin-right: auto; }
+  .with-left .general-left-title { padding-left: 26.06474%; } }
 .contact-information .views-label { font-size: 0.625em; font-weight: bold; color: #222222; text-transform: uppercase; }
 .contact-information .field-content { font-size: 14px; font-size: 0.875rem; color: inherit; }
 .contact-information .views-field { margin-bottom: 11px; }
