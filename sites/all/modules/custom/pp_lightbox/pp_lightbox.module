@@ -26,10 +26,6 @@ function pp_lightbox_media_wysiwyg_token_to_markup_alter(&$element, $tag_info, &
     $add_lightbox = TRUE;
   }
 
-  if ($add_lightbox == FALSE && $add_description == FALSE) {
-    return;
-  }
-
   if ($tag_info['view_mode'] == 'default') {
     $image_style = 'default';
     // Remove the extra description field that the default style adds
@@ -37,14 +33,18 @@ function pp_lightbox_media_wysiwyg_token_to_markup_alter(&$element, $tag_info, &
   } else {
     $image_style = substr($tag_info['view_mode'], strlen('crop_'));
   }
+  $element['content']['file']['#style_name'] = $image_style;
+
+  if ($add_lightbox == FALSE && $add_description == FALSE) {
+    return;
+  }
+
   if (isset($element['content']['file'])) {
     if ($add_lightbox && $add_description) {
       $element['content']['file']['#theme'] = 'image_style_lightbox_description';
-      $element['content']['file']['#style_name'] = $image_style;
     }
     elseif ($add_lightbox) {
       $element['content']['file']['#theme'] = 'image_style_lightbox';
-      $element['content']['file']['#style_name'] = $image_style;
     }
     elseif ($add_description) {
       $element['content']['file']['#theme'] = 'image_style_description';
