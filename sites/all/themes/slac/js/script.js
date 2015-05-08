@@ -27,25 +27,18 @@
         $elementsWidth += $(this).find('a').first().width();
         $i++;
       });
-        switch ($i) {
-
-            case $i > 8:
-                $factor = 4
-
-            default:
-                $factor = 8
+        if ($i < 8) {
+          $factor = 6;
         }
 
       var $elementPadding = (($mainWidth-$elementsWidth)/$i)/$factor;
       $this.each(function(){
         $this.css({'padding-left':$elementPadding, 'padding-right':$elementPadding})
       });
-      var myMenuPadding = document.querySelector(".sf-menu .first");
-      myMenuPadding.style.paddingLeft = "0";
 
       var $that = $('.sf-main-menu.sf-horizontal li.menuparent ul');
         if ($i < 4) {
-            $that.css('margin-left','3em');
+          $that.css('left', $elementPadding - 8);
         }
         var myElement = document.querySelector(".sf-menu .first");
         myElement.style.paddingLeft = "0";
