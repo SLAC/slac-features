@@ -751,9 +751,9 @@ ul.news-archive-class li .item-list { margin-left: 10px; }
 .event-block:last-child { border-bottom: 0 none; }
 .event-block .date { position: absolute; top: 0; left: 0; font-family: Georgia, "Times New Roman", Times, serif; color: #626262; line-height: 1; }
 .touch .event-block .date { font-family: Arial, Helvetica, sans-serif; }
-.event-block .date i { font-size: 24px; font-size: 1.5rem; position: absolute; top: 5px; left: 0; }
+.event-block .date i { font-size: 24px; font-size: 1.5rem; left: 0; width: 30px; }
 .touch .event-block .date i { top: 10px; }
-.event-block .date ins { font-size: 12px; font-size: 0.75rem; text-decoration: none; text-transform: uppercase; display: block; }
+.event-block .date ins { font-size: 12px; font-size: 0.75rem; text-decoration: none; text-transform: uppercase; display: block; height: 9px; }
 .event-block .events { font-size: 11px; font-size: 0.6875rem; }
 .event-block .event { color: #626262; padding-right: 25px; margin-bottom: 10px; line-height: 16px; position: relative; }
 .event-block a { color: #871628; }
