@@ -921,8 +921,8 @@ ol.search-results .search-snippet strong { font-weight: bold; color: #871628; }
 .pane-menu-tree > div > ul.menu a { padding: 5px 14px; color: inherit; display: block; }
 .pane-menu-tree > div > ul.menu a:hover, .pane-menu-tree > div > ul.menu a.active { background-color: #dfdfdf; text-decoration: none; }
 
-@media (min-width: 690px) { .right-sidebar { width: 56.55877%; float: right; margin-right: 0; } }
-@media (min-width: 894px) { .right-sidebar { width: 65.24702%; float: right; margin-right: 0; } }
+@media (min-width: 690px) { .right-sidebar { width: 56.55877%; float: left; margin-right: 4.25894%; } }
+@media (min-width: 894px) { .right-sidebar { width: 21.80579%; float: left; margin-right: 4.25894%; } }
 @media (min-width: 1200px) { .right-sidebar { width: 18.33241%; float: right; margin-right: 0; } }
 .article_panel_layout.with-right-sidebar .pane-node-body h2 { font-size: 20px; font-size: 1.25rem; }
 
@@ -1141,10 +1141,10 @@ ol.search-results .search-snippet strong { font-weight: bold; color: #871628; }
   .general-left, .panel-col-first, .general-left-title { width: 65.24702%; float: left; margin-right: 4.25894%; }
   .full-width .general-left, .full-width .panel-col-first, .full-width .general-left-title { width: 100%; float: left; margin-right: 4.25894%; }
   .reverse .general-left { width: 39.18228%; float: left; margin-right: 4.25894%; }
-  .reverse .general-left-title { padding-left: 43.44123%; float: none; width: auto; margin-right: auto; }
+  .reverse .general-left-title { padding-left: 0%; float: none; width: auto; margin-right: auto; }
   .reverse.full-width .general-left-title { padding-left: 0%; }
   .general-right, .panel-col-last { width: 30.49404%; float: right; margin-right: 0; }
-  .reverse .general-right, .reverse .panel-col-last { width: 56.55877%; float: right; margin-right: 0; }
+  .reverse .general-right, .reverse .panel-col-last { width: 56.55877%; float: left; margin-right: 4.25894%; }
   .reverse.full-width .general-right, .reverse.full-width .panel-col-last { width: 100%; float: left; margin-right: 4.25894%; }
   .front .pane-page-content .general-right, .front .pane-page-content .general-left { padding-top: 0; }
   .content .general-right .panel-pane { padding: 0px 22px 13px 22px; width: 100%; }
@@ -1163,10 +1163,10 @@ ol.search-results .search-snippet strong { font-weight: bold; color: #871628; }
 @media (min-width: 894px) { .general-left, .panel-col-first, #user-profile-form, .general-left-title { width: 64.74654%; float: left; margin-right: 5.76037%; }
   .front .pane-page-content .general-left, .front .pane-page-content .panel-col-first, .front .pane-page-content #user-profile-form, .front .pane-page-content .general-left-title { width: 64.74654%; float: left; margin-right: 5.76037%; }
   .reverse .general-left, .reverse .panel-col-first, .reverse #user-profile-form, .reverse .general-left-title { width: 30.49404%; float: left; margin-right: 4.25894%; }
-  .reverse .general-left-title { padding-left: 34.75298%; float: none; width: auto; margin-right: auto; }
+  .reverse .general-left-title { padding-left: 0%; float: none; width: auto; margin-right: auto; }
   .general-right, .panel-col-last { width: 29.49309%; float: right; margin-right: 0; }
   .front .pane-page-content .general-right, .front .pane-page-content .panel-col-last { width: 29.49309%; float: right; margin-right: 0; }
-  .reverse .general-right, .reverse .panel-col-last { width: 65.24702%; float: right; margin-right: 0; }
+  .reverse .general-right, .reverse .panel-col-last { width: 65.24702%; float: left; margin-right: 4.25894%; }
   .footer-seccond ul li { margin-right: 8%; } }
 @media (min-width: 1200px) { .reverse .general-right, .reverse .panel-col-last { width: 73.93526%; float: right; margin-right: 0; }
   .with-right-sidebar .general-right, .with-right-sidebar .panel-col-last { width: 52.1259%; float: left; margin-right: 1.38045%; }
@@ -1202,8 +1202,7 @@ ul.blog-archive-class > li ul { padding-left: 19px; }
 ul.blog-archive-class > li ul li { margin-bottom: 9px; margin-right: 15px; float: left; list-style-type: disc; margin-left: 15px; }
 
 @media (min-width: 690px) { ul.blog-archive-class > li ul li { margin-bottom: 9px; margin-right: 0; float: none; } }
-@media screen and (min-width: 1200px) { .with-right-sidebar .general-right.expand-full { width: 72.5%; }
-  .panels-ipe-editing .with-right-sidebar .general-right.expand-full { width: 52.1259%; } }
+@media screen and (min-width: 1200px) { .panels-ipe-editing .with-right-sidebar .general-right.expand-full { width: 52.1259%; } }
 
 .expand-hide { display: none; }
 .panels-ipe-editing .expand-hide { display: block; }
