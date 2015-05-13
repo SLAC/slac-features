@@ -151,5 +151,12 @@ function pp_admin_image_default_styles() {
     ),
   );
 
+  // Exported image style: default.
+  $styles['default'] = array(
+    'name' => 'default',
+    'label' => 'Default',
+    'effects' => array(),
+  );
+
   return $styles;
 }
