@@ -1189,7 +1189,7 @@ h2
         +fontsize-rem(14px)
         margin-bottom: 13px
         padding-bottom: 7px
-        border-bottom: 3px solid $bg-col-1
+        border-bottom: 3px solid white
         // text-transform: uppercase
         letter-spacing: 0.05em
 
@@ -1255,7 +1255,9 @@ h2
 
 .panel-pane
   .general-right &
+    background-color: $bg-col-1
     margin-bottom: 18px
+    padding: 13px 22px
     &:last-child
       margin-bottom: 0
       //text-align: center
@@ -2096,7 +2098,6 @@ ul.news-archive-class
       color: $h2-color
       +fontsize-rem(12px)
       margin-bottom: 2px
-      font-weight: bold
 
     ul
       list-style-type: disc
@@ -3193,6 +3194,7 @@ h2
       > .pane-body-grey-background-style,
       .panel-pane > .view,
       .a-z-filter,
+      .fieldable-panels-pane,
       .view-service-catalog-category.view-display-id-panel_pane_4
         padding: 15px 15px 13px 15px
         font-size: 12px
@@ -3223,7 +3225,8 @@ h2
             left: -12px
             top: 50%
             margin-top: -10px
-  .pane-body-grey-background-style
+  .pane-body-grey-background-style,
+  .fieldable-panels-pane
     background: #f4f4f4
   .general-right .panel-pane > .view
     background: #f4f4f4
