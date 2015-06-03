@@ -24,7 +24,7 @@ function slac_demo_support_tickets_uuid_features_default_content() {
   'tnid' => 0,
   'translate' => 0,
   'uuid' => '1ae9a0f1-62f1-43c6-94da-d86e6a1f9503',
-  'revision_uid' => 1,
+  'revision_uid' => 0,
   'body' => array(
     'und' => array(
       0 => array(
@@ -42,7 +42,7 @@ function slac_demo_support_tickets_uuid_features_default_content() {
   'field_support_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 58,
+        'tid' => 14,
         'uuid' => '9fdafd4b-eceb-484d-9590-327d907b4d25',
       ),
     ),
@@ -114,8 +114,8 @@ function slac_demo_support_tickets_uuid_features_default_content() {
   'priority' => 4,
   'client' => 1,
   'assigned' => 1,
-  'date' => '2014-01-31 11:55:54 +0200',
-  'author_uuid' => '7e6892c2-5121-48c3-ba93-bd62ad07dcd5',
+  'date' => '2014-01-31 09:55:54 +0000',
+  'author_uuid' => '5415e044-85b9-4381-b98a-afcc89f264a1',
 );
   $nodes[] = array(
   'title' => 'Desktop applications update',
@@ -131,7 +131,7 @@ function slac_demo_support_tickets_uuid_features_default_content() {
   'tnid' => 0,
   'translate' => 0,
   'uuid' => '9606f942-bf34-4539-963f-5582659c8c67',
-  'revision_uid' => 1,
+  'revision_uid' => 0,
   'body' => array(
     'und' => array(
       0 => array(
@@ -149,7 +149,7 @@ function slac_demo_support_tickets_uuid_features_default_content() {
   'field_support_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 48,
+        'tid' => 4,
         'uuid' => '04690b24-a63c-403b-a4ee-b0f96929f27b',
       ),
     ),
@@ -221,8 +221,8 @@ function slac_demo_support_tickets_uuid_features_default_content() {
   'priority' => 2,
   'client' => 1,
   'assigned' => 1,
-  'date' => '2014-01-31 12:02:45 +0200',
-  'author_uuid' => '7e6892c2-5121-48c3-ba93-bd62ad07dcd5',
+  'date' => '2014-01-31 10:02:45 +0000',
+  'author_uuid' => '5415e044-85b9-4381-b98a-afcc89f264a1',
 );
   $nodes[] = array(
   'title' => 'Low priority issue',
@@ -238,7 +238,7 @@ function slac_demo_support_tickets_uuid_features_default_content() {
   'tnid' => 0,
   'translate' => 0,
   'uuid' => 'bea6c470-0cb0-4faa-a90c-1cfb96e59bbf',
-  'revision_uid' => 1,
+  'revision_uid' => 0,
   'body' => array(
     'und' => array(
       0 => array(
@@ -256,7 +256,7 @@ function slac_demo_support_tickets_uuid_features_default_content() {
   'field_support_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 52,
+        'tid' => 8,
         'uuid' => '40e140d3-4f65-481f-a68f-6d3f43161e13',
       ),
     ),
@@ -328,8 +328,8 @@ function slac_demo_support_tickets_uuid_features_default_content() {
   'priority' => 1,
   'client' => 1,
   'assigned' => 1,
-  'date' => '2014-01-31 11:57:27 +0200',
-  'author_uuid' => '7e6892c2-5121-48c3-ba93-bd62ad07dcd5',
+  'date' => '2014-01-31 09:57:27 +0000',
+  'author_uuid' => '5415e044-85b9-4381-b98a-afcc89f264a1',
 );
   $nodes[] = array(
   'title' => 'Site new design',
@@ -345,7 +345,7 @@ function slac_demo_support_tickets_uuid_features_default_content() {
   'tnid' => 0,
   'translate' => 0,
   'uuid' => 'e0030156-fb66-4185-af12-96b9c2c2dd84',
-  'revision_uid' => 1,
+  'revision_uid' => 0,
   'body' => array(
     'und' => array(
       0 => array(
@@ -366,7 +366,7 @@ Nulla facilisi. Aliquam erat volutpat. Integer et mi dapibus, elementum erat sed
   'field_support_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 71,
+        'tid' => 27,
         'uuid' => 'fe373df2-e8cb-4f22-90c7-9ebebd9187a0',
       ),
     ),
@@ -438,8 +438,8 @@ Nulla facilisi. Aliquam erat volutpat. Integer et mi dapibus, elementum erat sed
   'priority' => 2,
   'client' => 1,
   'assigned' => 1,
-  'date' => '2014-01-31 12:09:14 +0200',
-  'author_uuid' => '7e6892c2-5121-48c3-ba93-bd62ad07dcd5',
+  'date' => '2014-01-31 10:09:14 +0000',
+  'author_uuid' => '5415e044-85b9-4381-b98a-afcc89f264a1',
 );
   $nodes[] = array(
   'title' => 'HTML email format template',
@@ -455,7 +455,7 @@ Nulla facilisi. Aliquam erat volutpat. Integer et mi dapibus, elementum erat sed
   'tnid' => 0,
   'translate' => 0,
   'uuid' => 'fa1ab469-0f04-4a69-a89b-ccc8faee5165',
-  'revision_uid' => 1,
+  'revision_uid' => 0,
   'body' => array(
     'und' => array(
       0 => array(
@@ -473,7 +473,7 @@ Nulla facilisi. Aliquam erat volutpat. Integer et mi dapibus, elementum erat sed
   'field_support_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 54,
+        'tid' => 10,
         'uuid' => '62a170f8-cfd3-4717-a589-c5f1f7910be7',
       ),
     ),
@@ -545,8 +545,8 @@ Nulla facilisi. Aliquam erat volutpat. Integer et mi dapibus, elementum erat sed
   'priority' => 3,
   'client' => 1,
   'assigned' => 1,
-  'date' => '2014-01-31 12:04:50 +0200',
-  'author_uuid' => '7e6892c2-5121-48c3-ba93-bd62ad07dcd5',
+  'date' => '2014-01-31 10:04:50 +0000',
+  'author_uuid' => '5415e044-85b9-4381-b98a-afcc89f264a1',
 );
   return $nodes;
 }

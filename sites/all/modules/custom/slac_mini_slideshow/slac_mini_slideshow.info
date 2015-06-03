@@ -17,3 +17,4 @@ features[field_instance][] = field_collection_item-field_mini_slideshow_slide-fi
 features[field_instance][] = field_collection_item-field_mini_slideshow_slide-field_fcollection_link
 features[field_instance][] = fieldable_panels_pane-slac_mini_slideshow-field_mini_slideshow_slide
 features[image][] = mini_slideshow_image_style
+mtime = 1433346913

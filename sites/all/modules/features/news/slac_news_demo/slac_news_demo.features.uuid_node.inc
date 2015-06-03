@@ -17,14 +17,14 @@ function slac_news_demo_uuid_features_default_content() {
   'comment' => 1,
   'promote' => 0,
   'sticky' => 0,
-  'vuuid' => '8db32f11-0ae0-42fd-9e69-cbcef31ed24e',
+  'vuuid' => '86fe42e1-b2c7-41c0-b536-1495ff27ed21',
   'type' => 'slac_news',
   'language' => 'und',
   'created' => 1350157617,
   'tnid' => 0,
   'translate' => 0,
   'uuid' => '2cca6331-8a1b-0b97-b003-2f69ec11e8ca',
-  'revision_uid' => 1,
+  'revision_uid' => 0,
   'body' => array(
     'und' => array(
       0 => array(
@@ -87,6 +87,16 @@ function slac_news_demo_uuid_features_default_content() {
       ),
     ),
   ),
+  'field_slac_news_date' => array(
+    'und' => array(
+      0 => array(
+        'value' => '2013-12-02 00:00:00',
+        'timezone' => 'UTC',
+        'timezone_db' => 'UTC',
+        'date_type' => 'datetime',
+      ),
+    ),
+  ),
   'field_slac_news_media' => array(
     'und' => array(
       0 => array(
@@ -112,7 +122,7 @@ function slac_news_demo_uuid_features_default_content() {
         'uuid' => '0ce6dd19-dde1-4daa-ae83-1879947970ac',
       ),
       1 => array(
-        'tid' => 70,
+        'tid' => 72,
         'uuid' => '98be32f4-4f1a-4cbc-98be-01c4fc935bf8',
       ),
     ),
@@ -120,18 +130,8 @@ function slac_news_demo_uuid_features_default_content() {
   'field_slac_news_type' => array(
     'und' => array(
       0 => array(
-        'tid' => 28,
+        'tid' => 1,
         'uuid' => '05339b25-6cf8-4e75-b4ea-f91d490f5b04',
-      ),
-    ),
-  ),
-  'field_slac_news_date' => array(
-    'und' => array(
-      0 => array(
-        'value' => '2013-12-02 00:00:00',
-        'timezone' => 'America/Los_Angeles',
-        'timezone_db' => 'America/Los_Angeles',
-        'date_type' => 'datetime',
       ),
     ),
   ),
@@ -197,7 +197,55 @@ function slac_news_demo_uuid_features_default_content() {
   'comment_count' => 0,
   'name' => 'James Smith',
   'picture' => 0,
-  'date' => '2012-10-13 13:46:57 -0600',
+  'path' => array(
+    'pid' => 147,
+    'source' => 'node/60',
+    'alias' => 'news/worlds-most-powerful-x-ray-laser-beam-refined-scalpel-precision',
+    'language' => 'und',
+  ),
+  'workbench_moderation' => array(
+    'current' => array(
+      'hid' => 239,
+      'vid' => 271,
+      'nid' => 60,
+      'from_state' => 'draft',
+      'state' => 'draft',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'World\'s Most Powerful X-ray Laser Beam Refined to Scalpel Precision',
+      'timestamp' => 1433347464,
+    ),
+    'published' => array(
+      'hid' => 239,
+      'vid' => 271,
+      'nid' => 60,
+      'from_state' => 'draft',
+      'state' => 'published',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'World\'s Most Powerful X-ray Laser Beam Refined to Scalpel Precision',
+      'timestamp' => 1433347464,
+    ),
+    'my_revision' => array(
+      'hid' => 239,
+      'vid' => 271,
+      'nid' => 60,
+      'from_state' => 'draft',
+      'state' => 'draft',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'World\'s Most Powerful X-ray Laser Beam Refined to Scalpel Precision',
+      'timestamp' => 1433347464,
+    ),
+  ),
+  'pathauto_perform_alias' => FALSE,
+  'date' => '2012-10-13 19:46:57 +0000',
   'author_uuid' => '7588442f-2b14-42b8-b4f2-cb90accaad0d',
 );
   $nodes[] = array(
@@ -207,14 +255,14 @@ function slac_news_demo_uuid_features_default_content() {
   'comment' => 1,
   'promote' => 0,
   'sticky' => 0,
-  'vuuid' => '8db32f11-8ae0-42fd-9e69-cbcef31ed24e',
+  'vuuid' => '574444fe-4d55-48fa-96e1-ff7655eb23a4',
   'type' => 'slac_news',
   'language' => 'und',
   'created' => 1348256817,
   'tnid' => 0,
   'translate' => 0,
   'uuid' => '2cca6331-8a1b-4b97-b003-2f69ec11e8ca',
-  'revision_uid' => 1,
+  'revision_uid' => 0,
   'body' => array(
     'und' => array(
       0 => array(
@@ -297,6 +345,16 @@ function slac_news_demo_uuid_features_default_content() {
       ),
     ),
   ),
+  'field_slac_news_date' => array(
+    'und' => array(
+      0 => array(
+        'value' => '2014-02-02 00:00:00',
+        'timezone' => 'UTC',
+        'timezone_db' => 'UTC',
+        'date_type' => 'datetime',
+      ),
+    ),
+  ),
   'field_slac_news_media' => array(
     'und' => array(
       0 => array(
@@ -322,7 +380,7 @@ function slac_news_demo_uuid_features_default_content() {
         'uuid' => '0ce6dd19-dde1-4daa-ae83-1879947970ac',
       ),
       1 => array(
-        'tid' => 70,
+        'tid' => 72,
         'uuid' => '98be32f4-4f1a-4cbc-98be-01c4fc935bf8',
       ),
     ),
@@ -330,18 +388,8 @@ function slac_news_demo_uuid_features_default_content() {
   'field_slac_news_type' => array(
     'und' => array(
       0 => array(
-        'tid' => 28,
+        'tid' => 1,
         'uuid' => '05339b25-6cf8-4e75-b4ea-f91d490f5b04',
-      ),
-    ),
-  ),
-  'field_slac_news_date' => array(
-    'und' => array(
-      0 => array(
-        'value' => '2014-02-02 00:00:00',
-        'timezone' => 'America/Los_Angeles',
-        'timezone_db' => 'America/Los_Angeles',
-        'date_type' => 'datetime',
       ),
     ),
   ),
@@ -407,7 +455,55 @@ function slac_news_demo_uuid_features_default_content() {
   'comment_count' => 0,
   'name' => 'James Smith',
   'picture' => 0,
-  'date' => '2012-09-21 13:46:57 -0600',
+  'path' => array(
+    'pid' => 148,
+    'source' => 'node/61',
+    'alias' => 'news/stanford-slac-researchers-demonstrate-accelerator-chip',
+    'language' => 'und',
+  ),
+  'workbench_moderation' => array(
+    'current' => array(
+      'hid' => 240,
+      'vid' => 272,
+      'nid' => 61,
+      'from_state' => 'draft',
+      'state' => 'draft',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'Stanford, SLAC researchers demonstrate \'accelerator on a chip\'',
+      'timestamp' => 1433347464,
+    ),
+    'published' => array(
+      'hid' => 240,
+      'vid' => 272,
+      'nid' => 61,
+      'from_state' => 'draft',
+      'state' => 'published',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'Stanford, SLAC researchers demonstrate \'accelerator on a chip\'',
+      'timestamp' => 1433347464,
+    ),
+    'my_revision' => array(
+      'hid' => 240,
+      'vid' => 272,
+      'nid' => 61,
+      'from_state' => 'draft',
+      'state' => 'draft',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'Stanford, SLAC researchers demonstrate \'accelerator on a chip\'',
+      'timestamp' => 1433347464,
+    ),
+  ),
+  'pathauto_perform_alias' => FALSE,
+  'date' => '2012-09-21 19:46:57 +0000',
   'author_uuid' => '7588442f-2b14-42b8-b4f2-cb90accaad0d',
 );
   $nodes[] = array(
@@ -417,14 +513,14 @@ function slac_news_demo_uuid_features_default_content() {
   'comment' => 1,
   'promote' => 0,
   'sticky' => 0,
-  'vuuid' => '8db32f61-8ae0-42fd-9e69-cbcef31ed24e',
+  'vuuid' => '1c8d4b21-0698-4ad7-b490-062644ff416f',
   'type' => 'slac_news',
   'language' => 'und',
   'created' => 1348516017,
   'tnid' => 0,
   'translate' => 0,
   'uuid' => '2cca6331-8a7b-4b97-b003-2f69ec11e8ca',
-  'revision_uid' => 1,
+  'revision_uid' => 0,
   'body' => array(
     'und' => array(
       0 => array(
@@ -486,6 +582,16 @@ function slac_news_demo_uuid_features_default_content() {
       ),
     ),
   ),
+  'field_slac_news_date' => array(
+    'und' => array(
+      0 => array(
+        'value' => '2013-11-12 00:00:00',
+        'timezone' => 'UTC',
+        'timezone_db' => 'UTC',
+        'date_type' => 'datetime',
+      ),
+    ),
+  ),
   'field_slac_news_media' => array(
     'und' => array(
       0 => array(
@@ -511,7 +617,7 @@ function slac_news_demo_uuid_features_default_content() {
         'uuid' => '0ce6dd19-dde1-4daa-ae83-1879947970ac',
       ),
       1 => array(
-        'tid' => 70,
+        'tid' => 72,
         'uuid' => '98be32f4-4f1a-4cbc-98be-01c4fc935bf8',
       ),
     ),
@@ -519,18 +625,8 @@ function slac_news_demo_uuid_features_default_content() {
   'field_slac_news_type' => array(
     'und' => array(
       0 => array(
-        'tid' => 28,
+        'tid' => 1,
         'uuid' => '05339b25-6cf8-4e75-b4ea-f91d490f5b04',
-      ),
-    ),
-  ),
-  'field_slac_news_date' => array(
-    'und' => array(
-      0 => array(
-        'value' => '2013-11-12 00:00:00',
-        'timezone' => 'America/Los_Angeles',
-        'timezone_db' => 'America/Los_Angeles',
-        'date_type' => 'datetime',
       ),
     ),
   ),
@@ -596,7 +692,55 @@ function slac_news_demo_uuid_features_default_content() {
   'comment_count' => 0,
   'name' => 'James Smith',
   'picture' => 0,
-  'date' => '2012-09-24 13:46:57 -0600',
+  'path' => array(
+    'pid' => 149,
+    'source' => 'node/62',
+    'alias' => 'news/x-ray-laser-probes-biomolecules-individual-atoms',
+    'language' => 'und',
+  ),
+  'workbench_moderation' => array(
+    'current' => array(
+      'hid' => 241,
+      'vid' => 273,
+      'nid' => 62,
+      'from_state' => 'draft',
+      'state' => 'draft',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'X-ray Laser Probes Biomolecules to Individual Atoms',
+      'timestamp' => 1433347464,
+    ),
+    'published' => array(
+      'hid' => 241,
+      'vid' => 273,
+      'nid' => 62,
+      'from_state' => 'draft',
+      'state' => 'published',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'X-ray Laser Probes Biomolecules to Individual Atoms',
+      'timestamp' => 1433347464,
+    ),
+    'my_revision' => array(
+      'hid' => 241,
+      'vid' => 273,
+      'nid' => 62,
+      'from_state' => 'draft',
+      'state' => 'draft',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'X-ray Laser Probes Biomolecules to Individual Atoms',
+      'timestamp' => 1433347464,
+    ),
+  ),
+  'pathauto_perform_alias' => FALSE,
+  'date' => '2012-09-24 19:46:57 +0000',
   'author_uuid' => '7588442f-2b14-42b8-b4f2-cb90accaad0d',
 );
   $nodes[] = array(
@@ -606,14 +750,14 @@ function slac_news_demo_uuid_features_default_content() {
   'comment' => 1,
   'promote' => 0,
   'sticky' => 0,
-  'vuuid' => '8db12f61-7ae0-42fd-9e69-cbcef31ed24e',
+  'vuuid' => '141f01ac-2a43-4a17-b902-a87c02aa7c4f',
   'type' => 'slac_news',
   'language' => 'und',
   'created' => 1348602417,
   'tnid' => 0,
   'translate' => 0,
   'uuid' => '2cca6931-0a7b-4b97-b003-2f69ec11e8ca',
-  'revision_uid' => 1,
+  'revision_uid' => 0,
   'body' => array(
     'und' => array(
       0 => array(
@@ -715,6 +859,16 @@ afreeberg@slac.stanford.edu',
       ),
     ),
   ),
+  'field_slac_news_date' => array(
+    'und' => array(
+      0 => array(
+        'value' => '2014-01-05 00:00:00',
+        'timezone' => 'UTC',
+        'timezone_db' => 'UTC',
+        'date_type' => 'datetime',
+      ),
+    ),
+  ),
   'field_slac_news_media' => array(
     'und' => array(
       0 => array(
@@ -740,7 +894,7 @@ afreeberg@slac.stanford.edu',
         'uuid' => '0ce6dd19-dde1-4daa-ae83-1879947970ac',
       ),
       1 => array(
-        'tid' => 70,
+        'tid' => 72,
         'uuid' => '98be32f4-4f1a-4cbc-98be-01c4fc935bf8',
       ),
     ),
@@ -748,18 +902,8 @@ afreeberg@slac.stanford.edu',
   'field_slac_news_type' => array(
     'und' => array(
       0 => array(
-        'tid' => 28,
+        'tid' => 1,
         'uuid' => '05339b25-6cf8-4e75-b4ea-f91d490f5b04',
-      ),
-    ),
-  ),
-  'field_slac_news_date' => array(
-    'und' => array(
-      0 => array(
-        'value' => '2014-01-05 00:00:00',
-        'timezone' => 'America/Los_Angeles',
-        'timezone_db' => 'America/Los_Angeles',
-        'date_type' => 'datetime',
       ),
     ),
   ),
@@ -825,7 +969,55 @@ afreeberg@slac.stanford.edu',
   'comment_count' => 0,
   'name' => 'James Smith',
   'picture' => 0,
-  'date' => '2012-09-25 13:46:57 -0600',
+  'path' => array(
+    'pid' => 150,
+    'source' => 'node/63',
+    'alias' => 'news/stanford-scientists-build-brain-stethoscope-turn-seizures-music',
+    'language' => 'und',
+  ),
+  'workbench_moderation' => array(
+    'current' => array(
+      'hid' => 242,
+      'vid' => 274,
+      'nid' => 63,
+      'from_state' => 'draft',
+      'state' => 'draft',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'Stanford scientists build a \'brain stethoscope\' to turn seizures into music',
+      'timestamp' => 1433347464,
+    ),
+    'published' => array(
+      'hid' => 242,
+      'vid' => 274,
+      'nid' => 63,
+      'from_state' => 'draft',
+      'state' => 'published',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'Stanford scientists build a \'brain stethoscope\' to turn seizures into music',
+      'timestamp' => 1433347464,
+    ),
+    'my_revision' => array(
+      'hid' => 242,
+      'vid' => 274,
+      'nid' => 63,
+      'from_state' => 'draft',
+      'state' => 'draft',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'Stanford scientists build a \'brain stethoscope\' to turn seizures into music',
+      'timestamp' => 1433347464,
+    ),
+  ),
+  'pathauto_perform_alias' => FALSE,
+  'date' => '2012-09-25 19:46:57 +0000',
   'author_uuid' => '7588442f-2b14-42b8-b4f2-cb90accaad0d',
 );
   $nodes[] = array(
@@ -835,14 +1027,14 @@ afreeberg@slac.stanford.edu',
   'comment' => 1,
   'promote' => 0,
   'sticky' => 0,
-  'vuuid' => '8db12f61-8ae0-42fd-9e69-cbcef31ed24e',
+  'vuuid' => '7342a613-c42e-420a-b6e8-8e8ccffe5f88',
   'type' => 'slac_news',
   'language' => 'und',
   'created' => 1348170417,
   'tnid' => 0,
   'translate' => 0,
   'uuid' => '2cca6931-8a7b-4b97-b003-2f69ec11e8ca',
-  'revision_uid' => 1,
+  'revision_uid' => 0,
   'body' => array(
     'und' => array(
       0 => array(
@@ -902,6 +1094,16 @@ afreeberg@slac.stanford.edu',
       ),
     ),
   ),
+  'field_slac_news_date' => array(
+    'und' => array(
+      0 => array(
+        'value' => '2012-01-09 00:00:00',
+        'timezone' => 'UTC',
+        'timezone_db' => 'UTC',
+        'date_type' => 'datetime',
+      ),
+    ),
+  ),
   'field_slac_news_media' => array(
     'und' => array(
       0 => array(
@@ -931,18 +1133,8 @@ afreeberg@slac.stanford.edu',
   'field_slac_news_type' => array(
     'und' => array(
       0 => array(
-        'tid' => 28,
+        'tid' => 1,
         'uuid' => '05339b25-6cf8-4e75-b4ea-f91d490f5b04',
-      ),
-    ),
-  ),
-  'field_slac_news_date' => array(
-    'und' => array(
-      0 => array(
-        'value' => '2012-01-09 00:00:00',
-        'timezone' => 'America/Los_Angeles',
-        'timezone_db' => 'America/Los_Angeles',
-        'date_type' => 'datetime',
       ),
     ),
   ),
@@ -1008,7 +1200,55 @@ afreeberg@slac.stanford.edu',
   'comment_count' => 0,
   'name' => 'James Smith',
   'picture' => 0,
-  'date' => '2012-09-20 13:46:57 -0600',
+  'path' => array(
+    'pid' => 151,
+    'source' => 'node/64',
+    'alias' => 'news/encourage-green-living-stanford-students-build-better-light-switch',
+    'language' => 'und',
+  ),
+  'workbench_moderation' => array(
+    'current' => array(
+      'hid' => 243,
+      'vid' => 275,
+      'nid' => 64,
+      'from_state' => 'draft',
+      'state' => 'draft',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'To encourage green living, Stanford students build a better light switch',
+      'timestamp' => 1433347464,
+    ),
+    'published' => array(
+      'hid' => 243,
+      'vid' => 275,
+      'nid' => 64,
+      'from_state' => 'draft',
+      'state' => 'published',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'To encourage green living, Stanford students build a better light switch',
+      'timestamp' => 1433347464,
+    ),
+    'my_revision' => array(
+      'hid' => 243,
+      'vid' => 275,
+      'nid' => 64,
+      'from_state' => 'draft',
+      'state' => 'draft',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'To encourage green living, Stanford students build a better light switch',
+      'timestamp' => 1433347464,
+    ),
+  ),
+  'pathauto_perform_alias' => FALSE,
+  'date' => '2012-09-20 19:46:57 +0000',
   'author_uuid' => '7588442f-2b14-42b8-b4f2-cb90accaad0d',
 );
   $nodes[] = array(
@@ -1018,14 +1258,14 @@ afreeberg@slac.stanford.edu',
   'comment' => 1,
   'promote' => 0,
   'sticky' => 0,
-  'vuuid' => '1226bc1e-be2e-47b2-af31-9780bb060506',
+  'vuuid' => 'ce5e75ab-5b77-4f8f-a7ee-a756923976c3',
   'type' => 'slac_news',
   'language' => 'und',
   'created' => 1366055115,
   'tnid' => 0,
   'translate' => 0,
   'uuid' => '9r850fab-9ad9-45dc-9e52-9c4901fbad53',
-  'revision_uid' => 1,
+  'revision_uid' => 0,
   'body' => array(
     'und' => array(
       0 => array(
@@ -1098,6 +1338,16 @@ afreeberg@slac.stanford.edu',
   ),
   'field_slac_news_citation' => array(),
   'field_slac_news_contact' => array(),
+  'field_slac_news_date' => array(
+    'und' => array(
+      0 => array(
+        'value' => '2013-08-02 00:00:00',
+        'timezone' => 'UTC',
+        'timezone_db' => 'UTC',
+        'date_type' => 'datetime',
+      ),
+    ),
+  ),
   'field_slac_news_media' => array(
     'und' => array(
       0 => array(
@@ -1119,11 +1369,11 @@ afreeberg@slac.stanford.edu',
   'field_slac_news_tags' => array(
     'und' => array(
       0 => array(
-        'tid' => 72,
+        'tid' => 74,
         'uuid' => 'dad41187-6745-43bc-b95a-7851a7b2c825',
       ),
       1 => array(
-        'tid' => 71,
+        'tid' => 73,
         'uuid' => 'aaa4a1c8-fb65-4eeb-9bfe-909031f5e18b',
       ),
     ),
@@ -1131,18 +1381,8 @@ afreeberg@slac.stanford.edu',
   'field_slac_news_type' => array(
     'und' => array(
       0 => array(
-        'tid' => 29,
+        'tid' => 2,
         'uuid' => '47c46adc-4bf5-41cc-91a2-96c057b16297',
-      ),
-    ),
-  ),
-  'field_slac_news_date' => array(
-    'und' => array(
-      0 => array(
-        'value' => '2013-08-02 00:00:00',
-        'timezone' => 'America/Los_Angeles',
-        'timezone_db' => 'America/Los_Angeles',
-        'date_type' => 'datetime',
       ),
     ),
   ),
@@ -1208,7 +1448,55 @@ afreeberg@slac.stanford.edu',
   'comment_count' => 0,
   'name' => 'James Smith',
   'picture' => 0,
-  'date' => '2013-04-15 13:45:15 -0600',
+  'path' => array(
+    'pid' => 152,
+    'source' => 'node/65',
+    'alias' => 'news/disorder-can-improve-the-performance-plastic-solar-cells-stanford-scientists-say',
+    'language' => 'und',
+  ),
+  'workbench_moderation' => array(
+    'current' => array(
+      'hid' => 244,
+      'vid' => 276,
+      'nid' => 65,
+      'from_state' => 'draft',
+      'state' => 'draft',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'Disorder can improve the performance of plastic solar cells, Stanford scientists say',
+      'timestamp' => 1433347464,
+    ),
+    'published' => array(
+      'hid' => 244,
+      'vid' => 276,
+      'nid' => 65,
+      'from_state' => 'draft',
+      'state' => 'published',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'Disorder can improve the performance of plastic solar cells, Stanford scientists say',
+      'timestamp' => 1433347464,
+    ),
+    'my_revision' => array(
+      'hid' => 244,
+      'vid' => 276,
+      'nid' => 65,
+      'from_state' => 'draft',
+      'state' => 'draft',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'Disorder can improve the performance of plastic solar cells, Stanford scientists say',
+      'timestamp' => 1433347464,
+    ),
+  ),
+  'pathauto_perform_alias' => FALSE,
+  'date' => '2013-04-15 19:45:15 +0000',
   'author_uuid' => '7588442f-2b14-42b8-b4f2-cb90accaad0d',
 );
   $nodes[] = array(
@@ -1218,14 +1506,14 @@ afreeberg@slac.stanford.edu',
   'comment' => 1,
   'promote' => 0,
   'sticky' => 0,
-  'vuuid' => 'd56d508d-12ea-49c5-a7bf-ca78cf591bd6',
+  'vuuid' => '6b03fd03-19e0-49f9-899e-bd48ec0669dd',
   'type' => 'slac_news',
   'language' => 'und',
   'created' => 1354436526,
   'tnid' => 0,
   'translate' => 0,
   'uuid' => 'a2007803-a627-4cc4-9d06-51646486bbca',
-  'revision_uid' => 1,
+  'revision_uid' => 0,
   'body' => array(
     'und' => array(
       0 => array(
@@ -1310,6 +1598,16 @@ afreeberg@slac.stanford.edu',
       ),
     ),
   ),
+  'field_slac_news_date' => array(
+    'und' => array(
+      0 => array(
+        'value' => '2013-05-02 00:00:00',
+        'timezone' => 'UTC',
+        'timezone_db' => 'UTC',
+        'date_type' => 'datetime',
+      ),
+    ),
+  ),
   'field_slac_news_media' => array(
     'und' => array(
       0 => array(
@@ -1332,18 +1630,8 @@ afreeberg@slac.stanford.edu',
   'field_slac_news_type' => array(
     'und' => array(
       0 => array(
-        'tid' => 29,
+        'tid' => 2,
         'uuid' => '47c46adc-4bf5-41cc-91a2-96c057b16297',
-      ),
-    ),
-  ),
-  'field_slac_news_date' => array(
-    'und' => array(
-      0 => array(
-        'value' => '2013-05-02 00:00:00',
-        'timezone' => 'America/Los_Angeles',
-        'timezone_db' => 'America/Los_Angeles',
-        'date_type' => 'datetime',
       ),
     ),
   ),
@@ -1409,7 +1697,55 @@ afreeberg@slac.stanford.edu',
   'comment_count' => 0,
   'name' => 'James Smith',
   'picture' => 0,
-  'date' => '2012-12-02 01:22:06 -0700',
+  'path' => array(
+    'pid' => 153,
+    'source' => 'node/66',
+    'alias' => 'news/will-2-d-tin-be-the-next-super-material',
+    'language' => 'und',
+  ),
+  'workbench_moderation' => array(
+    'current' => array(
+      'hid' => 245,
+      'vid' => 277,
+      'nid' => 66,
+      'from_state' => 'draft',
+      'state' => 'draft',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'Will 2-D Tin be the Next Super Material?',
+      'timestamp' => 1433347464,
+    ),
+    'published' => array(
+      'hid' => 245,
+      'vid' => 277,
+      'nid' => 66,
+      'from_state' => 'draft',
+      'state' => 'published',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'Will 2-D Tin be the Next Super Material?',
+      'timestamp' => 1433347464,
+    ),
+    'my_revision' => array(
+      'hid' => 245,
+      'vid' => 277,
+      'nid' => 66,
+      'from_state' => 'draft',
+      'state' => 'draft',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'Will 2-D Tin be the Next Super Material?',
+      'timestamp' => 1433347464,
+    ),
+  ),
+  'pathauto_perform_alias' => FALSE,
+  'date' => '2012-12-02 08:22:06 +0000',
   'author_uuid' => '7588442f-2b14-42b8-b4f2-cb90accaad0d',
 );
   $nodes[] = array(
@@ -1419,14 +1755,14 @@ afreeberg@slac.stanford.edu',
   'comment' => 1,
   'promote' => 0,
   'sticky' => 0,
-  'vuuid' => '1e26bc1e-be6e-47b2-af31-9780bb060506',
+  'vuuid' => 'd4503418-c0c2-48a3-9d66-162cb6adb42e',
   'type' => 'slac_news',
   'language' => 'und',
   'created' => 1379879115,
   'tnid' => 0,
   'translate' => 0,
   'uuid' => 'bb850fab-95d9-45dc-9e52-9c4901fbad53',
-  'revision_uid' => 1,
+  'revision_uid' => 0,
   'body' => array(
     'und' => array(
       0 => array(
@@ -1493,6 +1829,16 @@ afreeberg@slac.stanford.edu',
   ),
   'field_slac_news_citation' => array(),
   'field_slac_news_contact' => array(),
+  'field_slac_news_date' => array(
+    'und' => array(
+      0 => array(
+        'value' => '2014-01-23 00:00:00',
+        'timezone' => 'UTC',
+        'timezone_db' => 'UTC',
+        'date_type' => 'datetime',
+      ),
+    ),
+  ),
   'field_slac_news_media' => array(
     'und' => array(
       0 => array(
@@ -1514,11 +1860,11 @@ afreeberg@slac.stanford.edu',
   'field_slac_news_tags' => array(
     'und' => array(
       0 => array(
-        'tid' => 72,
+        'tid' => 74,
         'uuid' => 'dad41187-6745-43bc-b95a-7851a7b2c825',
       ),
       1 => array(
-        'tid' => 71,
+        'tid' => 73,
         'uuid' => 'aaa4a1c8-fb65-4eeb-9bfe-909031f5e18b',
       ),
     ),
@@ -1526,18 +1872,8 @@ afreeberg@slac.stanford.edu',
   'field_slac_news_type' => array(
     'und' => array(
       0 => array(
-        'tid' => 29,
+        'tid' => 2,
         'uuid' => '47c46adc-4bf5-41cc-91a2-96c057b16297',
-      ),
-    ),
-  ),
-  'field_slac_news_date' => array(
-    'und' => array(
-      0 => array(
-        'value' => '2014-01-23 00:00:00',
-        'timezone' => 'America/Los_Angeles',
-        'timezone_db' => 'America/Los_Angeles',
-        'date_type' => 'datetime',
       ),
     ),
   ),
@@ -1603,7 +1939,55 @@ afreeberg@slac.stanford.edu',
   'comment_count' => 0,
   'name' => 'James Smith',
   'picture' => 0,
-  'date' => '2013-09-22 13:45:15 -0600',
+  'path' => array(
+    'pid' => 154,
+    'source' => 'node/67',
+    'alias' => 'news/stanford-scientists-working-develop-broad-spectrum-antiviral-drug',
+    'language' => 'und',
+  ),
+  'workbench_moderation' => array(
+    'current' => array(
+      'hid' => 246,
+      'vid' => 278,
+      'nid' => 67,
+      'from_state' => 'draft',
+      'state' => 'draft',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'Stanford scientists working to develop broad-spectrum antiviral drug',
+      'timestamp' => 1433347464,
+    ),
+    'published' => array(
+      'hid' => 246,
+      'vid' => 278,
+      'nid' => 67,
+      'from_state' => 'draft',
+      'state' => 'published',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'Stanford scientists working to develop broad-spectrum antiviral drug',
+      'timestamp' => 1433347464,
+    ),
+    'my_revision' => array(
+      'hid' => 246,
+      'vid' => 278,
+      'nid' => 67,
+      'from_state' => 'draft',
+      'state' => 'draft',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'Stanford scientists working to develop broad-spectrum antiviral drug',
+      'timestamp' => 1433347464,
+    ),
+  ),
+  'pathauto_perform_alias' => FALSE,
+  'date' => '2013-09-22 19:45:15 +0000',
   'author_uuid' => '7588442f-2b14-42b8-b4f2-cb90accaad0d',
 );
   $nodes[] = array(
@@ -1613,14 +1997,14 @@ afreeberg@slac.stanford.edu',
   'comment' => 1,
   'promote' => 0,
   'sticky' => 0,
-  'vuuid' => '6c5ef37d-c299-4397-b2fd-2e589faca227',
+  'vuuid' => 'f0d71e11-aa2b-41e2-b5da-af03169d9688',
   'type' => 'slac_news',
   'language' => 'und',
   'created' => 1385972261,
   'tnid' => 0,
   'translate' => 0,
   'uuid' => 'da567b81-da7d-48ac-ac1a-bc1e51e5478b',
-  'revision_uid' => 1,
+  'revision_uid' => 0,
   'body' => array(
     'und' => array(
       0 => array(
@@ -1691,6 +2075,16 @@ Sebastien Boutet, SLAC National Accelerator Laboratory: sboutet@slac.stanford.ed
       ),
     ),
   ),
+  'field_slac_news_date' => array(
+    'und' => array(
+      0 => array(
+        'value' => '2013-09-07 00:00:00',
+        'timezone' => 'UTC',
+        'timezone_db' => 'UTC',
+        'date_type' => 'datetime',
+      ),
+    ),
+  ),
   'field_slac_news_media' => array(
     'und' => array(
       0 => array(
@@ -1713,18 +2107,8 @@ Sebastien Boutet, SLAC National Accelerator Laboratory: sboutet@slac.stanford.ed
   'field_slac_news_type' => array(
     'und' => array(
       0 => array(
-        'tid' => 28,
+        'tid' => 1,
         'uuid' => '05339b25-6cf8-4e75-b4ea-f91d490f5b04',
-      ),
-    ),
-  ),
-  'field_slac_news_date' => array(
-    'und' => array(
-      0 => array(
-        'value' => '2013-09-07 00:00:00',
-        'timezone' => 'America/Los_Angeles',
-        'timezone_db' => 'America/Los_Angeles',
-        'date_type' => 'datetime',
       ),
     ),
   ),
@@ -1790,7 +2174,55 @@ Sebastien Boutet, SLAC National Accelerator Laboratory: sboutet@slac.stanford.ed
   'comment_count' => 0,
   'name' => 'James Smith',
   'picture' => 0,
-  'date' => '2013-12-02 01:17:41 -0700',
+  'path' => array(
+    'pid' => 155,
+    'source' => 'node/68',
+    'alias' => 'news/scientists-prove-x-ray-laser-can-solve-protein-structures-scratch',
+    'language' => 'und',
+  ),
+  'workbench_moderation' => array(
+    'current' => array(
+      'hid' => 247,
+      'vid' => 279,
+      'nid' => 68,
+      'from_state' => 'draft',
+      'state' => 'draft',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'Scientists Prove X-ray Laser Can Solve Protein Structures from Scratch',
+      'timestamp' => 1433347464,
+    ),
+    'published' => array(
+      'hid' => 247,
+      'vid' => 279,
+      'nid' => 68,
+      'from_state' => 'draft',
+      'state' => 'published',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'Scientists Prove X-ray Laser Can Solve Protein Structures from Scratch',
+      'timestamp' => 1433347464,
+    ),
+    'my_revision' => array(
+      'hid' => 247,
+      'vid' => 279,
+      'nid' => 68,
+      'from_state' => 'draft',
+      'state' => 'draft',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'Scientists Prove X-ray Laser Can Solve Protein Structures from Scratch',
+      'timestamp' => 1433347464,
+    ),
+  ),
+  'pathauto_perform_alias' => FALSE,
+  'date' => '2013-12-02 08:17:41 +0000',
   'author_uuid' => '7588442f-2b14-42b8-b4f2-cb90accaad0d',
 );
   $nodes[] = array(
@@ -1800,14 +2232,14 @@ Sebastien Boutet, SLAC National Accelerator Laboratory: sboutet@slac.stanford.ed
   'comment' => 1,
   'promote' => 0,
   'sticky' => 0,
-  'vuuid' => '8e26bc1e-be6e-47b2-af31-9780bb060506',
+  'vuuid' => '415dc762-5099-44ec-b0f3-470e2e449ccc',
   'type' => 'slac_news',
   'language' => 'und',
   'created' => 1348688715,
   'tnid' => 0,
   'translate' => 0,
   'uuid' => 'eb850fab-95d9-45dc-9e52-9c4901fbad53',
-  'revision_uid' => 1,
+  'revision_uid' => 0,
   'body' => array(
     'und' => array(
       0 => array(
@@ -1862,6 +2294,16 @@ Sebastien Boutet, SLAC National Accelerator Laboratory: sboutet@slac.stanford.ed
   ),
   'field_slac_news_citation' => array(),
   'field_slac_news_contact' => array(),
+  'field_slac_news_date' => array(
+    'und' => array(
+      0 => array(
+        'value' => '2014-01-22 00:00:00',
+        'timezone' => 'UTC',
+        'timezone_db' => 'UTC',
+        'date_type' => 'datetime',
+      ),
+    ),
+  ),
   'field_slac_news_media' => array(
     'und' => array(
       0 => array(
@@ -1883,7 +2325,7 @@ Sebastien Boutet, SLAC National Accelerator Laboratory: sboutet@slac.stanford.ed
   'field_slac_news_tags' => array(
     'und' => array(
       0 => array(
-        'tid' => 73,
+        'tid' => 71,
         'uuid' => '971c94e1-0a7e-474c-96ca-9e1a4da2d6a5',
       ),
     ),
@@ -1891,18 +2333,8 @@ Sebastien Boutet, SLAC National Accelerator Laboratory: sboutet@slac.stanford.ed
   'field_slac_news_type' => array(
     'und' => array(
       0 => array(
-        'tid' => 29,
+        'tid' => 2,
         'uuid' => '47c46adc-4bf5-41cc-91a2-96c057b16297',
-      ),
-    ),
-  ),
-  'field_slac_news_date' => array(
-    'und' => array(
-      0 => array(
-        'value' => '2014-01-22 00:00:00',
-        'timezone' => 'America/Los_Angeles',
-        'timezone_db' => 'America/Los_Angeles',
-        'date_type' => 'datetime',
       ),
     ),
   ),
@@ -1968,7 +2400,55 @@ Sebastien Boutet, SLAC National Accelerator Laboratory: sboutet@slac.stanford.ed
   'comment_count' => 0,
   'name' => 'James Smith',
   'picture' => 0,
-  'date' => '2012-09-26 13:45:15 -0600',
+  'path' => array(
+    'pid' => 156,
+    'source' => 'node/69',
+    'alias' => 'news/global-warming-has-increased-risk-record-heat-say-stanford-scientists',
+    'language' => 'und',
+  ),
+  'workbench_moderation' => array(
+    'current' => array(
+      'hid' => 248,
+      'vid' => 280,
+      'nid' => 69,
+      'from_state' => 'draft',
+      'state' => 'draft',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'Global warming has increased risk of record heat, say Stanford scientists',
+      'timestamp' => 1433347464,
+    ),
+    'published' => array(
+      'hid' => 248,
+      'vid' => 280,
+      'nid' => 69,
+      'from_state' => 'draft',
+      'state' => 'published',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'Global warming has increased risk of record heat, say Stanford scientists',
+      'timestamp' => 1433347464,
+    ),
+    'my_revision' => array(
+      'hid' => 248,
+      'vid' => 280,
+      'nid' => 69,
+      'from_state' => 'draft',
+      'state' => 'draft',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'Global warming has increased risk of record heat, say Stanford scientists',
+      'timestamp' => 1433347464,
+    ),
+  ),
+  'pathauto_perform_alias' => FALSE,
+  'date' => '2012-09-26 19:45:15 +0000',
   'author_uuid' => '7588442f-2b14-42b8-b4f2-cb90accaad0d',
 );
   $nodes[] = array(
@@ -1978,14 +2458,14 @@ Sebastien Boutet, SLAC National Accelerator Laboratory: sboutet@slac.stanford.ed
   'comment' => 1,
   'promote' => 0,
   'sticky' => 0,
-  'vuuid' => '7a26bc1e-be6e-47b2-af31-9780bb060506',
+  'vuuid' => 'fe7e3047-65a0-4ab4-a52b-c108b8bb332d',
   'type' => 'slac_news',
   'language' => 'und',
   'created' => 1348775115,
   'tnid' => 0,
   'translate' => 0,
   'uuid' => 'er850fab-95d9-45dc-9e52-9c4901fbad53',
-  'revision_uid' => 1,
+  'revision_uid' => 0,
   'body' => array(
     'und' => array(
       0 => array(
@@ -2064,6 +2544,16 @@ Sebastien Boutet, SLAC National Accelerator Laboratory: sboutet@slac.stanford.ed
   ),
   'field_slac_news_citation' => array(),
   'field_slac_news_contact' => array(),
+  'field_slac_news_date' => array(
+    'und' => array(
+      0 => array(
+        'value' => '2013-10-05 00:00:00',
+        'timezone' => 'UTC',
+        'timezone_db' => 'UTC',
+        'date_type' => 'datetime',
+      ),
+    ),
+  ),
   'field_slac_news_media' => array(
     'und' => array(
       0 => array(
@@ -2085,7 +2575,7 @@ Sebastien Boutet, SLAC National Accelerator Laboratory: sboutet@slac.stanford.ed
   'field_slac_news_tags' => array(
     'und' => array(
       0 => array(
-        'tid' => 74,
+        'tid' => 70,
         'uuid' => '4538f295-cc43-4d99-ba1d-6a7f23e86663',
       ),
     ),
@@ -2093,18 +2583,8 @@ Sebastien Boutet, SLAC National Accelerator Laboratory: sboutet@slac.stanford.ed
   'field_slac_news_type' => array(
     'und' => array(
       0 => array(
-        'tid' => 29,
+        'tid' => 2,
         'uuid' => '47c46adc-4bf5-41cc-91a2-96c057b16297',
-      ),
-    ),
-  ),
-  'field_slac_news_date' => array(
-    'und' => array(
-      0 => array(
-        'value' => '2013-10-05 00:00:00',
-        'timezone' => 'America/Los_Angeles',
-        'timezone_db' => 'America/Los_Angeles',
-        'date_type' => 'datetime',
       ),
     ),
   ),
@@ -2170,7 +2650,55 @@ Sebastien Boutet, SLAC National Accelerator Laboratory: sboutet@slac.stanford.ed
   'comment_count' => 0,
   'name' => 'James Smith',
   'picture' => 0,
-  'date' => '2012-09-27 13:45:15 -0600',
+  'path' => array(
+    'pid' => 157,
+    'source' => 'node/70',
+    'alias' => 'news/stanford-research-helps-people-social-phobia-face-their-fears',
+    'language' => 'und',
+  ),
+  'workbench_moderation' => array(
+    'current' => array(
+      'hid' => 249,
+      'vid' => 281,
+      'nid' => 70,
+      'from_state' => 'draft',
+      'state' => 'draft',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'Stanford research helps people with social phobia face their fears',
+      'timestamp' => 1433347464,
+    ),
+    'published' => array(
+      'hid' => 249,
+      'vid' => 281,
+      'nid' => 70,
+      'from_state' => 'draft',
+      'state' => 'published',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'Stanford research helps people with social phobia face their fears',
+      'timestamp' => 1433347464,
+    ),
+    'my_revision' => array(
+      'hid' => 249,
+      'vid' => 281,
+      'nid' => 70,
+      'from_state' => 'draft',
+      'state' => 'draft',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'Stanford research helps people with social phobia face their fears',
+      'timestamp' => 1433347464,
+    ),
+  ),
+  'pathauto_perform_alias' => FALSE,
+  'date' => '2012-09-27 19:45:15 +0000',
   'author_uuid' => '7588442f-2b14-42b8-b4f2-cb90accaad0d',
 );
   $nodes[] = array(
@@ -2180,14 +2708,14 @@ Sebastien Boutet, SLAC National Accelerator Laboratory: sboutet@slac.stanford.ed
   'comment' => 1,
   'promote' => 0,
   'sticky' => 0,
-  'vuuid' => '7a26bc1e-be2e-47b2-af31-9780bb060506',
+  'vuuid' => 'f63813d4-20cd-4c0d-afd9-3b01dbbd4974',
   'type' => 'slac_news',
   'language' => 'und',
   'created' => 1348429515,
   'tnid' => 0,
   'translate' => 0,
   'uuid' => 'er850fab-9ad9-45dc-9e52-9c4901fbad53',
-  'revision_uid' => 1,
+  'revision_uid' => 0,
   'body' => array(
     'und' => array(
       0 => array(
@@ -2272,6 +2800,16 @@ Sebastien Boutet, SLAC National Accelerator Laboratory: sboutet@slac.stanford.ed
   ),
   'field_slac_news_citation' => array(),
   'field_slac_news_contact' => array(),
+  'field_slac_news_date' => array(
+    'und' => array(
+      0 => array(
+        'value' => '2013-04-07 00:00:00',
+        'timezone' => 'UTC',
+        'timezone_db' => 'UTC',
+        'date_type' => 'datetime',
+      ),
+    ),
+  ),
   'field_slac_news_media' => array(
     'und' => array(
       0 => array(
@@ -2293,11 +2831,11 @@ Sebastien Boutet, SLAC National Accelerator Laboratory: sboutet@slac.stanford.ed
   'field_slac_news_tags' => array(
     'und' => array(
       0 => array(
-        'tid' => 72,
+        'tid' => 74,
         'uuid' => 'dad41187-6745-43bc-b95a-7851a7b2c825',
       ),
       1 => array(
-        'tid' => 71,
+        'tid' => 73,
         'uuid' => 'aaa4a1c8-fb65-4eeb-9bfe-909031f5e18b',
       ),
     ),
@@ -2305,18 +2843,8 @@ Sebastien Boutet, SLAC National Accelerator Laboratory: sboutet@slac.stanford.ed
   'field_slac_news_type' => array(
     'und' => array(
       0 => array(
-        'tid' => 29,
+        'tid' => 2,
         'uuid' => '47c46adc-4bf5-41cc-91a2-96c057b16297',
-      ),
-    ),
-  ),
-  'field_slac_news_date' => array(
-    'und' => array(
-      0 => array(
-        'value' => '2013-04-07 00:00:00',
-        'timezone' => 'America/Los_Angeles',
-        'timezone_db' => 'America/Los_Angeles',
-        'date_type' => 'datetime',
       ),
     ),
   ),
@@ -2382,7 +2910,55 @@ Sebastien Boutet, SLAC National Accelerator Laboratory: sboutet@slac.stanford.ed
   'comment_count' => 0,
   'name' => 'James Smith',
   'picture' => 0,
-  'date' => '2012-09-23 13:45:15 -0600',
+  'path' => array(
+    'pid' => 158,
+    'source' => 'node/71',
+    'alias' => 'news/two-stanford-professors-win-macarthur-genius-awards',
+    'language' => 'und',
+  ),
+  'workbench_moderation' => array(
+    'current' => array(
+      'hid' => 250,
+      'vid' => 282,
+      'nid' => 71,
+      'from_state' => 'draft',
+      'state' => 'draft',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'Two Stanford professors win MacArthur \'genius\' awards',
+      'timestamp' => 1433347464,
+    ),
+    'published' => array(
+      'hid' => 250,
+      'vid' => 282,
+      'nid' => 71,
+      'from_state' => 'draft',
+      'state' => 'published',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'Two Stanford professors win MacArthur \'genius\' awards',
+      'timestamp' => 1433347464,
+    ),
+    'my_revision' => array(
+      'hid' => 250,
+      'vid' => 282,
+      'nid' => 71,
+      'from_state' => 'draft',
+      'state' => 'draft',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'Two Stanford professors win MacArthur \'genius\' awards',
+      'timestamp' => 1433347464,
+    ),
+  ),
+  'pathauto_perform_alias' => FALSE,
+  'date' => '2012-09-23 19:45:15 +0000',
   'author_uuid' => '7588442f-2b14-42b8-b4f2-cb90accaad0d',
 );
   return $nodes;

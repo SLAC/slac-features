@@ -24,7 +24,7 @@ function slac_faq_demo_uuid_features_default_content() {
   'tnid' => 0,
   'translate' => 0,
   'uuid' => '08b67f1c-24c8-4f63-a21e-723240f771fc',
-  'revision_uid' => 1,
+  'revision_uid' => 0,
   'question' => 'What about Stanford faculty, staff and students?',
   'detailed_question' => '',
   'body' => array(
@@ -43,15 +43,16 @@ function slac_faq_demo_uuid_features_default_content() {
   'field_faq_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 2,
+        'tid' => 29,
         'uuid' => 'd3679f29-c528-4c4f-99ef-6aa7ca35a795',
       ),
       1 => array(
-        'tid' => 3,
+        'tid' => 30,
         'uuid' => 'db22e661-78c9-4acd-80df-cb53faaf5717',
       ),
     ),
   ),
+  'field_question_details' => array(),
   'field_status' => array(
     'und' => array(
       0 => array(
@@ -59,7 +60,6 @@ function slac_faq_demo_uuid_features_default_content() {
       ),
     ),
   ),
-  'field_question_details' => array(),
   'metatags' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
@@ -122,8 +122,8 @@ function slac_faq_demo_uuid_features_default_content() {
   'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
-  'date' => '2014-02-27 11:23:05 +0200',
-  'author_uuid' => '63fae3c0-f6a4-41cd-ac1c-919f109dfb32',
+  'date' => '2014-02-27 09:23:05 +0000',
+  'author_uuid' => '5415e044-85b9-4381-b98a-afcc89f264a1',
 );
   $nodes[] = array(
   'title' => 'Where is the recreation center located?',
@@ -139,7 +139,7 @@ function slac_faq_demo_uuid_features_default_content() {
   'tnid' => 0,
   'translate' => 0,
   'uuid' => '430aea18-cd13-4f01-9363-05f01c5d1fd1',
-  'revision_uid' => 1,
+  'revision_uid' => 0,
   'question' => 'Where is the recreation center located?',
   'detailed_question' => '',
   'body' => array(
@@ -158,11 +158,12 @@ function slac_faq_demo_uuid_features_default_content() {
   'field_faq_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 3,
+        'tid' => 30,
         'uuid' => 'db22e661-78c9-4acd-80df-cb53faaf5717',
       ),
     ),
   ),
+  'field_question_details' => array(),
   'field_status' => array(
     'und' => array(
       0 => array(
@@ -170,7 +171,6 @@ function slac_faq_demo_uuid_features_default_content() {
       ),
     ),
   ),
-  'field_question_details' => array(),
   'metatags' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
@@ -233,8 +233,8 @@ function slac_faq_demo_uuid_features_default_content() {
   'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
-  'date' => '2014-02-27 11:23:40 +0200',
-  'author_uuid' => '63fae3c0-f6a4-41cd-ac1c-919f109dfb32',
+  'date' => '2014-02-27 09:23:40 +0000',
+  'author_uuid' => '5415e044-85b9-4381-b98a-afcc89f264a1',
 );
   $nodes[] = array(
   'title' => 'What equipment and facilities are available in the recreation center?',
@@ -250,7 +250,7 @@ function slac_faq_demo_uuid_features_default_content() {
   'tnid' => 0,
   'translate' => 0,
   'uuid' => 'cd6b4b3e-5eef-4edb-b7b1-8ff9ec5b4197',
-  'revision_uid' => 1,
+  'revision_uid' => 0,
   'question' => 'What equipment and facilities are available in the recreation center?',
   'detailed_question' => '',
   'body' => array(
@@ -269,11 +269,12 @@ function slac_faq_demo_uuid_features_default_content() {
   'field_faq_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 2,
+        'tid' => 29,
         'uuid' => 'd3679f29-c528-4c4f-99ef-6aa7ca35a795',
       ),
     ),
   ),
+  'field_question_details' => array(),
   'field_status' => array(
     'und' => array(
       0 => array(
@@ -281,7 +282,6 @@ function slac_faq_demo_uuid_features_default_content() {
       ),
     ),
   ),
-  'field_question_details' => array(),
   'metatags' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
@@ -344,8 +344,8 @@ function slac_faq_demo_uuid_features_default_content() {
   'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
-  'date' => '2014-02-27 11:22:07 +0200',
-  'author_uuid' => '63fae3c0-f6a4-41cd-ac1c-919f109dfb32',
+  'date' => '2014-02-27 09:22:07 +0000',
+  'author_uuid' => '5415e044-85b9-4381-b98a-afcc89f264a1',
 );
   $nodes[] = array(
   'title' => 'What is SLAC?',
@@ -361,7 +361,7 @@ function slac_faq_demo_uuid_features_default_content() {
   'tnid' => 0,
   'translate' => 0,
   'uuid' => 'dba957eb-9f00-4f2a-96d5-35fe01dd79b5',
-  'revision_uid' => 1,
+  'revision_uid' => 0,
   'question' => 'What is SLAC?',
   'detailed_question' => '',
   'body' => array(
@@ -384,15 +384,8 @@ function slac_faq_demo_uuid_features_default_content() {
   'field_faq_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 1,
+        'tid' => 28,
         'uuid' => '92dd70f6-ac28-4707-a6b6-13b2a94d6028',
-      ),
-    ),
-  ),
-  'field_status' => array(
-    'und' => array(
-      0 => array(
-        'value' => 'open',
       ),
     ),
   ),
@@ -404,6 +397,13 @@ function slac_faq_demo_uuid_features_default_content() {
         'format' => 'full_html',
         'safe_value' => ' <p>Some details about SLAC.</p>
  ',
+      ),
+    ),
+  ),
+  'field_status' => array(
+    'und' => array(
+      0 => array(
+        'value' => 'open',
       ),
     ),
   ),
@@ -469,8 +469,8 @@ function slac_faq_demo_uuid_features_default_content() {
   'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
-  'date' => '2014-02-27 18:50:48 +0200',
-  'author_uuid' => '63fae3c0-f6a4-41cd-ac1c-919f109dfb32',
+  'date' => '2014-02-27 16:50:48 +0000',
+  'author_uuid' => '5415e044-85b9-4381-b98a-afcc89f264a1',
 );
   return $nodes;
 }
