@@ -22,13 +22,16 @@ function slac_blog_demo_uuid_features_default_users() {
   'status' => 1,
   'timezone' => 'Europe/Helsinki',
   'language' => '',
-  'picture' => NULL,
+  'picture' => 0,
   'init' => 'dsa@uyg.com',
-  'data' => FALSE,
+  'data' => array(
+    'htmlmail_plaintext' => 0,
+  ),
   'uuid' => '3b92ccfc-e7f7-4599-84d5-71e3e35c6981',
   'roles' => array(
     2 => 'authenticated user',
   ),
+  'metatags' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:UserAccount',
@@ -45,7 +48,7 @@ function slac_blog_demo_uuid_features_default_users() {
       'type' => 'rel',
     ),
   ),
-  'date' => '2013-11-09 12:16:44 +0200',
+  'date' => '2013-11-09 10:16:44 +0000',
 );
   $users[] = array(
   'name' => 'usertest2',
@@ -59,13 +62,16 @@ function slac_blog_demo_uuid_features_default_users() {
   'status' => 1,
   'timezone' => 'Europe/Helsinki',
   'language' => '',
-  'picture' => NULL,
+  'picture' => 0,
   'init' => 'sdfsaf@csfgs.com',
-  'data' => FALSE,
+  'data' => array(
+    'htmlmail_plaintext' => 0,
+  ),
   'uuid' => '4edce278-5dc3-4e83-b62e-9f3b5556007e',
   'roles' => array(
     2 => 'authenticated user',
   ),
+  'metatags' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:UserAccount',
@@ -82,7 +88,7 @@ function slac_blog_demo_uuid_features_default_users() {
       'type' => 'rel',
     ),
   ),
-  'date' => '2013-11-09 12:18:58 +0200',
+  'date' => '2013-11-09 10:18:58 +0000',
 );
   $users[] = array(
   'name' => 'usertest3',
@@ -96,13 +102,16 @@ function slac_blog_demo_uuid_features_default_users() {
   'status' => 1,
   'timezone' => 'Europe/Helsinki',
   'language' => '',
-  'picture' => NULL,
+  'picture' => 0,
   'init' => 'sdgsdfg@dsfgs.com',
-  'data' => FALSE,
+  'data' => array(
+    'htmlmail_plaintext' => 0,
+  ),
   'uuid' => 'af70240a-9f15-49fa-a854-27c6f484ebc9',
   'roles' => array(
     2 => 'authenticated user',
   ),
+  'metatags' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:UserAccount',
@@ -119,7 +128,7 @@ function slac_blog_demo_uuid_features_default_users() {
       'type' => 'rel',
     ),
   ),
-  'date' => '2013-11-09 12:19:30 +0200',
+  'date' => '2013-11-09 10:19:30 +0000',
 );
   return $users;
 }

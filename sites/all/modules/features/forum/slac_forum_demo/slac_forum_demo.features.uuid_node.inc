@@ -11,7 +11,6 @@ function slac_forum_demo_uuid_features_default_content() {
   $nodes = array();
 
   $nodes[] = array(
-  'uid' => 1,
   'title' => '7th Extremely Large Databases Conference',
   'log' => '',
   'status' => 1,
@@ -29,7 +28,7 @@ function slac_forum_demo_uuid_features_default_content() {
   'taxonomy_forums' => array(
     'und' => array(
       0 => array(
-        'tid' => 44,
+        'tid' => 65,
         'uuid' => 'd05a89c1-2f65-4dc0-8158-ca658bdabc0e',
       ),
     ),
@@ -51,20 +50,19 @@ All rooms are part of the Knight Management Center, for directions see: directio
 ',
         'summary' => '',
         'format' => 'full_html',
-        'safe_value' => '<p>September 9-12, 2013<br />
+        'safe_value' => ' <p>September 9-12, 2013<br />
 Stanford University, California, USA</p>
 <p>Dates and locations:</p>
-<ul>
-<li>main program: Sept 10-11 CEMEX Auditorium</li>
-<li>tutorials: Sept 9 Gunn &amp; McClelland</li>
-<li>invitational workshop: Sept 12 Gunn Bldg, Room 101</li>
-</ul>
+<p>*   main program: Sept 10-11 CEMEX Auditorium<br />
+*   tutorials: Sept 9 Gunn &amp; McClelland<br />
+*   invitational workshop: Sept 12 Gunn Bldg, Room 101</p>
 <p>All rooms are part of the Knight Management Center, for directions see: directions.</p>
-',
-        'safe_summary' => '',
+ ',
+        'safe_summary' => '  ',
       ),
     ),
   ),
+  'metatags' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:Post',
@@ -126,20 +124,18 @@ Stanford University, California, USA</p>
       'callback' => 'date_iso8601',
     ),
   ),
-  'cid' => 3,
-  'last_comment_name' => '',
+  'cid' => 0,
+  'last_comment_name' => NULL,
   'last_comment_uid' => 1,
-  'comment_count' => 1,
+  'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
-  'data' => 'b:0;',
-  'forum_tid' => 44,
+  'forum_tid' => 65,
   'subscriptions_notify' => TRUE,
-  'date' => '2013-08-29 11:33:48 +0300',
-  'author_uuid' => '375069bb-6930-4570-9fcf-37838eb058ac',
+  'date' => '2013-08-29 08:33:48 +0000',
+  'author_uuid' => '8de174c7-3191-4a83-abfe-743a2585da90',
 );
   $nodes[] = array(
-  'uid' => 1,
   'title' => 'Why Does Particle Physics Matter?',
   'log' => '',
   'status' => 1,
@@ -157,7 +153,7 @@ Stanford University, California, USA</p>
   'taxonomy_forums' => array(
     'und' => array(
       0 => array(
-        'tid' => 47,
+        'tid' => 66,
         'uuid' => 'f1fdd65a-9b52-4f38-9374-769d377943b6',
       ),
     ),
@@ -168,12 +164,13 @@ Stanford University, California, USA</p>
         'value' => 'Is there any more esoteric, almost mystical-sounding scientific field than particle physics? To the layperson, the discipline is shrouded in impenetrable particle names like anti-down quarks and neutralinos, and the counterintuitive rules of quantum mechanics. In an effort to make their field more concrete and meaningful to the rest of the world, a group of particle physicists has produced a series of videos on "Why Particle Physics Matters."',
         'summary' => '',
         'format' => 'full_html',
-        'safe_value' => '<p>Is there any more esoteric, almost mystical-sounding scientific field than particle physics? To the layperson, the discipline is shrouded in impenetrable particle names like anti-down quarks and neutralinos, and the counterintuitive rules of quantum mechanics. In an effort to make their field more concrete and meaningful to the rest of the world, a group of particle physicists has produced a series of videos on "Why Particle Physics Matters."</p>
-',
-        'safe_summary' => '',
+        'safe_value' => ' <p>Is there any more esoteric, almost mystical-sounding scientific field than particle physics? To the layperson, the discipline is shrouded in impenetrable particle names like anti-down quarks and neutralinos, and the counterintuitive rules of quantum mechanics. In an effort to make their field more concrete and meaningful to the rest of the world, a group of particle physicists has produced a series of videos on "Why Particle Physics Matters."</p>
+ ',
+        'safe_summary' => '  ',
       ),
     ),
   ),
+  'metatags' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:Post',
@@ -235,17 +232,16 @@ Stanford University, California, USA</p>
       'callback' => 'date_iso8601',
     ),
   ),
-  'cid' => 2,
-  'last_comment_name' => '',
+  'cid' => 0,
+  'last_comment_name' => NULL,
   'last_comment_uid' => 1,
-  'comment_count' => 2,
+  'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
-  'data' => 'b:0;',
-  'forum_tid' => 47,
+  'forum_tid' => 66,
   'subscriptions_notify' => TRUE,
-  'date' => '2013-08-29 11:36:35 +0300',
-  'author_uuid' => '375069bb-6930-4570-9fcf-37838eb058ac',
+  'date' => '2013-08-29 08:36:35 +0000',
+  'author_uuid' => '8de174c7-3191-4a83-abfe-743a2585da90',
 );
   return $nodes;
 }

@@ -51,6 +51,7 @@ function slac_people_slideshow_image_default_styles() {
         'weight' => 2,
       ),
     ),
+    'label' => 'slideshow_image_description_bottom',
   );
 
   return $styles;

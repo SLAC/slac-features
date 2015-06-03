@@ -17,14 +17,14 @@ function slac_kb_demo_uuid_features_default_content() {
   'comment' => 2,
   'promote' => 0,
   'sticky' => 0,
-  'vuuid' => '07a540b5-90f4-4e12-8b80-833d5766d04e',
+  'vuuid' => 'fa354994-3509-4310-b413-1354e4ea302c',
   'type' => 'kb_article',
   'language' => 'und',
   'created' => 1374763068,
   'tnid' => 0,
   'translate' => 0,
   'uuid' => '0f0dea2a-700f-48d0-b247-7bf3fc37637e',
-  'revision_uid' => 1,
+  'revision_uid' => 0,
   'body' => array(
     'und' => array(
       0 => array(
@@ -49,11 +49,12 @@ function slac_kb_demo_uuid_features_default_content() {
   'field_kb_categories' => array(
     'und' => array(
       0 => array(
-        'tid' => 34,
+        'tid' => 59,
         'uuid' => '2e456207-aeca-43f3-b29c-0da0834feeac',
       ),
     ),
   ),
+  'metatags' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:Item',
@@ -115,8 +116,56 @@ function slac_kb_demo_uuid_features_default_content() {
   'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
-  'date' => '2013-07-25 17:37:48 +0300',
-  'author_uuid' => '8feecd34-79bc-478c-87fa-5646e70fc140',
+  'path' => array(
+    'pid' => 127,
+    'source' => 'node/47',
+    'alias' => 'kb/man-made-material-shows-surprisingly-magnetic-personality',
+    'language' => 'und',
+  ),
+  'workbench_moderation' => array(
+    'current' => array(
+      'hid' => 227,
+      'vid' => 259,
+      'nid' => 47,
+      'from_state' => 'draft',
+      'state' => 'draft',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'Man-made Material Shows Surprisingly Magnetic Personality',
+      'timestamp' => 1433347464,
+    ),
+    'published' => array(
+      'hid' => 227,
+      'vid' => 259,
+      'nid' => 47,
+      'from_state' => 'draft',
+      'state' => 'published',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'Man-made Material Shows Surprisingly Magnetic Personality',
+      'timestamp' => 1433347464,
+    ),
+    'my_revision' => array(
+      'hid' => 227,
+      'vid' => 259,
+      'nid' => 47,
+      'from_state' => 'draft',
+      'state' => 'draft',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'Man-made Material Shows Surprisingly Magnetic Personality',
+      'timestamp' => 1433347464,
+    ),
+  ),
+  'pathauto_perform_alias' => FALSE,
+  'date' => '2013-07-25 14:37:48 +0000',
+  'author_uuid' => '5415e044-85b9-4381-b98a-afcc89f264a1',
 );
   $nodes[] = array(
   'title' => 'Bienenstock, Michelson Elected to American Academy of Arts and Sciences ',
@@ -125,14 +174,14 @@ function slac_kb_demo_uuid_features_default_content() {
   'comment' => 2,
   'promote' => 0,
   'sticky' => 0,
-  'vuuid' => '26b4862b-52d6-4db1-97c9-d48f4b0c49cc',
+  'vuuid' => 'e747c345-4aac-4c21-8f3b-21e1eedd9165',
   'type' => 'kb_article',
   'language' => 'und',
   'created' => 1374763633,
   'tnid' => 0,
   'translate' => 0,
   'uuid' => '3587a58a-79d5-42e6-9a65-e96ca2f22bca',
-  'revision_uid' => 1,
+  'revision_uid' => 0,
   'body' => array(
     'und' => array(
       0 => array(
@@ -149,11 +198,12 @@ function slac_kb_demo_uuid_features_default_content() {
   'field_kb_categories' => array(
     'und' => array(
       0 => array(
-        'tid' => 36,
+        'tid' => 61,
         'uuid' => '5441f982-c41e-47f9-a076-ba312679f181',
       ),
     ),
   ),
+  'metatags' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:Item',
@@ -215,8 +265,56 @@ function slac_kb_demo_uuid_features_default_content() {
   'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
-  'date' => '2013-07-25 17:47:13 +0300',
-  'author_uuid' => '8feecd34-79bc-478c-87fa-5646e70fc140',
+  'path' => array(
+    'pid' => 128,
+    'source' => 'node/48',
+    'alias' => 'kb/bienenstock-michelson-elected-american-academy-arts-and-sciences',
+    'language' => 'und',
+  ),
+  'workbench_moderation' => array(
+    'current' => array(
+      'hid' => 228,
+      'vid' => 260,
+      'nid' => 48,
+      'from_state' => 'draft',
+      'state' => 'draft',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'Bienenstock, Michelson Elected to American Academy of Arts and Sciences ',
+      'timestamp' => 1433347464,
+    ),
+    'published' => array(
+      'hid' => 228,
+      'vid' => 260,
+      'nid' => 48,
+      'from_state' => 'draft',
+      'state' => 'published',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'Bienenstock, Michelson Elected to American Academy of Arts and Sciences ',
+      'timestamp' => 1433347464,
+    ),
+    'my_revision' => array(
+      'hid' => 228,
+      'vid' => 260,
+      'nid' => 48,
+      'from_state' => 'draft',
+      'state' => 'draft',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'Bienenstock, Michelson Elected to American Academy of Arts and Sciences ',
+      'timestamp' => 1433347464,
+    ),
+  ),
+  'pathauto_perform_alias' => FALSE,
+  'date' => '2013-07-25 14:47:13 +0000',
+  'author_uuid' => '5415e044-85b9-4381-b98a-afcc89f264a1',
 );
   $nodes[] = array(
   'title' => 'SLAC Physicists Help Design, Build Cargo X-ray Scanners',
@@ -225,14 +323,14 @@ function slac_kb_demo_uuid_features_default_content() {
   'comment' => 2,
   'promote' => 0,
   'sticky' => 0,
-  'vuuid' => 'b52a2e4a-e717-434d-9be2-95410e5080d6',
+  'vuuid' => '4ad353e1-b281-4312-8796-8e54727a8257',
   'type' => 'kb_article',
   'language' => 'und',
   'created' => 1374763149,
   'tnid' => 0,
   'translate' => 0,
   'uuid' => '35f1d889-3183-4a63-94d8-01b3d10ec377',
-  'revision_uid' => 1,
+  'revision_uid' => 0,
   'body' => array(
     'und' => array(
       0 => array(
@@ -249,11 +347,12 @@ function slac_kb_demo_uuid_features_default_content() {
   'field_kb_categories' => array(
     'und' => array(
       0 => array(
-        'tid' => 35,
+        'tid' => 60,
         'uuid' => '35cbc66a-e794-4cac-bb15-e55d40106cfb',
       ),
     ),
   ),
+  'metatags' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:Item',
@@ -315,8 +414,56 @@ function slac_kb_demo_uuid_features_default_content() {
   'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
-  'date' => '2013-07-25 17:39:09 +0300',
-  'author_uuid' => '8feecd34-79bc-478c-87fa-5646e70fc140',
+  'path' => array(
+    'pid' => 129,
+    'source' => 'node/49',
+    'alias' => 'kb/slac-physicists-help-design-build-cargo-x-ray-scanners',
+    'language' => 'und',
+  ),
+  'workbench_moderation' => array(
+    'current' => array(
+      'hid' => 229,
+      'vid' => 261,
+      'nid' => 49,
+      'from_state' => 'draft',
+      'state' => 'draft',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'SLAC Physicists Help Design, Build Cargo X-ray Scanners',
+      'timestamp' => 1433347464,
+    ),
+    'published' => array(
+      'hid' => 229,
+      'vid' => 261,
+      'nid' => 49,
+      'from_state' => 'draft',
+      'state' => 'published',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'SLAC Physicists Help Design, Build Cargo X-ray Scanners',
+      'timestamp' => 1433347464,
+    ),
+    'my_revision' => array(
+      'hid' => 229,
+      'vid' => 261,
+      'nid' => 49,
+      'from_state' => 'draft',
+      'state' => 'draft',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'SLAC Physicists Help Design, Build Cargo X-ray Scanners',
+      'timestamp' => 1433347464,
+    ),
+  ),
+  'pathauto_perform_alias' => FALSE,
+  'date' => '2013-07-25 14:39:09 +0000',
+  'author_uuid' => '5415e044-85b9-4381-b98a-afcc89f264a1',
 );
   $nodes[] = array(
   'title' => 'SLAC Study Reveals Active Site of Enzyme Linked to Stuttering',
@@ -325,14 +472,14 @@ function slac_kb_demo_uuid_features_default_content() {
   'comment' => 2,
   'promote' => 0,
   'sticky' => 0,
-  'vuuid' => 'aa9a0145-25ef-427b-83a6-737e7d9456cb',
+  'vuuid' => '39dd604d-7b6c-4fbb-867f-79d9a25dec09',
   'type' => 'kb_article',
   'language' => 'und',
   'created' => 1374763118,
   'tnid' => 0,
   'translate' => 0,
   'uuid' => '35fa9e7d-b22a-4490-a8d3-c770762b0691',
-  'revision_uid' => 1,
+  'revision_uid' => 0,
   'body' => array(
     'und' => array(
       0 => array(
@@ -349,11 +496,12 @@ function slac_kb_demo_uuid_features_default_content() {
   'field_kb_categories' => array(
     'und' => array(
       0 => array(
-        'tid' => 36,
+        'tid' => 61,
         'uuid' => '5441f982-c41e-47f9-a076-ba312679f181',
       ),
     ),
   ),
+  'metatags' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:Item',
@@ -415,8 +563,56 @@ function slac_kb_demo_uuid_features_default_content() {
   'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
-  'date' => '2013-07-25 17:38:38 +0300',
-  'author_uuid' => '8feecd34-79bc-478c-87fa-5646e70fc140',
+  'path' => array(
+    'pid' => 130,
+    'source' => 'node/50',
+    'alias' => 'kb/slac-study-reveals-active-site-enzyme-linked-stuttering',
+    'language' => 'und',
+  ),
+  'workbench_moderation' => array(
+    'current' => array(
+      'hid' => 230,
+      'vid' => 262,
+      'nid' => 50,
+      'from_state' => 'draft',
+      'state' => 'draft',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'SLAC Study Reveals Active Site of Enzyme Linked to Stuttering',
+      'timestamp' => 1433347464,
+    ),
+    'published' => array(
+      'hid' => 230,
+      'vid' => 262,
+      'nid' => 50,
+      'from_state' => 'draft',
+      'state' => 'published',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'SLAC Study Reveals Active Site of Enzyme Linked to Stuttering',
+      'timestamp' => 1433347464,
+    ),
+    'my_revision' => array(
+      'hid' => 230,
+      'vid' => 262,
+      'nid' => 50,
+      'from_state' => 'draft',
+      'state' => 'draft',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'SLAC Study Reveals Active Site of Enzyme Linked to Stuttering',
+      'timestamp' => 1433347464,
+    ),
+  ),
+  'pathauto_perform_alias' => FALSE,
+  'date' => '2013-07-25 14:38:38 +0000',
+  'author_uuid' => '5415e044-85b9-4381-b98a-afcc89f264a1',
 );
   $nodes[] = array(
   'title' => 'New Test Bed Probes the Origin of Pulses at LCLS',
@@ -425,14 +621,14 @@ function slac_kb_demo_uuid_features_default_content() {
   'comment' => 2,
   'promote' => 0,
   'sticky' => 0,
-  'vuuid' => '0661ee71-6fb8-40ea-8f8d-864f9cfbc18d',
+  'vuuid' => '55e7dd92-6d95-4e7b-8eb0-b08763020729',
   'type' => 'kb_article',
   'language' => 'und',
   'created' => 1375260347,
   'tnid' => 0,
   'translate' => 0,
   'uuid' => '63556029-330e-47cf-8e64-359a6ed5a5f3',
-  'revision_uid' => 1,
+  'revision_uid' => 0,
   'body' => array(
     'und' => array(
       0 => array(
@@ -463,11 +659,12 @@ SLAC in May 2013 opened a new test facility at the Accelerator Structure Test Ar
   'field_kb_categories' => array(
     'und' => array(
       0 => array(
-        'tid' => 41,
+        'tid' => 66,
         'uuid' => 'af009c65-8760-454b-a942-c2424ed3c1c8',
       ),
     ),
   ),
+  'metatags' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:Item',
@@ -529,8 +726,56 @@ SLAC in May 2013 opened a new test facility at the Accelerator Structure Test Ar
   'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
-  'date' => '2013-07-31 11:45:47 +0300',
-  'author_uuid' => '8feecd34-79bc-478c-87fa-5646e70fc140',
+  'path' => array(
+    'pid' => 131,
+    'source' => 'node/51',
+    'alias' => 'kb/new-test-bed-probes-the-origin-pulses-lcls',
+    'language' => 'und',
+  ),
+  'workbench_moderation' => array(
+    'current' => array(
+      'hid' => 231,
+      'vid' => 263,
+      'nid' => 51,
+      'from_state' => 'draft',
+      'state' => 'draft',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'New Test Bed Probes the Origin of Pulses at LCLS',
+      'timestamp' => 1433347464,
+    ),
+    'published' => array(
+      'hid' => 231,
+      'vid' => 263,
+      'nid' => 51,
+      'from_state' => 'draft',
+      'state' => 'published',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'New Test Bed Probes the Origin of Pulses at LCLS',
+      'timestamp' => 1433347464,
+    ),
+    'my_revision' => array(
+      'hid' => 231,
+      'vid' => 263,
+      'nid' => 51,
+      'from_state' => 'draft',
+      'state' => 'draft',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'New Test Bed Probes the Origin of Pulses at LCLS',
+      'timestamp' => 1433347464,
+    ),
+  ),
+  'pathauto_perform_alias' => FALSE,
+  'date' => '2013-07-31 08:45:47 +0000',
+  'author_uuid' => '5415e044-85b9-4381-b98a-afcc89f264a1',
 );
   $nodes[] = array(
   'title' => 'New Program Broadens the Reach of LCLS Crystallography Experiments',
@@ -539,14 +784,14 @@ SLAC in May 2013 opened a new test facility at the Accelerator Structure Test Ar
   'comment' => 2,
   'promote' => 0,
   'sticky' => 0,
-  'vuuid' => 'ee7664c1-920e-4ec5-830d-a8264f71fc07',
+  'vuuid' => 'cf9a306f-139e-4c86-857a-45245a925760',
   'type' => 'kb_article',
   'language' => 'und',
   'created' => 1374763027,
   'tnid' => 0,
   'translate' => 0,
   'uuid' => '7167c296-fbef-45a8-84fb-1b5398214775',
-  'revision_uid' => 1,
+  'revision_uid' => 0,
   'body' => array(
     'und' => array(
       0 => array(
@@ -572,11 +817,12 @@ Twenty-eight crystal screening slots are already scheduled for October 2013 thro
   'field_kb_categories' => array(
     'und' => array(
       0 => array(
-        'tid' => 33,
+        'tid' => 58,
         'uuid' => '0d53e215-e34f-4097-a835-0870eaa81a0c',
       ),
     ),
   ),
+  'metatags' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:Item',
@@ -638,8 +884,56 @@ Twenty-eight crystal screening slots are already scheduled for October 2013 thro
   'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
-  'date' => '2013-07-25 17:37:07 +0300',
-  'author_uuid' => '8feecd34-79bc-478c-87fa-5646e70fc140',
+  'path' => array(
+    'pid' => 132,
+    'source' => 'node/52',
+    'alias' => 'kb/new-program-broadens-the-reach-lcls-crystallography-experiments',
+    'language' => 'und',
+  ),
+  'workbench_moderation' => array(
+    'current' => array(
+      'hid' => 232,
+      'vid' => 264,
+      'nid' => 52,
+      'from_state' => 'draft',
+      'state' => 'draft',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'New Program Broadens the Reach of LCLS Crystallography Experiments',
+      'timestamp' => 1433347464,
+    ),
+    'published' => array(
+      'hid' => 232,
+      'vid' => 264,
+      'nid' => 52,
+      'from_state' => 'draft',
+      'state' => 'published',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'New Program Broadens the Reach of LCLS Crystallography Experiments',
+      'timestamp' => 1433347464,
+    ),
+    'my_revision' => array(
+      'hid' => 232,
+      'vid' => 264,
+      'nid' => 52,
+      'from_state' => 'draft',
+      'state' => 'draft',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'New Program Broadens the Reach of LCLS Crystallography Experiments',
+      'timestamp' => 1433347464,
+    ),
+  ),
+  'pathauto_perform_alias' => FALSE,
+  'date' => '2013-07-25 14:37:07 +0000',
+  'author_uuid' => '5415e044-85b9-4381-b98a-afcc89f264a1',
 );
   $nodes[] = array(
   'title' => 'SLAC X-rays Resurrect 200-year-old Opera',
@@ -648,14 +942,14 @@ Twenty-eight crystal screening slots are already scheduled for October 2013 thro
   'comment' => 2,
   'promote' => 0,
   'sticky' => 0,
-  'vuuid' => 'f7944543-0a51-4850-807f-ec2143a7d94d',
+  'vuuid' => 'cd9b915a-07e1-4d4f-8a0a-11ae12da14e5',
   'type' => 'kb_article',
   'language' => 'und',
   'created' => 1375261105,
   'tnid' => 0,
   'translate' => 0,
   'uuid' => '9ecb05c6-eb36-44ed-825c-a8030e41a416',
-  'revision_uid' => 1,
+  'revision_uid' => 0,
   'body' => array(
     'und' => array(
       0 => array(
@@ -690,11 +984,12 @@ A visiting scholar at Stanford from Germany heard about how SLAC scientists unco
   'field_kb_categories' => array(
     'und' => array(
       0 => array(
-        'tid' => 39,
+        'tid' => 64,
         'uuid' => '8efc6df4-8289-4403-a87e-540e0d355e31',
       ),
     ),
   ),
+  'metatags' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:Item',
@@ -756,8 +1051,56 @@ A visiting scholar at Stanford from Germany heard about how SLAC scientists unco
   'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
-  'date' => '2013-07-31 11:58:25 +0300',
-  'author_uuid' => '8feecd34-79bc-478c-87fa-5646e70fc140',
+  'path' => array(
+    'pid' => 133,
+    'source' => 'node/53',
+    'alias' => 'kb/slac-x-rays-resurrect-200-year-old-opera',
+    'language' => 'und',
+  ),
+  'workbench_moderation' => array(
+    'current' => array(
+      'hid' => 233,
+      'vid' => 265,
+      'nid' => 53,
+      'from_state' => 'draft',
+      'state' => 'draft',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'SLAC X-rays Resurrect 200-year-old Opera',
+      'timestamp' => 1433347464,
+    ),
+    'published' => array(
+      'hid' => 233,
+      'vid' => 265,
+      'nid' => 53,
+      'from_state' => 'draft',
+      'state' => 'published',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'SLAC X-rays Resurrect 200-year-old Opera',
+      'timestamp' => 1433347464,
+    ),
+    'my_revision' => array(
+      'hid' => 233,
+      'vid' => 265,
+      'nid' => 53,
+      'from_state' => 'draft',
+      'state' => 'draft',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'SLAC X-rays Resurrect 200-year-old Opera',
+      'timestamp' => 1433347464,
+    ),
+  ),
+  'pathauto_perform_alias' => FALSE,
+  'date' => '2013-07-31 08:58:25 +0000',
+  'author_uuid' => '5415e044-85b9-4381-b98a-afcc89f264a1',
 );
   $nodes[] = array(
   'title' => 'X-ray Laser Brings Gold Exploration to the Nanoscale',
@@ -766,14 +1109,14 @@ A visiting scholar at Stanford from Germany heard about how SLAC scientists unco
   'comment' => 2,
   'promote' => 0,
   'sticky' => 0,
-  'vuuid' => '63e5bb37-88ab-4355-a326-ae66f3c6282f',
+  'vuuid' => 'dd1cdc5f-d542-4156-b7cd-094d7bd309a0',
   'type' => 'kb_article',
   'language' => 'und',
   'created' => 1374763092,
   'tnid' => 0,
   'translate' => 0,
   'uuid' => 'b0015037-ad71-4771-a87b-dd571d6976e1',
-  'revision_uid' => 1,
+  'revision_uid' => 0,
   'body' => array(
     'und' => array(
       0 => array(
@@ -798,11 +1141,12 @@ A visiting scholar at Stanford from Germany heard about how SLAC scientists unco
   'field_kb_categories' => array(
     'und' => array(
       0 => array(
-        'tid' => 37,
+        'tid' => 62,
         'uuid' => '8007cf90-674c-4ff0-a0f2-25a0466cabec',
       ),
     ),
   ),
+  'metatags' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:Item',
@@ -864,8 +1208,56 @@ A visiting scholar at Stanford from Germany heard about how SLAC scientists unco
   'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
-  'date' => '2013-07-25 17:38:12 +0300',
-  'author_uuid' => '8feecd34-79bc-478c-87fa-5646e70fc140',
+  'path' => array(
+    'pid' => 134,
+    'source' => 'node/54',
+    'alias' => 'kb/x-ray-laser-brings-gold-exploration-the-nanoscale',
+    'language' => 'und',
+  ),
+  'workbench_moderation' => array(
+    'current' => array(
+      'hid' => 234,
+      'vid' => 266,
+      'nid' => 54,
+      'from_state' => 'draft',
+      'state' => 'draft',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'X-ray Laser Brings Gold Exploration to the Nanoscale',
+      'timestamp' => 1433347464,
+    ),
+    'published' => array(
+      'hid' => 234,
+      'vid' => 266,
+      'nid' => 54,
+      'from_state' => 'draft',
+      'state' => 'published',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'X-ray Laser Brings Gold Exploration to the Nanoscale',
+      'timestamp' => 1433347464,
+    ),
+    'my_revision' => array(
+      'hid' => 234,
+      'vid' => 266,
+      'nid' => 54,
+      'from_state' => 'draft',
+      'state' => 'draft',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'X-ray Laser Brings Gold Exploration to the Nanoscale',
+      'timestamp' => 1433347464,
+    ),
+  ),
+  'pathauto_perform_alias' => FALSE,
+  'date' => '2013-07-25 14:38:12 +0000',
+  'author_uuid' => '5415e044-85b9-4381-b98a-afcc89f264a1',
 );
   $nodes[] = array(
   'title' => 'X-ray Laser Pulses in Two Colors',
@@ -874,14 +1266,14 @@ A visiting scholar at Stanford from Germany heard about how SLAC scientists unco
   'comment' => 2,
   'promote' => 0,
   'sticky' => 0,
-  'vuuid' => '0ec0fc1d-d4d1-4c00-9a01-0d9e0af3e26a',
+  'vuuid' => 'abfefe44-06c6-4f56-8ce7-f96210ce9b94',
   'type' => 'kb_article',
   'language' => 'und',
   'created' => 1375260181,
   'tnid' => 0,
   'translate' => 0,
   'uuid' => 'c1b7a2b9-0c29-463d-8c7d-028b8dfc39b4',
-  'revision_uid' => 1,
+  'revision_uid' => 0,
   'body' => array(
     'und' => array(
       0 => array(
@@ -902,11 +1294,12 @@ Vestibulum tincidunt malesuada tellus. Ut ultrices ultrices enim. Curabitur sit 
   'field_kb_categories' => array(
     'und' => array(
       0 => array(
-        'tid' => 38,
+        'tid' => 63,
         'uuid' => '8d607e80-fa1f-4fba-b812-35b84cf02f42',
       ),
     ),
   ),
+  'metatags' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:Item',
@@ -968,8 +1361,56 @@ Vestibulum tincidunt malesuada tellus. Ut ultrices ultrices enim. Curabitur sit 
   'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
-  'date' => '2013-07-31 11:43:01 +0300',
-  'author_uuid' => '8feecd34-79bc-478c-87fa-5646e70fc140',
+  'path' => array(
+    'pid' => 135,
+    'source' => 'node/55',
+    'alias' => 'kb/x-ray-laser-pulses-two-colors',
+    'language' => 'und',
+  ),
+  'workbench_moderation' => array(
+    'current' => array(
+      'hid' => 235,
+      'vid' => 267,
+      'nid' => 55,
+      'from_state' => 'draft',
+      'state' => 'draft',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'X-ray Laser Pulses in Two Colors',
+      'timestamp' => 1433347464,
+    ),
+    'published' => array(
+      'hid' => 235,
+      'vid' => 267,
+      'nid' => 55,
+      'from_state' => 'draft',
+      'state' => 'published',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'X-ray Laser Pulses in Two Colors',
+      'timestamp' => 1433347464,
+    ),
+    'my_revision' => array(
+      'hid' => 235,
+      'vid' => 267,
+      'nid' => 55,
+      'from_state' => 'draft',
+      'state' => 'draft',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'X-ray Laser Pulses in Two Colors',
+      'timestamp' => 1433347464,
+    ),
+  ),
+  'pathauto_perform_alias' => FALSE,
+  'date' => '2013-07-31 08:43:01 +0000',
+  'author_uuid' => '5415e044-85b9-4381-b98a-afcc89f264a1',
 );
   $nodes[] = array(
   'title' => 'A New Tool to Split X-ray Laser Pulses',
@@ -978,14 +1419,14 @@ Vestibulum tincidunt malesuada tellus. Ut ultrices ultrices enim. Curabitur sit 
   'comment' => 2,
   'promote' => 0,
   'sticky' => 0,
-  'vuuid' => '2380ac5f-cb74-4788-a66e-3a1f4c11a01f',
+  'vuuid' => '42132ee4-a79d-44d8-b851-4edd7b97d8aa',
   'type' => 'kb_article',
   'language' => 'und',
   'created' => 1375260294,
   'tnid' => 0,
   'translate' => 0,
   'uuid' => 'd3c2d996-c759-43cf-a00d-db97863a5bc9',
-  'revision_uid' => 1,
+  'revision_uid' => 0,
   'body' => array(
     'und' => array(
       0 => array(
@@ -1010,11 +1451,12 @@ Vestibulum tincidunt malesuada tellus. Ut ultrices ultrices enim. Curabitur sit 
   'field_kb_categories' => array(
     'und' => array(
       0 => array(
-        'tid' => 32,
+        'tid' => 57,
         'uuid' => '0c8a1df9-c687-4ded-b8eb-dcea6e4b0c9f',
       ),
     ),
   ),
+  'metatags' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:Item',
@@ -1076,8 +1518,56 @@ Vestibulum tincidunt malesuada tellus. Ut ultrices ultrices enim. Curabitur sit 
   'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
-  'date' => '2013-07-31 11:44:54 +0300',
-  'author_uuid' => '8feecd34-79bc-478c-87fa-5646e70fc140',
+  'path' => array(
+    'pid' => 136,
+    'source' => 'node/56',
+    'alias' => 'kb/new-tool-split-x-ray-laser-pulses',
+    'language' => 'und',
+  ),
+  'workbench_moderation' => array(
+    'current' => array(
+      'hid' => 236,
+      'vid' => 268,
+      'nid' => 56,
+      'from_state' => 'draft',
+      'state' => 'draft',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'A New Tool to Split X-ray Laser Pulses',
+      'timestamp' => 1433347464,
+    ),
+    'published' => array(
+      'hid' => 236,
+      'vid' => 268,
+      'nid' => 56,
+      'from_state' => 'draft',
+      'state' => 'published',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'A New Tool to Split X-ray Laser Pulses',
+      'timestamp' => 1433347464,
+    ),
+    'my_revision' => array(
+      'hid' => 236,
+      'vid' => 268,
+      'nid' => 56,
+      'from_state' => 'draft',
+      'state' => 'draft',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'A New Tool to Split X-ray Laser Pulses',
+      'timestamp' => 1433347464,
+    ),
+  ),
+  'pathauto_perform_alias' => FALSE,
+  'date' => '2013-07-31 08:44:54 +0000',
+  'author_uuid' => '5415e044-85b9-4381-b98a-afcc89f264a1',
 );
   $nodes[] = array(
   'title' => 'Printing Innovations Provide 10-fold Improvement in Organic Electronics',
@@ -1086,14 +1576,14 @@ Vestibulum tincidunt malesuada tellus. Ut ultrices ultrices enim. Curabitur sit 
   'comment' => 2,
   'promote' => 0,
   'sticky' => 0,
-  'vuuid' => '8d67d6e1-5edb-4505-952e-4dccb56cbbda',
+  'vuuid' => 'e9da575f-51f3-4849-855e-396915832542',
   'type' => 'kb_article',
   'language' => 'und',
   'created' => 1375261153,
   'tnid' => 0,
   'translate' => 0,
   'uuid' => 'db32147e-6225-4450-a7fe-482beb45df85',
-  'revision_uid' => 1,
+  'revision_uid' => 0,
   'body' => array(
     'und' => array(
       0 => array(
@@ -1121,11 +1611,12 @@ Organic electronics have great promise for a variety of applications, but even t
   'field_kb_categories' => array(
     'und' => array(
       0 => array(
-        'tid' => 42,
+        'tid' => 67,
         'uuid' => 'e4f02dd2-5fea-4f78-9932-78de63198263',
       ),
     ),
   ),
+  'metatags' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:Item',
@@ -1187,8 +1678,56 @@ Organic electronics have great promise for a variety of applications, but even t
   'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
-  'date' => '2013-07-31 11:59:13 +0300',
-  'author_uuid' => '8feecd34-79bc-478c-87fa-5646e70fc140',
+  'path' => array(
+    'pid' => 137,
+    'source' => 'node/57',
+    'alias' => 'kb/printing-innovations-provide-10-fold-improvement-organic-electronics',
+    'language' => 'und',
+  ),
+  'workbench_moderation' => array(
+    'current' => array(
+      'hid' => 237,
+      'vid' => 269,
+      'nid' => 57,
+      'from_state' => 'draft',
+      'state' => 'draft',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'Printing Innovations Provide 10-fold Improvement in Organic Electronics',
+      'timestamp' => 1433347464,
+    ),
+    'published' => array(
+      'hid' => 237,
+      'vid' => 269,
+      'nid' => 57,
+      'from_state' => 'draft',
+      'state' => 'published',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'Printing Innovations Provide 10-fold Improvement in Organic Electronics',
+      'timestamp' => 1433347464,
+    ),
+    'my_revision' => array(
+      'hid' => 237,
+      'vid' => 269,
+      'nid' => 57,
+      'from_state' => 'draft',
+      'state' => 'draft',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'Printing Innovations Provide 10-fold Improvement in Organic Electronics',
+      'timestamp' => 1433347464,
+    ),
+  ),
+  'pathauto_perform_alias' => FALSE,
+  'date' => '2013-07-31 08:59:13 +0000',
+  'author_uuid' => '5415e044-85b9-4381-b98a-afcc89f264a1',
 );
   $nodes[] = array(
   'title' => 'Harold Hwang Wins Top Korean Award',
@@ -1197,14 +1736,14 @@ Organic electronics have great promise for a variety of applications, but even t
   'comment' => 2,
   'promote' => 0,
   'sticky' => 0,
-  'vuuid' => '91092875-bcd7-4a86-b20b-a788a9621e82',
+  'vuuid' => 'f61c25cc-cc96-40f0-8821-0206e745806c',
   'type' => 'kb_article',
   'language' => 'und',
   'created' => 1375260111,
   'tnid' => 0,
   'translate' => 0,
   'uuid' => 'f9de6023-c778-4014-a496-46bb720d0bd2',
-  'revision_uid' => 1,
+  'revision_uid' => 0,
   'body' => array(
     'und' => array(
       0 => array(
@@ -1232,11 +1771,12 @@ Nulla ut felis in purus aliquam imperdiet. Maecenas aliquet mollis lectus. Vivam
   'field_kb_categories' => array(
     'und' => array(
       0 => array(
-        'tid' => 40,
+        'tid' => 65,
         'uuid' => '9090165b-26d9-4584-8960-0556e596c3dc',
       ),
     ),
   ),
+  'metatags' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:Item',
@@ -1298,8 +1838,56 @@ Nulla ut felis in purus aliquam imperdiet. Maecenas aliquet mollis lectus. Vivam
   'comment_count' => 0,
   'name' => 'admin',
   'picture' => 0,
-  'date' => '2013-07-31 11:41:51 +0300',
-  'author_uuid' => '8feecd34-79bc-478c-87fa-5646e70fc140',
+  'path' => array(
+    'pid' => 138,
+    'source' => 'node/58',
+    'alias' => 'kb/harold-hwang-wins-top-korean-award',
+    'language' => 'und',
+  ),
+  'workbench_moderation' => array(
+    'current' => array(
+      'hid' => 238,
+      'vid' => 270,
+      'nid' => 58,
+      'from_state' => 'draft',
+      'state' => 'draft',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'Harold Hwang Wins Top Korean Award',
+      'timestamp' => 1433347464,
+    ),
+    'published' => array(
+      'hid' => 238,
+      'vid' => 270,
+      'nid' => 58,
+      'from_state' => 'draft',
+      'state' => 'published',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'Harold Hwang Wins Top Korean Award',
+      'timestamp' => 1433347464,
+    ),
+    'my_revision' => array(
+      'hid' => 238,
+      'vid' => 270,
+      'nid' => 58,
+      'from_state' => 'draft',
+      'state' => 'draft',
+      'uid' => 0,
+      'stamp' => 1433347464,
+      'published' => 0,
+      'current' => 1,
+      'title' => 'Harold Hwang Wins Top Korean Award',
+      'timestamp' => 1433347464,
+    ),
+  ),
+  'pathauto_perform_alias' => FALSE,
+  'date' => '2013-07-31 08:41:51 +0000',
+  'author_uuid' => '5415e044-85b9-4381-b98a-afcc89f264a1',
 );
   return $nodes;
 }

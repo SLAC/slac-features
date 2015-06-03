@@ -24,7 +24,9 @@ function slac_news_demo_uuid_features_default_users() {
   'language' => '',
   'picture' => 0,
   'init' => 'newsauthor@slac.stanford.edu',
-  'data' => FALSE,
+  'data' => array(
+    'htmlmail_plaintext' => 0,
+  ),
   'uuid' => '7588442f-2b14-42b8-b4f2-cb90accaad0d',
   'roles' => array(
     2 => 'authenticated user',
@@ -46,7 +48,7 @@ function slac_news_demo_uuid_features_default_users() {
       'type' => 'rel',
     ),
   ),
-  'date' => '2014-01-29 10:39:36 -0700',
+  'date' => '2014-01-29 17:39:36 +0000',
 );
   return $users;
 }
