@@ -10,4 +10,5 @@ features[features_api][] = api:2
 features[user_permission][] = access administration menu
 features[user_permission][] = access administration pages
 features[user_permission][] = administer demo modules
+mtime = 1426022167
 project path = sites/all/modules/features

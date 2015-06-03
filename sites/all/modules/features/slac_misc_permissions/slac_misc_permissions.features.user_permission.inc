@@ -40,25 +40,5 @@ function slac_misc_permissions_user_default_permissions() {
     'module' => 'slac_admin_modules',
   );
 
-  // Exported permission: 'slac administer configuration'.
-  $permissions['slac administer configuration'] = array(
-    'name' => 'slac administer configuration',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'manager' => 'manager',
-    ),
-    'module' => 'slac_configuration',
-  );
-
-  // Exported permission: 'view the administration theme'.
-  $permissions['view the administration theme'] = array(
-    'name' => 'view the administration theme',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'manager' => 'manager',
-    ),
-    'module' => 'system',
-  );
-
   return $permissions;
 }
