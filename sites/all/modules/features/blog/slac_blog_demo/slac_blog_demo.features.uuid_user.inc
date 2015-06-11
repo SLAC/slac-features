@@ -22,7 +22,7 @@ function slac_blog_demo_uuid_features_default_users() {
   'status' => 1,
   'timezone' => 'Europe/Helsinki',
   'language' => '',
-  'picture' => 0,
+  'picture' => NULL,
   'init' => 'dsa@uyg.com',
   'data' => array(
     'htmlmail_plaintext' => 0,
@@ -62,7 +62,7 @@ function slac_blog_demo_uuid_features_default_users() {
   'status' => 1,
   'timezone' => 'Europe/Helsinki',
   'language' => '',
-  'picture' => 0,
+  'picture' => NULL,
   'init' => 'sdfsaf@csfgs.com',
   'data' => array(
     'htmlmail_plaintext' => 0,
@@ -102,7 +102,7 @@ function slac_blog_demo_uuid_features_default_users() {
   'status' => 1,
   'timezone' => 'Europe/Helsinki',
   'language' => '',
-  'picture' => 0,
+  'picture' => NULL,
   'init' => 'sdgsdfg@dsfgs.com',
   'data' => array(
     'htmlmail_plaintext' => 0,
