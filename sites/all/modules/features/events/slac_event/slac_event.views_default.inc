@@ -1004,12 +1004,12 @@ function slac_event_views_default_views() {
     'multiple_to' => '',
     'show_repeat_rule' => 'show',
   );
-  /* Field: Content: Event Scientific Area */
-  $handler->display->display_options['fields']['field_slac_event_scientific_area']['id'] = 'field_slac_event_scientific_area';
-  $handler->display->display_options['fields']['field_slac_event_scientific_area']['table'] = 'field_data_field_slac_event_scientific_area';
-  $handler->display->display_options['fields']['field_slac_event_scientific_area']['field'] = 'field_slac_event_scientific_area';
-  $handler->display->display_options['fields']['field_slac_event_scientific_area']['label'] = '';
-  $handler->display->display_options['fields']['field_slac_event_scientific_area']['element_label_colon'] = FALSE;
+  /* Field: Content: Location */
+  $handler->display->display_options['fields']['field_location']['id'] = 'field_location';
+  $handler->display->display_options['fields']['field_location']['table'] = 'field_data_field_location';
+  $handler->display->display_options['fields']['field_location']['field'] = 'field_location';
+  $handler->display->display_options['fields']['field_location']['label'] = '';
+  $handler->display->display_options['fields']['field_location']['element_label_colon'] = FALSE;
   /* Contextual filter: Content: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
   $handler->display->display_options['arguments']['nid']['table'] = 'node';
@@ -1046,7 +1046,7 @@ function slac_event_views_default_views() {
   $handler->display->display_options['row_options']['date_field'] = 'field_slac_event_date';
   $handler->display->display_options['row_options']['title_field'] = 'title';
   $handler->display->display_options['row_options']['description_field'] = 'body';
-  $handler->display->display_options['row_options']['location_field'] = 'field_slac_event_scientific_area';
+  $handler->display->display_options['row_options']['location_field'] = 'field_location';
   $handler->display->display_options['row_options']['additional_settings'] = array(
     'skip_blank_dates' => 1,
   );
