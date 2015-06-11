@@ -98,7 +98,6 @@ dependencies[] = slac_configuration
 
 ; Features
 dependencies[] = default_site_template_people
-dependencies[] = slac_header_menu
 
 ;Custom modules
 dependencies[] = slac_site_variables
