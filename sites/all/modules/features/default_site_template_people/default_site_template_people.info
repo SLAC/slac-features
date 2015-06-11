@@ -1,7 +1,6 @@
 name = Default Site Template
 core = 7.x
 package = SLAC
-php = 5.2.4
 version = 7.x-1.5
 project = default_site_template_people
 dependencies[] = ctools
@@ -22,3 +21,4 @@ features[page_manager_handlers][] = site_template_panel_context
 features[panels_mini][] = footer
 features[variable][] = panels_everywhere_site_template_enabled
 features[variable][] = theme_default
+mtime = 1434051444
