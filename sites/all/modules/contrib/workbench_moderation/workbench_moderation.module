@@ -332,7 +332,7 @@ function workbench_moderation_view_tab_title($node) {
   if (!workbench_moderation_node_moderated($node)) {
     return t('View');
   }
-
+  workbench_moderation_node_data($node);
   // Is there a published revision?
   $state = $node->workbench_moderation;
   if (!empty($state['published'])) {
