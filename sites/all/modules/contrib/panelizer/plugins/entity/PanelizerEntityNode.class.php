@@ -10,14 +10,11 @@
  * Handles node specific functionality for Panelizer.
  */
 class PanelizerEntityNode extends PanelizerEntityDefault {
-  /**
-   * True if the entity supports revisions.
-   */
-  public $supports_revisions = TRUE;
   public $entity_admin_root = 'admin/structure/types/manage/%panelizer_node_type';
   public $entity_admin_bundle = 4;
   public $views_table = 'node';
   public $uses_page_manager = TRUE;
+  public $supports_revisions = TRUE;
 
   public function entity_access($op, $entity) {
     // This must be implemented by the extending clas.
@@ -48,8 +45,9 @@ class PanelizerEntityNode extends PanelizerEntityDefault {
     list($entity_id, $revision_id, $bundle) = entity_extract_ids($this->entity_type, $entity);
 
     $node_options = variable_get('node_options_' . $bundle, array('status', 'promote'));
-    $retval[0] = in_array('revision', $node_options);
+    $retval[0] = TRUE;
     $retval[1] = user_access('administer nodes');
+    $retval[2] = in_array('revision', $node_options);
 
     return $retval;
   }
@@ -68,12 +66,12 @@ class PanelizerEntityNode extends PanelizerEntityDefault {
     if ($warn) {
       $task = page_manager_get_task('node_view');
       if (!empty($task['disabled'])) {
-        drupal_set_message('The node template page is currently not enabled in page manager. You must enable this for Panelizer to be able to panelize nodes using the "Full page override" view mode.', 'warning');
+        drupal_set_message(t('The node template page is currently not enabled in page manager. This must be enabled for Panelizer to be able to panelize nodes using the "Full page override" view mode.'), 'warning', FALSE);
       }
 
       $handler = page_manager_load_task_handler($task, '', 'node_view_panelizer');
       if (!empty($handler->disabled)) {
-        drupal_set_message('The panelizer variant on the node template page is currently not enabled in page manager. You must enable this for Panelizer to be able to panelize nodes using the "Full page override" view mode.', 'warning');
+        drupal_set_message(t('The panelizer variant on the node template page is currently not enabled in page manager. This must be enabled for Panelizer to be able to panelize nodes using the "Full page override" view mode.'), 'warning', FALSE);
       }
     }
   }
@@ -135,30 +133,39 @@ class PanelizerEntityNode extends PanelizerEntityDefault {
   }
 
   public function hook_page_alter(&$page) {
-    if ($_GET['q'] == 'admin/structure/types' && !empty($page['content']['system_main']['node_table'])) {
-      // shortcut
-      $table = &$page['content']['system_main']['node_table'];
-      // Modify the header.
-      $table['#header'][1]['colspan'] = 5;
+    // Add an extra "Panelizer" action on the content types admin page.
+    if ($_GET['q'] == 'admin/structure/types') {
+      // This only works with some themes.
+      if (!empty($page['content']['system_main']['node_table'])) {
+        // Shortcut.
+        $table = &$page['content']['system_main']['node_table'];
 
-      // Since we can't tell what row a type is for, but we know that they
-      // were generated in this order, go through the original types
-      // list:
-      $types = node_type_get_types();
-      $names = node_type_get_names();
-      $row_index = 0;
-      foreach ($names as $bundle => $name) {
-        $type = $types[$bundle];
-        if (node_hook($type->type, 'form')) {
-          $type_url_str = str_replace('_', '-', $type->type);
-          if ($this->is_panelized($bundle) && panelizer_administer_entity_bundle($this, $bundle)) {
-            $table['#rows'][$row_index][] = array('data' => l(t('panelizer'), 'admin/structure/types/manage/' . $type_url_str . '/panelizer'));
+        // Operations column should always be the last column in header.
+        // Increase its colspan by one to include possible panelizer link.
+        $operationsCol = end($table['#header']);
+        if (!empty($operationsCol['colspan'])) {
+          $operationsColKey = key($table['#header']);
+          $table['#header'][$operationsColKey]['colspan']++;
+        }
+
+        // Since we can't tell what row a type is for, but we know that they
+        // were generated in this order, go through the original types list.
+        $types = node_type_get_types();
+        $names = node_type_get_names();
+        $row_index = 0;
+        foreach ($names as $bundle => $name) {
+          $type = $types[$bundle];
+          if (node_hook($type->type, 'form')) {
+            $type_url_str = str_replace('_', '-', $type->type);
+            if ($this->is_panelized($bundle) && panelizer_administer_entity_bundle($this, $bundle)) {
+              $table['#rows'][$row_index][] = array('data' => l(t('panelizer'), 'admin/structure/types/manage/' . $type_url_str . '/panelizer'));
+            }
+            else {
+              $table['#rows'][$row_index][] = array('data' => '');
+            }
+            // Update row index for next pass.
+            $row_index++;
           }
-          else {
-            $table['#rows'][$row_index][] = array('data' => '');
-          }
-          // Update row index for next pass:
-          $row_index++;
         }
       }
     }
@@ -178,8 +185,8 @@ class PanelizerEntityNode extends PanelizerEntityDefault {
     }
   }
 
-  function render_entity($entity, $view_mode, $langcode = NULL, $args = array(), $address = NULL) {
-    $info = parent::render_entity($entity, $view_mode, $langcode, $args, $address);
+  function render_entity($entity, $view_mode, $langcode = NULL, $args = array(), $address = NULL, $extra_contexts = array()) {
+    $info = parent::render_entity($entity, $view_mode, $langcode, $args, $address, $extra_contexts);
     if (!empty($entity->promote)) {
       $info['classes_array'][] = 'node-promoted';
     }
@@ -196,9 +203,9 @@ class PanelizerEntityNode extends PanelizerEntityDefault {
    * Implements hook_views_plugins_alter().
    */
   function hook_views_plugins_alter(&$plugins) {
-    // While it would be nice to genericize this plugin, there is no
-    // generic entity view. This means that to genericize it we'll still
-    // need to have each entity know how to do the view individually.
+    // While it would be nice to generalize this plugin, there is no generic
+    // entity view. This means that to generalize it we'll still need to have
+    // each entity know how to do the view individually.
     // @todo make this happen.
     $path = drupal_get_path('module', 'panelizer') . '/plugins/views';
     $plugins['row']['panelizer_node_view'] = array(

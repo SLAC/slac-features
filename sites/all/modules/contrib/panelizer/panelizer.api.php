@@ -2,8 +2,16 @@
 /**
  * @file
  *
- * Documentation for panelizer hooks.
+ * Documentation for Panelizer's hooks.
  */
+
+/**
+ * Allow panelizer_defaults_override to be customized.
+ *
+ * Primarily for use by Features Overrides.
+ */
+function hook_panelizer_defaults_override_alter(&$items) {
+}
 
 /**
  * Add operations to Panelizer objects.
@@ -39,4 +47,28 @@ function hook_panelizer_operations_alter(&$operations) {
     'entity callback' => 'mymodule_panelizer_example_entity_page',
     'admin callback' => 'mymodule_panelizer_example_admin_page',
   );
+}
+
+/**
+ * Allow panelizer_entity_plugin_process to be customized.
+ */
+function hook_panelizer_entity_plugin_process_alter(&$plugin, $info) {
+}
+
+/**
+ * Allow the links on the Overview page to be customized.
+ */
+function hook_panelizer_overview_links_alter(&$links_array, $entity_type, $context) {
+}
+
+/**
+ * Act on default objects just before they're deleted.
+ *
+ * @param object $panelizer
+ *   The panelizer default object.
+ */
+function hook_panelizer_delete_default($panelizer) {
+  db_delete('example_somthing')
+    ->condition('name', $panelizer->name)
+    ->execute();
 }

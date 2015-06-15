@@ -1,15 +1,15 @@
 <?php
-
 /**
  * @file
  * Contains the administrative UI for selectable panelizer defaults.
  */
+
 class panelizer_defaults_ui extends ctools_export_ui {
   function init($plugin) {
     ctools_include('export');
 
     $this->plugin = $plugin;
-    // Get rid of the list parent:
+    // Get rid of the list parent.
     unset($this->plugin['menu']['items']['list callback']);
   }
 
@@ -23,7 +23,7 @@ class panelizer_defaults_ui extends ctools_export_ui {
     $this->plugin['menu']['items']['add']['path'] = 'list/add';
     $this->plugin['menu']['items']['import']['path'] = 'list/import';
 
-    // Edit is being handled elsewhere:
+    // Edit is being handled elsewhere.
     unset($this->plugin['menu']['items']['edit callback']);
     unset($this->plugin['menu']['items']['access']);
     foreach (panelizer_operations() as $path => $operation) {
@@ -33,13 +33,19 @@ class panelizer_defaults_ui extends ctools_export_ui {
       }
     }
 
-    // Change the callbacks for everything:
+    // Change the callbacks for everything.
     foreach ($this->plugin['menu']['items'] as $key => $item) {
+      // The item has already been set; continue to next item to avoid shifting
+      // items onto the page arguments array more than once.
+      if ($this->plugin['menu']['items'][$key]['access callback'] == 'panelizer_has_choice_callback') {
+        continue;
+      }
+
       $this->plugin['menu']['items'][$key]['access callback'] = 'panelizer_has_choice_callback';
-      $this->plugin['menu']['items'][$key]['access arguments'] = array(4, 5, '');
+      $this->plugin['menu']['items'][$key]['access arguments'] = array(3, 4, '');
       $this->plugin['menu']['items'][$key]['page callback'] = 'panelizer_export_ui_switcher_page';
-      array_unshift($this->plugin['menu']['items'][$key]['page arguments'], 5);
       array_unshift($this->plugin['menu']['items'][$key]['page arguments'], 4);
+      array_unshift($this->plugin['menu']['items'][$key]['page arguments'], 3);
     }
 
     parent::hook_menu($items);
@@ -108,9 +114,8 @@ class panelizer_defaults_ui extends ctools_export_ui {
   // Why isn't delete using the redirect system everything else is?
   function delete_page($js, $input, $item) {
     $clone = clone($item);
-    // Change the name into the title so the form shows the right
-    // value. @todo file a bug against CTools to use admin title if
-    // available.
+    // Change the name into the title so the form shows the right value.
+    // @todo file a bug against CTools to use admin title if available.
     $clone->name = $clone->title;
     $form_state = array(
       'plugin' => $this->plugin,
@@ -126,8 +131,7 @@ class panelizer_defaults_ui extends ctools_export_ui {
     if (!empty($form_state['executed'])) {
       ctools_export_crud_delete($this->plugin['schema'], $item);
       $export_key = $this->plugin['export']['key'];
-      $message = str_replace('%title', check_plain($item->title), $this->plugin['strings']['confirmation'][$form_state['op']]['success']);
-      drupal_set_message($message);
+      drupal_set_message(t($this->plugin['strings']['confirmation'][$form_state['op']]['success'], array('%title' => $item->title)));
       drupal_goto(ctools_export_ui_plugin_base_path($this->plugin) . '/list');
     }
 
