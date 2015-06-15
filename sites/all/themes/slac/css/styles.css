@@ -747,7 +747,7 @@ ul.news-archive-class li .item-list { margin-left: 10px; }
 
 .event-calendar-block .view-content { margin-bottom: 17px; }
 
-.event-block { position: relative; padding-left: 85px; border-bottom: 1px solid #f3f1eb; margin-bottom: 10px; min-height: 40px; }
+.event-block { position: relative; padding-left: 50px; border-bottom: 1px solid #f3f1eb; margin-bottom: 10px; min-height: 40px; }
 .event-block:last-child { border-bottom: 0 none; }
 .event-block .date { position: absolute; top: 0; left: 0; font-family: Georgia, "Times New Roman", Times, serif; color: #626262; line-height: 1; }
 .touch .event-block .date { font-family: Arial, Helvetica, sans-serif; }
