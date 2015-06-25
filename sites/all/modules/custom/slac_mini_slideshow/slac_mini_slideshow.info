@@ -2,6 +2,7 @@ name = SLAC Mini Slideshow
 description = Provides mini slideshow functionality.
 core = 7.x
 package = SLAC
+dependencies[] = colorbox
 dependencies[] = features
 dependencies[] = field_collection
 dependencies[] = field_slideshow
