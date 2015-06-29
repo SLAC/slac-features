@@ -26,7 +26,7 @@ stylesheets[all][] = calendar_multiday.css
 stylesheets[all][] = date_views.css
 stylesheets[all][] = superfish.css
 stylesheets[all][] = slac_colorbox/colorbox_slac_colorbox.css
-;scripts[] = slac_colorbox/colorbox_slac_colorbox.js
+scripts[] = slac_colorbox/colorbox_slac_colorbox.js
 
 
 ;scripts[] = js/jquery.placeholder.js
