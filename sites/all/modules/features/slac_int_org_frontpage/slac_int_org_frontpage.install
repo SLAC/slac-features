@@ -171,6 +171,7 @@ function _slac_int_org_frontpage_install__panes($did) {
     $field_collection_item = entity_create('field_collection_item', array('field_name' => 'field_mini_slideshow_slide'));
     $field_collection_item->field_fcollection_image = array(LANGUAGE_NONE => array(array('fid' => $gallery_files[$i]->fid)));
     $field_collection_item->field_fcollection_link = array(LANGUAGE_NONE => array(array('url' => 'http://slac.stanford.edu')));
+    $field_collection_item->field_fcollection_caption = array(LANGUAGE_NONE => array(array('value' => t('Slide @i caption. Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum.', array('@i' =>$i + 1)))));
     $field_collection_item->setHostEntity('fieldable_panels_pane', $gallery_fpp);
     entity_save('field_collection_item', $field_collection_item);
   }
