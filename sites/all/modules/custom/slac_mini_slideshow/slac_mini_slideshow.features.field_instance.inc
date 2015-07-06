@@ -24,7 +24,7 @@ function slac_mini_slideshow_field_default_field_instances() {
           'image_style' => '',
         ),
         'type' => 'image',
-        'weight' => 1,
+        'weight' => 0,
       ),
     ),
     'entity_type' => 'field_collection_item',
@@ -80,54 +80,6 @@ function slac_mini_slideshow_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_mini_slideshow_slide-field_fcollection_link'
-  $field_instances['field_collection_item-field_mini_slideshow_slide-field_fcollection_link'] = array(
-    'bundle' => 'field_mini_slideshow_slide',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'link',
-        'settings' => array(),
-        'type' => 'link_default',
-        'weight' => 2,
-      ),
-    ),
-    'entity_type' => 'field_collection_item',
-    'field_name' => 'field_fcollection_link',
-    'label' => 'Link',
-    'required' => 0,
-    'settings' => array(
-      'attributes' => array(
-        'class' => '',
-        'configurable_title' => 0,
-        'rel' => '',
-        'target' => 'default',
-        'title' => '',
-      ),
-      'display' => array(
-        'url_cutoff' => 80,
-      ),
-      'enable_tokens' => 1,
-      'rel_remove' => 'default',
-      'title' => 'none',
-      'title_maxlength' => 128,
-      'title_value' => '',
-      'url' => 0,
-      'user_register_form' => FALSE,
-      'validate_url' => 1,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'link',
-      'settings' => array(),
-      'type' => 'link_field',
-      'weight' => 1,
-    ),
-  );
-
   // Exported field_instance: 'fieldable_panels_pane-slac_mini_slideshow-field_mini_slideshow_slide'
   $field_instances['fieldable_panels_pane-slac_mini_slideshow-field_mini_slideshow_slide'] = array(
     'bundle' => 'slac_mini_slideshow',
@@ -139,8 +91,8 @@ function slac_mini_slideshow_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'field_slideshow',
         'settings' => array(
-          'slideshow_caption' => '',
-          'slideshow_caption_link' => 'field_fcollection_link',
+          'slideshow_caption' => 'field_fcollection_caption',
+          'slideshow_caption_link' => '',
           'slideshow_carousel_circular' => 0,
           'slideshow_carousel_follow' => 0,
           'slideshow_carousel_image_style' => '',
@@ -159,8 +111,8 @@ function slac_mini_slideshow_field_default_field_instances() {
           'slideshow_controls_position' => 'after',
           'slideshow_field_collection_image' => 'field_fcollection_image',
           'slideshow_fx' => 'fade',
-          'slideshow_image_style' => 'mini_slideshow_image_style',
-          'slideshow_link' => 'field_fcollection_link',
+          'slideshow_image_style' => '',
+          'slideshow_link' => 'colorbox',
           'slideshow_order' => '',
           'slideshow_pager' => 'number',
           'slideshow_pager_image_style' => '',
@@ -193,7 +145,6 @@ function slac_mini_slideshow_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Image');
-  t('Link');
   t('Slide');
 
   return $field_instances;

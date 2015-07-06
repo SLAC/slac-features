@@ -23,7 +23,7 @@ function default_site_template_io_default_page_manager_handlers() {
     'no_blocks' => 1,
     'pipeline' => 'standard',
     'body_classes_to_remove' => '',
-    'body_classes_to_add' => 'external-organisation',
+    'body_classes_to_add' => 'internal-organization',
     'css_id' => '',
     'css' => '',
     'contexts' => array(),
