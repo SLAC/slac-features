@@ -1,0 +1,20 @@
+***************
+*** 271,276 ****
+    }
+  
+    if ($allow['exposed_form'] && !empty($conf['exposed'])) {
+      $view->set_exposed_input($conf['exposed']);
+    }
+  
+--- 271,281 ----
+    }
+  
+    if ($allow['exposed_form'] && !empty($conf['exposed'])) {
++     foreach ($conf['exposed'] as $filter_name => $filter_value) {
++       if(!is_array($filter_value)) {
++         $conf['exposed'][$filter_name] = ctools_context_keyword_substitute($filter_value, array(), $contexts);
++       }
++     }
+      $view->set_exposed_input($conf['exposed']);
+    }
+  
