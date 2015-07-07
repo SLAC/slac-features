@@ -60,10 +60,11 @@ function slac_faq_default_page_manager_handlers() {
   );
   $display->cache = array();
   $display->title = '';
+  $display->uuid = '3c14fb38-b444-444c-b55e-3f6e91172011';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-1';
+    $pane->pid = 'new-a2c3befc-4984-4db7-8169-786d5c996167';
     $pane->panel = 'left';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_question_details';
@@ -88,10 +89,11 @@ function slac_faq_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-1'] = $pane;
-    $display->panels['left'][0] = 'new-1';
+    $pane->uuid = 'a2c3befc-4984-4db7-8169-786d5c996167';
+    $display->content['new-a2c3befc-4984-4db7-8169-786d5c996167'] = $pane;
+    $display->panels['left'][0] = 'new-a2c3befc-4984-4db7-8169-786d5c996167';
     $pane = new stdClass();
-    $pane->pid = 'new-2';
+    $pane->pid = 'new-9eb7a8dd-5cfb-40a9-a62d-a3c6cf37c138';
     $pane->panel = 'left';
     $pane->type = 'node_body';
     $pane->subtype = 'node_body';
@@ -110,10 +112,11 @@ function slac_faq_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['left'][1] = 'new-2';
+    $pane->uuid = '9eb7a8dd-5cfb-40a9-a62d-a3c6cf37c138';
+    $display->content['new-9eb7a8dd-5cfb-40a9-a62d-a3c6cf37c138'] = $pane;
+    $display->panels['left'][1] = 'new-9eb7a8dd-5cfb-40a9-a62d-a3c6cf37c138';
     $pane = new stdClass();
-    $pane->pid = 'new-3';
+    $pane->pid = 'new-f419be4d-82aa-44e9-91ef-74cf65cc979e';
     $pane->panel = 'left';
     $pane->type = 'node_comments';
     $pane->subtype = 'node_comments';
@@ -134,10 +137,11 @@ function slac_faq_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['left'][2] = 'new-3';
+    $pane->uuid = 'f419be4d-82aa-44e9-91ef-74cf65cc979e';
+    $display->content['new-f419be4d-82aa-44e9-91ef-74cf65cc979e'] = $pane;
+    $display->panels['left'][2] = 'new-f419be4d-82aa-44e9-91ef-74cf65cc979e';
     $pane = new stdClass();
-    $pane->pid = 'new-4';
+    $pane->pid = 'new-82893704-2842-4f8b-8a66-67aec518e7f7';
     $pane->panel = 'left';
     $pane->type = 'node_comment_form';
     $pane->subtype = 'node_comment_form';
@@ -157,10 +161,11 @@ function slac_faq_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 3;
     $pane->locks = array();
-    $display->content['new-4'] = $pane;
-    $display->panels['left'][3] = 'new-4';
+    $pane->uuid = '82893704-2842-4f8b-8a66-67aec518e7f7';
+    $display->content['new-82893704-2842-4f8b-8a66-67aec518e7f7'] = $pane;
+    $display->panels['left'][3] = 'new-82893704-2842-4f8b-8a66-67aec518e7f7';
     $pane = new stdClass();
-    $pane->pid = 'new-5';
+    $pane->pid = 'new-4693856c-24f7-4088-8ae1-6a4feaa82899';
     $pane->panel = 'left_author';
     $pane->type = 'node_author_sp';
     $pane->subtype = 'node_author_sp';
@@ -183,10 +188,11 @@ function slac_faq_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-5'] = $pane;
-    $display->panels['left_author'][0] = 'new-5';
+    $pane->uuid = '4693856c-24f7-4088-8ae1-6a4feaa82899';
+    $display->content['new-4693856c-24f7-4088-8ae1-6a4feaa82899'] = $pane;
+    $display->panels['left_author'][0] = 'new-4693856c-24f7-4088-8ae1-6a4feaa82899';
     $pane = new stdClass();
-    $pane->pid = 'new-6';
+    $pane->pid = 'new-df9ebde2-3d4e-47bd-947c-12c9fd7b5ded';
     $pane->panel = 'left_author';
     $pane->type = 'node_created';
     $pane->subtype = 'node_created';
@@ -206,10 +212,11 @@ function slac_faq_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-6'] = $pane;
-    $display->panels['left_author'][1] = 'new-6';
+    $pane->uuid = 'df9ebde2-3d4e-47bd-947c-12c9fd7b5ded';
+    $display->content['new-df9ebde2-3d4e-47bd-947c-12c9fd7b5ded'] = $pane;
+    $display->panels['left_author'][1] = 'new-df9ebde2-3d4e-47bd-947c-12c9fd7b5ded';
     $pane = new stdClass();
-    $pane->pid = 'new-7';
+    $pane->pid = 'new-8e640add-6b7f-448b-95f8-80ed224a585c';
     $pane->panel = 'left_title';
     $pane->type = 'page_title';
     $pane->subtype = 'page_title';
@@ -230,10 +237,11 @@ function slac_faq_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-7'] = $pane;
-    $display->panels['left_title'][0] = 'new-7';
+    $pane->uuid = '8e640add-6b7f-448b-95f8-80ed224a585c';
+    $display->content['new-8e640add-6b7f-448b-95f8-80ed224a585c'] = $pane;
+    $display->panels['left_title'][0] = 'new-8e640add-6b7f-448b-95f8-80ed224a585c';
     $pane = new stdClass();
-    $pane->pid = 'new-8';
+    $pane->pid = 'new-001c3ff6-b083-4f5f-94bb-b16f4a69ec96';
     $pane->panel = 'right';
     $pane->type = 'views_panes';
     $pane->subtype = 'faq_category-panel_pane_1';
@@ -253,8 +261,9 @@ function slac_faq_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-8'] = $pane;
-    $display->panels['right'][0] = 'new-8';
+    $pane->uuid = '001c3ff6-b083-4f5f-94bb-b16f4a69ec96';
+    $display->content['new-001c3ff6-b083-4f5f-94bb-b16f4a69ec96'] = $pane;
+    $display->panels['right'][0] = 'new-001c3ff6-b083-4f5f-94bb-b16f4a69ec96';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -287,6 +296,8 @@ function slac_faq_default_page_manager_pages() {
       ),
     ),
     'logic' => 'and',
+    'type' => 'none',
+    'settings' => NULL,
   );
   $page->menu = array(
     'type' => 'action',
@@ -348,6 +359,8 @@ function slac_faq_default_page_manager_pages() {
       ),
     ),
     'logic' => 'and',
+    'type' => 'none',
+    'settings' => NULL,
   );
   $page->menu = array(
     'type' => 'action',
@@ -395,6 +408,8 @@ function slac_faq_default_page_manager_pages() {
   $page->access = array(
     'plugins' => array(),
     'logic' => 'and',
+    'type' => 'none',
+    'settings' => NULL,
   );
   $page->menu = array(
     'type' => 'normal',
@@ -474,10 +489,11 @@ function slac_faq_default_page_manager_pages() {
   );
   $display->cache = array();
   $display->title = 'Frequently Asked Questions (FAQs)';
+  $display->uuid = 'c584e813-d463-4c57-b1e3-2a3f71c03834';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-1';
+    $pane->pid = 'new-41e087ff-17dd-4a1e-b975-d2541603ee2a';
     $pane->panel = 'left';
     $pane->type = 'views_panes';
     $pane->subtype = 'slac_faq-panel_pane_2';
@@ -495,10 +511,11 @@ function slac_faq_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-1'] = $pane;
-    $display->panels['left'][0] = 'new-1';
+    $pane->uuid = '41e087ff-17dd-4a1e-b975-d2541603ee2a';
+    $display->content['new-41e087ff-17dd-4a1e-b975-d2541603ee2a'] = $pane;
+    $display->panels['left'][0] = 'new-41e087ff-17dd-4a1e-b975-d2541603ee2a';
     $pane = new stdClass();
-    $pane->pid = 'new-2';
+    $pane->pid = 'new-7aa99366-b584-4165-92b7-422fca9f8b49';
     $pane->panel = 'left_title';
     $pane->type = 'page_title';
     $pane->subtype = 'page_title';
@@ -519,10 +536,11 @@ function slac_faq_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['left_title'][0] = 'new-2';
+    $pane->uuid = '7aa99366-b584-4165-92b7-422fca9f8b49';
+    $display->content['new-7aa99366-b584-4165-92b7-422fca9f8b49'] = $pane;
+    $display->panels['left_title'][0] = 'new-7aa99366-b584-4165-92b7-422fca9f8b49';
     $pane = new stdClass();
-    $pane->pid = 'new-3';
+    $pane->pid = 'new-ced41747-3427-4d48-9701-38ba238f74b1';
     $pane->panel = 'right';
     $pane->type = 'views_panes';
     $pane->subtype = 'faq_category-panel_pane_1';
@@ -542,10 +560,11 @@ function slac_faq_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['right'][0] = 'new-3';
+    $pane->uuid = 'ced41747-3427-4d48-9701-38ba238f74b1';
+    $display->content['new-ced41747-3427-4d48-9701-38ba238f74b1'] = $pane;
+    $display->panels['right'][0] = 'new-ced41747-3427-4d48-9701-38ba238f74b1';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-2';
+  $display->title_pane = 'new-7aa99366-b584-4165-92b7-422fca9f8b49';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['faq'] = $page;

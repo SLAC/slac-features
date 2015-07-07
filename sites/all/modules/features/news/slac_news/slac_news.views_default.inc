@@ -77,7 +77,7 @@ function slac_news_views_default_views() {
     'file_view_mode' => 'default',
   );
   $handler->display->display_options['fields']['field_slac_news_media']['delta_offset'] = '0';
-  /* Field: Content: News Source */
+  /* Field: Content: Redirect link */
   $handler->display->display_options['fields']['field_slac_news_source']['id'] = 'field_slac_news_source';
   $handler->display->display_options['fields']['field_slac_news_source']['table'] = 'field_data_field_slac_news_source';
   $handler->display->display_options['fields']['field_slac_news_source']['field'] = 'field_slac_news_source';
@@ -169,7 +169,7 @@ function slac_news_views_default_views() {
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '400',
   );
-  /* Field: Content: News Source */
+  /* Field: Content: Redirect link */
   $handler->display->display_options['fields']['field_slac_news_source']['id'] = 'field_slac_news_source';
   $handler->display->display_options['fields']['field_slac_news_source']['table'] = 'field_data_field_slac_news_source';
   $handler->display->display_options['fields']['field_slac_news_source']['field'] = 'field_slac_news_source';
@@ -260,7 +260,7 @@ function slac_news_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: News Source */
+  /* Field: Content: Redirect link */
   $handler->display->display_options['fields']['field_slac_news_source']['id'] = 'field_slac_news_source';
   $handler->display->display_options['fields']['field_slac_news_source']['table'] = 'field_data_field_slac_news_source';
   $handler->display->display_options['fields']['field_slac_news_source']['field'] = 'field_slac_news_source';
@@ -321,7 +321,7 @@ function slac_news_views_default_views() {
   $handler->display->display_options['fields']['field_slac_news_contact']['table'] = 'field_data_field_slac_news_contact';
   $handler->display->display_options['fields']['field_slac_news_contact']['field'] = 'field_slac_news_contact';
   $handler->display->display_options['fields']['field_slac_news_contact']['exclude'] = TRUE;
-  /* Field: Content: News Source */
+  /* Field: Content: Redirect link */
   $handler->display->display_options['fields']['field_slac_news_source']['id'] = 'field_slac_news_source';
   $handler->display->display_options['fields']['field_slac_news_source']['table'] = 'field_data_field_slac_news_source';
   $handler->display->display_options['fields']['field_slac_news_source']['field'] = 'field_slac_news_source';
@@ -534,7 +534,7 @@ function slac_news_views_default_views() {
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '400',
   );
-  /* Field: Content: News Source */
+  /* Field: Content: Redirect link */
   $handler->display->display_options['fields']['field_slac_news_source']['id'] = 'field_slac_news_source';
   $handler->display->display_options['fields']['field_slac_news_source']['table'] = 'field_data_field_slac_news_source';
   $handler->display->display_options['fields']['field_slac_news_source']['field'] = 'field_slac_news_source';

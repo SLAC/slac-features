@@ -492,13 +492,13 @@ function slac_news_field_default_field_instances() {
   t('Contact information');
   t('Date');
   t('If the news article is academic in nature, please include any citation information here');
+  t('Inserting a URL in this field will cause the node to redirect to the given link.');
   t('Media');
-  t('News Source');
   t('News type');
   t('Optional: if this is a press release or similar, include the contact information here.');
   t('Please enter a comma separated list of tags for this article, i.e. Photon, X-ray');
-  t('Please enter where the news article came from, this should be the title of the source as well as the url');
   t('Please upload or select any media such as images or videos you would like to include in the article.');
+  t('Redirect link');
   t('Tags');
 
   return $field_instances;
