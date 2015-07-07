@@ -8,4 +8,5 @@ dependencies[] = slac_profile_complete
 features[ctools][] = page_manager:pages_default:1
 features[features_api][] = api:2
 features[page_manager_handlers][] = user_view_panel_context
+mtime = 1434833095
 project path = sites/all/modules/features

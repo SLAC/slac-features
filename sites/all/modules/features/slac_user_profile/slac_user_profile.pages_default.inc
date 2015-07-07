@@ -54,10 +54,11 @@ function slac_user_profile_default_page_manager_handlers() {
   );
   $display->cache = array();
   $display->title = '%user:name';
+  $display->uuid = '05e04f9d-1637-4818-bd5b-9354a03c333d';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-1';
+    $pane->pid = 'new-f37a23b3-fd6e-4cb8-9fcf-a202143bf644';
     $pane->panel = 'left';
     $pane->type = 'slac_profile_complete';
     $pane->subtype = 'slac_profile_complete';
@@ -76,10 +77,11 @@ function slac_user_profile_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-1'] = $pane;
-    $display->panels['left'][0] = 'new-1';
+    $pane->uuid = 'f37a23b3-fd6e-4cb8-9fcf-a202143bf644';
+    $display->content['new-f37a23b3-fd6e-4cb8-9fcf-a202143bf644'] = $pane;
+    $display->panels['left'][0] = 'new-f37a23b3-fd6e-4cb8-9fcf-a202143bf644';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-1';
+  $display->title_pane = 'new-f37a23b3-fd6e-4cb8-9fcf-a202143bf644';
   $handler->conf['display'] = $display;
   $export['user_view_panel_context'] = $handler;
 
