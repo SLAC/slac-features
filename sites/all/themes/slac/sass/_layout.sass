@@ -1,6 +1,7 @@
 .content .general-two-col
   &:not(.reverse) .general-left,
   &.reverse .general-right,
+  .section-basic-page-no-left-nav-and-right-column &,
   .right-sidebar
     ul,
     ol
@@ -1254,12 +1255,17 @@ h2
 
 
 .panel-pane
-  .general-right &
+  .content .general-right &
+    background-color: $bg-col-1
     margin-bottom: 18px
     padding: 13px 22px
     &:last-child
       margin-bottom: 0
       //text-align: center
+
+.panel-pane
+  .content .with-left .general-right &
+    background-color: inherit
 
   .inner_right &
     margin-bottom: 20px

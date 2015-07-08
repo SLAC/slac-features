@@ -269,10 +269,10 @@ ul.sf-menu.sf-accordion.sf-expanded > li > ul a:after { display: none; }
   .sf-main-menu.sf-horizontal.long-menu ul li { margin: 0 25px; } }
 @media (min-width: 1200px) { .main-menu.long-menu ul li { margin: 0 33px; }
   .main-menu.long-menu ul li:first-child { margin-left: 17px; } }
-.content .general-two-col:not(.reverse) .general-left ul, .content .general-two-col:not(.reverse) .general-left ol, .content .general-two-col.reverse .general-right ul, .content .general-two-col.reverse .general-right ol, .content .general-two-col .right-sidebar ul, .content .general-two-col .right-sidebar ol { list-style-type: disc; padding-left: 20px; margin-bottom: 10px; }
-.content .general-two-col:not(.reverse) .general-left ul li, .content .general-two-col:not(.reverse) .general-left ol li, .content .general-two-col.reverse .general-right ul li, .content .general-two-col.reverse .general-right ol li, .content .general-two-col .right-sidebar ul li, .content .general-two-col .right-sidebar ol li { font-size: 14px; font-size: 0.875rem; line-height: 20px; margin-bottom: 5px; }
-.content .general-two-col:not(.reverse) .general-left ol, .content .general-two-col.reverse .general-right ol, .content .general-two-col .right-sidebar ol { list-style-type: decimal; }
-.content .general-two-col:not(.reverse) .general-left p, .content .general-two-col.reverse .general-right p, .content .general-two-col .right-sidebar p { font-size: 14px; font-size: 0.875rem; }
+.content .general-two-col:not(.reverse) .general-left ul, .content .general-two-col:not(.reverse) .general-left ol, .content .general-two-col.reverse .general-right ul, .content .general-two-col.reverse .general-right ol, .section-basic-page-no-left-nav-and-right-column .content .general-two-col ul, .section-basic-page-no-left-nav-and-right-column .content .general-two-col ol, .content .general-two-col .right-sidebar ul, .content .general-two-col .right-sidebar ol { list-style-type: disc; padding-left: 20px; margin-bottom: 10px; }
+.content .general-two-col:not(.reverse) .general-left ul li, .content .general-two-col:not(.reverse) .general-left ol li, .content .general-two-col.reverse .general-right ul li, .content .general-two-col.reverse .general-right ol li, .section-basic-page-no-left-nav-and-right-column .content .general-two-col ul li, .section-basic-page-no-left-nav-and-right-column .content .general-two-col ol li, .content .general-two-col .right-sidebar ul li, .content .general-two-col .right-sidebar ol li { font-size: 14px; font-size: 0.875rem; line-height: 20px; margin-bottom: 5px; }
+.content .general-two-col:not(.reverse) .general-left ol, .content .general-two-col.reverse .general-right ol, .section-basic-page-no-left-nav-and-right-column .content .general-two-col ol, .content .general-two-col .right-sidebar ol { list-style-type: decimal; }
+.content .general-two-col:not(.reverse) .general-left p, .content .general-two-col.reverse .general-right p, .section-basic-page-no-left-nav-and-right-column .content .general-two-col p, .content .general-two-col .right-sidebar p { font-size: 14px; font-size: 0.875rem; }
 
 .extentions_normal-link, .content .general-left a, .content .general-one-col a, .content .general-right a, .content .right-sidebar a, .pane-node-field-slac-event-related-links a { color: #871628; }
 .extentions_normal-link:hover, .content .general-left a:hover, .content .general-one-col a:hover, .content .general-right a:hover, .content .right-sidebar a:hover, .pane-node-field-slac-event-related-links a:hover { text-decoration: underline; }
@@ -570,8 +570,10 @@ h2.pane-title i, h2.panel-title i { text-transform: capitalize; }
 .general-right { font-size: 13px; font-size: 0.8125rem; color: #706161; }
 .content .general-right .panels-ipe-portlet-wrapper { margin-bottom: 18px; }
 
-.general-right .panel-pane { margin-bottom: 18px; padding: 13px 22px; }
-.general-right .panel-pane:last-child { margin-bottom: 0; }
+.content .general-right .panel-pane { background-color: #f3f1eb; margin-bottom: 18px; padding: 13px 22px; }
+.content .general-right .panel-pane:last-child { margin-bottom: 0; }
+
+.content .with-left .general-right .panel-pane { background-color: inherit; }
 .inner_right .panel-pane { margin-bottom: 20px; }
 .right-sidebar .panel-pane { background-color: #f3f1eb; padding: 13px 22px; margin-bottom: 18px; }
 
