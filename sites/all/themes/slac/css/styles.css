@@ -1056,7 +1056,7 @@ ol.search-results .search-snippet strong { font-weight: bold; color: #871628; }
 .page-basic-io .pane-page-content .menu li { margin-left: 16px; }
 .page-basic-io .pane-page-content .menu li a.active-item, .page-basic-io .pane-page-content .menu li a.active-type { position: relative; text-decoration: none; }
 .page-basic-io .pane-page-content .menu li a.active-item:before, .page-basic-io .pane-page-content .menu li a.active-type:before { content: "•"; position: absolute; color: #484848; font-size: 16px; left: -12px; top: 50%; margin-top: -10px; }
-.page-basic-io .pane-body-grey-background-style, .page-basic-io .right-sidebar .fieldable-panels-pane, .page-basic-io .general-right .contextual-links-region, .page-basic-io .general-right .panel-pane > .view { background: #f4f4f4; }
+.page-basic-io .pane-body-grey-background-style, .page-basic-io .right-sidebar .fieldable-panels-pane, .page-basic-io .general-right .contextual-links-region, .page-basic-io .general-right .panel-pane > .view, .page-basic-io .general-right .pane-custom .custom-content { background: #f4f4f4; }
 .page-basic-io .pane-page-content .reverse .general-right .panel-pane > .view { padding: 0; background: transparent; }
 .page-basic-io .content .general-right .panel-pane .menu li a.active-item { text-decoration: none; }
 .page-basic-io .pane-bundle-slideshow-description-bottom div.field-slideshow-controls a:hover, .page-basic-io .pane-bundle-slac-mini-slideshow div.field-slideshow-controls a:hover { color: white; }
