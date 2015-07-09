@@ -257,4 +257,14 @@
     }
   };
 
+  // Add a wrapper around custom content pane content
+  Drupal.behaviors.customContentPane = {
+    attach: function() {
+      $('.page-basic-io .pane-page-content .general-right .pane-custom').wrapInner( "<div class='custom-content' />");
+      $('.page-basic-io .pane-page-content .general-right .pane-custom h2').each(function() {
+        $(this).parent().before(this);
+      })
+    }
+  };
+
 }(this, this.document, this.jQuery, this.Drupal));
