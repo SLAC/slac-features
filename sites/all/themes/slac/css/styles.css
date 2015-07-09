@@ -1065,6 +1065,7 @@ ol.search-results .search-snippet strong { font-weight: bold; color: #871628; }
 .page-basic-io .pane-bundle-slideshow-description-bottom .field-slideshow-body { background: rgba(0, 0, 0, 0.38); }
 .page-basic-io .pane-bundle-slideshow-description-bottom .field-slideshow-body .field-slideshow-description a { color: white; }
 .page-basic-io .projects-blocks-wrapper .project-block-wrapper .project-title a, .page-basic-io .projects-blocks-wrapper .project-block-wrapper .project-description a { color: white; }
+.page-basic-io .content .general-right .panel-pane { background-color: inherit; }
 .page-basic-io .content .general-right .event-block { padding-left: 55px; margin-bottom: 20px; border-bottom-color: #ebebe0; }
 .page-basic-io .content .general-right .event-block .event { padding-right: 35px; margin-bottom: 17px; }
 .page-basic-io .content .general-right .event-block a.icon { color: #c0bfbf; }
