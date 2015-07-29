@@ -1,16 +1,24 @@
 <?php
 
-// British Indian Ocean Territory
+/**
+ * @file
+ * British Indian Ocean Territory.
+ */
 
+/**
+ * Returns an associative array of states/territories.
+ */
 function location_province_list_io() {
-  return array('PB' => "Peros Banhos",
+  return array(
+    'PB' => "Peros Banhos",
     'SI' => "Salomon Islands",
     'NI' => "Nelsons Island",
     'TB' => "Three Brothers",
     'EA' => "Eagle Islands",
     'DI' => "Danger Island",
     'EG' => "Egmont Islands",
-    'DG' => "Diego Garcia");
+    'DG' => "Diego Garcia"
+  );
 }
 
 /**

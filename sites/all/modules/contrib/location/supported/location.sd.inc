@@ -1,25 +1,33 @@
 <?php
 
-// Sudan
+/**
+ * @file
+ * Sudan.
+ */
 
+/**
+ * Returns an associative array of states/territories.
+ */
 function location_province_list_sd() {
-  return array('RS' => "Al Bahr al Ahmar",
-	'GZ' => "Al Jazirah ",
-	'KH' => "Al Khartum ",
-	'GD' => "Al Qadarif ",
-	'NR' => "An Nil ",
-	'NW' => "An Nil al Abyad",
-	'NB' => "An Nil al Azraq",
-	'NO' => "Ash Shamaliyah",
-	'DW' => "Gharb Darfur",
-	'DS' => "Janub Darfur",
-	'KS' => "Janub Kurdufan",
-	'KA' => "Kassala",
-	'DN' => "Shamal Darfur",
-	'KN' => "Shamal Kurdufan",
-	'DE' => "Sharq  Darfur",
-	'SI' => "Sinnar",
-	'DC' => "Zalingei");
+  return array(
+    'RS' => "Al Bahr al Ahmar",
+    'GZ' => "Al Jazirah ",
+    'KH' => "Al Khartum ",
+    'GD' => "Al Qadarif ",
+    'NR' => "An Nil ",
+    'NW' => "An Nil al Abyad",
+    'NB' => "An Nil al Azraq",
+    'NO' => "Ash Shamaliyah",
+    'DW' => "Gharb Darfur",
+    'DS' => "Janub Darfur",
+    'KS' => "Janub Kurdufan",
+    'KA' => "Kassala",
+    'DN' => "Shamal Darfur",
+    'KN' => "Shamal Kurdufan",
+    'DE' => "Sharq  Darfur",
+    'SI' => "Sinnar",
+    'DC' => "Zalingei"
+  );
 }
 
 /**

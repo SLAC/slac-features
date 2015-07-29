@@ -1,9 +1,16 @@
 <?php
 
-// Ukraine
+/**
+ * @file
+ * Ukraine.
+ */
 
+/**
+ * Returns an associative array of states/territories.
+ */
 function location_province_list_ua() {
-  return array('CK' => "Cherkasy",
+  return array(
+    'CK' => "Cherkasy",
     'CH' => "Chernihiv",
     'CV' => "Chernivtsi",
     'CR' => "Crimea",
@@ -28,7 +35,8 @@ function location_province_list_ua() {
     'VO' => "Volyn'",
     'ZK' => "Zakarpattya",
     'ZA' => "Zaporizhzhya",
-    'ZH' => "Zhytomyr");
+    'ZH' => "Zhytomyr"
+  );
 }
 
 /**

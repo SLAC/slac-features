@@ -1,9 +1,16 @@
 <?php
 
-// Paraguay
+/**
+ * @file
+ * Paraguay.
+ */
 
+/**
+ * Returns an associative array of states/territories.
+ */
 function location_province_list_py() {
-  return array('AG' => "Alto Paraguay",
+  return array(
+    'AG' => "Alto Paraguay",
     'AN' => "Alto Parana",
     'AM' => "Amambay",
     'AS' => "Asuncion",
@@ -20,7 +27,8 @@ function location_province_list_py() {
     'NE' => "Neembucu",
     'PA' => "Paraguari",
     'PH' => "Presidente Hayes",
-    'SP' => "San Pedro");
+    'SP' => "San Pedro"
+  );
 }
 
 /**

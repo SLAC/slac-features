@@ -1,5 +1,10 @@
 (function($) {
 
+CKEDITOR.disableAutoInline = true;
+
+// Exclude every id starting with 'cke_' in ajax_html_ids during AJAX requests.
+Drupal.wysiwyg.excludeIdSelectors.wysiwyg_ckeditor = ['[id^="cke_"]'];
+
 Drupal.wysiwyg.editor.init.ckeditor = function(settings) {
   // Plugins must only be loaded once. Only the settings from the first format
   // will be used but they're identical anyway.
@@ -39,7 +44,9 @@ Drupal.wysiwyg.editor.attach.ckeditor = function(context, params, settings) {
   CKEDITOR.config.customConfig = '';
 
   var $drupalToolbars = $('#toolbar, #admin-menu', Drupal.overlayChild ? window.parent.document : document);
-
+  if (!settings.height) {
+    settings.height = $('#' + params.field).height();
+  }
   settings.on = {
     instanceReady: function(ev) {
       var editor = ev.editor;
@@ -229,7 +236,33 @@ Drupal.wysiwyg.editor.instance.ckeditor = {
 
   insert: function(content) {
     content = this.prepareContent(content);
-    CKEDITOR.instances[this.field].insertHtml(content);
+    if (CKEDITOR.env.webkit || CKEDITOR.env.chrome || CKEDITOR.env.opera || CKEDITOR.env.safari) {
+      // Works around a WebKit bug which removes wrapper elements.
+      // @see https://drupal.org/node/1927968
+      var tmp = new CKEDITOR.dom.element('div'), children, skip = 0, item;
+      tmp.setHtml(content);
+      children = tmp.getChildren();
+      skip = 0;
+      while (children.count() > skip) {
+        item = children.getItem(skip);
+        switch(item.type) {
+          case 1:
+            CKEDITOR.instances[this.field].insertElement(item);
+            break;
+          case 3:
+            CKEDITOR.instances[this.field].insertText(item.getText());
+            skip++;
+            break;
+          case 8:
+            CKEDITOR.instances[this.field].insertHtml(item.getOuterHtml());
+            skip++;
+            break;
+        }
+      }
+    }
+    else {
+      CKEDITOR.instances[this.field].insertHtml(content);
+    }
   },
 
   setContent: function (content) {

@@ -1,9 +1,16 @@
 <?php
 
-// Guinea-Bissau
+/**
+ * @file
+ * Guinea-Bissau.
+ */
 
+/**
+ * Returns an associative array of states/territories.
+ */
 function location_province_list_gw() {
-  return array('BF' => "Bafata Region",
+  return array(
+    'BF' => "Bafata Region",
     'BB' => "Biombo Region",
     'BS' => "Bissau Region",
     'BL' => "Bolama Region",
@@ -11,7 +18,8 @@ function location_province_list_gw() {
     'GA' => "Gabu Region",
     'OI' => "Oio Region",
     'QU' => "Quinara Region",
-    'TO' => "Tombali Region");
+    'TO' => "Tombali Region"
+  );
 }
 
 /**

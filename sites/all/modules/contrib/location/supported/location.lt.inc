@@ -1,9 +1,16 @@
 <?php
 
-// Lithuania
+/**
+ * @file
+ * Lithuania.
+ */
 
+/**
+ * Returns an associative array of states/territories.
+ */
 function location_province_list_lt() {
-  return array('AL' => "Alytus",
+  return array(
+    'AL' => "Alytus",
     'KA' => "Kaunas",
     'KL' => "Klaipeda",
     'MA' => "Marijampole",
@@ -12,7 +19,8 @@ function location_province_list_lt() {
     'TA' => "Taurage",
     'TE' => "Telsiai",
     'UT' => "Utena",
-    'VI' => "Vilnius");
+    'VI' => "Vilnius"
+  );
 }
 
 /**

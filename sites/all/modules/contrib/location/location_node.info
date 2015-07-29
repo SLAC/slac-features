@@ -3,12 +3,10 @@ description = Associate locations with nodes.
 dependencies[] = location
 package = Location
 core = 7.x
-files[] = location_node.module
-files[] = location_node.install
 
-; Information added by drupal.org packaging script on 2013-09-10
-version = "7.x-3.0-rc5"
+; Information added by Drupal.org packaging script on 2014-12-30
+version = "7.x-3.6"
 core = "7.x"
 project = "location"
-datestamp = "1378834936"
+datestamp = "1419943726"
 

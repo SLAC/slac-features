@@ -1,0 +1,16 @@
+<?php
+/**
+ * @file
+ * Code for the Blog Features feature.
+ */
+
+include_once 'slac_blog.features.inc';
+
+/**
+ * Implements hook_node_view().
+ */
+function slac_blog_node_view($node, $view_mode, $langcode) {
+  if ($node->type == 'blog' && $view_mode == 'full') {
+    menu_set_active_item(drupal_get_normal_path("blog"));
+  }
+}

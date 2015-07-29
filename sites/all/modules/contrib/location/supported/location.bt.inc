@@ -1,9 +1,16 @@
 <?php
 
-// Bhutan
+/**
+ * @file
+ * Bhutan.
+ */
 
+/**
+ * Returns an associative array of states/territories.
+ */
 function location_province_list_bt() {
-  return array('BUM' => "Bumthang",
+  return array(
+    'BUM' => "Bumthang",
     'CHU' => "Chukha",
     'DAG' => "Dagana",
     'GAS' => "Gasa",
@@ -22,7 +29,8 @@ function location_province_list_bt() {
     'TRO' => "Trongsa",
     'TSI' => "Tsirang",
     'WPH' => "Wangdue Phodrang",
-    'ZHE' => "Zhemgang");
+    'ZHE' => "Zhemgang"
+  );
 }
 
 /**

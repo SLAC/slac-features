@@ -1,7 +1,13 @@
 <?php
 
-// Belgium
+/**
+ * @file
+ * Belgium.
+ */
 
+/**
+ * Returns an associative array of states/territories.
+ */
 function location_province_list_be() {
   return array(
     'VAN' => "Antwerpen",
@@ -34,20 +40,29 @@ function location_bounds_be() {
   );
 }
 
+/**
+ * Providers.
+ */
 function location_map_link_be_providers() {
   return array(
     'google' => array(
-      'name' => 'Google Maps',
+      'name' => t('Google Maps'),
       'url' => 'http://maps.google.be/',
       'tos' => 'http://maps.google.be/help/terms_maps.html',
     ),
   );
 }
 
+/**
+ * Default providers.
+ */
 function location_map_link_be_default_providers() {
   return array('google');
 }
 
+/**
+ * Google link.
+ */
 function location_map_link_be_google($location = array()) {
   $query_params = array();
 
@@ -58,10 +73,9 @@ function location_map_link_be_google($location = array()) {
   }
 
   if (count($query_params)) {
-    return ('http://maps.google.be?q='. urlencode(implode(', ', $query_params)));
+    return ('http://maps.google.be?q=' . urlencode(implode(', ', $query_params)));
   }
   else {
     return NULL;
   }
 }
-

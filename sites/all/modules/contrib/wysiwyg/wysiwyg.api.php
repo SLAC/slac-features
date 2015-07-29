@@ -75,7 +75,7 @@ function hook_wysiwyg_plugin($editor, $version) {
             // Most plugins should define TRUE here.
             'load' => TRUE,
             // Boolean whether this plugin is a native plugin, i.e. shipped with
-            // the editor. Definition must be ommitted for plugins provided by
+            // the editor. Definition must be omitted for plugins provided by
             // other modules. TRUE means 'path' and 'filename' above are ignored
             // and the plugin is instead loaded from the editor's plugin folder.
             'internal' => TRUE,
@@ -279,5 +279,11 @@ function hook_wysiwyg_editor_settings_alter(&$settings, $context) {
   if ($context['profile']->editor == 'tinymce') {
     // Supported values to JSON data types.
     $settings['cleanup_on_startup'] = TRUE;
+    // Function references (callbacks) need special care.
+    // @see wysiwyg_wrap_js_callback()
+    $settings['file_browser_callback'] = wysiwyg_wrap_js_callback('myFileBrowserCallback');
+    // Regular Expressions need special care.
+    // @see wysiwyg_wrap_js_regexp()
+    $settings['stylesheetParser_skipSelectors'] = wysiwyg_wrap_js_regexp('(^body\.|^caption\.|\.high|^\.)', 'i');
   }
 }

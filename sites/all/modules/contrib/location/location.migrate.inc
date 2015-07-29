@@ -2,29 +2,50 @@
 /**
  * @file
  * Migrate integration.
- *
- * Primary value passed to this field is the is_primary value (boolean)
- * but can be overwritten with subfields.
- *
- * Subfields are used to specify all the other values:
- *  'street'
- *  'additional',
- *  'city',
- *  'province',
- *  'postal_code',
- *  'country',
- *  'is_primary',
- *  'latitude',
- *  'longitude'
- *
- * @code
- *   $this->addFieldMapping('field_location_dest')->defaultValue('TRUE');
- *   $this->addFieldMapping('field_location_dest:street', 'field_source_address_1');
- *   $this->addFieldMapping('field_location_dest:city', 'field_source_city');
- * @endcode
  */
+
+/**
+ * Implements hook_migrate_api().
+ */
+function location_migrate_api() {
+  $api = array(
+    'api' => 2,
+    'field handlers' => array(
+      'MigrateLocationFieldHandler',
+    ),
+  );
+
+  return $api;
+}
+
+/*
+*
+* Primary value passed to this field is the is_primary value (boolean)
+* but can be overwritten with subfields.
+*
+* Subfields are used to specify all the other values:
+*  'street'
+*  'additional',
+*  'city',
+*  'province',
+*  'postal_code',
+*  'country',
+*  'is_primary',
+*  'latitude',
+*  'longitude'
+*
+* @code
+*   $this->addFieldMapping('field_location_dest')->defaultValue('TRUE');
+*   $this->addFieldMapping('field_location_dest:street', 'field_source_address_1');
+*   $this->addFieldMapping('field_location_dest:city', 'field_source_city');
+* @endcode
+*/
+
 class MigrateLocationFieldHandler extends MigrateFieldHandler {
 
+  /**
+   * {@inheritdoc}
+   */
   public function __construct() {
     $this->registerTypes(array('location'));
   }
@@ -32,14 +53,18 @@ class MigrateLocationFieldHandler extends MigrateFieldHandler {
   /**
    * Implementation of MigrateFieldHandler::fields().
    *
-   * @param $type
-   *  The file field type - 'file' or 'image'
-   * @param $parent_field
-   *  Name of the parent field.
+   * @param string $type
+   *   The file field type - 'file' or 'image'
+   *
+   * @param string $parent_field
+   *   Name of the parent field.
+   *
    * @param Migration $migration
-   *  The migration context for the parent field. We can look at the mappings
-   *  and determine which subfields are relevant.
+   *   The migration context for the parent field. We can look at the mappings
+   *   and determine which subfields are relevant.
+   *
    * @return array
+   *   Array of fields.
    */
   public function fields($type, $parent_field, $migration = NULL) {
     $dummy = array();
@@ -56,8 +81,11 @@ class MigrateLocationFieldHandler extends MigrateFieldHandler {
     return $fields;
   }
 
+  /**
+   * {@inheritdoc}
+   */
   public function prepare($entity, array $field_info, array $instance, array $values) {
-    $migration   = Migration::currentMigration();
+    $migration = Migration::currentMigration();
     $destination = $migration->getDestination();
 
     $arguments = array();
@@ -89,7 +117,7 @@ class MigrateLocationFieldHandler extends MigrateFieldHandler {
         $instance_arguments['country'] = strtolower($instance_arguments['country']);
       }
 
-      // Ensure we have at least one location field besides 'is_primary' before saving
+      // Ensure we have at least one location field besides 'is_primary' before saving.
       if (!empty($instance_arguments)) {
         $instance_arguments['is_primary'] = $value;
         $instance_arguments['inhibit_geocode'] = TRUE;
@@ -103,5 +131,4 @@ class MigrateLocationFieldHandler extends MigrateFieldHandler {
 
     return $return;
   }
-
 }

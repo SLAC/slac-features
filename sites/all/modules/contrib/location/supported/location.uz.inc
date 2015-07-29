@@ -1,9 +1,16 @@
 <?php
 
-// Uzbekistan
+/**
+ * @file
+ * Uzbekistan.
+ */
 
+/**
+ * Returns an associative array of states/territories.
+ */
 function location_province_list_uz() {
-  return array('AN' => "Andijon",
+  return array(
+    'AN' => "Andijon",
     'BU' => "Buxoro",
     'FA' => "Farg'ona",
     'JI' => "Jizzax",
@@ -16,7 +23,8 @@ function location_province_list_uz() {
     'SU' => "Surxondaryo",
     'TK' => "Toshkent city",
     'TO' => "Toshkent region",
-    'XO' => "Xorazm");
+    'XO' => "Xorazm"
+  );
 }
 
 /**

@@ -1,3 +1,44 @@
+Issue #2223441 by coredumperror: Fixed file_create_url() does not generate image style token: breaks display of
+ epsacrop_thumb image styles.
+Code style check on js.
+Issue #1797554 by coredumperror | cbiggins: Leaving the crop selection in default position does not save crop.
+Issue #2262077 by bojan_dev: Fixed Crop button on audio file type and brackets arround the crop button in a dial
+og.
+Issue #2340697 by marcvangend: Fixed Support URL's wih language prefix.
+Do not display error message in check function during install.
+Issue #1851486 by malcomio: Added More helpful error messages.
+Fixed by yvmarques: Remove silly piece of code (you have right to laugh or face palm, I did the same).
+Issue #1569632 by Josh Benner: Does not work with recent media module dev versions.
+Issue #1781358 by yvmarques: Special characters in source image name make crop image unsavable.
+Fixed by yvmarques: Display label instead of style name in the field settings.
+Issue #1635492 by afranioce: Alter file epsacrop.js line 18.
+Issue #1350486 by lukus: Alter width of tab in dialog to auto.
+Issue #2123137 by siliconmeadow: Fixed grammar and spelling.
+Fixed #2124733 by nagy.balint: Crop dialog breaks if i open a crop dialog for another image on the same page
+Fixed #2133241 by robin87: Use label instead of machine name for presets
+Fixed #2171859 by jenlampton: Update the README.txt with cleaner instructions and more elegant english
+Fixed #1396500 by nyl auster, mattsmith3, olofjohansson, dagomar, nagy.balint: crop dialog not working when image style is in feature
+Fixed #1823940 by davidwhthomas, PieterDC: Simplify data storage to avoid massive amounts of null values
+Added #1478934 by cwithout: Apply the crop information to multiple image styles.
+Added #1350252 by cwithout: Allow entry of only one dimension in Image Styles creation form.
+Fixed #1503190 by crobinson: EPSA Crop Cannot Handle High-NID sites
+Added #1459840 by aacraig: Button Class on "manage crops".
+Fixed #1235628 by Mitsuko: Cannot see the cropping handlers
+Added #1473140 by robertom: field_slideshow of epsacrop(ped) fields
+Fixed #1406738 by cristinawithout: images not loaded in cropping dialog, when it's a new image
+Added #1422882 by cristinawithout: Add an option to ignore EPSA crop settings if the user never sets a crop
+Added #1218746 by cristinawithout: Add Support for Media Module Widget
+Added #1315250 by yvmarques: Add "Save Node" warning message after closing Crop window.
+Fixed #1189626 by yvmarques: Undefined index: in epsacrop_crop_image()
+Fixed by yvmarques: Misspelling in the install about json2.js file.
+Fixed #1200894 by yvmarques: On Select or Drag on the select area is scrolling down to the bottom of the page in Chrome
+Fixed by yvmarques: Missed a ) in the permission hook.
+Fixed #1279400 by Ankabout: Spelling errors in Permissions UI
+Fixed #1188088 by yvmarques: Suggestion for Image Style Name change: ‘Crop Dialog ‘ to ‘EPSA Image Crop’
+Fixed #1182110 by Schnitzel: Typo (user_acces) in function _epsacrop_process_form_element()
+Fixed #1156314 by yvmarques: Errors when creating a new node with EPSA Crop module enabled
+Fixed by yvmarques: Version informations in the info module.
+
 EPSA Crop 7.x-2.1, 2011-05-17
 -----------------------------
 Fixed by yvmarques: Fatal error when trying to delete a file.
