@@ -1949,16 +1949,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
-  // Exported permission: 'delete terms in kb_categories'.
-  $permissions['delete terms in kb_categories'] = array(
-    'name' => 'delete terms in kb_categories',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'manager' => 'manager',
-    ),
-    'module' => 'taxonomy',
-  );
-
   // Exported permission: 'delete terms in news_types'.
   $permissions['delete terms in news_types'] = array(
     'name' => 'delete terms in news_types',
@@ -1972,16 +1962,6 @@ function slac_intorg_permissions_user_default_permissions() {
   // Exported permission: 'delete terms in slac_blog_tags'.
   $permissions['delete terms in slac_blog_tags'] = array(
     'name' => 'delete terms in slac_blog_tags',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'manager' => 'manager',
-    ),
-    'module' => 'taxonomy',
-  );
-
-  // Exported permission: 'delete terms in slac_news_tags'.
-  $permissions['delete terms in slac_news_tags'] = array(
-    'name' => 'delete terms in slac_news_tags',
     'roles' => array(
       'administrator' => 'administrator',
       'manager' => 'manager',
@@ -2875,18 +2855,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
-  // Exported permission: 'edit terms in kb_categories'.
-  $permissions['edit terms in kb_categories'] = array(
-    'name' => 'edit terms in kb_categories',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
-      'manager' => 'manager',
-    ),
-    'module' => 'taxonomy',
-  );
-
   // Exported permission: 'edit terms in news_types'.
   $permissions['edit terms in news_types'] = array(
     'name' => 'edit terms in news_types',
@@ -2902,18 +2870,6 @@ function slac_intorg_permissions_user_default_permissions() {
   // Exported permission: 'edit terms in slac_blog_tags'.
   $permissions['edit terms in slac_blog_tags'] = array(
     'name' => 'edit terms in slac_blog_tags',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
-      'manager' => 'manager',
-    ),
-    'module' => 'taxonomy',
-  );
-
-  // Exported permission: 'edit terms in slac_news_tags'.
-  $permissions['edit terms in slac_news_tags'] = array(
-    'name' => 'edit terms in slac_news_tags',
     'roles' => array(
       'administrator' => 'administrator',
       'author' => 'author',
