@@ -22,13 +22,16 @@ function slac_demo_accounts_uuid_features_default_users() {
   'status' => 1,
   'timezone' => 'Europe/Helsinki',
   'language' => '',
-  'picture' => NULL,
+  'picture' => 0,
   'init' => 'usertest4@example.com',
-  'data' => FALSE,
+  'data' => array(
+    'htmlmail_plaintext' => 0,
+  ),
   'uuid' => '8b7ae525-e06d-435f-8a8e-b37e21fe4403',
   'roles' => array(
     2 => 'authenticated user',
   ),
+  'metatags' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:UserAccount',
@@ -45,7 +48,7 @@ function slac_demo_accounts_uuid_features_default_users() {
       'type' => 'rel',
     ),
   ),
-  'date' => '2014-01-16 10:40:13 +0200',
+  'date' => '2014-01-16 08:40:13 +0000',
 );
   $users[] = array(
   'name' => 'usertest5',
@@ -59,13 +62,16 @@ function slac_demo_accounts_uuid_features_default_users() {
   'status' => 1,
   'timezone' => 'Europe/Helsinki',
   'language' => '',
-  'picture' => NULL,
+  'picture' => 0,
   'init' => 'usertest5@example.com',
-  'data' => FALSE,
+  'data' => array(
+    'htmlmail_plaintext' => 0,
+  ),
   'uuid' => 'adeece4d-b3d3-4619-96b5-dd20b87ebc49',
   'roles' => array(
     2 => 'authenticated user',
   ),
+  'metatags' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:UserAccount',
@@ -82,7 +88,7 @@ function slac_demo_accounts_uuid_features_default_users() {
       'type' => 'rel',
     ),
   ),
-  'date' => '2014-01-16 10:40:37 +0200',
+  'date' => '2014-01-16 08:40:37 +0000',
 );
   $users[] = array(
   'name' => 'usertest6',
@@ -96,13 +102,16 @@ function slac_demo_accounts_uuid_features_default_users() {
   'status' => 1,
   'timezone' => 'Europe/Helsinki',
   'language' => '',
-  'picture' => NULL,
+  'picture' => 0,
   'init' => 'usertest6@example.com',
-  'data' => FALSE,
+  'data' => array(
+    'htmlmail_plaintext' => 0,
+  ),
   'uuid' => 'e063835a-d277-44a2-94a1-86ea45e9012b',
   'roles' => array(
     2 => 'authenticated user',
   ),
+  'metatags' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:UserAccount',
@@ -119,7 +128,7 @@ function slac_demo_accounts_uuid_features_default_users() {
       'type' => 'rel',
     ),
   ),
-  'date' => '2014-01-16 10:41:27 +0200',
+  'date' => '2014-01-16 08:41:27 +0000',
 );
   return $users;
 }
