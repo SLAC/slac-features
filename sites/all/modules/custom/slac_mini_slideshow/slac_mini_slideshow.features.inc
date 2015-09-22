@@ -60,6 +60,7 @@ function slac_mini_slideshow_image_default_styles() {
         'weight' => 2,
       ),
     ),
+    'label' => 'mini_slideshow_image_style',
   );
 
   return $styles;
