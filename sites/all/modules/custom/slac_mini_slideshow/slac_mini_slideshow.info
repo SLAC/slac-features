@@ -23,4 +23,4 @@ features[image][] = mini_slideshow_image_style
 features[variable][] = colorbox_custom_settings_activate
 features[variable][] = colorbox_style
 features[variable][] = colorbox_text_current
-mtime = 1435613550
+mtime = 1443215062

@@ -111,7 +111,7 @@ function slac_mini_slideshow_field_default_field_instances() {
           'slideshow_controls_position' => 'after',
           'slideshow_field_collection_image' => 'field_fcollection_image',
           'slideshow_fx' => 'fade',
-          'slideshow_image_style' => '',
+          'slideshow_image_style' => 'mini_slideshow_image_style',
           'slideshow_link' => 'colorbox',
           'slideshow_order' => '',
           'slideshow_pager' => 'number',
