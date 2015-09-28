@@ -136,6 +136,16 @@ function slac_people_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'administer crop styles'.
+  $permissions['administer crop styles'] = array(
+    'name' => 'administer crop styles',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'pp_crop',
+  );
+
   // Exported permission: 'administer demo modules'.
   $permissions['administer demo modules'] = array(
     'name' => 'administer demo modules',
