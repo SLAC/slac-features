@@ -45,6 +45,7 @@ features[page_manager_pages][] = add_a_new_news_item
 features[page_manager_pages][] = news_by_types
 features[page_manager_pages][] = news_by_year
 features[taxonomy][] = news_types
+features[taxonomy][] = slac_news_tags
 features[uuid_term][] = 05339b25-6cf8-4e75-b4ea-f91d490f5b04
 features[uuid_term][] = 47c46adc-4bf5-41cc-91a2-96c057b16297
 features[variable][] = comment_anonymous_slac_news

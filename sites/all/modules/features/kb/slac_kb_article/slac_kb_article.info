@@ -23,6 +23,7 @@ features[page_manager_handlers][] = node_view_panel_context_4
 features[page_manager_handlers][] = term_view_panel_context_3
 features[page_manager_pages][] = add_new_knowledge_base_article
 features[page_manager_pages][] = kb_articles
+features[taxonomy][] = kb_categories
 features[variable][] = comment_anonymous_kb_article
 features[variable][] = comment_default_mode_kb_article
 features[variable][] = comment_default_per_page_kb_article
