@@ -67,6 +67,7 @@ dependencies[] = entity
 dependencies[] = libraries
 
 dependencies[] = menu_attributes
+dependencies[] = menu_block
 dependencies[] = menu_trail_by_path
 
 dependencies[] = panels
@@ -99,6 +100,7 @@ dependencies[] = slac_configuration
 ; Features
 dependencies[] = default_site_template_people
 dependencies[] = slac_header_menu
+dependencies[] = pp_demo_beans
 
 ;Custom modules
 dependencies[] = slac_site_variables
@@ -121,6 +123,9 @@ dependencies[] = landing_page
 
 ;Profile frontpage elements
 dependencies[] = slac_profile_elements
+
+; Panelized basic page settings
+dependencies[] = slac_basic_page_settings
 
 ;Configurations
 dependencies[] = slac_configurations

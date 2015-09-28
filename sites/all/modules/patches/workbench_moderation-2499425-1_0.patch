@@ -1,0 +1,29 @@
+diff --git a/workbench_moderation.module b/workbench_moderation.module
+index 5a2ff16..ef65318 100644
+--- a/workbench_moderation.module
++++ b/workbench_moderation.module
+@@ -1743,14 +1743,21 @@ function workbench_moderation_store($node) {
+   // If we are saving a published node, work from the live revision, otherwise
+   // make sure that the entry in the {node} table points to the current
+   // revision.
+-  if (empty($node->workbench_moderation['current']->unpublishing)) {
++  $publishing = empty($node->workbench_moderation['current']->unpublishing);
++  if ($publishing) {
+     $live_revision = workbench_moderation_node_live_load($node);
+-    $live_revision->status = 1;
+   }
+   else {
+     $live_revision = workbench_moderation_node_current_load($node);
+-    $live_revision->status = 0;
+   }
++
++  // The revision no longer exists, ignore.
++  if (!$live_revision) {
++    return;
++  }
++
++  // Set the status to reflect if we are publishing or not.
++  $live_revision->status = $publishing;
+   // Don't create a new revision.
+   $live_revision->revision = 0;
+   // Prevent another moderation record from being written.

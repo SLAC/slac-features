@@ -62,10 +62,11 @@ function slac_service_catalog_default_page_manager_handlers() {
   );
   $display->cache = array();
   $display->title = '';
+  $display->uuid = 'fc35fbd1-5914-4699-8367-90da7463b444';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-1';
+    $pane->pid = 'new-7d230e93-72c1-43ca-9f06-b95b46d0da2d';
     $pane->panel = 'left';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_slac_sc_service_overview';
@@ -93,10 +94,11 @@ function slac_service_catalog_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-1'] = $pane;
-    $display->panels['left'][0] = 'new-1';
+    $pane->uuid = '7d230e93-72c1-43ca-9f06-b95b46d0da2d';
+    $display->content['new-7d230e93-72c1-43ca-9f06-b95b46d0da2d'] = $pane;
+    $display->panels['left'][0] = 'new-7d230e93-72c1-43ca-9f06-b95b46d0da2d';
     $pane = new stdClass();
-    $pane->pid = 'new-2';
+    $pane->pid = 'new-d05a1dc7-b8a8-4fb6-b562-b74460c6c27d';
     $pane->panel = 'left';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:body';
@@ -124,10 +126,11 @@ function slac_service_catalog_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['left'][1] = 'new-2';
+    $pane->uuid = 'd05a1dc7-b8a8-4fb6-b562-b74460c6c27d';
+    $display->content['new-d05a1dc7-b8a8-4fb6-b562-b74460c6c27d'] = $pane;
+    $display->panels['left'][1] = 'new-d05a1dc7-b8a8-4fb6-b562-b74460c6c27d';
     $pane = new stdClass();
-    $pane->pid = 'new-3';
+    $pane->pid = 'new-e5355fdd-ddbe-4a77-bf09-a29d5206ae08';
     $pane->panel = 'left_title';
     $pane->type = 'node_title';
     $pane->subtype = 'node_title';
@@ -150,10 +153,11 @@ function slac_service_catalog_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['left_title'][0] = 'new-3';
+    $pane->uuid = 'e5355fdd-ddbe-4a77-bf09-a29d5206ae08';
+    $display->content['new-e5355fdd-ddbe-4a77-bf09-a29d5206ae08'] = $pane;
+    $display->panels['left_title'][0] = 'new-e5355fdd-ddbe-4a77-bf09-a29d5206ae08';
     $pane = new stdClass();
-    $pane->pid = 'new-4';
+    $pane->pid = 'new-da05f59e-d057-4064-b128-b31dc997cbb2';
     $pane->panel = 'right';
     $pane->type = 'views_panes';
     $pane->subtype = 'service_catalog_item-panel_pane_2';
@@ -172,10 +176,11 @@ function slac_service_catalog_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-4'] = $pane;
-    $display->panels['right'][0] = 'new-4';
+    $pane->uuid = 'da05f59e-d057-4064-b128-b31dc997cbb2';
+    $display->content['new-da05f59e-d057-4064-b128-b31dc997cbb2'] = $pane;
+    $display->panels['right'][0] = 'new-da05f59e-d057-4064-b128-b31dc997cbb2';
     $pane = new stdClass();
-    $pane->pid = 'new-5';
+    $pane->pid = 'new-744daa47-38cb-4f33-b75f-cf611e574305';
     $pane->panel = 'right';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_slac_sc_category';
@@ -203,10 +208,11 @@ function slac_service_catalog_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-5'] = $pane;
-    $display->panels['right'][1] = 'new-5';
+    $pane->uuid = '744daa47-38cb-4f33-b75f-cf611e574305';
+    $display->content['new-744daa47-38cb-4f33-b75f-cf611e574305'] = $pane;
+    $display->panels['right'][1] = 'new-744daa47-38cb-4f33-b75f-cf611e574305';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-1';
+  $display->title_pane = 'new-7d230e93-72c1-43ca-9f06-b95b46d0da2d';
   $handler->conf['display'] = $display;
   $export['node_view_panel_context'] = $handler;
 
@@ -259,10 +265,11 @@ function slac_service_catalog_default_page_manager_handlers() {
   );
   $display->cache = array();
   $display->title = '';
+  $display->uuid = '4216391a-e495-461a-8c8f-40c5f01110d3';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-6';
+    $pane->pid = 'new-f8d8d6c3-f6bf-4943-a032-b21eb668c62e';
     $pane->panel = 'left';
     $pane->type = 'term_description';
     $pane->subtype = 'term_description';
@@ -284,10 +291,11 @@ function slac_service_catalog_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-6'] = $pane;
-    $display->panels['left'][0] = 'new-6';
+    $pane->uuid = 'f8d8d6c3-f6bf-4943-a032-b21eb668c62e';
+    $display->content['new-f8d8d6c3-f6bf-4943-a032-b21eb668c62e'] = $pane;
+    $display->panels['left'][0] = 'new-f8d8d6c3-f6bf-4943-a032-b21eb668c62e';
     $pane = new stdClass();
-    $pane->pid = 'new-7';
+    $pane->pid = 'new-716ee5e6-fefc-4b9f-83ba-13d320087c2b';
     $pane->panel = 'left';
     $pane->type = 'views_panes';
     $pane->subtype = 'service_catalog_item-panel_pane_1';
@@ -306,10 +314,11 @@ function slac_service_catalog_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-7'] = $pane;
-    $display->panels['left'][1] = 'new-7';
+    $pane->uuid = '716ee5e6-fefc-4b9f-83ba-13d320087c2b';
+    $display->content['new-716ee5e6-fefc-4b9f-83ba-13d320087c2b'] = $pane;
+    $display->panels['left'][1] = 'new-716ee5e6-fefc-4b9f-83ba-13d320087c2b';
     $pane = new stdClass();
-    $pane->pid = 'new-8';
+    $pane->pid = 'new-0f0a9843-7a22-4cba-bbb2-6bf5359ad561';
     $pane->panel = 'left_title';
     $pane->type = 'page_title';
     $pane->subtype = 'page_title';
@@ -330,10 +339,11 @@ function slac_service_catalog_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-8'] = $pane;
-    $display->panels['left_title'][0] = 'new-8';
+    $pane->uuid = '0f0a9843-7a22-4cba-bbb2-6bf5359ad561';
+    $display->content['new-0f0a9843-7a22-4cba-bbb2-6bf5359ad561'] = $pane;
+    $display->panels['left_title'][0] = 'new-0f0a9843-7a22-4cba-bbb2-6bf5359ad561';
     $pane = new stdClass();
-    $pane->pid = 'new-9';
+    $pane->pid = 'new-6c6e8872-b9cf-4ddb-a12f-a4c8fc98ef00';
     $pane->panel = 'right';
     $pane->type = 'views_panes';
     $pane->subtype = 'service_catalog_category-panel_pane_4';
@@ -348,10 +358,11 @@ function slac_service_catalog_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-9'] = $pane;
-    $display->panels['right'][0] = 'new-9';
+    $pane->uuid = '6c6e8872-b9cf-4ddb-a12f-a4c8fc98ef00';
+    $display->content['new-6c6e8872-b9cf-4ddb-a12f-a4c8fc98ef00'] = $pane;
+    $display->panels['right'][0] = 'new-6c6e8872-b9cf-4ddb-a12f-a4c8fc98ef00';
     $pane = new stdClass();
-    $pane->pid = 'new-10';
+    $pane->pid = 'new-575ae42d-5da8-4f46-88ef-0ddb3dd2cab7';
     $pane->panel = 'right';
     $pane->type = 'views_panes';
     $pane->subtype = 'service_catalog_item-panel_pane_3';
@@ -366,10 +377,11 @@ function slac_service_catalog_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-10'] = $pane;
-    $display->panels['right'][1] = 'new-10';
+    $pane->uuid = '575ae42d-5da8-4f46-88ef-0ddb3dd2cab7';
+    $display->content['new-575ae42d-5da8-4f46-88ef-0ddb3dd2cab7'] = $pane;
+    $display->panels['right'][1] = 'new-575ae42d-5da8-4f46-88ef-0ddb3dd2cab7';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-7';
+  $display->title_pane = 'new-716ee5e6-fefc-4b9f-83ba-13d320087c2b';
   $handler->conf['display'] = $display;
   $export['term_view_panel_context'] = $handler;
 
@@ -526,8 +538,6 @@ function slac_service_catalog_default_page_manager_pages() {
         'settings' => array(
           'rids' => array(
             0 => 4,
-            1 => 3,
-            1 => 5,
             1 => 6,
           ),
         ),

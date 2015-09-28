@@ -30,6 +30,15 @@ function slac_people_permissions_user_default_permissions() {
     'module' => 'system',
   );
 
+  // Exported permission: 'access bean overview'.
+  $permissions['access bean overview'] = array(
+    'name' => 'access bean overview',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'bean',
+  );
+
   // Exported permission: 'access content'.
   $permissions['access content'] = array(
     'name' => 'access content',
@@ -82,6 +91,42 @@ function slac_people_permissions_user_default_permissions() {
     'module' => 'user',
   );
 
+  // Exported permission: 'administer bean settings'.
+  $permissions['administer bean settings'] = array(
+    'name' => 'administer bean settings',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'bean',
+  );
+
+  // Exported permission: 'administer bean types'.
+  $permissions['administer bean types'] = array(
+    'name' => 'administer bean types',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'bean',
+  );
+
+  // Exported permission: 'administer bean wysiwyg'.
+  $permissions['administer bean wysiwyg'] = array(
+    'name' => 'administer bean wysiwyg',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'bean_wysiwyg',
+  );
+
+  // Exported permission: 'administer beans'.
+  $permissions['administer beans'] = array(
+    'name' => 'administer beans',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'bean',
+  );
+
   // Exported permission: 'administer content types'.
   $permissions['administer content types'] = array(
     'name' => 'administer content types',
@@ -89,6 +134,16 @@ function slac_people_permissions_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'node',
+  );
+
+  // Exported permission: 'administer crop styles'.
+  $permissions['administer crop styles'] = array(
+    'name' => 'administer crop styles',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'pp_crop',
   );
 
   // Exported permission: 'administer demo modules'.
@@ -251,6 +306,46 @@ function slac_people_permissions_user_default_permissions() {
     'module' => 'panels',
   );
 
+  // Exported permission: 'create any block_with_brochures bean'.
+  $permissions['create any block_with_brochures bean'] = array(
+    'name' => 'create any block_with_brochures bean',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'bean',
+  );
+
+  // Exported permission: 'create any content_block bean'.
+  $permissions['create any content_block bean'] = array(
+    'name' => 'create any content_block bean',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'bean',
+  );
+
+  // Exported permission: 'create any content_block_large_image bean'.
+  $permissions['create any content_block_large_image bean'] = array(
+    'name' => 'create any content_block_large_image bean',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'bean',
+  );
+
+  // Exported permission: 'create any content_block_with_links bean'.
+  $permissions['create any content_block_with_links bean'] = array(
+    'name' => 'create any content_block_with_links bean',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'bean',
+  );
+
   // Exported permission: 'create blog content'.
   $permissions['create blog content'] = array(
     'name' => 'create blog content',
@@ -301,6 +396,16 @@ function slac_people_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'delete any block_with_brochures bean'.
+  $permissions['delete any block_with_brochures bean'] = array(
+    'name' => 'delete any block_with_brochures bean',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'bean',
+  );
+
   // Exported permission: 'delete any blog content'.
   $permissions['delete any blog content'] = array(
     'name' => 'delete any blog content',
@@ -309,6 +414,36 @@ function slac_people_permissions_user_default_permissions() {
       'manager' => 'manager',
     ),
     'module' => 'node',
+  );
+
+  // Exported permission: 'delete any content_block bean'.
+  $permissions['delete any content_block bean'] = array(
+    'name' => 'delete any content_block bean',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'bean',
+  );
+
+  // Exported permission: 'delete any content_block_large_image bean'.
+  $permissions['delete any content_block_large_image bean'] = array(
+    'name' => 'delete any content_block_large_image bean',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'bean',
+  );
+
+  // Exported permission: 'delete any content_block_with_links bean'.
+  $permissions['delete any content_block_with_links bean'] = array(
+    'name' => 'delete any content_block_with_links bean',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'bean',
   );
 
   // Exported permission: 'delete any landing_page content'.
@@ -380,6 +515,16 @@ function slac_people_permissions_user_default_permissions() {
     'module' => 'profile2',
   );
 
+  // Exported permission: 'edit any block_with_brochures bean'.
+  $permissions['edit any block_with_brochures bean'] = array(
+    'name' => 'edit any block_with_brochures bean',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'bean',
+  );
+
   // Exported permission: 'edit any blog content'.
   $permissions['edit any blog content'] = array(
     'name' => 'edit any blog content',
@@ -397,6 +542,36 @@ function slac_people_permissions_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'profile2',
+  );
+
+  // Exported permission: 'edit any content_block bean'.
+  $permissions['edit any content_block bean'] = array(
+    'name' => 'edit any content_block bean',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'bean',
+  );
+
+  // Exported permission: 'edit any content_block_large_image bean'.
+  $permissions['edit any content_block_large_image bean'] = array(
+    'name' => 'edit any content_block_large_image bean',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'bean',
+  );
+
+  // Exported permission: 'edit any content_block_with_links bean'.
+  $permissions['edit any content_block_with_links bean'] = array(
+    'name' => 'edit any content_block_with_links bean',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'bean',
   );
 
   // Exported permission: 'edit any landing_page content'.
@@ -426,6 +601,15 @@ function slac_people_permissions_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'profile2',
+  );
+
+  // Exported permission: 'edit bean view mode'.
+  $permissions['edit bean view mode'] = array(
+    'name' => 'edit bean view mode',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'bean',
   );
 
   // Exported permission: 'edit fieldable slideshow_description_bottom'.
@@ -508,6 +692,46 @@ function slac_people_permissions_user_default_permissions() {
     'module' => 'profile2',
   );
 
+  // Exported permission: 'epsacrop administer available crops'.
+  $permissions['epsacrop administer available crops'] = array(
+    'name' => 'epsacrop administer available crops',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'epsacrop',
+  );
+
+  // Exported permission: 'epsacrop create crops'.
+  $permissions['epsacrop create crops'] = array(
+    'name' => 'epsacrop create crops',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'epsacrop',
+  );
+
+  // Exported permission: 'epsacrop delete all crops'.
+  $permissions['epsacrop delete all crops'] = array(
+    'name' => 'epsacrop delete all crops',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'epsacrop',
+  );
+
+  // Exported permission: 'epsacrop edit all crops'.
+  $permissions['epsacrop edit all crops'] = array(
+    'name' => 'epsacrop edit all crops',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'epsacrop',
+  );
+
   // Exported permission: 'slac administer configuration'.
   $permissions['slac administer configuration'] = array(
     'name' => 'slac administer configuration',
@@ -516,6 +740,16 @@ function slac_people_permissions_user_default_permissions() {
       'manager' => 'manager',
     ),
     'module' => 'slac_configuration',
+  );
+
+  // Exported permission: 'use block insert'.
+  $permissions['use block insert'] = array(
+    'name' => 'use block insert',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'bean_wysiwyg',
   );
 
   // Exported permission: 'use panels in place editing'.
@@ -560,6 +794,16 @@ function slac_people_permissions_user_default_permissions() {
     'module' => 'profile2',
   );
 
+  // Exported permission: 'view any block_with_brochures bean'.
+  $permissions['view any block_with_brochures bean'] = array(
+    'name' => 'view any block_with_brochures bean',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'bean',
+  );
+
   // Exported permission: 'view any contact profile'.
   $permissions['view any contact profile'] = array(
     'name' => 'view any contact profile',
@@ -569,6 +813,36 @@ function slac_people_permissions_user_default_permissions() {
     'module' => 'profile2',
   );
 
+  // Exported permission: 'view any content_block bean'.
+  $permissions['view any content_block bean'] = array(
+    'name' => 'view any content_block bean',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'bean',
+  );
+
+  // Exported permission: 'view any content_block_large_image bean'.
+  $permissions['view any content_block_large_image bean'] = array(
+    'name' => 'view any content_block_large_image bean',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'bean',
+  );
+
+  // Exported permission: 'view any content_block_with_links bean'.
+  $permissions['view any content_block_with_links bean'] = array(
+    'name' => 'view any content_block_with_links bean',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'bean',
+  );
+
   // Exported permission: 'view any social_media profile'.
   $permissions['view any social_media profile'] = array(
     'name' => 'view any social_media profile',
@@ -576,6 +850,24 @@ function slac_people_permissions_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'profile2',
+  );
+
+  // Exported permission: 'view bean page'.
+  $permissions['view bean page'] = array(
+    'name' => 'view bean page',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'bean',
+  );
+
+  // Exported permission: 'view bean revisions'.
+  $permissions['view bean revisions'] = array(
+    'name' => 'view bean revisions',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'bean',
   );
 
   // Exported permission: 'view own bio profile'.

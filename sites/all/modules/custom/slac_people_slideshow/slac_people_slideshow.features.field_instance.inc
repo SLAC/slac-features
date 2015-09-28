@@ -10,6 +10,40 @@
 function slac_people_slideshow_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'field_collection_item-field_mini_slideshow_slide-field_fcollection_caption'
+  $field_instances['field_collection_item-field_mini_slideshow_slide-field_fcollection_caption'] = array(
+    'bundle' => 'field_mini_slideshow_slide',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_fcollection_caption',
+    'label' => 'Caption',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 2,
+    ),
+  );
+
   // Exported field_instance: 'field_collection_item-field_slideshow_btmdesc_slide-field_fcollection_description'
   $field_instances['field_collection_item-field_slideshow_btmdesc_slide-field_fcollection_description'] = array(
     'bundle' => 'field_slideshow_btmdesc_slide',
@@ -226,6 +260,7 @@ function slac_people_slideshow_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Caption');
   t('Description');
   t('Image');
   t('Link');
