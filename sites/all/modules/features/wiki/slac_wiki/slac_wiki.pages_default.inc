@@ -107,10 +107,11 @@ function slac_wiki_default_page_manager_handlers() {
   );
   $display->cache = array();
   $display->title = '%node:title';
+  $display->uuid = '1cc21f1c-c5f1-4269-abbb-2f6063a3f49f';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-1';
+    $pane->pid = 'new-a66bad82-d34b-4d1d-a5d2-a9f9edb9e466';
     $pane->panel = 'left';
     $pane->type = 'node_body';
     $pane->subtype = 'node_body';
@@ -129,10 +130,11 @@ function slac_wiki_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-1'] = $pane;
-    $display->panels['left'][0] = 'new-1';
+    $pane->uuid = 'a66bad82-d34b-4d1d-a5d2-a9f9edb9e466';
+    $display->content['new-a66bad82-d34b-4d1d-a5d2-a9f9edb9e466'] = $pane;
+    $display->panels['left'][0] = 'new-a66bad82-d34b-4d1d-a5d2-a9f9edb9e466';
     $pane = new stdClass();
-    $pane->pid = 'new-2';
+    $pane->pid = 'new-6891e65b-9363-42e0-b2f2-cfcf39337569';
     $pane->panel = 'left';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_slac_wiki_attachment';
@@ -161,10 +163,11 @@ function slac_wiki_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['left'][1] = 'new-2';
+    $pane->uuid = '6891e65b-9363-42e0-b2f2-cfcf39337569';
+    $display->content['new-6891e65b-9363-42e0-b2f2-cfcf39337569'] = $pane;
+    $display->panels['left'][1] = 'new-6891e65b-9363-42e0-b2f2-cfcf39337569';
     $pane = new stdClass();
-    $pane->pid = 'new-3';
+    $pane->pid = 'new-2ca9aece-708d-4c29-8a54-5b6cdecef5cc';
     $pane->panel = 'left_author';
     $pane->type = 'node_author_sp';
     $pane->subtype = 'node_author_sp';
@@ -187,10 +190,11 @@ function slac_wiki_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['left_author'][0] = 'new-3';
+    $pane->uuid = '2ca9aece-708d-4c29-8a54-5b6cdecef5cc';
+    $display->content['new-2ca9aece-708d-4c29-8a54-5b6cdecef5cc'] = $pane;
+    $display->panels['left_author'][0] = 'new-2ca9aece-708d-4c29-8a54-5b6cdecef5cc';
     $pane = new stdClass();
-    $pane->pid = 'new-4';
+    $pane->pid = 'new-6ed861fb-b9bc-4392-a17c-e92e90932521';
     $pane->panel = 'left_author';
     $pane->type = 'node_created';
     $pane->subtype = 'node_created';
@@ -210,10 +214,11 @@ function slac_wiki_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-4'] = $pane;
-    $display->panels['left_author'][1] = 'new-4';
+    $pane->uuid = '6ed861fb-b9bc-4392-a17c-e92e90932521';
+    $display->content['new-6ed861fb-b9bc-4392-a17c-e92e90932521'] = $pane;
+    $display->panels['left_author'][1] = 'new-6ed861fb-b9bc-4392-a17c-e92e90932521';
     $pane = new stdClass();
-    $pane->pid = 'new-5';
+    $pane->pid = 'new-acdc666c-20f4-4a08-adc0-d0c290a6f0e2';
     $pane->panel = 'left_title';
     $pane->type = 'page_title';
     $pane->subtype = 'page_title';
@@ -234,10 +239,11 @@ function slac_wiki_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-5'] = $pane;
-    $display->panels['left_title'][0] = 'new-5';
+    $pane->uuid = 'acdc666c-20f4-4a08-adc0-d0c290a6f0e2';
+    $display->content['new-acdc666c-20f4-4a08-adc0-d0c290a6f0e2'] = $pane;
+    $display->panels['left_title'][0] = 'new-acdc666c-20f4-4a08-adc0-d0c290a6f0e2';
     $pane = new stdClass();
-    $pane->pid = 'new-6';
+    $pane->pid = 'new-09275b41-06a5-40cd-877f-6f77d665794a';
     $pane->panel = 'right';
     $pane->type = 'block';
     $pane->subtype = 'menu-menu-slac-wiki';
@@ -255,10 +261,11 @@ function slac_wiki_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-6'] = $pane;
-    $display->panels['right'][0] = 'new-6';
+    $pane->uuid = '09275b41-06a5-40cd-877f-6f77d665794a';
+    $display->content['new-09275b41-06a5-40cd-877f-6f77d665794a'] = $pane;
+    $display->panels['right'][0] = 'new-09275b41-06a5-40cd-877f-6f77d665794a';
     $pane = new stdClass();
-    $pane->pid = 'new-7';
+    $pane->pid = 'new-29bcca0f-33ba-4d8c-989c-48066bc23a1c';
     $pane->panel = 'right';
     $pane->type = 'node_terms';
     $pane->subtype = 'node_terms';
@@ -282,10 +289,11 @@ function slac_wiki_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-7'] = $pane;
-    $display->panels['right'][1] = 'new-7';
+    $pane->uuid = '29bcca0f-33ba-4d8c-989c-48066bc23a1c';
+    $display->content['new-29bcca0f-33ba-4d8c-989c-48066bc23a1c'] = $pane;
+    $display->panels['right'][1] = 'new-29bcca0f-33ba-4d8c-989c-48066bc23a1c';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-5';
+  $display->title_pane = 'new-acdc666c-20f4-4a08-adc0-d0c290a6f0e2';
   $handler->conf['display'] = $display;
   $export['node_view_panel_context_8'] = $handler;
 
@@ -385,10 +393,11 @@ function slac_wiki_default_page_manager_handlers() {
   );
   $display->cache = array();
   $display->title = '';
+  $display->uuid = '7708162f-f90b-4a73-ba54-fe390512a172';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-8';
+    $pane->pid = 'new-5268c1e2-7912-4baa-9a84-9a6b19420aff';
     $pane->panel = 'left';
     $pane->type = 'views_panes';
     $pane->subtype = 'wiki-panel_pane_2';
@@ -403,10 +412,11 @@ function slac_wiki_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-8'] = $pane;
-    $display->panels['left'][0] = 'new-8';
+    $pane->uuid = '5268c1e2-7912-4baa-9a84-9a6b19420aff';
+    $display->content['new-5268c1e2-7912-4baa-9a84-9a6b19420aff'] = $pane;
+    $display->panels['left'][0] = 'new-5268c1e2-7912-4baa-9a84-9a6b19420aff';
     $pane = new stdClass();
-    $pane->pid = 'new-9';
+    $pane->pid = 'new-464ffd06-8002-485d-95b3-afcd1d8accfd';
     $pane->panel = 'left_title';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
@@ -428,10 +438,11 @@ function slac_wiki_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-9'] = $pane;
-    $display->panels['left_title'][0] = 'new-9';
+    $pane->uuid = '464ffd06-8002-485d-95b3-afcd1d8accfd';
+    $display->content['new-464ffd06-8002-485d-95b3-afcd1d8accfd'] = $pane;
+    $display->panels['left_title'][0] = 'new-464ffd06-8002-485d-95b3-afcd1d8accfd';
     $pane = new stdClass();
-    $pane->pid = 'new-10';
+    $pane->pid = 'new-c7c32a17-4c10-406d-8b87-c8de67808d3f';
     $pane->panel = 'right';
     $pane->type = 'block';
     $pane->subtype = 'menu-menu-slac-wiki';
@@ -449,10 +460,11 @@ function slac_wiki_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-10'] = $pane;
-    $display->panels['right'][0] = 'new-10';
+    $pane->uuid = 'c7c32a17-4c10-406d-8b87-c8de67808d3f';
+    $display->content['new-c7c32a17-4c10-406d-8b87-c8de67808d3f'] = $pane;
+    $display->panels['right'][0] = 'new-c7c32a17-4c10-406d-8b87-c8de67808d3f';
   $display->hide_title = PANELS_TITLE_PANE;
-  $display->title_pane = 'new-9';
+  $display->title_pane = 'new-464ffd06-8002-485d-95b3-afcd1d8accfd';
   $handler->conf['display'] = $display;
   $export['term_view_panel_context_4'] = $handler;
 
@@ -488,6 +500,8 @@ function slac_wiki_default_page_manager_pages() {
         'not' => FALSE,
       ),
     ),
+    'type' => 'none',
+    'settings' => NULL,
   );
   $page->menu = array(
     'type' => 'action',
@@ -532,7 +546,10 @@ function slac_wiki_default_page_manager_pages() {
   $page->admin_title = 'Wiki Search';
   $page->admin_description = 'Wiki search page that allows to find different wiki pages';
   $page->path = 'wiki/search';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array(
     'type' => 'normal',
     'title' => 'Search wiki pages',
@@ -586,10 +603,11 @@ function slac_wiki_default_page_manager_pages() {
   );
   $display->cache = array();
   $display->title = 'Search Wiki';
+  $display->uuid = '6c7c0c25-4a65-4dad-a125-5acebaf512a1';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-1';
+    $pane->pid = 'new-f6042a01-d23d-48d6-8379-833f7dc862f6';
     $pane->panel = 'left';
     $pane->type = 'block';
     $pane->subtype = 'views--exp-wiki-panel_pane_1';
@@ -608,10 +626,11 @@ function slac_wiki_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-1'] = $pane;
-    $display->panels['left'][0] = 'new-1';
+    $pane->uuid = 'f6042a01-d23d-48d6-8379-833f7dc862f6';
+    $display->content['new-f6042a01-d23d-48d6-8379-833f7dc862f6'] = $pane;
+    $display->panels['left'][0] = 'new-f6042a01-d23d-48d6-8379-833f7dc862f6';
     $pane = new stdClass();
-    $pane->pid = 'new-2';
+    $pane->pid = 'new-16be1a29-d965-4147-b66d-a9eb1b1b35bc';
     $pane->panel = 'left';
     $pane->type = 'views_panes';
     $pane->subtype = 'wiki-panel_pane_1';
@@ -626,10 +645,11 @@ function slac_wiki_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['left'][1] = 'new-2';
+    $pane->uuid = '16be1a29-d965-4147-b66d-a9eb1b1b35bc';
+    $display->content['new-16be1a29-d965-4147-b66d-a9eb1b1b35bc'] = $pane;
+    $display->panels['left'][1] = 'new-16be1a29-d965-4147-b66d-a9eb1b1b35bc';
     $pane = new stdClass();
-    $pane->pid = 'new-3';
+    $pane->pid = 'new-a029ddbe-86d4-4277-be85-d09584f62dda';
     $pane->panel = 'left_title';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
@@ -650,10 +670,11 @@ function slac_wiki_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['left_title'][0] = 'new-3';
+    $pane->uuid = 'a029ddbe-86d4-4277-be85-d09584f62dda';
+    $display->content['new-a029ddbe-86d4-4277-be85-d09584f62dda'] = $pane;
+    $display->panels['left_title'][0] = 'new-a029ddbe-86d4-4277-be85-d09584f62dda';
     $pane = new stdClass();
-    $pane->pid = 'new-4';
+    $pane->pid = 'new-1ab4bc7b-b53d-4d6a-87a6-58ae931ff9e0';
     $pane->panel = 'right';
     $pane->type = 'block';
     $pane->subtype = 'menu-menu-slac-wiki';
@@ -671,10 +692,11 @@ function slac_wiki_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-4'] = $pane;
-    $display->panels['right'][0] = 'new-4';
+    $pane->uuid = '1ab4bc7b-b53d-4d6a-87a6-58ae931ff9e0';
+    $display->content['new-1ab4bc7b-b53d-4d6a-87a6-58ae931ff9e0'] = $pane;
+    $display->panels['right'][0] = 'new-1ab4bc7b-b53d-4d6a-87a6-58ae931ff9e0';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-2';
+  $display->title_pane = 'new-16be1a29-d965-4147-b66d-a9eb1b1b35bc';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['slac_wiki_search'] = $page;
@@ -689,6 +711,8 @@ function slac_wiki_default_page_manager_pages() {
   $page->path = 'wiki';
   $page->access = array(
     'logic' => 'and',
+    'type' => 'none',
+    'settings' => NULL,
   );
   $page->menu = array(
     'type' => 'normal',
@@ -743,10 +767,11 @@ function slac_wiki_default_page_manager_pages() {
   );
   $display->cache = array();
   $display->title = 'Wiki pages A-Z';
+  $display->uuid = '2814cc39-5edd-4438-8110-4ec3eaf1fb4f';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-5';
+    $pane->pid = 'new-6ce7f61b-e663-476b-aaac-5892da439cf4';
     $pane->panel = 'left';
     $pane->type = 'views';
     $pane->subtype = 'wiki';
@@ -776,10 +801,11 @@ function slac_wiki_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-5'] = $pane;
-    $display->panels['left'][0] = 'new-5';
+    $pane->uuid = '6ce7f61b-e663-476b-aaac-5892da439cf4';
+    $display->content['new-6ce7f61b-e663-476b-aaac-5892da439cf4'] = $pane;
+    $display->panels['left'][0] = 'new-6ce7f61b-e663-476b-aaac-5892da439cf4';
     $pane = new stdClass();
-    $pane->pid = 'new-6';
+    $pane->pid = 'new-3e21a5f3-3b98-4965-a719-6ee72204e13e';
     $pane->panel = 'left_title';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
@@ -801,10 +827,11 @@ function slac_wiki_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-6'] = $pane;
-    $display->panels['left_title'][0] = 'new-6';
+    $pane->uuid = '3e21a5f3-3b98-4965-a719-6ee72204e13e';
+    $display->content['new-3e21a5f3-3b98-4965-a719-6ee72204e13e'] = $pane;
+    $display->panels['left_title'][0] = 'new-3e21a5f3-3b98-4965-a719-6ee72204e13e';
     $pane = new stdClass();
-    $pane->pid = 'new-7';
+    $pane->pid = 'new-ac5b8155-5dc2-430b-9b04-8f3fab921037';
     $pane->panel = 'right';
     $pane->type = 'block';
     $pane->subtype = 'menu-menu-slac-wiki';
@@ -822,10 +849,11 @@ function slac_wiki_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-7'] = $pane;
-    $display->panels['right'][0] = 'new-7';
+    $pane->uuid = 'ac5b8155-5dc2-430b-9b04-8f3fab921037';
+    $display->content['new-ac5b8155-5dc2-430b-9b04-8f3fab921037'] = $pane;
+    $display->panels['right'][0] = 'new-ac5b8155-5dc2-430b-9b04-8f3fab921037';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-5';
+  $display->title_pane = 'new-6ce7f61b-e663-476b-aaac-5892da439cf4';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['wiki_a_z'] = $page;

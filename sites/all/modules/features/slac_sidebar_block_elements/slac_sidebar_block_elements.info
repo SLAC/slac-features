@@ -15,3 +15,4 @@ features[field_instance][] = fieldable_panels_pane-slac_sidebar_block-field_body
 features[field_instance][] = fieldable_panels_pane-slac_sidebar_block-field_image
 features[field_instance][] = fieldable_panels_pane-slac_sidebar_block-field_subtitle
 features[image][] = crop_slac_sidebar_block
+mtime = 1442945446
