@@ -203,6 +203,7 @@ function slac_profiles_shared_filtered_format() {
     ->execute();
 
   // Enable the admin theme.
+  //changes made by xalg. The default theme for admin is horrible. Adminimal fixes that.
   db_update('system')
     ->fields(array('status' => 1))
     ->condition('type', 'theme')
@@ -210,6 +211,7 @@ function slac_profiles_shared_filtered_format() {
     ->execute();
   variable_set('admin_theme', 'seven');
   variable_set('node_admin_theme', '1');
+  theme_disable(array('bartik'));
 
   // Enable default permissions for system roles.
   $filtered_html_permission = filter_permission_name($filtered_html_format);
