@@ -50,6 +50,14 @@
         }
         var myElement = document.querySelector(".sf-menu .first");
         myElement.style.paddingLeft = "0";
+
+      if ($('body').hasClass('internal-organization')) {
+        var searchFix = document.querySelector(".pane-search-block");
+        searchFix.style.display="block"
+        var widthFix = document.querySelector(".page-basic-io .user-search");
+        widthFix.style.width = "28.87053%";
+      }
+
     }
   };
 

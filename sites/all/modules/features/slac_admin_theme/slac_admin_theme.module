@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Slac Admin Theme feature.
+ */
+
+include_once 'slac_admin_theme.features.inc';
