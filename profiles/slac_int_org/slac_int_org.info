@@ -61,7 +61,6 @@ dependencies[] = views_feed_pane
 dependencies[] = metatag
 
 ;Lets dress up Admin a bit
-dependencies[] = adminimal_theme
 dependencies[] = adminimal_admin_menu
 dependencies[] = slac_admin_theme
 
