@@ -206,9 +206,9 @@ function slac_profiles_shared_filtered_format() {
   db_update('system')
     ->fields(array('status' => 1))
     ->condition('type', 'theme')
-    ->condition('name', 'seven')
+    ->condition('name', 'adminimal')
     ->execute();
-  variable_set('admin_theme', 'seven');
+  variable_set('admin_theme', 'adminimal');
   variable_set('node_admin_theme', '1');
 
   // Enable default permissions for system roles.
