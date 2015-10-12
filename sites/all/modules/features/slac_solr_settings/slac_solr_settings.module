@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the SLAC SOLR Settings feature.
+ */
+
+include_once 'slac_solr_settings.features.inc';

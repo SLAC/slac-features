@@ -41,8 +41,8 @@ function search_block_search_form($form, &$form_state) {
   drupal_add_library('system', 'jquery.cookie');
 
   $default_selection = isset($_COOKIE['Drupal_visitor_search_option']) ? $_COOKIE['Drupal_visitor_search_option'] : 'web';
-  $default_value = ($default_selection === 'people') ? 1 : 0;
-  $options = array(t('Web'), t('People'));
+  $default_value = ($default_selection === 'people') ? 0 : 2; //
+  $options = array(t('Web'), t('People'), t('This Site'));
   $form = array();
 
   $form['keyword'] = array(
@@ -50,7 +50,7 @@ function search_block_search_form($form, &$form_state) {
     '#title' => '',
     '#prefix' => '<div id="slac-search-wrapper"><div id="slac-search">',
     '#suffix' => '</div>',
-    '#attributes' => array('placeholder' => t('search web or people')),
+    '#attributes' => array('placeholder' => t('search web, people or this site')),
   );
   $form['submit'] = array(
     '#type' => 'submit',
@@ -72,7 +72,7 @@ function search_block_search_form($form, &$form_state) {
 }
 
 function search_block_search_form_submit($form, &$form_state) {
-  $form_selection = ($form_state['values']['search_options'] == 1) ? 'people' : 'web';
+  $form_selection = ($form_state['values']['search_options'] == 1) ? 'web' : 'local'; //1 == people
   $redirect_url = '';
 
   if ($form_selection === 'web') {
@@ -83,6 +83,9 @@ function search_block_search_form_submit($form, &$form_state) {
     // URL for People.
     $redirect_url = 'http://www-public.slac.stanford.edu/phonebook/dirsearch.aspx?lf=1&url=&gone=active&NAME=' . $form_state['values']['keyword'];
   }
-
+  elseif ($form_selection === 'local'){
+    // URL for This Site.
+    $redirect_url = base_path() . 'search/site/' . $form_state['values']['keyword'];
+  }
   $form_state['redirect'] = $redirect_url;
 }
