@@ -1,9 +1,16 @@
 <?php
 
-// Afghanistan
+/**
+ * @file
+ * Afghanistan.
+ */
 
+/**
+ * Returns an associative array of states/territories.
+ */
 function location_province_list_af() {
-  return array('BDS' => "Badakhshan province",
+  return array(
+    'BDS' => "Badakhshan province",
     'BDG' => "Badghis province",
     'BGL' => "Baghlan province",
     'BAL' => "Balkh province",
@@ -34,7 +41,8 @@ function location_province_list_af() {
     'SAR' => "Sar-e Pol province",
     'TAK' => "Takhar province",
     'WAR' => "Wardak province",
-    'ZAB' => "Zabol province");
+    'ZAB' => "Zabol province"
+  );
 }
 
 /**

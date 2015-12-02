@@ -180,7 +180,7 @@ function bean_form_ajax_callback($form, &$form_state) {
 
   $commands = array();
   $bean = $form_state['bean'];
-  $build = bean_view($bean);
+  $build = bean_view($bean, $bean->view_mode);
   _bean_wysiwyg_strip_contextual_links($build);
   $commands[] = ajax_command_invoke('body', 'blockSelectDialogFinalizeSelection', array(
     array('bid' => $bean->bid, 'html' => drupal_render($build)),
@@ -221,7 +221,7 @@ function bean_wysiwyg_token_to_markup($match) {
     return;
   }
   if ($bean = bean_load($bean_bid)) {
-    $build = bean_view($bean);
+    $build = bean_view($bean, $bean->view_mode);
     _bean_wysiwyg_strip_contextual_links($build);
     return drupal_render($build);
   }

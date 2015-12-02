@@ -1,13 +1,21 @@
 <?php
 
-// American Samoa
+/**
+ * @file
+ * American Samoa.
+ */
 
+/**
+ * Returns an associative array of states/territories.
+ */
 function location_province_list_as() {
-  return array('E' => "Eastern",
+  return array(
+    'E' => "Eastern",
     'M' => "Manu'a",
     'R' => "Rose Island",
     'S' => "Swains Island",
-    'W' => "Western");
+    'W' => "Western"
+  );
 }
 
 /**

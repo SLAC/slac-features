@@ -1,0 +1,36 @@
+name = Landing page features
+description = Content type for the landing page
+core = 7.x
+package = Features
+version = 7.x-1.1
+project = landing_page_features
+dependencies[] = features
+dependencies[] = list
+dependencies[] = options
+dependencies[] = text
+features[features_api][] = api:2
+features[field_base][] = body
+features[field_base][] = field_css
+features[field_base][] = field_footer_js
+features[field_base][] = field_header_js
+features[field_base][] = field_machine_name
+features[field_base][] = field_template_list
+features[field_base][] = field_turn_off_default_css
+features[field_base][] = field_turn_off_default_js
+features[field_instance][] = node-landing_page-body
+features[field_instance][] = node-landing_page-field_css
+features[field_instance][] = node-landing_page-field_footer_js
+features[field_instance][] = node-landing_page-field_header_js
+features[field_instance][] = node-landing_page-field_machine_name
+features[field_instance][] = node-landing_page-field_template_list
+features[field_instance][] = node-landing_page-field_turn_off_default_css
+features[field_instance][] = node-landing_page-field_turn_off_default_js
+features[node][] = landing_page
+mtime = 1438679979
+
+; Information added by Drupal.org packaging script on 2015-09-16
+version = "7.x-1.0"
+core = "7.x"
+project = "landing_page"
+datestamp = "1442408940"
+

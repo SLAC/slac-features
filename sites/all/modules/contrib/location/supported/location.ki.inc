@@ -1,9 +1,16 @@
 <?php
 
-// Kiribati
+/**
+ * @file
+ * Kiribati.
+ */
 
+/**
+ * Returns an associative array of states/territories.
+ */
 function location_province_list_ki() {
-  return array('AG' => "Abaiang",
+  return array(
+    'AG' => "Abaiang",
     'AM' => "Abemama",
     'AK' => "Aranuka",
     'AO' => "Arorae",
@@ -23,7 +30,8 @@ function location_province_list_ki() {
     'TR' => "Tabuaeran",
     'TM' => "Tamana",
     'TW' => "Tarawa",
-    'TE' => "Teraina");
+    'TE' => "Teraina"
+  );
 }
 
 /**

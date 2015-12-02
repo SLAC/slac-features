@@ -1,13 +1,29 @@
 <?php
 
-// Argentina
+/**
+ * @file
+ * Argentina.
+ */
 
+/**
+ * Returns an associative array of states/territories where.
+ *
+ *   -> the keys are integers starting from 1
+ *   -> the values are the English names for those states/territories
+ *
+ * The states are grouped together at the beginning of the array and sorted
+ * alphabetically.
+ *
+ * The territories are grouped together at the end of the array and sorted
+ * alphabetically.
+ */
 function location_province_list_ar() {
-  return array('A' => "Salta",
-    'B' => "Buenos Aires Province",
-    'C' => "Distrito Federal",
+  return array(
+    'A' => "Salta",
+    'B' => "Buenos Aires",
+    'C' => "Ciudad Autónoma de Buenos Aires (CABA)",
     'D' => "San Luis",
-    'E' => "Entre Rios",
+    'E' => "Entre Ríos",
     'F' => "La Rioja",
     'G' => "Santiago del Estero",
     'H' => "Chaco",
@@ -17,16 +33,17 @@ function location_province_list_ar() {
     'M' => "Mendoza",
     'N' => "Misiones",
     'P' => "Formosa",
-    'Q' => "Neuquen",
-    'R' => "Rio Negro",
+    'Q' => "Neuquén",
+    'R' => "Río Negro",
     'S' => "Santa Fe",
-    'T' => "Tucuman",
+    'T' => "Tucumán",
     'U' => "Chubut",
     'V' => "Tierra del Fuego",
     'W' => "Corrientes",
-    'X' => "Cordoba",
+    'X' => "Córdoba",
     'Y' => "Jujuy",
-    'Z' => "Santa Cruz");
+    'Z' => "Santa Cruz",
+  );
 }
 
 /**

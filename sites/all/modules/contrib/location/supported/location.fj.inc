@@ -1,13 +1,21 @@
 <?php
 
-// Fiji
+/**
+ * @file
+ * Fiji.
+ */
 
+/**
+ * Returns an associative array of states/territories.
+ */
 function location_province_list_fj() {
-  return array('C' => "Central Division",
+  return array(
+    'C' => "Central Division",
     'N' => "Northern Division",
     'E' => "Eastern Division",
     'W' => "Western Division",
-    'R' => "Rotuma");
+    'R' => "Rotuma"
+  );
 }
 
 /**

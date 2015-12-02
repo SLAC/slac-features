@@ -371,6 +371,10 @@ class Bean extends Entity {
     $return = parent::save();
     bean_reset(TRUE, TRUE);
 
+    if (module_exists('block')) {
+      bean_cache_clear_block($this);
+    }
+
     return $return;
   }
 
@@ -493,6 +497,18 @@ class BeanEntityAPIController extends EntityAPIControllerExportable {
       }
     }
     parent::delete($ids, $transaction);
+  }
+
+  /**
+   * Overridden to add Rules integration back in.
+   */
+  public function invoke($hook, $entity) {
+    parent::invoke($hook, $entity);
+
+    // Invoke rules.
+    if (module_exists('rules')) {
+      rules_invoke_event($this->entityType . '_' . $hook, $entity);
+    }
   }
 
   protected function saveRevision($entity) {

@@ -51,7 +51,7 @@ function epsacrop_requirements($phase) {
   }
   $requirements['epsacrop_jcrop']['title'] = $t('EPSA Crop : Jcrop');
   $requirements['epsacrop_json2']['title'] = $t('EPSA Crop : json2.js');
-  if ($version = _epsacrop_jcrop_get_version() || _epsacrop_is_json2_exists()) {
+  if ($version = _epsacrop_jcrop_get_version() || _epsacrop_is_json2_exists(FALSE)) {
     $version = _epsacrop_jcrop_get_version();
     // Everything looks good; display the current Jcrop version.
     if ($version) {
@@ -59,7 +59,7 @@ function epsacrop_requirements($phase) {
       $requirements['epsacrop_jcrop']['severity'] = REQUIREMENT_OK;
     }
     
-    if (_epsacrop_is_json2_exists()) {
+    if (_epsacrop_is_json2_exists(FALSE)) {
       $requirements['epsacrop_json2']['value'] = 'JSON file (json2.js) OK';
       $requirements['epsacrop_json2']['severity'] = REQUIREMENT_OK;
     }
@@ -71,7 +71,7 @@ function epsacrop_requirements($phase) {
       $requirements['epsacrop_jcrop']['description'] = $t('The <a href="@jcrop">Jcrop</a> plugin is missing. <a href="@download">Download</a> and extract it in your <em>sites/all/libraries</em> directory.', array('@jcrop' => 'http://deepliquid.com/content/Jcrop.html', '@download' => 'http://code.google.com/p/jcrop/downloads/detail?name=jquery.Jcrop-0.9.8.zip&can=2'));
       $requirements['epsacrop_jcrop']['severity'] = REQUIREMENT_ERROR;
     }
-    if (!_epsacrop_is_json2_exists()) {
+    if (!_epsacrop_is_json2_exists(FALSE)) {
       $requirements['epsacrop_json2']['value'] = $t('Not found');
       $requirements['epsacrop_json2']['description'] = $t("The <a href='@json2'>json2.js</a> file is missing, you can download it <a href='@downjson2'>here</a> and put it in your <em>sites/all/libraries</em> directory. Don't forget rename the downloaded folder into json2. At the end, you should have something like this sites/all/libraries/json2", array('@json2' => 'http://www.json.org/js.html', '@downjson2' => 'https://github.com/douglascrockford/JSON-js'));
       $requirements['epsacrop_json2']['severity'] = REQUIREMENT_ERROR;

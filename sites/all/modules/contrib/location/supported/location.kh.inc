@@ -1,9 +1,16 @@
 <?php
 
-// Cambodia
+/**
+ * @file
+ * Cambodia.
+ */
 
+/**
+ * Returns an associative array of states/territories.
+ */
 function location_province_list_kh() {
-  return array('PP' => "Phnom Penh",
+  return array(
+    'PP' => "Phnom Penh",
     'PS' => "Preah Seihanu (Kompong Som or Sihanoukville)",
     'PA' => "Pailin",
     'KB' => "Keb",
@@ -27,7 +34,8 @@ function location_province_list_kh() {
     'SI' => "Siemreap",
     'ST' => "Stung Treng",
     'SR' => "Svay Rieng",
-    'TK' => "Takeo");
+    'TK' => "Takeo"
+  );
 }
 
 /**

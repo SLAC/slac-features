@@ -1,16 +1,22 @@
 <?php
 
-// This file contributed by Avi Alkalay <avi unix sh> to the
-// Location Drupal module, based on other files on same folder.
-//
-// - Fixed Unicode chars and accents
-// - Added support for Google Maps on location_map_link_*_providers()
-//
-// March, 2010
-// São Paulo, Brazil
+/**
+ * @file
+ * Brazil.
+ *
+ * This file contributed by Avi Alkalay <avi unix sh> to the
+ * Location Drupal module, based on other files on same folder.
+ *
+ * - Fixed Unicode chars and accents
+ * - Added support for Google Maps on location_map_link_*_providers()
+ *
+ * March, 2010
+ * São Paulo, Brazil
+ */
 
-// Brazil
-
+/**
+ * Returns an associative array of states/territories.
+ */
 function location_province_list_br() {
   return array(
     'AC' => "Acre",
@@ -39,24 +45,33 @@ function location_province_list_br() {
     'SC' => "Santa Catarina",
     'SE' => "Sergipe",
     'SP' => "São Paulo",
-    'TO' => "Tocantins");
+    'TO' => "Tocantins"
+  );
 }
 
+/**
+ * Providers.
+ */
 function location_map_link_br_providers() {
   return array(
     'google' => array(
-      'name' => 'Google Maps',
+      'name' => t('Google Maps'),
       'url' => 'http://maps.google.com.br',
       'tos' => 'http://maps.google.com/intl/pt-BR/help/terms_maps.html',
     ),
   );
 }
 
+/**
+ * Default providers.
+ */
 function location_map_link_br_default_providers() {
   return array('google');
 }
 
-
+/**
+ * Google link.
+ */
 function location_map_link_br_google($location = array()) {
   $query_params = array();
   $q = NULL;
@@ -70,28 +85,30 @@ function location_map_link_br_google($location = array()) {
   if (location_has_coordinates($location)) {
     $q = $location['latitude'] . ' ' . $location['longitude'];
     if ($location['name'] != "") {
-       $q .= " (" . $location['name'] . "," . implode(', ', $query_params) . ")";
-    } else {
-       $q .= ' (' . implode(', ', $query_params) . ')';
+      $q .= " (" . $location['name'] . "," . implode(', ', $query_params) . ")";
     }
-  } else if (count($query_params) > 0) {
-    $q = implode(", ", $query_params);
-    if ($location['name'] != "") {
-       $q .= " ( " . $location['name'] . ")";
+    else {
+      $q .= ' (' . implode(', ', $query_params) . ')';
+    }
+  }
+  else {
+    if (count($query_params) > 0) {
+      $q = implode(", ", $query_params);
+      if ($location['name'] != "") {
+        $q .= " ( " . $location['name'] . ")";
+      }
     }
   }
 
   $q = urlencode($q);
 
   if ($q != NULL) {
-    return ('http://maps.google.com.br?q='.$q );
+    return ('http://maps.google.com.br?q=' . $q);
   }
   else {
     return NULL;
   }
 }
-
-
 
 
 /**

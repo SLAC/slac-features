@@ -1,9 +1,16 @@
 <?php
 
-// Dominican Republic
+/**
+ * @file
+ * Dominican Republic.
+ */
 
+/**
+ * Returns an associative array of states/territories.
+ */
 function location_province_list_do() {
-  return array('DN' => "Distrito Nacional",
+  return array(
+    'DN' => "Distrito Nacional",
     'AZ' => "Azua",
     'BC' => "Baoruco",
     'BH' => "Barahona",
@@ -34,7 +41,8 @@ function location_province_list_do() {
     'SA' => "Santiago",
     'ST' => "Santiago Rodriguez",
     'SD' => "Santo Domingo",
-    'VA' => "Valverde");
+    'VA' => "Valverde"
+  );
 }
 
 /**

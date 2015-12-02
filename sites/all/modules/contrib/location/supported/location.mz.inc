@@ -1,9 +1,16 @@
 <?php
 
-// Mozambique
+/**
+ * @file
+ * Mozambique.
+ */
 
+/**
+ * Returns an associative array of states/territories.
+ */
 function location_province_list_mz() {
-  return array('CD' => "Cabo Delgado",
+  return array(
+    'CD' => "Cabo Delgado",
     'GZ' => "Gaza",
     'IN' => "Inhambane",
     'MN' => "Manica",
@@ -13,7 +20,8 @@ function location_province_list_mz() {
     'NI' => "Niassa",
     'SO' => "Sofala",
     'TE' => "Tete",
-    'ZA' => "Zambezia");
+    'ZA' => "Zambezia"
+  );
 }
 
 /**
