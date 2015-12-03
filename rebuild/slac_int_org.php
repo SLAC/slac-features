@@ -1,9 +1,5 @@
 <?php
-
-if (isset($_SERVER['SERVER_NAME']) && isset($_SERVER['SERVER_ADDR']) && $_SERVER['SERVER_NAME'] == 'slac-features.wearepropeople.md' || $_SERVER['SERVER_ADDR'] == '127.0.0.1') {
-  $time_start = microtime(true);
-
-  // Rebuild slac_ext_org profile.
+  // Rebuild slac_int_org profile.
 
   $commands = array(
     array(
@@ -16,7 +12,7 @@ if (isset($_SERVER['SERVER_NAME']) && isset($_SERVER['SERVER_ADDR']) && $_SERVER
     ),
     array(
       'description' => 'Admin login ',
-      'command' => 'drush --uri=http://slac-features.wearepropeople.md uli'
+      'command' => 'drush --uri={URI} uli'
     ),
     array(
       'description' => 'Create manager user account: ',
@@ -67,6 +63,7 @@ if (isset($_SERVER['SERVER_NAME']) && isset($_SERVER['SERVER_ADDR']) && $_SERVER
   $command_output = array();
   foreach ($commands as $command) {
     exec($command['command'], $command_output);
+    print 'Processing '. $command['description'];
   }
 
   print 'Site has been rebuilt';
@@ -76,7 +73,5 @@ if (isset($_SERVER['SERVER_NAME']) && isset($_SERVER['SERVER_ADDR']) && $_SERVER
   $execution_time = round($time_end - $time_start);
   print '<br/>Execution time: ' . $execution_time;
 }
-else {
-  header('Location: /');
-}
+
 
