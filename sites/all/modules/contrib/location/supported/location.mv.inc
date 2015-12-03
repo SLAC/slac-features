@@ -1,9 +1,16 @@
 <?php
 
-// Maldives
+/**
+ * @file
+ * Maldives.
+ */
 
+/**
+ * Returns an associative array of states/territories.
+ */
 function location_province_list_mv() {
-  return array('THU' => "Thiladhunmathi Uthuru",
+  return array(
+    'THU' => "Thiladhunmathi Uthuru",
     'THD' => "Thiladhunmathi Dhekunu",
     'MLU' => "Miladhunmadulu Uthuru",
     'MLD' => "Miladhunmadulu Dhekunu",
@@ -22,7 +29,8 @@ function location_province_list_mv() {
     'HAU' => "Huvadhu Atoll Uthuru",
     'HAD' => "Huvadhu Atoll Dhekunu",
     'FMU' => "Fua Mulaku",
-    'ADD' => "Addu");
+    'ADD' => "Addu"
+  );
 }
 
 /**

@@ -1,23 +1,303 @@
 <?php
+
 /**
  * @file
- * Code for the Landing page feature.
+ * A module to implement custom landing pages.
  */
-
-include_once 'landing_page.features.inc';
 
 /**
- * Implements hook_menu_alter().
+ * Implements hook_menu().
  */
-function landing_page_menu_alter(&$items) {
-  $items['node/%node/edit']['title callback'] = 'landing_page_title_callback';
-  $items['node/%node/edit']['title arguments'] = array(1);
+function landing_page_menu() {
+  $items['admin/config/content/landing-pages'] = array(
+    'title' => 'Landing Pages',
+    'description' => 'Manage custom landing pages.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('landing_page_templates_form'),
+    'access arguments' => array('access administration pages'),
+    'file' => 'landing_page.admin.inc',
+  );
+  return $items;
 }
 
-function landing_page_title_callback($node) {
-  if ($node->type == 'landing_page') {
-    return t('Edit page metadata');
+/**
+ * Implements hook_filter_info().
+ */
+function landing_page_filter_info() {
+  $filters['landing_page'] = array(
+    'title' => t('Landing page filter'),
+    'process callback' => 'landing_page_filter_process',
+    'tips callback' => 'landing_page_filter_tips',
+  );
+  return $filters;
+}
+
+/**
+ * Callback for landing_page filter.
+ *
+ * Get all the webform, views, blocks, forms from the node body,
+ * render the same to the node content.
+ */
+function landing_page_filter_process($text, $filter, $format, $langcode, $cache, $cache_id) {
+  preg_match_all('/\\[([a-zA-z0-9_\-]+:[a-zA-z0-9_\-]+)+\\]/m', $text, $match);
+  $matches = $match[0];
+  foreach ($matches as $content_token) {
+    $content_token_name = str_replace(array( '[', ']' ), '', $content_token);
+    $type = explode(':', $content_token_name);
+
+    // For view blocks, custom blocks, system blocks.
+    // format [block:module_name:block_id].
+    if ($type[0] == 'block') {
+      $module = trim($type[1]);
+      $bid = trim($type[2]);
+      $block = module_invoke($module, 'block_view', $bid);
+      $replacement = render($block['content']);
+    }
+
+    // For drupal webforms
+    // Format [webform:node_id]
+    if ($type[0] == 'webform') {
+      $node_id = trim($type[1]);
+      $node = node_load($node_id);
+      $contact_form = drupal_get_form('webform_client_form_' . $node_id, $node);
+      $replacement = drupal_render($contact_form);
+    }
+
+    // For drupal forms
+    // Format [form:form_id]
+    if ($type[0] == 'form') {
+      $form_id = trim($type[1]);
+      $form_state = array();
+      $form_state['build_info']['args'] = array();
+      $form_state['build_info']['files']['menu'] = array();
+      $form = drupal_build_form($form_id, $form_state);
+      $replacement = render($form);
+    }
+    $text = str_replace($content_token, $replacement, $text);
   }
-
-  return t('Edit');
+  return $text;
 }
+
+/**
+ * Tips for the landing page filter.
+ */
+function landing_page_filter_tips() {
+  return t('Tokens are expected to be the format defined. <br />
+    For rendering view blocks, custom blocks, system blocks, the format should be [block:module_name:block_id]. <br />
+    For drupal forms the format should be [form:form_id]. <br />
+    For webforms the format should be [webform:node_id].');
+}
+
+/**
+ * Implements hook_theme().
+ */
+function landing_page_theme($existing, $type, $theme, $path) {
+  $template_path = variable_get('landing_page_templates_custom_path');
+  $template_lists = variable_get('landing_page_templates_list');
+  $theme = array();
+  if ($template_path) {
+    unset($template_lists['default']);
+    foreach ($template_lists as $key => $template_lists) {
+      $theme['landing_page_' . $key] = array(
+        'template' =>  'landing-page--'.  $key,
+        'path' => $template_path,
+      );
+    }
+  }
+  return $theme;
+}
+
+/**
+ * Implements hook_form_alter().
+ *
+ * Check if the form is of landing page. Populate the select box
+ * with the variable `landing_page_templates_list` set.
+ * Include checkbox and css textarea's in corresponding fieldset's.
+ */
+function landing_page_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'landing_page_node_form') {
+    $language = $form['field_template_list']['#language'];
+    $templates =  variable_get('landing_page_templates_list');
+    if ($form['#node']->field_template_list[$language][0]['value']) {
+      $selected_template = $form['#node']->field_template_list[$language][0]['value'];
+      $form['field_template_list'][$language]['#options'] = $templates;
+      $form['field_template_list'][$language]['#default_value'] = $selected_template;
+    }
+    else {
+      $form['field_template_list'][$language]['#options'] = $templates;
+    }
+    $form['js'] = array(
+      '#type' => 'fieldset',
+      '#title' => t('JS Inputs'),
+      '#weight' => 5,
+      '#collapsible' => TRUE,
+    );
+    $form['js']['field_turn_off_default_js'] = $form['field_turn_off_default_js'];
+    unset($form['field_turn_off_default_js']);
+    $form['js']['field_header_js'] = $form['field_header_js'];
+    unset($form['field_header_js']);
+    $form['js']['field_footer_js'] = $form['field_footer_js'];
+    unset($form['field_footer_js']);
+    $form['css'] = array(
+      '#type' => 'fieldset',
+      '#title' => t('CSS Inputs'),
+      '#weight' => 5,
+      '#collapsible' => TRUE,
+    );
+    $form['css']['field_turn_off_default_css'] = $form['field_turn_off_default_css'];
+    unset($form['field_turn_off_default_css']);
+    $form['css']['field_css'] = $form['field_css'];
+    unset($form['field_css']);
+  }
+}
+
+/**
+ * Implements hook_css_alter().
+ *
+ * Unsetting the default css.
+ *
+ * Load the node details if the current url is a node.
+ * If it is of type landing_page and checkbox to override the deafult css is on.
+ * Unset the default CSS.
+ */
+function landing_page_css_alter(&$css) {
+  if ((arg(0) == 'node') && (is_numeric(arg(1))) && (arg(2) == '')) {
+    $node = node_load(arg(1));
+    if ($node->type == 'landing_page') {
+      $field_css_language = field_language('node', $node, 'field_turn_off_default_css');
+      $default_css = $node->field_turn_off_default_css[$field_css_language][0]['value'];
+      if ($default_css) {
+        foreach ($css as $key => $value) {
+          if (!is_numeric($key)) {
+            unset($css[$key]);
+          }
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_js_alter().
+ *
+ * Unsetting the default js.
+ *
+ * Load the node details if the current url is a node.
+ * If it is of type landing_page and checkbox to override the deafult js is on.
+ * Unset the default JS.
+ */
+function landing_page_js_alter(&$js) {
+  if ((arg(0) == 'node') && (is_numeric(arg(1))) && (arg(2) == '')) {
+    $node = node_load(arg(1));
+    if ($node->type == 'landing_page') {
+      $field_js_language = field_language('node', $node, 'field_turn_off_default_js');
+      $default_js = $node->field_turn_off_default_js[$field_js_language][0]['value'];
+      if ($default_js) {
+        foreach ($js as $key => $value) {
+          if (!is_numeric($key)) {
+            unset($js[$key]);
+          }
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_page().
+ *
+ * Store the selected template type to a variable.
+ * If the node type is landing_page,
+ * Use theme_hook_suggestions to apply the template selected.
+ */
+function landing_page_preprocess_page(&$variables) {
+  if (isset($variables['node'])) {
+    $node = $variables['node'];
+    $field_template_language = field_language('node', $node, 'field_template_list');
+    $field_template_list = $node->field_template_list[$field_template_language][0]['value'];
+    $template_path = variable_get('landing_page_templates_custom_path');
+    if (($node->type == 'landing_page') && $field_template_list != 'default' && arg(2) != 'edit') {
+      $variables['theme_hook_suggestions'][] = 'landing_page_' . $field_template_list;
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_html().
+ */
+function landing_page_preprocess_html(&$variables) {
+  if ((arg(0) == 'node') && (is_numeric(arg(1))) && (arg(2) == '')) {
+    // Load the node values into $fields_array
+    $fields_array = $variables['page']['content']['system_main']['nodes'][arg(1)];
+
+    // If field_css key exists, check does it has any values.
+    // If it has then add it to header.
+    if (array_key_exists('field_css', $fields_array['body']['#object'])) {
+      $custom_css_language = field_language('node', $fields_array['body']['#object'], 'field_css');
+      if (isset($fields_array['body']['#object']->field_css[$custom_css_language][0]['value'])) {
+        $inline_css = $fields_array['body']['#object']->field_css[$custom_css_language][0]['value'];
+        $inline_css = decode_entities($inline_css);
+        $element = array(
+          '#type' => 'markup',
+          '#markup' => $inline_css,
+        );
+        drupal_add_html_head($element, 'inline_css');
+      }
+    }
+
+    // If field_header_js key exists, check does it has any values.
+    // If it has then add it to header.
+    if (array_key_exists('field_header_js', $fields_array['body']['#object'])) {
+      $custom_header_js_language = field_language('node', $fields_array['body']['#object'], 'field_header_js');
+      if (isset($fields_array['body']['#object']->field_header_js[$custom_header_js_language][0]['value'])) {
+        $inline_header_js = $fields_array['body']['#object']->field_header_js[$custom_header_js_language][0]['value'];
+        $inline_header_js = decode_entities($inline_header_js);
+        $element = array(
+          '#type' => 'markup',
+          '#markup' => $inline_header_js,
+        );
+        drupal_add_html_head($element, 'inline_header_js');
+      }
+    }
+
+    // If field_header_js key exists, check does it has any values.
+    // If it has then add it to footer.
+    if (array_key_exists('field_footer_js', $fields_array['body']['#object'])) {
+      $custom_footer_js_language = field_language('node', $fields_array['body']['#object'], 'field_footer_js');
+      if (isset($fields_array['body']['#object']->field_footer_js[$custom_footer_js_language][0]['value'])) {
+        $inline_footer_js = $fields_array['body']['#object']->field_footer_js[$custom_footer_js_language][0]['value'];
+        $inline_footer_js = decode_entities($inline_footer_js);
+        $variables['page']['page_bottom']['custom_js'] = array('#markup' => $inline_footer_js);
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_element_info_alter().
+ *
+ * Sets the text format processor to a custom callback function.
+ */
+function landing_page_element_info_alter(&$type) {
+  if (isset($type['text_format']['#process'])) {
+    foreach ($type['text_format']['#process'] as &$callback) {
+      if ($callback === 'filter_process_format') {
+        $callback = 'landing_page_filter_process_format';
+      }
+    }
+  }
+}
+
+/**
+ * Callback for landing_page_element_info_alter().
+ */
+function landing_page_filter_process_format($element) {
+  $element = filter_process_format($element);
+
+  // Change the default text format of the 'body' field.
+  if ($element['#bundle'] == 'landing_page' && $element['#field_name'] == 'body') {
+    $element['format']['format']['#default_value'] = 'landing_page';
+  }
+  return $element;
+}
+

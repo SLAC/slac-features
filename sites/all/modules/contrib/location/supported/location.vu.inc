@@ -1,14 +1,22 @@
 <?php
 
-// Vanuatu
+/**
+ * @file
+ * Vanuatu.
+ */
 
+/**
+ * Returns an associative array of states/territories.
+ */
 function location_province_list_vu() {
-  return array('MA' => "Malampa",
+  return array(
+    'MA' => "Malampa",
     'PE' => "Penama",
     'SA' => "Sanma",
     'SH' => "Shefa",
     'TA' => "Tafea",
-    'TO' => "Torba");
+    'TO' => "Torba"
+  );
 }
 
 /**

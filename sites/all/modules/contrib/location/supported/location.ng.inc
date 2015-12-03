@@ -1,9 +1,16 @@
 <?php
 
-// Nigeria
+/**
+ * @file
+ * Nigeria.
+ */
 
+/**
+ * Returns an associative array of states/territories.
+ */
 function location_province_list_ng() {
-  return array('AB' => "Abia",
+  return array(
+    'AB' => "Abia",
     'AD' => "Adamawa",
     'AK' => "Akwa Ibom",
     'AN' => "Anambra",
@@ -39,7 +46,8 @@ function location_province_list_ng() {
     'SO' => "Sokoto",
     'TA' => "Taraba",
     'YO' => "Yobe",
-    'ZA' => "Zamfara");
+    'ZA' => "Zamfara"
+  );
 }
 
 /**

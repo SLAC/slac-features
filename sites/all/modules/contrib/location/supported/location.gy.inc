@@ -1,9 +1,16 @@
 <?php
 
-// Guyana
+/**
+ * @file
+ * Guyana.
+ */
 
+/**
+ * Returns an associative array of states/territories.
+ */
 function location_province_list_gy() {
-  return array('BW' => "Barima-Waini",
+  return array(
+    'BW' => "Barima-Waini",
     'CM' => "Cuyuni-Mazaruni",
     'DM' => "Demerara-Mahaica",
     'EC' => "East Berbice-Corentyne",
@@ -12,7 +19,8 @@ function location_province_list_gy() {
     'PM' => "Pomeroon-Supenaam",
     'PI' => "Potaro-Siparuni",
     'UD' => "Upper Demerara-Berbice",
-    'UT' => "Upper Takutu-Upper Essequibo");
+    'UT' => "Upper Takutu-Upper Essequibo"
+  );
 }
 
 /**

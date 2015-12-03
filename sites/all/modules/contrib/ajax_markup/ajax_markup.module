@@ -28,7 +28,7 @@ function ajax_markup_permission() {
  * Checks ajax markup access.
  */
 function ajax_markup_access() {
-  return user_access('access ajax markup') && isset($_POST['token']) && drupal_valid_token($_POST['token'], 'ajax-markup');
+  return user_access('access ajax markup') && isset($_POST['token']) && drupal_valid_token($_POST['token'], 'ajax-markup', TRUE);
 }
 
 /**

@@ -1,9 +1,16 @@
 <?php
 
-// Spain
+/**
+ * @file
+ * Spain.
+ */
 
+/**
+ * Returns an associative array of states/territories.
+ */
 function location_province_list_es() {
-  return array('AL' => "Alava",
+  return array(
+    'AL' => "Alava",
     'AB' => "Albacete",
     'AC' => "Alicante",
     'AM' => "Almeria",
@@ -52,7 +59,8 @@ function location_province_list_es() {
     'VD' => "Valladolid",
     'VZ' => "Vizcaya",
     'ZM' => "Zamora",
-    'ZR' => "Zaragoza");
+    'ZR' => "Zaragoza"
+  );
 }
 
 /**

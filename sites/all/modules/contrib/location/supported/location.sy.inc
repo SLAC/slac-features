@@ -1,9 +1,16 @@
 <?php
 
-// Syrian Arab Republic
+/**
+ * @file
+ * Syrian Arab Republic.
+ */
 
+/**
+ * Returns an associative array of states/territories.
+ */
 function location_province_list_sy() {
-  return array('HA' => "Al Hasakah",
+  return array(
+    'HA' => "Al Hasakah",
     'LA' => "Al Ladhiqiyah",
     'QU' => "Al Qunaytirah",
     'RQ' => "Ar Raqqah",
@@ -16,7 +23,8 @@ function location_province_list_sy() {
     'HI' => "Hims",
     'ID' => "Idlib",
     'RD' => "Rif Dimashq",
-    'TA' => "Tartus");
+    'TA' => "Tartus"
+  );
 }
 
 /**

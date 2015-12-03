@@ -140,17 +140,13 @@
     */
     detach: function (content, settings, instanceId) {
       bean_wysiwyg_ensure_tagmap();
-      var bean_wysiwyg_tagmap = Drupal.settings.bean_wysiwyg_tagmap,
-      i = 0,
-      markup,
-      macro;
+      var i = 0, markup, macro;
 
       var matches = content.match(/<div class="block-insert((?!<!-- block-insert)(.|[\r\n]))*<!-- block-insert --><\/div>/gi);
       if (matches) {
         for (i = 0; i < matches.length; i++) {
           markup = matches[i];
           macro = bean_wysiwyg_create_macro(markup);
-          bean_wysiwyg_tagmap[macro] = markup;
           content = content.replace(markup, macro);
         }
       }

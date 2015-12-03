@@ -1,13 +1,21 @@
 <?php
 
-// Bahrain
+/**
+ * @file
+ * Bahrain.
+ */
 
+/**
+ * Returns an associative array of states/territories.
+ */
 function location_province_list_bh() {
-  return array('CAP' => "Capital",
+  return array(
+    'CAP' => "Capital",
     'CEN' => "Central",
     'MUH' => "Muharraq",
     'NOR' => "Northern",
-    'SOU' => "Southern");
+    'SOU' => "Southern"
+  );
 }
 
 /**

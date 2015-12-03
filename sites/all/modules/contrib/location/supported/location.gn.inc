@@ -1,9 +1,16 @@
 <?php
 
-// Guinea
+/**
+ * @file
+ * Guinea.
+ */
 
+/**
+ * Returns an associative array of states/territories.
+ */
 function location_province_list_gn() {
-  return array('CNK' => "Conakry",
+  return array(
+    'CNK' => "Conakry",
     'BYL' => "Beyla",
     'BFA' => "Boffa",
     'BOK' => "Boke",
@@ -36,7 +43,8 @@ function location_province_list_gn() {
     'SIG' => "Siguiri",
     'TLM' => "Telimele",
     'TOG' => "Tougue",
-    'YOM' => "Yomou");
+    'YOM' => "Yomou"
+  );
 }
 
 /**

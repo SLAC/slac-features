@@ -1,0 +1,16 @@
+name = landing page text format
+description = New text format created for landing page module.
+core = 7.x
+package = Features
+version = 7.x-1.0
+project = landing_page_text_format
+dependencies[] = features
+features[features_api][] = api:2
+features[filter][] = landing_page
+
+; Information added by Drupal.org packaging script on 2015-09-16
+version = "7.x-1.0"
+core = "7.x"
+project = "landing_page"
+datestamp = "1442408940"
+

@@ -1,11 +1,19 @@
 <?php
 
-// Montserrat
+/**
+ * @file
+ * Montserrat.
+ */
 
+/**
+ * Returns an associative array of states/territories.
+ */
 function location_province_list_ms() {
-  return array('A' => "Saint Anthony",
+  return array(
+    'A' => "Saint Anthony",
     'G' => "Saint Georges",
-    'P' => "Saint Peter");
+    'P' => "Saint Peter"
+  );
 }
 
 /**

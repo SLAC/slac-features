@@ -36,6 +36,7 @@ dependencies[] = date_ical
 dependencies[] = date_views
 dependencies[] = link
 dependencies[] = entity
+dependencies[] = entityreference
 dependencies[] = libraries
 dependencies[] = menu_attributes
 dependencies[] = menu_trail_by_path
@@ -60,6 +61,14 @@ dependencies[] = superfish
 dependencies[] = views_feed_pane
 dependencies[] = metatag
 
+;Lets dress up Admin a bit
+dependencies[] = adminimal_admin_menu
+dependencies[] = slac_admin_theme
+
+; Forums
+dependencies[] = forum
+dependencies[] = advanced_forum
+
 ;Development modules
 dependencies[] = devel
 dependencies[] = devel_generate
@@ -78,10 +87,11 @@ dependencies[] = rules
 dependencies[] = views_content
 dependencies[] = field_permissions
 
-;Wiki 
+;Wiki
 dependencies[] = diff
-;dependencies[] = markdown
-;dependencies[] = bueditor
+dependencies[] = markdown
+dependencies[] = bueditor
+dependencies[] = bueditor_plus
 dependencies[] = ajax_markup
 dependencies[] = imce
 

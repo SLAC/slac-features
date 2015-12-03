@@ -1,9 +1,16 @@
 <?php
 
-// Cape Verde
+/**
+ * @file
+ * Cape Verde.
+ */
 
+/**
+ * Returns an associative array of states/territories.
+ */
 function location_province_list_cv() {
-  return array('BV' => "Boa Vista",
+  return array(
+    'BV' => "Boa Vista",
     'BR' => "Brava",
     'CS' => "Calheta de Sao Miguel",
     'MA' => "Maio",
@@ -19,7 +26,8 @@ function location_province_list_cv() {
     'SF' => "Sao Filipe",
     'SN' => "Sao Nicolau",
     'SV' => "Sao Vicente",
-    'TA' => "Tarrafal");
+    'TA' => "Tarrafal"
+  );
 }
 
 /**

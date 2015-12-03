@@ -1,9 +1,16 @@
 <?php
 
-// Croatia
+/**
+ * @file
+ * Croatia.
+ */
 
+/**
+ * Returns an associative array of states/territories.
+ */
 function location_province_list_hr() {
-  return array('01' => "Zagreb county",
+  return array(
+    '01' => "Zagreb county",
     '02' => "Krapina-Zagorje county",
     '03' => "Sisak-Moslavina county",
     '04' => "Karlovac county",
@@ -23,7 +30,8 @@ function location_province_list_hr() {
     '18' => "Istria county",
     '19' => "Dubrovnik-Neretva county",
     '20' => "Medjimurje county",
-    '21' => "Zagreb (city)");
+    '21' => "Zagreb (city)"
+  );
 }
 
 /**

@@ -1,6 +1,5 @@
 <?php
 
-if (isset($_SERVER['SERVER_NAME']) && isset($_SERVER['SERVER_ADDR']) && $_SERVER['SERVER_NAME'] == 'slac-features.wearepropeople.md' || $_SERVER['SERVER_ADDR'] == '127.0.0.1') {
   $time_start = microtime(true);
 
   // Rebuild slac_ext_org profile.
@@ -12,7 +11,7 @@ if (isset($_SERVER['SERVER_NAME']) && isset($_SERVER['SERVER_ADDR']) && $_SERVER
     ),
     array(
       'description' => 'Install selected profile: ',
-      'command' => 'drush si slac_ext_org --db-url=mysql://slac_features:SwHbNJEZ6QRxrlU@localhost/slac_features --account-name=admin --account-pass=618hWVCDmY1n3uf --account-mail=admin@example.com --site-name=SLAC-EXT-ORG-' . date(DATE_ATOM) . ' -y'
+      'command' => 'drush si slac_ext_org --db-url=mysql://xalg:13xLuth0r@localhost/slac_features --account-name=admin --account-pass=618hWVCDmY1n3uf --account-mail=admin@example.com --site-name=SLAC-EXT-ORG-' . date(DATE_ATOM) . ' -y'
     ),
     array(
       'description' => 'Admin login ',
@@ -67,6 +66,7 @@ if (isset($_SERVER['SERVER_NAME']) && isset($_SERVER['SERVER_ADDR']) && $_SERVER
   $command_output = array();
   foreach ($commands as $command) {
     exec($command['command'], $command_output);
+    print 'Processing '. $command['description'];
   }
 
   print 'Site has been rebuilt';
@@ -75,8 +75,3 @@ if (isset($_SERVER['SERVER_NAME']) && isset($_SERVER['SERVER_ADDR']) && $_SERVER
   $time_end = microtime(true);
   $execution_time = round($time_end - $time_start);
   print '<br/>Execution time: ' . $execution_time;
-}
-else {
-  header('Location: /');
-}
-

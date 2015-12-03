@@ -1,9 +1,16 @@
 <?php
 
-// Ecuador
+/**
+ * @file
+ * Ecuador.
+ */
 
+/**
+ * Returns an associative array of states/territories.
+ */
 function location_province_list_ec() {
-  return array('A' => "Azuay",
+  return array(
+    'A' => "Azuay",
     'B' => "Bolivar",
     'C' => "Carchi",
     'D' => "Orellana",
@@ -24,7 +31,8 @@ function location_province_list_ec() {
     'W' => "Galapagos",
     'X' => "Cotopaxi",
     'Y' => "Pastaza",
-    'Z' => "Zamora-Chinchipe");
+    'Z' => "Zamora-Chinchipe"
+  );
 }
 
 /**

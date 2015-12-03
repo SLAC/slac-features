@@ -1,9 +1,16 @@
 <?php
 
-// San Marino
+/**
+ * @file
+ * San Marino.
+ */
 
+/**
+ * Returns an associative array of states/territories.
+ */
 function location_province_list_sm() {
-  return array('AC' => "Acquaviva",
+  return array(
+    'AC' => "Acquaviva",
     'BM' => "Borgo Maggiore",
     'CH' => "Chiesanuova",
     'DO' => "Domagnano",
@@ -11,7 +18,8 @@ function location_province_list_sm() {
     'FI' => "Fiorentino",
     'MO' => "Montegiardino",
     'SM' => "Citta di San Marino",
-    'SE' => "Serravalle");
+    'SE' => "Serravalle"
+  );
 }
 
 /**

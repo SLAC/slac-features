@@ -1,9 +1,16 @@
 <?php
 
-// Gambia
+/**
+ * @file
+ * Gambia.
+ */
 
+/**
+ * Returns an associative array of states/territories.
+ */
 function location_province_list_gm() {
-  return array('BJ' => "Banjul",
+  return array(
+    'BJ' => "Banjul",
     'BS' => "Basse",
     'BR' => "Brikama",
     'JA' => "Janjangbure",
@@ -15,7 +22,8 @@ function location_province_list_gm() {
     'CR' => "Central River",
     'NB' => "North Bank",
     'UR' => "Upper River",
-    'WE' => "Western");
+    'WE' => "Western"
+  );
 }
 
 /**

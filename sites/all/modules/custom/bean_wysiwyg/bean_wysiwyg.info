@@ -6,9 +6,9 @@ core = 7.x
 dependencies[] = bean
 dependencies[] = wysiwyg
 
-; Information added by  packaging script on 2013-11-11
+; Information added by Drupal.org packaging script on 2015-07-23
 version = "7.x-1.x-dev"
 core = "7.x"
 project = "bean_wysiwyg"
-datestamp = "1384165112"
+datestamp = "1437662040"
 

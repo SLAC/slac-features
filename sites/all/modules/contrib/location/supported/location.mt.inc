@@ -1,9 +1,16 @@
 <?php
 
-// Malta
+/**
+ * @file
+ * Malta.
+ */
 
+/**
+ * Returns an associative array of states/territories.
+ */
 function location_province_list_mt() {
-  return array('ATT' => "Attard",
+  return array(
+    'ATT' => "Attard",
     'BAL' => "Balzan",
     'BGU' => "Birgu",
     'BKK' => "Birkirkara",
@@ -70,7 +77,8 @@ function location_province_list_mt() {
     'SNT' => "Sannat",
     'ZAG' => "Xagra",
     'XEW' => "Xewkija",
-    'ZEB' => "Zebbug");
+    'ZEB' => "Zebbug"
+  );
 }
 
 /**

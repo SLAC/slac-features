@@ -1,9 +1,16 @@
 <?php
 
-// Bermuda
+/**
+ * @file
+ * Bermuda.
+ */
 
+/**
+ * Returns an associative array of states/territories.
+ */
 function location_province_list_bm() {
-  return array('DS' => "Devonshire",
+  return array(
+    'DS' => "Devonshire",
     'HC' => "Hamilton City",
     'HA' => "Hamilton",
     'PG' => "Paget",
@@ -13,7 +20,8 @@ function location_province_list_bm() {
     'SA' => "Sandys",
     'SM' => "Smith's",
     'SH' => "Southampton",
-    'WA' => "Warwick");
+    'WA' => "Warwick"
+  );
 }
 
 /**
