@@ -1,7 +1,5 @@
 <?php
 
-if (isset($_SERVER['SERVER_NAME']) && isset($_SERVER['SERVER_ADDR']) && $_SERVER['SERVER_NAME'] == 'slac-features.wearepropeople.md' || $_SERVER['SERVER_ADDR'] == '127.0.0.1') {
-  // Rebuild slac_people_profile profile.
   $commands = array(
     array(
       'description' => 'Drop all database tables: ',
@@ -30,7 +28,3 @@ if (isset($_SERVER['SERVER_NAME']) && isset($_SERVER['SERVER_ADDR']) && $_SERVER
   }
 
   print 'Site has been rebuilt';
-}
-else {
-  header('Location: /');
-}
