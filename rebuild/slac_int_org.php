@@ -1,7 +1,5 @@
 <?php
 
-if (isset($_SERVER['SERVER_NAME']) && isset($_SERVER['SERVER_ADDR']) && $_SERVER['SERVER_NAME'] == 'slac-features.wearepropeople.md' || $_SERVER['SERVER_ADDR'] == '127.0.0.1') {
-  $time_start = microtime(true);
 
   // Rebuild slac_ext_org profile.
 
@@ -75,8 +73,3 @@ if (isset($_SERVER['SERVER_NAME']) && isset($_SERVER['SERVER_ADDR']) && $_SERVER
   $time_end = microtime(true);
   $execution_time = round($time_end - $time_start);
   print '<br/>Execution time: ' . $execution_time;
-}
-else {
-  header('Location: /');
-}
-
