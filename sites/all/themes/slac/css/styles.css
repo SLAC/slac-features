@@ -1121,7 +1121,7 @@ ol.search-results .search-snippet strong { font-weight: bold; color: #871628; }
   .content .general-right .panel-pane { padding: 0px 22px 13px 22px; width: 100%; }
   .reverse .content .general-right .panel-pane, .reverse .content .general-right .panels-ipe-portlet-wrapper { padding: 0; }
   .content .general-right .panel-pane:first-of-type, .content .general-right .panels-ipe-portlet-wrapper:first-of-type { /*margin-top: -24px */ }
-  .content .general-right .panel-pane:first-of-type.region-grey-background-style, .front .content .general-right .panel-pane:first-of-type, .content .general-right .panels-ipe-portlet-wrapper:first-of-type.region-grey-background-style, .front .content .general-right .panels-ipe-portlet-wrapper:first-of-type { /*margin-top: 0 */ }
+  .content .general-right .panel-pane:first-of-type.region-grey-background-style, .content .general-right .panel-pane:first-of-type .front, .content .general-right .panels-ipe-portlet-wrapper:first-of-type.region-grey-background-style, .content .general-right .panels-ipe-portlet-wrapper:first-of-type .front { /*margin-top: 0 */ }
   .content .general-right .panel-pane.region-grey-background-style, .content .general-right .panels-ipe-portlet-wrapper.region-grey-background-style { padding-top: 13px; }
   .reverse .general-right .panel-pane, .reverse .general-right .panels-ipe-portlet-wrapper { padding: 0; }
   .footer-seccond { *zoom: 1; }
