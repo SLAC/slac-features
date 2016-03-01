@@ -31,7 +31,7 @@ To submit bug reports and feature suggestions, or to track changes:
 
 -- REQUIREMENTS --
 
-None.
+Libraries module 2.x
 
 
 -- INSTALLATION --
@@ -39,11 +39,12 @@ None.
 * First, install the jReject for Drupal 7 module in Drupal. The module comes 
 with a sensible set of default settings.
 
-* Get the jReject plugin and install it in a directory called "jReject" under 
-this module's directory. The easiest way to do this is to clone the code with 
-Git while inside this module's directory:
+* Get the jReject plugin from http://github.com/TurnWheel/jReject. Install it
+in your Libraries directory in a directory called `jreject`. Example:
+/sites/all/libraries/jreject/(all the jreject files and dirs here)
 
-[/sites/all/modules/jreject$] git clone https://github.com/TurnWheel/jReject.git
+If you have drush, you can attempt to auto-install the jReject library by using
+the `jrdl` command. Example: drush -l mysite.com jrdl
 
 This module will automatically check to see if you've done this step correctly. 
 Simply visit any of this module's configuration pages and look for a warning.
@@ -62,11 +63,7 @@ To be written
 
 -- TROUBLESHOOTING --
 
-Some users have reported issues with their own git repos acting strangely when
-cloning the jReject library (see https://drupal.org/node/1632356). If that
-happens to you, consider simply downloading the library ZIP from
-http://jreject.turnwheel.com/
-
+To be written
 
 -- FAQ --
 

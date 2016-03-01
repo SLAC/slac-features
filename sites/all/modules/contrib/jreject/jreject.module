@@ -9,58 +9,6 @@
  */
 
 /**
- * Implements hook_init()
-*/
-function jreject_init() {
-  //Always bail if the library isn't installed or the killswitch is engaged.
-  if (!jreject_is_lib_installed(TRUE) || !variable_get('jreject_enable', FALSE)) {
-    return;
-  }
-  $path_to_jreject = drupal_get_path("module", "jreject") . "/jReject";
-  $abs_path_to_jreject = base_path() . $path_to_jreject;
-  drupal_add_css($path_to_jreject . "/css/jquery.reject.css");
-  drupal_add_js($path_to_jreject . "/js/jquery.reject.js");
-  $rejects = jreject_get_rejects();
-  $opts = jreject_get_options();
-  $browser_alternatives = jreject_get_browser_alternatives();
-  $js = <<<EOT
-  (function($) {
-    Drupal.behaviors.jReject = {
-      attach: function (context, settings) {
-        $.reject({
-        display: [$browser_alternatives],
-          reject: {  
-              $rejects
-          },
-          imagePath: '$abs_path_to_jreject/images/',
-          $opts
-        }); 
-        return false;  
-      }
-    }
-  })(jQuery);
-EOT;
-  drupal_add_js($js, array("type" => "inline"));
-}
-
-/**
- * Determine if the jReject library is installed.
-*/
-function jreject_is_lib_installed($silent = FALSE) {
-  $path_to_jreject = drupal_get_path("module", "jreject") . "/jReject";
-  if (!file_exists($path_to_jreject . "/js/jquery.reject.js")
-      || !file_exists($path_to_jreject . "/css/jquery.reject.css")) {
-    if ($silent) {
-      return FALSE;
-    }
-    drupal_set_message("Missing or incomplete installation of the jReject library!
-                        Please download jReject to \$YOUR_MODULE_PATH/jReject.
-                        See README.txt for more details.", 'warning');
-  }
-  return TRUE;
-}
-
-/**
  * Implements hook_menu().
  */
 function jreject_menu() {
@@ -164,4 +112,72 @@ function jreject_get_browser_alternatives() {
     }
   }
   return implode(", ", $out);
+}
+
+/**
+ * Implements hook_libraries_info().
+ *
+ * For defining external libraries.
+ */
+function jreject_libraries_info() {
+  $libraries['jreject'] = array(
+    'name' => 'jReject',
+    'vendor url' => 'http://jreject.turnwheel.com/',
+    'download url' => 'https://github.com/TurnWheel/jReject',
+    // 1.0.2
+    'version arguments' => array(
+      'file' => 'js/jquery.reject.js',
+      'pattern' => '/Version (\d+)/',
+      'lines' => 3,
+    ),
+    'files' => array(
+      'js' => array(
+        'js/jquery.reject.js',
+      ),
+      'css' => array(
+        'css/jquery.reject.css',
+      ),
+    ),
+  );
+  return $libraries;
+}
+
+
+/**
+ * Implements hook_init()
+*/
+function jreject_init() {
+  //Always bail if the killswitch is engaged.
+  if (!variable_get('jreject_enable', FALSE)) {
+    return;
+  }
+  $library = libraries_load('jreject');
+  if ($library && !empty($library['loaded'])) {
+    $path = $library['library path'];
+    $rejects = jreject_get_rejects();
+    $opts = jreject_get_options();
+    $browser_alternatives = jreject_get_browser_alternatives();
+    $js = <<<EOT
+    (function($) {
+      Drupal.behaviors.jReject = {
+        attach: function (context, settings) {
+          $.reject({
+          display: [$browser_alternatives],
+            reject: {  
+                $rejects
+            },
+            imagePath: '/$path/images/',
+            $opts
+          }); 
+          return false;  
+        }
+      }
+    })(jQuery);
+EOT;
+    drupal_add_js($js, array("type" => "inline"));
+  }
+  elseif (php_sapi_name() != "cli") {
+    $message = t('Missing or incomplete installation of the jReject library! Please follow the instructions from README.txt to get it.');
+    drupal_set_message($message, 'error');
+  }
 }

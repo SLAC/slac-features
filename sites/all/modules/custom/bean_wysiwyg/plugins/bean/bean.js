@@ -179,7 +179,7 @@
    * Insert HTML to the WYSIWYG when block has been created. Set the macro.
    */
     insert: function (block) {
-      var markup = '<p>&nbsp;</p>' + bean_wysiwyg_create_markup(block) + '<p>&nbsp;</p>';
+      var markup = bean_wysiwyg_create_markup(block);
       macro = bean_wysiwyg_create_macro(markup);
 
       // Insert placeholder markup into wysiwyg.
