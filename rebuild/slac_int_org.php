@@ -72,6 +72,6 @@
   $time_end = microtime(true);
   $execution_time = round($time_end - $time_start);
   print '<br/>Execution time: ' . $execution_time;
-}
+
 
 

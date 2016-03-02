@@ -433,7 +433,7 @@ ul.tabs li a:hover, .action-links li a:hover { background-color: #2e2e2e; }
 .header-date { font-size: 0.75em; letter-spacing: 1px; font-weight: bold; color: #ffffff; float: left; margin: 15px 0 0 10px; }
 
 .site-title { margin-bottom: 9px; margin: 10px 0; }
-.external-organisation .site-title .inside > div { display: inline-block; vertical-align: baseline; word-break: break-word; }
+.external-organisation .site-title .inside > div { display: inline-block; vertical-align: baseline; word-break: keep-all; }
 
 .footer-first { background-color: #ebebdf; color: #88655a; padding: 16px 0 0; }
 .footer-first .general-left .inside > div { margin-bottom: 10px; }
@@ -953,7 +953,7 @@ ol.search-results .search-snippet strong { font-weight: bold; color: #871628; }
 @media (min-width: 480px) { .pp-image-style-description-left { float: left; margin-right: 20px; }
   .pp-image-style-description-right { float: right; margin-left: 20px; } }
 /* IntOrg profile styles */
-.page-basic-io li { font-size: 0.875 rem; }
+.page-basic-io li { font-size: 0.875rem; }
 .page-basic-io a:hover { color: #0c5791; }
 .page-basic-io .top-wrapper { background: url("../images/header-bg.jpg") center no-repeat; background-size: cover; -ms-behavior: url(/sites/all/themes/slac/css/backgroundsize.min.htc); }
 .page-basic-io .top-wrapper .header { margin-top: -20px; padding-bottom: 5px; padding-top: 20px; position: relative; }
@@ -966,7 +966,7 @@ ol.search-results .search-snippet strong { font-weight: bold; color: #871628; }
 .page-basic-io .pane-site-name-abbreviation a, .page-basic-io .pane-page-site-name a { color: #2582ca; font-size: 32px; font-weight: bold; }
 .page-basic-io .pane-site-name-abbreviation a:hover, .page-basic-io .pane-page-site-name a:hover { text-decoration: underline; }
 .page-basic-io .pane-site-name-abbreviation { margin-right: 11px; padding-right: 0; }
-.page-basic-io .pane-site-name-abbreviation:after { content: ""; display: inline-block; width: 3px; height: 42px; margin-left: 1px; position: relative; top: 7px; background: #dedddd; }
+.page-basic-io .pane-site-name-abbreviation:after { content: "&nbsp;"; display: inline-block; width: 3px; height: 42px; margin-left: 1px; position: relative; top: 7px; background: #dedddd; }
 .page-basic-io .pane-site-name-abbreviation a { font-size: 36px; }
 .page-basic-io .left-title-wrapper { border: none; padding-bottom: 0; color: #494949; }
 .page-basic-io .general-left-title h2.pane-title { font-size: 1.85rem; }

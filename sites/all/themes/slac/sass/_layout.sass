@@ -280,7 +280,7 @@ html
 
 
 
-ul.tabs, .action-links,
+ul.tabs, .action-links
   font-size: em(12px)
   margin-bottom: 10px
   @extend .clearfix
@@ -607,7 +607,7 @@ ul.tabs, .action-links,
     .inside > div
       display: inline-block
       vertical-align: baseline
-      word-break: break-word
+      word-break: keep-all
 
 
 
@@ -2803,7 +2803,7 @@ h2
 
 .page-basic-io
   li
-    font-size: 0.875 rem
+    font-size: 0.875rem
     
   a:hover
     color: $dark-blue
@@ -2854,7 +2854,7 @@ h2
     margin-right: 11px
     padding-right: 0
     &:after
-      content: ''
+      content: '&nbsp;'
       display: inline-block
       width: 3px
       height: 42px
