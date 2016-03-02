@@ -966,7 +966,7 @@ ol.search-results .search-snippet strong { font-weight: bold; color: #871628; }
 .page-basic-io .pane-site-name-abbreviation a, .page-basic-io .pane-page-site-name a { color: #2582ca; font-size: 32px; font-weight: bold; }
 .page-basic-io .pane-site-name-abbreviation a:hover, .page-basic-io .pane-page-site-name a:hover { text-decoration: underline; }
 .page-basic-io .pane-site-name-abbreviation { margin-right: 11px; padding-right: 0; }
-.page-basic-io .pane-site-name-abbreviation:after { content: "&nbsp;"; display: inline-block; width: 3px; height: 42px; margin-left: 1px; position: relative; top: 7px; background: #dedddd; }
+.page-basic-io .pane-site-name-abbreviation:after { content: ""; display: inline-block; width: 3px; height: 42px; margin-left: 1px; position: relative; top: 7px; background: #dedddd; }
 .page-basic-io .pane-site-name-abbreviation a { font-size: 36px; }
 .page-basic-io .left-title-wrapper { border: none; padding-bottom: 0; color: #494949; }
 .page-basic-io .general-left-title h2.pane-title { font-size: 1.85rem; }

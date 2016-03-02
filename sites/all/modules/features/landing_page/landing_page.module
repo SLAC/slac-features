@@ -228,7 +228,7 @@ function landing_page_preprocess_page(&$variables) {
 function landing_page_preprocess_html(&$variables) {
   if ((arg(0) == 'node') && (is_numeric(arg(1))) && (arg(2) == '')) {
     // Load the node values into $fields_array
-    $fields_array = $variables['page']['content']['system_main']['nodes'][arg(1)];
+    $fields_array = $variables['page']['content']['system_main']['nodes'][arg(0)];
 
     // If field_css key exists, check does it has any values.
     // If it has then add it to header.
