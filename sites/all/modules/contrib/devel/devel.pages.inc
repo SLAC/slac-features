@@ -145,18 +145,15 @@ function devel_field_info_page() {
   $output .= kprint_r($info, TRUE, t('Instances'));
   $info = field_info_bundles();
   $output .= kprint_r($info, TRUE, t('Bundles'));
+  $info = field_info_field_types();
+  $output .= kprint_r($info, TRUE, t('Field types'));
+  $info = field_info_formatter_types();
+  $output .= kprint_r($info, TRUE, t('Formatter types'));
+  $info = field_info_storage_types();
+  $output .= kprint_r($info, TRUE, t('Storage types'));
+  $info = field_info_widget_types();
+  $output .= kprint_r($info, TRUE, t('Widget types'));
   return $output;
-}
-
-/**
- * Menu callback; display all variables.
- */
-function devel_variable_page() {
-  // We return our own $page so as to avoid blocks.
-  $output = drupal_get_form('devel_variable_form');
-  drupal_set_page_content($output);
-  $page = element_info('page');
-  return $page;
 }
 
 function devel_variable_form() {
@@ -298,13 +295,4 @@ function devel_elements_page() {
 function devel_phpinfo() {
   print phpinfo();
   drupal_exit();
-}
-
-/**
- * Generate information about state of the repo.
- */
-function devel_git() {
-  $output = array();
-  exec('cd ' . DRUPAL_ROOT . ' && git log --name-status HEAD^..HEAD', $output);
-  return '<h2>' . t('Latest commit:') . '</h2><pre>' . implode("\n", $output) . '</pre>';
 }

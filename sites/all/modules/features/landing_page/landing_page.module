@@ -160,6 +160,8 @@ function landing_page_form_alter(&$form, &$form_state, $form_id) {
  * If it is of type landing_page and checkbox to override the deafult css is on.
  * Unset the default CSS.
  */
+
+/*
 function landing_page_css_alter(&$css) {
   if ((arg(0) == 'node') && (is_numeric(arg(1))) && (arg(2) == '')) {
     $node = node_load(arg(1));
@@ -186,6 +188,8 @@ function landing_page_css_alter(&$css) {
  * If it is of type landing_page and checkbox to override the deafult js is on.
  * Unset the default JS.
  */
+
+/*
 function landing_page_js_alter(&$js) {
   if ((arg(0) == 'node') && (is_numeric(arg(1))) && (arg(2) == '')) {
     $node = node_load(arg(1));
@@ -225,31 +229,35 @@ function landing_page_preprocess_page(&$variables) {
 /**
  * Implements hook_preprocess_html().
  */
+
+/* None of these are working, killing for now
 function landing_page_preprocess_html(&$variables) {
   if ((arg(0) == 'node') && (is_numeric(arg(1))) && (arg(2) == '')) {
     // Load the node values into $fields_array
-    $fields_array = $variables['page']['content']['system_main']['nodes'][arg(0)];
-
-    // If field_css key exists, check does it has any values.
-    // If it has then add it to header.
-    if (array_key_exists('field_css', $fields_array['body']['#object'])) {
-      $custom_css_language = field_language('node', $fields_array['body']['#object'], 'field_css');
-      if (isset($fields_array['body']['#object']->field_css[$custom_css_language][0]['value'])) {
-        $inline_css = $fields_array['body']['#object']->field_css[$custom_css_language][0]['value'];
-        $inline_css = decode_entities($inline_css);
-        $element = array(
-          '#type' => 'markup',
-          '#markup' => $inline_css,
-        );
-        drupal_add_html_head($element, 'inline_css');
+      $arg1 = arg(1);
+      $fields_array = $variables['page']['content']['system_main']['nodes'][$arg1];
+      dpm($fields_array);
+      // If field_css key exists, check does it has any values.
+      // If it has then add it to header.
+    if (array_key_exists('body', $fields_array['#node'])) {
+      if (array_key_exists('field_css', $fields_array)) {
+        $custom_css_language = field_language('node', $fields_array['#object']['body'], 'field_css');
+        if (isset($fields_array['body']['#object']->field_css[$custom_css_language][0]['value'])) {
+          $inline_css = $fields_array['body']['#object']->field_css[$custom_css_language][0]['value'];
+          $inline_css = decode_entities($inline_css);
+          $element = array(
+            '#type' => 'markup',
+            '#markup' => $inline_css,
+          );
+          drupal_add_html_head($element, 'inline_css');
+        }
       }
-    }
-
+  }
     // If field_header_js key exists, check does it has any values.
     // If it has then add it to header.
     if (array_key_exists('field_header_js', $fields_array['body']['#object'])) {
       $custom_header_js_language = field_language('node', $fields_array['body']['#object'], 'field_header_js');
-      if (isset($fields_array['body']['#object']->field_header_js[$custom_header_js_language][0]['value'])) {
+      if (isset($fields_array['node']->field_header_js[$custom_header_js_language][0]['value'])) {
         $inline_header_js = $fields_array['body']['#object']->field_header_js[$custom_header_js_language][0]['value'];
         $inline_header_js = decode_entities($inline_header_js);
         $element = array(
@@ -272,7 +280,7 @@ function landing_page_preprocess_html(&$variables) {
     }
   }
 }
-
+*/
 /**
  * Implements hook_element_info_alter().
  *

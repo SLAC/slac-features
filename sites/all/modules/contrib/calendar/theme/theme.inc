@@ -34,29 +34,34 @@ function template_preprocess_calendar_month(&$vars) {
 
   $month_rows = $rows;
   foreach ($rows as $weekno => $row) {
-    foreach ($row as $day => $data) {
-      // If this cell is already rendered, like the weekno column,
-      // move to the next item.
-      if (!is_array($data)) {
-        continue;
-      }
-      $cell = $data['data'];
-      $data = $cell['datebox'];
-      if ($cell['empty']) {
-        $data .= $cell['empty'];
-      }
-      else {
-        $data .= implode($cell['all_day']);
-        foreach ($cell['items'] as $hour => $item) {
-          $data .= implode($item);
+    // If this row is already rendered, don't do anything.
+    if (!isset($row['data'])) {
+      foreach ($row as $day => $data) {
+        $cell = $data['data'];
+
+        // If this cell is already rendered, like the weekno column,
+        // move to the next item.
+        if (!is_array($cell)) {
+          $month_rows[$weekno][$day]['data'] = $cell;
+          continue;
         }
-        $data .= $cell['link'];
-      }
-      if ($view->date_info->mini) {
-        $month_rows[$weekno][$day]['data'] = $data;
-      }
-      else {
-        $month_rows[$weekno][$day]['data'] = '<div class="inner">' . $data . '</div>';
+        $data = $cell['datebox'];
+        if ($cell['empty']) {
+          $data .= $cell['empty'];
+        }
+        else {
+          $data .= implode($cell['all_day']);
+          foreach ($cell['items'] as $hour => $item) {
+            $data .= implode($item);
+          }
+          $data .= $cell['link'];
+        }
+        if ($view->date_info->mini) {
+          $month_rows[$weekno][$day]['data'] = $data;
+        }
+        else {
+          $month_rows[$weekno][$day]['data'] = '<div class="inner">' . $data . '</div>';
+        }
       }
     }
   }
@@ -264,11 +269,11 @@ function template_preprocess_calendar_day(&$vars) {
         $group_time = NULL;
         $divisor = NULL;
         if ($display_overlap) {
-          if ($view->date_info->style_groupby_times_original == 'half') {
+          if ($view->style_options['groupby_times'] == 'half') {
             $group_time = 30;
             $divisor = 7.5;
           }
-          elseif ($view->date_info->style_groupby_times_original == 'hour') {
+          elseif ($view->style_options['groupby_times'] == 'hour') {
             $group_time = 60;
             $divisor = 15;
           }
@@ -477,11 +482,11 @@ function template_preprocess_calendar_week(&$vars) {
           if ($display_overlap) {
             $group_time = NULL;
             $divisor = NULL;
-            if ($view->date_info->style_groupby_times_original == 'half'){
+            if ($view->style_options['groupby_times'] == 'half'){
               $group_time = 30;
               $divisor = 7.5;
             }
-            elseif ($view->date_info->style_groupby_times_original == 'hour'){
+            elseif ($view->style_options['groupby_times'] == 'hour'){
               $group_time = 60;
               $divisor = 15;
             }
