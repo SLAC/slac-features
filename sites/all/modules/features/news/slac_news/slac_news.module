@@ -72,18 +72,26 @@ function slac_news_ctools_block_content_type_post_render($subtype, $conf) {
  * Get nid of the News node.
  */
 function _slac_news_get_news_node_nid() {
-  $query = new EntityFieldQuery();
+  /*$query = new EntityFieldQuery();
   $news_node = $query
     ->entityCondition('entity_type', 'node')
     ->entityCondition('bundle', 'landing_page')
     ->propertyCondition('title', 'News and Press Releases')
-    ->range(0, 1)
+    ->range(0, 4)
     ->execute();
 
   $news_node = reset($news_node['node']);
 
-  return $news_node->nid;
+  dpm($news_node);
+  */
+    if ($node = menu_get_object()) {
+        // Get the nid
+        $nid = $node->nid;
+    }
+  return $nid;
 }
+
+
 
 /**
  * Implements hook_preprocess_node().
