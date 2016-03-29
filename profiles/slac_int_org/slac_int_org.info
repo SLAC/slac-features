@@ -16,7 +16,7 @@ dependencies[] = number
 dependencies[] = options
 dependencies[] = path
 dependencies[] = taxonomy
-;dependencies[] = search
+dependencies[] = search
 dependencies[] = field_ui
 dependencies[] = file
 
@@ -35,6 +35,7 @@ dependencies[] = date_ical
 dependencies[] = date_views
 dependencies[] = link
 dependencies[] = entity
+dependencies[] = entityreference
 dependencies[] = libraries
 dependencies[] = menu_attributes
 dependencies[] = menu_trail_by_path
@@ -58,6 +59,10 @@ dependencies[] = securepages
 dependencies[] = superfish
 dependencies[] = views_feed_pane
 dependencies[] = metatag
+
+;Lets dress up Admin a bit
+dependencies[] = adminimal_admin_menu
+dependencies[] = slac_admin_theme
 
 ; Forums
 dependencies[] = forum

@@ -1,13 +1,21 @@
 <?php
 
-// Kuwait
+/**
+ * @file
+ * Kuwait.
+ */
 
+/**
+ * Returns an associative array of states/territories.
+ */
 function location_province_list_kw() {
-  return array('D' => "Al Ahmadi",
+  return array(
+    'D' => "Al Ahmadi",
     'F' => "Al Farwaniyah",
     'S' => "Al Asimah",
     'J' => "Al Jahra",
-    'H' => "Hawalli");
+    'H' => "Hawalli"
+  );
 }
 
 /**

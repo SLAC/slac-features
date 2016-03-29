@@ -1,9 +1,16 @@
 <?php
 
-// Poland
+/**
+ * @file
+ * Poland.
+ */
 
+/**
+ * Returns an associative array of states/territories.
+ */
 function location_province_list_pl() {
-  return array('DO' => "Dolnoslaskie",
+  return array(
+    'DO' => "Dolnoslaskie",
     'KP' => "Kujawsko-Pomorskie",
     'LO' => "Lodzkie",
     'LL' => "Lubelskie",
@@ -18,7 +25,8 @@ function location_province_list_pl() {
     'SW' => "Swietokrzyskie",
     'WM' => "Warminsko-Mazurskie",
     'WP' => "Wielkopolskie",
-    'ZA' => "Zachodniopomorskie");
+    'ZA' => "Zachodniopomorskie"
+  );
 }
 
 /**

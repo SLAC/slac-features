@@ -1,9 +1,16 @@
 <?php
 
-// India
+/**
+ * @file
+ * India.
+ */
 
+/**
+ * Returns an associative array of states/territories.
+ */
 function location_province_list_in() {
-  return array('AP' => "Andhra Pradesh",
+  return array(
+    'AP' => "Andhra Pradesh",
     'AR' => "Arunachal Pradesh",
     'AS' => "Assam",
     'BR' => "Bihar",
@@ -17,7 +24,7 @@ function location_province_list_in() {
     'KA' => "Karnataka",
     'KL' => "Kerala",
     'MP' => "Madhya Pradesh",
-    'MM' => "Maharashtra",
+    'MH' => "Maharashtra",
     'MN' => "Manipur",
     'ML' => "Meghalaya",
     'MZ' => "Mizoram",
@@ -37,7 +44,8 @@ function location_province_list_in() {
     'DD' => "Daman and Diu",
     'DL' => "Delhi",
     'LD' => "Lakshadweep",
-    'PY' => "Pondicherry");
+    'PY' => "Pondicherry"
+  );
 }
 
 /**

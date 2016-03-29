@@ -1,0 +1,14 @@
+name = Slac Admin Theme
+description = Integration of the Adminimal theme with Polymer added.
+core = 7.x
+package = Features
+version = 7.x-1.0-beta1
+project = slac_admin_theme
+dependencies[] = adminimal_admin_menu
+dependencies[] = ctools
+dependencies[] = strongarm
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:2
+features[variable][] = admin_theme
+features[variable][] = node_admin_theme
+features[variable][] = theme_adminimal_settings

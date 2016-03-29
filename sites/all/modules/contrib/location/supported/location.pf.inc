@@ -1,13 +1,21 @@
 <?php
 
-// French Polynesia
+/**
+ * @file
+ * French Polynesia.
+ */
 
+/**
+ * Returns an associative array of states/territories.
+ */
 function location_province_list_pf() {
-  return array('M' => "Archipel des Marquises",
+  return array(
+    'M' => "Archipel des Marquises",
     'T' => "Archipel des Tuamotu",
     'I' => "Archipel des Tubuai",
     'V' => "Iles du Vent",
-    'S' => "Iles Sous-le-Vent");
+    'S' => "Iles Sous-le-Vent"
+  );
 }
 
 /**

@@ -50,6 +50,14 @@
         }
         var myElement = document.querySelector(".sf-menu .first");
         myElement.style.paddingLeft = "0";
+
+      if ($('body').hasClass('internal-organization')) {
+        var searchFix = document.querySelector(".pane-search-block");
+        searchFix.style.display="block"
+        var widthFix = document.querySelector(".page-basic-io .user-search");
+        widthFix.style.width = "28.87053%";
+      }
+
     }
   };
 
@@ -161,14 +169,14 @@
             $searchOptions.append($select);
             $searchOptions.find('select').val(1);
 
-            var $addClass = $searchOptions.find('select').val() == 0 ? 'web' : 'people';
+            var $addClass = $searchOptions.find('select').val() == 0 ? 'local' : 'people';
             $('#slac-search input')
               .attr('placeholder', Drupal.t('SEARCH PEOPLE'))
               .addClass($addClass);
 
             $searchOptions.find('select').change(function(e) {
               var value = parseInt($(this).val());
-              var placeholder = value ? Drupal.t('SEARCH PEOPLE') : Drupal.t('SEARCH SLAC');
+              var placeholder = value ? Drupal.t('SEARCH LOCAL') : Drupal.t('SEARCH SLAC');
               var inputClass = value ? 'people' : 'web';
               $('#slac-search input')
                 .attr('placeholder', placeholder)

@@ -1,9 +1,16 @@
 <?php
 
-// Tuvalu
+/**
+ * @file
+ * Tuvalu.
+ */
 
+/**
+ * Returns an associative array of states/territories.
+ */
 function location_province_list_tv() {
-  return array('NMG' => "Nanumanga",
+  return array(
+    'NMG' => "Nanumanga",
     'NLK' => "Niulakita",
     'NTO' => "Niutao",
     'FUN' => "Funafuti",
@@ -11,7 +18,8 @@ function location_province_list_tv() {
     'NUI' => "Nui",
     'NFT' => "Nukufetau",
     'NLL' => "Nukulaelae",
-    'VAI' => "Vaitupu");
+    'VAI' => "Vaitupu"
+  );
 }
 
 /**

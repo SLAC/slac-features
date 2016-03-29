@@ -1,5 +1,7 @@
 <?php
 
+  $time_start = microtime(true);
+
   // Rebuild slac_ext_org profile.
 
   $commands = array(
@@ -9,7 +11,7 @@
     ),
     array(
       'description' => 'Install selected profile: ',
-      'command' => 'drush si slac_ext_org --db-url=mysql://slac_features:SwHbNJEZ6QRxrlU@localhost/slac_features --account-name=admin --account-pass=618hWVCDmY1n3uf --account-mail=admin@example.com --site-name=SLAC-EXT-ORG-' . date(DATE_ATOM) . ' -y'
+      'command' => 'drush si slac_ext_org --db-url=mysql://xalg:13xLuth0r@localhost/slac_features --account-name=admin --account-pass=618hWVCDmY1n3uf --account-mail=admin@example.com --site-name=SLAC-EXT-ORG-' . date(DATE_ATOM) . ' -y'
     ),
     array(
       'description' => 'Admin login ',
@@ -64,6 +66,7 @@
   $command_output = array();
   foreach ($commands as $command) {
     exec($command['command'], $command_output);
+    print 'Processing '. $command['description'];
   }
 
   print 'Site has been rebuilt';
@@ -71,7 +74,5 @@
 
   $time_end = microtime(true);
   $execution_time = round($time_end - $time_start);
+
   print '<br/>Execution time: ' . $execution_time;
-
-
-

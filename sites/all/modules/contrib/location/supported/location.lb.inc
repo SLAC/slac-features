@@ -1,10 +1,23 @@
 <?php
 
-// Lebanon
+/**
+ * @file
+ * Lebanon.
+ */
 
+/**
+ * Returns an associative array of states/territories.
+ */
 function location_province_list_lb() {
   return array(
-
+    'AA' => "Aakkâr",
+    'NA' => "An Nabaţīyah",
+    'BH' => "Baalbek-Hermel",
+    'BA' => "Beirut",
+    'BQ' => "Beqaa",
+    'JL' => "Mount Lebanon",
+    'NL' => "North Lebanon",
+    'JA' => "South Lebanon",
   );
 }
 

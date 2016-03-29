@@ -1,7 +1,5 @@
 <?php
-
-
-  // Rebuild slac_ext_org profile.
+  // Rebuild slac_int_org profile.
 
   $commands = array(
     array(
@@ -14,7 +12,7 @@
     ),
     array(
       'description' => 'Admin login ',
-      'command' => 'drush --uri=http://slac-features.wearepropeople.md uli'
+      'command' => 'drush --uri={URI} uli'
     ),
     array(
       'description' => 'Create manager user account: ',
@@ -65,6 +63,7 @@
   $command_output = array();
   foreach ($commands as $command) {
     exec($command['command'], $command_output);
+    print 'Processing '. $command['description'];
   }
 
   print 'Site has been rebuilt';

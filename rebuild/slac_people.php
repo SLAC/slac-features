@@ -25,6 +25,7 @@
 
   foreach ($commands as $command) {
     exec($command['command'], $command_output);
+    print 'Processing '. $command['description'];
   }
 
   print 'Site has been rebuilt';

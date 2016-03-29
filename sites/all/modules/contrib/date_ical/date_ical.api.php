@@ -15,7 +15,7 @@
  * hook exists to allow users to alter the original HTML to ensure that it
  * gets converted into pretty plaintext.
  *
- * ONLY <p> tags will be converted to newlines by the plaintext conversion.
+ * <p>, <h*>, and <div> tags are changed to newlines by the plaintext converter.
  *
  * @param array $text_fields
  *   A reference to an associative array with the following keys and values:
@@ -80,7 +80,7 @@ function hook_date_ical_export_raw_event_alter(&$event, $view, $context) {
       $event['comment'] = check_plain($comment['value']);
     }
   }
-  
+
   // Example: Retrieving information from additional fields in the View (using
   // the Fields plugin).
   $event['comment'] = $view->style_plugin->get_field($context['row_index'], 'field_comment');
@@ -234,6 +234,13 @@ function hook_date_ical_import_timezone_alter(&$tzid, $context) {
  *     description: The description of this field shown in the Mapping page.
  *     date_ical_parse_handler: The function in the ParserVcalendar class
  *       which should be used to parse this iCal property into a Drupal field.
+ *
+ * Available date_ical_parse_handlers are:
+ *   parseTextProperty
+ *   parseDateTimeProperty
+ *   parseRepeatProperty
+ *   parseMultivalueProperty
+ *   parsePropertyParameter
  */
 function hook_date_ical_mapping_sources_alter(&$sources) {
   // Example of what might be done with this alter hook:

@@ -143,7 +143,11 @@ html
     .inside
       +container
       +box-sizing(content-box)
-
+.page-basic-io
+  .inside
+    > .pane-site-name-abbreviation,
+    > .pane-page-site-name
+      display: inline-block
 .page-basic
   > .content,
   > .header,
@@ -276,7 +280,7 @@ html
 
 
 
-ul.tabs, .action-links,
+ul.tabs, .action-links
   font-size: em(12px)
   margin-bottom: 10px
   @extend .clearfix
@@ -603,7 +607,7 @@ ul.tabs, .action-links,
     .inside > div
       display: inline-block
       vertical-align: baseline
-      word-break: break-word
+      word-break: keep-all
 
 
 
@@ -2799,7 +2803,7 @@ h2
 
 .page-basic-io
   li
-    font-size: 0.875 rem
+    font-size: 0.875rem
     
   a:hover
     color: $dark-blue

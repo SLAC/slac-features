@@ -1,9 +1,16 @@
 <?php
 
-// Hungary
+/**
+ * @file
+ * Hungary.
+ */
 
+/**
+ * Returns an associative array of states/territories.
+ */
 function location_province_list_hu() {
-  return array('BU' => "Budapest",
+  return array(
+    'BU' => "Budapest",
     'BC' => "Bekescsaba",
     'DB' => "Debrecen",
     'DJ' => "Dunaujvaros",
@@ -41,7 +48,8 @@ function location_province_list_hu() {
     'TO' => "Tolna",
     'VA' => "Vas",
     'VZ' => "Veszprem",
-    'ZA' => "Zala");
+    'ZA' => "Zala"
+  );
 }
 
 /**

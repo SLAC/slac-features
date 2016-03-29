@@ -1,9 +1,16 @@
 <?php
 
-// Jordan
+/**
+ * @file
+ * Jordan.
+ */
 
+/**
+ * Returns an associative array of states/territories.
+ */
 function location_province_list_jo() {
-  return array('AJ' => "Ajlun",
+  return array(
+    'AJ' => "Ajlun",
     'AQ' => "Al 'Aqabah",
     'BA' => "Al Balqa'",
     'KA' => "Al Karak",
@@ -14,7 +21,8 @@ function location_province_list_jo() {
     'IR' => "Irbid",
     'JA' => "Jarash",
     'MN' => "Ma'an",
-    'MD' => "Madaba");
+    'MD' => "Madaba"
+  );
 }
 
 /**

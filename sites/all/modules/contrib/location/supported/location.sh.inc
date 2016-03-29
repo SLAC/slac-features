@@ -1,11 +1,19 @@
 <?php
 
-// Saint Helena
+/**
+ * @file
+ * Saint Helena.
+ */
 
+/**
+ * Returns an associative array of states/territories.
+ */
 function location_province_list_sh() {
-  return array('A' => "Ascension",
+  return array(
+    'A' => "Ascension",
     'S' => "Saint Helena",
-    'T' => "Tristan da Cunha");
+    'T' => "Tristan da Cunha"
+  );
 }
 
 /**

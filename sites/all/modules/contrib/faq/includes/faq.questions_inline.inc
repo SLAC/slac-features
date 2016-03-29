@@ -8,7 +8,7 @@
 /**
  * Create the FAQ page if set to show the questions inline.
  *
- * @param &$variables
+ * @param array &$variables
  *   Array reference of arguments given to the theme() function.
  */
 function template_preprocess_faq_questions_inline(&$variables) {
@@ -46,7 +46,7 @@ function template_preprocess_faq_questions_inline(&$variables) {
 /**
  * Create categorized FAQ page if set to show/hide the questions inline.
  *
- * @param &$variables
+ * @param array &$variables
  *   Array reference of arguments given to the theme() function.
  */
 function template_preprocess_faq_category_questions_inline(&$variables) {
@@ -87,7 +87,6 @@ function template_preprocess_faq_category_questions_inline(&$variables) {
     $show_term_page_children = TRUE;
   }
 
-
   // Configure "back to top" link.
   $back_to_top = faq_init_back_to_top($this_page);
 
@@ -115,7 +114,7 @@ function template_preprocess_faq_category_questions_inline(&$variables) {
   // Configure header.
   $variables['category_depth'] = $term->depth;
   if ($category_display == 'hide_qa') {
-    $variables['header_title'] = l(faq_tt("taxonomy:term:$term->tid:name", $term->name), "faq/$term->tid");
+    $variables['header_title'] = l(faq_tt("taxonomy:term:$term->tid:name", $term->name), "faq-page/$term->tid");
   }
   else {
     $variables['header_title'] = check_plain(faq_tt("taxonomy:term:$term->tid:name", $term->name));
@@ -166,4 +165,3 @@ function template_preprocess_faq_category_questions_inline(&$variables) {
   $variables['nodes'] = $nodes;
   $variables['question_count'] = $count;
 }
-

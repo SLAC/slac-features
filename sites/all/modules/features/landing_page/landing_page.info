@@ -1,36 +1,11 @@
 name = Landing page
-description = Landing page content type
+description = A module that allows to create customized landing pages via configuration.
+version = 7.x-1.0
 core = 7.x
-package = SLAC
-version = 7.x-1.5
-project = landing_page
-dependencies[] = ctools
-dependencies[] = features
-dependencies[] = panelizer
-dependencies[] = strongarm
-features[ctools][] = panelizer:panelizer:1
-features[ctools][] = strongarm:strongarm:1
-features[features_api][] = api:2
-features[node][] = landing_page
-features[panelizer_defaults][] = node:landing_page:default
-features[panelizer_defaults][] = node:landing_page:profile_page
-features[variable][] = comment_anonymous_landing_page
-features[variable][] = comment_default_mode_landing_page
-features[variable][] = comment_default_per_page_landing_page
-features[variable][] = comment_form_location_landing_page
-features[variable][] = comment_landing_page
-features[variable][] = comment_preview_landing_page
-features[variable][] = comment_subject_field_landing_page
-features[variable][] = field_bundle_settings_node__landing_page
-features[variable][] = menu_options_landing_page
-features[variable][] = menu_parent_landing_page
-features[variable][] = node_options_landing_page
-features[variable][] = node_preview_landing_page
-features[variable][] = node_submitted_landing_page
-features[variable][] = panelizer_defaults_node_landing_page
-features[variable][] = panelizer_node:landing_page_allowed_layouts
-features[variable][] = panelizer_node:landing_page_allowed_layouts_default
-features[variable][] = panelizer_node:landing_page_allowed_types
-features[variable][] = panelizer_node:landing_page_allowed_types_default
-features[variable][] = panelizer_node:landing_page_default
-mtime = 1434833020
+
+; Information added by Drupal.org packaging script on 2015-09-16
+version = "7.x-1.0"
+core = "7.x"
+project = "landing_page"
+datestamp = "1442408940"
+

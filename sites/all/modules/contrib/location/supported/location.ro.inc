@@ -1,7 +1,13 @@
 <?php
 
-// Romania
+/**
+ * @file
+ * Romania.
+ */
 
+/**
+ * Returns an associative array of states/territories.
+ */
 function location_province_list_ro() {
   return array(
     'AB' => 'Alba',
@@ -13,7 +19,7 @@ function location_province_list_ro() {
     'BT' => 'Botoșani',
     'BR' => 'Brăila',
     'BV' => 'Brașov',
-    'B'  => 'București',
+    'B' => 'București',
     'BZ' => 'Buzău',
     'CL' => 'Călărași',
     'CS' => 'Caraș-Severin',
@@ -45,7 +51,8 @@ function location_province_list_ro() {
     'TL' => 'Tulcea',
     'VS' => 'Vaslui',
     'VL' => 'Vâlcea',
-    'VN' => 'Vrancea');
+    'VN' => 'Vrancea'
+  );
 }
 
 /**
