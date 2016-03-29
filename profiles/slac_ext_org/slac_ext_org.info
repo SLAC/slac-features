@@ -59,6 +59,7 @@ dependencies[] = securepages
 dependencies[] = superfish
 dependencies[] = views_feed_pane
 dependencies[] = metatag
+dependencies[] = tablesorter
 
 ;Development modules
 dependencies[] = devel
