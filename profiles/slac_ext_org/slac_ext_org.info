@@ -60,6 +60,7 @@ dependencies[] = securepages
 dependencies[] = superfish
 dependencies[] = views_feed_pane
 dependencies[] = metatag
+dependencies[] = tablesorter
 
 ;Lets dress up Admin a bit
 dependencies[] = adminimal_admin_menu
