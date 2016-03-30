@@ -10,7 +10,8 @@
 function slac_share_block_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'fieldable_panels_pane-share_block-field_share_options'
+  // Exported field_instance:
+  // 'fieldable_panels_pane-share_block-field_share_options'.
   $field_instances['fieldable_panels_pane-share_block-field_share_options'] = array(
     'bundle' => 'share_block',
     'default_value' => array(

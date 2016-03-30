@@ -17,14 +17,14 @@ function slac_service_catalog_demo_uuid_features_default_content() {
   'comment' => 1,
   'promote' => 0,
   'sticky' => 0,
-  'vuuid' => 'b3dfbf5e-19a5-41bc-94f8-d2b125eb875e',
+  'vuuid' => 'dcd67171-c0aa-40e4-9146-10807620ed04',
   'type' => 'slac_sc_catalog_item',
   'language' => 'und',
   'created' => 1377535764,
   'tnid' => 0,
   'translate' => 0,
   'uuid' => '0809a5ec-f056-410f-ab72-bda63b0bed4c',
-  'revision_uid' => 1,
+  'revision_uid' => 0,
   'body' => array(
     'und' => array(
       0 => array(
@@ -101,7 +101,7 @@ function slac_service_catalog_demo_uuid_features_default_content() {
   'field_slac_sc_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 19,
+        'tid' => 48,
         'uuid' => 'cf2ef1a1-ee93-434b-a103-a0a123dcc6aa',
       ),
     ),
@@ -151,7 +151,6 @@ function slac_service_catalog_demo_uuid_features_default_content() {
       ),
     ),
   ),
-  'metatags' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:Item',
@@ -214,14 +213,55 @@ function slac_service_catalog_demo_uuid_features_default_content() {
   'name' => '',
   'picture' => 0,
   'path' => array(
-    'pid' => 26,
-    'source' => 'node/1',
+    'pid' => 392,
+    'source' => 'node/258',
     'alias' => 'services/service/enterprise-application-group',
     'language' => 'und',
   ),
+  'workbench_moderation' => array(
+    'current' => array(
+      'hid' => 932,
+      'vid' => 972,
+      'nid' => 258,
+      'from_state' => 'draft',
+      'state' => 'draft',
+      'uid' => 0,
+      'stamp' => 1459365204,
+      'published' => 0,
+      'is_current' => 1,
+      'title' => 'Enterprise application group',
+      'timestamp' => 1459365204,
+    ),
+    'published' => array(
+      'hid' => 932,
+      'vid' => 972,
+      'nid' => 258,
+      'from_state' => 'draft',
+      'state' => 'published',
+      'uid' => 0,
+      'stamp' => 1459365204,
+      'published' => 0,
+      'is_current' => 1,
+      'title' => 'Enterprise application group',
+      'timestamp' => 1459365204,
+    ),
+    'my_revision' => array(
+      'hid' => 932,
+      'vid' => 972,
+      'nid' => 258,
+      'from_state' => 'draft',
+      'state' => 'draft',
+      'uid' => 0,
+      'stamp' => 1459365204,
+      'published' => 0,
+      'is_current' => 1,
+      'title' => 'Enterprise application group',
+      'timestamp' => 1459365204,
+    ),
+  ),
   'pathauto_perform_alias' => FALSE,
-  'date' => '2013-08-26 19:49:24 +0300',
-  'author_uuid' => '8387e0ab-2272-428b-b6f3-790625549a25',
+  'date' => '2013-08-26 09:49:24 -0700',
+  'author_uuid' => 'b18f7989-11df-4089-805b-ebc2ea315f1d',
 );
   $nodes[] = array(
   'title' => 'Contract Support',
@@ -230,14 +270,14 @@ function slac_service_catalog_demo_uuid_features_default_content() {
   'comment' => 1,
   'promote' => 0,
   'sticky' => 0,
-  'vuuid' => '89ec451c-8822-49bf-b4c9-560f8cee2244',
+  'vuuid' => '5af6c23f-143a-43a7-86f9-81d5f09c1d60',
   'type' => 'slac_sc_catalog_item',
   'language' => 'und',
   'created' => 1377536170,
   'tnid' => 0,
   'translate' => 0,
   'uuid' => '3e9cb6c4-dd27-4d28-966e-2bbb5c462b9d',
-  'revision_uid' => 1,
+  'revision_uid' => 0,
   'body' => array(
     'und' => array(
       0 => array(
@@ -313,7 +353,7 @@ function slac_service_catalog_demo_uuid_features_default_content() {
   'field_slac_sc_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 19,
+        'tid' => 48,
         'uuid' => 'cf2ef1a1-ee93-434b-a103-a0a123dcc6aa',
       ),
     ),
@@ -321,15 +361,15 @@ function slac_service_catalog_demo_uuid_features_default_content() {
   'field_slac_sc_eligibility' => array(
     'und' => array(
       0 => array(
-        'tid' => 21,
+        'tid' => 50,
         'uuid' => 'db10ac33-21ec-4d40-bee7-1c34780f1b40',
       ),
       1 => array(
-        'tid' => 24,
+        'tid' => 53,
         'uuid' => 'f3037fca-b840-4394-9c4e-03ea14b6c4bf',
       ),
       2 => array(
-        'tid' => 1,
+        'tid' => 30,
         'uuid' => '00e2fef3-0966-49ed-8f3d-e3f8d1cd46c0',
       ),
     ),
@@ -380,7 +420,6 @@ function slac_service_catalog_demo_uuid_features_default_content() {
       ),
     ),
   ),
-  'metatags' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:Item',
@@ -443,14 +482,55 @@ function slac_service_catalog_demo_uuid_features_default_content() {
   'name' => '',
   'picture' => 0,
   'path' => array(
-    'pid' => 27,
-    'source' => 'node/2',
+    'pid' => 393,
+    'source' => 'node/259',
     'alias' => 'services/service/contract-support',
     'language' => 'und',
   ),
+  'workbench_moderation' => array(
+    'current' => array(
+      'hid' => 933,
+      'vid' => 973,
+      'nid' => 259,
+      'from_state' => 'draft',
+      'state' => 'draft',
+      'uid' => 0,
+      'stamp' => 1459365204,
+      'published' => 0,
+      'is_current' => 1,
+      'title' => 'Contract Support',
+      'timestamp' => 1459365204,
+    ),
+    'published' => array(
+      'hid' => 933,
+      'vid' => 973,
+      'nid' => 259,
+      'from_state' => 'draft',
+      'state' => 'published',
+      'uid' => 0,
+      'stamp' => 1459365204,
+      'published' => 0,
+      'is_current' => 1,
+      'title' => 'Contract Support',
+      'timestamp' => 1459365204,
+    ),
+    'my_revision' => array(
+      'hid' => 933,
+      'vid' => 973,
+      'nid' => 259,
+      'from_state' => 'draft',
+      'state' => 'draft',
+      'uid' => 0,
+      'stamp' => 1459365204,
+      'published' => 0,
+      'is_current' => 1,
+      'title' => 'Contract Support',
+      'timestamp' => 1459365204,
+    ),
+  ),
   'pathauto_perform_alias' => FALSE,
-  'date' => '2013-08-26 19:56:10 +0300',
-  'author_uuid' => '8387e0ab-2272-428b-b6f3-790625549a25',
+  'date' => '2013-08-26 09:56:10 -0700',
+  'author_uuid' => 'b18f7989-11df-4089-805b-ebc2ea315f1d',
 );
   $nodes[] = array(
   'title' => 'MySQL & Oracle',
@@ -459,14 +539,14 @@ function slac_service_catalog_demo_uuid_features_default_content() {
   'comment' => 1,
   'promote' => 0,
   'sticky' => 0,
-  'vuuid' => 'bc3952cd-bf55-4273-9af4-9668539aa2d8',
+  'vuuid' => '6664fa27-e9c8-4a0a-9c97-ad6c34b89016',
   'type' => 'slac_sc_catalog_item',
   'language' => 'und',
   'created' => 1377536036,
   'tnid' => 0,
   'translate' => 0,
   'uuid' => '6a46ab90-371c-490f-9b48-7679886d1764',
-  'revision_uid' => 1,
+  'revision_uid' => 0,
   'body' => array(
     'und' => array(
       0 => array(
@@ -545,7 +625,7 @@ function slac_service_catalog_demo_uuid_features_default_content() {
   'field_slac_sc_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 14,
+        'tid' => 43,
         'uuid' => 'ac074ab7-4b52-4911-a6b0-3d92f247aa2a',
       ),
     ),
@@ -553,11 +633,11 @@ function slac_service_catalog_demo_uuid_features_default_content() {
   'field_slac_sc_eligibility' => array(
     'und' => array(
       0 => array(
-        'tid' => 24,
+        'tid' => 53,
         'uuid' => 'f3037fca-b840-4394-9c4e-03ea14b6c4bf',
       ),
       1 => array(
-        'tid' => 11,
+        'tid' => 40,
         'uuid' => '9d88d219-f7e7-4354-b6ce-accadf586640',
       ),
     ),
@@ -613,7 +693,6 @@ function slac_service_catalog_demo_uuid_features_default_content() {
       ),
     ),
   ),
-  'metatags' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:Item',
@@ -676,14 +755,55 @@ function slac_service_catalog_demo_uuid_features_default_content() {
   'name' => '',
   'picture' => 0,
   'path' => array(
-    'pid' => 28,
-    'source' => 'node/3',
+    'pid' => 394,
+    'source' => 'node/260',
     'alias' => 'services/service/mysql-oracle',
     'language' => 'und',
   ),
+  'workbench_moderation' => array(
+    'current' => array(
+      'hid' => 934,
+      'vid' => 974,
+      'nid' => 260,
+      'from_state' => 'draft',
+      'state' => 'draft',
+      'uid' => 0,
+      'stamp' => 1459365204,
+      'published' => 0,
+      'is_current' => 1,
+      'title' => 'MySQL & Oracle',
+      'timestamp' => 1459365204,
+    ),
+    'published' => array(
+      'hid' => 934,
+      'vid' => 974,
+      'nid' => 260,
+      'from_state' => 'draft',
+      'state' => 'published',
+      'uid' => 0,
+      'stamp' => 1459365204,
+      'published' => 0,
+      'is_current' => 1,
+      'title' => 'MySQL & Oracle',
+      'timestamp' => 1459365204,
+    ),
+    'my_revision' => array(
+      'hid' => 934,
+      'vid' => 974,
+      'nid' => 260,
+      'from_state' => 'draft',
+      'state' => 'draft',
+      'uid' => 0,
+      'stamp' => 1459365204,
+      'published' => 0,
+      'is_current' => 1,
+      'title' => 'MySQL & Oracle',
+      'timestamp' => 1459365204,
+    ),
+  ),
   'pathauto_perform_alias' => FALSE,
-  'date' => '2013-08-26 19:53:56 +0300',
-  'author_uuid' => '8387e0ab-2272-428b-b6f3-790625549a25',
+  'date' => '2013-08-26 09:53:56 -0700',
+  'author_uuid' => 'b18f7989-11df-4089-805b-ebc2ea315f1d',
 );
   $nodes[] = array(
   'title' => 'Conference computing for visitors',
@@ -692,14 +812,14 @@ function slac_service_catalog_demo_uuid_features_default_content() {
   'comment' => 1,
   'promote' => 0,
   'sticky' => 0,
-  'vuuid' => 'f9a95a47-73ba-4724-9e64-6966f2706a6e',
+  'vuuid' => 'cd81851c-480d-4043-85af-9d04b83fe70f',
   'type' => 'slac_sc_catalog_item',
   'language' => 'und',
   'created' => 1377535854,
   'tnid' => 0,
   'translate' => 0,
   'uuid' => '7cd09391-5cdc-42a2-80d2-ece053ab13e8',
-  'revision_uid' => 1,
+  'revision_uid' => 0,
   'body' => array(
     'und' => array(
       0 => array(
@@ -792,7 +912,7 @@ function slac_service_catalog_demo_uuid_features_default_content() {
   'field_slac_sc_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 10,
+        'tid' => 39,
         'uuid' => '83b5b76c-6bd8-4a0c-a580-6aa8b22d9f63',
       ),
     ),
@@ -800,19 +920,19 @@ function slac_service_catalog_demo_uuid_features_default_content() {
   'field_slac_sc_eligibility' => array(
     'und' => array(
       0 => array(
-        'tid' => 21,
+        'tid' => 50,
         'uuid' => 'db10ac33-21ec-4d40-bee7-1c34780f1b40',
       ),
       1 => array(
-        'tid' => 24,
+        'tid' => 53,
         'uuid' => 'f3037fca-b840-4394-9c4e-03ea14b6c4bf',
       ),
       2 => array(
-        'tid' => 11,
+        'tid' => 40,
         'uuid' => '9d88d219-f7e7-4354-b6ce-accadf586640',
       ),
       3 => array(
-        'tid' => 1,
+        'tid' => 30,
         'uuid' => '00e2fef3-0966-49ed-8f3d-e3f8d1cd46c0',
       ),
     ),
@@ -856,7 +976,6 @@ function slac_service_catalog_demo_uuid_features_default_content() {
       ),
     ),
   ),
-  'metatags' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:Item',
@@ -919,14 +1038,55 @@ function slac_service_catalog_demo_uuid_features_default_content() {
   'name' => '',
   'picture' => 0,
   'path' => array(
-    'pid' => 29,
-    'source' => 'node/4',
+    'pid' => 395,
+    'source' => 'node/261',
     'alias' => 'services/service/conference-computing-for-visitors',
     'language' => 'und',
   ),
+  'workbench_moderation' => array(
+    'current' => array(
+      'hid' => 935,
+      'vid' => 975,
+      'nid' => 261,
+      'from_state' => 'draft',
+      'state' => 'draft',
+      'uid' => 0,
+      'stamp' => 1459365204,
+      'published' => 0,
+      'is_current' => 1,
+      'title' => 'Conference computing for visitors',
+      'timestamp' => 1459365204,
+    ),
+    'published' => array(
+      'hid' => 935,
+      'vid' => 975,
+      'nid' => 261,
+      'from_state' => 'draft',
+      'state' => 'published',
+      'uid' => 0,
+      'stamp' => 1459365204,
+      'published' => 0,
+      'is_current' => 1,
+      'title' => 'Conference computing for visitors',
+      'timestamp' => 1459365204,
+    ),
+    'my_revision' => array(
+      'hid' => 935,
+      'vid' => 975,
+      'nid' => 261,
+      'from_state' => 'draft',
+      'state' => 'draft',
+      'uid' => 0,
+      'stamp' => 1459365204,
+      'published' => 0,
+      'is_current' => 1,
+      'title' => 'Conference computing for visitors',
+      'timestamp' => 1459365204,
+    ),
+  ),
   'pathauto_perform_alias' => FALSE,
-  'date' => '2013-08-26 19:50:54 +0300',
-  'author_uuid' => '8387e0ab-2272-428b-b6f3-790625549a25',
+  'date' => '2013-08-26 09:50:54 -0700',
+  'author_uuid' => 'b18f7989-11df-4089-805b-ebc2ea315f1d',
 );
   $nodes[] = array(
   'title' => 'Computer accounts',
@@ -935,14 +1095,14 @@ function slac_service_catalog_demo_uuid_features_default_content() {
   'comment' => 1,
   'promote' => 0,
   'sticky' => 0,
-  'vuuid' => 'edd67815-3269-48ea-84a0-981ab871bf66',
+  'vuuid' => '23826e14-a78c-493a-8570-825075f410b4',
   'type' => 'slac_sc_catalog_item',
   'language' => 'und',
   'created' => 1377535432,
   'tnid' => 0,
   'translate' => 0,
   'uuid' => '80cf77e8-afe3-4217-874e-72d79d5d5ad7',
-  'revision_uid' => 1,
+  'revision_uid' => 0,
   'body' => array(
     'und' => array(
       0 => array(
@@ -1035,7 +1195,7 @@ function slac_service_catalog_demo_uuid_features_default_content() {
   'field_slac_sc_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 6,
+        'tid' => 35,
         'uuid' => '40e140d3-4f65-481f-a68f-6d3f43161e13',
       ),
     ),
@@ -1043,15 +1203,15 @@ function slac_service_catalog_demo_uuid_features_default_content() {
   'field_slac_sc_eligibility' => array(
     'und' => array(
       0 => array(
-        'tid' => 21,
+        'tid' => 50,
         'uuid' => 'db10ac33-21ec-4d40-bee7-1c34780f1b40',
       ),
       1 => array(
-        'tid' => 11,
+        'tid' => 40,
         'uuid' => '9d88d219-f7e7-4354-b6ce-accadf586640',
       ),
       2 => array(
-        'tid' => 1,
+        'tid' => 30,
         'uuid' => '00e2fef3-0966-49ed-8f3d-e3f8d1cd46c0',
       ),
     ),
@@ -1120,7 +1280,6 @@ WTS :: Windows Terminal Server (Citrix)',
       ),
     ),
   ),
-  'metatags' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:Item',
@@ -1183,14 +1342,55 @@ WTS :: Windows Terminal Server (Citrix)',
   'name' => '',
   'picture' => 0,
   'path' => array(
-    'pid' => 30,
-    'source' => 'node/5',
+    'pid' => 396,
+    'source' => 'node/262',
     'alias' => 'services/service/computer-accounts',
     'language' => 'und',
   ),
+  'workbench_moderation' => array(
+    'current' => array(
+      'hid' => 936,
+      'vid' => 976,
+      'nid' => 262,
+      'from_state' => 'draft',
+      'state' => 'draft',
+      'uid' => 0,
+      'stamp' => 1459365204,
+      'published' => 0,
+      'is_current' => 1,
+      'title' => 'Computer accounts',
+      'timestamp' => 1459365204,
+    ),
+    'published' => array(
+      'hid' => 936,
+      'vid' => 976,
+      'nid' => 262,
+      'from_state' => 'draft',
+      'state' => 'published',
+      'uid' => 0,
+      'stamp' => 1459365204,
+      'published' => 0,
+      'is_current' => 1,
+      'title' => 'Computer accounts',
+      'timestamp' => 1459365204,
+    ),
+    'my_revision' => array(
+      'hid' => 936,
+      'vid' => 976,
+      'nid' => 262,
+      'from_state' => 'draft',
+      'state' => 'draft',
+      'uid' => 0,
+      'stamp' => 1459365204,
+      'published' => 0,
+      'is_current' => 1,
+      'title' => 'Computer accounts',
+      'timestamp' => 1459365204,
+    ),
+  ),
   'pathauto_perform_alias' => FALSE,
-  'date' => '2013-08-26 19:43:52 +0300',
-  'author_uuid' => '8387e0ab-2272-428b-b6f3-790625549a25',
+  'date' => '2013-08-26 09:43:52 -0700',
+  'author_uuid' => 'b18f7989-11df-4089-805b-ebc2ea315f1d',
 );
   $nodes[] = array(
   'title' => 'SLAC Email',
@@ -1199,14 +1399,14 @@ WTS :: Windows Terminal Server (Citrix)',
   'comment' => 1,
   'promote' => 0,
   'sticky' => 0,
-  'vuuid' => '9b18f204-b01d-4dc4-b564-1f288c519096',
+  'vuuid' => 'c3576c19-5960-4ba6-895d-ec60fbeb442d',
   'type' => 'slac_sc_catalog_item',
   'language' => 'und',
   'created' => 1377536292,
   'tnid' => 0,
   'translate' => 0,
   'uuid' => 'b5a334a9-7c3c-453c-ba37-1c1a4547568d',
-  'revision_uid' => 1,
+  'revision_uid' => 0,
   'body' => array(
     'und' => array(
       0 => array(
@@ -1329,7 +1529,7 @@ WTS :: Windows Terminal Server (Citrix)',
   'field_slac_sc_category' => array(
     'und' => array(
       0 => array(
-        'tid' => 8,
+        'tid' => 37,
         'uuid' => '62a170f8-cfd3-4717-a589-c5f1f7910be7',
       ),
     ),
@@ -1337,15 +1537,15 @@ WTS :: Windows Terminal Server (Citrix)',
   'field_slac_sc_eligibility' => array(
     'und' => array(
       0 => array(
-        'tid' => 21,
+        'tid' => 50,
         'uuid' => 'db10ac33-21ec-4d40-bee7-1c34780f1b40',
       ),
       1 => array(
-        'tid' => 11,
+        'tid' => 40,
         'uuid' => '9d88d219-f7e7-4354-b6ce-accadf586640',
       ),
       2 => array(
-        'tid' => 1,
+        'tid' => 30,
         'uuid' => '00e2fef3-0966-49ed-8f3d-e3f8d1cd46c0',
       ),
     ),
@@ -1373,7 +1573,6 @@ WTS :: Windows Terminal Server (Citrix)',
       ),
     ),
   ),
-  'metatags' => array(),
   'rdf_mapping' => array(
     'rdftype' => array(
       0 => 'sioc:Item',
@@ -1436,14 +1635,55 @@ WTS :: Windows Terminal Server (Citrix)',
   'name' => '',
   'picture' => 0,
   'path' => array(
-    'pid' => 31,
-    'source' => 'node/6',
+    'pid' => 397,
+    'source' => 'node/263',
     'alias' => 'services/service/slac-email',
     'language' => 'und',
   ),
+  'workbench_moderation' => array(
+    'current' => array(
+      'hid' => 937,
+      'vid' => 977,
+      'nid' => 263,
+      'from_state' => 'draft',
+      'state' => 'draft',
+      'uid' => 0,
+      'stamp' => 1459365204,
+      'published' => 0,
+      'is_current' => 1,
+      'title' => 'SLAC Email',
+      'timestamp' => 1459365204,
+    ),
+    'published' => array(
+      'hid' => 937,
+      'vid' => 977,
+      'nid' => 263,
+      'from_state' => 'draft',
+      'state' => 'published',
+      'uid' => 0,
+      'stamp' => 1459365204,
+      'published' => 0,
+      'is_current' => 1,
+      'title' => 'SLAC Email',
+      'timestamp' => 1459365204,
+    ),
+    'my_revision' => array(
+      'hid' => 937,
+      'vid' => 977,
+      'nid' => 263,
+      'from_state' => 'draft',
+      'state' => 'draft',
+      'uid' => 0,
+      'stamp' => 1459365204,
+      'published' => 0,
+      'is_current' => 1,
+      'title' => 'SLAC Email',
+      'timestamp' => 1459365204,
+    ),
+  ),
   'pathauto_perform_alias' => FALSE,
-  'date' => '2013-08-26 19:58:12 +0300',
-  'author_uuid' => '8387e0ab-2272-428b-b6f3-790625549a25',
+  'date' => '2013-08-26 09:58:12 -0700',
+  'author_uuid' => 'b18f7989-11df-4089-805b-ebc2ea315f1d',
 );
   return $nodes;
 }

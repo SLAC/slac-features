@@ -10,7 +10,7 @@
 function slac_blog_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'comment-comment_node_blog-comment_body'
+  // Exported field_instance: 'comment-comment_node_blog-comment_body'.
   $field_instances['comment-comment_node_blog-comment_body'] = array(
     'bundle' => 'comment_node_blog',
     'default_value' => NULL,
@@ -43,7 +43,7 @@ function slac_blog_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-blog-body'
+  // Exported field_instance: 'node-blog-body'.
   $field_instances['node-blog-body'] = array(
     'bundle' => 'blog',
     'default_value' => NULL,
@@ -94,7 +94,7 @@ function slac_blog_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-blog-field_slac_blog_image'
+  // Exported field_instance: 'node-blog-field_slac_blog_image'.
   $field_instances['node-blog-field_slac_blog_image'] = array(
     'bundle' => 'blog',
     'deleted' => 0,
@@ -190,7 +190,7 @@ function slac_blog_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-blog-field_slac_blog_tags'
+  // Exported field_instance: 'node-blog-field_slac_blog_tags'.
   $field_instances['node-blog-field_slac_blog_tags'] = array(
     'bundle' => 'blog',
     'default_value' => NULL,

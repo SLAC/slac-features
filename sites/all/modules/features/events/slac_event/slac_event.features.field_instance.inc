@@ -10,7 +10,7 @@
 function slac_event_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'comment-comment_node_event-comment_body'
+  // Exported field_instance: 'comment-comment_node_event-comment_body'.
   $field_instances['comment-comment_node_event-comment_body'] = array(
     'bundle' => 'comment_node_event',
     'default_value' => NULL,
@@ -43,7 +43,7 @@ function slac_event_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-body'
+  // Exported field_instance: 'node-event-body'.
   $field_instances['node-event-body'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -127,7 +127,7 @@ function slac_event_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-date_repeat_entity_clone_state'
+  // Exported field_instance: 'node-event-date_repeat_entity_clone_state'.
   $field_instances['node-event-date_repeat_entity_clone_state'] = array(
     'bundle' => 'event',
     'default_value' => array(
@@ -192,7 +192,7 @@ function slac_event_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-date_repeat_entity_master_uuid'
+  // Exported field_instance: 'node-event-date_repeat_entity_master_uuid'.
   $field_instances['node-event-date_repeat_entity_master_uuid'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -248,7 +248,7 @@ function slac_event_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_attachment'
+  // Exported field_instance: 'node-event-field_attachment'.
   $field_instances['node-event-field_attachment'] = array(
     'bundle' => 'event',
     'deleted' => 0,
@@ -308,7 +308,7 @@ function slac_event_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_event_image'
+  // Exported field_instance: 'node-event-field_event_image'.
   $field_instances['node-event-field_event_image'] = array(
     'bundle' => 'event',
     'deleted' => 0,
@@ -441,7 +441,7 @@ function slac_event_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_event_tags'
+  // Exported field_instance: 'node-event-field_event_tags'.
   $field_instances['node-event-field_event_tags'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -499,7 +499,7 @@ function slac_event_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_location'
+  // Exported field_instance: 'node-event-field_location'.
   $field_instances['node-event-field_location'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -576,7 +576,7 @@ function slac_event_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_slac_event_audience'
+  // Exported field_instance: 'node-event-field_slac_event_audience'.
   $field_instances['node-event-field_slac_event_audience'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -655,7 +655,7 @@ function slac_event_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_slac_event_category'
+  // Exported field_instance: 'node-event-field_slac_event_category'.
   $field_instances['node-event-field_slac_event_category'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -733,7 +733,7 @@ function slac_event_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_slac_event_contact'
+  // Exported field_instance: 'node-event-field_slac_event_contact'.
   $field_instances['node-event-field_slac_event_contact'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -812,7 +812,7 @@ function slac_event_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_slac_event_date'
+  // Exported field_instance: 'node-event-field_slac_event_date'.
   $field_instances['node-event-field_slac_event_date'] = array(
     'bundle' => 'event',
     'deleted' => 0,
@@ -834,6 +834,7 @@ function slac_event_field_default_field_instances() {
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
           'show_repeat_rule' => '',
         ),
         'type' => 'date_default',
@@ -848,6 +849,7 @@ function slac_event_field_default_field_instances() {
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
           'show_repeat_rule' => '',
         ),
         'type' => 'date_default',
@@ -874,6 +876,7 @@ function slac_event_field_default_field_instances() {
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
           'show_repeat_rule' => '',
         ),
         'type' => 'date_default',
@@ -888,6 +891,7 @@ function slac_event_field_default_field_instances() {
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
           'show_repeat_rule' => '',
         ),
         'type' => 'date_default',
@@ -929,7 +933,7 @@ function slac_event_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_slac_event_link'
+  // Exported field_instance: 'node-event-field_slac_event_link'.
   $field_instances['node-event-field_slac_event_link'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -949,6 +953,8 @@ function slac_event_field_default_field_instances() {
         'settings' => array(
           '404_if_empty' => FALSE,
           'code' => 301,
+          'page_restrictions' => 0,
+          'pages' => '',
         ),
         'type' => 'field_redirection',
         'weight' => 6,
@@ -959,6 +965,8 @@ function slac_event_field_default_field_instances() {
         'settings' => array(
           '404_if_empty' => FALSE,
           'code' => 301,
+          'page_restrictions' => 0,
+          'pages' => '',
         ),
         'type' => 'field_redirection',
         'weight' => 6,
@@ -1001,6 +1009,7 @@ function slac_event_field_default_field_instances() {
     'label' => 'Redirect link',
     'required' => 0,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -1014,6 +1023,7 @@ function slac_event_field_default_field_instances() {
       'enable_tokens' => 1,
       'rel_remove' => 'default',
       'title' => 'none',
+      'title_label_use_field_label' => FALSE,
       'title_maxlength' => 128,
       'title_value' => '',
       'url' => 0,
@@ -1029,7 +1039,7 @@ function slac_event_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_slac_event_organization'
+  // Exported field_instance: 'node-event-field_slac_event_organization'.
   $field_instances['node-event-field_slac_event_organization'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -1108,7 +1118,7 @@ function slac_event_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_slac_event_related_links'
+  // Exported field_instance: 'node-event-field_slac_event_related_links'.
   $field_instances['node-event-field_slac_event_related_links'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -1173,6 +1183,7 @@ function slac_event_field_default_field_instances() {
     'label' => 'Related links',
     'required' => 0,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -1186,6 +1197,7 @@ function slac_event_field_default_field_instances() {
       'enable_tokens' => 1,
       'rel_remove' => 'default',
       'title' => 'optional',
+      'title_label_use_field_label' => FALSE,
       'title_maxlength' => 128,
       'title_value' => '',
       'url' => 0,
@@ -1201,7 +1213,7 @@ function slac_event_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_slac_event_scientific_area'
+  // Exported field_instance: 'node-event-field_slac_event_scientific_area'.
   $field_instances['node-event-field_slac_event_scientific_area'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -1280,7 +1292,8 @@ function slac_event_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-event_categories-field_field_slac_event_color'
+  // Exported field_instance:
+  // 'taxonomy_term-event_categories-field_field_slac_event_color'.
   $field_instances['taxonomy_term-event_categories-field_field_slac_event_color'] = array(
     'bundle' => 'event_categories',
     'default_value' => array(

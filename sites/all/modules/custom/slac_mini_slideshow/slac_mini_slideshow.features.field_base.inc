@@ -10,7 +10,7 @@
 function slac_mini_slideshow_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_mini_slideshow_slide'
+  // Exported field_base: 'field_mini_slideshow_slide'.
   $field_bases['field_mini_slideshow_slide'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -20,8 +20,11 @@ function slac_mini_slideshow_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 0,
     ),
-    'foreign keys' => array(),
-    'indexes' => array(),
+    'indexes' => array(
+      'revision_id' => array(
+        0 => 'revision_id',
+      ),
+    ),
     'locked' => 0,
     'module' => 'field_collection',
     'settings' => array(

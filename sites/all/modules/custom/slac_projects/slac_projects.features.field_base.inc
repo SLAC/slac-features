@@ -10,7 +10,7 @@
 function slac_projects_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_project_info'
+  // Exported field_base: 'field_project_info'.
   $field_bases['field_project_info'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -20,8 +20,11 @@ function slac_projects_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 0,
     ),
-    'foreign keys' => array(),
-    'indexes' => array(),
+    'indexes' => array(
+      'revision_id' => array(
+        0 => 'revision_id',
+      ),
+    ),
     'locked' => 0,
     'module' => 'field_collection',
     'settings' => array(
@@ -33,7 +36,7 @@ function slac_projects_field_default_field_bases() {
     'type' => 'field_collection',
   );
 
-  // Exported field_base: 'field_project_info_description'
+  // Exported field_base: 'field_project_info_description'.
   $field_bases['field_project_info_description'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -42,14 +45,6 @@ function slac_projects_field_default_field_bases() {
     'field_name' => 'field_project_info_description',
     'field_permissions' => array(
       'type' => 0,
-    ),
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
     ),
     'indexes' => array(
       'format' => array(
@@ -65,7 +60,7 @@ function slac_projects_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_project_info_image'
+  // Exported field_base: 'field_project_info_image'.
   $field_bases['field_project_info_image'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -74,14 +69,6 @@ function slac_projects_field_default_field_bases() {
     'field_name' => 'field_project_info_image',
     'field_permissions' => array(
       'type' => 0,
-    ),
-    'foreign keys' => array(
-      'fid' => array(
-        'columns' => array(
-          'fid' => 'fid',
-        ),
-        'table' => 'file_managed',
-      ),
     ),
     'indexes' => array(
       'fid' => array(
@@ -99,7 +86,7 @@ function slac_projects_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_project_info_link'
+  // Exported field_base: 'field_project_info_link'.
   $field_bases['field_project_info_link'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -109,7 +96,6 @@ function slac_projects_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 0,
     ),
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'link',
@@ -133,7 +119,7 @@ function slac_projects_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_project_info_name'
+  // Exported field_base: 'field_project_info_name'.
   $field_bases['field_project_info_name'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -142,14 +128,6 @@ function slac_projects_field_default_field_bases() {
     'field_name' => 'field_project_info_name',
     'field_permissions' => array(
       'type' => 0,
-    ),
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
     ),
     'indexes' => array(
       'format' => array(

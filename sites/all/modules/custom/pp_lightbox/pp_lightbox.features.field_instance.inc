@@ -10,7 +10,7 @@
 function pp_lightbox_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'file-image-field_file_image_description'
+  // Exported field_instance: 'file-image-field_file_image_description'.
   $field_instances['file-image-field_file_image_description'] = array(
     'bundle' => 'image',
     'default_value' => NULL,

@@ -10,7 +10,7 @@
 function slac_faq_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_faq_category'
+  // Exported field_base: 'field_faq_category'.
   $field_bases['field_faq_category'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -19,14 +19,6 @@ function slac_faq_field_default_field_bases() {
     'field_name' => 'field_faq_category',
     'field_permissions' => array(
       'type' => 0,
-    ),
-    'foreign keys' => array(
-      'tid' => array(
-        'columns' => array(
-          'tid' => 'tid',
-        ),
-        'table' => 'taxonomy_term_data',
-      ),
     ),
     'indexes' => array(
       'tid' => array(
@@ -48,7 +40,7 @@ function slac_faq_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_question_details'
+  // Exported field_base: 'field_question_details'.
   $field_bases['field_question_details'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -57,14 +49,6 @@ function slac_faq_field_default_field_bases() {
     'field_name' => 'field_question_details',
     'field_permissions' => array(
       'type' => 0,
-    ),
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
     ),
     'indexes' => array(
       'format' => array(
@@ -80,7 +64,7 @@ function slac_faq_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_status'
+  // Exported field_base: 'field_status'.
   $field_bases['field_status'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -90,7 +74,6 @@ function slac_faq_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 2,
     ),
-    'foreign keys' => array(),
     'indexes' => array(
       'value' => array(
         0 => 'value',

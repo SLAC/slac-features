@@ -10,14 +10,13 @@
 function slac_profile_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_document_type'
+  // Exported field_base: 'field_document_type'.
   $field_bases['field_document_type'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_document_type',
-    'foreign keys' => array(),
     'indexes' => array(
       'value' => array(
         0 => 'value',
@@ -43,21 +42,13 @@ function slac_profile_field_default_field_bases() {
     'type' => 'list_text',
   );
 
-  // Exported field_base: 'field_prf_bio_ar'
+  // Exported field_base: 'field_prf_bio_ar'.
   $field_bases['field_prf_bio_ar'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_prf_bio_ar',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -73,21 +64,13 @@ function slac_profile_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_prf_bio_bio'
+  // Exported field_base: 'field_prf_bio_bio'.
   $field_bases['field_prf_bio_bio'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_prf_bio_bio',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -102,21 +85,13 @@ function slac_profile_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_prf_bio_education'
+  // Exported field_base: 'field_prf_bio_education'.
   $field_bases['field_prf_bio_education'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_prf_bio_education',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -132,21 +107,13 @@ function slac_profile_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_prf_bio_ha'
+  // Exported field_base: 'field_prf_bio_ha'.
   $field_bases['field_prf_bio_ha'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_prf_bio_ha',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -162,21 +129,13 @@ function slac_profile_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_prf_bio_pa'
+  // Exported field_base: 'field_prf_bio_pa'.
   $field_bases['field_prf_bio_pa'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_prf_bio_pa',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -192,21 +151,13 @@ function slac_profile_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_prf_bio_pexp'
+  // Exported field_base: 'field_prf_bio_pexp'.
   $field_bases['field_prf_bio_pexp'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_prf_bio_pexp',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -222,15 +173,18 @@ function slac_profile_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_prf_bio_pub'
+  // Exported field_base: 'field_prf_bio_pub'.
   $field_bases['field_prf_bio_pub'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_prf_bio_pub',
-    'foreign keys' => array(),
-    'indexes' => array(),
+    'indexes' => array(
+      'revision_id' => array(
+        0 => 'revision_id',
+      ),
+    ),
     'locked' => 0,
     'module' => 'field_collection',
     'settings' => array(
@@ -242,15 +196,18 @@ function slac_profile_field_default_field_bases() {
     'type' => 'field_collection',
   );
 
-  // Exported field_base: 'field_prf_bio_tp'
+  // Exported field_base: 'field_prf_bio_tp'.
   $field_bases['field_prf_bio_tp'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_prf_bio_tp',
-    'foreign keys' => array(),
-    'indexes' => array(),
+    'indexes' => array(
+      'revision_id' => array(
+        0 => 'revision_id',
+      ),
+    ),
     'locked' => 0,
     'module' => 'field_collection',
     'settings' => array(
@@ -262,21 +219,13 @@ function slac_profile_field_default_field_bases() {
     'type' => 'field_collection',
   );
 
-  // Exported field_base: 'field_prf_contact_affiliation'
+  // Exported field_base: 'field_prf_contact_affiliation'.
   $field_bases['field_prf_contact_affiliation'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_prf_contact_affiliation',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -292,14 +241,13 @@ function slac_profile_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_prf_contact_email'
+  // Exported field_base: 'field_prf_contact_email'.
   $field_bases['field_prf_contact_email'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_prf_contact_email',
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'email',
@@ -310,7 +258,7 @@ function slac_profile_field_default_field_bases() {
     'type' => 'email',
   );
 
-  // Exported field_base: 'field_prf_contact_fax'
+  // Exported field_base: 'field_prf_contact_fax'.
   $field_bases['field_prf_contact_fax'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -320,7 +268,6 @@ function slac_profile_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 0,
     ),
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'phone',
@@ -332,7 +279,7 @@ function slac_profile_field_default_field_bases() {
     'type' => 'phone',
   );
 
-  // Exported field_base: 'field_prf_contact_fname'
+  // Exported field_base: 'field_prf_contact_fname'.
   $field_bases['field_prf_contact_fname'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -342,14 +289,6 @@ function slac_profile_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 0,
     ),
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -365,7 +304,7 @@ function slac_profile_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_prf_contact_lname'
+  // Exported field_base: 'field_prf_contact_lname'.
   $field_bases['field_prf_contact_lname'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -375,14 +314,6 @@ function slac_profile_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 0,
     ),
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -398,7 +329,7 @@ function slac_profile_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_prf_contact_location'
+  // Exported field_base: 'field_prf_contact_location'.
   $field_bases['field_prf_contact_location'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -408,7 +339,6 @@ function slac_profile_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 0,
     ),
-    'foreign keys' => array(),
     'indexes' => array(
       'lid' => array(
         0 => 'lid',
@@ -487,7 +417,7 @@ function slac_profile_field_default_field_bases() {
     'type' => 'location',
   );
 
-  // Exported field_base: 'field_prf_contact_phone'
+  // Exported field_base: 'field_prf_contact_phone'.
   $field_bases['field_prf_contact_phone'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -497,7 +427,6 @@ function slac_profile_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 0,
     ),
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'phone',
@@ -509,21 +438,13 @@ function slac_profile_field_default_field_bases() {
     'type' => 'phone',
   );
 
-  // Exported field_base: 'field_prf_contact_photo'
+  // Exported field_base: 'field_prf_contact_photo'.
   $field_bases['field_prf_contact_photo'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_prf_contact_photo',
-    'foreign keys' => array(
-      'fid' => array(
-        'columns' => array(
-          'fid' => 'fid',
-        ),
-        'table' => 'file_managed',
-      ),
-    ),
     'indexes' => array(
       'fid' => array(
         0 => 'fid',
@@ -540,7 +461,7 @@ function slac_profile_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_prf_contact_rg'
+  // Exported field_base: 'field_prf_contact_rg'.
   $field_bases['field_prf_contact_rg'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -550,14 +471,6 @@ function slac_profile_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 0,
     ),
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -573,21 +486,13 @@ function slac_profile_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_prf_contact_title'
+  // Exported field_base: 'field_prf_contact_title'.
   $field_bases['field_prf_contact_title'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_prf_contact_title',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -603,7 +508,7 @@ function slac_profile_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_prf_contact_website'
+  // Exported field_base: 'field_prf_contact_website'.
   $field_bases['field_prf_contact_website'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -613,7 +518,6 @@ function slac_profile_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 0,
     ),
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'link',
@@ -637,14 +541,13 @@ function slac_profile_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_prf_social_facebook'
+  // Exported field_base: 'field_prf_social_facebook'.
   $field_bases['field_prf_social_facebook'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_prf_social_facebook',
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'link',
@@ -668,7 +571,7 @@ function slac_profile_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_prf_social_flickr'
+  // Exported field_base: 'field_prf_social_flickr'.
   $field_bases['field_prf_social_flickr'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -678,7 +581,6 @@ function slac_profile_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 0,
     ),
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'link',
@@ -702,14 +604,13 @@ function slac_profile_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_prf_social_googleplus'
+  // Exported field_base: 'field_prf_social_googleplus'.
   $field_bases['field_prf_social_googleplus'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_prf_social_googleplus',
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'link',
@@ -733,14 +634,13 @@ function slac_profile_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_prf_social_linkedin'
+  // Exported field_base: 'field_prf_social_linkedin'.
   $field_bases['field_prf_social_linkedin'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_prf_social_linkedin',
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'link',
@@ -764,7 +664,7 @@ function slac_profile_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_prf_social_twitter'
+  // Exported field_base: 'field_prf_social_twitter'.
   $field_bases['field_prf_social_twitter'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -774,7 +674,6 @@ function slac_profile_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 0,
     ),
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'link',
@@ -798,7 +697,7 @@ function slac_profile_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_published'
+  // Exported field_base: 'field_published'.
   $field_bases['field_published'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -808,7 +707,6 @@ function slac_profile_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 1,
     ),
-    'foreign keys' => array(),
     'indexes' => array(
       'value' => array(
         0 => 'value',
@@ -828,14 +726,13 @@ function slac_profile_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'field_title_and_url'
+  // Exported field_base: 'field_title_and_url'.
   $field_bases['field_title_and_url'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_title_and_url',
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'link',

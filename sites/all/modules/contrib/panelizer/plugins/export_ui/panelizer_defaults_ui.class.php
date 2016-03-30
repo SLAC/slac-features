@@ -52,6 +52,12 @@ class panelizer_defaults_ui extends ctools_export_ui {
   }
 
   function list_page($js, $input) {
+    if ($substitute = $this->entity_handler->get_substitute($this->entity_view_mode, $this->entity_bundle)) {
+      $url = $this->plugin['menu']['menu prefix'] . '/' . $substitute;
+      drupal_set_message(t('This display is managed by the !view_mode display.', array('!view_mode' => l($substitute, $url))), 'status', FALSE);
+      return '';
+    }
+
     drupal_set_title($this->entity_handler->get_bundle_title($this->entity_bundle));
     return parent::list_page($js, $input);
   }
@@ -80,11 +86,25 @@ class panelizer_defaults_ui extends ctools_export_ui {
     return parent::list_filter($form_state, $item);
   }
 
+  /**
+   * Extends ctools_export_ui::edit_form().
+   *
+   * Change the 'exists' callback so that we can build the actual export object
+   * name before checking if it exists.
+   */
+  function edit_form(&$form, &$form_state) {
+    parent::edit_form($form, $form_state);
+    foreach ($form['info'] as $export_key => $settings) {
+      if (!empty($form['info'][$export_key]['#machine_name']['exists'])) {
+        $form['info'][$export_key]['#machine_name']['exists'] = 'panelizer_defaults_ui_edit_name_exists';
+      }
+    }
+  }
+
   function edit_execute_form_standard(&$form_state) {
     if ($form_state['form type'] == 'clone') {
-      list($x, $y, $name) = explode(':', $form_state['original name']);
       $form_state['item']->title = t('Clone of') . ' ' . $form_state['item']->title;
-      $form_state['item']->name = 'clone_of_' . $name;
+      $form_state['item']->name = '';
     }
     else if ($form_state['op'] == 'add') {
       $form_state['item']->panelizer_type = $this->entity_handler->entity_type;
@@ -96,16 +116,10 @@ class panelizer_defaults_ui extends ctools_export_ui {
   }
 
   function edit_form_validate(&$form, &$form_state) {
-    $export_key = $this->plugin['export']['key'];
-    // When adding a machine name, the entity/bundle are left off so the user
-    // does not have to deal with it. We put it back here behind the scenes.
-    $name = implode(':', array($this->entity_handler->entity_type, $this->entity_bundle, $form_state['values'][$export_key]));
 
-    // The page_manager view mode is the pre-view mode support method; we have
-    // to add this view mode as the name if it's a different view mode.
-    if ($this->entity_view_mode != 'page_manager') {
-      $name .= ':' . $this->entity_view_mode;
-    }
+    // Build the actual name of the object for ctools
+    $export_key = $this->plugin['export']['key'];
+    $name = panelizer_defaults_ui_build_export_name($form_state['values'][$export_key], $this);
 
     form_set_value($form['info'][$export_key], $name, $form_state);
   }
@@ -113,7 +127,7 @@ class panelizer_defaults_ui extends ctools_export_ui {
   // Simplest way to override the drupal_goto from parent.
   // Why isn't delete using the redirect system everything else is?
   function delete_page($js, $input, $item) {
-    $clone = clone($item);
+    $clone = clone $item;
     // Change the name into the title so the form shows the right value.
     // @todo file a bug against CTools to use admin title if available.
     $clone->name = $clone->title;
@@ -132,9 +146,43 @@ class panelizer_defaults_ui extends ctools_export_ui {
       ctools_export_crud_delete($this->plugin['schema'], $item);
       $export_key = $this->plugin['export']['key'];
       drupal_set_message(t($this->plugin['strings']['confirmation'][$form_state['op']]['success'], array('%title' => $item->title)));
-      drupal_goto(ctools_export_ui_plugin_base_path($this->plugin) . '/list');
+      drupal_goto(ctools_export_ui_plugin_base_path($this->plugin));
     }
 
     return $output;
   }
+}
+
+/**
+ * Test for #machine_name type to see if an export exists.
+ */
+function panelizer_defaults_ui_edit_name_exists($name, $element, &$form_state) {
+
+  $export_key = $form_state['plugin']['export']['key'];
+  $name = panelizer_defaults_ui_build_export_name($form_state['values'][$export_key], $form_state['object']);
+
+  // Pass it on to the original ctools function
+  return ctools_export_ui_edit_name_exists($name, $element, $form_state);
+}
+
+/**
+ * Build the actual name of the ctools export from a machine name.
+ */
+function panelizer_defaults_ui_build_export_name($machine_name, $object) {
+
+  // When adding a machine name, the entity/bundle are left off so the user
+  // does not have to deal with it. We put it back here behind the scenes.
+  $name = implode(':', array(
+    $object->entity_handler->entity_type,
+    $object->entity_bundle,
+    $machine_name
+  ));
+
+  // The page_manager view mode is the pre-view mode support method; we have
+  // to add this view mode as the name if it's a different view mode.
+  if ($object->entity_view_mode != 'page_manager') {
+    $name .= ':' . $object->entity_view_mode;
+  }
+
+  return $name;
 }

@@ -10,7 +10,7 @@
 function slac_service_catalog_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-slac_sc_catalog_item-body'
+  // Exported field_instance: 'node-slac_sc_catalog_item-body'.
   $field_instances['node-slac_sc_catalog_item-body'] = array(
     'bundle' => 'slac_sc_catalog_item',
     'default_value' => NULL,
@@ -60,7 +60,8 @@ function slac_service_catalog_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-slac_sc_catalog_item-field_slac_sc_category'
+  // Exported field_instance:
+  // 'node-slac_sc_catalog_item-field_slac_sc_category'.
   $field_instances['node-slac_sc_catalog_item-field_slac_sc_category'] = array(
     'bundle' => 'slac_sc_catalog_item',
     'default_value' => NULL,
@@ -103,7 +104,8 @@ function slac_service_catalog_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-slac_sc_catalog_item-field_slac_sc_eligibility'
+  // Exported field_instance:
+  // 'node-slac_sc_catalog_item-field_slac_sc_eligibility'.
   $field_instances['node-slac_sc_catalog_item-field_slac_sc_eligibility'] = array(
     'bundle' => 'slac_sc_catalog_item',
     'default_value' => NULL,
@@ -146,7 +148,7 @@ function slac_service_catalog_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-slac_sc_catalog_item-field_slac_sc_rate'
+  // Exported field_instance: 'node-slac_sc_catalog_item-field_slac_sc_rate'.
   $field_instances['node-slac_sc_catalog_item-field_slac_sc_rate'] = array(
     'bundle' => 'slac_sc_catalog_item',
     'default_value' => NULL,
@@ -192,7 +194,8 @@ function slac_service_catalog_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-slac_sc_catalog_item-field_slac_sc_request_link'
+  // Exported field_instance:
+  // 'node-slac_sc_catalog_item-field_slac_sc_request_link'.
   $field_instances['node-slac_sc_catalog_item-field_slac_sc_request_link'] = array(
     'bundle' => 'slac_sc_catalog_item',
     'default_value' => NULL,
@@ -224,6 +227,7 @@ function slac_service_catalog_field_default_field_instances() {
     'label' => 'Request Service link',
     'required' => 0,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -237,6 +241,7 @@ function slac_service_catalog_field_default_field_instances() {
       'enable_tokens' => 1,
       'rel_remove' => 'default',
       'title' => 'none',
+      'title_label_use_field_label' => FALSE,
       'title_maxlength' => 128,
       'title_value' => '',
       'url' => 0,
@@ -252,7 +257,8 @@ function slac_service_catalog_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-slac_sc_catalog_item-field_slac_sc_requirements'
+  // Exported field_instance:
+  // 'node-slac_sc_catalog_item-field_slac_sc_requirements'.
   $field_instances['node-slac_sc_catalog_item-field_slac_sc_requirements'] = array(
     'bundle' => 'slac_sc_catalog_item',
     'default_value' => NULL,
@@ -298,7 +304,8 @@ function slac_service_catalog_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-slac_sc_catalog_item-field_slac_sc_service_overview'
+  // Exported field_instance:
+  // 'node-slac_sc_catalog_item-field_slac_sc_service_overview'.
   $field_instances['node-slac_sc_catalog_item-field_slac_sc_service_overview'] = array(
     'bundle' => 'slac_sc_catalog_item',
     'default_value' => NULL,
@@ -344,7 +351,7 @@ function slac_service_catalog_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-slac_sc_catalog_item-field_slac_sc_support'
+  // Exported field_instance: 'node-slac_sc_catalog_item-field_slac_sc_support'.
   $field_instances['node-slac_sc_catalog_item-field_slac_sc_support'] = array(
     'bundle' => 'slac_sc_catalog_item',
     'default_value' => NULL,
@@ -390,7 +397,8 @@ function slac_service_catalog_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-slac_sc_category-field_slac_sc_category_logo'
+  // Exported field_instance:
+  // 'taxonomy_term-slac_sc_category-field_slac_sc_category_logo'.
   $field_instances['taxonomy_term-slac_sc_category-field_slac_sc_category_logo'] = array(
     'bundle' => 'slac_sc_category',
     'deleted' => 0,
@@ -434,7 +442,8 @@ function slac_service_catalog_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-slac_sc_self_help-field_sc_catalog_item_extlink'
+  // Exported field_instance:
+  // 'taxonomy_term-slac_sc_self_help-field_sc_catalog_item_extlink'.
   $field_instances['taxonomy_term-slac_sc_self_help-field_sc_catalog_item_extlink'] = array(
     'bundle' => 'slac_sc_self_help',
     'default_value' => NULL,
@@ -454,6 +463,7 @@ function slac_service_catalog_field_default_field_instances() {
     'label' => 'Link',
     'required' => 0,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -467,6 +477,7 @@ function slac_service_catalog_field_default_field_instances() {
       'enable_tokens' => 1,
       'rel_remove' => 'default',
       'title' => 'none',
+      'title_label_use_field_label' => FALSE,
       'title_maxlength' => 128,
       'title_value' => '',
       'url' => 0,

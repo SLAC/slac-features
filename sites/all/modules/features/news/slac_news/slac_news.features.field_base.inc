@@ -10,21 +10,13 @@
 function slac_news_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_slac_news_citation'
+  // Exported field_base: 'field_slac_news_citation'.
   $field_bases['field_slac_news_citation'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_slac_news_citation',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -37,21 +29,13 @@ function slac_news_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_slac_news_contact'
+  // Exported field_base: 'field_slac_news_contact'.
   $field_bases['field_slac_news_contact'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_slac_news_contact',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -64,7 +48,7 @@ function slac_news_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_slac_news_date'
+  // Exported field_base: 'field_slac_news_date'.
   $field_bases['field_slac_news_date'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -74,7 +58,6 @@ function slac_news_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 0,
     ),
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'date',
@@ -99,21 +82,13 @@ function slac_news_field_default_field_bases() {
     'type' => 'datetime',
   );
 
-  // Exported field_base: 'field_slac_news_media'
+  // Exported field_base: 'field_slac_news_media'.
   $field_bases['field_slac_news_media'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_slac_news_media',
-    'foreign keys' => array(
-      'file_managed' => array(
-        'columns' => array(
-          'fid' => 'fid',
-        ),
-        'table' => 'file_managed',
-      ),
-    ),
     'indexes' => array(
       'fid' => array(
         0 => 'fid',
@@ -126,14 +101,13 @@ function slac_news_field_default_field_bases() {
     'type' => 'media',
   );
 
-  // Exported field_base: 'field_slac_news_source'
+  // Exported field_base: 'field_slac_news_source'.
   $field_bases['field_slac_news_source'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_slac_news_source',
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'link',
@@ -156,21 +130,13 @@ function slac_news_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_slac_news_tags'
+  // Exported field_base: 'field_slac_news_tags'.
   $field_bases['field_slac_news_tags'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_slac_news_tags',
-    'foreign keys' => array(
-      'tid' => array(
-        'columns' => array(
-          'tid' => 'tid',
-        ),
-        'table' => 'taxonomy_term_data',
-      ),
-    ),
     'indexes' => array(
       'tid' => array(
         0 => 'tid',
@@ -190,7 +156,7 @@ function slac_news_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_slac_news_type'
+  // Exported field_base: 'field_slac_news_type'.
   $field_bases['field_slac_news_type'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -199,14 +165,6 @@ function slac_news_field_default_field_bases() {
     'field_name' => 'field_slac_news_type',
     'field_permissions' => array(
       'type' => 0,
-    ),
-    'foreign keys' => array(
-      'tid' => array(
-        'columns' => array(
-          'tid' => 'tid',
-        ),
-        'table' => 'taxonomy_term_data',
-      ),
     ),
     'indexes' => array(
       'tid' => array(

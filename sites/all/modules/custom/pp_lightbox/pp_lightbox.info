@@ -19,4 +19,3 @@ features[field_base][] = field_file_image_description
 features[field_instance][] = file-image-field_file_image_description
 features[image][] = lightbox_image_popup
 features[variable][] = pp_lightbox_style_name
-scripts[] = js/pp_lightbox-init.js

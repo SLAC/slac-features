@@ -10,7 +10,7 @@
 function slac_kb_article_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-kb_article-body'
+  // Exported field_instance: 'node-kb_article-body'.
   $field_instances['node-kb_article-body'] = array(
     'bundle' => 'kb_article',
     'default_value' => NULL,
@@ -61,7 +61,7 @@ function slac_kb_article_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-kb_article-field_kb_article_media'
+  // Exported field_instance: 'node-kb_article-field_kb_article_media'.
   $field_instances['node-kb_article-field_kb_article_media'] = array(
     'bundle' => 'kb_article',
     'deleted' => 0,
@@ -142,7 +142,7 @@ function slac_kb_article_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-kb_article-field_kb_categories'
+  // Exported field_instance: 'node-kb_article-field_kb_categories'.
   $field_instances['node-kb_article-field_kb_categories'] = array(
     'bundle' => 'kb_article',
     'default_value' => NULL,

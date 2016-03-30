@@ -10,7 +10,7 @@
 function slac_basic_page_settings_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-page-field_bp_image'
+  // Exported field_instance: 'node-page-field_bp_image'.
   $field_instances['node-page-field_bp_image'] = array(
     'bundle' => 'page',
     'deleted' => 0,

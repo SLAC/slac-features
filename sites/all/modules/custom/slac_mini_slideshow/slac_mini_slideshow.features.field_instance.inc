@@ -10,7 +10,8 @@
 function slac_mini_slideshow_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'field_collection_item-field_mini_slideshow_slide-field_fcollection_image'
+  // Exported field_instance:
+  // 'field_collection_item-field_mini_slideshow_slide-field_fcollection_image'.
   $field_instances['field_collection_item-field_mini_slideshow_slide-field_fcollection_image'] = array(
     'bundle' => 'field_mini_slideshow_slide',
     'deleted' => 0,
@@ -80,7 +81,8 @@ function slac_mini_slideshow_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'fieldable_panels_pane-slac_mini_slideshow-field_mini_slideshow_slide'
+  // Exported field_instance:
+  // 'fieldable_panels_pane-slac_mini_slideshow-field_mini_slideshow_slide'.
   $field_instances['fieldable_panels_pane-slac_mini_slideshow-field_mini_slideshow_slide'] = array(
     'bundle' => 'slac_mini_slideshow',
     'default_value' => NULL,

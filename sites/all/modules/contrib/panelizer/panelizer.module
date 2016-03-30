@@ -164,6 +164,24 @@ function panelizer_admin_paths() {
 }
 
 /**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * Check whether a given view mode is panelized.
+ * Set an error message if there are un-hidden fields
+ * because they won't be printed anyway.
+ */
+function panelizer_form_field_ui_display_overview_form_alter(&$form, &$form_state, $form_id) {
+
+  if (!empty($form['#entity_type']) && !empty($form['#bundle']) && !empty($form['#view_mode'])) {
+    module_load_install('panelizer');
+    if (panelizer_view_mode_extra_field_displays($form['#entity_type'], $form['#bundle'], $form['#view_mode'])) {
+      $message = t("This view mode is being controlled via Panelizer. For performance reasons, it is recommended to move all fields to 'hidden'. Fields not marked as hidden will be prepared for output but will not actually output, thus needlessly increasing render and page load time.");
+      drupal_set_message($message, 'error', FALSE);
+    }
+  }
+}
+
+/**
  * Implements hook_form_alter().
  */
 function panelizer_form_alter(&$form, &$form_state, $form_id) {
@@ -319,14 +337,10 @@ function panelizer_entity_view_alter(&$build, $entity_type) {
 
   list($entity_id, $revision_id, $bundle) = entity_extract_ids($entity_type, $entity);
 
-  // If the requested view mode does not exist, rendering will fall back
-  // to 'default' and we should check that one instead.
-  $view_mode = $build['#view_mode'];
-
-  // Test to see if this view mode is actually panelizable at all.
-  if (!isset($handler->plugin['view modes'][$view_mode]) || (empty($handler->plugin['view modes'][$view_mode]['custom settings']) && empty($handler->plugin['view mode status'][$bundle][$view_mode]))) {
-    $view_mode = 'default';
-  }
+  // If the requested view mode does not exist, check if a substitute is
+  // assigned, otherwise rendering will fall back to 'default' and we should
+  // check that one instead.
+  $view_mode = $handler->get_view_mode($build['#view_mode'], $bundle);
 
   // Make sure the bundle + view mode is actually panelized!
   if (!$handler->is_panelized($bundle . '.' . $view_mode)) {
@@ -356,7 +370,6 @@ function panelizer_entity_view_alter(&$build, $entity_type) {
     $build['#panelizer_entity_id'] = $entity_id;
   }
   $recursion_prevention[$entity_type][$entity_id][$view_mode] = FALSE;
-
 }
 
 // -----------------------------------------------------------------------
@@ -776,7 +789,8 @@ function panelizer_export_ui_switcher_page($entity_handler, $bundle, $plugin_nam
     $view_mode = 'page_manager';
   }
 
-  // Load the $plugin information
+  // Load the $plugin information.
+  ctools_include('export-ui');
   $plugin = ctools_get_export_ui($plugin_name);
   $handler = ctools_export_ui_get_handler($plugin);
 
@@ -811,10 +825,10 @@ function panelizer_export_ui_switcher_page($entity_handler, $bundle, $plugin_nam
 
     foreach ($handler->plugin['redirect'] as $key => $old_path) {
       if ($key == 'add') {
-        $handler->plugin['redirect'][$key] = $path . '/list/%ctools_export_ui/settings';
+        $handler->plugin['redirect'][$key] = $path . '/%ctools_export_ui/settings';
       }
       else {
-        $handler->plugin['redirect'][$key] = $path . '/list';
+        $handler->plugin['redirect'][$key] = $path;
       }
     }
 
@@ -922,7 +936,10 @@ function panelizer_has_no_choice_callback($handler, $bundle, $view_mode = NULL) 
     return FALSE;
   }
 
-  return $handler->has_default_panel($bundle) && !$handler->has_panel_choice($bundle);
+  $has_default = $handler->has_default_panel($bundle);
+  $has_choice = $handler->has_panel_choice($bundle);
+
+  return $has_default && !$has_choice;
 }
 
 /**
@@ -1188,7 +1205,7 @@ function panelizer_panels_cache_get($argument) {
   }
 
   // Extract the entity ID and view mode.
-  list($entity_id, $view_mode) = explode(':', $key);
+  list($entity_id, $view_mode) = explode(':', $key, 2);
   // If this entity supports revisions, and a custom revision is being
   // displayed, it's possible for the key to also include the revision ID.
   if ($handler->supports_revisions && strpos($view_mode, ':') !== FALSE) {
@@ -1392,6 +1409,18 @@ function panelizer_features_pipe_panelizer_defaults_alter(&$more, $data, $export
   return $more;
 }
 
+/**
+ * Implements hook_search_api_alter_callback_info().
+ */
+function panelizer_search_api_alter_callback_info() {
+  $info = array();
+  $info['panelizer'] = array(
+    'name' => t('Panelizer'),
+    'description' => t('Add the content from the Panelizer "Full page override" to the search index.'),
+    'class' => 'PanelizerSearchApiAlterCallback',
+  );
+  return $info;
+}
 // -----------------------------------------------------------------------
 // Theme functions where necessary.
 
@@ -1661,7 +1690,7 @@ function panelizer_form_panels_ipe_edit_control_form_alter(&$form, &$form_state)
     $form_state['revision info'] = $revision_info;
     panelizer_add_revision_info_form($form, $form_state);
     // Tweak the log message field to make it fit better.
-    if (isset($form['revision_information'])) {
+    if (isset($form['revision_information']['log'])) {
       $form['revision_information']['log']['#type'] = 'textfield';
       $form['revision_information']['log']['#description'] = '';
     }
@@ -1670,13 +1699,23 @@ function panelizer_form_panels_ipe_edit_control_form_alter(&$form, &$form_state)
   // If the entity already has customized panelizer data, add the revert button.
   if (!empty($panelizer->did)) {
     if ($handler->has_default_panel($bundle . '.' . $view_mode)) {
+      $uri = entity_uri($handler->entity_type, $entity);
+      $url = $uri['path'];
+      // Support for Workbench Moderation to redirect to the newest revision for
+      // this node.
+      if ($handler->entity_type == 'node' && module_exists('workbench_moderation')) {
+        $url = 'node/' . $entity->nid . '/current-revision';
+      }
+      $redirect_url = url($uri['path'] . '/panelizer/' . $view_mode . '/reset', array('query' => array('destination' => $url)));
+      drupal_add_js(array('panelizer' => array('revert_default_url' => $redirect_url)), 'setting');
+
       $form['buttons']['revert_default'] = array(
         '#type' => 'submit',
         '#value' => t('Revert to @bundle_name default', array('@bundle_name' => $entity_info['bundles'][$bundle]['label'])),
         '#submit' => array('panels_ipe_revert_to_default'),
         '#attributes' => array('class' => array('panels-ipe-cancel')),
         '#id' => 'panelizer-ipe-revert',
-//        '#attributes' => array('onclick' => ''),
+        '#access' => $handler->panelizer_access('defaults', $entity, $panelizer->view_mode),
       );
     }
     return;
@@ -1709,6 +1748,74 @@ function panelizer_form_panels_ipe_edit_control_form_alter(&$form, &$form_state)
     '#id' => 'panelizer-save-default',
     '#access' => $handler->panelizer_access('defaults', $entity, $panelizer->view_mode),
   );
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * Alter the change layout form to support saving as default.
+ */
+function panelizer_form_panels_change_layout_alter(&$form, &$form_state) {
+  // Only alter on initial form build.
+  if (empty($form_state['executed'])) {
+    if (isset($form_state['back'])) {
+      // Do nothing when moving backwards.
+      return;
+    }
+
+    // Extract the display from the form state.
+    $display = $form_state['display'];
+
+    list($module, $type, $key) = explode(':', $display->cache_key, 3);
+
+    // If the display is not owned by Panelizer, or is default handler, exit.
+    if ($module != 'panelizer' || $type == 'default') {
+      return;
+    }
+
+    // Load the $plugin information
+    $handler = panelizer_entity_plugin_get_handler($type);
+    if (!$handler) {
+      return;
+    }
+
+    // Get the entity that's being edited through Panelizer context
+    $entity = $display->context['panelizer']->data;
+
+    // Check if the view mode is configured.
+    list($entity_id, $view_mode) = explode(':', $key);
+    if (empty($entity->panelizer[$view_mode])) {
+      return;
+    }
+
+    list($entity_id, $revision_id, $bundle) = entity_extract_ids($handler->entity_type, $entity);
+    $entity_info = entity_get_info($handler->entity_type);
+
+    $panelizer = $entity->panelizer[$view_mode];
+
+    // Calculate the proper name to add to the cache key, which
+    // has some data stripped off of the true name.
+    $name = 'default';
+    if (!empty($panelizer->name)) {
+      $pieces = explode(':', $panelizer->name);
+      if (isset($pieces[2])) {
+        $name = $pieces[2];
+      }
+    }
+
+    // Change the default button to say "Save as custom".
+    $form['submit']['#value'] = t('Save as custom');
+
+    // Add another button to save as the default instead:
+    $form['save_default'] = array(
+      '#type' => 'submit',
+      '#value' => t('Save as @bundle_name default', array('@bundle_name' => $entity_info['bundles'][$bundle]['label'])),
+      '#submit' => array('panels_ipe_change_to_default', 'panels_change_layout_submit'),
+      '#save-display' => TRUE,
+      '#cache_key' => 'default:' . $handler->entity_type . ':' . $bundle . '.' . $panelizer->view_mode . ':' . $name,
+      '#access' => $handler->panelizer_access('defaults', $entity, $panelizer->view_mode),
+    );
+  }
 }
 
 /**
@@ -1844,4 +1951,43 @@ function panelizer_node_revision_load($revision_id = NULL) {
     return $revision_id;
   }
   return FALSE;
+}
+
+/**
+ * Implements hook_clone_node_alter().
+ *
+ * Custom integration for Node Clone to handle objects that might be embedded
+ * in a custom Panelizer display. Currently supports Fieldable Panels Panes.
+ */
+function panelizer_clone_node_alter(&$node, $context) {
+  if (!empty($node->panelizer)) {
+    foreach ($node->panelizer as $view_mode => &$panelizer) {
+      // Only deal with custom displays, ignore default displays which would
+      // be selected in $panelizer->name.
+      if (!empty($panelizer->did) && !empty($panelizer->display)) {
+        // Loop over each pane.
+        foreach ($panelizer->display->content as &$pane) {
+          // Clone each FPP and then assign the new fpid.
+          if ($pane->type == 'fieldable_panels_pane') {
+            list($subtype, $fpid) = explode(':', $pane->subtype);
+            if ($subtype == 'fpid') {
+              // Clone the FPP object.
+              $fpp = fieldable_panels_panes_load($fpid);
+
+              // Clean the some basic settings.
+              $fpp->fpid = NULL;
+              $fpp->created = NULL;
+              $fpp->timestamp = NULL;
+
+              // Save the cloned FPP.
+              $newfpp = fieldable_panels_panes_save($fpp);
+
+              // Update the FPP reference.
+              $pane->subtype = 'fpid:' . $newfpp->fpid;
+            }
+          }
+        }
+      }
+    }
+  }
 }

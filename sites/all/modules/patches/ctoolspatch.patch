@@ -1,0 +1,216 @@
+diff --git a/plugins/arguments/term.inc b/plugins/arguments/term.inc
+index 868c8aa..65c87ac 100644
+--- a/plugins/arguments/term.inc
++++ b/plugins/arguments/term.inc
+@@ -18,6 +18,7 @@ $plugin = array(
+   'context' => 'ctools_term_context',
+   'default' => array('input_form' => 'tid', 'breadcrumb' => TRUE, 'transform' => FALSE),
+   'settings form' => 'ctools_term_settings_form',
++  'settings form validate' => 'ctools_term_settings_form_validate',
+   'placeholder form' => 'ctools_term_ctools_argument_placeholder',
+   'breadcrumb' => 'ctools_term_breadcrumb',
+ );
+@@ -31,6 +32,16 @@ function ctools_term_context($arg = NULL, $conf = NULL, $empty = FALSE) {
+     return ctools_context_create_empty('entity:taxonomy_term');
+   }
+ 
++  if (isset($conf['vocabularies'])) {
++    $vocabularies = $conf['vocabularies'];
++  }
++  else {
++    $vids = isset($conf['vids']) ? $conf['vids'] : array();
++
++    // Convert legacy use of vids to machine names.
++    $vocabularies = _ctools_term_vocabulary_machine_name_convert($vids);
++  }
++
+   if (is_object($arg)) {
+     $term = $arg;
+   }
+@@ -50,12 +61,11 @@ function ctools_term_context($arg = NULL, $conf = NULL, $empty = FALSE) {
+         }
+ 
+         $terms = taxonomy_get_term_by_name($arg);
+-
+-        $conf['vids'] = is_array($conf['vids']) ? array_filter($conf['vids']) : NULL;
+-        if ((count($terms) > 1) && isset($conf['vids'])) {
++        // If only one term is found, fall through to vocabulary check below.
++        if ((count($terms) > 1) && $vocabularies) {
+           foreach ($terms as $potential) {
+-            foreach ($conf['vids'] as $vid => $active) {
+-              if ($active && $potential->vid == $vid) {
++            foreach ($vocabularies as $machine_name) {
++              if ($potential->vocabulary_machine_name == $machine_name) {
+                 $term = $potential;
+                 // break out of the foreaches AND the case
+                 break 3;
+@@ -72,7 +82,7 @@ function ctools_term_context($arg = NULL, $conf = NULL, $empty = FALSE) {
+     }
+   }
+ 
+-  if (!empty($conf['vids']) && array_filter($conf['vids']) && empty($conf['vids'][$term->vid])) {
++  if ($vocabularies && !isset($vocabularies[$term->vocabulary_machine_name])) {
+     return NULL;
+   }
+ 
+@@ -98,13 +108,20 @@ function ctools_term_settings_form(&$form, &$form_state, $conf) {
+   $vocabularies = taxonomy_get_vocabularies();
+   $options = array();
+   foreach ($vocabularies as $vid => $vocab) {
+-    $options[$vid] = $vocab->name;
++    $options[$vocab->machine_name] = $vocab->name;
++  }
++
++  // Fallback on legacy 'vids', when no vocabularies are available.
++  if (empty($conf['vocabularies']) && !empty($conf['vids'])) {
++    $conf['vocabularies'] = _ctools_term_vocabulary_machine_name_convert(array_filter($conf['vids']));
++    unset($conf['vids']);
+   }
+-  $form['settings']['vids'] = array(
++
++  $form['settings']['vocabularies'] = array(
+     '#title' => t('Limit to these vocabularies'),
+     '#type' => 'checkboxes',
+     '#options' => $options,
+-    '#default_value' => !empty($conf['vids']) ? $conf['vids'] : array(),
++    '#default_value' => !empty($conf['vocabularies']) ? $conf['vocabularies'] : array(),
+     '#description' => t('If no vocabularies are checked, terms from all vocabularies will be accepted.'),
+   );
+ 
+@@ -123,6 +140,12 @@ function ctools_term_settings_form(&$form, &$form_state, $conf) {
+ //  return $form;
+ }
+ 
++function ctools_term_settings_form_validate (&$form, &$form_state) {
++  // Filter the selected vocabularies to avoid storing redundant data.
++  $vocabularies = array_filter($form_state['values']['settings']['vocabularies']);
++  form_set_value($form['settings']['vocabularies'], $vocabularies, $form_state);
++}
++
+ /**
+  * Form fragment to get an argument to convert a placeholder for preview.
+  */
+@@ -161,3 +184,20 @@ function ctools_term_breadcrumb($conf, $context) {
+   $breadcrumb = array_merge(drupal_get_breadcrumb(), array_reverse($breadcrumb));
+   drupal_set_breadcrumb($breadcrumb);
+ }
++
++/**
++ * Helper function to convert convert legacy vocabulary ids into machine names.
++ *
++ * @param array $vids
++ *   Array of either vids.
++ * @return array
++ *   A keyed array of machine names.
++ */
++function _ctools_term_vocabulary_machine_name_convert($vids) {
++  $vocabularies = taxonomy_vocabulary_load_multiple($vids);
++  $return = array();
++  foreach($vocabularies as $vocabulary) {
++    $return[$vocabulary->machine_name] = $vocabulary->machine_name;
++  }
++  return $return;
++}
+diff --git a/term_depth/plugins/access/term_depth.inc b/term_depth/plugins/access/term_depth.inc
+index ab05b60..7f714af 100644
+--- a/term_depth/plugins/access/term_depth.inc
++++ b/term_depth/plugins/access/term_depth.inc
+@@ -25,28 +25,22 @@ $plugin = array(
+  * Settings form for the 'term depth' access plugin.
+  */
+ function term_depth_term_depth_ctools_access_settings($form, &$form_state, $conf) {
+-  // If no configuration was saved before, set some defaults.
+-  if (empty($conf)) {
+-    $conf = array(
+-      'vid' => 0,
+-    );
+-  }
+-  if (!isset($conf['vid'])) {
+-    $conf['vid'] = 0;
+-  }
+-
++  $vocabularies = taxonomy_get_vocabularies();
++  $options = array();
+   // Loop over each of the configured vocabularies.
+-  foreach (taxonomy_get_vocabularies() as $vid => $vocabulary) {
+-    $options[$vid] = $vocabulary->name;
++  foreach ($vocabularies as $vid => $vocab) {
++    $options[$vocab->machine_name] = $vocab->name;
+   }
+ 
+-  $form['settings']['vid'] = array(
++  _term_depth_convert_config_vid_to_vocabulary_name($conf);
++
++  $form['settings']['vocabulary'] = array(
+     '#title' => t('Vocabulary'),
+     '#type' => 'select',
+     '#options' => $options,
+     '#description' => t('Select the vocabulary for this form. If there exists a parent term in that vocabulary, this access check will succeed.'),
+-    '#id' => 'ctools-select-vid',
+-    '#default_value' => $conf['vid'],
++    '#id' => 'ctools-select-vocabulary',
++    '#default_value' => !empty($conf['vocabulary']) ? $conf['vocabulary'] : array(),
+     '#required' => TRUE,
+   );
+ 
+@@ -62,14 +56,23 @@ function term_depth_term_depth_ctools_access_settings($form, &$form_state, $conf
+ }
+ 
+ /**
++ * @param $conf
++ */
++function _term_depth_convert_config_vid_to_vocabulary_name(&$conf) {
++  // Fallback on legacy 'vid', when no vocabularies are available.
++  if (empty($conf['vocabulary']) && !empty($conf['vid'])) {
++    $conf['vocabulary'] = reset(_ctools_term_vocabulary_machine_name_convert(array($conf['vid'])));
++    unset($conf['vid']);
++  }
++}
++
++/**
+  * Submit function for the access plugins settings.
+  *
+- * We cast all settings to numbers to ensure they can be safely handled.
+  */
+ function term_depth_term_depth_ctools_access_settings_submit($form, $form_state) {
+-  foreach (array('depth', 'vid') as $key) {
+-    $form_state['conf'][$key] = (integer) $form_state['values']['settings'][$key];
+-  }
++  $form_state['conf']['depth'] = (integer) $form_state['values']['settings']['depth'];
++  $form_state['conf']['vocabulary'] = array_filter($form_state['conf']['vocabulary']);
+ }
+ 
+ /**
+@@ -82,10 +85,17 @@ function term_depth_term_depth_ctools_access_check($conf, $context) {
+     return FALSE;
+   }
+ 
+-  // Get the $vid.
+-  if (!isset($conf['vid'])) {
++  _term_depth_convert_config_vid_to_vocabulary_name($conf);
++
++  // Get the $vocabulary.
++  if (!isset($conf['vocabulary'])) {
+     return FALSE;
+   }
++  $vocab = taxonomy_vocabulary_machine_name_load($conf['vocabulary']);
++  if ($vocab->vid != $context->data->vid) {
++    return FALSE;
++  }
++
+   $depth = _term_depth($context->data->tid);
+ 
+   return ($depth == $conf['depth']);
+@@ -95,9 +105,9 @@ function term_depth_term_depth_ctools_access_check($conf, $context) {
+  * Provide a summary description based upon the checked terms.
+  */
+ function term_depth_term_depth_ctools_access_summary($conf, $context) {
+-  $vocab = taxonomy_vocabulary_load($conf['vid']);
+-
+-  return t('"@term" has parent in vocabulary "@vocab" at @depth', array(
++  _term_depth_convert_config_vid_to_vocabulary_name($conf);
++  $vocab = taxonomy_vocabulary_machine_name_load($conf['vocabulary']);
++  return t('"@term" is in vocabulary "@vocab" at depth @depth', array(
+     '@term' => $context->identifier,
+     '@vocab' => $vocab->name,
+     '@depth' => $conf['depth'],

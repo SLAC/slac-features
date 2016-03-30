@@ -100,5 +100,4 @@ features_exclude[features_overrides][views_view.news.display|panel_pane_6] = vie
 features_exclude[features_overrides][views_view.news.display|panel_pane_1|display_options|arguments|field_slac_news_type_value] = views_view.news.display|panel_pane_1|display_options|arguments|field_slac_news_type_value
 features_exclude[features_overrides][views_view.news.display|panel_pane_4|display_options|arguments] = views_view.news.display|panel_pane_4|display_options|arguments
 features_exclude[field_base][body] = body
-mtime = 1434835268
 no autodetect = 1

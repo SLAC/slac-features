@@ -31,16 +31,8 @@ function slac_blog_image_default_styles() {
 
   // Exported image style: blog_thumbnail.
   $styles['blog_thumbnail'] = array(
-    'name' => 'blog_thumbnail',
     'effects' => array(
       1 => array(
-        'label' => 'Scale and crop',
-        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
-        'effect callback' => 'image_scale_and_crop_effect',
-        'dimensions callback' => 'image_resize_dimensions',
-        'form callback' => 'image_resize_form',
-        'summary theme' => 'image_resize_summary',
-        'module' => 'image',
         'name' => 'image_scale_and_crop',
         'data' => array(
           'width' => 400,
@@ -54,16 +46,8 @@ function slac_blog_image_default_styles() {
 
   // Exported image style: profile-image-blog-icon.
   $styles['profile-image-blog-icon'] = array(
-    'name' => 'profile-image-blog-icon',
     'effects' => array(
       6 => array(
-        'label' => 'Scale and crop',
-        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
-        'effect callback' => 'image_scale_and_crop_effect',
-        'dimensions callback' => 'image_resize_dimensions',
-        'form callback' => 'image_resize_form',
-        'summary theme' => 'image_resize_summary',
-        'module' => 'image',
         'name' => 'image_scale_and_crop',
         'data' => array(
           'width' => 30,
@@ -77,15 +61,8 @@ function slac_blog_image_default_styles() {
 
   // Exported image style: slac_blog_image.
   $styles['slac_blog_image'] = array(
-    'name' => 'slac_blog_image',
     'effects' => array(
       1 => array(
-        'label' => 'EPSA Image Crop',
-        'help' => '',
-        'dimensions callback' => 'epsacrop_crop_dimensions',
-        'effect callback' => 'epsacrop_crop_image',
-        'form callback' => 'epsacrop_crop_image_form',
-        'module' => 'epsacrop',
         'name' => 'epsacrop_crop',
         'data' => array(
           'width' => 215,
@@ -101,13 +78,6 @@ function slac_blog_image_default_styles() {
         'weight' => -10,
       ),
       2 => array(
-        'label' => 'Scale and crop',
-        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
-        'effect callback' => 'image_scale_and_crop_effect',
-        'dimensions callback' => 'image_resize_dimensions',
-        'form callback' => 'image_resize_form',
-        'summary theme' => 'image_resize_summary',
-        'module' => 'image',
         'name' => 'image_scale_and_crop',
         'data' => array(
           'width' => 410,
@@ -121,15 +91,8 @@ function slac_blog_image_default_styles() {
 
   // Exported image style: slac_blog_image_details.
   $styles['slac_blog_image_details'] = array(
-    'name' => 'slac_blog_image_details',
     'effects' => array(
       1 => array(
-        'label' => 'EPSA Image Crop',
-        'help' => '',
-        'dimensions callback' => 'epsacrop_crop_dimensions',
-        'effect callback' => 'epsacrop_crop_image',
-        'form callback' => 'epsacrop_crop_image_form',
-        'module' => 'epsacrop',
         'name' => 'epsacrop_crop',
         'data' => array(
           'width' => 760,
@@ -145,13 +108,6 @@ function slac_blog_image_default_styles() {
         'weight' => 1,
       ),
       2 => array(
-        'label' => 'Scale and crop',
-        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
-        'effect callback' => 'image_scale_and_crop_effect',
-        'dimensions callback' => 'image_resize_dimensions',
-        'form callback' => 'image_resize_form',
-        'summary theme' => 'image_resize_summary',
-        'module' => 'image',
         'name' => 'image_scale_and_crop',
         'data' => array(
           'width' => 760,

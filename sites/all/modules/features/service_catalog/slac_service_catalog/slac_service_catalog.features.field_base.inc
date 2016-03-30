@@ -10,7 +10,7 @@
 function slac_service_catalog_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_sc_catalog_item_extlink'
+  // Exported field_base: 'field_sc_catalog_item_extlink'.
   $field_bases['field_sc_catalog_item_extlink'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -20,7 +20,6 @@ function slac_service_catalog_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 0,
     ),
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'link',
@@ -43,7 +42,7 @@ function slac_service_catalog_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_slac_sc_category'
+  // Exported field_base: 'field_slac_sc_category'.
   $field_bases['field_slac_sc_category'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -52,14 +51,6 @@ function slac_service_catalog_field_default_field_bases() {
     'field_name' => 'field_slac_sc_category',
     'field_permissions' => array(
       'type' => 0,
-    ),
-    'foreign keys' => array(
-      'tid' => array(
-        'columns' => array(
-          'tid' => 'tid',
-        ),
-        'table' => 'taxonomy_term_data',
-      ),
     ),
     'indexes' => array(
       'tid' => array(
@@ -80,7 +71,7 @@ function slac_service_catalog_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_slac_sc_category_logo'
+  // Exported field_base: 'field_slac_sc_category_logo'.
   $field_bases['field_slac_sc_category_logo'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -89,14 +80,6 @@ function slac_service_catalog_field_default_field_bases() {
     'field_name' => 'field_slac_sc_category_logo',
     'field_permissions' => array(
       'type' => 0,
-    ),
-    'foreign keys' => array(
-      'fid' => array(
-        'columns' => array(
-          'fid' => 'fid',
-        ),
-        'table' => 'file_managed',
-      ),
     ),
     'indexes' => array(
       'fid' => array(
@@ -113,7 +96,7 @@ function slac_service_catalog_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_slac_sc_eligibility'
+  // Exported field_base: 'field_slac_sc_eligibility'.
   $field_bases['field_slac_sc_eligibility'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -122,14 +105,6 @@ function slac_service_catalog_field_default_field_bases() {
     'field_name' => 'field_slac_sc_eligibility',
     'field_permissions' => array(
       'type' => 0,
-    ),
-    'foreign keys' => array(
-      'tid' => array(
-        'columns' => array(
-          'tid' => 'tid',
-        ),
-        'table' => 'taxonomy_term_data',
-      ),
     ),
     'indexes' => array(
       'tid' => array(
@@ -150,7 +125,7 @@ function slac_service_catalog_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_slac_sc_rate'
+  // Exported field_base: 'field_slac_sc_rate'.
   $field_bases['field_slac_sc_rate'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -159,14 +134,6 @@ function slac_service_catalog_field_default_field_bases() {
     'field_name' => 'field_slac_sc_rate',
     'field_permissions' => array(
       'type' => 0,
-    ),
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
     ),
     'indexes' => array(
       'format' => array(
@@ -182,7 +149,7 @@ function slac_service_catalog_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_slac_sc_request_link'
+  // Exported field_base: 'field_slac_sc_request_link'.
   $field_bases['field_slac_sc_request_link'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -192,7 +159,6 @@ function slac_service_catalog_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 0,
     ),
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'link',
@@ -215,7 +181,7 @@ function slac_service_catalog_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_slac_sc_requirements'
+  // Exported field_base: 'field_slac_sc_requirements'.
   $field_bases['field_slac_sc_requirements'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -224,14 +190,6 @@ function slac_service_catalog_field_default_field_bases() {
     'field_name' => 'field_slac_sc_requirements',
     'field_permissions' => array(
       'type' => 0,
-    ),
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
     ),
     'indexes' => array(
       'format' => array(
@@ -247,7 +205,7 @@ function slac_service_catalog_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_slac_sc_service_overview'
+  // Exported field_base: 'field_slac_sc_service_overview'.
   $field_bases['field_slac_sc_service_overview'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -256,14 +214,6 @@ function slac_service_catalog_field_default_field_bases() {
     'field_name' => 'field_slac_sc_service_overview',
     'field_permissions' => array(
       'type' => 0,
-    ),
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
     ),
     'indexes' => array(
       'format' => array(
@@ -277,7 +227,7 @@ function slac_service_catalog_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_slac_sc_support'
+  // Exported field_base: 'field_slac_sc_support'.
   $field_bases['field_slac_sc_support'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -286,14 +236,6 @@ function slac_service_catalog_field_default_field_bases() {
     'field_name' => 'field_slac_sc_support',
     'field_permissions' => array(
       'type' => 0,
-    ),
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
     ),
     'indexes' => array(
       'format' => array(

@@ -10,7 +10,7 @@
 function slac_news_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-slac_news-body'
+  // Exported field_instance: 'node-slac_news-body'.
   $field_instances['node-slac_news-body'] = array(
     'bundle' => 'slac_news',
     'default_value' => NULL,
@@ -70,7 +70,7 @@ function slac_news_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-slac_news-field_slac_news_citation'
+  // Exported field_instance: 'node-slac_news-field_slac_news_citation'.
   $field_instances['node-slac_news-field_slac_news_citation'] = array(
     'bundle' => 'slac_news',
     'default_value' => NULL,
@@ -121,7 +121,7 @@ function slac_news_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-slac_news-field_slac_news_contact'
+  // Exported field_instance: 'node-slac_news-field_slac_news_contact'.
   $field_instances['node-slac_news-field_slac_news_contact'] = array(
     'bundle' => 'slac_news',
     'default_value' => NULL,
@@ -172,7 +172,7 @@ function slac_news_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-slac_news-field_slac_news_date'
+  // Exported field_instance: 'node-slac_news-field_slac_news_date'.
   $field_instances['node-slac_news-field_slac_news_date'] = array(
     'bundle' => 'slac_news',
     'deleted' => 0,
@@ -187,6 +187,7 @@ function slac_news_field_default_field_instances() {
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
           'show_repeat_rule' => 'show',
         ),
         'type' => 'date_default',
@@ -201,6 +202,7 @@ function slac_news_field_default_field_instances() {
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
           'show_repeat_rule' => 'show',
         ),
         'type' => 'date_default',
@@ -215,6 +217,7 @@ function slac_news_field_default_field_instances() {
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
           'show_repeat_rule' => 'show',
         ),
         'type' => 'date_default',
@@ -250,7 +253,7 @@ function slac_news_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-slac_news-field_slac_news_media'
+  // Exported field_instance: 'node-slac_news-field_slac_news_media'.
   $field_instances['node-slac_news-field_slac_news_media'] = array(
     'bundle' => 'slac_news',
     'deleted' => 0,
@@ -320,7 +323,7 @@ function slac_news_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-slac_news-field_slac_news_source'
+  // Exported field_instance: 'node-slac_news-field_slac_news_source'.
   $field_instances['node-slac_news-field_slac_news_source'] = array(
     'bundle' => 'slac_news',
     'default_value' => NULL,
@@ -358,6 +361,7 @@ function slac_news_field_default_field_instances() {
     'label' => 'Redirect link',
     'required' => 0,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -371,6 +375,7 @@ function slac_news_field_default_field_instances() {
       'enable_tokens' => 1,
       'rel_remove' => 'default',
       'title' => 'none',
+      'title_label_use_field_label' => FALSE,
       'title_maxlength' => 128,
       'title_value' => '',
       'url' => 0,
@@ -386,7 +391,7 @@ function slac_news_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-slac_news-field_slac_news_tags'
+  // Exported field_instance: 'node-slac_news-field_slac_news_tags'.
   $field_instances['node-slac_news-field_slac_news_tags'] = array(
     'bundle' => 'slac_news',
     'default_value' => NULL,
@@ -437,7 +442,7 @@ function slac_news_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-slac_news-field_slac_news_type'
+  // Exported field_instance: 'node-slac_news-field_slac_news_type'.
   $field_instances['node-slac_news-field_slac_news_type'] = array(
     'bundle' => 'slac_news',
     'default_value' => NULL,

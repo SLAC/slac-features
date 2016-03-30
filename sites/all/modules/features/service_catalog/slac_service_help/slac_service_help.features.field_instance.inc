@@ -10,7 +10,7 @@
 function slac_service_help_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-support_ticket-field_support_category'
+  // Exported field_instance: 'node-support_ticket-field_support_category'.
   $field_instances['node-support_ticket-field_support_category'] = array(
     'bundle' => 'support_ticket',
     'default_value' => NULL,
@@ -53,7 +53,7 @@ function slac_service_help_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-support_ticket-support_ticket_upload'
+  // Exported field_instance: 'node-support_ticket-support_ticket_upload'.
   $field_instances['node-support_ticket-support_ticket_upload'] = array(
     'bundle' => 'support_ticket',
     'deleted' => 0,

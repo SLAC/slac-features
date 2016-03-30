@@ -10,7 +10,7 @@
 function slac_newsletter_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'comment-comment_node_newsletter-comment_body'
+  // Exported field_instance: 'comment-comment_node_newsletter-comment_body'.
   $field_instances['comment-comment_node_newsletter-comment_body'] = array(
     'bundle' => 'comment_node_newsletter',
     'default_value' => NULL,
@@ -43,7 +43,7 @@ function slac_newsletter_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-newsletter-body'
+  // Exported field_instance: 'node-newsletter-body'.
   $field_instances['node-newsletter-body'] = array(
     'bundle' => 'newsletter',
     'default_value' => NULL,
@@ -105,7 +105,7 @@ function slac_newsletter_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-newsletter-field_newsletter_date'
+  // Exported field_instance: 'node-newsletter-field_newsletter_date'.
   $field_instances['node-newsletter-field_newsletter_date'] = array(
     'bundle' => 'newsletter',
     'deleted' => 0,
@@ -126,6 +126,7 @@ function slac_newsletter_field_default_field_instances() {
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
           'show_repeat_rule' => 'show',
         ),
         'type' => 'date_default',
@@ -152,6 +153,7 @@ function slac_newsletter_field_default_field_instances() {
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
           'show_repeat_rule' => 'show',
         ),
         'type' => 'date_default',
@@ -187,7 +189,7 @@ function slac_newsletter_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-newsletter-field_simplenews_term'
+  // Exported field_instance: 'node-newsletter-field_simplenews_term'.
   $field_instances['node-newsletter-field_simplenews_term'] = array(
     'bundle' => 'newsletter',
     'default_value' => NULL,

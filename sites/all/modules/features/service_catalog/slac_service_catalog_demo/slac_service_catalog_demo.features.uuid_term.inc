@@ -17,7 +17,6 @@ function slac_service_catalog_demo_uuid_features_default_terms() {
     'weight' => 0,
     'uuid' => '00e2fef3-0966-49ed-8f3d-e3f8d1cd46c0',
     'vocabulary_machine_name' => 'slac_sc_eligibility',
-    'metatags' => array(),
   );
   $terms[] = array(
     'name' => 'Desktop Computing',
@@ -27,7 +26,6 @@ function slac_service_catalog_demo_uuid_features_default_terms() {
     'uuid' => '04690b24-a63c-403b-a4ee-b0f96929f27b',
     'vocabulary_machine_name' => 'slac_sc_category',
     'field_slac_sc_category_logo' => array(),
-    'metatags' => array(),
   );
   $terms[] = array(
     'name' => 'Printing',
@@ -37,7 +35,6 @@ function slac_service_catalog_demo_uuid_features_default_terms() {
     'uuid' => '1717ac83-c1b6-4513-956d-76ccf6726c11',
     'vocabulary_machine_name' => 'slac_sc_category',
     'field_slac_sc_category_logo' => array(),
-    'metatags' => array(),
   );
   $terms[] = array(
     'name' => 'Set up MySQL database',
@@ -55,7 +52,6 @@ function slac_service_catalog_demo_uuid_features_default_terms() {
         ),
       ),
     ),
-    'metatags' => array(),
   );
   $terms[] = array(
     'name' => 'Manage documents',
@@ -73,7 +69,6 @@ function slac_service_catalog_demo_uuid_features_default_terms() {
         ),
       ),
     ),
-    'metatags' => array(),
   );
   $terms[] = array(
     'name' => 'Accounts',
@@ -83,7 +78,6 @@ function slac_service_catalog_demo_uuid_features_default_terms() {
     'uuid' => '40e140d3-4f65-481f-a68f-6d3f43161e13',
     'vocabulary_machine_name' => 'slac_sc_category',
     'field_slac_sc_category_logo' => array(),
-    'metatags' => array(),
   );
   $terms[] = array(
     'name' => 'Set up email',
@@ -101,7 +95,6 @@ function slac_service_catalog_demo_uuid_features_default_terms() {
         ),
       ),
     ),
-    'metatags' => array(),
   );
   $terms[] = array(
     'name' => 'Email',
@@ -111,7 +104,6 @@ function slac_service_catalog_demo_uuid_features_default_terms() {
     'uuid' => '62a170f8-cfd3-4717-a589-c5f1f7910be7',
     'vocabulary_machine_name' => 'slac_sc_category',
     'field_slac_sc_category_logo' => array(),
-    'metatags' => array(),
   );
   $terms[] = array(
     'name' => 'Video Services',
@@ -121,7 +113,6 @@ function slac_service_catalog_demo_uuid_features_default_terms() {
     'uuid' => '705c93be-21b0-4cce-9443-638bb1472837',
     'vocabulary_machine_name' => 'slac_sc_category',
     'field_slac_sc_category_logo' => array(),
-    'metatags' => array(),
   );
   $terms[] = array(
     'name' => 'Conference Computing',
@@ -131,7 +122,6 @@ function slac_service_catalog_demo_uuid_features_default_terms() {
     'uuid' => '83b5b76c-6bd8-4a0c-a580-6aa8b22d9f63',
     'vocabulary_machine_name' => 'slac_sc_category',
     'field_slac_sc_category_logo' => array(),
-    'metatags' => array(),
   );
   $terms[] = array(
     'name' => 'Researcher',
@@ -140,7 +130,6 @@ function slac_service_catalog_demo_uuid_features_default_terms() {
     'weight' => 0,
     'uuid' => '9d88d219-f7e7-4354-b6ce-accadf586640',
     'vocabulary_machine_name' => 'slac_sc_eligibility',
-    'metatags' => array(),
   );
   $terms[] = array(
     'name' => 'Networking',
@@ -150,7 +139,6 @@ function slac_service_catalog_demo_uuid_features_default_terms() {
     'uuid' => '9fdafd4b-eceb-484d-9590-327d907b4d25',
     'vocabulary_machine_name' => 'slac_sc_category',
     'field_slac_sc_category_logo' => array(),
-    'metatags' => array(),
   );
   $terms[] = array(
     'name' => 'Remote Acccess',
@@ -160,7 +148,6 @@ function slac_service_catalog_demo_uuid_features_default_terms() {
     'uuid' => 'a51c3a71-38f8-40d0-aa1f-8ab427698165',
     'vocabulary_machine_name' => 'slac_sc_category',
     'field_slac_sc_category_logo' => array(),
-    'metatags' => array(),
   );
   $terms[] = array(
     'name' => 'Databases',
@@ -170,7 +157,6 @@ function slac_service_catalog_demo_uuid_features_default_terms() {
     'uuid' => 'ac074ab7-4b52-4911-a6b0-3d92f247aa2a',
     'vocabulary_machine_name' => 'slac_sc_category',
     'field_slac_sc_category_logo' => array(),
-    'metatags' => array(),
   );
   $terms[] = array(
     'name' => 'Loaner Equipment',
@@ -180,7 +166,6 @@ function slac_service_catalog_demo_uuid_features_default_terms() {
     'uuid' => 'b0f91270-651f-498d-9311-e09a3f22f85d',
     'vocabulary_machine_name' => 'slac_sc_category',
     'field_slac_sc_category_logo' => array(),
-    'metatags' => array(),
   );
   $terms[] = array(
     'name' => 'Telecommunications',
@@ -190,7 +175,6 @@ function slac_service_catalog_demo_uuid_features_default_terms() {
     'uuid' => 'b42288fb-32a2-4c68-9ed3-86603872c2e2',
     'vocabulary_machine_name' => 'slac_sc_category',
     'field_slac_sc_category_logo' => array(),
-    'metatags' => array(),
   );
   $terms[] = array(
     'name' => 'Visitors & Public Computing Terminals',
@@ -200,7 +184,6 @@ function slac_service_catalog_demo_uuid_features_default_terms() {
     'uuid' => 'bddafee1-a17c-4f9c-8a8c-e02b23b88333',
     'vocabulary_machine_name' => 'slac_sc_category',
     'field_slac_sc_category_logo' => array(),
-    'metatags' => array(),
   );
   $terms[] = array(
     'name' => 'Create computer accounts',
@@ -218,7 +201,6 @@ function slac_service_catalog_demo_uuid_features_default_terms() {
         ),
       ),
     ),
-    'metatags' => array(),
   );
   $terms[] = array(
     'name' => 'Application Support',
@@ -228,7 +210,6 @@ function slac_service_catalog_demo_uuid_features_default_terms() {
     'uuid' => 'cf2ef1a1-ee93-434b-a103-a0a123dcc6aa',
     'vocabulary_machine_name' => 'slac_sc_category',
     'field_slac_sc_category_logo' => array(),
-    'metatags' => array(),
   );
   $terms[] = array(
     'name' => 'Omnicode Access',
@@ -239,7 +220,6 @@ function slac_service_catalog_demo_uuid_features_default_terms() {
     'uuid' => 'd79a3de7-ec4b-45c5-b367-191601450eba',
     'vocabulary_machine_name' => 'slac_sc_category',
     'field_slac_sc_category_logo' => array(),
-    'metatags' => array(),
   );
   $terms[] = array(
     'name' => 'Collaborator',
@@ -248,7 +228,6 @@ function slac_service_catalog_demo_uuid_features_default_terms() {
     'weight' => 0,
     'uuid' => 'db10ac33-21ec-4d40-bee7-1c34780f1b40',
     'vocabulary_machine_name' => 'slac_sc_eligibility',
-    'metatags' => array(),
   );
   $terms[] = array(
     'name' => 'Create a website',
@@ -266,7 +245,6 @@ function slac_service_catalog_demo_uuid_features_default_terms() {
         ),
       ),
     ),
-    'metatags' => array(),
   );
   $terms[] = array(
     'name' => 'File System',
@@ -276,7 +254,6 @@ function slac_service_catalog_demo_uuid_features_default_terms() {
     'uuid' => 'e6c0c94e-d407-4bc5-a2ca-98d2dffb52d7',
     'vocabulary_machine_name' => 'slac_sc_category',
     'field_slac_sc_category_logo' => array(),
-    'metatags' => array(),
   );
   $terms[] = array(
     'name' => 'Contractor',
@@ -285,7 +262,6 @@ function slac_service_catalog_demo_uuid_features_default_terms() {
     'weight' => 0,
     'uuid' => 'f3037fca-b840-4394-9c4e-03ea14b6c4bf',
     'vocabulary_machine_name' => 'slac_sc_eligibility',
-    'metatags' => array(),
   );
   $terms[] = array(
     'name' => 'Web (WWW)',
@@ -295,7 +271,6 @@ function slac_service_catalog_demo_uuid_features_default_terms() {
     'uuid' => 'fe373df2-e8cb-4f22-90c7-9ebebd9187a0',
     'vocabulary_machine_name' => 'slac_sc_category',
     'field_slac_sc_category_logo' => array(),
-    'metatags' => array(),
   );
   return $terms;
 }

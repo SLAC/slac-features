@@ -210,7 +210,7 @@ function default_site_template_eo_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'superfish_pathcss_1';
-  $strongarm->value = '';
+  $strongarm->value = 'sites/vue-test.slac.stanford.edu/files/css/style.css';
   $export['superfish_pathcss_1'] = $strongarm;
 
   $strongarm = new stdClass();

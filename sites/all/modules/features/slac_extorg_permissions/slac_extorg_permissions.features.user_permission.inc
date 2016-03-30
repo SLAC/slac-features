@@ -1145,15 +1145,6 @@ function slac_extorg_permissions_user_default_permissions() {
     'module' => 'field_permissions',
   );
 
-  // Exported permission: 'create fieldable fieldable_panels_pane'.
-  $permissions['create fieldable fieldable_panels_pane'] = array(
-    'name' => 'create fieldable fieldable_panels_pane',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'fieldable_panels_panes',
-  );
-
   // Exported permission: 'create fieldable share_block'.
   $permissions['create fieldable share_block'] = array(
     'name' => 'create fieldable share_block',
@@ -1552,15 +1543,6 @@ function slac_extorg_permissions_user_default_permissions() {
       'manager' => 'manager',
     ),
     'module' => 'node',
-  );
-
-  // Exported permission: 'delete fieldable fieldable_panels_pane'.
-  $permissions['delete fieldable fieldable_panels_pane'] = array(
-    'name' => 'delete fieldable fieldable_panels_pane',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'fieldable_panels_panes',
   );
 
   // Exported permission: 'delete fieldable share_block'.
@@ -2296,16 +2278,6 @@ function slac_extorg_permissions_user_default_permissions() {
       'manager' => 'manager',
     ),
     'module' => 'field_permissions',
-  );
-
-  // Exported permission: 'edit fieldable fieldable_panels_pane'.
-  $permissions['edit fieldable fieldable_panels_pane'] = array(
-    'name' => 'edit fieldable fieldable_panels_pane',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'manager' => 'manager',
-    ),
-    'module' => 'fieldable_panels_panes',
   );
 
   // Exported permission: 'edit fieldable share_block'.

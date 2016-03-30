@@ -10,7 +10,7 @@
 function slac_faq_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'comment-comment_node_faq-comment_body'
+  // Exported field_instance: 'comment-comment_node_faq-comment_body'.
   $field_instances['comment-comment_node_faq-comment_body'] = array(
     'bundle' => 'comment_node_faq',
     'default_value' => NULL,
@@ -43,7 +43,7 @@ function slac_faq_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-faq-body'
+  // Exported field_instance: 'node-faq-body'.
   $field_instances['node-faq-body'] = array(
     'bundle' => 'faq',
     'default_value' => NULL,
@@ -93,7 +93,7 @@ function slac_faq_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-faq-field_faq_category'
+  // Exported field_instance: 'node-faq-field_faq_category'.
   $field_instances['node-faq-field_faq_category'] = array(
     'bundle' => 'faq',
     'default_value' => NULL,
@@ -136,7 +136,7 @@ function slac_faq_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-faq-field_question_details'
+  // Exported field_instance: 'node-faq-field_question_details'.
   $field_instances['node-faq-field_question_details'] = array(
     'bundle' => 'faq',
     'default_value' => NULL,
@@ -182,7 +182,7 @@ function slac_faq_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-faq-field_status'
+  // Exported field_instance: 'node-faq-field_status'.
   $field_instances['node-faq-field_status'] = array(
     'bundle' => 'faq',
     'default_value' => array(

@@ -77,5 +77,4 @@ features_exclude[dependencies][views] = views
 features_exclude[field][taxonomy_term-slac_sc_category-field_slac_sc_category_logo] = taxonomy_term-slac_sc_category-field_slac_sc_category_logo
 features_exclude[field][taxonomy_term-slac_sc_self_help-field_sc_catalog_item_extlink] = taxonomy_term-slac_sc_self_help-field_sc_catalog_item_extlink
 features_exclude[field_base][body] = body
-mtime = 1434835268
 no autodetect = 1
