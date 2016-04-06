@@ -1,9 +1,16 @@
 <?php
 
-// Barbados
+/**
+ * @file
+ * Barbados.
+ */
 
+/**
+ * Returns an associative array of states/territories.
+ */
 function location_province_list_bb() {
-  return array('CC' => "Christ Church",
+  return array(
+    'CC' => "Christ Church",
     'AND' => "Saint Andrew",
     'GEO' => "Saint George",
     'JAM' => "Saint James",
@@ -13,7 +20,8 @@ function location_province_list_bb() {
     'MIC' => "Saint Michael",
     'PET' => "Saint Peter",
     'PHI' => "Saint Philip",
-    'THO' => "Saint Thomas");
+    'THO' => "Saint Thomas"
+  );
 }
 
 /**

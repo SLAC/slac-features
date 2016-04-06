@@ -1,9 +1,16 @@
 <?php
 
-// Turkey
+/**
+ * @file
+ * Turkey.
+ */
 
+/**
+ * Returns an associative array of states/territories.
+ */
 function location_province_list_tr() {
-  return array('ADA' => "Adana",
+  return array(
+    'ADA' => "Adana",
     'ADI' => "Adiyaman",
     'AFY' => "Afyonkarahisar",
     'AGR' => "Agri",
@@ -83,7 +90,8 @@ function location_province_list_tr() {
     'VAN' => "Van",
     'YAL' => "Yalova",
     'YOZ' => "Yozgat",
-    'ZON' => "Zonguldak");
+    'ZON' => "Zonguldak"
+  );
 }
 
 /**

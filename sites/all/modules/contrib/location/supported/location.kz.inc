@@ -1,9 +1,16 @@
 <?php
 
-// Kazakhstan
+/**
+ * @file
+ * Kazakhstan.
+ */
 
+/**
+ * Returns an associative array of states/territories.
+ */
 function location_province_list_kz() {
-  return array('ALA' => "Almaty",
+  return array(
+    'ALA' => "Almaty",
     'AST' => "Astana",
     'ALM' => "Almaty",
     'AKM' => "Aqmola",
@@ -18,7 +25,8 @@ function location_province_list_kz() {
     'KZY' => "Qyzylorda",
     'VOS' => "Shyghys Qazaqstan",
     'SEV' => "Soltustik Qazaqstan",
-    'ZHA' => "Zhambyl");
+    'ZHA' => "Zhambyl"
+  );
 }
 
 /**

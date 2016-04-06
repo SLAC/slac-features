@@ -1,10 +1,15 @@
 <?php
 
-// Serbia
+/**
+ * @file
+ * Serbia.
+ */
 
+/**
+ * Returns an associative array of states/territories.
+ */
 function location_province_list_rs() {
-  return array(
-  );
+  return array();
 }
 
 /**

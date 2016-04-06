@@ -1,9 +1,16 @@
 <?php
 
-// Central African Republic
+/**
+ * @file
+ * Central African Republic.
+ */
 
+/**
+ * Returns an associative array of states/territories.
+ */
 function location_province_list_cf() {
-  return array('BBA' => "Bamingui-Bangoran",
+  return array(
+    'BBA' => "Bamingui-Bangoran",
     'BKO' => "Basse-Kotto",
     'HKO' => "Haute-Kotto",
     'HMB' => "Haut-Mbomou",
@@ -19,7 +26,8 @@ function location_province_list_cf() {
     'VAK' => "Vakaga",
     'NGR' => "Nana-Grebizi",
     'SMB' => "Sangha-Mbaere",
-    'BAN' => "Bangui");
+    'BAN' => "Bangui"
+  );
 }
 
 /**
