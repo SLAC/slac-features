@@ -1,0 +1,17 @@
+name = SLAC Features Admin
+description = Improved Admin Theme, menu and views
+core = 7.x
+package = SLAC
+version = 7.x-1.0
+dependencies[] = adminimal_admin_menu
+dependencies[] = ctools
+dependencies[] = features
+dependencies[] = menu
+dependencies[] = strongarm
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:2
+features[menu_custom][] = management
+features[menu_links][] = management_adminimal-menu:admin/config/administration/adminimal_menu
+features[variable][] = admin_theme
+features[variable][] = theme_adminimal_settings
+project path = sites/all/modules/features
