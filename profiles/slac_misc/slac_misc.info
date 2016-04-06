@@ -71,7 +71,6 @@ dependencies[] = uuid_features
 dependencies[] = strongarm
 
 ;Administration
-dependencies[] = adminimal_theme
 dependencies[] = adminimal_admin_menu
 dependencies[] = slac_features_admin
 

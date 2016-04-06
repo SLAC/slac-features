@@ -34,7 +34,6 @@ dependencies[] = superfish
 dependencies[] = admin_menu
 dependencies[] = admin_views
 dependencies[] = module_filter
-dependencies[] = adminimal_theme
 dependencies[] = adminimal_admin_menu
 dependencies[] = slac_features_admin
 dependencies[] = ctools

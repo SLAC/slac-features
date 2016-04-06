@@ -209,9 +209,9 @@ function slac_profiles_shared_filtered_format() {
     ->condition('type', 'theme')
     ->condition('name', 'seven')
     ->execute();
-  variable_set('admin_theme', 'seven');
+  variable_set('admin_theme', 'minimal');
   variable_set('node_admin_theme', '1');
-  theme_disable(array('bartik'));
+  theme_disable(array('bartik','seven',));
 
   // Enable default permissions for system roles.
   $filtered_html_permission = filter_permission_name($filtered_html_format);
