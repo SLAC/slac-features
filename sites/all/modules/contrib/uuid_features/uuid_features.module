@@ -336,7 +336,7 @@ function uuid_features_file_field_import(&$import, $entity_type) {
     $info = field_info_field($field_instance['field_name']);
     $supported_fields = array_map('trim', explode(',', variable_get('uuid_features_file_supported_fields', 'file, image')));
     // Check if this field should implement file import/export system.
-    if (in_array($info['type'], $supported_fields)) {
+    if (!empty($field) && in_array($info['type'], $supported_fields)) {
       // We need to loop into each language because i18n translation can build
       // fields with different language than the term one.
       foreach($field as $language => $files) {
