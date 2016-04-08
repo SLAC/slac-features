@@ -70,6 +70,10 @@ dependencies[] = uuid
 dependencies[] = uuid_features
 dependencies[] = strongarm
 
+;Administration
+dependencies[] = adminimal_admin_menu
+dependencies[] = slac_features_admin
+
 ;FAQ
 dependencies[] = entity_token
 dependencies[] = rules

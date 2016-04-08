@@ -1,9 +1,16 @@
 <?php
 
-// Solomon Islands
+/**
+ * @file
+ * Solomon Islands.
+ */
 
+/**
+ * Returns an associative array of states/territories.
+ */
 function location_province_list_sb() {
-  return array('CE' => "Central",
+  return array(
+    'CE' => "Central",
     'CH' => "Choiseul",
     'GC' => "Guadalcanal",
     'HO' => "Honiara",
@@ -12,7 +19,8 @@ function location_province_list_sb() {
     'ML' => "Malaita",
     'RB' => "Rennell and Bellona",
     'TM' => "Temotu",
-    'WE' => "Western");
+    'WE' => "Western"
+  );
 }
 
 /**

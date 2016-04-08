@@ -1,14 +1,22 @@
 <?php
 
-// Finland
+/**
+ * @file
+ * Finland.
+ */
 
+/**
+ * Returns an associative array of states/territories.
+ */
 function location_province_list_fi() {
-  return array('ES' => "Etela-Suomen laani",
+  return array(
+    'ES' => "Etela-Suomen laani",
     'LS' => "Lansi-Suomen laani",
     'IS' => "Ita-Suomen laani",
     'OU' => "Oulun laani",
     'LL' => "Lapin laani",
-    'AH' => "Ahvenanmaan laani");
+    'AH' => "Ahvenanmaan laani"
+  );
 }
 
 /**

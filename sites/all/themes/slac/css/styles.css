@@ -508,7 +508,10 @@ ul.tabs li a:hover, .action-links li a:hover { background-color: #2e2e2e; }
 .faq-list .views-field-title { cursor: pointer; color: #871628; font-weight: bold; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; position: relative; padding-left: 15px; }
 .faq-list .views-field-title:hover { text-decoration: none; }
 .faq-list .views-field-title:before { content: "-"; width: 10px; height: 10px; left: 0; top: 50%; line-height: 1; position: absolute; margin-top: -11px; }
-.faq-list .views-field-field-slac-faq-answer { font-size: 14px; font-size: 0.875rem; line-height: 20px; padding-left: 20px; margin-top: 10px; margin-bottom: 5px; }
+
+.general-two-col .general-left .faq-list ul .views-field-field-slac-faq-answer .faq-answer ul { padding-left: 0.25em; }
+.general-two-col .general-left .faq-list ul .views-field-field-slac-faq-answer .faq-answer ul li { list-style: disc; border: 0px; line-height: 0.1em; margin-top: 1em; margin-left: 2em; }
+.general-two-col .general-left .faq-list ul .views-field-field-slac-faq-answer .faq-answer ul .views-field-field-slac-faq-answer { font-size: 14px; font-size: 0.875rem; line-height: 20px; padding-left: 20px; margin-top: 10px; margin-bottom: 5px; }
 
 .faq-comments h2, .pane-node-comments h2 { font-size: 18px; font-size: 1.125rem; margin-top: 20px; margin-bottom: 10px; }
 .faq-comments header, .pane-node-comments header { border-bottom: 1px solid #f3f1eb; padding-bottom: 2px; }

@@ -9,6 +9,10 @@
  * Implementation of hook_default_page_manager_handlers()
  */
 function panels_everywhere_default_page_manager_handlers() {
+  if (!variable_get('panels_everywhere_provide_sample', FALSE)) {
+    return;
+  }
+
   $handler = new stdClass;
   $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
   $handler->api_version = 1;

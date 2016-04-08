@@ -1,15 +1,23 @@
 <?php
 
-// Equatorial Guinea
+/**
+ * @file
+ * Equatorial Guinea.
+ */
 
+/**
+ * Returns an associative array of states/territories.
+ */
 function location_province_list_gq() {
-  return array('AN' => "Provincia Annobon",
+  return array(
+    'AN' => "Provincia Annobon",
     'BN' => "Provincia Bioko Norte",
     'BS' => "Provincia Bioko Sur",
     'CS' => "Provincia Centro Sur",
     'KN' => "Provincia Kie-Ntem",
     'LI' => "Provincia Litoral",
-    'WN' => "Provincia Wele-Nzas");
+    'WN' => "Provincia Wele-Nzas"
+  );
 }
 
 /**

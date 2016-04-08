@@ -11,7 +11,6 @@
  * see jreject.module.
  */
 function jreject_configure_system() {
-  jreject_is_lib_installed();
   $conf = variable_get('jreject_options_alpha', array());
   $form = array();
   $form['jreject_enable'] = array(
@@ -76,7 +75,6 @@ function jreject_configure_system() {
  * see jreject.module.
  */
 function jreject_configure_options() {
-  jreject_is_lib_installed();
   $conf = variable_get('jreject_options_beta', array());
   $form = array();
   $form['jreject_close'] = array(
@@ -138,18 +136,17 @@ function jreject_configure_options() {
  * see jreject.module.
  */
 function jreject_configure_browsers() {
-  jreject_is_lib_installed();
   $form = array();
   $form['intro'] = array(
     '#type' => 'item',
     '#markup' => '<p>Select the browser types and versions you want to display the modal popup for:</p>',
   );
   $conf = variable_get('jreject_browser_config', array());
-  $browsers = array("msie" => array("Internet Explorer" => range(5, 9)),
-                    "firefox" => array("Firefox" => range(2, 12)),
-                    "chrome" => array("Chrome" => range(1, 18)),
-                    "safari" => array("Safari" => range(1, 5)),
-                    "opera" => array("Opera" => range(1, 10)),
+  $browsers = array("msie" => array("Internet Explorer" => range(5, 10)),
+                    "firefox" => array("Firefox" => range(2, 24)),
+                    "chrome" => array("Chrome" => range(1, 30)),
+                    "safari" => array("Safari" => range(1, 6)),
+                    "opera" => array("Opera" => range(1, 16)),
                     );
   foreach ($browsers as $machine_name => $details) {
     foreach ($details as $human_name => $versions) {
@@ -162,7 +159,7 @@ function jreject_configure_browsers() {
       foreach ($versions as $v) {
         $form[$machine_name][$v] = array(
           '#type' => 'checkbox',
-          '#default_value' => $conf[$machine_name][$v],
+          '#default_value' => isset($conf[$machine_name][$v]) ? $conf[$machine_name][$v] : 0,
           '#title' => t('@name @version', array("@name" => $human_name, "@version" => $v)),
         );
       }
@@ -180,7 +177,6 @@ function jreject_configure_browsers() {
  * see jreject.module.
  */
 function jreject_configure_alternatives() {
-  jreject_is_lib_installed();
   $conf = variable_get('jreject_browser_alternatives', array());
   $form = array();
   $form['intro'] = array(

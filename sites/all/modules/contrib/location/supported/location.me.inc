@@ -1,10 +1,15 @@
 <?php
 
-// Montenegro
+/**
+ * @file
+ * Montenegro.
+ */
 
+/**
+ * Returns an associative array of states/territories.
+ */
 function location_province_list_me() {
-  return array(
-  );
+  return array();
 }
 
 /**

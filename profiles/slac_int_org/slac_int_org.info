@@ -59,6 +59,9 @@ dependencies[] = superfish
 dependencies[] = views_feed_pane
 dependencies[] = metatag
 
+;Administration
+dependencies[] = adminimal_admin_menu
+dependencies[] = slac_features_admin
 ; Forums
 dependencies[] = forum
 dependencies[] = advanced_forum

@@ -1,9 +1,16 @@
 <?php
 
-// Nicaragua
+/**
+ * @file
+ * Nicaragua.
+ */
 
+/**
+ * Returns an associative array of states/territories.
+ */
 function location_province_list_ni() {
-  return array('BO' => "Boaco",
+  return array(
+    'BO' => "Boaco",
     'CA' => "Carazo",
     'CD' => "Chinandega",
     'CT' => "Chontales",
@@ -19,7 +26,8 @@ function location_province_list_ni() {
     'RV' => "Rivas",
     'SJ' => "Rio San Juan",
     'AN' => "Region Autonoma del Atlantico Norte",
-    'AS' => "Region Autonoma del Atlantico Sur");
+    'AS' => "Region Autonoma del Atlantico Sur"
+  );
 }
 
 /**

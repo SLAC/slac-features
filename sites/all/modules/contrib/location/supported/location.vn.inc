@@ -1,9 +1,16 @@
 <?php
 
-// Vietnam
+/**
+ * @file
+ * Vietnam.
+ */
 
+/**
+ * Returns an associative array of states/territories.
+ */
 function location_province_list_vn() {
-  return array('AG' => "An Giang",
+  return array(
+    'AG' => "An Giang",
     'BG' => "Bac Giang",
     'BK' => "Bac Kan",
     'BL' => "Bac Lieu",
@@ -34,7 +41,8 @@ function location_province_list_vn() {
     'HB' => "Hoa Binh",
     'HC' => "Ho Chin Minh",
     'HU' => "Hau Giang",
-    'HY' => "Hung Yen");
+    'HY' => "Hung Yen"
+  );
 }
 
 /**

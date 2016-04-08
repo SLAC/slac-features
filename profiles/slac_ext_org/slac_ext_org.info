@@ -59,7 +59,10 @@ dependencies[] = securepages
 dependencies[] = superfish
 dependencies[] = views_feed_pane
 dependencies[] = metatag
-
+dependencies[] = tablesorter
+;Administration
+dependencies[] = adminimal_admin_menu
+dependencies[] = slac_features_admin
 ;Development modules
 dependencies[] = devel
 dependencies[] = devel_generate

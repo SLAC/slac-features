@@ -1,9 +1,16 @@
 <?php
 
-// Lesotho
+/**
+ * @file
+ * Lesotho.
+ */
 
+/**
+ * Returns an associative array of states/territories.
+ */
 function location_province_list_ls() {
-  return array('BE' => "Berea",
+  return array(
+    'BE' => "Berea",
     'BB' => "Butha-Buthe",
     'LE' => "Leribe",
     'MF' => "Mafeteng",
@@ -12,7 +19,8 @@ function location_province_list_ls() {
     'MK' => "Mokhotlong",
     'QN' => "Qacha's Nek",
     'QT' => "Quthing",
-    'TT' => "Thaba-Tseka");
+    'TT' => "Thaba-Tseka"
+  );
 }
 
 /**

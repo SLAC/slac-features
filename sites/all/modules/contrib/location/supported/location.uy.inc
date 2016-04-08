@@ -1,9 +1,16 @@
 <?php
 
-// Uruguay
+/**
+ * @file
+ * Uruguay.
+ */
 
+/**
+ * Returns an associative array of states/territories.
+ */
 function location_province_list_uy() {
-  return array('AR' => "Artigas",
+  return array(
+    'AR' => "Artigas",
     'CA' => "Canelones",
     'CL' => "Cerro Largo",
     'CO' => "Colonia",
@@ -20,7 +27,8 @@ function location_province_list_uy() {
     'SL' => "Salto",
     'SO' => "Soriano",
     'SJ' => "San Jose",
-    'TT' => "Treinta y Tres");
+    'TT' => "Treinta y Tres"
+  );
 }
 
 /**

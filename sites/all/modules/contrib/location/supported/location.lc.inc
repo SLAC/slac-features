@@ -1,9 +1,16 @@
 <?php
 
-// Saint Lucia
+/**
+ * @file
+ * Saint Lucia.
+ */
 
+/**
+ * Returns an associative array of states/territories.
+ */
 function location_province_list_lc() {
-  return array('AR' => "Anse-la-Raye",
+  return array(
+    'AR' => "Anse-la-Raye",
     'CA' => "Castries",
     'CH' => "Choiseul",
     'DA' => "Dauphin",
@@ -13,7 +20,8 @@ function location_province_list_lc() {
     'MI' => "Micoud",
     'PR' => "Praslin",
     'SO' => "Soufriere",
-    'VF' => "Vieux-Fort");
+    'VF' => "Vieux-Fort"
+  );
 }
 
 /**

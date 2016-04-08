@@ -1,9 +1,16 @@
 <?php
 
-// El Salvador
+/**
+ * @file
+ * El Salvador.
+ */
 
+/**
+ * Returns an associative array of states/territories.
+ */
 function location_province_list_sv() {
-  return array('AH' => "Ahuachapan",
+  return array(
+    'AH' => "Ahuachapan",
     'CA' => "Cabanas",
     'CH' => "Chalatenango",
     'CU' => "Cuscatlan",
@@ -16,7 +23,8 @@ function location_province_list_sv() {
     'SA' => "Santa Ana",
     'SV' => "San Vicente",
     'SO' => "Sonsonate",
-    'US' => "Usulutan");
+    'US' => "Usulutan"
+  );
 }
 
 /**
