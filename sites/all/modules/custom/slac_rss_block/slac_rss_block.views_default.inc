@@ -39,6 +39,11 @@ function slac_rss_block_views_default_views() {
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  /* Sort criterion: Aggregator: Timestamp */
+  $handler->display->display_options['sorts']['timestamp']['id'] = 'timestamp';
+  $handler->display->display_options['sorts']['timestamp']['table'] = 'aggregator_item';
+  $handler->display->display_options['sorts']['timestamp']['field'] = 'timestamp';
+  $handler->display->display_options['sorts']['timestamp']['granularity'] = 'minute';
   /* Contextual filter: Aggregator feed: Feed ID */
   $handler->display->display_options['arguments']['fid']['id'] = 'fid';
   $handler->display->display_options['arguments']['fid']['table'] = 'aggregator_feed';
