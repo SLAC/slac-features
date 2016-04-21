@@ -337,6 +337,13 @@ function epsacrop_crop_image_form($data) {
   // Change description for the anchor
   $form['anchor']['#description'] = t("The part of the image that will be retained during the crop if no coordinates are set.");
 
+  $form['disable_scale'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Disable image scaling'),
+    '#description' => t("Only crop the image to the selected area and don't scale it. When enabled the above dimensions are used only when the cropping area is not selected."),
+    '#default_value' => isset($data['disable_scale']) ? $data['disable_scale'] : 0,
+  );
+
   $form['jcrop_settings'] = array(
     '#type' => 'fieldset',
     '#title' => t("Advanced settings"),
@@ -418,6 +425,9 @@ function epsacrop_crop_image(stdClass $image, $settings) {
         $style_name = _epsacrop_get_style_name_from_url();
       }
       if (!empty($style_name)) {
+        // Trigger presave hook.
+        module_invoke_all('epsacrop_crop_image_presave', $image, $settings, $coords, $style_name);
+
         $style = _epsacrop_load_style($style_name);
         if (!empty($style)) {
           $effect = _epsacrop_get_effect($style);
@@ -427,6 +437,11 @@ function epsacrop_crop_image(stdClass $image, $settings) {
             $coord = isset($coords[$fid][$preset]) ? $coords[$fid][$preset] : '';
             if (!empty($coord)) {
               if (image_crop($image, $coord['x'], $coord['y'], $coord['w'], $coord['h'])) {
+                // Trigger postsave hook.
+                module_invoke_all('epsacrop_crop_image_postsave', $image, $settings, $coords, $style_name);
+                if (isset($settings['disable_scale']) && $settings['disable_scale']) {
+                  return TRUE;
+                }
                 return image_scale($image, $settings['width'], $settings['height']);
               }
             }
@@ -567,7 +582,7 @@ function epsacrop_form_media_edit_alter(&$form, $form_state) {
  * Add epsacrop to file_entity edit form.
  */
 function epsacrop_form_file_entity_edit_alter(&$form, $form_state) {
-  if (!_epsacrop_access() || !isset($form['preview']['#file']) || !$form['preview']['#file']->type == 'image') {
+  if (!_epsacrop_access() || !isset($form['preview']['#file']) || $form['preview']['#file']->type != 'image') {
     return;
   }
 
@@ -579,17 +594,17 @@ function epsacrop_form_file_entity_edit_alter(&$form, $form_state) {
   );
   $file = $form['preview']['#file'];
   $info = image_get_info($file->uri);
-  $preview_file = image_style_path('epsacrop_thumb', $file->uri);
   $setting['fid'] = $file->fid;
-  $setting['url'] = file_create_url($preview_file);
+  $setting['url'] = image_style_url('epsacrop_thumb', $file->uri);
   $setting['size'] = array($info['width'], $info['height']);
 
   // Fix a strange bug when the image's name contains strange chars, like +
+  $preview_file = image_style_path('epsacrop_thumb', $file->uri);
   if (!file_exists($preview_file)) {
     image_style_create_derivative(image_style_load('epsacrop_thumb'), $file->uri, $preview_file);
   }
 
-  $markup = "[<a href=\"javascript:Drupal.EPSACrop.dialog('" . $setting['entity_type'] . "', '" . $setting['field_name'] . "', '" . $setting['bundle'] . "', '" . $setting['fid'] . "', '" . $setting['url'] . "', [" . $setting['size'][0] . "," . $setting['size'][1] . "]);\" class=\"button epsacrop\">" . t("manage image crops") . "</a>]";
+  $markup = "<a href=\"javascript:Drupal.EPSACrop.dialog('" . $setting['entity_type'] . "', '" . $setting['field_name'] . "', '" . $setting['bundle'] . "', '" . $setting['fid'] . "', '" . $setting['url'] . "', [" . $setting['size'][0] . "," . $setting['size'][1] . "]);\" class=\"button epsacrop\">" . t("manage image crops") . "</a>";
   $form['epsacrop'] = array(
     '#type' => 'markup',
     '#markup' => $markup
@@ -635,12 +650,12 @@ function epsacrop_element_process($element, $form_state, $form) {
   );
   if(isset($element['#file']) && is_object($element['#file']) && $file = $element['#file']) {
     $info = image_get_info($file->uri);
-    $preview_file = image_style_path('epsacrop_thumb', $file->uri);
     $setting['fid'] = $file->fid;
-    $setting['url'] = file_create_url($preview_file);
+    $setting['url'] = image_style_url('epsacrop_thumb', $file->uri);
     $setting['size'] = array($info['width'], $info['height']);;
 
     // Fix a strange bug when the image's name contains strange chars, like +
+    $preview_file = image_style_path('epsacrop_thumb', $file->uri);
     if (!file_exists($preview_file)) {
       image_style_create_derivative(image_style_load('epsacrop_thumb'), $file->uri, $preview_file);
     }
@@ -660,7 +675,7 @@ function epsacrop_element_process($element, $form_state, $form) {
     );
   }
   else if (isset($setting['fid'])) {
-    $markup = "[<a href=\"javascript:Drupal.EPSACrop.dialog('" . $setting['entity_type'] . "', '" . $setting['field_name'] . "', '" . $setting['bundle'] . "', '" . $setting['fid'] . "', '" . $setting['url'] . "', [" . $setting['size'][0] . "," . $setting['size'][1] . "]);\">" . t("manage image crops") . "</a>]";
+    $markup = "<a href=\"javascript:Drupal.EPSACrop.dialog('" . $setting['entity_type'] . "', '" . $setting['field_name'] . "', '" . $setting['bundle'] . "', '" . $setting['fid'] . "', '" . $setting['url'] . "', [" . $setting['size'][0] . "," . $setting['size'][1] . "]);\">" . t("manage image crops") . "</a>";
     $element['epsacrop'] = array(
       '#type' => 'markup',
       '#markup' => $markup
@@ -859,14 +874,15 @@ function _epsacrop_include_header_html() {
  */
 function _epsacrop_jcrop_get_version() {
   $version = 0;
-  if (file_exists(EPSACROP_JCROP_PATH . '/js/jquery.Jcrop.js')) {
-    $lines = file(EPSACROP_JCROP_PATH . '/js/jquery.Jcrop.js');
+  $filepath = EPSACROP_JCROP_PATH . '/js/jquery.Jcrop.js';
+  if (file_exists($filepath)) {
+    $lines = file($filepath);
     array_shift($lines); // First line is simple comment
     if (preg_match('/v(.*)/', array_shift($lines), $matches)) {
       $version = $matches[1];
     }
     else {
-      drupal_set_message(t('Could be give the version of Jcrop, check your install'), 'error');
+      drupal_set_message(t('Could be give the version of Jcrop %path, check your install.', array('%path' => $filepath)), 'error');
       $version = 0;
     }
   }
@@ -880,12 +896,14 @@ function _epsacrop_jcrop_get_version() {
  * @access private
  * @return void
  */
-function _epsacrop_is_json2_exists() {
-  if (file_exists(EPSACROP_JSON2_PATH . '/json2.js')) {
+function _epsacrop_is_json2_exists($display_message = FALSE) {
+  $filepath = EPSACROP_JSON2_PATH . '/json2.js';
+  if (file_exists($filepath)) {
     return TRUE;
   }
-  drupal_set_message(t('Could not find the json2.js file, check your install'), 'error');
-  return FALSE;
+  if ($display_message) {
+    drupal_set_message(t('Could be find the json2.js file %path, check your install.', array('%path' => $filepath)), 'error');
+  }
 }
 
 
