@@ -77,7 +77,6 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'access bean overview',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'bean',
   );
@@ -1239,6 +1238,18 @@ function slac_extorg_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'create landing_page content'.
+  $permissions['create landing_page content'] = array(
+    'name' => 'create landing_page content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: 'create mini panels'.
   $permissions['create mini panels'] = array(
     'name' => 'create mini panels',
@@ -1462,6 +1473,16 @@ function slac_extorg_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'delete any landing_page content'.
+  $permissions['delete any landing_page content'] = array(
+    'name' => 'delete any landing_page content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: 'delete any page content'.
   $permissions['delete any page content'] = array(
     'name' => 'delete any page content',
@@ -1669,6 +1690,16 @@ function slac_extorg_permissions_user_default_permissions() {
   // Exported permission: 'delete own kb_article content'.
   $permissions['delete own kb_article content'] = array(
     'name' => 'delete own kb_article content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete own landing_page content'.
+  $permissions['delete own landing_page content'] = array(
+    'name' => 'delete own landing_page content',
     'roles' => array(
       'administrator' => 'administrator',
       'manager' => 'manager',
@@ -2143,6 +2174,18 @@ function slac_extorg_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'edit any landing_page content'.
+  $permissions['edit any landing_page content'] = array(
+    'name' => 'edit any landing_page content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: 'edit any page content'.
   $permissions['edit any page content'] = array(
     'name' => 'edit any page content',
@@ -2260,6 +2303,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'edit fieldable fieldable_panels_pane',
     'roles' => array(
       'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'fieldable_panels_panes',
   );
@@ -2459,6 +2503,18 @@ function slac_extorg_permissions_user_default_permissions() {
   // Exported permission: 'edit own kb_article content'.
   $permissions['edit own kb_article content'] = array(
     'name' => 'edit own kb_article content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit own landing_page content'.
+  $permissions['edit own landing_page content'] = array(
+    'name' => 'edit own landing_page content',
     'roles' => array(
       'administrator' => 'administrator',
       'author' => 'author',
