@@ -8,6 +8,10 @@ Drupal.behaviors.EPSACropMediaElement = {
     $('.media-widget', context, settings).once('epsaCropLaunch', function () {
       var epsaDialogSettings = settings.epsacrop_dialog;
       var epsaButton = $('.manage-crop', this);
+      // Handle media widgets with an unlimited cardinality.
+      if ($(this).parent('td').length === 1) {
+        epsaButton = $(this).parents('tr').find('.manage-crop');
+      }
       var fidField = $('.fid', this); //fid field is added by the media module media_element_process()
       fidField.hide();
 
@@ -20,6 +24,10 @@ Drupal.behaviors.EPSACropMediaElement = {
       epsaButton.bind('click', function (e) {
         e.preventDefault();
         var elem = $(this).parents('.media-widget');
+        // Handle media widgets with an unlimited cardinality.
+        if ($(this).parent('td').length === 1) {
+          elem = $(this).parents('tr').find('.media-widget');
+        }
         var fileInfo = epsaDialogSettings[elem.attr('id')];
         var fid = fidField.val();
         if(!fileInfo.fid || fileInfo.fid != fid) {

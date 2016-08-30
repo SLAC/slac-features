@@ -8,6 +8,9 @@
   /* border:1px solid red; */
   position:relative;
 }
+.epsacrop-global img {
+  max-width: none;
+}
 .epsacrop-image-crop {
   border:1px solid #999999;
   background-color:#DADADA;

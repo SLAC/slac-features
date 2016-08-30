@@ -178,3 +178,33 @@ function epsacrop_update_7201() {
     }
   }
 }
+
+/**
+ * Clean the database with all the NULL entries
+ * Issue related https://www.drupal.org/node/1823940
+ */
+function epsacrop_update_7202() {
+  $result = db_query("SELECT * FROM {epsacrop_files}");
+  if ($result) {
+    while ($row = $result->fetchAssoc()) {
+      $flag = FALSE;
+      $coords = unserialize($row['coords']);
+      $coords = json_decode($coords);
+      foreach ($coords as $k => $coord) {
+        if ($coord == NULL) {
+          unset($coords[$k]);
+          $flag = TRUE;
+        }
+      }
+
+      if ($flag) {
+        $coords = json_encode($coords);
+        $data = serialize($coords);
+        db_update('epsacrop_files')->fields(array('coords' => $data))
+          ->condition('fid', $row['fid'], '=')
+          ->execute()
+        ;
+      }
+    }
+  }
+}

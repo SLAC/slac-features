@@ -4,9 +4,16 @@ version = 7.x-2.x-dev
 core = 7.x
 package = Media
 dependencies[] = image
-; Information added by Drupal.org packaging script on 2015-07-25
-version = "7.x-2.3"
+dependencies[] = libraries
+
+libraries[Jcrop][download][url] = https://github.com/tapmodo/Jcrop/archive/master.zip
+libraries[Jcrop][download][type] = get
+libraries[JSON-js][download][url] = https://github.com/douglascrockford/JSON-js/archive/master.zip
+libraries[JSON-js][download][type] = get
+
+; Information added by Drupal.org packaging script on 2016-06-05
+version = "7.x-2.4"
 core = "7.x"
 project = "epsacrop"
-datestamp = "1437827940"
+datestamp = "1465115640"
 
