@@ -68,7 +68,45 @@ function hook_panelizer_overview_links_alter(&$links_array, $entity_type, $conte
  *   The panelizer default object.
  */
 function hook_panelizer_delete_default($panelizer) {
-  db_delete('example_somthing')
+  db_delete('example_something')
     ->condition('name', $panelizer->name)
     ->execute();
+}
+
+/**
+ * Adjust access to the Panelizer administrative interface beyond the standard
+ * permissions options.
+ *
+ * @param string $op
+ *   The operation currently being performed.
+ * @param string $entity_type
+ *   The type of entity to which the operation is related.
+ * @param string|object $bundle
+ *   Either the entity's bundle name or the entity object itself, will vary
+ *   depending upon how it is called.
+ * @param string $view_mode
+ *   The view mode of the entity related to this operation.
+ *
+ * @return bool
+ *   Whether or not the user has permission to perform this $op.
+ */
+function hook_panelizer_access($op, $entity_type, $bundle, $view_mode) {
+}
+
+/**
+ * Allow modules to alter the defined panelizer access definitions.
+ *
+ * @param array $panelizer_access
+ *   An array of panelizer access options. If any are true, this will return
+ *   true. Set $panelizer_access equal to an empty array to return false.
+ * @param $options
+ *   drupal_alter() can only handle so many parameters. In order to pass the
+ *   same parameters that are passed in hook_panelizer_access, the params are
+ *   placed into an $options array. Expected keys are:
+ *     op
+ *     entity_type
+ *     bundle
+ *     view_mode
+ */
+function hook_panelizer_access_alter(&$panelizer_access, $options) {
 }

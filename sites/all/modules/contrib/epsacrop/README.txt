@@ -15,6 +15,7 @@ http://www.aswissidea.com
 
 EPSACrop requires that the following module is enabled:
  - Image
+ - Libraries
 
 EPSACrop requires that the following external libraries are installed:
  - JCrop (http://deepliquid.com/content/Jcrop.html)
@@ -27,18 +28,10 @@ EPSACrop requires that the following external libraries are installed:
    (ex. sites/all/modules or sites/all/modules/contrib)
 
 2. Download and unpack the JCrop library. Rename the resulting directory to
-   'Jcrop' and place it in one of two locations:
-    1. (recommended) If you are using the Libraries API module, place the Jcrop
-       directory into the libraries directory (ex.: sites/all/libraries/Jcrop).
-    2. Alternately, you may place the Jcrop directory into the epsacrop module
-       folder (ex.: sites/all/modules/epsacrop/Jcrop)
+   'Jcrop' and place into the libraries directory (ex.: sites/all/libraries/Jcrop).
 
 3. Download the and unpack the json2 library. Rename the resulting directory to
-   'json2' and place it in one of two locations:
-    1. (recommended) If you are using the Libraries API module, place the json2
-       directory into the libraries directory (ex.: sites/all/libraries/json2).
-    2. Alternately, you may place the Jcrop directory into the epsacrop module
-       folder (ex.: sites/all/modules/epsacrop/json2)
+   'json2' and place it into the libraries directory (ex.: sites/all/libraries/json2).
 
 4. Go to admin/build/modules and enable EPSA Crop.
 

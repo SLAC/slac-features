@@ -1,3 +1,21 @@
+
+Issue #2092485 by aaronbauman: Javascript syntax error for image file with single quote in filename, even though the it's url encoded
+Issue #1965414: Image in cropping area
+Issue #1836284 by Ferrari, seanB: Crop does not work with multiupload modules
+Issue #2070319 by cwithout: Image height attribute is 0 when only one dimension provided
+Issue #2077809 by AndreyMaximov, ygerasimov: Allow to alter list of epsacrop styles
+Issue #2291111, #2357775 by seanB, bojan_dev: Epsacrop reuse adds styles to file entity page
+Issue #1823940 by jsst, davidwhthomas, Toraih: Simplify data storage to avoid massive amounts of null values
+Issue #1943384, #2528094 by gaydamaka, aaronbauman, immoreel, cashwilliams, lklimek: Add support for file fields using media widget
+Issue #2513840 by juanjo_dv: Incorrect api usage
+Issue #2506721 by klaasvw: Manage image crops button not working with unlimited media fields
+Issue #2528154 by gaydamaka: Auto upload libraries
+Issue #1609042 by pakmanlh, aaronbauman, John Franklin, andymantell: Installation fails on multi-site unless Libraries is enabled, and can cause WSOD
+
+EPSA Crop 7.x-2.1, 2015-07-25
+-----------------------------
+Issue #2425149 by sanchiz: Ability to trigger pre/post events
+Issue #2424423 by duozersk: Option to disable scaling
 Issue #2223441 by coredumperror: Fixed file_create_url() does not generate image style token: breaks display of
  epsacrop_thumb image styles.
 Code style check on js.

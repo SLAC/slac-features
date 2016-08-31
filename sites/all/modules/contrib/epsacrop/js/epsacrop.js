@@ -21,7 +21,8 @@
       }
 
       buttons[saveLabel] = function() {
-        $.post(Drupal.settings.basePath + pathPrefix + 'crop/ajax/put/' + delta, {'coords': JSON.stringify(Drupal.EPSACrop.presets)});
+        var token = $('.epsacrop-global').data('token');
+        $.post(Drupal.settings.basePath + pathPrefix + 'crop/ajax/put/' + delta + '/' + token, {'coords': JSON.stringify(Drupal.EPSACrop.presets)});
         var field = field_name.replace(/_/g, '-');
         var welem = $('div[id*="' + field + '"]').eq(0);
         if (welem.find('.warning').size() == 0) {
@@ -58,6 +59,7 @@
           var aspectRatio = item.attr('data-aspect-ratio');
           var bgcolor = item.attr('data-bgcolor');
           var bgopacity = parseFloat(item.attr('data-bgopacity'));
+          var coordinates_data =  decodeURIComponent($('.epsacrop-global').data('coordinates'));
 
           var w = parseInt(coords[0]);
           var h = parseInt(coords[1]);
@@ -69,8 +71,8 @@
           Drupal.EPSACrop.delta = delta;
 
           presets = Drupal.EPSACrop.presets || {};
-          if (Drupal.EPSACrop.init === false && $('#epsacrop-coords-data').val().length > 0) {
-            presets = JSON.parse($('#epsacrop-coords-data').val()) || {};
+          if (Drupal.EPSACrop.init === false && coordinates_data.length > 0) {
+            presets = JSON.parse(coordinates_data) || {};
             Drupal.EPSACrop.init = true;
           }
 
