@@ -290,6 +290,7 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'administer advanced pane settings',
     'roles' => array(
       'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'panels',
   );
@@ -586,15 +587,6 @@ function slac_intorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'menu_attributes',
-  );
-
-  // Exported permission: 'administer menu_trail_by_path'.
-  $permissions['administer menu_trail_by_path'] = array(
-    'name' => 'administer menu_trail_by_path',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'menu_trail_by_path',
   );
 
   // Exported permission: 'administer meta tags'.
@@ -1077,6 +1069,7 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'change layouts in place editing',
     'roles' => array(
       'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'panels',
   );
