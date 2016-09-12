@@ -58,6 +58,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'access all views',
     'roles' => array(
       'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'views',
   );
@@ -217,6 +218,8 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'access site in maintenance mode',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
     ),
     'module' => 'system',
   );
@@ -281,6 +284,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'administer advanced pane settings',
     'roles' => array(
       'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'panels',
   );
@@ -551,17 +555,9 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'administer menu attributes',
     'roles' => array(
       'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'menu_attributes',
-  );
-
-  // Exported permission: 'administer menu_trail_by_path'.
-  $permissions['administer menu_trail_by_path'] = array(
-    'name' => 'administer menu_trail_by_path',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'menu_trail_by_path',
   );
 
   // Exported permission: 'administer meta tags'.
@@ -569,6 +565,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'administer meta tags',
     'roles' => array(
       'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'metatag',
   );
@@ -628,6 +625,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'administer page manager',
     'roles' => array(
       'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'page_manager',
   );
@@ -739,6 +737,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'administer site configuration',
     'roles' => array(
       'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'system',
   );
@@ -1026,6 +1025,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'change layouts in place editing',
     'roles' => array(
       'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'panels',
   );
@@ -1255,6 +1255,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'create mini panels',
     'roles' => array(
       'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'panels_mini',
   );
@@ -2936,6 +2937,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'slac administer configuration',
     'roles' => array(
       'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'slac_configuration',
   );
@@ -2998,6 +3000,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'use panels caching features',
     'roles' => array(
       'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'panels',
   );
@@ -3007,6 +3010,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'use panels dashboard',
     'roles' => array(
       'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'panels',
   );
@@ -3377,6 +3381,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'view pane admin links',
     'roles' => array(
       'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'panels',
   );
