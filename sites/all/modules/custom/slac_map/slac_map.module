@@ -1,0 +1,26 @@
+<?php
+/**
+* @file
+* This module display slac interactivev map
+*/
+
+
+function slac_map_menu() {
+  $items = array();
+
+    $items[] = array(
+      'path' => 'slacmap', // drupal path example.com/?q=hello
+      'title' => 'SLAC map', // page title
+      'page callback' => 'display_slac_map', // callback function name
+      'access callback' => TRUE, // every user can look at generated page
+      'type' => MENU_CALLBACK // define type of menu item as callback
+    );
+  return $items;
+}
+
+/**
+ * Function which generate page (this generate any content - you need only your own code...)
+ */
+function display_slac_map() {  
+  return '<p><iframe src="https://www-group.slac.stanford.edu/dev/leaflet/load-geojson-from-url-for-drupal-site.html"  scrolling="no" style="border:0;width:100%;height:600px;" ></iframe></p>';
+}
