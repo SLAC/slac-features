@@ -77,6 +77,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'access bean overview',
     'roles' => array(
       'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'bean',
   );
@@ -281,6 +282,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'administer advanced pane settings',
     'roles' => array(
       'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'panels',
   );
@@ -299,6 +301,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'administer bean types',
     'roles' => array(
       'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'bean',
   );
@@ -3039,6 +3042,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'use panels caching features',
     'roles' => array(
       'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'panels',
   );
@@ -3246,6 +3250,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
+      'manager' => 'manager',
     ),
     'module' => 'faq',
   );
@@ -3269,6 +3274,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
+      'manager' => 'manager',
     ),
     'module' => 'file_entity',
   );
@@ -3418,6 +3424,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'view pane admin links',
     'roles' => array(
       'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'panels',
   );
