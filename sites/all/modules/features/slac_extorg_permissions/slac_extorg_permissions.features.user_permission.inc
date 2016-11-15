@@ -555,15 +555,6 @@ function slac_extorg_permissions_user_default_permissions() {
     'module' => 'menu_attributes',
   );
 
-  // Exported permission: 'administer menu_trail_by_path'.
-  $permissions['administer menu_trail_by_path'] = array(
-    'name' => 'administer menu_trail_by_path',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'menu_trail_by_path',
-  );
-
   // Exported permission: 'administer meta tags'.
   $permissions['administer meta tags'] = array(
     'name' => 'administer meta tags',
@@ -646,6 +637,47 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'administer panelizer',
     'roles' => array(
       'administrator' => 'administrator',
+    ),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node landing_page choice'.
+  $permissions['administer panelizer node landing_page choice'] = array(
+    'name' => 'administer panelizer node landing_page choice',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node landing_page content'.
+  $permissions['administer panelizer node landing_page content'] = array(
+    'name' => 'administer panelizer node landing_page content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node newsletter content'.
+  $permissions['administer panelizer node newsletter content'] = array(
+    'name' => 'administer panelizer node newsletter content',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node page choice'.
+  $permissions['administer panelizer node page choice'] = array(
+    'name' => 'administer panelizer node page choice',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node page content'.
+  $permissions['administer panelizer node page content'] = array(
+    'name' => 'administer panelizer node page content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'panelizer',
   );
@@ -874,6 +906,15 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'system',
+  );
+
+  // Exported permission: 'bypass access in place editing'.
+  $permissions['bypass access in place editing'] = array(
+    'name' => 'bypass access in place editing',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'panels',
   );
 
   // Exported permission: 'bypass file access'.
