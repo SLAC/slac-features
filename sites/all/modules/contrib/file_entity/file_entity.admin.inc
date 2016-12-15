@@ -1112,7 +1112,7 @@ function file_entity_settings_form($form, &$form_state) {
   $form['file_upload_wizard']['file_entity_file_upload_wizard_skip_scheme'] = array(
     '#type' => 'checkbox',
     '#title' => t('Skip scheme selection.'),
-    '#default_value' => variable_get('file_entity_file_upload_wizard_skip_scheme', FALSE),
+    '#default_value' => variable_get('file_entity_file_upload_wizard_skip_scheme', TRUE),
     '#description' => t('The scheme selection step is only available if two or more file destinations, such as public local files served by the webserver and private local files served by Drupal, are available. If this step is skipped, files will automatically be saved using the default download method.'),
   );
   $form['file_upload_wizard']['file_entity_file_upload_wizard_skip_fields'] = array(
