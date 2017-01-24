@@ -1,0 +1,5 @@
+name = SLAC Map
+description = "Provide SLAC interactive map"
+package = SLAC
+core = 7.x
+version = 7.x-0.1-dev
