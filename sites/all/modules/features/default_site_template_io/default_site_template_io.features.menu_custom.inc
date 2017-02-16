@@ -41,6 +41,5 @@ function default_site_template_io_menu_default_menu_custom() {
   t('Header Top Menu');
   t('Header menu');
 
-
   return $menus;
 }

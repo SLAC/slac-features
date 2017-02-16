@@ -118,124 +118,126 @@ function default_site_template_io_default_panels_mini() {
   $display->cache = array();
   $display->title = '';
   $display->uuid = '4a06fdc6-ad29-474b-b859-61b22c025c2a';
+  $display->storage_type = 'panels_mini';
+  $display->storage_id = 'footer';
   $display->content = array();
   $display->panels = array();
-    $pane = new stdClass();
-    $pane->pid = 'new-f3cc5df9-76a1-40e7-9efa-31e1414ab66a';
-    $pane->panel = 'left';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'admin_title' => 'Footer text',
-      'title' => '',
-      'body' => '<a href="http://www.slac.stanford.edu">Slac National Accelerator Laboratory</a>',
-      'format' => 'full_html',
-      'substitute' => TRUE,
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $pane->uuid = 'f3cc5df9-76a1-40e7-9efa-31e1414ab66a';
-    $display->content['new-f3cc5df9-76a1-40e7-9efa-31e1414ab66a'] = $pane;
-    $display->panels['left'][0] = 'new-f3cc5df9-76a1-40e7-9efa-31e1414ab66a';
-    $pane = new stdClass();
-    $pane->pid = 'new-a135c00f-cdf1-4bc8-830f-d6542173e339';
-    $pane->panel = 'left';
-    $pane->type = 'site_address';
-    $pane->subtype = 'site_address';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $pane->uuid = 'a135c00f-cdf1-4bc8-830f-d6542173e339';
-    $display->content['new-a135c00f-cdf1-4bc8-830f-d6542173e339'] = $pane;
-    $display->panels['left'][1] = 'new-a135c00f-cdf1-4bc8-830f-d6542173e339';
-    $pane = new stdClass();
-    $pane->pid = 'new-bb54bd2d-7b1a-459f-b183-704978621e7c';
-    $pane->panel = 'left';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'admin_title' => 'Footer text 2',
-      'title' => '',
-      'body' => '<p><span>Operated by <a href="http://www.stanford.edu" target="_blank">Stanford University</a> for the <a href="http://science.energy.gov" target="_blank">U.S. Department of Energy Office of Science</a></span></p>',
-      'format' => 'full_html',
-      'substitute' => TRUE,
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 2;
-    $pane->locks = array();
-    $pane->uuid = 'bb54bd2d-7b1a-459f-b183-704978621e7c';
-    $display->content['new-bb54bd2d-7b1a-459f-b183-704978621e7c'] = $pane;
-    $display->panels['left'][2] = 'new-bb54bd2d-7b1a-459f-b183-704978621e7c';
-    $pane = new stdClass();
-    $pane->pid = 'new-52b6cafb-985a-41a9-b0e0-f450b60d3d97';
-    $pane->panel = 'left';
-    $pane->type = 'block';
-    $pane->subtype = 'menu-menu-footer-menu';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 3;
-    $pane->locks = array();
-    $pane->uuid = '52b6cafb-985a-41a9-b0e0-f450b60d3d97';
-    $display->content['new-52b6cafb-985a-41a9-b0e0-f450b60d3d97'] = $pane;
-    $display->panels['left'][3] = 'new-52b6cafb-985a-41a9-b0e0-f450b60d3d97';
-    $pane = new stdClass();
-    $pane->pid = 'new-edbefd1c-a63c-4ce9-b54e-a48175280448';
-    $pane->panel = 'right';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'admin_title' => 'Footer logo',
-      'title' => '',
-      'body' => '<p><a href="http://www.stanford.edu" target="_blank"><img alt="stanford-logo" src="/sites/all/modules/features/default_site_template_io/stanford-logo.png" /></a><a href="http://science.energy.gov" target="_blank"><img alt="doe-logo" src="/sites/all/modules/features/default_site_template_io/doe-logo.png" /></a></p>',
-      'format' => 'full_html',
-      'substitute' => TRUE,
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $pane->uuid = 'edbefd1c-a63c-4ce9-b54e-a48175280448';
-    $display->content['new-edbefd1c-a63c-4ce9-b54e-a48175280448'] = $pane;
-    $display->panels['right'][0] = 'new-edbefd1c-a63c-4ce9-b54e-a48175280448';
+  $pane = new stdClass();
+  $pane->pid = 'new-f3cc5df9-76a1-40e7-9efa-31e1414ab66a';
+  $pane->panel = 'left';
+  $pane->type = 'custom';
+  $pane->subtype = 'custom';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'admin_title' => 'Footer text',
+    'title' => '',
+    'body' => '<a href="http://www.slac.stanford.edu">Slac National Accelerator Laboratory</a>',
+    'format' => 'full_html',
+    'substitute' => TRUE,
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = 'f3cc5df9-76a1-40e7-9efa-31e1414ab66a';
+  $display->content['new-f3cc5df9-76a1-40e7-9efa-31e1414ab66a'] = $pane;
+  $display->panels['left'][0] = 'new-f3cc5df9-76a1-40e7-9efa-31e1414ab66a';
+  $pane = new stdClass();
+  $pane->pid = 'new-a135c00f-cdf1-4bc8-830f-d6542173e339';
+  $pane->panel = 'left';
+  $pane->type = 'site_address';
+  $pane->subtype = 'site_address';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array();
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 1;
+  $pane->locks = array();
+  $pane->uuid = 'a135c00f-cdf1-4bc8-830f-d6542173e339';
+  $display->content['new-a135c00f-cdf1-4bc8-830f-d6542173e339'] = $pane;
+  $display->panels['left'][1] = 'new-a135c00f-cdf1-4bc8-830f-d6542173e339';
+  $pane = new stdClass();
+  $pane->pid = 'new-bb54bd2d-7b1a-459f-b183-704978621e7c';
+  $pane->panel = 'left';
+  $pane->type = 'custom';
+  $pane->subtype = 'custom';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'admin_title' => 'Footer text 2',
+    'title' => '',
+    'body' => '<p><span>Operated by <a href="http://www.stanford.edu" target="_blank">Stanford University</a> for the <a href="http://science.energy.gov" target="_blank">U.S. Department of Energy Office of Science</a></span></p>',
+    'format' => 'full_html',
+    'substitute' => TRUE,
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 2;
+  $pane->locks = array();
+  $pane->uuid = 'bb54bd2d-7b1a-459f-b183-704978621e7c';
+  $display->content['new-bb54bd2d-7b1a-459f-b183-704978621e7c'] = $pane;
+  $display->panels['left'][2] = 'new-bb54bd2d-7b1a-459f-b183-704978621e7c';
+  $pane = new stdClass();
+  $pane->pid = 'new-52b6cafb-985a-41a9-b0e0-f450b60d3d97';
+  $pane->panel = 'left';
+  $pane->type = 'block';
+  $pane->subtype = 'menu-menu-footer-menu';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'override_title' => 1,
+    'override_title_text' => '',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 3;
+  $pane->locks = array();
+  $pane->uuid = '52b6cafb-985a-41a9-b0e0-f450b60d3d97';
+  $display->content['new-52b6cafb-985a-41a9-b0e0-f450b60d3d97'] = $pane;
+  $display->panels['left'][3] = 'new-52b6cafb-985a-41a9-b0e0-f450b60d3d97';
+  $pane = new stdClass();
+  $pane->pid = 'new-edbefd1c-a63c-4ce9-b54e-a48175280448';
+  $pane->panel = 'right';
+  $pane->type = 'custom';
+  $pane->subtype = 'custom';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'admin_title' => 'Footer logo',
+    'title' => '',
+    'body' => '<p><a href="http://www.stanford.edu" target="_blank"><img alt="stanford-logo" src="/sites/all/modules/features/default_site_template_io/stanford-logo.png" /></a><a href="http://science.energy.gov" target="_blank"><img alt="doe-logo" src="/sites/all/modules/features/default_site_template_io/doe-logo.png" /></a></p>',
+    'format' => 'full_html',
+    'substitute' => TRUE,
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = 'edbefd1c-a63c-4ce9-b54e-a48175280448';
+  $display->content['new-edbefd1c-a63c-4ce9-b54e-a48175280448'] = $pane;
+  $display->panels['right'][0] = 'new-edbefd1c-a63c-4ce9-b54e-a48175280448';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $mini->display = $display;
@@ -349,79 +351,81 @@ function default_site_template_io_default_panels_mini() {
   $display->cache = array();
   $display->title = '';
   $display->uuid = 'b596b504-4764-4489-b2c0-ca1b887e8fd6';
+  $display->storage_type = 'panels_mini';
+  $display->storage_id = 'second_footer';
   $display->content = array();
   $display->panels = array();
-    $pane = new stdClass();
-    $pane->pid = 'new-1515ef35-bce6-4ed2-8630-a3242856c840';
-    $pane->panel = 'left';
-    $pane->type = 'page_site_name';
-    $pane->subtype = 'page_site_name';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $pane->uuid = '1515ef35-bce6-4ed2-8630-a3242856c840';
-    $display->content['new-1515ef35-bce6-4ed2-8630-a3242856c840'] = $pane;
-    $display->panels['left'][0] = 'new-1515ef35-bce6-4ed2-8630-a3242856c840';
-    $pane = new stdClass();
-    $pane->pid = 'new-9b04a91c-234d-4eca-8813-0118838bf30e';
-    $pane->panel = 'left';
-    $pane->type = 'block';
-    $pane->subtype = 'menu-menu-footer-menu-1';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $pane->uuid = '9b04a91c-234d-4eca-8813-0118838bf30e';
-    $display->content['new-9b04a91c-234d-4eca-8813-0118838bf30e'] = $pane;
-    $display->panels['left'][1] = 'new-9b04a91c-234d-4eca-8813-0118838bf30e';
-    $pane = new stdClass();
-    $pane->pid = 'new-22caad66-8a1a-4382-8e54-cbf2b26a637b';
-    $pane->panel = 'left';
-    $pane->type = 'site_address';
-    $pane->subtype = 'site_address';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 2;
-    $pane->locks = array();
-    $pane->uuid = '22caad66-8a1a-4382-8e54-cbf2b26a637b';
-    $display->content['new-22caad66-8a1a-4382-8e54-cbf2b26a637b'] = $pane;
-    $display->panels['left'][2] = 'new-22caad66-8a1a-4382-8e54-cbf2b26a637b';
-    $pane = new stdClass();
-    $pane->pid = 'new-34d32089-9f3f-4df4-801b-65179e576de5';
-    $pane->panel = 'right';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'admin_title' => 'Social icons',
-      'title' => '',
-      'body' => '<div class="social-icon-block">
+  $pane = new stdClass();
+  $pane->pid = 'new-1515ef35-bce6-4ed2-8630-a3242856c840';
+  $pane->panel = 'left';
+  $pane->type = 'page_site_name';
+  $pane->subtype = 'page_site_name';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array();
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = '1515ef35-bce6-4ed2-8630-a3242856c840';
+  $display->content['new-1515ef35-bce6-4ed2-8630-a3242856c840'] = $pane;
+  $display->panels['left'][0] = 'new-1515ef35-bce6-4ed2-8630-a3242856c840';
+  $pane = new stdClass();
+  $pane->pid = 'new-9b04a91c-234d-4eca-8813-0118838bf30e';
+  $pane->panel = 'left';
+  $pane->type = 'block';
+  $pane->subtype = 'menu-menu-footer-menu-1';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'override_title' => 1,
+    'override_title_text' => '',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 1;
+  $pane->locks = array();
+  $pane->uuid = '9b04a91c-234d-4eca-8813-0118838bf30e';
+  $display->content['new-9b04a91c-234d-4eca-8813-0118838bf30e'] = $pane;
+  $display->panels['left'][1] = 'new-9b04a91c-234d-4eca-8813-0118838bf30e';
+  $pane = new stdClass();
+  $pane->pid = 'new-22caad66-8a1a-4382-8e54-cbf2b26a637b';
+  $pane->panel = 'left';
+  $pane->type = 'site_address';
+  $pane->subtype = 'site_address';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array();
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 2;
+  $pane->locks = array();
+  $pane->uuid = '22caad66-8a1a-4382-8e54-cbf2b26a637b';
+  $display->content['new-22caad66-8a1a-4382-8e54-cbf2b26a637b'] = $pane;
+  $display->panels['left'][2] = 'new-22caad66-8a1a-4382-8e54-cbf2b26a637b';
+  $pane = new stdClass();
+  $pane->pid = 'new-34d32089-9f3f-4df4-801b-65179e576de5';
+  $pane->panel = 'right';
+  $pane->type = 'custom';
+  $pane->subtype = 'custom';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'admin_title' => 'Social icons',
+    'title' => '',
+    'body' => '<div class="social-icon-block">
 	<div class="social-icon-facebook"><a href="http://facebook.com/SLAC.National.Lab">Facebook</a></div>
 
 	<div class="social-icon-twitter"><a href="http://twitter.com/slaclab">Twitter</a></div>
@@ -433,20 +437,20 @@ function default_site_template_io_default_panels_mini() {
 	<div class="social-icon-youtube"><a href="http://youtube.com/slac/">Youtube</a></div>
 </div>
 ',
-      'format' => 'full_html',
-      'substitute' => TRUE,
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $pane->uuid = '34d32089-9f3f-4df4-801b-65179e576de5';
-    $display->content['new-34d32089-9f3f-4df4-801b-65179e576de5'] = $pane;
-    $display->panels['right'][0] = 'new-34d32089-9f3f-4df4-801b-65179e576de5';
+    'format' => 'full_html',
+    'substitute' => TRUE,
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = '34d32089-9f3f-4df4-801b-65179e576de5';
+  $display->content['new-34d32089-9f3f-4df4-801b-65179e576de5'] = $pane;
+  $display->panels['right'][0] = 'new-34d32089-9f3f-4df4-801b-65179e576de5';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $mini->display = $display;

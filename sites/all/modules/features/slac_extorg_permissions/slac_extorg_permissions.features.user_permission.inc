@@ -77,6 +77,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'access bean overview',
     'roles' => array(
       'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'bean',
   );
@@ -99,6 +100,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -145,6 +147,16 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'download_file',
+  );
+
+  // Exported permission: 'access fieldable panels panes master list'.
+  $permissions['access fieldable panels panes master list'] = array(
+    'name' => 'access fieldable panels panes master list',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'fieldable_panels_panes',
   );
 
   // Exported permission: 'access media browser'.
@@ -281,6 +293,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'administer advanced pane settings',
     'roles' => array(
       'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'panels',
   );
@@ -299,6 +312,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'administer bean types',
     'roles' => array(
       'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'bean',
   );
@@ -555,15 +569,6 @@ function slac_extorg_permissions_user_default_permissions() {
     'module' => 'menu_attributes',
   );
 
-  // Exported permission: 'administer menu_trail_by_path'.
-  $permissions['administer menu_trail_by_path'] = array(
-    'name' => 'administer menu_trail_by_path',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'menu_trail_by_path',
-  );
-
   // Exported permission: 'administer meta tags'.
   $permissions['administer meta tags'] = array(
     'name' => 'administer meta tags',
@@ -650,12 +655,163 @@ function slac_extorg_permissions_user_default_permissions() {
     'module' => 'panelizer',
   );
 
+  // Exported permission: 'administer panelizer node faq defaults'.
+  $permissions['administer panelizer node faq defaults'] = array(
+    'name' => 'administer panelizer node faq defaults',
+    'roles' => array(
+      'manager' => 'manager',
+    ),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node landing_page choice'.
+  $permissions['administer panelizer node landing_page choice'] = array(
+    'name' => 'administer panelizer node landing_page choice',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node landing_page content'.
+  $permissions['administer panelizer node landing_page content'] = array(
+    'name' => 'administer panelizer node landing_page content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node landing_page context'.
+  $permissions['administer panelizer node landing_page context'] = array(
+    'name' => 'administer panelizer node landing_page context',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node landing_page defaults'.
+  $permissions['administer panelizer node landing_page defaults'] = array(
+    'name' => 'administer panelizer node landing_page defaults',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node landing_page layout'.
+  $permissions['administer panelizer node landing_page layout'] = array(
+    'name' => 'administer panelizer node landing_page layout',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node landing_page overview'.
+  $permissions['administer panelizer node landing_page overview'] = array(
+    'name' => 'administer panelizer node landing_page overview',
+    'roles' => array(
+      'manager' => 'manager',
+    ),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node landing_page settings'.
+  $permissions['administer panelizer node landing_page settings'] = array(
+    'name' => 'administer panelizer node landing_page settings',
+    'roles' => array(
+      'manager' => 'manager',
+    ),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node newsletter content'.
+  $permissions['administer panelizer node newsletter content'] = array(
+    'name' => 'administer panelizer node newsletter content',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node newsletter defaults'.
+  $permissions['administer panelizer node newsletter defaults'] = array(
+    'name' => 'administer panelizer node newsletter defaults',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node page choice'.
+  $permissions['administer panelizer node page choice'] = array(
+    'name' => 'administer panelizer node page choice',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node page content'.
+  $permissions['administer panelizer node page content'] = array(
+    'name' => 'administer panelizer node page content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node page context'.
+  $permissions['administer panelizer node page context'] = array(
+    'name' => 'administer panelizer node page context',
+    'roles' => array(
+      'manager' => 'manager',
+    ),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node page defaults'.
+  $permissions['administer panelizer node page defaults'] = array(
+    'name' => 'administer panelizer node page defaults',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node page layout'.
+  $permissions['administer panelizer node page layout'] = array(
+    'name' => 'administer panelizer node page layout',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node page overview'.
+  $permissions['administer panelizer node page overview'] = array(
+    'name' => 'administer panelizer node page overview',
+    'roles' => array(
+      'manager' => 'manager',
+    ),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node page settings'.
+  $permissions['administer panelizer node page settings'] = array(
+    'name' => 'administer panelizer node page settings',
+    'roles' => array(
+      'manager' => 'manager',
+    ),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer taxonomy_term faq_categories defaults'.
+  $permissions['administer panelizer taxonomy_term faq_categories defaults'] = array(
+    'name' => 'administer panelizer taxonomy_term faq_categories defaults',
+    'roles' => array(
+      'manager' => 'manager',
+    ),
+    'module' => 'panelizer',
+  );
+
   // Exported permission: 'administer panels layouts'.
   $permissions['administer panels layouts'] = array(
     'name' => 'administer panels layouts',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'panels',
   );
@@ -874,6 +1030,16 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'system',
+  );
+
+  // Exported permission: 'bypass access in place editing'.
+  $permissions['bypass access in place editing'] = array(
+    'name' => 'bypass access in place editing',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'panels',
   );
 
   // Exported permission: 'bypass file access'.
@@ -1255,6 +1421,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'create mini panels',
     'roles' => array(
       'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'panels_mini',
   );
@@ -1962,6 +2129,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
+      'manager' => 'manager',
     ),
     'module' => 'lightbox2',
   );
@@ -2998,6 +3166,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'use panels caching features',
     'roles' => array(
       'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'panels',
   );
@@ -3007,6 +3176,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'use panels dashboard',
     'roles' => array(
       'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'panels',
   );
@@ -3205,6 +3375,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
+      'manager' => 'manager',
     ),
     'module' => 'faq',
   );
@@ -3228,6 +3399,7 @@ function slac_extorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
+      'manager' => 'manager',
     ),
     'module' => 'file_entity',
   );
@@ -3377,6 +3549,7 @@ function slac_extorg_permissions_user_default_permissions() {
     'name' => 'view pane admin links',
     'roles' => array(
       'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'panels',
   );

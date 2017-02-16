@@ -67,7 +67,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'access all webform results',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'webform',
   );
@@ -99,6 +98,7 @@ function slac_intorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -131,9 +131,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'access dashboard',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
-      'manager' => 'manager',
     ),
     'module' => 'dashboard',
   );
@@ -145,6 +142,16 @@ function slac_intorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'download_file',
+  );
+
+  // Exported permission: 'access fieldable panels panes master list'.
+  $permissions['access fieldable panels panes master list'] = array(
+    'name' => 'access fieldable panels panes master list',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'fieldable_panels_panes',
   );
 
   // Exported permission: 'access media browser'.
@@ -175,9 +182,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'access own webform results',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
-      'manager' => 'manager',
     ),
     'module' => 'webform',
   );
@@ -187,9 +191,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'access own webform submissions',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
-      'manager' => 'manager',
     ),
     'module' => 'webform',
   );
@@ -226,7 +227,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'access site reports',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'system',
   );
@@ -236,9 +236,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'access user profiles',
     'roles' => array(
       'administrator' => 'administrator',
-      'anonymous user' => 'anonymous user',
-      'authenticated user' => 'authenticated user',
-      'manager' => 'manager',
     ),
     'module' => 'user',
   );
@@ -336,7 +333,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'administer blocks',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'block',
   );
@@ -353,7 +349,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'administer cami',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'cami',
   );
@@ -363,7 +358,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'administer comments',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'comment',
   );
@@ -382,9 +376,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'administer crop styles',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
-      'manager' => 'manager',
     ),
     'module' => 'pp_crop',
   );
@@ -468,7 +459,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'administer file types',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'file_entity',
   );
@@ -478,7 +468,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'administer files',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'file_entity',
   );
@@ -497,7 +486,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'administer forums',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'forum',
   );
@@ -507,7 +495,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'administer google analytics',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'googleanalytics',
   );
@@ -517,7 +504,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'administer image styles',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'image',
   );
@@ -575,7 +561,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'administer menu',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'menu',
   );
@@ -631,7 +616,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'administer news feeds',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'aggregator',
   );
@@ -675,12 +659,329 @@ function slac_intorg_permissions_user_default_permissions() {
     'module' => 'panelizer',
   );
 
+  // Exported permission: 'administer panelizer node additional_resource defaults'.
+  $permissions['administer panelizer node additional_resource defaults'] = array(
+    'name' => 'administer panelizer node additional_resource defaults',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node announcement_link defaults'.
+  $permissions['administer panelizer node announcement_link defaults'] = array(
+    'name' => 'administer panelizer node announcement_link defaults',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node blog defaults'.
+  $permissions['administer panelizer node blog defaults'] = array(
+    'name' => 'administer panelizer node blog defaults',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node faq defaults'.
+  $permissions['administer panelizer node faq defaults'] = array(
+    'name' => 'administer panelizer node faq defaults',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node form_entry defaults'.
+  $permissions['administer panelizer node form_entry defaults'] = array(
+    'name' => 'administer panelizer node form_entry defaults',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node landing_page choice'.
+  $permissions['administer panelizer node landing_page choice'] = array(
+    'name' => 'administer panelizer node landing_page choice',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node landing_page content'.
+  $permissions['administer panelizer node landing_page content'] = array(
+    'name' => 'administer panelizer node landing_page content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node landing_page context'.
+  $permissions['administer panelizer node landing_page context'] = array(
+    'name' => 'administer panelizer node landing_page context',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node landing_page defaults'.
+  $permissions['administer panelizer node landing_page defaults'] = array(
+    'name' => 'administer panelizer node landing_page defaults',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node landing_page layout'.
+  $permissions['administer panelizer node landing_page layout'] = array(
+    'name' => 'administer panelizer node landing_page layout',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node landing_page overview'.
+  $permissions['administer panelizer node landing_page overview'] = array(
+    'name' => 'administer panelizer node landing_page overview',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node landing_page settings'.
+  $permissions['administer panelizer node landing_page settings'] = array(
+    'name' => 'administer panelizer node landing_page settings',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node newsletter content'.
+  $permissions['administer panelizer node newsletter content'] = array(
+    'name' => 'administer panelizer node newsletter content',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node newsletter context'.
+  $permissions['administer panelizer node newsletter context'] = array(
+    'name' => 'administer panelizer node newsletter context',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node newsletter defaults'.
+  $permissions['administer panelizer node newsletter defaults'] = array(
+    'name' => 'administer panelizer node newsletter defaults',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node newsletter layout'.
+  $permissions['administer panelizer node newsletter layout'] = array(
+    'name' => 'administer panelizer node newsletter layout',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node newsletter overview'.
+  $permissions['administer panelizer node newsletter overview'] = array(
+    'name' => 'administer panelizer node newsletter overview',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node newsletter settings'.
+  $permissions['administer panelizer node newsletter settings'] = array(
+    'name' => 'administer panelizer node newsletter settings',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node page choice'.
+  $permissions['administer panelizer node page choice'] = array(
+    'name' => 'administer panelizer node page choice',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node page content'.
+  $permissions['administer panelizer node page content'] = array(
+    'name' => 'administer panelizer node page content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node page context'.
+  $permissions['administer panelizer node page context'] = array(
+    'name' => 'administer panelizer node page context',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node page defaults'.
+  $permissions['administer panelizer node page defaults'] = array(
+    'name' => 'administer panelizer node page defaults',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node page layout'.
+  $permissions['administer panelizer node page layout'] = array(
+    'name' => 'administer panelizer node page layout',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node page overview'.
+  $permissions['administer panelizer node page overview'] = array(
+    'name' => 'administer panelizer node page overview',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node page settings'.
+  $permissions['administer panelizer node page settings'] = array(
+    'name' => 'administer panelizer node page settings',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node training_entry defaults'.
+  $permissions['administer panelizer node training_entry defaults'] = array(
+    'name' => 'administer panelizer node training_entry defaults',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer taxonomy_term faq_categories defaults'.
+  $permissions['administer panelizer taxonomy_term faq_categories defaults'] = array(
+    'name' => 'administer panelizer taxonomy_term faq_categories defaults',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer taxonomy_term hdi_categories defaults'.
+  $permissions['administer panelizer taxonomy_term hdi_categories defaults'] = array(
+    'name' => 'administer panelizer taxonomy_term hdi_categories defaults',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer taxonomy_term hdi_roles defaults'.
+  $permissions['administer panelizer taxonomy_term hdi_roles defaults'] = array(
+    'name' => 'administer panelizer taxonomy_term hdi_roles defaults',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer taxonomy_term newsletter defaults'.
+  $permissions['administer panelizer taxonomy_term newsletter defaults'] = array(
+    'name' => 'administer panelizer taxonomy_term newsletter defaults',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer taxonomy_term training_categories defaults'.
+  $permissions['administer panelizer taxonomy_term training_categories defaults'] = array(
+    'name' => 'administer panelizer taxonomy_term training_categories defaults',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer taxonomy_term training_types defaults'.
+  $permissions['administer panelizer taxonomy_term training_types defaults'] = array(
+    'name' => 'administer panelizer taxonomy_term training_types defaults',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer taxonomy_term workbench_access_areas defaults'.
+  $permissions['administer panelizer taxonomy_term workbench_access_areas defaults'] = array(
+    'name' => 'administer panelizer taxonomy_term workbench_access_areas defaults',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'panelizer',
+  );
+
   // Exported permission: 'administer panels layouts'.
   $permissions['administer panels layouts'] = array(
     'name' => 'administer panels layouts',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'panels',
   );
@@ -718,7 +1019,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'administer profile types',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'profile2',
   );
@@ -800,7 +1100,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'administer taxonomy',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'taxonomy',
   );
@@ -864,7 +1163,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'administer workbench',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'workbench',
   );
@@ -874,7 +1172,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'administer workbench moderation',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'workbench_moderation',
   );
@@ -919,12 +1216,21 @@ function slac_intorg_permissions_user_default_permissions() {
     'module' => 'subscriptions',
   );
 
+  // Exported permission: 'bypass access in place editing'.
+  $permissions['bypass access in place editing'] = array(
+    'name' => 'bypass access in place editing',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'panels',
+  );
+
   // Exported permission: 'bypass file access'.
   $permissions['bypass file access'] = array(
     'name' => 'bypass file access',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'file_entity',
   );
@@ -951,7 +1257,9 @@ function slac_intorg_permissions_user_default_permissions() {
   // Exported permission: 'bypass rules access'.
   $permissions['bypass rules access'] = array(
     'name' => 'bypass rules access',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'rules',
   );
 
@@ -961,7 +1269,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'editor' => 'editor',
-      'manager' => 'manager',
     ),
     'module' => 'workbench_moderation',
   );
@@ -971,7 +1278,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'can administer state',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'support',
   );
@@ -981,9 +1287,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'can assign tickets to any user',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
-      'manager' => 'manager',
     ),
     'module' => 'support',
   );
@@ -993,9 +1296,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'can assign tickets to self',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
-      'manager' => 'manager',
     ),
     'module' => 'support',
   );
@@ -1005,7 +1305,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'can select client',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'support',
   );
@@ -1015,9 +1314,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'can select priority',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
-      'manager' => 'manager',
     ),
     'module' => 'support',
   );
@@ -1027,9 +1323,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'can select state',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
-      'manager' => 'manager',
     ),
     'module' => 'support',
   );
@@ -1039,8 +1332,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'can subscribe other users to notifications',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
-      'manager' => 'manager',
     ),
     'module' => 'support',
   );
@@ -1050,7 +1341,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'can suppress notification',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'support',
   );
@@ -1069,7 +1359,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'change layouts in place editing',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'panels',
   );
@@ -1092,14 +1381,33 @@ function slac_intorg_permissions_user_default_permissions() {
     'module' => 'htmlmail',
   );
 
-  // Exported permission: 'create any block_with_brochures bean'.
-  $permissions['create any block_with_brochures bean'] = array(
-    'name' => 'create any block_with_brochures bean',
+  // Exported permission: 'create additional_resource content'.
+  $permissions['create additional_resource content'] = array(
+    'name' => 'create additional_resource content',
     'roles' => array(
       'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
       'manager' => 'manager',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'create announcement_link content'.
+  $permissions['create announcement_link content'] = array(
+    'name' => 'create announcement_link content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'create any block_with_brochures bean'.
+  $permissions['create any block_with_brochures bean'] = array(
+    'name' => 'create any block_with_brochures bean',
+    'roles' => array(
+      'administrator' => 'administrator',
     ),
     'module' => 'bean',
   );
@@ -1109,9 +1417,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'create any content_block bean',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
-      'manager' => 'manager',
     ),
     'module' => 'bean',
   );
@@ -1121,9 +1426,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'create any content_block_large_image bean',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
-      'manager' => 'manager',
     ),
     'module' => 'bean',
   );
@@ -1133,9 +1435,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'create any content_block_with_links bean',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
-      'manager' => 'manager',
     ),
     'module' => 'bean',
   );
@@ -1157,8 +1456,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'create event content',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'node',
@@ -1169,7 +1466,7 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'create faq content',
     'roles' => array(
       'administrator' => 'administrator',
-      'authenticated user' => 'authenticated user',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -1191,6 +1488,7 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'create fieldable fieldable_panels_pane',
     'roles' => array(
       'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'fieldable_panels_panes',
   );
@@ -1200,8 +1498,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'create fieldable share_block',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'fieldable_panels_panes',
@@ -1212,8 +1508,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'create fieldable slac_mini_slideshow',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'fieldable_panels_panes',
@@ -1224,8 +1518,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'create fieldable slac_projects',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'fieldable_panels_panes',
@@ -1236,8 +1528,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'create fieldable slac_sidebar_block',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'fieldable_panels_panes',
@@ -1248,8 +1538,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'create fieldable slideshow_description_bottom',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'fieldable_panels_panes',
@@ -1267,13 +1555,23 @@ function slac_intorg_permissions_user_default_permissions() {
     'module' => 'file_entity',
   );
 
+  // Exported permission: 'create form_entry content'.
+  $permissions['create form_entry content'] = array(
+    'name' => 'create form_entry content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: 'create forum content'.
   $permissions['create forum content'] = array(
     'name' => 'create forum content',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'node',
@@ -1284,8 +1582,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'create kb_article content',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'node',
@@ -1296,8 +1592,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'create landing_page content',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'node',
@@ -1308,6 +1602,7 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'create mini panels',
     'roles' => array(
       'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'panels_mini',
   );
@@ -1317,8 +1612,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'create page content',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'node',
@@ -1338,8 +1631,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'create slac_news content',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'node',
@@ -1350,8 +1641,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'create slac_sc_catalog_item content',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'node',
@@ -1362,7 +1651,16 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'create support_ticket content',
     'roles' => array(
       'administrator' => 'administrator',
-      'authenticated user' => 'authenticated user',
+      'manager' => 'manager',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'create training_entry content'.
+  $permissions['create training_entry content'] = array(
+    'name' => 'create training_entry content',
+    'roles' => array(
+      'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
       'manager' => 'manager',
@@ -1375,9 +1673,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'create url aliases',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
-      'manager' => 'manager',
     ),
     'module' => 'path',
   );
@@ -1387,8 +1682,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'create webform content',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'node',
@@ -1399,8 +1692,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'create wiki_page content',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'node',
@@ -1413,6 +1704,24 @@ function slac_intorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'webform',
+  );
+
+  // Exported permission: 'delete any additional_resource content'.
+  $permissions['delete any additional_resource content'] = array(
+    'name' => 'delete any additional_resource content',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete any announcement_link content'.
+  $permissions['delete any announcement_link content'] = array(
+    'name' => 'delete any announcement_link content',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'node',
   );
 
   // Exported permission: 'delete any audio files'.
@@ -1431,9 +1740,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'delete any block_with_brochures bean',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
-      'manager' => 'manager',
     ),
     'module' => 'bean',
   );
@@ -1443,8 +1749,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'delete any blog content',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
-      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -1454,9 +1758,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'delete any content_block bean',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
-      'manager' => 'manager',
     ),
     'module' => 'bean',
   );
@@ -1466,9 +1767,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'delete any content_block_large_image bean',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
-      'manager' => 'manager',
     ),
     'module' => 'bean',
   );
@@ -1478,9 +1776,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'delete any content_block_with_links bean',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
-      'manager' => 'manager',
     ),
     'module' => 'bean',
   );
@@ -1501,8 +1796,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'delete any event content',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
-      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -1512,7 +1805,15 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'delete any faq content',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete any form_entry content'.
+  $permissions['delete any form_entry content'] = array(
+    'name' => 'delete any form_entry content',
+    'roles' => array(
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -1522,7 +1823,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'delete any forum content',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -1543,7 +1843,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'delete any kb_article content',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -1553,7 +1852,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'delete any landing_page content',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -1563,7 +1861,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'delete any page content',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -1582,8 +1879,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'delete any slac_news content',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
-      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -1593,7 +1888,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'delete any slac_sc_catalog_item content',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -1603,7 +1897,15 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'delete any support_ticket content',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete any training_entry content'.
+  $permissions['delete any training_entry content'] = array(
+    'name' => 'delete any training_entry content',
+    'roles' => array(
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -1624,7 +1926,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'delete any webform content',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -1634,7 +1935,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'delete any wiki_page content',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -1653,8 +1953,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'delete fieldable share_block',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
-      'manager' => 'manager',
     ),
     'module' => 'fieldable_panels_panes',
   );
@@ -1664,8 +1962,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'delete fieldable slac_mini_slideshow',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
-      'manager' => 'manager',
     ),
     'module' => 'fieldable_panels_panes',
   );
@@ -1675,8 +1971,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'delete fieldable slac_projects',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
-      'manager' => 'manager',
     ),
     'module' => 'fieldable_panels_panes',
   );
@@ -1686,8 +1980,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'delete fieldable slac_sidebar_block',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
-      'manager' => 'manager',
     ),
     'module' => 'fieldable_panels_panes',
   );
@@ -1697,10 +1989,30 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'delete fieldable slideshow_description_bottom',
     'roles' => array(
       'administrator' => 'administrator',
+    ),
+    'module' => 'fieldable_panels_panes',
+  );
+
+  // Exported permission: 'delete own additional_resource content'.
+  $permissions['delete own additional_resource content'] = array(
+    'name' => 'delete own additional_resource content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
       'editor' => 'editor',
       'manager' => 'manager',
     ),
-    'module' => 'fieldable_panels_panes',
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete own announcement_link content'.
+  $permissions['delete own announcement_link content'] = array(
+    'name' => 'delete own announcement_link content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'node',
   );
 
   // Exported permission: 'delete own audio files'.
@@ -1744,7 +2056,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'delete own event content',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'node',
@@ -1755,6 +2066,17 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'delete own faq content',
     'roles' => array(
       'administrator' => 'administrator',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete own form_entry content'.
+  $permissions['delete own form_entry content'] = array(
+    'name' => 'delete own form_entry content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'node',
@@ -1797,7 +2119,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'delete own landing_page content',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -1826,7 +2147,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'delete own slac_news content',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'node',
@@ -1847,6 +2167,18 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'delete own support_ticket content',
     'roles' => array(
       'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete own training_entry content'.
+  $permissions['delete own training_entry content'] = array(
+    'name' => 'delete own training_entry content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'node',
@@ -1907,7 +2239,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'delete terms in blog_categories',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'taxonomy',
   );
@@ -1917,7 +2248,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'delete terms in event_categories',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'taxonomy',
   );
@@ -1927,7 +2257,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'delete terms in faq_categories',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'taxonomy',
   );
@@ -1937,7 +2266,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'delete terms in forums',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'taxonomy',
   );
@@ -1947,7 +2275,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'delete terms in news_types',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'taxonomy',
   );
@@ -1957,7 +2284,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'delete terms in slac_blog_tags',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'taxonomy',
   );
@@ -1967,7 +2293,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'delete terms in slac_sc_category',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'taxonomy',
   );
@@ -1977,7 +2302,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'delete terms in slac_sc_eligibility',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'taxonomy',
   );
@@ -1987,7 +2311,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'delete terms in slac_sc_self_help',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'taxonomy',
   );
@@ -1997,7 +2320,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'delete terms in slac_wiki_tags',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'taxonomy',
   );
@@ -2007,7 +2329,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'delete terms in tags',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'taxonomy',
   );
@@ -2074,7 +2395,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'download mail via support/fetch',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'support',
   );
@@ -2086,6 +2406,7 @@ function slac_intorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
+      'manager' => 'manager',
     ),
     'module' => 'lightbox2',
   );
@@ -2143,9 +2464,30 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'edit all webform submissions',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'webform',
+  );
+
+  // Exported permission: 'edit any additional_resource content'.
+  $permissions['edit any additional_resource content'] = array(
+    'name' => 'edit any additional_resource content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit any announcement_link content'.
+  $permissions['edit any announcement_link content'] = array(
+    'name' => 'edit any announcement_link content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'node',
   );
 
   // Exported permission: 'edit any audio files'.
@@ -2164,8 +2506,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'edit any bio profile',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
-      'manager' => 'manager',
     ),
     'module' => 'profile2',
   );
@@ -2175,9 +2515,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'edit any block_with_brochures bean',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
-      'manager' => 'manager',
     ),
     'module' => 'bean',
   );
@@ -2187,6 +2524,7 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'edit any blog content',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
       'editor' => 'editor',
       'manager' => 'manager',
     ),
@@ -2198,8 +2536,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'edit any contact profile',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
-      'manager' => 'manager',
     ),
     'module' => 'profile2',
   );
@@ -2209,9 +2545,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'edit any content_block bean',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
-      'manager' => 'manager',
     ),
     'module' => 'bean',
   );
@@ -2221,9 +2554,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'edit any content_block_large_image bean',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
-      'manager' => 'manager',
     ),
     'module' => 'bean',
   );
@@ -2233,9 +2563,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'edit any content_block_with_links bean',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
-      'manager' => 'manager',
     ),
     'module' => 'bean',
   );
@@ -2256,8 +2583,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'edit any event content',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'node',
@@ -2275,13 +2600,22 @@ function slac_intorg_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'edit any form_entry content'.
+  $permissions['edit any form_entry content'] = array(
+    'name' => 'edit any form_entry content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: 'edit any forum content'.
   $permissions['edit any forum content'] = array(
     'name' => 'edit any forum content',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'node',
@@ -2303,8 +2637,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'edit any kb_article content',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'node',
@@ -2315,8 +2647,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'edit any landing_page content',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'node',
@@ -2327,8 +2657,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'edit any page content',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'node',
@@ -2348,8 +2676,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'edit any slac_news content',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'node',
@@ -2360,8 +2686,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'edit any slac_sc_catalog_item content',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'node',
@@ -2372,8 +2696,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'edit any social_media profile',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
-      'manager' => 'manager',
     ),
     'module' => 'profile2',
   );
@@ -2381,6 +2703,16 @@ function slac_intorg_permissions_user_default_permissions() {
   // Exported permission: 'edit any support_ticket content'.
   $permissions['edit any support_ticket content'] = array(
     'name' => 'edit any support_ticket content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit any training_entry content'.
+  $permissions['edit any training_entry content'] = array(
+    'name' => 'edit any training_entry content',
     'roles' => array(
       'administrator' => 'administrator',
       'author' => 'author',
@@ -2406,7 +2738,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'edit any webform content',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'node',
@@ -2417,8 +2748,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'edit any wiki_page content',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'node',
@@ -2460,8 +2789,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'edit fieldable share_block',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'fieldable_panels_panes',
@@ -2472,8 +2799,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'edit fieldable slac_mini_slideshow',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'fieldable_panels_panes',
@@ -2484,8 +2809,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'edit fieldable slac_projects',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'fieldable_panels_panes',
@@ -2496,8 +2819,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'edit fieldable slac_sidebar_block',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'fieldable_panels_panes',
@@ -2508,8 +2829,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'edit fieldable slideshow_description_bottom',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'fieldable_panels_panes',
@@ -2520,11 +2839,30 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'edit meta tags',
     'roles' => array(
       'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit own additional_resource content'.
+  $permissions['edit own additional_resource content'] = array(
+    'name' => 'edit own additional_resource content',
+    'roles' => array(
+      'administrator' => 'administrator',
       'author' => 'author',
       'editor' => 'editor',
       'manager' => 'manager',
     ),
-    'module' => 'metatag',
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit own announcement_link content'.
+  $permissions['edit own announcement_link content'] = array(
+    'name' => 'edit own announcement_link content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'node',
   );
 
   // Exported permission: 'edit own audio files'.
@@ -2544,9 +2882,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'edit own bio profile',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
-      'manager' => 'manager',
     ),
     'module' => 'profile2',
   );
@@ -2580,9 +2915,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'edit own contact profile',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
-      'manager' => 'manager',
     ),
     'module' => 'profile2',
   );
@@ -2604,8 +2936,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'edit own event content',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'node',
@@ -2635,13 +2965,23 @@ function slac_intorg_permissions_user_default_permissions() {
     'module' => 'field_permissions',
   );
 
+  // Exported permission: 'edit own form_entry content'.
+  $permissions['edit own form_entry content'] = array(
+    'name' => 'edit own form_entry content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: 'edit own forum content'.
   $permissions['edit own forum content'] = array(
     'name' => 'edit own forum content',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'node',
@@ -2664,8 +3004,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'edit own kb_article content',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'node',
@@ -2676,8 +3014,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'edit own landing_page content',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'node',
@@ -2688,8 +3024,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'edit own page content',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'node',
@@ -2709,8 +3043,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'edit own slac_news content',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'node',
@@ -2721,8 +3053,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'edit own slac_sc_catalog_item content',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'node',
@@ -2733,9 +3063,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'edit own social_media profile',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
-      'manager' => 'manager',
     ),
     'module' => 'profile2',
   );
@@ -2743,6 +3070,16 @@ function slac_intorg_permissions_user_default_permissions() {
   // Exported permission: 'edit own support_ticket content'.
   $permissions['edit own support_ticket content'] = array(
     'name' => 'edit own support_ticket content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit own training_entry content'.
+  $permissions['edit own training_entry content'] = array(
+    'name' => 'edit own training_entry content',
     'roles' => array(
       'administrator' => 'administrator',
       'author' => 'author',
@@ -2769,8 +3106,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'edit own webform content',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'node',
@@ -2781,9 +3116,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'edit own webform submissions',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
-      'manager' => 'manager',
     ),
     'module' => 'webform',
   );
@@ -2793,8 +3125,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'edit own wiki_page content',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'node',
@@ -2805,9 +3135,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'edit terms in blog_categories',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
-      'manager' => 'manager',
     ),
     'module' => 'taxonomy',
   );
@@ -2817,9 +3144,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'edit terms in event_categories',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
-      'manager' => 'manager',
     ),
     'module' => 'taxonomy',
   );
@@ -2829,9 +3153,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'edit terms in faq_categories',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
-      'manager' => 'manager',
     ),
     'module' => 'taxonomy',
   );
@@ -2841,9 +3162,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'edit terms in forums',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
-      'manager' => 'manager',
     ),
     'module' => 'taxonomy',
   );
@@ -2853,9 +3171,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'edit terms in news_types',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
-      'manager' => 'manager',
     ),
     'module' => 'taxonomy',
   );
@@ -2865,9 +3180,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'edit terms in slac_blog_tags',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
-      'manager' => 'manager',
     ),
     'module' => 'taxonomy',
   );
@@ -2877,9 +3189,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'edit terms in slac_sc_category',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
-      'manager' => 'manager',
     ),
     'module' => 'taxonomy',
   );
@@ -2889,9 +3198,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'edit terms in slac_sc_eligibility',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
-      'manager' => 'manager',
     ),
     'module' => 'taxonomy',
   );
@@ -2901,9 +3207,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'edit terms in slac_sc_self_help',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
-      'manager' => 'manager',
     ),
     'module' => 'taxonomy',
   );
@@ -2913,9 +3216,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'edit terms in slac_wiki_tags',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
-      'manager' => 'manager',
     ),
     'module' => 'taxonomy',
   );
@@ -2925,9 +3225,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'edit terms in tags',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
-      'manager' => 'manager',
     ),
     'module' => 'taxonomy',
   );
@@ -2937,7 +3234,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'epsacrop administer available crops',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'epsacrop',
   );
@@ -3002,9 +3298,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'import og_tag_importer',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
-      'manager' => 'manager',
     ),
     'module' => 'og_tag_importer',
   );
@@ -3035,7 +3328,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'moderate content from needs_review to draft',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
       'editor' => 'editor',
       'manager' => 'manager',
     ),
@@ -3058,7 +3350,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'move ticket',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'support',
   );
@@ -3068,7 +3359,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'notify of path changes',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'pathauto',
   );
@@ -3159,7 +3449,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'subscribe to content',
     'roles' => array(
       'administrator' => 'administrator',
-      'authenticated user' => 'authenticated user',
     ),
     'module' => 'subscriptions',
   );
@@ -3226,8 +3515,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'use page manager',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'page_manager',
@@ -3247,6 +3534,7 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'use panels dashboard',
     'roles' => array(
       'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'panels',
   );
@@ -3277,6 +3565,9 @@ function slac_intorg_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
     ),
     'module' => 'filter',
   );
@@ -3299,6 +3590,9 @@ function slac_intorg_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
     ),
     'module' => 'filter',
   );
@@ -3308,6 +3602,7 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'use workbench_moderation my drafts tab',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
       'editor' => 'editor',
       'manager' => 'manager',
     ),
@@ -3343,9 +3638,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'view any bio profile',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
-      'manager' => 'manager',
     ),
     'module' => 'profile2',
   );
@@ -3419,9 +3711,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'view any social_media profile',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
-      'manager' => 'manager',
     ),
     'module' => 'profile2',
   );
@@ -3483,7 +3772,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'view forum statistics',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'advanced_forum',
   );
@@ -3493,7 +3781,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'view last edited notice',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'advanced_forum',
   );
@@ -3512,9 +3799,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'view moderation history',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
-      'manager' => 'manager',
     ),
     'module' => 'workbench_moderation',
   );
@@ -3536,7 +3820,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'view node location table',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'location',
   );
@@ -3546,9 +3829,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'view other users tickets',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
-      'manager' => 'manager',
     ),
     'module' => 'support',
   );
@@ -3558,9 +3838,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'view own bio profile',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
-      'manager' => 'manager',
     ),
     'module' => 'profile2',
   );
@@ -3618,9 +3895,6 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'view own social_media profile',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'editor' => 'editor',
-      'manager' => 'manager',
     ),
     'module' => 'profile2',
   );
@@ -3642,6 +3916,7 @@ function slac_intorg_permissions_user_default_permissions() {
     'name' => 'view pane admin links',
     'roles' => array(
       'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'panels',
   );
