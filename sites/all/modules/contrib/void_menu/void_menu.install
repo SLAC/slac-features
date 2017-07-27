@@ -11,7 +11,7 @@
 function void_menu_uninstall() {
   variable_del('void_menu_link_value');
   $i = 1;
-  while ($i < 10) {
+  while ($i < 50) {
     variable_del('void_menu_link_value' . $i);
     $i++;
   }

@@ -27,7 +27,7 @@ function void_menu_menu() {
  */
   $items['<void>'] = $base;
   $i = 1;
-  while ($i < 10) {  
+  while ($i < 50) {  
     $items['<void' . $i . '>'] = $base;
     $i++;
   }
@@ -121,7 +121,7 @@ function void_menu_admin_settings_form() {
   );
 
   $i = 1;
-  while ($i < 10) {
+  while ($i < 50) {
     $form['void_menu_link_value' . $i] = $formbase + array(
       '#title' => check_plain('HTML value for <void' . $i . '>'),
       '#description' => check_plain('You can use this field to customize the value of the <void' . $i . '> tag', array('!item' => $i)),
@@ -172,7 +172,7 @@ function void_menu_url_outbound_alter(&$path, &$options, $original_path) {
   }
 
   $i = 1;
-  while($i < 10) {
+  while($i < 50) {
     $items[$i] = variable_get('void_menu_link_value' . $i);
     if($items[$i] === $original_path) {
       $path = $original_path;
