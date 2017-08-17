@@ -1,0 +1,3 @@
+[submodule "sites/all/modules/custom/ssp"]
+	path = sites/all/modules/custom/ssp
+	url = git@github.com:SLAC/stanford_ssp.git
