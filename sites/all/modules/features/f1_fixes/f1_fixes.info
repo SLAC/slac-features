@@ -1,0 +1,10 @@
+name = Forum One Fixes
+core = 7.x
+package = Features
+dependencies[] = ctools
+dependencies[] = linkit
+dependencies[] = pathologic
+features[ctools][] = linkit:linkit_profiles:1
+features[features_api][] = api:2
+features[linkit_profiles][] = default
+project path = sites/all/modules/features

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Forum One Fixes feature.
+ */
+
+include_once 'f1_fixes.features.inc';
