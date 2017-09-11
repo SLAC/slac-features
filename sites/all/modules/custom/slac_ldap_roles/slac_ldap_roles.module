@@ -114,10 +114,10 @@ function _slac_ldap_roles_get($mapping, $group) {
 function slac_ldap_roles_libraries_info() {
   $libraries['slac_ldap_roles'] = array(
     'name' => 'ADLDAP library',
-    'vendor url' => 'http://adldap.sourceforge.net/',
-    'download url' => 'http://adldap.sourceforge.net/download.php',
+    'vendor url' => 'https://github.com/Adldap2/Adldap2',
+    'download url' => 'https://github.com/Adldap2/Adldap2.git',
     'version arguments' => array(
-      'file' => 'src/Adldap.php',
+      'file' => 'Adldap.php',
       'pattern' => '@Version\s+([0-9a-zA-Z\.-]+)@',
       'lines' => 7,
     ),
