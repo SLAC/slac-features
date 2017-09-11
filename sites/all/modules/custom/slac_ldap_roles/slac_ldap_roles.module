@@ -116,11 +116,6 @@ function slac_ldap_roles_libraries_info() {
     'name' => 'ADLDAP library',
     'vendor url' => 'https://github.com/Adldap2/Adldap2',
     'download url' => 'https://github.com/Adldap2/Adldap2.git',
-    'version arguments' => array(
-      'file' => 'Adldap.php',
-      'pattern' => '@Version\s+([0-9a-zA-Z\.-]+)@',
-      'lines' => 7,
-    ),
     'files' => array(
       'php' => array(
         'Adldap.php',
