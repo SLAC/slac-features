@@ -117,13 +117,13 @@ function slac_ldap_roles_libraries_info() {
     'vendor url' => 'http://adldap.sourceforge.net/',
     'download url' => 'http://adldap.sourceforge.net/download.php',
     'version arguments' => array(
-      'file' => 'adLDAP.php',
+      'file' => 'src/Adldap.php',
       'pattern' => '@Version\s+([0-9a-zA-Z\.-]+)@',
-      'lines' => 4,
+      'lines' => 7,
     ),
     'files' => array(
       'php' => array(
-        'adLDAP.php',
+        'Adldap.php',
       ),
     ),
   );
@@ -167,9 +167,9 @@ function slac_ldap_roles_init_server($config = array()) {
     return;
   }
   try {
-    $adldap = new adLDAP($config);
+    $adldap = new \Adldap\Adldap($config);
   }
-  catch (adLDAPException $e) {
+  catch (\Adldap\Auth\BindException $e) {
     // watchdog the exception
     watchdog('slac_ldap_roles', 'Unable to create ADLDAP connection', array(), WATCHDOG_WARNING);
     return;
