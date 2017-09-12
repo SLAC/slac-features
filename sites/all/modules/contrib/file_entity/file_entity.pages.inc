@@ -35,10 +35,12 @@ function file_entity_download_page($file) {
   if (!is_file($file->uri)) {
     return MENU_NOT_FOUND;
   }
-
+  // @todo Remove this once drupal_basename is fixed for PHP versions greater
+  //  than '5.3.29'.
+  $basename_function = version_compare(PHP_VERSION,'5.3.29','>') ? 'basename' : 'drupal_basename';
   $headers = array(
     'Content-Type' => mime_header_encode($file->filemime),
-    'Content-Disposition' => 'attachment; filename="' . mime_header_encode(drupal_basename($file->uri)) . '"',
+    'Content-Disposition' => 'attachment; filename="' . mime_header_encode($basename_function($file->uri)) . '"',
     'Content-Length' => $file->filesize,
     'Content-Transfer-Encoding' => 'binary',
     'Pragma' => 'no-cache',
@@ -77,10 +79,21 @@ function file_entity_download_page($file) {
  * - Edit fields
  *   Skip this step if there are no fields on this entity type.
  */
-function file_entity_add_upload($form, &$form_state, array $options = array()) {
+function file_entity_add_upload($form, &$form_state, $options = array()) {
+  if (!is_array($options)) {
+    $options = array($options);
+  }
   $step = (isset($form_state['step']) && in_array($form_state['step'], array(1, 2, 3, 4))) ? $form_state['step'] : 1;
   $form['#step'] = $step;
-  $form['#options'] = $options;
+  $form['#options'] = $options + array(
+    'types' => array(),
+    'enabledPlugins' => array(),
+    'schemes' => array(),
+    'max_filesize' => '',
+    'uri_scheme' => 'public',
+    'plugins' => ''
+  );
+
   switch ($step) {
     case 1:
       return file_entity_add_upload_step_upload($form, $form_state, $options);
@@ -128,11 +141,12 @@ function file_entity_add_upload_step_upload($form, &$form_state, array $options 
  */
 function file_entity_add_upload_step_filetype($form, &$form_state, array $options = array()) {
   $file = file_load($form_state['storage']['upload']);
+  $selected_files = $form['#options']['types'];
 
   $form['type'] = array(
     '#type' => 'radios',
     '#title' => t('File type'),
-    '#options' => file_entity_get_filetype_candidates($file),
+    '#options' => file_entity_get_filetype_candidates($file, $selected_files),
     '#default_value' => isset($form_state['storage']['type']) ? $form_state['storage']['type'] : NULL,
     '#required' => TRUE,
   );
@@ -220,8 +234,10 @@ function file_entity_add_upload_step_fields($form, &$form_state, array $options 
     '#weight' => -10,
   );
 
-  // Add fields.
-  field_attach_form('file', $file, $form, $form_state);
+  $form = _file_entity_edit($form, $form_state, $file);
+  unset($form['replace_upload']);
+  unset($form['preview']);
+  unset($form['destination']);
 
   $form['actions'] = array('#type' => 'actions');
   $form['actions']['previous'] = array(
@@ -307,9 +323,17 @@ function file_entity_usage_page($file) {
  * @return array
  *   An array of file type bundles that support the file's mime type.
  */
-function file_entity_get_filetype_candidates($file) {
+function file_entity_get_filetype_candidates($file, $selected_files = array()) {
   $types = module_invoke_all('file_type', $file);
   drupal_alter('file_type', $types, $file);
+
+  // If no file types are selected in field instance settings, allow all
+  // available types.
+  if (!empty($selected_files)) {
+    // Limit file type candidates to field allowed types.
+    $types = array_intersect($types, $selected_files);
+  }
+
   $candidates = array();
   foreach ($types as $type) {
     $file->type = $type;
@@ -326,6 +350,9 @@ function file_entity_get_filetype_candidates($file) {
 function file_entity_add_upload_submit($form, &$form_state) {
   $form_state['storage'] = isset($form_state['storage']) ? $form_state['storage'] : array();
   $form_state['storage'] = array_merge($form_state['storage'], $form_state['values']);
+
+  // Field selected allowed types.
+  $selected_files = $form['#options']['types'];
 
   // This var is set to TRUE when we are ready to save the file.
   $save = FALSE;
@@ -344,7 +371,7 @@ function file_entity_add_upload_submit($form, &$form_state) {
       $file = file_load($form_state['storage']['upload']);
       if ($step == 2) {
         // Check if we can skip step 2.
-        $candidates = file_entity_get_filetype_candidates($file);
+        $candidates = file_entity_get_filetype_candidates($file, $selected_files);
         if (count($candidates) == 1) {
           $candidates_keys = array_keys($candidates);
           // There is only one possible filetype for this file.
@@ -397,12 +424,7 @@ function file_entity_add_upload_submit($form, &$form_state) {
 
   // We have the filetype, check if we can skip step 4.
   if (($form['#step'] == 3 && $trigger == 'edit-next')) {
-    $file = file_load($form_state['storage']['upload']);
-    if (!field_info_instances('file', $form_state['storage']['type'])) {
-      // This filetype doesn't have fields, save the file.
-      $save = TRUE;
-    }
-    elseif (variable_get('file_entity_file_upload_wizard_skip_fields', FALSE)) {
+    if (variable_get('file_entity_file_upload_wizard_skip_fields', FALSE)) {
       // Save the file with blanks fields.
       $save = TRUE;
     }
@@ -442,6 +464,23 @@ function file_entity_add_upload_submit($form, &$form_state) {
       // $form_state['values'] and not in ['storage']. This is true as long as
       // the fields are on the last page of the multi step form.
       entity_form_submit_build_entity('file', $file, $form, $form_state);
+
+      // A user might assign the associated user by entering a user name in the file
+      // edit form, which we then need to translate to a user ID.
+      if (isset($file->name)) {
+        // The use of isset() is mandatory in the context of user IDs, because
+        // user ID 0 denotes the anonymous user.
+        if ($user = user_load_by_name($file->name)) {
+          $file->uid = $user->uid;
+        }
+        else {
+          $file->uid = 0; // anonymous user
+        }
+      }
+      elseif ($file->uid) {
+        $user = user_load($file->uid);
+        $file->name = $user->name;
+      }
 
       file_save($file);
       $form_state['file'] = $file;
@@ -602,6 +641,42 @@ function file_entity_edit($form, &$form_state, $file) {
     $form['#attributes']['class'][] = 'file-' . $file->type . '-form';
   }
 
+  $form = _file_entity_edit($form, $form_state, $file);
+
+  // Add the buttons.
+  $form['actions'] = array('#type' => 'actions');
+  $form['actions']['submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Save'),
+    '#weight' => 5,
+    '#submit' => array('file_entity_edit_submit'),
+  );
+  $form['actions']['delete'] = array(
+    '#type' => 'submit',
+    '#value' => t('Delete'),
+    '#weight' => 10,
+    '#submit' => array('file_entity_edit_delete_submit'),
+    '#access' => file_entity_access('delete', $file),
+  );
+
+  // Build the URL for the cancel button taking into account that there might be
+  // a "destination" that includes query string variables.
+  $parameters = drupal_get_query_parameters();
+  $destination = isset($parameters['destination']) ? $parameters['destination'] : 'file/' . $file->fid;
+  $url = drupal_parse_url($destination);
+
+  $form['actions']['cancel'] = array(
+    '#type' => 'link',
+    '#title' => t('Cancel'),
+    '#href' => $url['path'],
+    '#options' => array('query' => $url['query']),
+    '#weight' => 15,
+  );
+
+  return $form;
+}
+
+function _file_entity_edit($form, &$form_state, $file) {
   // Basic file information.
   // These elements are just values so they are not even sent to the client.
   foreach (array('fid', 'type', 'uid', 'timestamp') as $key) {
@@ -757,6 +832,7 @@ function file_entity_edit($form, &$form_state, $file) {
   return $form;
 }
 
+
 /**
  * Form validation handler for file_entity_edit().
  */
@@ -800,21 +876,28 @@ function file_entity_edit_submit($form, &$form_state) {
   if (!empty($form_state['values']['replace_upload'])) {
     $replacement = $form_state['values']['replace_upload'];
     // Move file from temp to permanent home.
-    $destination_uri = rtrim($file->uri, drupal_basename($file->uri)) . drupal_basename($replacement->uri);
-    $replace_mode = $destination_uri == $file->uri ? FILE_EXISTS_REPLACE : FILE_EXISTS_RENAME;
-    if ($new_file_uri = file_unmanaged_copy($replacement->uri, $destination_uri, $replace_mode)) {
-      // @todo Add watchdog() about replaced file here?
+    if (pathinfo($replacement->uri, PATHINFO_EXTENSION) == pathinfo($file->uri, PATHINFO_EXTENSION)) {
+      if ($new_file_uri = file_unmanaged_copy($replacement->uri, $file->uri, FILE_EXISTS_REPLACE)) {
+        // Remove temporary file.
+        file_delete($replacement);
+      }
+    } else {
+      $destination_uri = rtrim($file->uri, drupal_basename($file->uri)) . drupal_basename($replacement->uri);
+      $replace_mode = $destination_uri == $file->uri ? FILE_EXISTS_REPLACE : FILE_EXISTS_RENAME;
+      if ($new_file_uri = file_unmanaged_copy($replacement->uri, $destination_uri, $replace_mode)) {
+        // @todo Add watchdog() about replaced file here?
 
-      // Remove temporary file.
-      file_delete($replacement);
+        // Remove temporary file.
+        file_delete($replacement);
 
-      // Update if the uri target has changed.
-      if ($new_file_uri != $file->uri) {
-       // Store the original file uri to delete if save is successful.
-       $orphaned_uri = $file->uri;
+        // Update if the uri target has changed.
+        if ($new_file_uri != $file->uri) {
+          // Store the original file uri to delete if save is successful.
+          $orphaned_uri = $file->uri;
 
-        // Update file entity uri.
-        $file->uri = $new_file_uri;
+          // Update file entity uri.
+          $file->uri = $new_file_uri;
+        }
       }
     }
   }
@@ -843,6 +926,9 @@ function file_entity_edit_submit($form, &$form_state) {
   if (file_uri_scheme($file->uri) != $form_state['values']['scheme']) {
     $file_destination = $form_state['values']['scheme'] . '://' . file_uri_target($file->uri);
     $file_destination = file_stream_wrapper_uri_normalize($file_destination);
+    $file_destination_dirname = drupal_dirname($file_destination);
+    // Create the directory in case it doesn't exist.
+    file_prepare_directory($file_destination_dirname, FILE_CREATE_DIRECTORY);
     if ($moved_file = file_move($file, $file_destination, FILE_EXISTS_RENAME)) {
       // Only re-assign the file object if file_move() did not fail.
       $file = $moved_file;
