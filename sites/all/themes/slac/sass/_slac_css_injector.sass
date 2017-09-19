@@ -112,8 +112,9 @@ article.node-blog.view-mode-full
 
 .front .pane-page-content
   .general-left h2.pane-title, .general-left-title h2.pane-title, .general-title h2.pane-title, .general-left h2.panel-title, .general-left-title h2.panel-title, .general-title h2.panel-title
-    font-size: 0.875rem
-    color: #333
+    font-size: 16px
+    color: #626262
+    text-transform: none
 
 .content
   .right-sidebar a:hover
@@ -248,10 +249,10 @@ article.node-blog.view-mode-full
 // Start Main Nav Styles
 @media (min-width: 894px)
   .main-menu.long-menu ul li
-    margin: 0 26px
+    margin: 0 26px !important
 
     &:first-child
-      margin-left: 0
+      margin-left: 0 !important
 
 // Add back indicator for when there's a 2nd or deeper level item
 @media (min-width: 690px)
@@ -349,7 +350,8 @@ li.menu__item.is-active-trail.is-expanded.item-main-menu
   color: #871628
 
 .last-three-news .views-field-title a
-  font-size: 0.84rem
+  font-size: 0.75rem
+  font-weight: 400
 
 .pane-bundle-slac-sidebar-block p
   font-size: 0.84rem
@@ -441,8 +443,11 @@ h2
 
 // Optional - replace footer background color with the Stanford "Cool Grey"
 
-.footer-second
-  background-color: #4d4f53
+.footer-seccond
+  background-color: #878787
+
+  .pane-2, .pane-site-address, .pane-3
+    font-size: 10px
 
 // End Stanford Colors
 
@@ -461,6 +466,7 @@ h2
     i
       font-family: "Times New Roman", serif
       top: 8px
+      white-space: no-wrap
 
 .event-calendar-block .view-content
   margin-bottom: 0
