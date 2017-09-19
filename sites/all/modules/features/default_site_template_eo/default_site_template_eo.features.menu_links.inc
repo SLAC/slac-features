@@ -10,7 +10,7 @@
 function default_site_template_eo_menu_default_menu_links() {
   $menu_links = array();
 
-  // Exported menu link: menu-footer-menu-1_about:node/17
+  // Exported menu link: menu-footer-menu-1_about:node/17.
   $menu_links['menu-footer-menu-1_about:node/17'] = array(
     'menu_name' => 'menu-footer-menu-1',
     'link_path' => 'node/17',
@@ -31,7 +31,7 @@ function default_site_template_eo_menu_default_menu_links() {
     'weight' => -50,
     'customized' => 1,
   );
-  // Exported menu link: menu-footer-menu-1_blog:node/40
+  // Exported menu link: menu-footer-menu-1_blog:node/40.
   $menu_links['menu-footer-menu-1_blog:node/40'] = array(
     'menu_name' => 'menu-footer-menu-1',
     'link_path' => 'node/40',
@@ -52,7 +52,7 @@ function default_site_template_eo_menu_default_menu_links() {
     'weight' => -49,
     'customized' => 1,
   );
-  // Exported menu link: menu-footer-menu-1_faq:faq
+  // Exported menu link: menu-footer-menu-1_faq:faq.
   $menu_links['menu-footer-menu-1_faq:faq'] = array(
     'menu_name' => 'menu-footer-menu-1',
     'link_path' => 'faq',
@@ -73,7 +73,7 @@ function default_site_template_eo_menu_default_menu_links() {
     'weight' => -47,
     'customized' => 1,
   );
-  // Exported menu link: menu-footer-menu-1_news:node/57
+  // Exported menu link: menu-footer-menu-1_news:node/57.
   $menu_links['menu-footer-menu-1_news:node/57'] = array(
     'menu_name' => 'menu-footer-menu-1',
     'link_path' => 'node/57',
@@ -94,7 +94,7 @@ function default_site_template_eo_menu_default_menu_links() {
     'weight' => -48,
     'customized' => 1,
   );
-  // Exported menu link: menu-header-menu_doe-office-of-science:http://science.energy.gov/
+  // Exported menu link: menu-header-menu_doe-office-of-science:http://science.energy.gov/.
   $menu_links['menu-header-menu_doe-office-of-science:http://science.energy.gov/'] = array(
     'menu_name' => 'menu-header-menu',
     'link_path' => 'http://science.energy.gov/',
@@ -115,7 +115,7 @@ function default_site_template_eo_menu_default_menu_links() {
     'weight' => -48,
     'customized' => 1,
   );
-  // Exported menu link: menu-header-menu_slac-home:https://www6.slac.stanford.edu/
+  // Exported menu link: menu-header-menu_slac-home:https://www6.slac.stanford.edu/.
   $menu_links['menu-header-menu_slac-home:https://www6.slac.stanford.edu/'] = array(
     'menu_name' => 'menu-header-menu',
     'link_path' => 'https://www6.slac.stanford.edu/',
@@ -136,7 +136,7 @@ function default_site_template_eo_menu_default_menu_links() {
     'weight' => -50,
     'customized' => 1,
   );
-  // Exported menu link: menu-header-menu_stanford-university:http://stanford.edu/
+  // Exported menu link: menu-header-menu_stanford-university:http://stanford.edu/.
   $menu_links['menu-header-menu_stanford-university:http://stanford.edu/'] = array(
     'menu_name' => 'menu-header-menu',
     'link_path' => 'http://stanford.edu/',
@@ -157,6 +157,7 @@ function default_site_template_eo_menu_default_menu_links() {
     'weight' => -49,
     'customized' => 1,
   );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('About');
@@ -166,7 +167,6 @@ function default_site_template_eo_menu_default_menu_links() {
   t('News');
   t('SLAC Home');
   t('Stanford University');
-
 
   return $menu_links;
 }
