@@ -1,39 +1,33 @@
-/*WARNING++++++++++++++++++++++++++++++++++++++++++++*/
-/*DO NOT EDIT styles.css file, this should be generated only by compliler */
-/*Propeople INC, SLAC Project*/
+/*WARNING++++++++++++++++++++++++++++++++++++++++++++
+/*DO NOT EDIT styles.css file, this should be generated only by compliler
+/*Propeople INC, SLAC Project
 
-@import "compass"
-@import "compass/css3"
-@import "compass/utilities"
-@import "susyone"
-@import "compass/css3/box-sizing"
-@import "compass/css3/border-radius"
-@import "compass/css3/transition"
-@import "compass/utilities/sprites/base"
-@import "compass/utilities/sprites/sprite-img"
-
-
+@import compass
+@import compass/css3
+@import compass/utilities
+@import susyone
+@import compass/css3/box-sizing
+@import compass/css3/border-radius
+@import compass/css3/transition
+@import compass/utilities/sprites/base
+@import compass/utilities/sprites/sprite-img
 
 // HTML5 BOILERPLATE INCLUDE
-@import "compass/css3/transition"
+@import compass/css3/transition
 @import reset
 
 @import colors
 @import extends
 @import slacfont
 
+$column-width: 52px
+$gutter-width: 50px
+$grid-padding: 13px
 
-
-$column-width     : 52px
-$gutter-width     : 50px
-$grid-padding     : 13px
-
-
-
-$total-columns    : 4
-$tablet           : 7
-$small-desktop    : 9
-$large-desktop    : 12
+$total-columns: 4
+$tablet: 7
+$small-desktop: 9
+$large-desktop: 12
 
 $only-tablet: 691px 893px
 $tablet-with-small-desktop: 691px 1138px
@@ -41,14 +35,13 @@ $mobile-and_tablet: 0 690px
 $mobile-only: 0 640px
 $mini-cal-break: 1000px
 
-
 $less-than-800: 800px
 $less-than-480: 480px
 $less-than-320: 320px
 $less-than-758: 758px
 
-$container-style  : magic
-$container-width  : container-outer-width($large-desktop)
+$container-style: magic
+$container-width: container-outer-width($large-desktop)
 
 +border-box-sizing
 
@@ -59,8 +52,10 @@ $breakpoint-ie-output: false
 $sprites-spacing: 20px
 $sprites-layout: vertical
 $sprites-sprite-dimensions: true
-@import "sprites/*.png"
-@include all-sprites-sprites
+
+@import sprites/*.png
+
++all-sprites-sprites
 
 @import main_menu
 @import layout
@@ -76,5 +71,6 @@ $sprites-sprite-dimensions: true
 @import calendar
 
 @import slac_css_injector
+@import file
 
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=styles.css.map
