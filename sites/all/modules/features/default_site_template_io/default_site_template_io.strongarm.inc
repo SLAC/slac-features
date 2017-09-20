@@ -471,7 +471,6 @@ function default_site_template_io_strongarm() {
     'toggle_favicon' => 1,
     'toggle_main_menu' => 1,
     'toggle_secondary_menu' => 1,
-    'site_name_abbreviation' => 0,
     'site_url_address' => 0,
     'site_footer_address' => 0,
     'default_logo' => 0,

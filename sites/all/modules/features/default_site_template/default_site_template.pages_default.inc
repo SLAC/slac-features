@@ -470,24 +470,6 @@ function default_site_template_default_page_manager_handlers() {
     $display->content['new-6'] = $pane;
     $display->panels['main-menu'][0] = 'new-6';
     $pane = new stdClass();
-    $pane->pid = 'new-7';
-    $pane->panel = 'site-title';
-    $pane->type = 'site_name_abbreviation';
-    $pane->subtype = 'site_name_abbreviation';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-7'] = $pane;
-    $display->panels['site-title'][0] = 'new-7';
-    $pane = new stdClass();
     $pane->pid = 'new-8';
     $pane->panel = 'site-title';
     $pane->type = 'page_site_name';
@@ -504,7 +486,7 @@ function default_site_template_default_page_manager_handlers() {
     $pane->position = 1;
     $pane->locks = array();
     $display->content['new-8'] = $pane;
-    $display->panels['site-title'][1] = 'new-8';
+    $display->panels['site-title'][0] = 'new-8';
     $pane = new stdClass();
     $pane->pid = 'new-9';
     $pane->panel = 'user-search';

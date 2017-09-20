@@ -546,25 +546,6 @@ newsletter/*',
     $display->content['new-c94664ce-c3f2-4351-a98e-aa25cfb8babd'] = $pane;
     $display->panels['main-menu'][1] = 'new-c94664ce-c3f2-4351-a98e-aa25cfb8babd';
     $pane = new stdClass();
-    $pane->pid = 'new-6d158053-01d7-4ab6-a577-5ac17a379836';
-    $pane->panel = 'site-title';
-    $pane->type = 'site_name_abbreviation';
-    $pane->subtype = 'site_name_abbreviation';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $pane->uuid = '6d158053-01d7-4ab6-a577-5ac17a379836';
-    $display->content['new-6d158053-01d7-4ab6-a577-5ac17a379836'] = $pane;
-    $display->panels['site-title'][0] = 'new-6d158053-01d7-4ab6-a577-5ac17a379836';
-    $pane = new stdClass();
     $pane->pid = 'new-b3038b66-eeae-49e1-a469-c69876f7b020';
     $pane->panel = 'site-title';
     $pane->type = 'page_site_name';
@@ -582,7 +563,7 @@ newsletter/*',
     $pane->locks = array();
     $pane->uuid = 'b3038b66-eeae-49e1-a469-c69876f7b020';
     $display->content['new-b3038b66-eeae-49e1-a469-c69876f7b020'] = $pane;
-    $display->panels['site-title'][1] = 'new-b3038b66-eeae-49e1-a469-c69876f7b020';
+    $display->panels['site-title'][0] = 'new-b3038b66-eeae-49e1-a469-c69876f7b020';
     $pane = new stdClass();
     $pane->pid = 'new-fbe9b0f2-e4dd-48cc-848b-15bf46f1a37e';
     $pane->panel = 'site-title';
@@ -601,7 +582,7 @@ newsletter/*',
     $pane->locks = array();
     $pane->uuid = 'fbe9b0f2-e4dd-48cc-848b-15bf46f1a37e';
     $display->content['new-fbe9b0f2-e4dd-48cc-848b-15bf46f1a37e'] = $pane;
-    $display->panels['site-title'][2] = 'new-fbe9b0f2-e4dd-48cc-848b-15bf46f1a37e';
+    $display->panels['site-title'][1] = 'new-fbe9b0f2-e4dd-48cc-848b-15bf46f1a37e';
     $pane = new stdClass();
     $pane->pid = 'new-5902e982-f174-4fee-a145-6789f581989f';
     $pane->panel = 'user-search';
