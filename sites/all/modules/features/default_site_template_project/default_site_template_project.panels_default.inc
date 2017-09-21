@@ -148,8 +148,8 @@ function default_site_template_project_default_panels_mini() {
     $pane = new stdClass();
     $pane->pid = 'new-787e5a9d-5307-4afa-9ada-ba06c75e240c';
     $pane->panel = 'left';
-    $pane->type = 'site_url_address';
-    $pane->subtype = 'site_url_address';
+    $pane->type = 'site_address';
+    $pane->subtype = 'site_address';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
@@ -395,8 +395,8 @@ function default_site_template_project_default_panels_mini() {
     $pane = new stdClass();
     $pane->pid = 'new-8060329b-0b3f-4aa3-b684-d0fd6bf37475';
     $pane->panel = 'left';
-    $pane->type = 'site_footer_address';
-    $pane->subtype = 'site_footer_address';
+    $pane->type = 'site_address';
+    $pane->subtype = 'site_address';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
