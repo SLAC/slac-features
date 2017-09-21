@@ -5,3 +5,5 @@ package = SLAC
 
 dependencies[] = panels
 files[] = plugins/content_types/site_address.inc
+files[] = plugins/content_types/site_footer_address.inc
+files[] = plugins/content_types/site_url_address.inc
