@@ -146,8 +146,8 @@ function default_site_template_default_panels_mini() {
     $pane = new stdClass();
     $pane->pid = 'new-2';
     $pane->panel = 'left';
-    $pane->type = 'site_address';
-    $pane->subtype = 'site_address';
+    $pane->type = 'site_url_address';
+    $pane->subtype = 'site_url_address';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
