@@ -585,7 +585,7 @@ newsletter/*',
   );
   $pane->css = array();
   $pane->extras = array();
-  $pane->position = 1;
+  $pane->position = 0;
   $pane->locks = array();
   $pane->uuid = '66bf7b61-7bb2-413a-a293-054abf27d96e';
   $display->content['new-66bf7b61-7bb2-413a-a293-054abf27d96e'] = $pane;
@@ -604,7 +604,7 @@ newsletter/*',
   );
   $pane->css = array();
   $pane->extras = array();
-  $pane->position = 2;
+  $pane->position = 1;
   $pane->locks = array();
   $pane->uuid = '5e910f71-dacd-4f0a-a0eb-3bb3e199058e';
   $display->content['new-5e910f71-dacd-4f0a-a0eb-3bb3e199058e'] = $pane;

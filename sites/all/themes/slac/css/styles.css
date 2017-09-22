@@ -442,11 +442,11 @@ ul.tabs li a:hover, .action-links li a:hover { background-color: #2e2e2e; }
 .footer-first ul.menu li:last-child { margin-right: 0; }
 .footer-first ul.menu li:last-child:after { display: none; }
 .footer-first ul.menu a { color: inherit; }
-.footer-first .pane-site-address { display: none; }
+.footer-first .pane-site-footer-address { display: none; }
 
 @media (min-width: 480px) { .footer-first .general-left { margin-bottom: 20px; }
   .footer-first .general-left .inside > div { display: inline-block; vertical-align: text-top; margin-bottom: 0; }
-  .footer-first .pane-site-address { display: block !important; font-size: 11px; font-size: 0.6875rem; margin-top: 0px; } }
+  .footer-first .pane-site-footer-address { display: block !important; font-size: 11px; font-size: 0.6875rem; margin-top: 0px; } }
 .social-icon-block { display: inline-block; vertical-align: bottom; margin: 5px auto 0; }
 .social-icon-block > div { float: left; margin-right: 15px; margin-bottom: 15px; }
 .social-icon-block > div:last-child { margin-right: 0; }
@@ -468,9 +468,9 @@ ul.tabs li a:hover, .action-links li a:hover { background-color: #2e2e2e; }
 .footer-seccond ul li a { display: block; position: relative; padding: 6px 20px 6px 6px; background-color: #aaaaaa; }
 .footer-seccond ul li a:after { content: "\3d"; position: absolute; font-size: 25px; font-size: 1.5625rem; right: 5px; top: 50%; margin-top: -13px; line-height: 1; }
 .footer-seccond a { color: inherit; }
-.footer-seccond .pane-1, .footer-seccond .pane-2, .footer-seccond .pane-site-address { display: inline; }
-.footer-seccond .pane-1 p, .footer-seccond .pane-2 p, .footer-seccond .pane-site-address p { display: block; }
-.footer-seccond .pane-1 a, .footer-seccond .pane-2 a, .footer-seccond .pane-site-address a { text-transform: uppercase; font-weight: bold; }
+.footer-seccond .pane-1, .footer-seccond .pane-2, .footer-seccond .pane-site-url-address { display: inline; }
+.footer-seccond .pane-1 p, .footer-seccond .pane-2 p, .footer-seccond .pane-site-url-address p { display: block; }
+.footer-seccond .pane-1 a, .footer-seccond .pane-2 a, .footer-seccond .pane-site-url-address a { text-transform: uppercase; font-weight: bold; }
 .footer-seccond .pane-1 p { margin-bottom: 5px; }
 .footer-seccond .pane-2 { display: block; clear: both; }
 
@@ -1957,7 +1957,7 @@ h2.faq-details-title, h2.faq-answer-title { margin-top: 20px; }
 .header.with_user_search form input[type="submit"] { color: #8c1515; }
 
 .footer-seccond { background-color: #878787; }
-.footer-seccond .pane-2, .footer-seccond .pane-site-address, .footer-seccond .pane-3 { font-size: 10px; }
+.footer-seccond .pane-2, .footer-seccond .pane-site-url-address, .footer-seccond .pane-3 { font-size: 10px; }
 
 .event-block { padding-left: 40px; }
 .event-block .events { font-size: 0.84rem; color: black; }
