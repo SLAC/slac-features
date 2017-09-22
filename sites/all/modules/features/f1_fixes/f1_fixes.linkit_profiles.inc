@@ -45,7 +45,7 @@ function f1_fixes_default_linkit_profiles() {
         'weight' => '-10',
       ),
       'entity:file' => array(
-        'enabled' => 0,
+        'enabled' => 1,
         'weight' => '-10',
       ),
       'entity:node' => array(
@@ -137,7 +137,7 @@ function f1_fixes_default_linkit_profiles() {
       'group_by_bundle' => 0,
       'show_scheme' => 0,
       'group_by_scheme' => 0,
-      'url_type' => 'entity',
+      'url_type' => 'direct',
       'image_extra_info' => array(
         'thumbnail' => 'thumbnail',
         'dimensions' => 'dimensions',

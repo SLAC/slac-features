@@ -13,6 +13,7 @@ function f1_fixes_metatag_export_default() {
   // Exported Metatag config instance: global:frontpage.
   $config['global:frontpage'] = array(
     'instance' => 'global:frontpage',
+    'disabled' => FALSE,
     'config' => array(
       'title' => array(
         'value' => '[current-page:pager][site:name]',
