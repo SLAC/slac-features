@@ -203,7 +203,11 @@ function slac_event_preprocess_node(&$vars) {
   $event_date_end_timestamp = strtotime($event_date_end);
 
   $vars['period'] = t('All Day');
-  if ($event_date != $event_date_end) {
+  $event_is_all_day = date_is_all_day(
+    format_date($event_date_timestamp, 'custom', DATE_FORMAT_DATETIME),
+    format_date($event_date_end_timestamp, 'custom', DATE_FORMAT_DATETIME)
+  );
+  if (!$event_is_all_day) {
     $vars['period'] = format_date($event_date_timestamp, 'custom', 'g:ia') . ' - ' . format_date($event_date_end_timestamp, 'custom', 'g:ia');
   }
 
