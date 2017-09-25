@@ -174,7 +174,7 @@ function f1_fixes_default_linkit_profiles() {
         'weight' => '-10',
       ),
       'target' => array(
-        'enabled' => 0,
+        'enabled' => 1,
         'weight' => '-10',
       ),
       'class' => array(
