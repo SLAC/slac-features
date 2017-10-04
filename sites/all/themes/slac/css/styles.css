@@ -1893,8 +1893,8 @@ article.node-blog.view-mode-full .field-type-text-with-summary p, article.node-b
 
 .pane-node-field-bp-image img { width: 100%; }
 
-@media (min-width: 894px) { .main-menu.long-menu ul li { margin: 0 26px !important; }
-  .main-menu.long-menu ul li:first-child { margin-left: 0 !important; } }
+@media (min-width: 894px) { .main-menu.long-menu ul li.sf-depth-1 { margin: 0 26px; }
+  .main-menu.long-menu ul li.sf-depth-1:first-child { margin-left: 0 !important; } }
 @media (min-width: 690px) { .sf-main-menu.sf-horizontal .sf-sub-indicator { display: inline-block !important; margin-left: 4px; -ms-transform: rotate(90deg); -webkit-transform: rotate(90deg); transform: rotate(90deg); } }
 .general-left h2.pane-title { margin-bottom: 8px; }
 
