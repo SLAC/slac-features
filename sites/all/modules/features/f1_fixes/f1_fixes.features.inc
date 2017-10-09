@@ -22,8 +22,18 @@ function f1_fixes_wysiwyg_default_profiles_alter(&$data) {
     $data['full_html']['settings']['acf_mode'] = 0; /* WAS: '' */
     $data['full_html']['settings']['add_to_summaries'] = 1; /* WAS: '' */
     $data['full_html']['settings']['advanced__active_tab'] = 'edit-basic'; /* WAS: 'edit-css' */
+    $data['full_html']['settings']['buttons']['default']['HorizontalRule'] = 1; /* WAS: '' */
+    $data['full_html']['settings']['buttons']['default']['Maximize'] = 1; /* WAS: '' */
+    $data['full_html']['settings']['buttons']['default']['Redo'] = 1; /* WAS: '' */
+    $data['full_html']['settings']['buttons']['default']['Source'] = 1; /* WAS: '' */
+    $data['full_html']['settings']['buttons']['default']['Subscript'] = 1; /* WAS: '' */
     $data['full_html']['settings']['buttons']['linkit'] = array(
       'linkit' => 1,
     ); /* WAS: '' */
+    unset($data['full_html']['settings']['buttons']['default']['BidiLtr']);
+    unset($data['full_html']['settings']['buttons']['default']['BidiRtl']);
+    unset($data['full_html']['settings']['buttons']['default']['SelectAll']);
+    unset($data['full_html']['settings']['buttons']['default']['Smiley']);
+    unset($data['full_html']['settings']['buttons']['default']['Styles']);
   }
 }
