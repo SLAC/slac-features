@@ -1925,7 +1925,7 @@ li.menu__item.is-active-trail.is-expanded.item-main-menu { background: #f3f3f3; 
 
 .content .right-sidebar a { color: #871628; }
 
-.last-three-news .views-field-title a { font-size: 0.75rem; font-weight: 400; }
+.last-three-news .views-field-title a { font-size: 0.84rem; font-weight: 600; }
 
 .pane-bundle-slac-sidebar-block p { font-size: 0.84rem; line-height: 1.4; margin-bottom: 15px; }
 
@@ -1972,6 +1972,26 @@ h2.faq-details-title, h2.faq-answer-title { margin-top: 20px; }
   .with-right-sidebar .general-right.expand-full { width: 73.93%; margin-right: 0; }
   .with-right-sidebar .general-left + .general-right { width: 52.1259%; } }
 @media only screen and (max-width: 690px) { .front .pane-page-content .general-left, .with-right-sidebar .general-right.expand-full { width: 100%; } }
+.footer-first .general-left .inside .panel-pane.pane-block ul.menu li { font-weight: 700; }
+
+.external-organisation .pane-page-site-name { font-weight: 700; }
+
+.page-basic-io .panel-panel.content .pane-menu-tree > div .menu li.depth-2.is-active::before, .page-basic-io .panel-panel.content .pane-menu-tree > div .menu li.depth-2.is-active-trail::before { content: none; display: none; }
+
+.page-basic-io .panel-panel.content .pane-menu-tree > div .menu li.depth-2.is-active { border-left: #77a9d9 solid 3px; }
+
+.page-basic-io .content .inside .pane-menu-tree > div > ul.menu li.depth-2 > a:hover, .page-basic-io .content .inside .pane-menu-tree > div > ul.menu li.depth-2 a.active { border-left: transparent solid 3px; background-color: #eaeef0; }
+
+.page-basic-io .content .general-left .inside .pane-menu-tree ul .depth-2 ul { padding-left: 0; }
+
+.page-basic-io li.menu__item.is-active-trail.is-expanded.item-main-menu { background: #eaeef0; }
+
+.page-basic-io .main-menu.long-menu ul > li.sf-depth-1 { margin: 0 26px !important; padding: 0 !important; }
+
+.page-basic-io .main-menu.long-menu ul > li.sf-depth-1.first { margin: 0 20px 0 0 !important; }
+
+.front .page-basic-io .general-left ul li, .front .page-basic-io .general-left ol li { font-size: 0.875rem; }
+
 strong { font-weight: 700; }
 
 em { font-style: italic; }
