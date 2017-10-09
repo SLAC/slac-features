@@ -1992,6 +1992,10 @@ h2.faq-details-title, h2.faq-answer-title { margin-top: 20px; }
 
 .front .page-basic-io .general-left ul li, .front .page-basic-io .general-left ol li { font-size: 0.875rem; }
 
+p span.file { display: flex; flex-direction: row; align-items: center; width: 100%; }
+
+p span.file .file-icon { float: none; width: 16px; height: 16px; margin-right: 8px !important; }
+
 strong { font-weight: 700; }
 
 em { font-style: italic; }
