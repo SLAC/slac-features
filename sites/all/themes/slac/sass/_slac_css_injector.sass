@@ -501,10 +501,13 @@ h2
 
 // External
 .footer-first .general-left .inside .panel-pane.pane-block ul.menu li
-  font-weight: 700
+  font-size: .75rem
 
 .external-organisation .pane-page-site-name
   font-weight: 700
+
+.external-organisation .site-title .inside .pane-page-site-name, .page-basic-io .inside .pane-page-site-name a
+  font-size: 2.6rem
 
 // Internal
 .page-basic-io .panel-panel.content .pane-menu-tree > div .menu li.depth-2.is-active::before,
@@ -515,13 +518,26 @@ h2
 .page-basic-io .panel-panel.content .pane-menu-tree > div .menu li.depth-2.is-active
   border-left: #77a9d9 solid 3px
 
-.page-basic-io .content .inside .pane-menu-tree > div > ul.menu li.depth-2 > a:hover,
-.page-basic-io .content .inside .pane-menu-tree > div > ul.menu li.depth-2 a.active
+.page-basic-io .content .inside .pane-menu-tree > div > ul.menu li.depth-2 > a:hover
   border-left: transparent solid 3px
   background-color: #eaeef0
 
+.page-basic-io .content .inside .pane-menu-tree > div > ul.menu li.depth-2 a.active
+  background-color: #dce2e5
+  border-left: 0
+
 .page-basic-io .content .general-left .inside .pane-menu-tree ul .depth-2 ul
   padding-left: 0
+
+.page-basic-io .panel-panel.content .pane-menu-tree > div .menu li.depth-2.is-expanded > a
+  border-left: transparent solid 3px
+
+.page-basic-io .panel-panel.content .pane-menu-tree > div .menu li.depth-2.is-expanded
+  border-left: #77a9d9 solid 3px
+
+.page-basic-io .panel-panel.content .pane-menu-tree > div .menu li.depth-4,
+.page-basic-io .panel-panel.content .pane-menu-tree > div .menu li.depth-5
+  padding-left: 26px
 
 .page-basic-io li.menu__item.is-active-trail.is-expanded.item-main-menu
   background: #eaeef0
@@ -533,22 +549,24 @@ h2
 .page-basic-io .main-menu.long-menu ul > li.sf-depth-1.first
   margin: 0 20px 0 0 !important
 
+.page-basic-io .content .right-sidebar a
+  color: #20659a
+
 .front .page-basic-io .general-left ul li,
 .front .page-basic-io .general-left ol li
   font-size: 0.875rem
 
 // Files
 p span.file
-  display: flex
-  flex-direction: row
-  align-items: center
-  width: 100%
+  display: inline-flex
+  flex-direction: row-reverse
+  align-items: baseline
 
 p span.file .file-icon
   float: none
-  width: 16px
-  height: 16px
-  margin-right: 8px !important
+  margin-bottom: 0
+  margin-left: 6px !important
+  margin-top: 0
 
 
 // Start CKEditor Basic
