@@ -2,29 +2,23 @@
 
 /**
  * Implemanted hook_form_alter()
- * 
+ *
  * @param type $form
  * @param type $form_state
- * @param type $form_id 
+ * @param type $form_id
  */
 function slac_site_variables_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id == 'system_site_information_settings') {
-    $form['site_information']['site_name_abbreviation'] = array(
-      '#type' => 'textfield',
-      '#title' => t('Site name abbreviation'),
-      '#description' => t('The site name abbreviation will be appear in header.'),
-      '#default_value' => (variable_get('site_name_abbreviation')) ? variable_get('site_name_abbreviation') : '',
-    );
     $form['site_information']['site_url_address'] = array(
       '#type' => 'textarea',
-      '#title' => t('Site address'),
+      '#title' => t('Footer address'),
       '#description' => t('This address is used by link from footer.'),
       '#default_value' => (variable_get('site_url_address')) ? variable_get('site_url_address') : '',
     );
     $form['site_information']['site_footer_address'] = array(
       '#type' => 'textarea',
-      '#title' => t('Footer Address'),
-      '#description' => t('This address is used by link from Secondary footer.'),
+      '#title' => t('Sub-footer address'),
+      '#description' => t('This address is used by link from sub-footer.'),
       '#default_value' => (variable_get('site_footer_address')) ? variable_get('site_footer_address') : '',
     );
     $form['#submit'][] = 'slac_site_variables_form_submit';
@@ -34,35 +28,29 @@ function slac_site_variables_form_alter(&$form, &$form_state, $form_id) {
 /**
  *
  * @param type $form
- * @param type $form_state 
+ * @param type $form_state
  */
 function slac_site_variables_form_submit(&$form, &$form_state) {
-  variable_set('site_name_abbreviation', $form_state['values']['site_name_abbreviation']);
   variable_set('site_url_address', $form_state['values']['site_url_address']);
   variable_set('site_footer_address', $form_state['values']['site_footer_address']);
 }
 
 /**
  * Implemented hook_form_system_theme_settings_alter()
- * 
+ *
  * @param type $form
- * @param type $form_state 
+ * @param type $form_state
  */
 function slac_site_variables_form_system_theme_settings_alter(&$form, &$form_state) {
-  $form['theme_settings']['site_name_abbreviation'] = array(
-    '#type' => 'checkbox',
-    '#title' => t('Site name abbreviation'),
-    '#default_value' => theme_get_setting('site_name_abbreviation'),
-  );
   $form['theme_settings']['site_url_address'] = array(
       '#type' => 'checkbox',
-      '#title' => t('Site address'),
+      '#title' => t('Footer address'),
       '#default_value' => theme_get_setting('site_url_address'),
 
   );
   $form['theme_settings']['site_footer_address'] = array(
     '#type' => 'checkbox',
-    '#title' => t('Site Footer address'),
+    '#title' => t('Sub-footer address'),
     '#default_value' => theme_get_setting('site_footer_address'),
 
   );

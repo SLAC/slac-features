@@ -10,7 +10,7 @@
 function slac_basic_page_settings_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_bp_image'
+  // Exported field_base: 'field_bp_image'.
   $field_bases['field_bp_image'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -19,14 +19,6 @@ function slac_basic_page_settings_field_default_field_bases() {
     'field_name' => 'field_bp_image',
     'field_permissions' => array(
       'type' => 0,
-    ),
-    'foreign keys' => array(
-      'fid' => array(
-        'columns' => array(
-          'fid' => 'fid',
-        ),
-        'table' => 'file_managed',
-      ),
     ),
     'indexes' => array(
       'fid' => array(

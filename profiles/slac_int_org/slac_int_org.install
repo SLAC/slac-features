@@ -104,7 +104,6 @@ function slac_int_org_install() {
   variable_set('distribution_name', 'SLAC Intranet Organization');
 
   variable_set('site_name', 'SLAC Intranet Organization');
-  variable_set('site_name_abbreviation', 'IntOrg');
   variable_set('site_url_address', '2575 Sand Hill Road, Menlo Park, CA 94025');
   variable_set('site_footer_address', '123 Directorate Way');
 

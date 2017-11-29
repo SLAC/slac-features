@@ -1,0 +1,599 @@
+// Start Universal Styles
+
+// Headers
+
+h2
+  line-height: 1.2
+  margin-bottom: 12px
+
+ul + h3, ol + h3
+  margin-top: 20px
+
+h4, h5, h6
+  font-weight: 700
+  line-height: 1.2
+
+h4
+  font-size: 1.2rem
+  margin-bottom: 6px
+
+h5
+  font-size: 1.1rem
+  margin-bottom: 4px
+
+h6
+  font-size: 1rem
+  margin-bottom: 3px
+
+.pane-page-content .general-left-title .left-title-wrapper h2
+  font-size: 1.9rem
+
+// Increase default font size for page titles at top of content
+
+.basic-format-text h2
+  font-size: 1.6rem
+
+article.node-blog.view-mode-full
+  .field-type-text-with-summary h2, .blog-wrapper h2
+    font-size: 1.6rem
+
+.article_panel_layout .pane-node-body h2, .service-body h2, .node-slac-sc-catalog-item h2, .node-support-ticket .field-type-text-with-summary h2, .article_panel_layout.with-right-sidebar .pane-node-body h2
+  font-size: 1.6rem
+
+h3, .basic-format-text h3
+  font-size: 1.4rem
+  margin-bottom: 8px
+  line-height: 1.1
+
+article.node-blog.view-mode-full
+  .field-type-text-with-summary h3, .blog-wrapper h3
+    font-size: 1.4rem
+    margin-bottom: 8px
+    line-height: 1.1
+
+.article_panel_layout .pane-node-body h3, .service-body h3, .node-slac-sc-catalog-item h3, .node-support-ticket .field-type-text-with-summary h3
+  font-size: 1.4rem
+  margin-bottom: 8px
+  line-height: 1.1
+
+.general-right p + h2, ul + h2, ol + h2
+  margin-top: 20px !important
+
+// changing general text color to be #000 to improve readability (themes/slac/css/styles.css)
+
+.basic-format-text
+  color: #000
+
+article.node-blog.view-mode-full
+  .field-type-text-with-summary, .blog-wrapper
+    color: #000
+
+.article_panel_layout .pane-node-body, .service-body, .node-slac-sc-catalog-item, .node-support-ticket .field-type-text-with-summary
+  color: #000
+
+.general-right
+  color: #000
+
+  .pane-bundle-slac-sidebar-block p
+    color: #000
+
+// changing line-height for paragraphs (themes/slac/css/styles.css)
+
+.basic-format-text p
+  line-height: 1.6
+
+article.node-blog.view-mode-full
+  .field-type-text-with-summary p, .blog-wrapper p
+    line-height: 1.6
+
+.article_panel_layout .pane-node-body p, .service-body p, .node-slac-sc-catalog-item p, .node-support-ticket .field-type-text-with-summary p
+  line-height: 1.6
+
+// increase font weight of links to make them more readable
+
+.extentions_normal-link
+  font-weight: 600
+
+.content
+  .general-left a, .general-one-col a, .general-right a
+    font-weight: 600
+
+.pane-node-field-slac-event-related-links a
+  font-weight: 600
+
+.content
+  .right-sidebar a
+    font-weight: 600
+
+  .general-left .field-slideshow-description a, .general-right .field-slideshow-description a, .general-left .project-description a, .general-right .project-description a
+    font-weight: 400
+
+// Panel titles
+
+.front .pane-page-content
+  .general-left h2.pane-title, .general-left-title h2.pane-title, .general-title h2.pane-title, .general-left h2.panel-title, .general-left-title h2.panel-title, .general-title h2.panel-title
+    font-size: 16px
+    color: #626262
+    text-transform: none
+
+.content
+  .right-sidebar a:hover
+    text-decoration: underline
+
+  .general-right.top_title_exist .inside .field-type-text-with-summary div
+    margin-bottom: 15px
+    line-height: 1.6
+
+// Header menu
+
+.header-menu ul li
+  a
+    color: #333
+
+  &:last-child a
+    padding: 0 0 0 13px
+
+// Lists
+
+.content .general-two-col
+  &:not(.reverse) .general-left
+    ul, ol
+      padding-left: 36px
+
+  &.reverse .general-right
+    ul, ol
+      padding-left: 36px
+
+.right-sidebar .panel-pane ul
+  list-style-type: disc
+
+.content
+  .general-left ul, .general-right ul
+    list-style-type: disc
+
+.right-sidebar .panel-pane ol
+  list-style-type: decimal
+
+.content
+  .general-left ol
+    list-style-type: decimal
+
+  .general-right
+    ol
+      list-style-type: decimal
+
+    .item-list ul
+      list-style-type: none
+
+.right-sidebar .panel-pane
+  ul, ol
+    padding-left: 16px
+
+.general-left
+  ul, ol
+    padding-left: 16px
+
+.front .content .general-right
+  ul, ol
+    padding-left: 16px
+
+.right-sidebar .panel-pane
+  ul li, ol li
+    margin-bottom: 6px
+
+.general-left .panel-pane
+  ul li, ol li
+    margin-bottom: 6px
+
+  ul li.menu__item
+    margin-bottom: 0
+
+.content .general-right .panel-pane ol li
+  margin-bottom: 5px
+
+// Nested lists
+
+.page-basic .content
+  .general-right .inside ul ul, .general-left .inside ul ul, .right-sidebar .inside ul ul, .general-right .inside ol ul, .general-left .inside ol ul, .right-sidebar .inside ol ul
+    list-style-type: circle
+    margin-top: 8px
+    padding-left: 26px
+
+  .general-right .inside ol ol, .general-left .inside ol ol, .right-sidebar .inside ol ol
+    margin-top: 8px
+    padding-left: 26px
+    list-style-type: lower-alpha
+
+  .general-right .inside ul ul ul, .general-left .inside ul ul ul, .right-sidebar .inside ul ul ul
+    list-style-type: square
+
+  .general-right .inside ol ol ol, .general-left .inside ol ol ol, .right-sidebar .inside ol ol ol
+    list-style-type: lower-roman
+
+// Region paddings
+
+.event-wrapper
+  padding: 20px
+
+// Main content area region styles
+
+.with-right-sidebar
+  .general-right, .panel-col-last
+    font-size: 0.875rem
+    line-height: 1.6
+
+.general-right
+  p
+    font-size: 0.875rem
+    line-height: 1.6
+
+  ul, ol
+    font-size: 0.875rem
+
+  p
+    margin-bottom: 15px
+
+.pp_demo-beans-image-text-link
+  margin-top: 30px
+
+.content .general-right.top_title_exist .inside .field-type-text-with-summary div.pp_demo-beans-image-text-link
+  margin-bottom: 30px
+
+// Top banner image
+
+.pane-node-field-bp-image img
+  width: 100%
+
+// End Universal Styles
+
+// Start Main Nav Styles
+@media (min-width: 894px)
+  .main-menu.long-menu ul li.sf-depth-1
+    margin: 0 26px
+
+    &:first-child
+      margin-left: 0 !important
+
+// Add back indicator for when there's a 2nd or deeper level item
+@media (min-width: 690px)
+  .sf-main-menu.sf-horizontal .sf-sub-indicator
+    display: inline-block !important
+    margin-left: 4px
+    -ms-transform: rotate(90deg)
+    -webkit-transform: rotate(90deg)
+    transform: rotate(90deg)
+
+// End Main Nav Styles
+
+// Start Left Nav Fixes
+// Match internal left nav styles
+
+.general-left h2.pane-title
+  margin-bottom: 8px
+
+.pane-page-content .general-left .pane-menu-tree h2.pane-title
+  border-bottom: #990000 solid 2px
+  margin-bottom: 0
+
+.general-left
+  .pane-main-menu h2.pane-title a, h2.pane-title
+    font-size: 0.875rem
+    color: #444
+    letter-spacing: 1px
+    text-transform: uppercase
+    font-weight: bold
+
+.content .general-left .inside .panel-pane.pane-menu-tree ul
+  list-style: outside none none
+  margin-top: 0
+
+.pane-menu-tree > div
+  background: transparent
+
+.content
+  .inside .pane-menu-tree > div > ul.menu a
+    border-bottom: 1px solid #b5b5b5
+    font-size: 0.875rem
+    line-height: 20px
+    padding: 12px 12px 12px 16px
+    font-weight: 400
+    border-left: transparent solid 3px
+
+    &:hover, &.active
+      border-left: #990000 solid 3px
+      background-color: #ddd
+
+  .general-left .inside
+    .pane-block.panel-pane, .pane-menu-tree.panel-pane, .panel-pane.pane-rss-block
+      margin-bottom: 40px
+
+    .pane-menu-tree.panel-pane ul
+      padding-left: 0
+
+li.menu__item.is-active-trail.is-expanded.item-main-menu
+  background: #f3f3f3
+
+// Indented for deeper levels
+
+.content .general-left .inside .pane-menu-tree ul .depth-2 ul
+  padding-left: 26px
+
+// End Left Nav Fixes
+
+// Start Sidebar Styles
+.general-left
+  font-size: 0.84rem
+  line-height: 1.4
+  margin-bottom: 0.7rem
+
+  .panel-pane.pane-block p
+    font-size: 0.84rem
+    line-height: 1.4
+    margin-bottom: 0.7rem
+
+.right-sidebar .panel-pane
+  &.pane-block p
+    font-size: 0.84rem
+    line-height: 1.4
+    margin-bottom: 0.7rem
+
+  font-size: 0.84rem
+  line-height: 1.4
+  margin-bottom: 0.7rem
+  margin-bottom: 40px
+  padding: 13px 16px
+
+.general-right .pane-bundle-slac-sidebar-block .field-item
+  padding-left: 0
+
+.content .right-sidebar a
+  color: #871628
+
+.last-three-news .views-field-title a
+  font-size: 0.84rem
+  font-weight: 600
+
+.pane-bundle-slac-sidebar-block p
+  font-size: 0.84rem
+  line-height: 1.4
+  margin-bottom: 15px
+
+.more-link-template a::after, .last-three-news .more-link a::after, .event-calendar-block .more-link a::after, .more-link-template a, .last-three-news .more-link a, .event-calendar-block .more-link a
+  font-size: 0.75rem
+
+.front .pane-page-content
+  .general-left h2.pane-title, .general-left-title h2.pane-title, .general-title h2.pane-title, .general-left h2.panel-title, .general-left-title h2.panel-title, .general-title h2.panel-title
+    margin-bottom: 13px
+
+// End Sidebar Styles
+
+// Start Project Blocks
+// Make whole project block clickable as link when hovered
+
+.projects-blocks-wrapper
+  .project-block-wrapper:hover a
+    height: 100%
+
+  .project-description
+    top: 45px
+
+    a
+      display: block
+
+  .project-title a
+    font-size: 1rem
+
+// End Project Blocks
+
+// Start RSS Blocks
+// Adding spacing below each item
+.view-slac-rss-block .views-row
+  margin-bottom: 10px
+
+// End RSS Blocks
+
+// Start FAQ Styles
+// For FAQ pages eg, https://sites-preprod.slac.stanford.edu/yvonne-css/faq
+
+.faq-answer .field-content, .faq-details .field-content
+  font-size: 0.875rem
+  line-height: 1.6
+  margin-bottom: 15px
+
+.faq-list .views-field-title
+  font-size: 1rem
+
+.content .general-two-col .general-left .inside .faq-list ul
+  padding-left: 0
+
+h2
+  &.faq-details-title, &.faq-answer-title
+    margin-top: 20px
+
+// End FAQ Styles
+
+// Start Landing Page General
+// Making front page text same font size as interior page text - OOB is smaller
+
+.front
+  .general-left .panel-pane.pane-block p, .pane-bundle-slac-sidebar-block p
+    font-size: 0.875rem
+    line-height: 1.6
+    margin-bottom: 15px
+
+  .general-left .panel-pane.pane-block
+    ul li, ol li
+      font-size: 0.875rem
+
+  .general-right
+    p, ul, ol
+      font-size: 0.84rem
+      line-height: 1.4
+
+// End Landing Page General
+
+// Start Stanford Colors
+// Replacing header background with new cardinal red here: https://identity.stanford.edu/color.html#digital-color
+
+.page-basic > .header
+  background-color: #8c1515
+
+.header.with_user_search form input[type="submit"]
+  color: #8c1515
+
+// Optional - replace footer background color with the Stanford "Cool Grey"
+
+.footer-seccond
+  background-color: #878787
+
+  .pane-2, .pane-site-url-address, .pane-3
+    font-size: 10px
+
+// End Stanford Colors
+
+// Start Upcoming Events - sidebar widget fixes
+
+.event-block
+  padding-left: 40px
+
+  .events
+    font-size: 0.84rem
+    color: #000
+
+  .date
+    width: 30px
+
+    i
+      font-family: "Times New Roman", serif
+      top: 8px
+      white-space: no-wrap
+
+.event-calendar-block .view-content
+  margin-bottom: 0
+
+// End Upcoming Events - sidebar widget fixes
+
+// Start 3 Column Layout Right Sidebar Drop Off Fixes
+@media (min-width: 1200px)
+  .with-right-sidebar .general-right
+    width: 52.126%
+
+  .general-left, .panel-col-first, #user-profile-form, .general-left-title
+    width: 68%
+    margin-right: 1%
+
+  .reverse .general-left-title
+    padding-left: 25.7%
+
+  .with-right-sidebar
+    .general-right.expand-full
+      width: 73.93%
+      margin-right: 0
+
+    .general-left + .general-right
+      width: 52.1259%
+
+@media only screen and (max-width: 690px)
+  .front .pane-page-content .general-left, .with-right-sidebar .general-right.expand-full
+    width: 100%
+
+// End 3 Column Layout Right Sidebar Drop Off Fixes
+
+// External
+.footer-first .general-left .inside .panel-pane.pane-block ul.menu li
+  font-size: .75rem
+
+.external-organisation .pane-page-site-name
+  font-weight: 700
+
+.external-organisation .site-title .inside .pane-page-site-name, .page-basic-io .inside .pane-page-site-name a
+  font-size: 2.6rem
+
+// Internal
+.page-basic-io .panel-panel.content .pane-menu-tree > div .menu li.depth-2.is-active::before,
+.page-basic-io .panel-panel.content .pane-menu-tree > div .menu li.depth-2.is-active-trail::before
+  content: none
+  display: none
+
+.page-basic-io .panel-panel.content .pane-menu-tree > div .menu li.depth-2.is-active
+  border-left: #77a9d9 solid 3px
+
+.page-basic-io .content .inside .pane-menu-tree > div > ul.menu li.depth-2 > a:hover
+  border-left: transparent solid 3px
+  background-color: #eaeef0
+
+.page-basic-io .content .inside .pane-menu-tree > div > ul.menu li.depth-2 a.active
+  background-color: #dce2e5
+  border-left: 0
+
+.page-basic-io .content .general-left .inside .pane-menu-tree ul .depth-2 ul
+  padding-left: 0
+
+.page-basic-io .panel-panel.content .pane-menu-tree > div .menu li.depth-2.is-expanded > a
+  border-left: transparent solid 3px
+
+.page-basic-io .panel-panel.content .pane-menu-tree > div .menu li.depth-2.is-expanded
+  border-left: #77a9d9 solid 3px
+
+.page-basic-io .panel-panel.content .pane-menu-tree > div .menu li.depth-4,
+.page-basic-io .panel-panel.content .pane-menu-tree > div .menu li.depth-5
+  padding-left: 26px
+
+.page-basic-io li.menu__item.is-active-trail.is-expanded.item-main-menu
+  background: #eaeef0
+
+.page-basic-io .main-menu.long-menu ul > li.sf-depth-1
+  margin: 0 26px !important
+  padding: 0!important
+
+.page-basic-io .main-menu.long-menu ul > li.sf-depth-1.first
+  margin: 0 20px 0 0 !important
+
+.page-basic-io .content .right-sidebar a
+  color: #20659a
+
+.front .page-basic-io .general-left ul li,
+.front .page-basic-io .general-left ol li
+  font-size: 0.875rem
+
+// Files
+p span.file
+  display: inline-flex
+  flex-direction: row-reverse
+  align-items: baseline
+
+p span.file .file-icon
+  float: none
+  margin-bottom: 0
+  margin-left: 6px !important
+  margin-top: 0
+
+
+// Start CKEditor Basic
+strong
+  font-weight: 700
+
+em
+  font-style: italic
+
+sub
+  font-size: 0.7rem
+  position: relative
+
+sup
+  font-size: 0.7rem
+  position: relative
+  top: -0.3rem
+
+sub
+  top: 0.14rem
+
+h2
+  sub
+    font-size: 0.9rem
+
+  sup
+    font-size: 0.9rem
+    top: -0.5rem
+
+// End CKEditor Basic

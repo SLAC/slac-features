@@ -34,6 +34,5 @@ function default_site_template_eo_menu_default_menu_custom() {
   t('Footer menu');
   t('Header menu');
 
-
   return $menus;
 }

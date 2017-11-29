@@ -5,3 +5,7 @@ sites/*/settings*.php
 sites/*/files
 sites/*/private
 .idea
+
+\.drush-lock-update
+
+sites/all/modules/custom/ssp

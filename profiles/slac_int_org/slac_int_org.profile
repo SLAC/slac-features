@@ -50,23 +50,16 @@ function slac_int_org_demo_modules() {
  * Alter slac_configuration_form form.
  */
 function slac_int_org_form_slac_configuration_form_alter(&$form, &$form_state) {
-  $form['site_name_abbreviation'] = array(
-    '#type' => 'textfield',
-    '#title' => t('Site Abbreviation'),
-    '#default_value' => variable_get('site_name_abbreviation', ''),
-    '#required' => TRUE,
-  );
-
   $form['site_url_address'] = array(
     '#type' => 'textfield',
-    '#title' => t('Address'),
+    '#title' => t('Footer address'),
     '#default_value' => variable_get('site_url_address', ''),
     '#required' => TRUE,
   );
 
   $form['site_footer_address'] = array(
     '#type' => 'textfield',
-    '#title' => t('Secondary Footer Address'),
+    '#title' => t('Sub-footer address'),
     '#default_value' => variable_get('site_footer_address', ''),
     '#required' => TRUE,
   );

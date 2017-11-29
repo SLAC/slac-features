@@ -1,0 +1,17 @@
+<?php
+/**
+ * @file
+ * Code for the Forum One Fixes feature.
+ */
+
+include_once 'f1_fixes.features.inc';
+
+/**
+ * Implements hook_wysiwyg_editor_settings_alter().
+ */
+function f1_fixes_wysiwyg_editor_settings_alter(&$settings, $context) {
+  if ($context['profile']->editor === 'ckeditor') {
+    // Set the allowed block styles in the WYSIWYG dropdown.
+    $settings['format_tags'] = 'h2;h3;h4;h5;h6;p;div';
+  }
+}
