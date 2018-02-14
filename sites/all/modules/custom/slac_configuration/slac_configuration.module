@@ -90,7 +90,7 @@ function slac_configuration_form($form, &$form_state) {
   $form['site_logo_url'] = array(
     '#type' => 'fieldset',
     '#title' => t('Logo Link Settings'),
-    '#description' => t('Enter the URL you wish the logo to point too. You must enter "http://" in front of your URL'),
+    '#description' => t('Enter the URL you wish the logo to point to. You must enter "http://" in front of your URL'),
     '#attributes' => array('class' => array('theme-settings-bottom')),
 
   );
