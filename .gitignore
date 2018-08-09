@@ -9,3 +9,4 @@ sites/*/private
 \.drush-lock-update
 
 sites/all/modules/custom/ssp
+web.config
