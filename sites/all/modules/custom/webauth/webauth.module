@@ -79,7 +79,7 @@ function webauth_init() {
   if ($user->uid == 0) {
   	// skip the auto authentication
     if (isset($_COOKIE['webauth_at']) && !isset($_COOKIE['webauth_logged_out'])) {
-      header("Location: " . $base_url . '/' . conf_path() . '/files/webauth/login.php');
+      // header("Location: " . $base_url . '/' . conf_path() . '/files/webauth/login.php');
     }
   }
   
@@ -321,7 +321,7 @@ function _webauth_user_role_sync($account, $roles = array()) {
  * @return array $data
  */
 
-function _webauth_user_role_load_all() {
+function _slac_webauth_user_role_load_all() {
   $data = array();
   $results = db_select('role', 'r')
     ->fields('r')
