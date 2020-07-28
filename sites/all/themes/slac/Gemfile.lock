@@ -19,7 +19,7 @@ GEM
       sass (>= 3.2, < 3.5)
     ffi (1.9.18)
     ffi (1.9.18-x64-mingw32)
-    json (2.1.0)
+    json (2.3.1)
     listen (1.1.6)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
